@@ -21,8 +21,8 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 	<!-- Config pages -->
 	<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 		<def>ConfigPage_ConfigureStartingPawns</def>
-		<pawnCount>5</pawnCount>
-		<pawnChoiceCount>8</pawnChoiceCount>
+		<pawnCount>4</pawnCount>
+		<pawnChoiceCount>9</pawnChoiceCount>
 	</li>
 
 	<!-- Player starting stuff spawn method-->
@@ -37,24 +37,14 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 		<def>ForcedHediff</def>
 		<visible>false</visible>
 		<context>PlayerStarter</context>
-		<chance>0.5</chance>
-		<hediff>Malnutrition</hediff>
+		<chance>0.3</chance>
+		<hediff>Anesthetic</hediff>
 		<severityRange>
 			<min>0.2</min>
 			<max>0.4</max>
 		</severityRange>
 	</li>
 
-	<!-- Player pawns modifiers -->
-<!--
-	<li Class="ScenPart_ForcedHediff">
-		<def>ForcedHediff</def>
-		<visible>false</visible>
-		<context>PlayerStarter</context>
-		<chance>1</chance>
-		<hediff>Hediff_LTF_Ovipositor</hediff>
-	</li>
--->
 	<li Class="ScenPart_SetNeedLevel">
 		<def>SetNeedLevel</def>
 		<visible>false</visible>
@@ -67,11 +57,17 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 		</levelRange>
 	</li>
 
+	<!-- Starting research -->
+	<li Class="ScenPart_StartingResearch">
+		<def>StartingResearch</def>
+		<project>LTF_Research_ShieldHelm</project>
+	</li>
+	
 	<!-- Player starting things -->
 	<li Class="ScenPart_StartingThing_Defined">
 	<def>StartingThing_Defined</def>
 	<thingDef>Silver</thingDef>
-	<count>200</count>
+	<count>13</count>
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
 	<def>StartingThing_Defined</def>
@@ -84,27 +80,43 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 	<count>20</count>
 	
 	</li>
+		<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>LTF_ZoltanEgg</thingDef>
+		<count>2</count>
+	</li>
 	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>LTF_ZoltanEgg</thingDef>
-	<count>1</count>
+		<def>StartingThing_Defined</def>
+		<thingDef>MeleeWeapon_Club</thingDef>
+		<stuff>Jade</stuff>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>MeleeWeapon_Spear</thingDef>
+		<stuff>Jade</stuff>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>MeleeWeapon_Knife</thingDef>
+		<stuff>Jade</stuff>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Bow_Short</thingDef>
+		<count>1</count>
+	</li>
+
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Battery</thingDef>
+		<count>1</count>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>StandingLamp_Green</thingDef>
+		<count>1</count>
 	</li>
 	
-	
-<!--	
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>LTF_ZoltanPod</thingDef>
-	<count>3</count>
-	</li>
--->
-<!--
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>PowerOn</thingDef>
-	<count>3</count>
-	</li>
--->
 	<!-- Scatter some things near player start -->
 	<li Class="ScenPart_ScatterThingsNearPlayerStart">
 	<def>ScatterThingsNearPlayerStart</def>

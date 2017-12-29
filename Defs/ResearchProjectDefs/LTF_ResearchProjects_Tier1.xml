@@ -45,6 +45,7 @@
 			<li>Machining</li>
 			<li>Refining</li>
 		</prerequisites>
+		<tags><li>LTF_rockStart</li></tags>
 		<researchViewX>1</researchViewX>
 		<researchViewY>3.1</researchViewY>
 	</ResearchProjectDef>

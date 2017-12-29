@@ -16,8 +16,8 @@
 	<!-- Config pages -->
 	<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 		<def>ConfigPage_ConfigureStartingPawns</def>
-		<pawnCount>5</pawnCount>
-		<pawnChoiceCount>8</pawnChoiceCount>
+		<pawnCount>3</pawnCount>
+		<pawnChoiceCount>10</pawnChoiceCount>
 	</li>
 
 	<!-- Player starting stuff spawn method-->
@@ -39,6 +39,17 @@
 			<max>0.4</max>
 		</severityRange>
 	</li>
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.5</chance>
+		<hediff>ToxicBuildup</hediff>
+		<severityRange>
+			<min>0.1</min>
+			<max>0.4</max>
+		</severityRange>
+	</li>
 	
 	<li Class="ScenPart_SetNeedLevel">
 		<def>SetNeedLevel</def>
@@ -52,6 +63,13 @@
 		</levelRange>
 	</li>
 
+	<!-- Starting research -->
+	<li Class="ScenPart_StartingResearch">
+		<def>StartingResearch</def>
+		<project>LTF_Research_Slug</project>
+	</li>
+		
+	
 	<!-- Player starting things -->
 	<li Class="ScenPart_StartingThing_Defined">
 	<def>StartingThing_Defined</def>

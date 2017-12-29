@@ -16,8 +16,8 @@
 	<!-- Config pages -->
 	<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 		<def>ConfigPage_ConfigureStartingPawns</def>
-		<pawnCount>5</pawnCount>
-		<pawnChoiceCount>8</pawnChoiceCount>
+		<pawnCount>3</pawnCount>
+		<pawnChoiceCount>10</pawnChoiceCount>
 	</li>
 
 	<!-- Player starting stuff spawn method-->
@@ -27,7 +27,40 @@
 		<visible>false</visible>
 	</li>
 
+	<!-- Starting research -->
+	<li Class="ScenPart_StartingResearch">
+		<def>StartingResearch</def>
+		<project>LTF_Research_RockmanStove</project>
+	</li>
+	<li Class="ScenPart_StartingResearch">
+		<def>StartingResearch</def>
+		<project>Stonecutting</project>
+	</li>
+	
 	<!-- Player pawns modifiers -->
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.3</chance>
+		<hediff>CryptosleepSickness</hediff>
+		<severityRange>
+			<min>0.2</min>
+			<max>0.4</max>
+		</severityRange>
+	</li>
+	
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.3</chance>
+		<hediff>Anesthetic</hediff>
+		<severityRange>
+			<min>0.2</min>
+			<max>0.4</max>
+		</severityRange>
+	</li>
 	<li Class="ScenPart_ForcedHediff">
 		<def>ForcedHediff</def>
 		<visible>false</visible>
@@ -35,8 +68,8 @@
 		<chance>0.5</chance>
 		<hediff>Malnutrition</hediff>
 		<severityRange>
-			<min>0.2</min>
-			<max>0.4</max>
+			<min>0.3</min>
+			<max>0.5</max>
 		</severityRange>
 	</li>
 	
@@ -47,63 +80,72 @@
 		<chance>1.0</chance>
 		<need>Food</need>
 		<levelRange>
-		<min>0</min>
-		<max>0.1</max>
+			<min>0</min>
+			<max>0.1</max>
 		</levelRange>
 	</li>
 
 	<!-- Player starting things -->
 	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>Silver</thingDef>
-	<count>200</count>
+		<def>StartingThing_Defined</def>
+		<thingDef>Silver</thingDef>
+		<count>137</count>
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>Pemmican</thingDef>
-	<count>300</count>
+		<def>StartingThing_Defined</def>
+		<thingDef>Pemmican</thingDef>
+		<count>450</count>
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>HerbalMedicine</thingDef>
-	<count>20</count>
+		<def>StartingThing_Defined</def>
+		<thingDef>HerbalMedicine</thingDef>
+		<count>20</count>
+	</li>
+<!-- weapon -->
+
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>MeleeWeapon_Club</thingDef>
+		<stuff>BlocksSandstone</stuff>
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>MeleeWeapon_Club</thingDef>
-	<stuff>WoodLog</stuff>
+		<def>StartingThing_Defined</def>
+		<thingDef>MeleeWeapon_Spear</thingDef>
+		<stuff>BlocksGranite</stuff>
 	</li>
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>MeleeWeapon_Spear</thingDef>
-	<stuff>WoodLog</stuff>
-	</li>
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>MeleeWeapon_Knife</thingDef>
-	<stuff>Jade</stuff>
-	</li>
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-		<thingDef>Bow_Short</thingDef>
-		<count>2</count>
-	</li>
+	
 	<li Class="ScenPart_StartingThing_Defined">
 		<def>StartingThing_Defined</def>
 		<thingDef>Pila</thingDef>
 	</li>
-	<li Class="ScenPart_StartingAnimal">
-		<def>StartingAnimal</def>
-		<count>3</count>
-		<animalKind>BoardingDrone</animalKind>
-		<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Bow_Short</thingDef>
+	</li>
+<!-- raw ressources -->
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>BlocksSandstone</thingDef>
+		<count>150</count>
 	</li>
 
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>ChunkGranite</thingDef>
+		<count>23</count>
+	</li>
+
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>ChunkSlate</thingDef>
+		<count>17</count>
+	</li>
+	
 	<!-- Scatter some things near player start -->
 	<li Class="ScenPart_ScatterThingsNearPlayerStart">
-	<def>ScatterThingsNearPlayerStart</def>
-	<thingDef>WoodLog</thingDef>
-	<count>500</count>
+		<def>ScatterThingsNearPlayerStart</def>
+		<thingDef>WoodLog</thingDef>
+		<count>500</count>
 	</li>
 
 	<!-- Game start dialog -->
