@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ApparelBase">
+  <!-- <ThingDef ParentName="ApparelBase"> -->
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>LTF_shieldHelm</defName>
 	
 	<!-- <label>zoltan Shield helm</label> -->
@@ -28,29 +29,30 @@ Thanks Psyonix ! When is the new version §§§
 	<tickerType>Normal</tickerType>
     <statBases>
 		<Mass>10</Mass>
+		<MaxHitPoints>87</MaxHitPoints>
 		<!-- <EnergyShieldRechargeRate>.0001</EnergyShieldRechargeRate> -->
 		<!-- .3 per layer ; 7 layer max -->
 		<!-- <EnergyShieldEnergyMax>1.85</EnergyShieldEnergyMax> -->
 		<LTF_ShieldRechargeRate>1</LTF_ShieldRechargeRate>
 		<LTF_ShieldLayerMax>1</LTF_ShieldLayerMax>
-		<WorkToMake>65000</WorkToMake>
+		<WorkToMake>65537</WorkToMake>
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
     </statBases>
 	<equippedStatOffsets>
 		<WorkSpeedGlobal>-.1</WorkSpeedGlobal>
 		<SocialImpact>-.5</SocialImpact>
 		<PsychicSensitivity>.3</PsychicSensitivity>
+		<MoveSpeed>-0.05</MoveSpeed>
 	</equippedStatOffsets>
 
-    <thingCategories>
-		<li>Apparel</li>
-    </thingCategories>
 	<costList>
-		<Component>3</Component>
-		<Plasteel>87</Plasteel>
-		<Steel>10</Steel>
-		<LTF_Kraptyl>15</LTF_Kraptyl>
+		<Component>2</Component>
+		<Plasteel>73</Plasteel>
+		<Steel>11</Steel>
+		<LTF_Kraptyl>17</LTF_Kraptyl>
 	</costList>
-	<costStuffCount>73</costStuffCount>
+	<costStuffCount>87</costStuffCount>
 	<stuffCategories>
 		<li>Metallic</li>
 	</stuffCategories>
