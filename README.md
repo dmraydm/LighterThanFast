@@ -1,1 +1,1 @@
-# LighterThenFast
+# LighterThanFast
