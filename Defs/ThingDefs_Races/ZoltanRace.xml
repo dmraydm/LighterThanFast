@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef Name="BaseZoltanPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Combat</li>
+    </inspectorTabs>
+    <comps>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseZoltanPawn">
+    <defName>Alien_Zoltan</defName>
+    <label>Zoltan</label>
+    <description>With the majority of their bodies composed of pure, harnessable energy, the Zoltan are ambivalent towards the Galactic Federation. Whilst a deeply officious and obtuse people, they generally favour diplomacy over acts of aggression and are known for being fair and just in their dealings with others. Due to their alliance with the Engi, Zoltans often appear in Engi Homeworlds or the various Engi-Controlled Sectors of space, although they inhabit their own home systems as well.
+	
+Being ingenious experts of technology, the Zoltan race pioneered a unique ship-based shielding technology which can be found on nearly every Zoltan vessel. These shields are very difficult to breach, however they cannot regenerate during a battle - unless a Shield Overcharger drone is deployed. Therefore, once they are impacted by enemy fire enough to deactivate them, Zoltan vessels must rely on conventional shielding systems. They and the Engi control many sectors, but they themselves are rarely seen outside them.
+	
+- 85% health + explodes upon death
+- 110% research
+- glows in the dark (sometimes)
+- lay eggs that pop power pods
+	
+	
+	</description>
+        
+    <statBases>
+		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>30</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>4.61</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		<CarryingCapacity>75</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>1.1</ResearchSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		<SocialImpact>1.0</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<PlantHarvestYield>1.0</PlantHarvestYield>
+		<ConstructionSpeed>1.0</ConstructionSpeed>
+		<ArmorRating_Blunt>.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>.15</ArmorRating_Sharp>
+    </statBases>
+	
+	<comps>
+		<!-- glows -->
+		<li Class="CompProperties_Glower">
+			<glowRadius>5</glowRadius>
+			<glowColor>(73,123,138,0)</glowColor>
+		</li>
+
+		<!-- spawns eggs that spawn eneryg pods -->
+		<!-- à travers backstroy -->
+		<!--
+		<li Class="NewHatcher.HeDiffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+			<min>23000</min>
+			<max>24000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>discharge</spawnVerb>
+			<spawnerAlive>true</spawnerAlive>
+			<healthRelative>true</healthRelative>
+		</li>
+		-->
+	</comps>
+		
+	<verbs>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+	<alienRace>
+
+	<generalSettings>
+		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<alienPartGenerator>
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<li>Thin</li>
+			</alienbodytypes>
+			<useGenderedHeads>false</useGenderedHeads>
+			<bodyAddons>
+			</bodyAddons>
+			<alienskincolorgen Class="ColorGenerator_Options">
+				<options>
+				<!-- green  -->
+				<li><weight>2</weight><only>RGBA(.1, 1, .2, .8)</only></li>
+				<li><weight>2</weight><only>RGBA(.2, 1, .3, .7)</only></li>
+				<li><weight>3</weight><only>RGBA(.3, 1, .3, .6)</only></li>
+				<!--
+				<li><weight>7</weight><only>RGBA(.4, 1, .4,.8)</only></li>
+				<li><weight>7</weight><only>RGBA(.5, 1, .5,.8)</only></li>
+				-->
+				
+				<!-- green blue -->
+				<li><weight>2</weight><only>RGBA(.1, 1, .7, .8)</only></li>
+				<li><weight>2</weight><only>RGBA(.2, .9, .8, .9)</only></li>
+				<li><weight>2</weight><only>RGBA(.3, .8, .9, .9)</only></li>
+				<li><weight>2</weight><only>RGBA(.2, .7, .8, .7)</only></li>
+				<li><weight>2</weight><only>RGBA(.1, .5, .7, .8)</only></li>
+
+				<!-- blue -->
+				<li><weight>2</weight><only>RGBA(.1, .1, .8, .7)</only></li>
+				<li><weight>1</weight><only>RGBA(.2, .2, .9, .8)</only></li>
+				<li><weight>2</weight><only>RGBA(.1, .4, .9, .9)</only></li>
+				<li><weight>3</weight><only>RGBA(.2, .2, .8, .7)</only></li>
+				<li><weight>1</weight><only>RGBA(.1, .3, .7, .9)</only></li>
+				
+				<!-- violet -->
+				<li><weight>2</weight><only>RGBA(.6, .2, .8, .8)</only></li>
+				<li><weight>2</weight><only>RGBA(.9, .2, .6, .8)</only></li>
+				<li><weight>1</weight><only>RGBA(.7, .1, .9, .9)</only></li>
+	
+				
+				</options>
+			</alienskincolorgen>
+		</alienPartGenerator>
+		<!--
+		<factionRelations>
+			<li>
+			<goodwill>
+			   <min>-20</min>
+			   <max>50</max>
+			</goodwill>
+			</li>
+		</factionRelations>
+		-->
+		<!-- <chemicalSettings>1</chemicalSettings> -->
+		<maleGenderProbability>.5</maleGenderProbability>    
+		<forcedRaceTraitEntries>
+			<li><defName>Beauty</defName><degree>1</degree><chance>20</chance></li>
+			<li><defName>Beauty</defName><degree>2</degree><chance>10</chance></li>
+			<li><defName>Kind</defName><chance>20</chance></li>
+			<li><defName>Xenophobia</defName><degree>-1</degree><chance>75</chance></li>
+		</forcedRaceTraitEntries>
+		<immuneToXenophobia>true</immuneToXenophobia>
+		<humanRecipeImport>true</humanRecipeImport>
+	</generalSettings>    
+
+	<graphicPaths>
+		<li>
+			<body>Zoltan/Body/</body>
+			<head>Zoltan/Head/</head>
+		</li>
+	</graphicPaths>
+
+	<hairSettings>
+		<hasHair>true</hasHair>
+		<hairTags>
+		<li>empty</li>
+		</hairTags>
+	</hairSettings>
+
+	<relationSettings>
+	</relationSettings>
+
+	<pawnKindSettings>
+		<alienslavekinds>
+			<li>
+				<kindDefs>
+					<li>ZoltanSlave</li>
+				</kindDefs>
+				<chance>40.0</chance>
+			</li>
+		</alienslavekinds>
+		<alienrefugeekinds>
+		<li>
+		<kindDefs>
+		<li>ZoltanRefugee</li>
+		</kindDefs>
+		<chance>40.0</chance>
+		</li>
+		</alienrefugeekinds>
+		<startingColonists>
+		<li>
+		<pawnKindEntries>
+		<li>
+			<kindDefs>
+				<!--
+				<li>ZoltanHunter</li>
+				<li>ZoltanHistGuard</li>
+				<li>ZoltanShadowscale</li>
+				-->
+				<li>ZoltanColonist</li>
+			</kindDefs>
+			<chance>10.0</chance>
+		</li>
+		</pawnKindEntries>
+			<factionDefs>
+				<li>ZoltanPlayerColony</li>
+				<li>PlayerTribe</li>
+			</factionDefs>
+		</li>
+		</startingColonists>
+		<alienwandererkinds>
+		<li>
+		<pawnKindEntries>
+		<li>
+			<kindDefs>
+				<li>ZoltanHunter</li>
+				<li>ZoltanHistGuard</li>
+				<li>ZoltanColonist</li>
+				<li>ZoltanShadowscale</li>
+				<li>ZoltanHistSpeaker</li>
+				<li>ZoltanFighter</li>
+			</kindDefs>
+		<chance>50.0</chance>
+		</li>
+		</pawnKindEntries>
+		<factionDefs>
+			<li>ZoltanPlayerColony</li>
+			<li>PlayerTribe</li>
+		<!-- <li>KestrelPlayerColony</li>  -->
+		</factionDefs>
+		</li>
+		</alienwandererkinds>
+	</pawnKindSettings>
+ 
+	<thoughtSettings>
+		<cannotReceiveThoughts></cannotReceiveThoughts>
+		
+		<ateThoughtSpecific></ateThoughtSpecific>
+
+		<replacerList>
+		</replacerList>
+	</thoughtSettings>
+
+	<raceRestriction>
+	</raceRestriction>
+
+</alienRace>
+    
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <nameGenerator>NamerPersonZoltan</nameGenerator>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+      <leatherColor>(128,128,128)</leatherColor>
+      <bloodDef></bloodDef>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherLabel>Zoltan leather</leatherLabel>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Zoltan</body>
+	  
+	  <!--<body>Human</body>-->
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>.85</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li><def>HumanlikeBaby</def><minAge>0</minAge></li>
+        <li><def>HumanlikeToddler</def><minAge>1.2</minAge></li>
+        <li><def>HumanlikeChild</def><minAge>4</minAge></li>
+        <li><def>HumanlikeTeenager</def><minAge>13</minAge>
+        </li>
+		<li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+	  
+	  <!-- explodes -->
+	  <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
+	  
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+		<!--<li>Zoltan</li>-->
+
+		<!-- TODO -->
+      </hediffGiverSets>
+</race>
+    <recipes>
+		<li>InstallOvipositor</li>
+		<!--base-->
+		
+      <li>InstallPowerClaw</li>
+      <li>InstallScytherBlade</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+	  
+    </recipes>
+	
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

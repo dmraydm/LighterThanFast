@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef>
+    <defName>TribeSlug</defName>
+    <label>wild cluster</label>
+    <description>Some wild Slugs</description>
+    <pawnsPlural>D state Slugs</pawnsPlural>
+    <baseSelectionWeight>1</baseSelectionWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canStageAttacks>true</canStageAttacks>
+    <homeIconPath>Slug/npcZoom</homeIconPath>
+    <expandingIconTexture>Slug/npc</expandingIconTexture>
+    <colorSpectrum>
+	  <li>(180, 180, 180)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>10</min>
+      <max>30</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
+    <baseNameMaker>NamerBaseSlugVillage</baseNameMaker>
+    <techLevel>Industrial</techLevel>
+    <backstoryCategory>SlugBackstory</backstoryCategory>
+    <leaderTitle>Vetigastropoda</leaderTitle>
+    <hairTags>
+      <!--<li>Slug</li>-->
+	  <li>Tribal</li>
+    </hairTags>
+    <naturalColonyGoodwill>
+      <min>-50</min>
+      <max>10</max>
+    </naturalColonyGoodwill>
+ <!--
+   <caravanTraderKinds>
+      <li>Caravan_Slug_BulkGoods</li>
+    </caravanTraderKinds>
+	-->
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <!--
+	<baseTraderKinds>
+      <li>base_Slug_Standard</li>
+    </baseTraderKinds>
+	-->
+    <allowedArrivalTemperatureRange>
+      <min>-15</min>
+      <max>50</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+		<!-- -->
+        <li>
+        <kindDef>Normal</kindDef>
+        <options>
+          <SlugPawn>100</SlugPawn>
+          <SlugChief>10</SlugChief>
+        </options>
+        </li>
+		
+		<!-- -->
+        <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <SlugTrader>1</SlugTrader>
+        </traders>
+        <carriers>
+          <Alpaca>3</Alpaca>
+        </carriers>
+        <guards>
+          <SlugPawn>150</SlugPawn>
+          <SlugPawn>150</SlugPawn>
+        </guards>
+		</li>
+		
+		<!-- -->
+		<li>
+        <kindDef>FactionBase</kindDef>
+        <options>
+          <SlugPawn>100</SlugPawn>
+          <SlugChief>70</SlugChief>
+        </options>
+		</li>
+		
+    </pawnGroupMakers>
+  </FactionDef>
+  
+<PawnKindDef>
+    <defName>SlugPawn</defName>
+    <baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+        <label>Slug</label>
+    <race>Slug</race>
+    <labelMale>Slug drone</labelMale>
+    <labelFemale>Slug</labelFemale>
+    <combatPower>25</combatPower>
+    <apparelTags>
+      <li>Spacer</li>
+    </apparelTags>
+        <apparelMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>Slug</backstoryCategory>
+    <defaultFactionType>TribeSlug</defaultFactionType>
+</PawnKindDef>
+
+<PawnKindDef>
+<defName>SlugChief</defName>
+	<label>Vetigastropoda</label>
+	<race>Slug</race>
+	<combatPower>70</combatPower>
+	<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+	<itemQuality>Superior</itemQuality>
+	<minGenerationAge>35</minGenerationAge>
+	<factionLeader>true</factionLeader>
+
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.0</max>
+    </gearHealthRange>
+
+	<apparelTags>
+		<li>Spacer</li>
+    </apparelTags>
+
+    <apparelMoney>
+		<min>600</min>
+		<max>1600</max>
+    </apparelMoney>
+    
+	<weaponMoney>
+		<min>800</min>
+		<max>1000</max>
+    </weaponMoney>
+	
+    <weaponTags>
+    <li>UrbanRanged</li>
+    </weaponTags>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>SlugBackstory</backstoryCategory>
+        <defaultFactionType>TribeSlug</defaultFactionType>
+    </PawnKindDef>
+
+    <PawnKindDef>
+    <defName>SlugTrader</defName>
+    <baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+        <label>Slug trader</label>
+    <race>Slug</race>
+        <trader>true</trader>
+    <combatPower>25</combatPower>
+    <apparelTags>
+      <li>Spacer</li>
+    </apparelTags>
+        <apparelMoney>
+      <min>500</min>
+      <max>1000</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>SlugBackstory</backstoryCategory>
+    <defaultFactionType>TribeSlug</defaultFactionType>
+</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- cooler -->
+	<!-- x1 -->
+
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_01Cooler</defName>
+		<label>cooler1</label>
+		<stages>
+			<li>
+				<statOffsets>
+					<ComfyTemperatureMin>8</ComfyTemperatureMin>
+					<ComfyTemperatureMax>8</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<hungerRateFactor>1.16</hungerRateFactor>
+				<restFallFactor>1.16</restFallFactor>
+				<socialFightChanceFactor>.04</socialFightChanceFactor>
+			</li>
+		</stages>
+		
+		<comps>
+			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+				<MinTicksBetweenSprays>2560</MinTicksBetweenSprays>
+				<MaxTicksBetweenSprays>5120</MaxTicksBetweenSprays>
+			</li>
+		</comps>
+		
+		<addedPartProps>
+			<isBionic>true</isBionic>
+			<isSolid>true</isSolid>
+		</addedPartProps>
+		
+		<spawnThingOnRemoved>LTF_Engie01Cooler</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<!-- cooler -->
+	<!-- x1 -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_02Cooler</defName>
+		<label>cooler2</label>
+		<stages>
+			<li>
+				<statOffsets>
+					<ComfyTemperatureMin>16</ComfyTemperatureMin>
+					<ComfyTemperatureMax>16</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<hungerRateFactor>1.32</hungerRateFactor>
+				<restFallFactor>1.32</restFallFactor>
+				<socialFightChanceFactor>.08</socialFightChanceFactor>
+			</li>
+		</stages>
+		
+		<comps>
+			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+				<MinTicksBetweenSprays>1280</MinTicksBetweenSprays>
+				<MaxTicksBetweenSprays>2560</MaxTicksBetweenSprays>
+			</li>
+		</comps>
+		
+		<spawnThingOnRemoved>LTF_Engie02Cooler</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<!-- cooler -->
+	<!-- x1 -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_04Cooler</defName>
+		<label>cooler4</label>
+		<stages>
+			<li>
+				<statOffsets>
+					<ComfyTemperatureMin>32</ComfyTemperatureMin>
+					<ComfyTemperatureMax>32</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<hungerRateFactor>1.64</hungerRateFactor>
+				<restFallFactor>1.64</restFallFactor>
+				<socialFightChanceFactor>.16</socialFightChanceFactor>
+			</li>
+		</stages>
+		
+		<comps>
+			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+				<MinTicksBetweenSprays>640</MinTicksBetweenSprays>
+				<MaxTicksBetweenSprays>1280</MaxTicksBetweenSprays>
+			</li>
+		</comps>
+
+		<spawnThingOnRemoved>LTF_Engie04Cooler</spawnThingOnRemoved>
+	</HediffDef>
+</Defs>

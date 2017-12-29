@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>UseEmpathyBox</defName>
+    <driverClass>JobDriver_ViewArt</driverClass>
+    <reportString>viewing art.</reportString>
+    <joyDuration>300</joyDuration>
+    <joyGainRate>-1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+
+</Defs>

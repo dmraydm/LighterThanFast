@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>LTF_shieldHelm</defName>
+	
+	<!-- <label>zoltan Shield helm</label> -->
+	<!-- <labelShort>Z.t1shH</labelShort> -->
+	<label>z.t1shH</label>
+	<thingClass>NewHatcher.LTF_ShieldHelm</thingClass>
+		
+    <description>A single-person energy shield device. Contrary to the shield belt, this device will attempt to stop hits instead of damages. It means it can blocks either 4 squirrel scratchs either 4 rockets.
+	
+- Shield layers shown. (7 max) 
+- Works for melee.
+- Default shield recharge is garbage.
+- A bench is required to make it work efficiently.
+- Precautionary principle could make you think twice.
+	
+Thanks Psyonix ! When is the new version §§§
+	</description>
+	<techLevel>Spacer</techLevel>
+	<graphicData>
+		<texPath>Things/Apparel/shieldHelm/shieldHelm</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	
+	<tickerType>Normal</tickerType>
+    <statBases>
+		<Mass>10</Mass>
+		<!-- <EnergyShieldRechargeRate>.0001</EnergyShieldRechargeRate> -->
+		<!-- .3 per layer ; 7 layer max -->
+		<!-- <EnergyShieldEnergyMax>1.85</EnergyShieldEnergyMax> -->
+		<LTF_ShieldRechargeRate>1</LTF_ShieldRechargeRate>
+		<LTF_ShieldLayerMax>1</LTF_ShieldLayerMax>
+		<WorkToMake>65000</WorkToMake>
+    </statBases>
+	<equippedStatOffsets>
+		<WorkSpeedGlobal>-.1</WorkSpeedGlobal>
+		<SocialImpact>-.5</SocialImpact>
+		<PsychicSensitivity>.3</PsychicSensitivity>
+	</equippedStatOffsets>
+
+    <thingCategories>
+		<li>Apparel</li>
+    </thingCategories>
+	<costList>
+		<Component>3</Component>
+		<Plasteel>87</Plasteel>
+		<Steel>10</Steel>
+		<LTF_Kraptyl>15</LTF_Kraptyl>
+	</costList>
+	<costStuffCount>73</costStuffCount>
+	<stuffCategories>
+		<li>Metallic</li>
+	</stuffCategories>
+	
+	<recipeMaker>
+		<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<recipeUsers>
+			<li>LTF_EngieBench</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+	</recipeMaker>
+	
+	<researchPrerequisites><li>LTF_Research_ShieldHelm</li></researchPrerequisites>
+	
+	<apparel>
+		<wornGraphicPath>Things/Apparel/shieldHelm/shieldHelm</wornGraphicPath>
+		<careIfWornByCorpse>true</careIfWornByCorpse>
+		<bodyPartGroups>
+			<li>FullHead</li>
+		</bodyPartGroups>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+		<tags>
+			<li>Military</li>
+		</tags>
+	</apparel>
+	
+	
+</ThingDef>
+
+</Defs>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef>
+    <defName>TribeRockman</defName>
+    <label>Cordillera de los Andes</label>
+    <description>Some wild Rockmen</description>
+    <pawnsPlural>Techtonic plates to become</pawnsPlural>
+    <baseSelectionWeight>1</baseSelectionWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canStageAttacks>true</canStageAttacks>
+    <homeIconPath>Rockman/npcZoom</homeIconPath>
+    <expandingIconTexture>Rockman/npc</expandingIconTexture>
+    <colorSpectrum>
+      <li>(196,127,50)</li>
+      <li>(196,164,50)</li>
+      <li>(102, 102, 50)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>10</min>
+      <max>30</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <factionNameMaker>NamerFactionRockmanVillage</factionNameMaker>
+    <baseNameMaker>NamerBaseRockmanVillage</baseNameMaker>
+    <techLevel>Industrial</techLevel>
+    <backstoryCategory>RockmanBackstory</backstoryCategory>
+    <leaderTitle>Mesa</leaderTitle>
+	<hairTags>
+      <li>Tribal</li>
+    </hairTags>
+	
+    <naturalColonyGoodwill>
+      <min>-50</min>
+      <max>10</max>
+    </naturalColonyGoodwill>
+ <!--
+   <caravanTraderKinds>
+      <li>Caravan_Rockman_BulkGoods</li>
+    </caravanTraderKinds>
+	-->
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <!--
+	<baseTraderKinds>
+      <li>base_Rockman_Standard</li>
+    </baseTraderKinds>
+	-->
+    <allowedArrivalTemperatureRange>
+      <min>-15</min>
+      <max>50</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+        <li>
+        <kindDef>Normal</kindDef>
+        <options>
+          <RockmanPawn>100</RockmanPawn>
+          <RockmanChief>10</RockmanChief>
+        </options>
+        </li>
+        <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <RockmanTrader>1</RockmanTrader>
+        </traders>
+        <carriers>
+           <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <RockmanPawn>150</RockmanPawn>
+          <RockmanPawn>150</RockmanPawn>
+        </guards>
+      </li>
+      <li>
+        <kindDef>FactionBase</kindDef>
+        <options>
+          <RockmanPawn>100</RockmanPawn>
+          <RockmanChief>70</RockmanChief>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+  
+    <PawnKindDef>
+    <defName>RockmanPawn</defName>
+    <baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+        <label>Rockman</label>
+    <race>Rockman</race>
+    <labelMale>Rockman gravel</labelMale>
+    <labelFemale>Rockman</labelFemale>
+    <combatPower>25</combatPower>
+    <apparelTags>
+      <li>Bee</li>
+    </apparelTags>
+        <apparelMoney>
+      <min>200</min>
+      <max>400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>RockmanBackstory</backstoryCategory>
+    <defaultFactionType>TribeRockman</defaultFactionType>
+</PawnKindDef>
+
+<PawnKindDef>
+<defName>RockmanChief</defName>
+		<label>Mesa</label>
+                    <race>Rockman</race>
+    <combatPower>70</combatPower>
+		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <itemQuality>Superior</itemQuality>
+    <minGenerationAge>35</minGenerationAge>
+    <factionLeader>true</factionLeader>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.0</max>
+    </gearHealthRange>
+      <apparelTags>
+      <li>Bee</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>600</min>
+      <max>1600</max>
+    </apparelMoney>
+    <weaponMoney>
+    <min>800</min>
+    <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+    <li>NeolithicRanged</li>
+    </weaponTags>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>RockmanBackstory</backstoryCategory>
+        <defaultFactionType>TribeRockman</defaultFactionType>
+    </PawnKindDef>
+
+    <PawnKindDef>
+    <defName>RockmanTrader</defName>
+    <baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+        <label>Rockman trader</label>
+    <race>Rockman</race>
+        <trader>true</trader>
+    <combatPower>25</combatPower>
+    <apparelTags>
+      <li>Bee</li>
+    </apparelTags>
+        <apparelMoney>
+      <min>500</min>
+      <max>1000</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>RockmanBackstory</backstoryCategory>
+    <defaultFactionType>TribeRockman</defaultFactionType>
+</PawnKindDef>
+
+</Defs>

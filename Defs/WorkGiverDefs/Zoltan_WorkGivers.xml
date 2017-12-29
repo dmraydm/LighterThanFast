@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+		<defName>WorkGiver_ShieldBench</defName>
+		<label>synthetizes a shield layer to transmit it to shield helm</label>
+		<giverClass>NewHatcher.WorkGiver_ShieldBench</giverClass>
+		<!-- <workType>LayerSynthetize</workType> -->
+		<workType>Crafting</workType>
+		<verb>synthetizes a shield layer</verb>
+		<gerund>shield layer synthetizing</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+			<li>Sight</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<!--
+	<WorkTypeDef>
+		<defName>LayerSynthetize</defName>
+		<labelShort>Layersynth</labelShort>
+		<pawnLabel>Layer synthetiser</pawnLabel>
+		<gerundLabel>synthesizing</gerundLabel>
+		<description>add shield layers to a friendly zoltan helm.</description>
+		<verb>synthesize</verb>
+		<naturalPriority>400</naturalPriority>
+		<alwaysStartActive>true</alwaysStartActive>
+		<requireCapableColonist>true</requireCapableColonist>
+		<workTags>
+			<li>ManualSkilled</li>
+			<li>Intellectual</li>
+		</workTags>
+	</WorkTypeDef>
+  -->
+  </Defs>

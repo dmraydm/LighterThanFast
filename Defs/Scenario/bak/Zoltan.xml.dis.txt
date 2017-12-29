@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>ZoltanOnly</defName>
+    <label>Zoltan</label>
+    <description>A battery is a source of electrical energy – it provides the ‘pressure’ which causes electricity to flow. We measure this electrical pressure in volts, V. The higher the voltage, the greater the pressure.
+The flow of electricity is called current and is measured in amps, A.
+If a single battery makes a bulb glow dimly, two batteries connected in series as in circuit bellow will make it glow brighter. In the next circuit, 4 batteries are connected in series so the total tension will be  V1 + V2 + V3 + V4.</description>
+    <scenario>
+      <summary>Calculate the equivalent resistor and the current in the battery.
+Remember: In a series circuit, the total resistance of the circuit (also called effective resistance) is equal to the sum of the individual resistances, so Re = R1 + R2 + R3 …
+In a parallel circuit, a quicker method of finding  the equivalent resistance is to use the general formula:
+1 / Re = 1/R1 + 1/R2  + 1/R3 …..</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>TribalZoltanPlayer</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>0.5</chance>
+          <hediff>Malnutrition</hediff>
+          <severityRange>
+            <min>0.2</min>
+            <max>0.4</max>
+          </severityRange>
+        </li>
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1.0</chance>
+          <need>Food</need>
+          <levelRange>
+            <min>0</min>
+            <max>0.1</max>
+          </levelRange>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Electric power is the rate, per unit time, at which electrical energy is transferred by an electric circuit. The SI unit of power is the watt, one joule per second.
+Electric power is usually produced by electric generators, but can also be supplied by sources such as electric batteries. It is usually supplied to businesses and homes by the electric power industry through an electric power grid. Electric power is usually sold by the kilowatt hour (3.6 MJ) which is the product of power in kilowatts multiplied by running time in hours. Electric utilities measure power using an electricity meter, which keeps a running total of the electric energy delivered to a customer.
+Electrical power provides a low entropy form of energy and can be carried long distances and converted into other forms of energy such as motion, light or heat with high energy efficiency.
+		  </text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+		<!-- Player starting things -->
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksGranite</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksSlate</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkSlate</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Silver</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Pemmican</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>HerbalMedicine</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>MeleeWeapon_Club</thingDef>
+			<stuff>Plasteel</stuff>
+			<count>5</count>
+		</li>
+		<li Class="ScenPart_StartingAnimal">
+			<def>StartingAnimal</def>
+			<animalKind>Elephant</animalKind>
+			<count>1</count>
+			<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+		</li>
+
+		<!-- Scatter some things near player start -->
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>WoodLog</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>Steel</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>50</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>50</count>
+		</li>
+		
+      </parts>
+    </scenario>
+  </ScenarioDef>
+    
+
+  
+</Defs>

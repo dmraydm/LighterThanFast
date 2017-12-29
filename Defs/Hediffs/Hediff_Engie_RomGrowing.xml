@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- T1 -->
+<!-- grow -->
+<!-- ShootingAccuracy -->
+	<!-- grow PlantWorkSpeed PlantHarvestYield-->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_growRom</defName>
+		<label>romGro1</label>
+		
+		<stages><li>
+			<statOffsets>
+				<PlantWorkSpeed>.064</PlantWorkSpeed>
+				<PlantHarvestYield>.064</PlantHarvestYield>
+				
+				<TailoringSpeed>-0.032</TailoringSpeed>
+				<SmithingSpeed>-0.032</SmithingSpeed>
+				<ShootingAccuracy>-0.064</ShootingAccuracy>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieGrowRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- grow -->	
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_grow2Rom</defName>
+		<label>romGro2</label>
+		
+		<stages><li>
+
+			<statOffsets>
+				<PlantWorkSpeed>.128</PlantWorkSpeed>
+				<PlantHarvestYield>.128</PlantHarvestYield>
+				
+				<TailoringSpeed>-0.064</TailoringSpeed>
+				<SmithingSpeed>-0.064</SmithingSpeed>
+				<ShootingAccuracy>-0.128</ShootingAccuracy>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieGrow2Rom</spawnThingOnRemoved>
+	</HediffDef>
+
+</Defs>

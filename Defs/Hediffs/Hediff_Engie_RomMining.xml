@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- MiningSpeed MiningYield -->
+
+<!-- T1 -->
+<!-- Mining -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_miningRom</defName>
+		<label>romMin01</label>
+		
+		<stages><li>
+			<statOffsets>
+				<MiningSpeed>.064</MiningSpeed>
+				<MiningYield>0.064</MiningYield>
+				
+				<ResearchSpeed>-0.064</ResearchSpeed>
+				<AimingDelayFactor>0.064</AimingDelayFactor>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieMiningRom</spawnThingOnRemoved>
+	</HediffDef>
+
+<!-- T2 -->
+<!-- Mining -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_mining2Rom</defName>
+		<label>romMin02</label>
+		
+		<stages><li>
+			<statOffsets>
+				<MiningSpeed>.128</MiningSpeed>
+				<MiningYield>0.128</MiningYield>
+				
+				<ResearchSpeed>-0.128</ResearchSpeed>
+				<AimingDelayFactor>0.128</AimingDelayFactor>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieMining2Rom</spawnThingOnRemoved>
+	</HediffDef>
+
+</Defs>

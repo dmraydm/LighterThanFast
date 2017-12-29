@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+<!-- T1 -->
+<!-- cooking -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_cookRom</defName>
+		<label>romCook1</label>
+		
+		<stages><li>
+			<statOffsets>
+				<CookSpeed>.064</CookSpeed>
+				<FoodPoisonChance>-0.064</FoodPoisonChance>
+				
+				<RecruitPrisonerChance>-0.064</RecruitPrisonerChance>
+				<ShootingAccuracy>-0.064</ShootingAccuracy>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieCookRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- cooking -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_cook2Rom</defName>
+		<label>romCook2</label>
+		
+		<stages><li>
+
+			<statOffsets>
+				<CookSpeed>.128</CookSpeed>
+				<FoodPoisonChance>.128</FoodPoisonChance>
+				<ButcheryFleshSpeed>.064</ButcheryFleshSpeed>
+				<ButcheryFleshEfficiency>.064</ButcheryFleshEfficiency>
+				<BrewingSpeed>0.064</BrewingSpeed>
+				
+				<RecruitPrisonerChance>-0.128</RecruitPrisonerChance>
+				<ShootingAccuracy>-0.064</ShootingAccuracy>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieCook2Rom</spawnThingOnRemoved>
+	</HediffDef>	
+	
+<!-- T2 -->
+<!-- cooking -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_cookKrom</defName>
+		<label>kromCook1</label>
+		
+		<stages><li>
+			<!--
+			<capMods><li>
+            <capacity>Breathing</capacity>
+            <offset>-0.128</offset>
+			</li></capMods>
+			-->
+			
+			<statOffsets>
+				<CookSpeed>.256</CookSpeed>
+				<FoodPoisonChance>-.256</FoodPoisonChance>
+				<ButcheryFleshSpeed>.128</ButcheryFleshSpeed>
+				<ButcheryFleshEfficiency>.128</ButcheryFleshEfficiency>
+				<BrewingSpeed>0.128</BrewingSpeed>
+				
+				<RecruitPrisonerChance>-0.256</RecruitPrisonerChance>
+				<ShootingAccuracy>-0.128</ShootingAccuracy>
+			</statOffsets>
+			<mentalStateGivers>
+				<li>
+					<mentalState>CorpseObsession</mentalState>
+					<mtbDays>.9</mtbDays>
+				</li>
+			</mentalStateGivers>
+			
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieCookKrom</spawnThingOnRemoved>
+	</HediffDef>	
+<!-- medical  MedicalTendSpeed MedicalTendQuality MedicalOperationSpeed MedicalSurgerySuccessChance-->
+<!-- MiningSpeed MiningYield -->
+<!-- TradePriceImprovement DiplomacyPower SocialImpact RecruitPrisonerChance -->
+
+</Defs>

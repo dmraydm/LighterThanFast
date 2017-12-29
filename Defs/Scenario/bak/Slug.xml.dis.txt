@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>SlugOnly</defName>
+    <label>Slugs</label>
+    <description>No salt k thx</description>
+    <scenario>
+      <summary>The xenophobic, leisurely Slugs are the third rarest race in the galaxy, behind the mythical Crystal and Lanius. Their home sectors are all engulfed in enormous nebulae, which lead to them evolving unique psychic abilities in order to overcome the general lack of visibility. As a result, Slug ships aren't built with sensors; the psychic powers of the crew are just as effective, if not more so, than any electronic system. This leaves them at a distinct disadvantage outside nebulae however, so that even within their sectors they are almost never seen outside the concealing clouds. While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and deceitful. They prey upon ships that wander into their home systems, often leading them into traps, as well as resort to piracy in other systems. </summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>TribalSlugPlayer</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>0.5</chance>
+          <hediff>Malnutrition</hediff>
+          <severityRange>
+            <min>0.2</min>
+            <max>0.4</max>
+          </severityRange>
+        </li>
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1.0</chance>
+          <need>Food</need>
+          <levelRange>
+            <min>0</min>
+            <max>0.1</max>
+          </levelRange>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>The Gastropoda or gastropods, more commonly known as snails and slugs, are a large taxonomic class within the phylum Mollusca. The class Gastropoda includes snails and slugs of all kinds and all sizes from microscopic to Achatina achatina, the largest known land gastropod. There are many thousands of species of sea snails and sea slugs, as well as freshwater snails, freshwater limpets, land snails and land slugs.
+		  </text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+		<!-- Player starting things -->
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksGranite</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksSlate</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkSlate</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Silver</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Pemmican</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>HerbalMedicine</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>MeleeWeapon_Club</thingDef>
+			<stuff>Plasteel</stuff>
+			<count>5</count>
+		</li>
+		<li Class="ScenPart_StartingAnimal">
+			<def>StartingAnimal</def>
+			<animalKind>Elephant</animalKind>
+			<count>1</count>
+			<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+		</li>
+
+		<!-- Scatter some things near player start -->
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>WoodLog</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>Steel</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>50</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>50</count>
+		</li>
+		
+      </parts>
+    </scenario>
+  </ScenarioDef>
+    
+
+  
+</Defs>

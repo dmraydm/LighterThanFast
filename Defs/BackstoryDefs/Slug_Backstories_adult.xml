@@ -1,0 +1,308 @@
+<Defs>
+<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote01</defName>
+		<title>Stamp inc ceo</title>
+		<titleShort>StampLicker</titleShort>
+		<baseDescription>NAME was spotted by stampInc and ended up as a CEO there</baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Social</defName><amount>4</amount></li>
+			<li><defName>Crafting</defName><amount>2</amount></li>
+			<li><defName>Construction</defName><amount>-2</amount></li>
+			<li><defName>Artistic</defName><amount>-2</amount></li>
+		</skillGains>
+		
+		<forcedTraits>
+			<li><defName>DrugDesire</defName><degree>1</degree><chance>20</chance></li>
+			<li><defName>DrugDesire</defName><degree>2</degree><chance>10</chance></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>Cleaning</li>
+		</workDisables>
+    </AlienRace.BackstoryDef>
+<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote02</defName>
+		<title>Boat licker</title>
+		<titleShort>Boat</titleShort>
+		<baseDescription>NAME bought a boat but didnt like it. NAMED liked the customers though and somehow managed to create a boat club. NAME built a distribution network, made connections, a lot of money, having moved upwards of a million dollars worth of product over the fiscal year. </baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Crafting</defName><amount>2</amount></li>
+			<li><defName>Medicine</defName><amount>2</amount></li>
+			<li><defName>Cooking</defName><amount>2</amount></li>
+		</skillGains>
+		
+		<forcedTraits>
+			<li><defName>DrugDesire</defName><degree>1</degree><chance>50</chance></li>
+			<li><defName>DrugDesire</defName><degree>2</degree><chance>50</chance></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>Intellectual</li>
+		</workDisables>
+    </AlienRace.BackstoryDef>
+<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote03</defName>
+		<title>Big fish bait</title>
+		<titleShort>Bait</titleShort>
+		<baseDescription>Some interplanetarian NGO had organ traffic presumptions. NAME infiltrated the holographic production as a comedian. She almost got slaughtered in the process but managed to prove the big fish guilt by gathering overwhelming evidence.</baseDescription>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		<maleCommonality>0</maleCommonality>
+		<femaleCommonality>100</femaleCommonality>
+		
+		<skillGains>
+			<li><defName>Melee</defName><amount>2</amount></li>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>5</amount></li>
+		</skillGains>
+		
+		<forcedTraits>
+			<li><defName>Beauty</defName><degree>-1</degree></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>Caring</li>
+		</workDisables>
+    </AlienRace.BackstoryDef>
+<!---->	
+	<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote04</defName>
+		<title>Tree lover</title>
+		<titleShort>hippie</titleShort>
+		<baseDescription>A - "That person over there is a tree lover."
+B - "wha."
+A - "She tied her self to the tree, yo!"
+B - "you joken me"
+A - "na"
+NAME - "you got a problem ?" </baseDescription>
+		<slot>Adulthood</slot>
+		<maleCommonality>0</maleCommonality>
+		<femaleCommonality>100</femaleCommonality>
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		
+		<skillGains>
+			<li><defName>Growing</defName><amount>3</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+		</skillGains>
+
+		<forcedTraits>
+			<li><defName>GreenThumb</defName></li>
+		</forcedTraits>
+
+</AlienRace.BackstoryDef>
+<!---->	
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote05</defName>
+		<title>Slug enhancer</title>
+		<titleShort>enhancer</titleShort>
+		<baseDescription>Seeing how backwards Slug Home Nebula was, NAME decided to tour Zoltan's homeworlds in order to find ways to modernize his country.
+NAME took the guise of an average merchant to avoid being discovered and came back to Slugland with many ways to improve the empire. He set up new schools, created the mighty port of St. Astrodroolport, and ordered all slug men to collect their morning dews or pay a tax.
+		</baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories><li>SlugBackstory</li></spawnCategories>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>4</amount></li>
+			<li><defName>Social</defName><amount>1</amount></li>
+		</skillGains>
+
+		<forcedTraits>
+			<li><defName>Abrasive</defName></li>
+			<li><defName>TooSmart</defName></li>
+			<li><defName>NaturalMood</defName><degree>1</degree></li>
+		</forcedTraits>
+
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote06</defName>
+		<title>Slave one day</title>
+		<titleShort>slave</titleShort>
+		<baseDescription>NAME is a polymath: poet, musician, singer, cosmetologist, fashion designer, strategist, astronomer, botanist and former slave. Most people have never heard of NAME, yet at least one of his innovations remain to this day: he introduced the idea of meals on a regular basis in the slug society. Since Slugs used to carry their nutrients on their mucous membrane all day long, it slightly improved the Slug Home Nebula hygiene.
+		</baseDescription>
+
+		<slot>Adulthood</slot>
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		
+		<skillGains>
+			<li><defName>Artistic</defName><amount>2</amount></li>
+			<li><defName>Intellectual</defName><amount>1</amount></li>
+			<li><defName>Crafting</defName><amount>2</amount></li>
+			<li><defName>Growing</defName><amount>2</amount></li>
+			<li><defName>Medicine</defName><amount>3</amount></li>
+
+			<li><defName>Animals</defName><amount>-1</amount></li>
+			<li><defName>Construction</defName><amount>-2</amount></li>		
+			<li><defName>Melee</defName><amount>-2</amount></li>
+			<li><defName>Cooking</defName><amount>-1</amount></li>
+			<li><defName>Mining</defName><amount>-2</amount></li>
+			<li><defName>Shooting</defName><amount>-2</amount></li>
+		</skillGains>
+	
+		<workDisables>
+			<li>Cleaning</li>
+		</workDisables>
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote07</defName>
+		<title>Female transgender</title>
+		<titleShort>transgender</titleShort>
+		<baseDescription>NAME sexually identifies as an hermaphrodite and will argue with anyone who disagrees that she is right and he is wrong. Phallocrats are her target... For now.
+		</baseDescription>
+		<slot>Adulthood</slot>
+		<maleCommonality>0</maleCommonality>
+		<femaleCommonality>100</femaleCommonality>
+		
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Melee</defName><amount>3</amount></li>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+			<li><defName>Animals</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>1</amount></li>
+		</skillGains>
+		
+		<forcedTraits>
+			<li><defName>Brawler</defName><chance>50</chance></li>
+			<li><defName>ShootingAccuracy</defName><degree>-1</degree><chance>50</chance></li>
+			<li><defName>Nudist</defName><chance>50</chance></li>
+			<li><defName>DislikesMen</defName></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</workDisables>
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote08</defName>
+		<title>Male transgender </title>
+		<titleShort>transgender</titleShort>
+		<baseDescription>NAME sexually identifies as an hermaphrodite and will argue with anyone who disagrees that he is right and she is wrong. Wild amazons are his targets... For now.
+		</baseDescription>
+		<slot>Adulthood</slot>
+		<maleCommonality>100</maleCommonality>
+		<femaleCommonality>0</femaleCommonality>
+		<spawnCategories>
+		  <li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Melee</defName><amount>3</amount></li>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+			<li><defName>Animals</defName><amount>2</amount></li>
+			<li><defName>Growing</defName><amount>1</amount></li>
+		</skillGains>
+		
+		<forcedTraits>
+			<li><defName>Brawler</defName><chance>50</chance></li>
+			<li><defName>ShootingAccuracy</defName><degree>-1</degree><chance>50</chance></li>
+			<li><defName>Nudist</defName><chance>50</chance></li>
+			<li><defName>DislikesWomen</defName></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</workDisables>
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote09</defName>
+		<title>Drool sculptor</title>
+		<titleShort>sculptor</titleShort>
+		<baseDescription>NAME has always felt his excretions were great. Due to this, NAME begun to capture figures and craft opulent wares. Because even with his abundant morning dews, he was not able to gather enough drool to build his dream statues, NAME became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
+
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		  <li>SlugBackstory</li>
+	</spawnCategories>
+		
+	<skillGains>
+		<li><defName>Artistic</defName><amount>6</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+    </skillGains>
+	<workDisables>
+		<li>Social</li>
+	</workDisables>	
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote10</defName>
+		<title>Gofast veteran</title>
+		<titleShort>Ex gofast</titleShort>
+		<baseDescription>NAME has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adaptes, overcomes.</baseDescription>
+
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		  <li>SlugBackstory</li>
+	</spawnCategories>
+		
+	<skillGains>
+		<li><defName>Social</defName><amount>-1</amount></li>
+		
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Medicine</defName><amount>1</amount></li>
+    </skillGains>
+
+	<forcedTraits>
+		<li><defName>Beauty</defName><degree>-1</degree></li>
+		<li><defName>Beauty</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>Masochist</defName><chance>50</chance></li>
+	</forcedTraits>
+	
+	<forcedHediffs><li>Hediff_LTF_SlugYayo</li></forcedHediffs>
+</AlienRace.BackstoryDef>
+<!---->
+<AlienRace.BackstoryDef>
+		<defName>SlugBSQuote11</defName>
+		<title>Mantispulated</title>
+		<titleShort>Nerd</titleShort>
+		<baseDescription>NAME pretends he was forced to harvest an engie by a mantis tryharder. The guy needed a screen to VR because he a had a raid with its clan on the ansible. What the fudge dude!:kappa: NAME managed to escape thanks to his strafing and bunny hops skills. Btw do you even rocket jump bro ?</baseDescription>
+
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		  <li>SlugBackstory</li>
+	</spawnCategories>
+		
+	<skillGains>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Medicine</defName><amount>2</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+		<li><defName>Prosthophile</defName><chance>30</chance></li>
+		<li><defName>Nerves</defName><degree>-1</degree></li>
+		<li><defName>ShootingAccuracy</defName><degree>-1</degree><chance>30</chance></li>
+		<li><defName>Beauty</defName><degree>-1</degree><chance>30</chance></li>
+	</forcedTraits>
+	
+	<workDisables>
+		<li>ManualDumb</li>
+	</workDisables>
+
+</AlienRace.BackstoryDef>
+</Defs>

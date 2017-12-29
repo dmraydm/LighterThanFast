@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- rom -->
+	<ThingDef ParentName="BodyPartBase" >
+		<defName>LTF_EngieRawRom</defName>
+		<label>Vanilla rom</label>
+		<description>A read only memory designed for an engie model</description>
+		<techLevel>Neolithic</techLevel>
+		
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		
+		<useHitPoints>true</useHitPoints>
+		<pathCost>10</pathCost>
+		<selectable>true</selectable>
+		
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Engie/Rom/rawRom</texPath>
+			<drawSize>(1,1)</drawSize>
+			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>70</MarketValue>
+			<Mass>.5</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		
+		<thingCategories>
+			<li>BodyPartsNatural</li>
+		</thingCategories>
+		<tradeTags>
+			<li>BodyPartOrImplant</li>
+		</tradeTags>
+   </ThingDef>
+   <!-- cpu core-->
+  	<ThingDef ParentName="BodyPartBase" >
+		<defName>LTF_EngieSingleCore</defName>
+		<label>core01Vanilla</label>
+		<description>An engie core</description>
+		<techLevel>Neolithic</techLevel>
+		<!--<stackLimit>128</stackLimit>-->
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		
+		<useHitPoints>true</useHitPoints>
+		<pathCost>10</pathCost>
+		<selectable>true</selectable>
+		
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Engie/Core/01Core</texPath>
+			<drawSize>(.5,.5)</drawSize>
+			<onGroundRandomRotateAngle>64</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>70</MarketValue>
+			<Mass>.5</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Flammability>1.2</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		
+		<thingCategories>
+			<li>BodyPartsNatural</li>
+		</thingCategories>
+		<tradeTags>
+			<li>BodyPartOrImplant</li>
+		</tradeTags>
+   </ThingDef> 
+</Defs>

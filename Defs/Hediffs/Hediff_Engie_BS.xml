@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- chemfuel leak-->
+	<HediffDef>
+		<defName>Hediff_LTF_EngieChemfuelLeak</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<label>Fuel leaking</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>Chemfuel</thingToSpawn>
+			<spawnCount>5</spawnCount>
+			
+			<minDaysB4Next>1.2</minDaysB4Next>
+			<maxDaysB4Next>2</maxDaysB4Next>
+			<mandatoryGrace>true</mandatoryGrace>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>leak</spawnVerb>
+			
+			<hungerRelative>true</hungerRelative>
+			<randomGrace>true</randomGrace>
+			<graceDays>.5</graceDays>
+			
+			<tickerLimit>3.24</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

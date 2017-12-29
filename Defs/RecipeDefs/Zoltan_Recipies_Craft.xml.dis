@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>LTF_SmithShieldHelm</defName>
+    <label>make zoltan shield helm</label>
+    <description>Smith a helm that can receive shield layers through microwaves or however it works.
+	</description>
+    <jobString>Smithing a zoltan shield helm</jobString>
+	
+    <workAmount>8777</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+	<soundWorking>Recipe_Machining</soundWorking>
+	<researchPrerequisite>LTF_Research_ZoltanShieldBench</researchPrerequisite>
+	
+    <allowMixingIngredients>false</allowMixingIngredients>
+	<workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>LTF_EngieBench</li>
+		<li>ElectricSmithy</li>
+		<li>FueledSmithy</li>
+	</recipeUsers>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+	<skillRequirements>
+		<Crafting>7</Crafting>
+	</skillRequirements>
+	
+	<!-- ingredient -->
+    <ingredients>
+		<li>
+			<filter><thingDefs><li>Component</li></thingDefs></filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+			<count>53</count>
+		</li>
+		<li>
+			<filter><thingDefs><li>Steel</li></thingDefs></filter>
+			<count>7</count>
+		</li>
+		<li>
+			<filter><thingDefs><li>LTF_Kraptyl</li></thingDefs></filter>
+			<count>13</count>
+		</li>
+    </ingredients>
+	
+    <products>
+		<LTF_shieldHelm>1</LTF_shieldHelm>
+    </products>
+
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>Component</li>
+			<li>Plasteel</li>
+			<li>Steel</li>
+			<li>LTF_Kraptyl</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+	</RecipeDef>
+
+	<!--
+	-->
+</Defs>

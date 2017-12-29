@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- T1 -->
+	<!-- Craft -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCraftRom</defName>
+		<label>romCra1</label>
+		<description>A crafting perimeter enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/craftRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+		</costList>
+		<costStuffCount>105</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		
+	</ThingDef>
+	<!-- T2 -->
+	<!-- Craft -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCraft2Rom</defName>
+		<label>romCra2</label>
+		<description>A crafting perimeter enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/craft2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieCraftRom>2</LTF_EngieCraftRom>
+			<Apparel_CowboyHat>5</Apparel_CowboyHat>
+		</costList>
+	</ThingDef>
+	<!-- T2 -->
+	<!-- Craft -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCraft3Rom</defName>
+		<label>romCra3</label>
+		<description>A crafting perimeter enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/craft3Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieCraft2Rom>2</LTF_EngieCraft2Rom>
+			<Apparel_Parka>5</Apparel_Parka>
+		</costList>
+	</ThingDef>
+</Defs>

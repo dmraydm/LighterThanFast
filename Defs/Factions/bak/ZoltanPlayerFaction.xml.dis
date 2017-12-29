@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<FactionDef Abstract="True" Name="PlayerZoltanBase">
+		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
+		<colorSpectrum>
+		<li>(0.3, 0.3, 0.3)</li>
+		</colorSpectrum>
+	</FactionDef>
+<!-- techLevel : Industrial Medieval Neolithic -->
+<!-- StartingResearchTag : TribalStart ClassicStart -->
+	<FactionDef ParentName="PlayerZoltanBase">
+		<defName>TribalZoltanPlayer</defName>
+		<label>Tribal cluster</label>
+		<description>A Zoltan nest.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>ZoltanPlayer</basicMemberKind>
+		<pawnsPlural>Zoltans</pawnsPlural>
+
+		<baseNameMaker>NamerBaseZoltanVillage</baseNameMaker>
+		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<backstoryCategory>ZoltanBackstory</backstoryCategory>
+
+		<homeIconPath>Zoltan/npcZoom</homeIconPath>
+		<expandingIconTexture>Zoltan/City</expandingIconTexture>
+
+		<techLevel>Industrial</techLevel>
+		<startingResearchTags>
+			<li>TribalStart</li>
+		</startingResearchTags>
+		
+		<hairTags>
+			<li>empty</li>
+		<!--	<li>Zoltan</li>-->
+		</hairTags>
+		
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Cloth</li>
+				<li>Hyperweave</li>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+</Defs>

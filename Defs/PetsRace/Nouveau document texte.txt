@@ -1,0 +1,29 @@
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>.2</explosiveRadius >
+		<postExplosionSpawnThingDef>LTF_ChunkSlagKraptyl</postExplosionSpawnThingDef>
+		<explosiveDamageType>Flame</explosiveDamageType>
+		
+		<damageAmountBase>1</damageAmountBase>
+		
+		<!--
+		<preExplosionSpawnChance>.5</preExplosionSpawnChance>
+		<preExplosionSpawnThingCount>5</preExplosionSpawnThingCount>
+		<preExplosionSpawnThingDef>LTF_SlugDew</preExplosionSpawnThingDef>
+		-->
+		<postExplosionSpawnChance>.7</postExplosionSpawnChance>
+		<postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+		<applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+
+		<chanceToStartFire>.7</chanceToStartFire>
+		<!--
+		<startWickOnDamageTaken>Flame</startWickOnDamageTaken>
+		<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+		
+		<wickTicks>
+			<min>150</min>
+			<max>300</max>
+		</wickTicks>
+		-->
+		
+		<!-- <eggUnfertilizedDef></eggUnfertilizedDef> -->
+      </li>

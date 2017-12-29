@@ -1,0 +1,239 @@
+<Defs>
+    <AlienRace.BackstoryDef>
+		<defName>SlugChildBS01</defName>
+		<title>Exugation overload</title>
+		<titleShort>exugator</titleShort>
+		<baseDescription>NAME exugates a lot.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+
+		<skillGains>
+		<li><defName>Growing</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>-1</amount></li>
+		<li><defName>Construction</defName><amount>-1</amount></li>
+		</skillGains>
+		
+		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+		<!---->
+	
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS02</defName>
+		<title>Legacy holder</title>
+		<titleShort>inheritor</titleShort>
+		<baseDescription>NAME’s early life was spent mostly in debtor’s prison because his poor dad couldn’t pay off his debts so the whole family had to join him in the slammer, a fairly typical practice in Slug Home Nebula. NAME's inner garden grew up.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+
+		<skillGains>
+			<li><defName>Artistic</defName><amount>5</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Animals</defName><amount>1</amount></li>
+		</skillGains>
+
+		<forcedHediffs><li>Hediff_LTF_SlugInsectExugation</li></forcedHediffs>
+	</AlienRace.BackstoryDef>
+	
+ 		<!---->
+ 	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS03</defName>
+		<title>Dry hearted</title>
+		<titleShort>dry</titleShort>
+		<baseDescription>NAME's childhood was a pitiful one—his father died of stomach cancer(not fun for a gasteropod) and left his family penniless due to his gambling. NAME was often made fun of in school for his studiousness and skin dryness, but nobody could have predicted NAME's rise to power.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>5</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+		</skillGains>
+		<workDisables><li>Mining</li></workDisables>
+		<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+		<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS04</defName>
+		<title>Vacuum hater</title>
+		<titleShort>vacuum</titleShort>
+		<baseDescription>NAME almost lost an eye being sucked by a vacuum cleaner. Focusing on going outside to dodge the terrifying monster favorised mucosa exugation. It's because of the wind. Ask Shai-Hulud it knows.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+
+		<skillGains>
+			<li><defName>Growing</defName><amount>3</amount></li>
+			<li><defName>Animals</defName><amount>2</amount></li>
+			<li><defName>Construction</defName><amount>-3</amount></li>
+			<li><defName>Crafting</defName><amount>-3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>GreenThumb</defName></li>
+		</forcedTraits>
+		
+		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+		<workDisables><li>Mining</li></workDisables>
+    </AlienRace.BackstoryDef>
+		<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS05</defName>
+		<title>Inner brain</title>
+		<baseDescription>NAME's mother was never able to get through the Thin with NAME's father. He was tyrannical and had unorthodox sexual desires. That's what NAME's mother relied on when she laid her eggs inside him. NAME and siblings devoured their host. NAME told later to her brood that NAME's father did not die like that. Or if so that was accident, or maybe he deserved it. NAME inherited some tastes and predispositions from that family crunchy story.</baseDescription>
+		<titleShort>brain</titleShort>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Cooking</defName><amount>-3</amount></li>
+			<li><defName>Medicine</defName><amount>3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Cannibal</defName></li>
+		</forcedTraits>
+		
+		<workDisables><li>Animals</li></workDisables>
+		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+	<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS06</defName>
+		<title>Theater prodigy</title>
+		<titleShort>SlugTheater</titleShort>
+		<baseDescription>When NAME used to be in the transrace nursery, he was part of theater piece where a Zoltan embodied Rudolph the Red Nosed Reindeer from the terran subculture. The Zoltan was bullied by a young Mantis. NAME managed to mobilize his mindcontrol to make him stop. It worked and let NAME with soon to be dispersed guilty thoughts and a manipulative career seed within him.</baseDescription>
+		<slot>Childhood</slot>
+		
+		<maleCommonality>100</maleCommonality>
+		<femaleCommonality>0</femaleCommonality>
+		
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Construction</defName><amount>-1</amount></li>
+			<li><defName>Cooking</defName><amount>-1</amount></li>
+			<li><defName>Crafting</defName><amount>-1</amount></li>
+			<li><defName>Growing</defName><amount>-1</amount></li>
+			<li><defName>Social</defName><amount>4</amount></li>
+			<li><defName>Artistic</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Psychopath</defName><chance>50</chance></li>
+			<li><defName>Nimble</defName><chance>50</chance></li>
+		</forcedTraits>
+		
+		<workDisables>
+		</workDisables>
+		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+	<!---->
+	
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS07</defName>
+		<title>Offshore brood</title>
+		<titleShort>offshore</titleShort>
+		<baseDescription>NAME's father was a very motivated drug mule and made it a career when others would dramatically die for some reason. He also had at least 2 families. When truth was revealed, NAME's trust in men was devastated even if he was a loving one and always took care of his offshore brood(s).</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+
+		<skillGains>
+			<li><defName>Animals</defName><amount>2</amount></li>
+			<li><defName>Artistic</defName><amount>2</amount></li>
+			<li><defName>Intellectual</defName><amount>2</amount></li>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>DislikesMen</defName></li>
+		</forcedTraits>
+		
+		<workDisables>
+			<li>Caring</li>
+			<li>Social</li>
+		</workDisables>
+		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+	<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS08</defName>
+		<title>Socially awkward</title>
+		<titleShort>awkward</titleShort>
+		<baseDescription>NAME has always felt awkward concerning HIS morning dews. NAME cant bear being sighted when it happens and feels very vulnerable. That's why NAME chose to live as a night hermit.</baseDescription>
+
+		<slot>Childhood</slot>
+
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+		
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>3</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>NightOwl</defName></li>
+		</forcedTraits>
+		
+		<workDisables>
+		</workDisables>
+		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+		<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS09</defName>
+		<title>Rotting outside</title>
+		<titleShort>Rotting</titleShort>
+		<baseDescription>NAME has never exugated like others. Others say NAME smells weird, but hey that's what moult is for.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+		
+		<skillGains>
+			<li><defName>Medicine</defName><amount>2</amount></li>
+			<li><defName>Crafting</defName><amount>-2</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+		</skillGains>
+		
+		<workDisables><li>Animals</li></workDisables>
+				
+		<forcedHediffs><li>Hediff_LTF_SlugRottingExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+		<!---->
+	<AlienRace.BackstoryDef>
+		<defName>SlugChildBS10</defName>
+		<title>Spacepirate fanboy</title>
+		<titleShort>fanboy</titleShort>
+		<baseDescription>NAME has always dreamt to be a space pirate like Cobra, Harlock or Black Raven. NAME chose to let aside its race predispositions aside to live the dream, one day.</baseDescription>
+
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>SlugBackstory</li>
+		</spawnCategories>
+		
+		<skillGains>
+			<li><defName>Construction</defName><amount>2</amount></li>
+			<li><defName>Crafting</defName><amount>-2</amount></li>
+			<li><defName>Intellectual</defName><amount>3</amount></li>
+			<li><defName>Artistic</defName><amount>2</amount></li>
+			<li><defName>Medicine</defName><amount>-2</amount></li>
+			<li><defName>Social</defName><amount>-3</amount></li>
+		</skillGains>
+		
+		<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
+    </AlienRace.BackstoryDef>
+</Defs>

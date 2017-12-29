@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef Name="BaseEngiePawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Combat</li>
+    </inspectorTabs>
+    <comps>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseEngiePawn">
+    <defName>Alien_Engie</defName>
+    <label>engie</label>
+    
+    <description>Though their current home planetary systems are well documented, the true origins of the emotionless Engi are a mystery; it is known that the majority of their bodies are made from trillions of nanomachines, which give the illusion of a silvery 'skin' with a metallic sheen, and that they can adopt different shapes to better cope with their environment, although they generally maintain a humanoid form, which most other races are habitually more comfortable with.
+The Engi also wield powerful knowledge of machinery, and are generally natural mechanics - especially when they're only expected to service and repair comparatively primitive human technology. While the Engi are extremely intelligent, their primarily robotic body composition is very fragile. The delicate and very technical inner workings of an Engi are not nearly as rugged as regular organic material, like that found in humans. As a result, Engi usually make poor fighters; however, their immaculate knowledge of mechanics coupled with their immunity to most diseases as a result of their cybernetic bodies can make them excellent allies. The Engi still require oxygen to survive despite their mostly robotic makeup, however. The many scientific anomalies of the Engi have been points of contention between human scientists for years; they argue incessantly over whether the Engi are organic lifeforms by definition, or rather sentient machines. Most accept the notion, though, that they're simply a bridge between the two.
+
+- 110% construction
+- 95% social
+- 90% shooting accuracy
+- 85% melee hit chance
+- 4x sockets(1x cpu 1x rom)
+
+	</description>
+        
+    <statBases>
+		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>30</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>4.61</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		<CarryingCapacity>75</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>1.0</ResearchSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		<SocialImpact>0.95</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<PlantHarvestYield>1.0</PlantHarvestYield>
+		<ConstructionSpeed>1.1</ConstructionSpeed>
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		
+		<ShootingAccuracy>.9</ShootingAccuracy>
+		<MeleeHitChance>.85</MeleeHitChance>
+    </statBases>
+	
+	<verbs>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+	<alienRace>
+
+	<generalSettings>
+		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<alienPartGenerator>
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<li>Thin</li>
+			</alienbodytypes>
+			<useGenderedHeads>false</useGenderedHeads>
+			<alienskincolorgen Class="ColorGenerator_Options">
+				<options>
+				
+				<!-- dark -->
+					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+
+				<!-- green -->
+
+					<li><weight>8</weight><only>RGBA(0.9,1,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,1,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(0.7,1,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.6,1,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.5,1,0.5,1)</only></li>
+
+				<!-- blue -->
+
+					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
+					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
+				
+				<!-- red -->
+					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+				
+				</options>
+			</alienskincolorgen>
+		</alienPartGenerator>
+		<!--
+		<factionRelations>
+			<li>
+			<goodwill>
+			   <min>-60</min>
+			   <max>40</max>
+			</goodwill>
+			</li>
+		</factionRelations>
+		-->
+		<!-- <chemicalSettings>.5</chemicalSettings> -->
+		<maleGenderProbability>1</maleGenderProbability>    
+		<forcedRaceTraitEntries>
+			<li><defName>Beauty</defName><degree>2</degree><chance>0</chance></li>
+			<li><defName>Greedy</defName><chance>0</chance></li>
+			<li><defName>Jealous</defName><chance>0</chance></li>
+
+			<li><defName>Industriousness</defName><degree>1</degree><chance>30</chance></li>
+			<li><defName>Industriousness</defName><degree>2</degree><chance>20</chance></li>
+		</forcedRaceTraitEntries>
+	</generalSettings>    
+
+	<graphicPaths>
+		<li>
+			<body>Engie/Body/</body>
+			<head>Engie/Head/</head>
+		</li>
+	</graphicPaths>
+
+	<hairSettings>
+		<hasHair>true</hasHair>
+		<hairTags>
+		<li>Engie</li>
+		</hairTags>
+	</hairSettings>
+
+	<relationSettings>
+				<relationChanceModifierChild>1</relationChanceModifierChild>
+				<relationChanceModifierExLover>1</relationChanceModifierExLover>
+				<relationChanceModifierLover>1</relationChanceModifierLover>
+				<relationChanceModifierParent>1</relationChanceModifierParent>
+				<relationChanceModifierSibling>1</relationChanceModifierSibling>
+	</relationSettings>
+
+<pawnKindSettings>
+            <alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>EngieSlave</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+						<li>EngieRefugee</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienrefugeekinds>
+			<startingColonists>
+				<li>
+				<pawnKindEntries>
+					<li>
+                    <kindDefs>
+                        <li>EngieHunter</li>
+						<li>EngieHistGuard</li>
+						<li>EngieShadowscale</li>
+						<li>EngieColonist</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+					</li>
+				</pawnKindEntries>
+					<factionDefs>
+						<li>EngiePlayerColony</li>
+						<li>PlayerTribe</li>
+						<!-- <li>KestrelPlayerColony</li>  -->
+					</factionDefs>
+				</li>
+			</startingColonists>
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>EngieHunter</li>
+								<li>EngieHistGuard</li>
+								<li>EngieColonist</li>
+								<li>EngieShadowscale</li>
+								<li>EngieHistSpeaker</li>
+								<li>EngieFighter</li>
+                            </kindDefs>
+                            <chance>50.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>EngiePlayerColony</li> 
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+	</pawnKindSettings>
+ 
+	<thoughtSettings>
+		<cannotReceiveThoughts></cannotReceiveThoughts>
+		
+		<ateThoughtSpecific></ateThoughtSpecific>
+
+		<replacerList>
+		<li>
+			<original>AteInsectMeatAsIngredient</original>
+			<replacer>EngieInsect</replacer> 
+		</li>
+		<li>
+			<original>AteInsectMeatDirect</original>
+			<replacer>EngieInsectDirect</replacer> 
+		</li>
+		</replacerList>
+	</thoughtSettings>
+
+	<raceRestriction>
+	</raceRestriction>
+
+</alienRace>
+    
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <nameGenerator>NamerPersonEngie</nameGenerator>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+      <leatherColor>(128,128,128)</leatherColor>
+      <bloodDef></bloodDef>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherLabel>engie leather</leatherLabel>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Engie</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Pawn_Mech_Scyther_Wounded</soundAngry>
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+		<!-- TODO -->
+      </hediffGiverSets>
+</race>
+    <recipes>
+	<!-- Cooler -->
+		<li>LTF_Install01Cooler</li>
+		<li>LTF_Install02Cooler</li>
+		<li>LTF_Install04Cooler</li>
+	<!-- Core -->		
+		<!--implicite
+		<li>LTF_Install01Core</li> -->
+		<li>LTF_Install02Core</li>
+		<li>LTF_Install04Core</li>
+		<li>LTF_Install08Core</li>
+		<li>LTF_Install16Core</li>
+		<li>LTF_Install32Core</li>
+		<li>LTF_Install64Core</li>
+	<!-- Rom -->
+		<li>LTF_InstallRawRom</li>
+		
+		<li>LTF_InstallConstructRom</li><li>LTF_InstallConstruct3Rom</li><li>LTF_InstallConstruct3Rom</li>
+		<li>LTF_InstallCookRom</li><li>LTF_InstallCook2Rom</li>
+		<li>LTF_InstallCraftRom</li><li>LTF_InstallCraft3Rom</li><li>LTF_InstallCraft3Rom</li>
+		<li>LTF_InstallGrowRom</li><li>LTF_InstallGrow2Rom</li>
+		<li>LTF_InstallMedicineRom</li><li>LTF_InstallMedicine2Rom</li>
+		<li>LTF_InstallMiningRom</li><li>LTF_InstallMining2Rom</li>
+		<li>LTF_InstallTamingRom</li><li>LTF_InstallTaming2Rom</li>
+	<!-- Krom -->	
+		<li>LTF_InstallCookKrom</li><li>LTF_InstallMedicineKrom</li><li>LTF_InstallResearchKrom</li>
+	<!-- -->
+		<li>InstallPowerClaw</li>
+		<li>InstallScytherBlade</li>
+		<!--<li>InstallBionicEye</li>-->
+		<li>InstallBionicArm</li>
+		<li>InstallBionicLeg</li>
+		<li>InstallSimpleProstheticArm</li>
+		<li>InstallSimpleProstheticLeg</li>
+		<li>InstallPegLeg</li>
+		<li>InstallDenture</li>
+		<li>InstallJoywire</li>
+		<li>InstallPainstopper</li>
+		<li>InstallNaturalHeart</li>
+		<li>InstallNaturalLung</li>
+		<li>InstallNaturalKidney</li>
+		<li>InstallNaturalLiver</li>
+		<li>ExciseCarcinoma</li>
+		<li>RemoveBodyPart</li>
+		<li>Euthanize</li>
+		<li>Anesthetize</li>
+    </recipes>
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- research -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieResearchRom</defName>
+		<label>romRes1</label>
+		<description>A researching field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/researchRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<Wort>100</Wort>
+			<!-- TODO -->
+		</costList>
+	</ThingDef>
+	<!-- T2 -->
+	<!-- research -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieResearch2Rom</defName>
+		<label>romRes2</label>
+		<description>A researching field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/research2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>1</Gold>
+			<LTF_EngieResearchRom>2</LTF_EngieResearchRom>
+		</costList>
+	</ThingDef>
+	<!-- K1 -->
+	<!-- research -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieResearchKrom</defName>
+		<label>kromRes1</label>
+		<description>A researching field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/resKrom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<LTF_Kraptyl>50</LTF_Kraptyl>
+			<LTF_EngieCook2Rom>1</LTF_EngieCook2Rom>
+			<LTF_EngieRawRom>2</LTF_EngieRawRom>
+			<DevilstrandCloth>150</DevilstrandCloth>
+			<Telescope>1</Telescope>
+			<InsectJelly>10</InsectJelly>
+		</costList>
+	</ThingDef>
+	
+</Defs>

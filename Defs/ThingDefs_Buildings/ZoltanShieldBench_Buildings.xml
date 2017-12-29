@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BenchBase">
+		<defName>LTF_ShieldBench</defName>
+		<label>shield bench</label>
+		<thingClass>Building_WorkTable</thingClass>
+		<!-- <thingClass>Newhatcher.</thingClass> -->
+		<description>A work station to synthetise shields layer for helm wearers in range.
+		
+- Needs to be located outdoors.
+- Intelligence, shooting accuracy and crafting make a good layer synthetizer.
+- /!\ LTF refuses all responsibility for fires when comes the rain again
+Falling on my head like a memory.</description>
+		<graphicData>
+			<texPath>Things/Building/ShieldBench/LTF_ShieldBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<surfaceType>Item</surfaceType>
+<!-- hasTooltip -->
+		<costList>
+			<Plasteel>43</Plasteel>
+			<Component>1</Component>
+			<LTF_Kraptyl>23</LTF_Kraptyl>
+		</costList>
+		<costStuffCount>150</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<killedLeavings>
+			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>
+			<LTF_Kraptyl>7</LTF_Kraptyl>
+			<Plasteel>17</Plasteel>
+		</killedLeavings>
+
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.7</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.1</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<size>(3,1)</size>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>12.7</specialDisplayRadius>
+		
+		<passability>PassThroughOnly</passability>
+		<pathCost>80</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>false</startElectricalFires>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+
+			<!-- <li Class="CompProperties_FireOverlay"><fireSize>1</fireSize></li> -->
+			
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(50,220,50,0)</glowColor>
+			</li>
+			
+			<li Class="CompProperties_Breakdownable"/>
+
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>.7</chanceNeverExplodeFromDamage>
+			</li>			
+			
+			<li>
+				<compClass>NewHatcher.Comp_LTF_SynthetizeShieldLayer</compClass>
+			</li>
+			
+		</comps>
+		
+		<researchPrerequisites><li>LTF_Research_ZoltanShieldBench</li></researchPrerequisites>
+		
+		<placeWorkers>
+			<!-- <li>PlaceWorker_ShowFacilitiesConnections</li> -->
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		
+	</ThingDef>
+	
+</Defs>

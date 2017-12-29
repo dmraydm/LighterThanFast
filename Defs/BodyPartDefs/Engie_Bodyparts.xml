@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- socket -->
+<BodyPartDef Name="BodyPart_LTF_Socket" Abstract="True">
+
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+    <isSolid>true</isSolid>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_Socket">
+    <defName>BodyPart_LTF_00Socket</defName>
+	<label>sock00</label>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_Socket">
+    <defName>BodyPart_LTF_01Socket</defName>
+	<label>sock01</label>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_Socket">
+    <defName>BodyPart_LTF_10Socket</defName>
+	<label>sock10</label>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_Socket">
+    <defName>BodyPart_LTF_11Socket</defName>
+	<label>sock11</label>
+</BodyPartDef>
+	<!-- socket filler-->
+<BodyPartDef Name="BodyPart_LTF_socketFiller" Abstract="True">
+    <!--<defName>BodyPart_LTF_socketFiller</defName>-->
+    <!--<label>foo</label>-->
+    <hitPoints>5</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+    <isSolid>true</isSolid>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_00CoreFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock00core</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_01CoreFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock01core</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_10CoreFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock10core</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_11CoreFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock11core</label>
+</BodyPartDef>
+
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_romFiller00</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock00rom</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_01RomFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock01rom</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_10RomFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>sock10rom</label>
+</BodyPartDef>
+<BodyPartDef ParentName="BodyPart_LTF_socketFiller">
+	<defName>BodyPart_LTF_11RomFiller</defName>
+	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<label>socket11rom</label>
+</BodyPartDef>
+<!-- core -->
+<BodyPartDef>
+    <defName>BodyPart_LTF_00Core</defName>
+    <label>sock00core</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+	
+    <dontSuggestAmputation>false</dontSuggestAmputation>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <hitChanceFactors>
+		<li>
+			<key>Blunt</key>
+			<value>0</value>
+		</li>
+    </hitChanceFactors>
+	<spawnThingOnRemoved>LTF_EngieSingleCore</spawnThingOnRemoved>
+</BodyPartDef>
+
+<!-- rom -->  
+<BodyPartDef>
+    <defName>BodyPart_LTF_rawRom</defName>
+    <label>sock00rom</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>.1</oldInjuryBaseChance>
+
+    <skinCovered>true</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <beautyRelated>false</beautyRelated>
+	<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+	
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+	
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+	
+	<spawnThingOnRemoved>LTF_EngieRawRom</spawnThingOnRemoved>
+</BodyPartDef>
+
+<!-- hmi -->
+<BodyPartDef>
+    <defName>BodyPart_LTF_Hmi</defName>
+    <label>Human machine interface</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>.1</oldInjuryBaseChance>
+	
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <amputateIfGeneratedInjuredChance>0.1</amputateIfGeneratedInjuredChance>
+	<beautyRelated>true</beautyRelated>
+	
+    <tags>
+		<li>SightSource</li>
+    </tags>
+	
+	<spawnThingOnRemoved>EmpathyBox</spawnThingOnRemoved>
+</BodyPartDef>
+
+</Defs>

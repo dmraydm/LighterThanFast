@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef Name="BaseRockmanPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Combat</li>
+    </inspectorTabs>
+    <comps>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseRockmanPawn">
+    <defName>Alien_Rockman</defName>
+    <label>Rockman</label>
+    
+    <description>The Rockmen, as they have been nicknamed by humans, are called so because of their unique skin which according to scientific experiments can be nearly as hard and rugged as solid rock. Additionally, the Rockmen are extremely well conditioned and physically strong to compensate for their thick rock-like skin, giving them an astounding resilience. As a result of their physical attributes, the Rockmen have evolved throughout their race's existence into a warrior race which values personal strength and martial prowess over nearly everything else.
+While the Rockmen are generally not an adventurous race, and can only be consistently located within their own territories' borders, the Rockmen are liable to open fire on any ship they encounter that they aren't familiar with. Still, there are always exceptions to the rule, and having Rockmen crew can be very beneficial. Also, from random occurrences, some Rockmen seem to be quite religious.
+	
+- 150% hp 
+- 110% mining
+- 133% carrying capacity
+- 90%s speed
+- close to no cloths
+- natural armor
+- fireproof, comfy temp over 9000 (watch out for cold though)
+	</description>
+        
+    <statBases>
+		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+		<ComfyTemperatureMax>9999</ComfyTemperatureMax>
+		<LeatherAmount>50</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>4.15</MoveSpeed>
+		<Flammability>0</Flammability>
+		<CarryingCapacity>100</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>1.0</ResearchSpeed>
+		<MiningSpeed>1.1</MiningSpeed>
+		<SocialImpact>1</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<PlantHarvestYield>1.0</PlantHarvestYield>
+		<ConstructionSpeed>1.0</ConstructionSpeed>
+		<!--
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		-->
+		<ArmorRating_Blunt>.3</ArmorRating_Blunt>
+		<ArmorRating_Sharp>.45</ArmorRating_Sharp>
+    </statBases>
+	<verbs>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+	<alienRace>
+
+	<generalSettings>
+		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<alienPartGenerator>
+			<customDrawSize>(1.7, 1.7)</customDrawSize>
+			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+
+			<useGenderedHeads>false</useGenderedHeads>
+
+			<aliencrowntypes>
+				<li>Circle</li>
+				<li>Veggy</li>
+				<li>Animal</li>
+				<li>Moai</li>
+			</aliencrowntypes>
+			<!--
+			<alienbodytypes>
+				<li>Thin</li>
+				<li>Female</li>
+				<li>Male</li>
+			</alienbodytypes>
+-->
+			<alienskincolorgen Class="ColorGenerator_Options">
+				<options>
+				<!-- silver -->
+					<li><weight>1</weight><only>(180,173,150)</only></li>
+				<!-- gold -->
+					<li><weight>1</weight><only>(255,235,122)</only></li>
+				<!-- steel -->
+					<li><weight>1</weight><only>(102,102,105)</only></li>
+				<!-- plastell -->
+					<li><weight>1</weight><only>(160,178,181)</only></li>
+				<!-- uranium -->
+					<li><weight>1</weight><only>(100,100,100)</only></li>
+				<!--jade-->
+					<li><weight>1</weight><only>(85,118,69)</only></li>
+
+				<!--sandstone-->
+					<li><weight>40</weight><only>(126,104,94)</only></li>
+				<!-- granite-->
+					<li><weight>40</weight><only>(105,95,97)</only></li>
+				<!-- limestone-->
+					<li><weight>40</weight><only>(158,153,135)</only></li>
+				<!-- slate-->
+					<li><weight>40</weight><only>(70,70,70)</only></li>
+				<!-- marble-->
+					<li><weight>40</weight><only>(132,135,132)</only></li>
+					
+					
+				<!-- dark -->
+				<!--
+					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+-->
+				<!-- red -->
+					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+				<!-- red+green -->
+					<li><weight>8</weight><only>RGBA(1,1,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,1,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,1,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(1,1,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(1,1,0.5,1)</only></li>
+				</options>
+			</alienskincolorgen>
+		</alienPartGenerator>
+		 <!-- race sleeps upright-->
+	<!--	<CanLayDown>false</CanLayDown>-->
+	<!--race has their own beds-->
+	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
+<!--		
+		<factionRelations>
+			<li>
+			<goodwill>
+			   <min>-20</min>
+			   <max>40</max>
+			</goodwill>
+			</li>
+		</factionRelations>
+		-->
+		<!-- <chemicalSettings>.9</chemicalSettings> -->
+		<maleGenderProbability>0.3</maleGenderProbability>
+				
+		<forcedRaceTraitEntries>
+			<li><defName>Ascetic</defName><chance>30</chance></li>		
+			<li><defName>SpeedOffset</defName><degree>-1</degree><chance>30</chance></li>
+		</forcedRaceTraitEntries>
+		
+		<disallowedTraits>
+               <li>Jealous</li>
+			   <li>Greedy</li>
+			   <li>Nudist</li>
+		</disallowedTraits>
+	</generalSettings>    
+
+	<graphicPaths>
+		<li>
+			<body>Rockman/Body/</body>
+			<head>Rockman/Head/</head>
+		</li>
+	</graphicPaths>
+
+	<hairSettings>
+		<getsGreyAt>110</getsGreyAt>
+		<hasHair>true</hasHair>
+		<hairTags>
+		<!--<li>Rockman</li>-->
+		<li>empty</li>
+		</hairTags>
+	</hairSettings>
+
+	<relationSettings>
+	</relationSettings>
+
+	<pawnKindSettings>
+            <alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>RockmanSlave</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+						<li>RockmanRefugee</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienrefugeekinds>
+			<startingColonists>
+				<li>
+				<pawnKindEntries>
+					<li>
+                    <kindDefs>
+                        <li>RockmanHunter</li>
+						<li>RockmanHistGuard</li>
+						<li>RockmanShadowscale</li>
+						<li>RockmanColonist</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+					</li>
+				</pawnKindEntries>
+					<factionDefs>
+						<li>RockmanPlayerColony</li>
+						<li>PlayerTribe</li>
+						<!-- <li>KestrelPlayerColony</li> -->
+					</factionDefs>
+				</li>
+			</startingColonists>
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>RockmanHunter</li>
+								<li>RockmanHistGuard</li>
+								<li>RockmanColonist</li>
+								<li>RockmanShadowscale</li>
+								<li>RockmanHistSpeaker</li>
+								<li>RockmanFighter</li>
+                            </kindDefs>
+                            <chance>50.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>RockmanPlayerColony</li> 
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+	</pawnKindSettings>
+ 
+	<thoughtSettings>
+		<cannotReceiveThoughts><li>Naked</li></cannotReceiveThoughts>
+		
+		<ateThoughtSpecific></ateThoughtSpecific>
+
+		<replacerList>
+		</replacerList>
+	</thoughtSettings>
+
+	<raceRestriction>
+		<apparelList></apparelList>
+		<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+		<whiteApparelList>
+			<li>Apparel_ShieldBelt</li>
+			<li>Apparel_SmokepopBelt</li>
+			<li>LTF_shieldHelm</li>
+		</whiteApparelList>
+	</raceRestriction>
+
+</alienRace>
+    
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <nameGenerator>NamerPersonRockman</nameGenerator>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+	  <!-- granite -->
+      <leatherColor>(105,95,97)</leatherColor>
+      <bloodDef></bloodDef>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.95</leatherInsulation>
+      <leatherLabel>Rockman leather</leatherLabel>
+      <leatherMarketValueFactor>4</leatherMarketValueFactor>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Human</body>
+      <baseBodySize>1.63</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      <baseHungerRate>1.5</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+		<!-- TODO -->
+      </hediffGiverSets>
+</race>
+    <recipes>
+      <li>InstallPowerClaw</li>
+      <li>InstallScytherBlade</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

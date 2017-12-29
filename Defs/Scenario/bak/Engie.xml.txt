@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>EngiesOnly</defName>
+    <label>Engies only, you motherboard f*cker</label>
+    <description>var aa,ba,ca,da,ea;</description>
+    <scenario>
+      <summary>IA rul3z</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>EngieFaction</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>0.2</chance>
+          <hediff>Anesthetic</hediff>
+          <!--
+		  <severityRange>
+            <min>0.2</min>
+            <max>0.4</max>
+          </severityRange>
+		  -->
+        </li>
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1.0</chance>
+          <need>Food</need>
+          <levelRange>
+            <min>0</min>
+            <max>0.1</max>
+          </levelRange>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>; engie.asm
+; assemble using nasm:   
+; nasm -o engie.com -f bin engie.asm
+	mov	ax,'00'		; initialize to all ASCII zeroes
+	mov	di,counter		; including the counter
+	mov	cx,digits+cntDigits/2	; two bytes at a time
+	cld			; initialize from low to high memory
+	rep	stosw		; write the data
+	inc	ax		; make sure ASCII zero is in al
+	mov	[num1 + digits - 1],al ; last digit is one
+	mov	[num2 + digits - 1],al ; 
+	mov	[counter + cntDigits - 1],al
+
+	jmp	.bottom		; done with initialization, so begin
+</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+        
+		<!-- Player starting things -->
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Silver</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Pemmican</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>HerbalMedicine</thingDef>
+			<count>20</count>
+		</li>
+		
+		<!--
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Bullet_Pistol</thingDef>
+			<count>2</count>
+		</li>
+		-->
+		
+		<li Class="ScenPart_StartingAnimal">
+			<def>StartingAnimal</def>
+			<count>3</count>
+			<animalKind>BoardingDrone</animalKind>
+			<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+		</li>
+
+		<!-- Scatter some things near player start -->
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>WoodLog</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>Steel</thingDef>
+			<count>450</count>
+		</li>
+		
+      </parts>
+    </scenario>
+  </ScenarioDef>
+    
+				
+  
+</Defs>

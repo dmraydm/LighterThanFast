@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Name="LTF_EngieArtificial" ParentName="BodyPartArtificialBase" Abstract="True" >
+		<techLevel>Industrial</techLevel>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		
+		<useHitPoints>true</useHitPoints>
+		<pathCost>10</pathCost>
+		<selectable>true</selectable>
+
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+			<Flammability>1.2</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-6</Beauty>
+			<SellPriceFactor>0.20</SellPriceFactor>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<resourcesFractionWhenDeconstructed>.5</resourcesFractionWhenDeconstructed>
+		
+		<tradeTags>
+			<li>BodyPartOrImplant</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		
+		<isBodyPartOrImplant>true</isBodyPartOrImplant>
+	
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<workSpeedStat>TailoringSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>LTF_EngieBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<researchPrerequisites><li>LTF_Research_EngieBench</li></researchPrerequisites>
+	
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieCooler" ParentName="LTF_EngieArtificial" Abstract="True" >
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<Mass>.5</Mass>
+			<DeteriorationRate>2</DeteriorationRate>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>1.2</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieCore" ParentName="LTF_EngieArtificial" Abstract="True" >
+		<statBases>
+			<MarketValue>70</MarketValue>
+			<Mass>.2</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Flammability>1.2</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieRom" ParentName="LTF_EngieArtificial" Abstract="True" >
+		<statBases>
+			<MarketValue>50</MarketValue>
+			<Mass>.3</Mass>
+			<DeteriorationRate>2</DeteriorationRate>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>1.2</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+	</ThingDef>
+
+</Defs>

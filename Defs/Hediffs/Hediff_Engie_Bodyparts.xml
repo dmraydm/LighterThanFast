@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef Name="Hediff_LTF_artificial" ParentName="AddedBodyPartBase" Abstract="true">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(138,43,226)</defaultLabelColor>
+		
+		<addedPartProps>
+			<isBionic>true</isBionic>
+			<isSolid>true</isSolid>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t0-->
+	<HediffDef Name="Hediff_LTF_artificialT0" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>.97</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	
+	<!-- template t1-->
+	<HediffDef Name="Hediff_LTF_artificialT1" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>.98</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t2-->
+	<HediffDef Name="Hediff_LTF_artificialT2" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>1</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t3-->
+	<HediffDef Name="Hediff_LTF_artificialT3" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>1.02</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t4-->
+	<HediffDef Name="Hediff_LTF_artificialT4" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>1.06</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t5-->
+	<HediffDef Name="Hediff_LTF_artificialT5" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>1.14</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+	<!-- template t6-->
+	<HediffDef Name="Hediff_LTF_artificialT6" ParentName="Hediff_LTF_artificial" Abstract="true">
+		<addedPartProps>
+			<partEfficiency>1.16</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+
+</Defs>

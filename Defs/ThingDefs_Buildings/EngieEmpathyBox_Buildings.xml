@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>EmpathyBox</defName>
+		<label>empathy box</label>
+		<description>A tiny screen with a strange glim in its eyes. Entertaining but was it worth it ?
+		 "The main Earth religion is Mercerism, in which Empathy Boxes link simultaneous users into a collective consciousness based on the suffering of Wilbur Mercer, a man who takes an endless walk up a mountain while stones are thrown at him, the pain of which the users share."
+		</description>
+		<graphicData>
+			<texPath>Engie/Head/Average_Normal</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.25, 0.5, 0.25)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.35</fillPercent>
+		<costList>
+			<Steel>30</Steel>
+			<Component>1</Component>
+		</costList>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>2000</MarketValue>
+			<Mass>8</Mass>
+			<EntertainmentStrengthFactor>1.0</EntertainmentStrengthFactor>
+		</statBases>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<size>(1,1)</size>
+
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+
+		<building>
+			<!--
+			<isMealSource>true</isMealSource>
+			<wantsHopperAdjacent>true</wantsHopperAdjacent>
+			<nutritionCostPerDispense>0.3</nutritionCostPerDispense>
+			<soundDispense>DispensePaste</soundDispense>
+			-->
+			<isJoySource>true</isJoySource>
+			<spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+			<boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+			<min>2</min>
+			<max>3</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>1</watchBuildingStandRectWidth>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<comps>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<startElectricalFires>true</startElectricalFires>
+			<basePowerConsumption>220</basePowerConsumption>
+		</li>
+		<li Class="CompProperties_Flickable"/>
+		<li Class="CompProperties_RoomIdentifier">
+			<roomStat>Impressiveness</roomStat>
+		</li>
+		<li Class="CompProperties_Glower">
+			<glowRadius>3</glowRadius>
+			<glowColor>(20,196,128,0)</glowColor>
+		</li>
+		</comps>
+		<tradeTags>
+			<li>Television</li>
+		</tradeTags>
+	</ThingDef>
+  
+</Defs>

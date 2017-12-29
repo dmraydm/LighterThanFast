@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef Name="BaseSlugPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Combat</li>
+    </inspectorTabs>
+    <comps>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseSlugPawn">
+    <defName>Alien_Slug</defName>
+    <label>Slug</label>
+    
+    <description>The xenophobic, leisurely Slugs are the third rarest race in the galaxy, behind the mythical Crystal and Lanius. Their home sectors are all engulfed in enormous nebulae, which lead to them evolving unique psychic abilities in order to overcome the general lack of visibility.
+
+As a result, Slug ships aren't built with sensors; the psychic powers of the crew are just as effective, if not more so, than any electronic system. This leaves them at a distinct disadvantage outside nebulae however, so that even within their sectors they are almost never seen outside the concealing clouds.
+	
+While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and deceitful. They prey upon ships that wander into their home systems, often leading them into traps, as well as resort to piracy in other systems.
+	
+- 10% psychic sensivity / 110% toxic sensivity
+- 110% Social
+- drools
+- Xenophobic
+	
+	</description>
+        
+    <statBases>
+		<PsychicSensitivity>0.1</PsychicSensitivity>
+		<ToxicSensitivity>1.1</ToxicSensitivity>
+		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>30</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>4.61</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		<CarryingCapacity>75</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>1.0</ResearchSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		<SocialImpact>1.1</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<PlantHarvestYield>1.0</PlantHarvestYield>
+		<ConstructionSpeed>1.0</ConstructionSpeed>
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+    </statBases>
+
+	<verbs>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+		<verbClass>Verb_MeleeAttack</verbClass>
+		<defaultCooldownTime>1.55</defaultCooldownTime>
+		<meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+		<meleeDamageDef>Blunt</meleeDamageDef>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+	<alienRace>
+
+	<generalSettings>
+		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<alienPartGenerator>
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<li>Thin</li>
+			</alienbodytypes>
+			<useGenderedHeads>false</useGenderedHeads>
+			<alienskincolorgen Class="ColorGenerator_Options">
+				<options>
+				<!-- dark -->
+				<li><weight>20</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
+				<li><weight>15</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+					
+				<!-- blue -->
+					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
+					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
+				<!-- red -->
+					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+				<!-- violet -->
+					<li><weight>8</weight><only>RGBA(1,0.9,1,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,0.8,1,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,0.7,1,1)</only></li>
+
+				
+				</options>
+			</alienskincolorgen>
+		</alienPartGenerator>
+<!--		
+		<factionRelations>
+			<li>
+			<goodwill>
+			   <min>-50</min>
+			   <max>20</max>
+			</goodwill>
+			</li>
+		</factionRelations>
+		-->
+		<!-- <chemicalSettings>1</chemicalSettings> -->
+		<maleGenderProbability>0.5</maleGenderProbability>    
+		<forcedRaceTraitEntries>
+			<li><defName>Xenophobia</defName><degree>1</degree></li>
+		</forcedRaceTraitEntries>
+	</generalSettings>    
+
+	<graphicPaths>
+		<li>
+			<body>Slug/Body/</body>
+			<head>Slug/Head/</head>
+		</li>
+	</graphicPaths>
+
+	<hairSettings>
+		<hasHair>true</hasHair>
+		<hairTags>
+		<li>Tribal</li>
+		<li>empty</li>
+		</hairTags>
+	</hairSettings>
+
+	<relationSettings>
+	</relationSettings>
+
+	<pawnKindSettings>
+            <alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>SlugSlave</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+						<li>SlugRefugee</li>
+                    </kindDefs>
+                    <chance>40.0</chance>
+                </li>
+            </alienrefugeekinds>
+			<startingColonists>
+				<li>
+				<pawnKindEntries>
+					<li>
+                    <kindDefs>
+					<!--
+                        <li>SlugHunter</li>
+						<li>SlugHistGuard</li>
+						<li>SlugShadowscale</li>
+						-->
+						<li>SlugColonist</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+					</li>
+				</pawnKindEntries>
+					<factionDefs>
+						<li>SlugPlayerColony</li>
+						<li>PlayerTribe</li>
+						<!-- <li>KestrelPlayerColony</li>  -->
+					</factionDefs>
+				</li>
+			</startingColonists>
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>SlugHunter</li>
+								<li>SlugHistGuard</li>
+								<li>SlugColonist</li>
+								<li>SlugShadowscale</li>
+								<li>SlugHistSpeaker</li>
+								<li>SlugFighter</li>
+                            </kindDefs>
+                            <chance>50.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>SlugPlayerColony</li> 
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+	</pawnKindSettings>
+ 
+	<thoughtSettings>
+		<cannotReceiveThoughts></cannotReceiveThoughts>
+		
+		<ateThoughtSpecific></ateThoughtSpecific>
+
+		<replacerList>
+		</replacerList>
+	</thoughtSettings>
+
+	<raceRestriction>
+	</raceRestriction>
+
+</alienRace>
+    
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <nameGenerator>NamerPersonSlug</nameGenerator>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+      <leatherColor>(128,128,128)</leatherColor>
+      <bloodDef></bloodDef>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherLabel>Slug leather</leatherLabel>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Human</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+		<!-- TODO -->
+      </hediffGiverSets>
+</race>
+    <recipes>
+      <li>InstallPowerClaw</li>
+      <li>InstallScytherBlade</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

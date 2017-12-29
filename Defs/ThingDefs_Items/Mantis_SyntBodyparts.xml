@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Name="LTF_SyntClaws" ParentName="BodyPartArtificialBase" Abstract="True" >
+		<techLevel>Industrial</techLevel>
+		<alwaysHaulable>true</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<!-- equipable comme thrumbo horn ? -->
+		<equipmentType>Primary</equipmentType>
+		<useHitPoints>true</useHitPoints>
+		<pathCost>10</pathCost>
+		<selectable>true</selectable>
+		
+		<thingCategories>
+			<li>WeaponsMelee</li>
+			<!-- <li>BodyPartsArtificial</li> -->
+		</thingCategories>
+		<tradeTags>
+			<li>BodyPartOrImplant</li>
+		</tradeTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<weaponTags>
+			<li>NonNeolithicOnlyMelee</li>
+			<li>NeolithicMeleeAdvanced</li>
+		</weaponTags>
+		
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(.7,.7)</drawSize>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		
+		<equippedAngleOffset>-15</equippedAngleOffset>
+		<isBodyPartOrImplant>true</isBodyPartOrImplant>
+		<comps>
+			<li><compClass>CompQuality</compClass></li>
+			
+			<li Class="CompProperties_Art">
+				<nameMaker>ArtName_WeaponMelee</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+
+		<!-- tools pour equiped -->
+		<!-- verbs pour bionic -->
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+				<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<!-- <li> -->
+				<!-- <label>point</label> -->
+				<!-- <capacities> -->
+				<!-- <li>Stab</li> -->
+				<!-- </capacities> -->
+				<!-- <power>13</power> -->
+				<!-- <cooldownTime>1.8</cooldownTime> -->
+			<!-- </li> -->
+			<li>
+				<label>razor blade wave</label>
+				<capacities>
+				<li>Cut</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	
+	<ThingDef Name="LTF_SteelClaws" ParentName="LTF_SyntClaws" Abstract="True">
+	
+		<graphicData>
+			<color>(102,102,105)</color>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>1.5</Mass>
+			<Weapon_Bulk>1.2</Weapon_Bulk>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-6</Beauty>
+			<SellPriceFactor>0.20</SellPriceFactor>
+			<!--<MarketValue>1500</MarketValue>-->
+		</statBases>
+
+		<!--
+		<smeltable>true</smeltable>		
+		<smeltProducts>
+			<Steel>50</Steel>
+		</smeltProducts>
+		-->
+		
+		<costList>
+			<Steel>100</Steel>
+			<Cloth>10</Cloth>
+			<WoodLog>5</WoodLog>
+		</costList>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>LTF_EngieBench</li>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<researchPrerequisite>LTF_Research_MantisBlade</researchPrerequisite>
+		</recipeMaker>
+		
+		<!--<costStuffCount>120</costStuffCount>-->
+		<!--<surfaceType>Item</surfaceType>-->
+	</ThingDef>
+	
+	<ThingDef ParentName="LTF_SteelClaws">
+		<defName>LTF_RightSteelClaws</defName>
+		<description>Mantis may become sharper through composite materials. LEFT</description>
+		<label>right steel mantis claws</label>
+		<graphicData>
+			<texPath>Mantis/SyntClaws/Right</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="LTF_SteelClaws">
+		<defName>LTF_LeftSteelClaws</defName>
+		<description>Mantis may become sharper through composite materials. RIGHT</description>
+		<label>left steel mantis claws</label>
+		<graphicData>
+			<texPath>Mantis/SyntClaws/Left</texPath>
+		</graphicData>
+	</ThingDef>
+	
+</Defs>

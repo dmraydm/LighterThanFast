@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>LTF_RegularRockmanStove</defName>
+    <label>Stonemade stove</label>
+	<thingClass>Building_WorkTable</thingClass>
+    <description>Warm and cozy.</description>
+    
+    <graphicData>
+		<texPath>Things/Building/Rockman/LTF_Stove</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<!-- <drawRotated>false</drawRotated> -->
+		<allowFlip>false</allowFlip>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(3.5,1.5)</drawSize>
+		<!-- <shadowData> -->
+			<!-- <volume>(0.25, 0.5, 0.25)</volume> -->
+			<!-- <offset>(0,0,-0.1)</offset> -->
+		<!-- </shadowData> -->
+	  <!--<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle> shadow-->
+    </graphicData>
+	<surfaceType>Item</surfaceType>
+	<rotatable>false</rotatable>
+	
+    <altitudeLayer>Building</altitudeLayer>
+	
+	<tickerType>Normal</tickerType>
+
+    <statBases>
+		<WorkToBuild>2000</WorkToBuild>
+		<Mass>100</Mass>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>0.8</Flammability>
+		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+		<Cleanliness>-1</Cleanliness>
+    </statBases>
+	<minifiedDef>MinifiedFurniture</minifiedDef>
+
+	<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>.3</resourcesFractionWhenDeconstructed>
+	
+    <costList>
+		<Steel>25</Steel>
+		<Plasteel>5</Plasteel>
+    </costList>
+	<costStuffCount>100</costStuffCount>
+    <stuffCategories>
+		<li>Stony</li>
+    </stuffCategories>
+	<killedLeavings>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
+		<Steel>3</Steel>
+	</killedLeavings>
+
+	
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <size>(3,1)</size>
+    
+    <passability>PassThroughOnly</passability>
+	<pathCost>80</pathCost>
+	<fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+	
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+
+	<recipes>
+		<li>BurnApparelCampfire</li>
+		<li>BurnDrugs</li>
+		<li>ExtractMetalFromSlag</li>
+    </recipes>
+    <inspectorTabs>
+		<li>ITab_Bills</li>
+    </inspectorTabs>
+
+    <comps>
+		<li Class="CompProperties_Flickable"/>
+
+		<li Class="CompProperties_Refuelable">
+			<fuelConsumptionRate>75</fuelConsumptionRate>
+			<fuelCapacity>150</fuelCapacity>
+			<fuelFilter>
+				<thingDefs>
+				<!--<li>WoodLog</li>-->
+					<li>Chemfuel</li>
+				</thingDefs>
+			</fuelFilter>
+			<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+			<!-- <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain> -->
+		</li>
+		<!--
+		<li Class="CompProperties_TempControl">
+			<energyPerSecond>25</energyPerSecond>
+		</li>
+		-->
+		<li Class="CompProperties_HeatPusher">
+			<compClass>CompHeatPusherPowered</compClass>
+			<heatPerSecond>15</heatPerSecond>
+		</li>
+	<!--	
+		<li Class="CompProperties_FireOverlay">
+			<fireSize>.25</fireSize>
+			<offset>(-0.1,5,-0.1)</offset>
+		</li>
+-->
+		<li Class="NewHatcher.CompProperties_LTF_Overlay">
+			<!-- <fireSize>1</fireSize> -->
+			<!-- <fireSize>.5</fireSize> -->
+			<!-- <offset>(-0.1,5,-0.1)</offset> -->
+			<!-- <path>Things/Special/Loop</path> -->
+			<refuelable>true</refuelable>
+			<flickable>true</flickable>
+		</li>
+		<li Class="CompProperties_Glower">
+			<glowRadius>5</glowRadius>
+			<!-- <glowColor>(138, 43, 226, 0)</glowColor> -->
+			<glowColor>(200, 50, 20, 100)</glowColor>
+			<!-- disco -->
+		</li>
+		
+		<li>
+			<compClass>CompGatherSpot</compClass>
+		</li>
+    </comps>
+	
+	<building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		<heatPerTickWhileWorking>0.20</heatPerTickWhileWorking>
+	</building>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	
+	<!-- <designationCategory>Temperature</designationCategory> -->
+	<designationCategory>Production</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+	<researchPrerequisites><li>LTF_Research_RockmanStove</li></researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		
+	</ThingDef>
+
+</Defs>

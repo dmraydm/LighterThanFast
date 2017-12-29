@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JoyGiverDef>
+    <defName>UseEmpathyBox</defName>
+
+    <giverClass>JoyGiver_ViewArt</giverClass>
+<!--	<giverClass>JoyGiver_TakeDrug</giverClass>-->
+    <baseChance>4</baseChance>
+    <joyKind>Chemical</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+</Defs>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- mining -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieMiningRom</defName>
+		<label>romMin1</label>
+		<description>A mininging field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/miningRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+		</costList>
+		
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+		<li>Stony</li>
+		</stuffCategories>
+		
+	</ThingDef>
+	<!-- T2 -->
+	<!-- mining -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieMining2Rom</defName>
+		<label>romMin2</label>
+		<description>A mininging field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/mining2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<Plasteel>1</Plasteel>
+			<LTF_EngieMiningRom>2</LTF_EngieMiningRom>
+		</costList>
+		
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+	</ThingDef>
+	
+</Defs>

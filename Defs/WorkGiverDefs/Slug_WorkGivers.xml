@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+		<defName>LTF_TakeBeerOutOfFermentingBarrel</defName>
+		<label>take beer out of slug fermenting barrels</label>
+		<giverClass>WorkGiver_TakeBeerOutOfFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>take slug dew</verb>
+		<gerund>taking liquor slug dew from</gerund>
+		<priorityInType>20</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>LTF_FillFermentingBarrel</defName>
+		<label>fill slug fermenting barrels</label>
+		<giverClass>WorkGiver_FillFermentingBarrel</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>19</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>DoBillsYarnMaker</defName>
+		<label>spins thread at yarn maker</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>LTF_YarnMaker</li>
+		</fixedBillGiverDefs>
+
+		<verb>thread spun</verb>
+		<gerund>thread spining at</gerund>
+
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+  </Defs>

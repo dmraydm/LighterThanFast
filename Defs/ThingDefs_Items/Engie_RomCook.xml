@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- cook -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCookRom</defName>
+		<label>romCook1</label>
+		<description>A cooking field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/cookRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>5</Gold>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<MealSimple>10</MealSimple>
+			<Kibble>1</Kibble>
+		</costList>
+	
+	</ThingDef>
+	<!-- T2 -->
+	<!-- cook -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCook2Rom</defName>
+		<label>romCook2</label>
+		<description>A cooking field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/cook2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieCookRom>2</LTF_EngieCookRom>
+			<MealFine>10</MealFine>
+			<Pemmican>1</Pemmican>
+		</costList>
+	</ThingDef>
+	<!-- K1 -->
+	<!-- cook -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieCookKrom</defName>
+		<label>kromCook1</label>
+		<description>A cooking field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/cookKrom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<LTF_Kraptyl>50</LTF_Kraptyl>
+			<LTF_EngieCook2Rom>1</LTF_EngieCook2Rom>
+			<LTF_EngieRawRom>2</LTF_EngieRawRom>
+			<Megaspider_Meat>25</Megaspider_Meat>
+			<Human_Meat>1</Human_Meat>
+		</costList>
+	</ThingDef>
+</Defs>

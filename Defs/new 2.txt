@@ -1,0 +1,357 @@
+
+
+
+RimWorld 0.18.1722 rev1198
+Verse.Log:Message(String)
+RimWorld.VersionControl:LogVersionNumber()
+Verse.Root:CheckGlobalInit()
+Verse.Root:Start()
+Verse.Root_Entry:Start()
+
+Rebuilding mods list
+Adding mods from mods folder:
+  Adding Core(C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Core)
+  Adding lighterThanFast_0.25(C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\lighterThanFast_0.25)
+Adding mods from Steam:
+  Adding 933541240(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\933541240)
+  Adding 912267364(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\912267364)
+  Adding 849110433(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\849110433)
+  Adding 1120036469(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1120036469)
+  Adding 796643425(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\796643425)
+  Adding 1131990764(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1131990764)
+  Adding 881864390(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\881864390)
+  Adding 929270780(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\929270780)
+  Adding 947972722(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\947972722)
+  Adding 1124971970(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1124971970)
+  Adding 1121625983(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1121625983)
+  Adding 944099898(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\944099898)
+  Adding 733113011(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\733113011)
+  Adding 867467808(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\867467808)
+  Adding 726479594(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\726479594)
+  Adding 751049133(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\751049133)
+  Adding 712141500(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\712141500)
+  Adding 1136958577(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1136958577)
+  Adding 725956940(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\725956940)
+  Adding 1098354593(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1098354593)
+  Adding 959780399(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\959780399)
+  Adding 761421485(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\761421485)
+  Adding 709317151(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\709317151)
+  Adding 729690064(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\729690064)
+  Adding 952232391(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\952232391)
+  Adding 942369931(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\942369931)
+  Adding 746425621(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\746425621)
+  Adding 946365802(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\946365802)
+  Adding 872762753(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\872762753)
+  Adding 725153576(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\725153576)
+  Adding 751841890(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\751841890)
+  Adding 754637870(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\754637870)
+  Adding 818773962(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962)
+  Adding 725130005(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\725130005)
+  Adding 1119191638(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1119191638)
+  Adding 761315214(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\761315214)
+  Adding 715565817(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\715565817)
+  Adding 725219116(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\725219116)
+  Adding 839005762(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\839005762)
+  Adding 1090380793(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1090380793)
+  Adding 753498552(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\753498552)
+  Adding 1113137502(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1113137502)
+  Adding 1055485938(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\1055485938)
+  Adding 850429707(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\850429707)
+  Adding 935982361(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\935982361)
+  Adding 818322128(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818322128)
+  Adding 729908976(C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\729908976)
+Deactivating not-installed mods:
+Verse.Log:Message(String)
+Verse.ModLister:RebuildModList()
+Verse.Steam.WorkshopItems:RebuildItemsList()
+Verse.Steam.WorkshopItems:.cctor()
+Verse.ModLister:RebuildModList()
+Verse.ModLister:RebuildModList()
+Verse.ModLister:.cctor()
+Verse.<>c__Iterator0:MoveNext()
+Verse.<>c__Iterator0:MoveNext()
+System.Collections.Generic.List`1:AddEnumerable(IEnumerable`1)
+System.Collections.Generic.List`1:.ctor(IEnumerable`1)
+System.Linq.Enumerable:ToList(IEnumerable`1)
+Verse.LoadedModManager:LoadAllActiveMods()
+Verse.PlayDataLoader:DoPlayLoad()
+Verse.PlayDataLoader:LoadAllPlayData(Boolean)
+Verse.Root:<Start>m__1()
+Verse.LongEventHandler:RunEventFromAnotherThread(Action)
+Verse.LongEventHandler:<UpdateCurrentAsynchronousEvent>m__1()
+
+--- Thread 2 ---
+ 6675ms LoadAllPlayData
+ - 4837ms Load all active mods.
+ - - 0ms Initializing [Core|Core]
+ - - 0ms Initializing [839005762|Humanoid Alien Races 2.0]
+ - - 0ms Initializing [725130005|P-Music]
+ - - 0ms Initializing [867467808|Camera+]
+ - - 0ms Initializing [lighterThanFast_0.25|Lighter than fast]
+ - - 0ms Loading Core content
+ - - 8ms Loading 839005762 content
+ - - 0ms Loading 725130005 content
+ - - 4ms Loading 867467808 content
+ - - 1ms Loading lighterThanFast_0.25 content
+ - - 3912ms Loading Core
+ - - - 3911ms Loading all defs
+ - - - - 0ms Loading all patches
+ - - - - 0ms Loading all patches
+ - - - - 0ms Loading all patches
+ - - - - 0ms Loading all patches
+ - - - - 0ms Loading all patches
+ - - 2ms Loading 839005762
+ - - - 2ms Loading all defs
+ - - 6ms Loading 725130005
+ - - - 6ms Loading all defs
+ - - 0ms Loading 867467808
+ - - - 0ms Loading all defs
+ - - 745ms Loading lighterThanFast_0.25
+ - - - 745ms Loading all defs
+ - 59ms Load language metadata.
+ - 164ms Loading language data: English
+ - 80ms Copy all Defs from mods to global databases.
+ - 72ms Resolve cross-references between non-implied Defs.
+ - 28ms Rebind defs (early).
+ - 19ms Generate implied Defs (pre-resolve).
+ - 0ms Resolve cross-references between Defs made by the implied defs.
+ - 36ms Rebind DefOfs (final).
+ - 39ms Other def binding, resetting and global operations.
+ - 1169ms Resolve references.
+ - 1ms Generate implied Defs (post-resolve).
+ - 114ms Error check all defs.
+ - 4ms Load keyboard preferences.
+ - 45ms Short hash giving.
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.PlayDataLoader:LoadAllPlayData(Boolean)
+Verse.Root:<Start>m__1()
+Verse.LongEventHandler:RunEventFromAnotherThread(Action)
+Verse.LongEventHandler:<UpdateCurrentAsynchronousEvent>m__1()
+
+--- Main thread ---
+ 937ms Loading assets of type UnityEngine.AudioClip for mod 725130005
+ - 98ms Loading file Alive
+ - 67ms Loading file Carryon
+ - 68ms Loading file Codered
+ - 47ms Loading file Faraway
+ - 55ms Loading file Longwayhome
+ - 42ms Loading file Lovelyday
+ - 48ms Loading file Move
+ - 72ms Loading file Neverforgotten
+ - 68ms Loading file Onecandreamtofly
+ - 62ms Loading file Rimmas
+ - 46ms Loading file Rimraid
+ - 37ms Loading file Rise
+ - 53ms Loading file Spacekattommy
+ - 52ms Loading file Staystrong
+ - 35ms Loading file Toughlife
+ - 76ms Loading file Trustme
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.<LoadAllForMod>c__Iterator0:MoveNext()
+Verse.ModContentHolder`1:ReloadAll()
+Verse.ModContentPack:<ReloadContent>m__1()
+Verse.LongEventHandler:ExecuteToExecuteWhenFinished()
+Verse.LongEventHandler:UpdateCurrentAsynchronousEvent()
+Verse.LongEventHandler:LongEventsUpdate(Boolean&)
+Verse.Root:Update()
+Verse.Root_Entry:Update()
+
+--- Main thread ---
+ 1554ms Loading assets of type UnityEngine.Texture2D for mod lighterThanFast_0.25
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.<LoadAllForMod>c__Iterator0:MoveNext()
+Verse.ModContentHolder`1:ReloadAll()
+Verse.ModContentPack:<ReloadContent>m__1()
+Verse.LongEventHandler:ExecuteToExecuteWhenFinished()
+Verse.LongEventHandler:UpdateCurrentAsynchronousEvent()
+Verse.LongEventHandler:LongEventsUpdate(Boolean&)
+Verse.Root:Update()
+Verse.Root_Entry:Update()
+
+--- Main thread ---
+ 1400ms Load backstories.
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.PlayDataLoader:<DoPlayLoad>m__0()
+Verse.LongEventHandler:ExecuteToExecuteWhenFinished()
+Verse.LongEventHandler:UpdateCurrentAsynchronousEvent()
+Verse.LongEventHandler:LongEventsUpdate(Boolean&)
+Verse.Root:Update()
+Verse.Root_Entry:Update()
+
+--- Main thread ---
+ 2ms Inject selected language data into game data.
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.PlayDataLoader:<DoPlayLoad>m__1()
+Verse.LongEventHandler:ExecuteToExecuteWhenFinished()
+Verse.LongEventHandler:UpdateCurrentAsynchronousEvent()
+Verse.LongEventHandler:LongEventsUpdate(Boolean&)
+Verse.Root:Update()
+Verse.Root_Entry:Update()
+
+Loading game from file New Tribe1 with mods Core, 839005762, 725130005, 867467808, and lighterThanFast_0.25
+Verse.Log:Message(String)
+Verse.SavedGameLoader:LoadGameFromSaveFile(String)
+Verse.Root_Play:<Start>m__0()
+Verse.LongEventHandler:RunEventFromAnotherThread(Action)
+Verse.LongEventHandler:<UpdateCurrentAsynchronousEvent>m__1()
+
+--- Thread 3 ---
+ 15507ms Loading game from file New Tribe1
+ - 797ms InitLoading (read file)
+ - 0ms Load compressed things
+ - 11426ms Load non-compressed things
+ - 519ms FinalizeLoading
+ - - 0ms Load compressed things
+ - - 0ms Load non-compressed things
+ - - 0ms Load compressed things
+ - - 0ms Load non-compressed things
+ - 2ms Merge compressed and non-compressed thing lists
+ - 203ms Spawn everything into the map
+
+Verse.Log:Message(String)
+Verse.ThreadLocalDeepProfiler:Output(Watcher)
+Verse.ThreadLocalDeepProfiler:End()
+Verse.DeepProfiler:End()
+Verse.SavedGameLoader:LoadGameFromSaveFile(String)
+Verse.Root_Play:<Start>m__0()
+Verse.LongEventHandler:RunEventFromAnotherThread(Action)
+Verse.LongEventHandler:<UpdateCurrentAsynchronousEvent>m__1()
+
+Variants found for Mantis/Claws/Left/Left: 1
+Verse.Log:Message(String)
+AlienRace.<>c:<GenerateMeshsAndMeshPools>b__37_0(BodyAddon)
+Harmony.CollectionExtensions:Do(IEnumerable`1, Action`1)
+AlienRace.AlienPartGenerator:GenerateMeshsAndMeshPools()
+AlienRace.HarmonyPatches:ResolveAllGraphicsPrefix(PawnGraphicSet)
+Verse.PawnGraphicSet:ResolveAllGraphics_Patch1(Object)
+Verse.PawnRenderer:RenderPawnAt(Vector3, RotDrawMode, Boolean)
+Verse.PawnRenderer:RenderPawnAt(Vector3)
+Verse.Pawn_DrawTracker:DrawAt(Vector3)
+Verse.Pawn:DrawAt(Vector3, Boolean)
+Verse.Thing:Draw()
+Verse.ThingWithComps:Draw()
+Verse.DynamicDrawManager:DrawDynamicThings()
+Verse.Map:MapUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()
+
+Variants found for Mantis/SyntClaws/Left/Left: 1
+Verse.Log:Message(String)
+AlienRace.<>c:<GenerateMeshsAndMeshPools>b__37_0(BodyAddon)
+Harmony.CollectionExtensions:Do(IEnumerable`1, Action`1)
+AlienRace.AlienPartGenerator:GenerateMeshsAndMeshPools()
+AlienRace.HarmonyPatches:ResolveAllGraphicsPrefix(PawnGraphicSet)
+Verse.PawnGraphicSet:ResolveAllGraphics_Patch1(Object)
+Verse.PawnRenderer:RenderPawnAt(Vector3, RotDrawMode, Boolean)
+Verse.PawnRenderer:RenderPawnAt(Vector3)
+Verse.Pawn_DrawTracker:DrawAt(Vector3)
+Verse.Pawn:DrawAt(Vector3, Boolean)
+Verse.Thing:Draw()
+Verse.ThingWithComps:Draw()
+Verse.DynamicDrawManager:DrawDynamicThings()
+Verse.Map:MapUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()
+
+Variants found for Mantis/Claws/Right/Right: 1
+Verse.Log:Message(String)
+AlienRace.<>c:<GenerateMeshsAndMeshPools>b__37_0(BodyAddon)
+Harmony.CollectionExtensions:Do(IEnumerable`1, Action`1)
+AlienRace.AlienPartGenerator:GenerateMeshsAndMeshPools()
+AlienRace.HarmonyPatches:ResolveAllGraphicsPrefix(PawnGraphicSet)
+Verse.PawnGraphicSet:ResolveAllGraphics_Patch1(Object)
+Verse.PawnRenderer:RenderPawnAt(Vector3, RotDrawMode, Boolean)
+Verse.PawnRenderer:RenderPawnAt(Vector3)
+Verse.Pawn_DrawTracker:DrawAt(Vector3)
+Verse.Pawn:DrawAt(Vector3, Boolean)
+Verse.Thing:Draw()
+Verse.ThingWithComps:Draw()
+Verse.DynamicDrawManager:DrawDynamicThings()
+Verse.Map:MapUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()
+
+Variants found for Mantis/SyntClaws/Right/Right: 1
+Verse.Log:Message(String)
+AlienRace.<>c:<GenerateMeshsAndMeshPools>b__37_0(BodyAddon)
+Harmony.CollectionExtensions:Do(IEnumerable`1, Action`1)
+AlienRace.AlienPartGenerator:GenerateMeshsAndMeshPools()
+AlienRace.HarmonyPatches:ResolveAllGraphicsPrefix(PawnGraphicSet)
+Verse.PawnGraphicSet:ResolveAllGraphics_Patch1(Object)
+Verse.PawnRenderer:RenderPawnAt(Vector3, RotDrawMode, Boolean)
+Verse.PawnRenderer:RenderPawnAt(Vector3)
+Verse.Pawn_DrawTracker:DrawAt(Vector3)
+Verse.Pawn:DrawAt(Vector3, Boolean)
+Verse.Thing:Draw()
+Verse.ThingWithComps:Draw()
+Verse.DynamicDrawManager:DrawDynamicThings()
+Verse.Map:MapUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()
+
+GetInspectString exception on LTF_ShieldBench61997:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at NewHatcher.Comp_LTF_SynthetizeShieldLayer.TryFindNextWearer (Verse.ThingDef& resDef, System.Int32& countLayersToSynthetize, Verse.IntVec3& cell, NewHatcher.LTF_ShieldHelm& LTF_apparel) [0x00000] in <filename unknown>:0 
+  at NewHatcher.Comp_LTF_SynthetizeShieldLayer.CompInspectStringExtra () [0x00000] in <filename unknown>:0 
+  at Verse.ThingWithComps.InspectStringPartsFromComps () [0x00000] in <filename unknown>:0 
+  at Verse.ThingWithComps.GetInspectString () [0x00000] in <filename unknown>:0 
+  at RimWorld.InspectPaneFiller.DrawInspectStringFor (ISelectable sel, Rect rect) [0x00000] in <filename unknown>:0 
+Verse.Log:Error(String)
+RimWorld.InspectPaneFiller:DrawInspectStringFor(ISelectable, Rect)
+RimWorld.InspectPaneFiller:DoPaneContentsFor(ISelectable, Rect)
+RimWorld.MainTabWindow_Inspect:DoPaneContents(Rect)
+RimWorld.InspectPaneUtility:InspectPaneOnGUI(Rect, IInspectPane)
+RimWorld.MainTabWindow_Inspect:DoWindowContents(Rect)
+Verse.<WindowOnGUI>c__AnonStorey0:<>m__0(Int32)
+UnityEngine.GUI:CallWindowDelegate(WindowFunction, Int32, Int32, GUISkin, Int32, Single, Single, GUIStyle)
+
+Exception in BreadthFirstTraverse: System.NullReferenceException: Object reference not set to an instance of an object
+  at NewHatcher.Comp_LTF_SynthetizeShieldLayer.TryFindNextWearer (Verse.ThingDef& resDef, System.Int32& countLayersToSynthetize, Verse.IntVec3& cell, NewHatcher.LTF_ShieldHelm& LTF_apparel) [0x00000] in <filename unknown>:0 
+  at NewHatcher.Comp_LTF_SynthetizeShieldLayer.PowerAndWearerInRadius () [0x00000] in <filename unknown>:0 
+  at NewHatcher.WorkGiver_ShieldBench.HasJobOnThing (Verse.Pawn pawn, Verse.Thing t, Boolean forced) [0x00000] in <filename unknown>:0 
+  at RimWorld.JobGiver_Work+<TryIssueJobPackage>c__AnonStorey1.<>m__0 (Verse.Thing t) [0x00000] in <filename unknown>:0 
+  at Verse.GenClosest+<RegionwiseBFSWorker>c__AnonStorey1.<>m__1 (Verse.Region r) [0x00000] in <filename unknown>:0 
+  at Verse.RegionTraverser+BFSWorker.BreadthFirstTraverseWork (Verse.Region root, Verse.RegionEntryPredicate entryCondition, Verse.RegionProcessor regionProcessor, Int32 maxRegions, RegionType traversableRegionTypes) [0x00000] in <filename unknown>:0 
+  at Verse.RegionTraverser.BreadthFirstTraverse (Verse.Region root, Verse.RegionEntryPredicate entryCondition, Verse.RegionProcessor regionProcessor, Int32 maxRegions, RegionType traversableRegionTypes) [0x00000] in <filename unknown>:0 
+Verse.Log:Error(String)
+Verse.RegionTraverser:BreadthFirstTraverse(Region, RegionEntryPredicate, RegionProcessor, Int32, RegionType)
+Verse.GenClosest:RegionwiseBFSWorker(IntVec3, Map, ThingRequest, PathEndMode, TraverseParms, Predicate`1, Func`2, Int32, Int32, Single, RegionType, Boolean)
+Verse.GenClosest:ClosestThingReachable(IntVec3, Map, ThingRequest, PathEndMode, TraverseParms, Single, Predicate`1, IEnumerable`1, Int32, Int32, Boolean, RegionType, Boolean)
+RimWorld.JobGiver_Work:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_PrioritySorter:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Priority:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Tagger:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Subtree:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Priority:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Conditional:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.ThinkNode_Priority:TryIssueJobPackage(Pawn, JobIssueParams)
+Verse.AI.Pawn_JobTracker:DetermineNextJob(ThinkTreeDef&)
+Verse.AI.Pawn_JobTracker:TryFindAndStartJob()
+Verse.AI.Pawn_JobTracker:EndCurrentJob(JobCondition, Boolean)
+Verse.AI.Pawn_JobTracker:JobTrackerTick()
+Verse.Pawn:Tick()
+Verse.TickList:Tick()
+Verse.TickManager:DoSingleTick()
+Verse.TickManager:TickManagerUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()

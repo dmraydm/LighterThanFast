@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- grow -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieGrowRom</defName>
+		<label>romGro1</label>
+		<description>A growing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/growRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<RawRice>50</RawRice>
+			<RawCorn>1</RawCorn>
+		</costList>
+		
+	</ThingDef>
+<!-- T2 -->
+	<!-- grow -->
+	
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieGrow2Rom</defName>
+		<label>romGro2</label>
+		<description>A growing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/grow2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieGrowRom>2</LTF_EngieGrowRom>
+			<RawBerries>100</RawBerries>
+			<RawHops>2</RawHops>
+		</costList>
+	</ThingDef>
+		
+</Defs>

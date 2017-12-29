@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- T1 -->
+	<!--Tame -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieTamingRom</defName>
+		<label>romTam1</label>
+		<description>A taming ways enhanced ROM. May have dowsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/tamingRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<Hay>200</Hay>
+		</costList>
+	</ThingDef>
+	<!-- T2 -->
+	<!--Tame -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieTaming2Rom</defName>
+		<label>romTam2</label>
+		<description>A taming ways enhanced ROM. May have dowsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/taming2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>5</Gold>
+			<LTF_EngieTamingRom>2</LTF_EngieTamingRom>
+		</costList>
+	</ThingDef>	
+</Defs>

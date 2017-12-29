@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>LTF_ShieldLayerMax</defName>
+    <label>Shield max energy</label>
+    <description>The maximum number of layers provided by the shield to protect the wearer.</description>
+    <category>Apparel</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+	<defaultBaseValue>.3</defaultBaseValue>
+    <parts>
+      <li Class="StatPart_Quality">
+        <factorAwful>2.5</factorAwful>
+        <factorShoddy>3</factorShoddy>
+        <factorPoor>3.5</factorPoor>
+        <factorNormal>4</factorNormal>
+        <factorGood>4.5</factorGood>
+        <factorSuperior>5</factorSuperior>
+        <factorExcellent>5.5</factorExcellent>
+        <factorMasterwork>6</factorMasterwork>
+        <factorLegendary>7</factorLegendary>
+      </li>
+      <li Class="StatPart_Health">
+        <curve>
+          <points>
+            <li>(0,0.5)</li>
+            <li>(0.7,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+
+  <StatDef>
+    <defName>LTF_ShieldLayerToFill</defName>
+    <label>empty shield layers</label>
+    <description>The number of layers that need to be filled for the shield to be full.</description>
+    <category>Apparel</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+	<defaultBaseValue>1</defaultBaseValue>
+  </StatDef>
+  
+  <StatDef>
+    <defName>LTF_ShieldRechargeRate</defName>
+    <label>Shield recharge rate</label>
+    <description>The rate at which a layer gains energy.</description>
+    <category>Apparel</category>
+    <defaultBaseValue>0.45</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <formatString>{0}/s</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <parts>
+      <li Class="StatPart_Quality">
+        <factorAwful>.0001</factorAwful>
+        <factorShoddy>.00011</factorShoddy>
+        <factorPoor>.00012</factorPoor>
+        <factorNormal>.00013</factorNormal>
+        <factorGood>.00014</factorGood>
+        <factorSuperior>.00015</factorSuperior>
+        <factorExcellent>.00016</factorExcellent>
+        <factorMasterwork>.00017</factorMasterwork>
+        <factorLegendary>.00018</factorLegendary>
+      </li>
+    </parts>
+  </StatDef>
+
+</Defs>

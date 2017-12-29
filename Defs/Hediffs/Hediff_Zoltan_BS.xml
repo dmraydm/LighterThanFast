@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>Hediff_LTF_ZoltanEgg</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<label>matter time c[_]</label>
+		<labelNoun>Tell me if you see this zoltanHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<minDaysB4Next>.3</minDaysB4Next>
+			<maxDaysB4Next>.5</maxDaysB4Next>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+
+			<healthRelative>true</healthRelative>
+			<tickerLimit>.42</tickerLimit>
+			<spawnVerb>1st law violation</spawnVerb>
+		</li>
+		<!--
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>20000</min>
+				<max>25000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>exugation</spawnVerb>
+			<healthRelative>true</healthRelative>
+		</li>
+		
+		
+		-->
+		</comps>
+	</HediffDef>
+
+</Defs>

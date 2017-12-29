@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- cooler -->
+	<!-- 1x -->
+	<ThingDef ParentName="LTF_EngieCooler">
+		<defName>LTF_Engie01Cooler</defName>
+		<label>cooler01</label>
+		<description>May have dowsides.</description>
+		<!--<stackLimit>32</stackLimit>-->
+		<graphicData>
+			<texPath>Engie/Cooler/01Cooler</texPath>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Component>1</Component>
+		</costList>
+		
+	</ThingDef>
+	<!-- cooler -->
+	<!-- 2x -->
+	<ThingDef ParentName="LTF_EngieCooler">
+		<defName>LTF_Engie02Cooler</defName>
+		<label>cooler02</label>
+		<description>May have dowsides.</description>
+		<!--<stackLimit>16</stackLimit>-->
+		<graphicData>
+			<texPath>Engie/Cooler/02Cooler</texPath>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<LTF_Engie01Cooler>2</LTF_Engie01Cooler>
+		</costList>
+		
+	</ThingDef>
+	<!-- cooler -->
+	<!-- 4x -->
+	<ThingDef ParentName="LTF_EngieCooler">
+		<defName>LTF_Engie04Cooler</defName>
+		<label>cooler04</label>
+		<description>May have dowsides.</description>
+		<!--<stackLimit>8</stackLimit>-->
+		<graphicData>
+			<texPath>Engie/Cooler/04Cooler</texPath>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<LTF_Engie02Cooler>2</LTF_Engie02Cooler>
+		</costList>
+
+	</ThingDef>
+</Defs>

@@ -1,0 +1,207 @@
+<Defs>
+    <AlienRace.BackstoryDef>
+		<defName>EngieChildBS01</defName>
+		<title>Chainworker</title>
+		<titleShort>Chainworker</titleShort>
+		<baseDescription>NAME had a typical, mundane bench-based childhood.</baseDescription>
+		<slot>Childhood</slot>
+
+		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+		<spawnCategories><li>EngieBackstory</li></spawnCategories>
+		<skillGains>
+		
+		<li><defName>Social</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>3</amount></li>
+
+		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>-2</amount></li>
+		
+		</skillGains>
+    </AlienRace.BackstoryDef>
+    
+    <AlienRace.BackstoryDef>
+		<defName>EngieChildBS02</defName>
+		<title>Curious circuit</title>
+		<titleShort>Curious</titleShort>
+		<baseDescription>Ever since NAME was a small circuit, he liked teasing not yet alive minerals.</baseDescription>
+		<slot>Childhood</slot>
+		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+		<spawnCategories>
+		  <li>EngieBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Animals</defName><amount>-3</amount></li>
+			<li><defName>Crafting</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>-1</amount></li>
+			<li><defName>Mining</defName><amount>3</amount></li>
+		</skillGains>
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef>
+    <defName>EngieChildBS03</defName>
+    <title>Prodigal virus</title>
+    <titleShort>Virus</titleShort>
+    <baseDescription>A prodigy in combat, NAME was celebrated for HIS martial prowess. The kingdom of the blind the one-eyed are kings.</baseDescription>
+    <slot>Childhood</slot>
+	
+    <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+		<li><defName>Construction</defName><amount>-2</amount></li>
+		<li><defName>Crafting</defName><amount>-2</amount></li>
+		<li><defName>Shooting</defName><amount>2</amount></li>
+		<li><defName>Melee</defName><amount>4</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+       <li><defName>ShootingAccuracy</defName><degree>-1</degree></li>
+    </forcedTraits>
+	
+	<workDisables><li>Intellectual</li></workDisables>
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef>
+		<defName>EngieChildBS04</defName>
+		<title>Cloud sheep</title>
+		<titleShort>Containerized</titleShort>
+		<baseDescription>NAME spent too much time in the cloud.</baseDescription>
+		<slot>Childhood</slot>
+		
+		<spawnCategories>
+			<li>EngieBackstory</li>
+		</spawnCategories>
+		
+		<workDisables><li>ManualSkilled</li><li>Crafting</li></workDisables>
+		
+		<skillGains>
+			<li>
+			<defName>Intellectual</defName>
+			<amount>5</amount>
+		  </li>
+		</skillGains>
+    </AlienRace.BackstoryDef>
+    
+    <AlienRace.BackstoryDef>
+		<defName>EngieChildBS05</defName>
+		<title>Waiting for io</title>
+		<titleShort>Anxious</titleShort>
+		<baseDescription>NAME was always anxious about the unconfined world without watercooling. Solar flares are too frequent to go without a backup battery.</baseDescription>
+		<slot>Childhood</slot>
+
+		<spawnCategories>
+		  <li>EngieBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Construction</defName><amount>3</amount></li>
+			<li><defName>Growing</defName><amount>-3</amount></li>
+		</skillGains>
+
+		<forcedTraits>
+		   <li><defName>Nerves</defName><degree>-1</degree></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef>
+		<defName>EngieChildBS06</defName>
+		<title>Human init</title>
+		<titleShort>Changeling</titleShort>
+		<baseDescription>Taken bulk from his facility by humans, NAME grew up with a sense of independence rarely found amongst the Engie.</baseDescription>
+		<slot>Childhood</slot>
+		<!--<bodyTypeGlobal>Thin</bodyTypeGlobal>-->
+		<spawnCategories><li>EngieBackstory</li></spawnCategories>
+		<skillGains>
+		  <li><defName>Artistic</defName><amount>4</amount></li>
+		  <li><defName>Intellectual</defName><amount>1</amount></li>
+		  <li><defName>Construction</defName><amount>-3</amount></li>
+		  <li><defName>Crafting</defName><amount>-3</amount></li>
+		</skillGains>
+    </AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef>
+		<defName>EngieChildBS07</defName>
+		<title>Oom overheat</title>
+		<titleShort>Charred</titleShort>
+		<baseDescription>A child survivor of a burnt down datacenter, NAME suffered painful 3rd degree burns. After being permanently scarred NAME tried to learn how to update its UI.</baseDescription>
+		<slot>Childhood</slot>
+<!--		<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+		<spawnCategories>
+		<li>EngieBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>6</amount></li>
+			<li><defName>Intellectual</defName><amount>3</amount></li>
+			<li><defName>Construction</defName><amount>-4</amount></li>
+			<li><defName>Crafting</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Pyromaniac</defName><chance>100</chance></li>
+			<li><defName>Beauty</defName><degree>-1</degree></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+
+    
+	<AlienRace.BackstoryDef>
+		<defName>EngieChildBS08</defName>
+		<title>Zombified</title>
+		<titleShort>Zombified</titleShort>
+		<baseDescription>At an early age, NAME was forced into slavery, after HIS specifications were hold in hostage. NAME harbors a deep resentment towards humans for HIS suffering.</baseDescription>
+		<slot>Childhood</slot>
+		<!--<bodyTypeGlobal>Female</bodyTypeGlobal>-->
+		<spawnCategories>
+		<li>EngieBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Social</defName><amount>-3</amount></li>
+			<li><defName>Melee</defName><amount>-3</amount></li>
+			<li><defName>Cooking</defName><amount>4</amount></li>
+			<li><defName>Mining</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Bloodlust</defName><chance>100</chance></li>
+		</forcedTraits>
+	</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS09</defName>
+    <title>Hydroponic child</title>
+    <titleShort>Flowerchild</titleShort>
+    <baseDescription>When most would fuel their backup batteries with flowers, NAME would spend hours upon hours merely analyzing their dna.</baseDescription>
+    <slot>Childhood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+    <skillGains>
+		<li><defName>Growing</defName><amount>2</amount></li>
+		<li><defName>Intellectual</defName><amount>2</amount></li>
+		<li><defName>Social</defName><amount>-2</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>GreenThumb</defName></li>
+    </forcedTraits>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS11</defName>
+    <title>First round</title>
+    <titleShort>1st</titleShort>
+    <baseDescription>NAME is part of a first round serie which was later abandonned because of its flaws and lack of effiency.</baseDescription>
+    <slot>Childhood</slot>
+    
+	<spawnCategories>
+		<li>EngieBackstory</li>
+	</spawnCategories>
+    <skillGains>
+		<li><defName>Construction</defName><amount>-2</amount></li>
+		<li><defName>Crafting</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>6</amount></li>
+		<li><defName>Artistic</defName><amount>2</amount></li>
+    </skillGains>
+
+	<workDisables><li>Firefighting</li></workDisables>
+	<forcedHediffs><li>Hediff_LTF_EngieChemfuelLeak</li></forcedHediffs>
+</AlienRace.BackstoryDef>
+
+
+</Defs>

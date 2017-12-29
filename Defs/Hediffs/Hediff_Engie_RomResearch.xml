@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+<!-- T1 -->
+<!-- researching -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_researchRom</defName>
+		<label>romRes1</label>
+		
+		<stages><li>
+			<statOffsets>
+				<ResearchSpeed>.064</ResearchSpeed>
+				<MiningYield>-0.064</MiningYield>
+				<ImmunityGainSpeed>-0.032</ImmunityGainSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieResearchRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- researching -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_research2Rom</defName>
+		<label>romRes2</label>
+		
+		<stages><li>
+			<statOffsets>
+				<ResearchSpeed>.128</ResearchSpeed>
+				<MiningYield>-0.128</MiningYield>
+				<ImmunityGainSpeed>-0.064</ImmunityGainSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieResearch2Rom</spawnThingOnRemoved>
+	</HediffDef>	
+<!-- Korupt -->
+	
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_researchKrom</defName>
+		<label>kromRes1</label>
+		
+		<stages><li>
+			<!--
+			<capMods><li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.128</offset>
+			</li></capMods>
+			-->
+		
+			<statOffsets>
+				<ResearchSpeed>.256</ResearchSpeed>
+				<MiningYield>-0.128</MiningYield>
+				<ImmunityGainSpeed>-0.128</ImmunityGainSpeed>
+			</statOffsets>
+			
+			<mentalStateGivers>
+				<li>
+					<mentalState>TargetedTantrum</mentalState>
+					<mtbDays>.9</mtbDays>
+				</li>
+			</mentalStateGivers>
+			
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieResearchKrom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- medical  MedicalTendSpeed MedicalTendQuality MedicalOperationSpeed MedicalSurgerySuccessChance-->
+<!-- MiningSpeed MiningYield -->
+<!-- TradePriceImprovement DiplomacyPower SocialImpact RecruitPrisonerChance -->
+
+</Defs>

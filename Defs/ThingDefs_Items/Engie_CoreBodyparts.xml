@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- core -->
+	<!-- 2x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie02Core</defName>
+		<label>core02Dual</label>
+		<description>Dual core for more dual things like more. May have dowsides.</description>
+		<graphicData>
+			<texPath>Engie/Core/02Core</texPath>
+			<onGroundRandomRotateAngle>32</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieSingleCore>2</LTF_EngieSingleCore>
+		</costList>
+	</ThingDef>
+	<!-- core -->
+	<!-- 4x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie04Core</defName>
+		<label>core04Quad</label>
+		<description>Do you even quad bro ? May have dowsides.</description>
+		<graphicData>
+			<texPath>Engie/Core/04Core</texPath>
+			<onGroundRandomRotateAngle>16</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_Engie02Core>2</LTF_Engie02Core>
+		</costList>
+	</ThingDef>
+	<!-- core -->
+	<!-- 8x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie08Core</defName>
+		<label>core08Octo</label>
+		<description>A standing infinite. May have dowsides, like check the temperature.</description>
+		<graphicData>
+			<texPath>Engie/Core/08Core</texPath>
+			<onGroundRandomRotateAngle>8</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_Engie04Core>2</LTF_Engie04Core>
+		</costList>
+	</ThingDef>
+	<!-- core -->
+	<!-- 16x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie16Core</defName>
+		<label>core16Hexa</label>
+		<description>64 6f 6e 5c 27 74 20 79 6f 75 20 68 61 76 65 20 61 6e 79 74 68 69 6e 67 20 62 65 74 74 65 72 20 74 6f 20 64 6f ? May have dowsides.</description>
+		<graphicData>
+			<texPath>Engie/Core/16Core</texPath>
+			<onGroundRandomRotateAngle>4</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>2</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_Engie08Core>2</LTF_Engie08Core>
+		</costList>
+	</ThingDef>
+	<!-- core -->
+	<!-- 32x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie32Core</defName>
+		<label>core32</label>
+		<description>May have dowsides.</description>
+		<graphicData>
+			<texPath>Engie/Core/32Core</texPath>
+			<onGroundRandomRotateAngle>2</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<Plasteel>4</Plasteel>
+			<LTF_Engie16Core>2</LTF_Engie16Core>
+		</costList>
+	</ThingDef>
+	<!-- core -->
+	<!-- 64x -->
+	<ThingDef ParentName="LTF_EngieCore">
+		<defName>LTF_Engie64Core</defName>
+		<label>core64</label>
+		<description>May have dowsides.</description>
+		<graphicData>
+			<texPath>Engie/Core/64Core</texPath>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>8</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_Engie32Core>2</LTF_Engie32Core>
+		</costList>
+	</ThingDef>
+	
+</Defs>

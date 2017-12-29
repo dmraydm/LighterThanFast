@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- social -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieSocialRom</defName>
+		<label>romSoc1</label>
+		<description>A socialing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/socialRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>5</Gold>
+			<Plasteel>5</Plasteel>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<MealLavish>5</MealLavish>
+			<!-- TODO -->
+		</costList>
+	</ThingDef>
+	<!-- T2 -->
+	<!-- social -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieSocial2Rom</defName>
+		<label>romSoc2</label>
+		<description>A socialing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/social2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>1</Gold>
+			<LTF_EngieSocialRom>2</LTF_EngieSocialRom>
+		</costList>
+	</ThingDef>
+	
+</Defs>

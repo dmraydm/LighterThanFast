@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!-- medicine -->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieMedicineRom</defName>
+		<label>romMed1</label>
+		<description>A medicineing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/medicineRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<HerbalMedicine>10</HerbalMedicine>
+			<Medicine>1</Medicine>
+		</costList>
+		
+	</ThingDef>
+<!-- T2 -->
+	<!-- medicine -->
+	
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieMedicine2Rom</defName>
+		<label>romMed2</label>
+		<description>A medicineing field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/medicine2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>5</Gold>
+			<LTF_EngieMedicineRom>2</LTF_EngieMedicineRom>
+			<HospitalBed>2</HospitalBed>
+		</costList>
+	</ThingDef>
+<!-- K1 -->
+	<!-- medicine -->	
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieMedicineKrom</defName>
+		<label>kromMed1</label>
+		<description>A medicining field enhanced ROM. May have downsides.</description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/medKrom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<LTF_Kraptyl>50</LTF_Kraptyl>
+			<LTF_EngieMedicine2Rom>1</LTF_EngieMedicine2Rom>
+			<LTF_EngieRawRom>2</LTF_EngieRawRom>
+			<Luciferium>2</Luciferium>
+			<GlitterworldMedicine>1</GlitterworldMedicine>
+			<Hyperweave>1</Hyperweave>
+			<Penoxycyline>1</Penoxycyline>
+		</costList>
+	</ThingDef>
+		
+</Defs>

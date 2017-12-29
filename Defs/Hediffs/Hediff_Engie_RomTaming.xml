@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- T1 -->
+<!-- taming -->
+<!-- tame AnimalGatherSpeed AnimalGatherYield TameAnimalChance TrainAnimalChance-->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_tamingRom</defName>
+		<label>romTam1</label>
+		
+		<stages><li>
+			<capMods><li>
+				<capacity>Eating</capacity>
+				<offset>-0.064</offset>
+			</li></capMods>
+
+			<statOffsets>
+				<TameAnimalChance>.064</TameAnimalChance>
+				<TrainAnimalChance>.064</TrainAnimalChance>
+				
+				<SculptingSpeed>-0.064</SculptingSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieTamingRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- taming -->
+<!-- tame AnimalGatherSpeed AnimalGatherYield TameAnimalChance TrainAnimalChance-->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_taming2Rom</defName>
+		<label>romTam2</label>
+		
+		<stages><li>
+			<capMods><li>
+				<capacity>Eating</capacity>
+				<offset>-0.128</offset>
+			</li></capMods>
+
+			<statOffsets>
+				<AnimalGatherSpeed>.064</AnimalGatherSpeed>
+				<AnimalGatherYield>.064</AnimalGatherYield>
+				<TameAnimalChance>.128</TameAnimalChance>
+				<TrainAnimalChance>.128</TrainAnimalChance>
+				
+				<SculptingSpeed>-0.128</SculptingSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieTaming2Rom</spawnThingOnRemoved>
+	</HediffDef>	
+	
+
+<!-- medical  MedicalTendSpeed MedicalTendQuality MedicalOperationSpeed MedicalSurgerySuccessChance-->
+<!-- MiningSpeed MiningYield -->
+<!-- TradePriceImprovement DiplomacyPower SocialImpact RecruitPrisonerChance -->
+
+</Defs>

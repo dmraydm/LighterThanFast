@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ======= Slug Item generated thought ========= -->
+
+<ThoughtDef>
+    <defName>Ate_LTF_SlugDew</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+		<li>
+			<label>ate slug dew</label>
+			<description>I ate some stomach-churning slug secretion. Should i vomit now and later ?</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+</Defs>

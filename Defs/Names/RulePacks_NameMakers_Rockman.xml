@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonRockman</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[minerals] '[mountains]' [minerals]</li>
+        <li>name->[color] '[mountains]' [minerals]</li>
+		<li>name->[color] '[minerals]' [mountains]</li>
+        <li>name->[minerals] '[roman]' [mountains]</li>
+        
+      </rulesStrings>
+	  
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>mountains</keyword>
+          <path>RockmanNames/Mountains</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>minerals</keyword>
+          <path>RockmanNames/Minerals</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>roman</keyword>
+          <path>Words/Misc/Numbers_SmallRoman</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

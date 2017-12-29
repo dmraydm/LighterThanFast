@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HairDef>
+    <defName>EngieElec</defName>
+    <label>elec</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/EngieElec</texPath>
+		<hairTags>
+			<li>Engie</li>
+		</hairTags>
+ </HairDef>
+  <HairDef>
+    <defName>EngieElec2</defName>
+    <label>elec2</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/EngieElec2</texPath>
+		<hairTags>
+			<li>Engie</li>
+		</hairTags>
+ </HairDef>
+ 
+   <HairDef>
+    <defName>EngieCirc</defName>
+    <label>circ</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/EngieCirc</texPath>
+		<hairTags>
+			<li>Engie</li>
+		</hairTags>
+ </HairDef>
+
+   <HairDef>
+    <defName>EngieBulb</defName>
+    <label>bulb</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/EngieBulb</texPath>
+		<hairTags>
+			<li>Engie</li>
+		</hairTags>
+ </HairDef>
+
+</Defs>

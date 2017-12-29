@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!-- natural rom-->
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>LTF_InstallRawRom</defName>
+	<label>reset</label>
+	<description>Installs vanilla rom.</description>
+
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+	<jobString>Installing vanilla engie rom.</jobString>
+	<workAmount>1200</workAmount>
+	<appliedOnFixedBodyParts>
+		<li>BodyPart_LTF_rawRom</li>
+		<!--<li>BodyPart_LTF_00romFiller</li>-->
+		<li>BodyPart_LTF_01RomFiller</li>
+		<li>BodyPart_LTF_10RomFiller</li>
+		<li>BodyPart_LTF_11RomFiller</li>
+	</appliedOnFixedBodyParts>
+	
+	<ingredients>
+	<li>
+		<filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count>
+	</li>
+	 <li>
+		<filter><thingDefs><li>LTF_EngieRawRom</li></thingDefs></filter>
+		<count>1</count>
+	</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieRawRom</li></thingDefs>
+	</fixedIngredientFilter>
+</RecipeDef>
+
+<!-- natural core-->
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>LTF_InstallSingleCore</defName>
+	<label>Init();</label>
+	<description>Installs core.</description>
+
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+	<jobString>Installing vanilla engie core.</jobString>
+	<workAmount>1200</workAmount>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	
+	<appliedOnFixedBodyParts>
+		<li>BodyPart_LTF_00Core</li>
+		<!--<li>BodyPart_LTF_00CoreFiller</li>-->
+		<li>BodyPart_LTF_01CoreFiller</li>
+		<li>BodyPart_LTF_10CoreFiller</li>
+		<li>BodyPart_LTF_11CoreFiller</li>
+	</appliedOnFixedBodyParts>
+	
+	<ingredients>
+	<li>
+		<filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count>
+	</li>
+	 <li>
+		<filter><thingDefs><li>LTF_EngieSingleCore</li></thingDefs></filter>
+		<count>1</count>
+	</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieSingleCore</li></thingDefs>
+	</fixedIngredientFilter>
+</RecipeDef>
+<!--template rom-->
+<RecipeDef Name="LTF_InstallRom" ParentName="SurgeryFlesh" Abstract="true">
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<jobString>Installing engie rom.</jobString>
+	<workAmount>1200</workAmount>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	<appliedOnFixedBodyParts>
+		<li>BodyPart_LTF_rawRom</li>
+		<!--<li>BodyPart_LTF_00romFiller</li>-->
+		<li>BodyPart_LTF_01RomFiller</li>
+		<li>BodyPart_LTF_10RomFiller</li>
+		<li>BodyPart_LTF_11RomFiller</li>
+	</appliedOnFixedBodyParts>
+	<!--<workSpeedStat>stat_defname</workSpeedStat>-->
+</RecipeDef>
+
+<RecipeDef Name="LTF_InstallT1Rom" ParentName="LTF_InstallRom" Abstract="true">
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+</RecipeDef>
+<RecipeDef Name="LTF_InstallT2Rom" ParentName="LTF_InstallRom" Abstract="true">
+	<researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite>
+</RecipeDef>
+<RecipeDef Name="LTF_InstallT3Rom" ParentName="LTF_InstallRom" Abstract="true">
+	<researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite>
+</RecipeDef>
+
+
+<!-- install cook Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallCookRom</defName>
+	<label>romCook();</label>
+	<description>Installs cook rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		 <li><filter><thingDefs><li>LTF_EngieCookRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieCookRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_cookRom</addsHediff>
+</RecipeDef>
+<!-- install cook Rom 2-->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallCook2Rom</defName>
+	<label>romCook2();</label>
+	<description>Installs cook rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		 <li><filter><thingDefs><li>LTF_EngieCook2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieCook2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_cook2Rom</addsHediff>
+</RecipeDef>
+<!-- install cook Rom K1-->
+<RecipeDef ParentName="LTF_InstallT3Rom">
+	<defName>LTF_InstallCookKrom</defName>
+	<label>kromCook();</label>
+	<description>Installs cook rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<!-- catetaire capilaire -->
+		<!--<li><filter><categories><li>LTF_SlugSilk</li></categories></filter>
+		<count>2</count></li>
+		<li><filter><categories><li>LTF_Korupsteel</li></categories></filter>
+		<count>5</count></li>-->
+		 <li><filter><thingDefs><li>LTF_EngieCookKrom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><!--<li>LTF_SlugSilk</li><li>LTF_Korupsteel</li>--><li>LTF_EngieCookKrom</li></thingDefs>
+	</fixedIngredientFilter>
+	
+	<addsHediff>Hediff_LTF_cookKrom</addsHediff>
+</RecipeDef>
+
+<!-- install construct Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallConstructRom</defName>
+	<label>romConstruct();</label>
+	<description>Installs construct rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		 <li><filter><thingDefs><li>LTF_EngieConstructRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieConstructRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_constructRom</addsHediff>
+</RecipeDef>
+<!-- install construct Rom 2-->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallConstruct2Rom</defName>
+	<label>romConstruct2();</label>
+	<description>Installs construct rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		 <li><filter><thingDefs><li>LTF_EngieConstruct2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieConstruct2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_construct2Rom</addsHediff>
+</RecipeDef>
+<!-- install construct Rom 3-->
+<RecipeDef ParentName="LTF_InstallT3Rom">
+	<defName>LTF_InstallConstruct3Rom</defName>
+	<label>romConstruct3();</label>
+	<description>Installs construct rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		 <li><filter><thingDefs><li>LTF_EngieConstruct3Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieConstruct3Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_construct3Rom</addsHediff>
+</RecipeDef>
+	
+<!-- install craft Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallCraftRom</defName>
+	<label>romCraft();</label>
+	<description>Installs craft rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieCraftRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieCraftRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_craftRom</addsHediff>
+</RecipeDef>
+<!-- install craft Rom 2-->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallCraft2Rom</defName>
+	<label>romCraft2();</label>
+	<description>Installs craft rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieCraft2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieCraft2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_craft2Rom</addsHediff>
+</RecipeDef>
+<!-- install craft Rom 3 -->
+<RecipeDef ParentName="LTF_InstallT3Rom">
+	<defName>LTF_InstallCraft3Rom</defName>
+	<label>romCraft3();</label>
+	<description>Installs craft rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieCraft3Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieCraft3Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_craft3Rom</addsHediff>
+</RecipeDef>	
+<!-- install grow Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallGrowRom</defName>
+	<label>romGrow();</label>
+	<description>Installs grow rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieGrowRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieGrowRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_growRom</addsHediff>
+</RecipeDef>
+<!-- install grow Rom 2 -->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallGrow2Rom</defName>
+	<label>romGrow2();</label>
+	<description>Installs grow rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieGrow2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieGrow2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_grow2Rom</addsHediff>
+</RecipeDef>
+
+<!-- install Medicine Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallMedicineRom</defName>
+	<label>romMedicine();</label>
+	<description>Installs medicine rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieMedicineRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieMedicineRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_medicineRom</addsHediff>
+</RecipeDef>
+<!-- install Medicine Rom 2 -->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallMedicine2Rom</defName>
+	<label>romMedicine2();</label>
+	<description>Installs medicine rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieMedicine2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieMedicine2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_medicine2Rom</addsHediff>
+</RecipeDef>
+<!-- install Medicine Rom K1-->
+<RecipeDef ParentName="LTF_InstallT3Rom">
+	<defName>LTF_InstallMedicineKrom</defName>
+	<label>kromMed();</label>
+	<description>Installs Medicine rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<!-- catetaire capilaire -->
+		<!--
+		<li><filter><categories><li>LTF_SlugSilk</li></categories></filter>
+		<count>2</count></li>
+		<li><filter><categories><li>LTF_Korupsteel</li></categories></filter>
+		<count>5</count></li>-->
+		 <li><filter><thingDefs><li>LTF_EngieMedicineKrom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><!--<li>LTF_SlugSilk</li><li>LTF_Korupsteel</li>--><li>LTF_EngieCookKrom</li></thingDefs>
+	</fixedIngredientFilter>
+	
+	<addsHediff>Hediff_LTF_medicineKrom</addsHediff>
+</RecipeDef>
+
+
+<!-- install Mining Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallMiningRom</defName>
+	<label>romMining();</label>
+	<description>Installs mining rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieMiningRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieMiningRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_miningRom</addsHediff>
+</RecipeDef>
+<!-- install Mining Rom 2 -->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallMining2Rom</defName>
+	<label>romMining2();</label>
+	<description>Installs mining rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieMining2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieMining2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_mining2Rom</addsHediff>
+</RecipeDef>
+
+<!-- install Research Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallResearchRom</defName>
+	<label>romResearch();</label>
+	<description>Installs Research rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieResearchRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieResearchRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_researchRom</addsHediff>
+</RecipeDef>
+<!-- install Research Rom 2 -->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallResearch2Rom</defName>
+	<label>romResearch2();</label>
+	<description>Installs Research rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieResearch2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieResearch2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_research2Rom</addsHediff>
+</RecipeDef>
+<!-- install Research Rom K1-->
+<RecipeDef ParentName="LTF_InstallT3Rom">
+	<defName>LTF_InstallResearchKrom</defName>
+	<label>kromResearch();</label>
+	<description>Installs Research rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<!-- catetaire capilaire -->
+		<!--<li><filter><categories><li>LTF_SlugSilk</li></categories></filter>
+		<count>2</count></li>
+		<li><filter><categories><li>LTF_Korupsteel</li></categories></filter>
+		<count>5</count></li>-->
+		 <li><filter><thingDefs><li>LTF_EngieResearchKrom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><!--<li>LTF_SlugSilk</li><li>LTF_Korupsteel</li>--><li>LTF_EngieResearchKrom</li></thingDefs>
+	</fixedIngredientFilter>
+	
+	<addsHediff>Hediff_LTF_researchKrom</addsHediff>
+</RecipeDef>
+
+
+<!-- install taming Rom -->
+<RecipeDef ParentName="LTF_InstallT1Rom">
+	<defName>LTF_InstallTamingRom</defName>
+	<label>romtame);</label>
+	<description>Installs tame rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieTamingRom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieTamingRom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_tamingRom</addsHediff>
+</RecipeDef>
+<!-- install taming Rom 2 -->
+<RecipeDef ParentName="LTF_InstallT2Rom">
+	<defName>LTF_InstallTaming2Rom</defName>
+	<label>romtame);</label>
+	<description>Installs tame rom.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter>
+		<count>1</count></li>
+		<li><filter><thingDefs><li>LTF_EngieTaming2Rom</li></thingDefs></filter>
+		<count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_EngieTaming2Rom</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_taming2Rom</addsHediff>
+</RecipeDef>
+
+<!--template core-->
+<RecipeDef Name="LTF_InstallCore" ParentName="SurgeryFlesh" Abstract="true">
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<jobString>Installing engie core.</jobString>
+	<workAmount>1200</workAmount>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	<appliedOnFixedBodyParts>
+		<li>BodyPart_LTF_00Core</li>
+		<!--<li>BodyPart_LTF_00CoreFiller</li>-->
+		<li>BodyPart_LTF_01CoreFiller</li>
+		<li>BodyPart_LTF_10CoreFiller</li>
+		<li>BodyPart_LTF_11CoreFiller</li>
+		
+	</appliedOnFixedBodyParts>
+</RecipeDef>
+
+<!-- 2x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install02Core</defName>
+	<label>02Core</label>
+	<description>Installs dual Core.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie02Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie02Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_02Core</addsHediff>
+</RecipeDef>
+ <!-- 4x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install04Core</defName>
+	<label>04Core</label>
+	<description>Installs quad core.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie04Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie04Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_04Core</addsHediff>
+</RecipeDef>
+ <!-- 8x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install08Core</defName>
+	<label>08Core</label>
+	<description>Installs octo Core.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+		<li><filter><thingDefs><li>LTF_Engie08Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie08Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_08Core</addsHediff>
+</RecipeDef>
+ <!-- 16x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install16Core</defName>
+	<label>16Core</label>
+	<description>Installs hexa Core.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+		<li><filter><thingDefs><li>LTF_Engie16Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie16Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_16Core</addsHediff>
+</RecipeDef>
+ <!-- 32x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install32Core</defName>
+	<label>32Core</label>
+	<description>Installs 32 Core.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie32Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie32Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_32Core</addsHediff>
+</RecipeDef>
+ <!-- 64x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install64Core</defName>
+	<label>64core</label>
+	<description>Installs 64 Core.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie64Core</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie64Core</li></thingDefs>
+	</fixedIngredientFilter>
+	<addsHediff>Hediff_LTF_64Core</addsHediff>
+</RecipeDef>
+
+<!-- 1x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install01Cooler</defName>
+	<label>singleCooler</label>
+	<description>Installs single cooler.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie01Cooler</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie01Cooler</li></thingDefs>
+	</fixedIngredientFilter>
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
+	<addsHediff>Hediff_LTF_01Cooler</addsHediff>
+</RecipeDef>
+<!-- 1x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install02Cooler</defName>
+	<label>dualCooler</label>
+	<description>Installs dual cooler.</description>
+	<ingredients>
+		<li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+		<li><filter><thingDefs><li>LTF_Engie02Cooler</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie02Cooler</li></thingDefs>
+	</fixedIngredientFilter>
+	<researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite>
+	<addsHediff>Hediff_LTF_02Cooler</addsHediff>
+</RecipeDef>
+<!-- 1x -->
+<RecipeDef ParentName="LTF_InstallCore">
+	<defName>LTF_Install04Cooler</defName>
+	<label>quadCooler</label>
+	<description>Installs quad cooler.</description>
+	<ingredients><li><filter><categories><li>Medicine</li></categories></filter><count>1</count></li>
+	 <li><filter><thingDefs><li>LTF_Engie04Cooler</li></thingDefs></filter><count>1</count></li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories><li>Medicine</li></categories>
+		<thingDefs><li>LTF_Engie04Cooler</li></thingDefs>
+	</fixedIngredientFilter>
+	<researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite>
+	<addsHediff>Hediff_LTF_04Cooler</addsHediff>
+</RecipeDef>
+
+</Defs> 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- T1 -->
+	<!--Construct-->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieConstructRom</defName>
+		<label>romCon1</label>
+		<description>A building area enhanced ROM. May have dowsides. </description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/constructRom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Steel>10</Steel>
+			<Gold>1</Gold>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<Stool>5</Stool>
+		</costList>
+		
+	</ThingDef>
+	<!-- T2 -->
+	<!--Construct-->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieConstruct2Rom</defName>
+		<label>romCon2</label>
+		<description>A building area enhanced ROM. May have dowsides. </description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/construct2Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieConstructRom>2</LTF_EngieConstructRom>
+			<Table2x4c>5</Table2x4c>
+		</costList>
+		
+	</ThingDef>
+		<!-- T3 -->
+	<!--Construct-->
+	<ThingDef ParentName="LTF_EngieRom">
+		<defName>LTF_EngieConstruct3Rom</defName>
+		<label>romCon3</label>
+		<description>A building area enhanced ROM. May have dowsides. </description>
+		
+		<graphicData>
+			<texPath>Engie/Rom/construct3Rom</texPath>
+			<drawSize>(.8,.8)</drawSize>
+			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
+		</graphicData>
+		
+		<costList>
+			<Gold>2</Gold>
+			<LTF_EngieConstruct2Rom>2</LTF_EngieConstruct2Rom>
+			<DiningChair>5</DiningChair>
+		</costList>
+		
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,61 @@
+<Defs>
+	<AlienRace.BackstoryDef>
+		<defName>MantisBSQuote01</defName>
+		<title>Cereal killer</title>
+		<titleShort>CerealKiller</titleShort>
+		<baseDescription>NAME cant bear the sound of plants growing</baseDescription>
+		<slot>Adulthood</slot>
+
+		  <spawnCategories>
+		  <li>MantisBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Growing</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>GreenThumb</defName></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>MantisBSQuote02</defName>
+		<title>Hat jaded</title>
+		<titleShort>jaded</titleShort>
+		<baseDescription>NAME used to live in a colony that was very regarding about high rentability efficiency regarding prisonner and death casualities. NAME became allergic to rockman armchairs contact. Heaven became hell since it irritated its chitine.</baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories>
+		  <li>MantisBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Crafting</defName><amount>2</amount></li>
+			<li><defName>Cooking</defName><amount>4</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Cannibal</defName></li>
+			<li><defName>Psychopath</defName></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>MantisBSQuote03</defName>
+		<title>Confused</title>
+		<titleShort>confused</titleShort>
+		<baseDescription>NAME is confused about its racial identity? In the space, he met some people who made him understand HE was not human after all. It's life changing.</baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories>
+		  <li>MantisBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>-2</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Melee</defName><amount>2</amount></li>
+			<li><defName>Shooting</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Nerves</defName><degree>-1</degree></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+
+</Defs>

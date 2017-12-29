@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ResourceBase">
+    <defName>LTF_SlugDew</defName>
+    <label>Slug dew</label>
+    <description>Wtf slug dew erk. Is it snot ?</description>
+    <graphicData>
+      <texPath>Things/Item/SlugDew</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(230, 204, 255)</color>
+    </graphicData>
+	
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <soundDrop>Corpse_Drop</soundDrop>
+	
+	<stackLimit>200</stackLimit>
+	
+    <statBases>
+		<MarketValue>.5</MarketValue>
+		<MaxHitPoints>70</MaxHitPoints>
+		<Mass>0.1</Mass>
+		<Flammability>0.1</Flammability>
+		<DeteriorationRate>2</DeteriorationRate>
+		<!--<ArmorHeatMultiplier>1.5</ArmorHeatMultiplier>-->
+		<SharpDamageMultiplier>0.2</SharpDamageMultiplier>
+		<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+    </statBases>
+	
+	<tickerType>Rare</tickerType>
+	<deepCommonality>0.01</deepCommonality>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <stuffProps>
+		<stuffAdjective>secreted</stuffAdjective>
+		<categories>
+			<li>Woody</li>
+		</categories>
+		<!-- <commonality>0.01</commonality> -->
+		
+		<color>(230, 204, 255)</color>
+		<constructEffect>ConstructWood</constructEffect>
+		<soundImpactStuff>BulletImpactWood</soundImpactStuff>
+		<statOffsets>
+			<Beauty>-1</Beauty>
+		</statOffsets>
+		<statFactors>
+			<MaxHitPoints>0.2</MaxHitPoints>
+			<Beauty>-3</Beauty>
+			<Flammability>0.3</Flammability>
+			<WorkToMake>1.2</WorkToMake>
+			<WorkToBuild>1.2</WorkToBuild>
+			<DoorOpenSpeed>1.5</DoorOpenSpeed>
+			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
+			<ArmorRating_Electric>4</ArmorRating_Electric>
+			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
+		</statFactors>
+		<smeltable>false</smeltable>
+		<!-- <appearance>Planks</appearance> -->
+		<appearance>Dripping</appearance>
+		<!-- todo Dripping stuffprop.cs textures\things\building\linked\wall-->
+    </stuffProps>
+	
+	<ingestible>
+		<preferability>DesperateOnly</preferability>
+		<foodType>AnimalProduct, Fluid</foodType>
+		 <!--<foodType>Processed</foodType>-->
+		<nutrition>0.02</nutrition>
+		
+		<ingestEffect>EatMeat</ingestEffect>
+		<ingestSound>Ingest_Beer</ingestSound>
+		
+		<tasteThought>Ate_LTF_SlugDew</tasteThought>
+		
+		<baseIngestTicks>240</baseIngestTicks>
+
+		<ingestHoldOffsetStanding>
+			<northDefault>
+				<offset>(0.21,0,0.05)</offset>
+			</northDefault>
+		</ingestHoldOffsetStanding>
+	  
+		<ingestHoldUsesTable>true</ingestHoldUsesTable>
+		<ingestCommandString>Lick {0}</ingestCommandString>
+		<ingestReportString>Licking {0}.</ingestReportString>
+		<!--<useEatingSpeedStat>true</useEatingSpeedStat>-->
+	</ingestible>
+	
+    <comps>
+		<li Class="CompProperties_FoodPoisoningChance">
+			<humanlikeOnly>false</humanlikeOnly>
+		</li>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>5</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>0</minSafeTemperature>
+			<maxSafeTemperature>20</maxSafeTemperature>
+			<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+		</li>
+	</comps>
+	
+    <thingCategories>
+	  <li>AnimalProductRaw</li>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+	
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+<!--    <storedConceptLearnOpportunity>BeeswaxMaking</storedConceptLearnOpportunity> -->
+</ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>FilthSlugDew</defName>
+    <label>dew leftovers</label>
+    <statBases>
+      <Beauty>-20</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/LiquidFuel</texPath>
+      <color>(138, 43, 226, 100)</color>
+    </graphicData>
+    <pathCost>5</pathCost>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>50</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <allowsFire>false</allowsFire>
+    </filth>
+  </ThingDef>
+
+ 
+  
+</Defs>

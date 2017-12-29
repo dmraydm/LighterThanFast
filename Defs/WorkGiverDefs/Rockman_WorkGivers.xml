@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  	<WorkGiverDef>
+		<defName>DoBillsStoneStove</defName>
+		<label>burn, melt, burn everything is possible</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>LTF_RegularRockmanStove</li>
+		</fixedBillGiverDefs>
+
+		<verb>melt</verb>
+		<gerund>melting/burning</gerund>
+
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+  </Defs>

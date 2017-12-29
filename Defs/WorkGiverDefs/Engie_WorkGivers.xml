@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  	<WorkGiverDef>
+		<defName>DoBillsEngieBench</defName>
+		<label>burn, melt, burn everything is possible</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>LTF_EngieBench</li>
+		</fixedBillGiverDefs>
+
+		<verb>design</verb>
+		<gerund>designing</gerund>
+
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+  </Defs>

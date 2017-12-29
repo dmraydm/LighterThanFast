@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ThingDef ParentName="LTF_HybridPartsBase">-->
+	<!--<ThingDef ParentName="ImplantBase">-->
+	<ThingDef ParentName="BodyPartArtificialBase">
+	<!--<ThingDef ParentName="BodyPartNaturalBase">-->
+		<defName>LTF_Ovipositor</defName>
+		<label>ovipositor</label>
+		<description>You know you have gone too far in your scientific experiments when you are implanting a human being with an ovipositor. This will enable the colonist to lay chicken eggs twice a day. It hurts as hell, though. Also, yuck.</description>
+		<graphicData>
+		<texPath>Things/Item/BodyPart/Organ</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>4</Mass>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>CompAttachBase</compClass>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+	</ThingDef>
+
+</Defs>

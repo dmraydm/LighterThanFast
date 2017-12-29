@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Mantis</defName>
+    <label>mantis</label>
+    <description>A slaughter insect</description>
+        
+	<statBases>
+		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>30</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>5.61</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		<CarryingCapacity>75</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>0.8</ResearchSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		<SocialImpact>0.9</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<StonecuttingSpeed>0.8</StonecuttingSpeed>
+		<PlantHarvestYield>1.2</PlantHarvestYield>
+		<ConstructionSpeed>1.0</ConstructionSpeed>
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+	</statBases>
+	<verbs>
+	<!--
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.6</defaultCooldownTime>
+			<meleeDamageBaseAmount>14</meleeDamageBaseAmount>
+			<meleeDamageDef>Bite</meleeDamageDef>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			<extraMeleeDamages>
+				<li>
+				<def>Stun</def>
+				<amount>20</amount>
+				</li>
+			</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Scratch</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Scratch</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+		-->
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.85</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.85</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+
+<alienrace>
+
+<generalSettings>
+    <PawnsSpecificBackstories>false</PawnsSpecificBackstories>
+    
+    <alienPartGenerator>
+    <alienbodytypes>
+		<li>Female</li>
+		<li>Male</li>
+		<li>Fat</li>
+		<li>Hulk</li>
+		<li>Thin</li>
+    </alienbodytypes>
+    <UseGenderedHeads>false</UseGenderedHeads>
+    <alienskincolorgen Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>RGBA(1.0,1.0,1.0,1)</only>
+                </li>
+				<li><weight>10</weight><only>RGBA(1.0,0.5,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(1.0,0.6,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(1.0,0.7,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(1.0,0.8,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(1.0,0.9,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.5,1.0,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.6,1.0,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.7,1.0,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.8,1.0,1.0,1)</only></li>
+				<li><weight>10</weight><only>RGBA(0.9,1.0,1.0,1)</only></li>
+            </options>
+    </alienskincolorgen>
+    </alienPartGenerator>
+    
+    <factionRelations>              
+    </factionRelations>
+
+    <MaleGenderProbability>0.5</MaleGenderProbability>
+
+    <chemicalSettings>
+    </chemicalSettings>
+   
+    <ForcedRaceTraitEntries>
+		<li><defname>Brawler</defname><chance>50</chance></li>
+
+		<li><defname>Greedy</defname><chance>30</chance></li>
+        <li><defname>Jealous</defname><chance>30</chance></li>
+		<li><defname>Bloodlust</defname><chance>30</chance></li>
+		<li><defname>Abrasive</defname><chance>30</chance></li>
+		<li><defname>Cannibal</defname><chance>30</chance></li>
+        
+		<li><defname>Ascetic</defname><chance>0</chance></li>		
+		<li><defname>Industriousness</defname><degree>1</degree><chance>0</chance></li>
+
+        <li><defname>Industriousness</defname><degree>2</degree><chance>0</chance></li>
+		<li><defname>Kind</defname><chance>0</chance></li>
+		
+    </ForcedRaceTraitEntries>
+
+</generalSettings>    
+
+
+<graphicPaths>
+    <li>
+		<body>Mantis/Body/</body>
+        <head>Mantis/Head/</head>
+    </li>
+</graphicPaths>
+
+
+<hairSettings>
+    <HasHair>true</HasHair>
+     <hairTags>
+	<li>empty</li>
+    </hairTags>
+</hairSettings>
+
+<relationSettings>
+            <relationChanceModifierChild>1</relationChanceModifierChild>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+            <relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+            <relationChanceModifierFiance>1</relationChanceModifierFiance>
+            <relationChanceModifierLover>1</relationChanceModifierLover>
+            <relationChanceModifierParent>1</relationChanceModifierParent>
+            <relationChanceModifierSibling>1</relationChanceModifierSibling>
+            <relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+</relationSettings>
+
+
+<pawnKindSettings>
+    <alienslavekinds>
+        <li>
+            <kindDefs>
+                <li>MantisPlayer</li>
+            </kindDefs>
+            <chance>25.0</chance>
+        </li>
+    </alienslavekinds>
+
+    <startingColonists>
+        <li>
+            <pawnKindEntries>
+                <li>
+                    <kindDefs>
+                        <li>MantisPlayer</li>
+                    </kindDefs>
+                    <chance>25</chance>
+                </li>
+            </pawnKindEntries>
+            <factionDefs>
+                <li>PlayerTribe</li>
+            </factionDefs>
+        </li>
+	<li>
+            <pawnKindEntries>
+                <li>
+                    <kindDefs>
+                        <li>MantisPlayer</li>
+                    </kindDefs>
+                    <chance>0.0</chance>
+                </li>
+            </pawnKindEntries>
+            <factionDefs>
+                <li>PlayerColony</li>
+            </factionDefs>
+        </li>
+    </startingColonists>
+	<alienwandererkinds>
+		<li>
+		<pawnKindEntries>
+		<li>
+			<kindDefs>
+			<li>MantisPlayer</li>
+			</kindDefs>
+			<chance>25.0</chance>
+		</li>
+		</pawnKindEntries>
+		<factionDefs>
+			<li>Tribe</li>
+		</factionDefs>
+		</li>
+	</alienwandererkinds>
+</pawnKindSettings>
+
+ <thoughtSettings>
+	<cannotReceiveThoughts>
+	</cannotReceiveThoughts>
+	<ateThoughtSpecific>
+	</ateThoughtSpecific>
+	<replacerList>
+	</replacerList>
+</thoughtSettings>
+
+
+<raceRestriction>
+</raceRestriction>
+
+</alienrace>
+      
+	<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <nameGenerator>NamerPersonMantis</nameGenerator>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>60</lifeExpectancy>
+      <leatherColor>(86,51,16)</leatherColor>
+      <bloodDef></bloodDef>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherLabel>mantis leather</leatherLabel>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Mantis</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+		  <!--
+			<butcherBodyPart>
+			<bodyPartGroup>RightHandClawsGroup</bodyPartGroup>
+			<thing>MantisClaw</thing>
+			<allowFemale>false</allowFemale>
+			</butcherBodyPart>
+			-->
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+	</race>
+	
+    <recipes>
+      <li>InstallPowerClaw</li>
+      <li>InstallScytherBlade</li>
+	  <li>InstallPlasteelClaws</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

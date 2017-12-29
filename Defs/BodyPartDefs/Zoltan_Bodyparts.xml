@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+	<BodyPartDef>
+		<defName>LTF_Ovipositor</defName>
+		<label>ovipositor</label>
+		<hitPoints>15</hitPoints>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<oldInjuryBaseChance>1</oldInjuryBaseChance>
+		<bleedingRateMultiplier>0.1</bleedingRateMultiplier>
+		
+		<skinCovered>true</skinCovered>
+		<beautyRelated>false</beautyRelated>
+
+		<dontSuggestAmputation>false</dontSuggestAmputation>
+		<isSolid>true</isSolid>
+		<spawnThingOnRemoved>LTF_Ovipositor</spawnThingOnRemoved>
+		<!--
+		<comps>
+			<li Class="NewHatcher.HediffCompProperties_Hatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			</li>
+		</comps>
+		-->
+		<!--	
+		<addsHediff>Hediff_LTF_Ovipositor</addsHediff>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+		<li Class="NewHatcher.HediffCompProperties_Hatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			</li>
+		</comps>
+		-->
+	</BodyPartDef>
+	
+</Defs>

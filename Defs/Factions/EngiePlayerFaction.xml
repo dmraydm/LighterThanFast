@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef Abstract="True" Name="EngieFactionBase">
+		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
+		<colorSpectrum><li>(0.3, 0.3, 0.3)</li></colorSpectrum>
+	</FactionDef>
+
+	<FactionDef ParentName="EngieFactionBase">
+		<defName>EngiePlayerColony</defName>
+		<label>Tribal cluster</label>
+		<description>Your own cluster of reset Engie.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>Engie</basicMemberKind>
+		<pawnsPlural>Engies</pawnsPlural>
+		
+		<baseNameMaker>NamerBaseEngieVillage</baseNameMaker>
+		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<backstoryCategory>EngieBackstory</backstoryCategory>
+
+		<homeIconPath>Engie/npcZoom</homeIconPath>
+		<expandingIconTexture>Engie/City</expandingIconTexture>
+<!-- techLevel : Industrial Medieval Neolithic -->		
+<!-- StartingResearchTag : TribalStart ClassicStart -->
+		<techLevel>Industrial</techLevel>
+		<startingResearchTags>
+			<li>TribalStart</li>
+		</startingResearchTags>		
+		
+		<hairTags>
+			<li>Tribal</li>
+			<li>Urban</li>
+			<li>Engie</li>
+		</hairTags>
+						
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Cloth</li>
+				<li>Hyperweave</li>
+				<li>Synthread</li>
+				<li>DevilstrandCloth</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+	
+</Defs>

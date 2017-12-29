@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseZoltanPawnKind">
+    <race>Alien_Zoltan</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseZoltanPawnKind">
+    <defName>Zoltan</defName>
+    <label>colonist</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryCategory>ZoltanBackstory</backstoryCategory>
+	<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
+    <apparelTags>
+      <li>Tribal</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- medical  MedicalTendSpeed MedicalTendQuality MedicalOperationSpeed MedicalSurgerySuccessChance-->	
+<!-- T1 -->
+<!-- Medicine -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_medicineRom</defName>
+		<label>romMed1</label>
+		
+		<stages><li>
+			<statOffsets>
+				<MedicalTendSpeed>.064</MedicalTendSpeed>
+				<MedicalTendQuality>.064</MedicalTendQuality>
+								
+				<ConstructSuccessChance>-0.064</ConstructSuccessChance>
+				<ImmunityGainSpeed>-0.064</ImmunityGainSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieMedicineRom</spawnThingOnRemoved>
+	</HediffDef>
+
+<!-- T2 -->
+<!-- Medicine -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_medicine2Rom</defName>
+		<label>romMed2</label>
+		
+		<stages><li>
+			<statOffsets>
+				<MedicalOperationSpeed>.064</MedicalOperationSpeed>
+				<MedicalSurgerySuccessChance>.064</MedicalSurgerySuccessChance>
+				<MedicalTendSpeed>.128</MedicalTendSpeed>
+				<MedicalTendQuality>.128</MedicalTendQuality>
+				
+				<ConstructSuccessChance>-0.128</ConstructSuccessChance>
+				<ImmunityGainSpeed>-0.128</ImmunityGainSpeed>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieMedicine2Rom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- K -->
+<!-- Medicine -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_medicineKrom</defName>
+		<label>kromMed1</label>
+		
+		<stages><li>
+			<!--<capMods><li>
+            <capacity>Breathing</capacity>
+            <offset>-0.128</offset>
+			</li></capMods>-->
+			
+			<statOffsets>
+				<MedicalOperationSpeed>.128</MedicalOperationSpeed>
+				<MedicalSurgerySuccessChance>.128</MedicalSurgerySuccessChance>
+				<MedicalTendSpeed>.256</MedicalTendSpeed>
+				<MedicalTendQuality>.256</MedicalTendQuality>
+				
+				<ConstructSuccessChance>-0.256</ConstructSuccessChance>
+				<ImmunityGainSpeed>-0.256</ImmunityGainSpeed>
+			</statOffsets>
+			
+			<mentalStateGivers>
+				<li>
+					<mentalState>TargetedInsultingSpree</mentalState>
+					<mtbDays>.9</mtbDays>
+				</li>
+			</mentalStateGivers>
+			
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieMedicine2Rom</spawnThingOnRemoved>
+	</HediffDef>
+</Defs>

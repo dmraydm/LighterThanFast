@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>Hediff_LTF_SlugLowExugation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<label>Dew sceptical</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>1</spawnCount>
+
+			<minDaysB4Next>.4</minDaysB4Next>
+			<maxDaysB4Next>.5</maxDaysB4Next>
+
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+
+			<spawnVerb>exugation</spawnVerb>
+
+			<hungerRelative>true</hungerRelative>
+			<mandatoryGrace>true</mandatoryGrace>
+			<graceDays>.3</graceDays>
+
+			<tickerLimit>.3</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+<!---->	
+	<HediffDef>
+		<defName>Hediff_LTF_SlugMedExugation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Dew volonteer</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>3</spawnCount>
+
+			<minDaysB4Next>.4</minDaysB4Next>
+			<maxDaysB4Next>.6</maxDaysB4Next>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>exugation</spawnVerb>
+			
+			<hungerRelative>true</hungerRelative>
+			<randomGrace>true</randomGrace>
+			<graceDays>.3</graceDays>
+			
+			<tickerLimit>.5</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+<!---->
+	<HediffDef>
+		<defName>Hediff_LTF_SlugHighExugation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Dewkward</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>7</spawnCount>
+			<minDaysB4Next>.6</minDaysB4Next>
+			<maxDaysB4Next>.8</maxDaysB4Next>
+			<!--<spawnIntervalRange>
+				<min>12000</min>
+				<max>18000</max>
+			</spawnIntervalRange>-->
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>exugation</spawnVerb>
+			
+			<hungerRelative>true</hungerRelative>
+			
+			<tickerLimit>.65</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+<!---->	
+	<HediffDef>
+		<defName>Hediff_LTF_SlugInsectExugation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Hive</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<!--
+		<li Class="NewHatcher.HediffCompProperties_LTF_MegascarabSpawner">
+			<spawnIntervalRange>
+				<min>60000</min>
+				<max>120000</max>
+			</spawnIntervalRange>
+		</li>
+		-->
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<animalThing>true</animalThing>
+			<!--<thingToSpawn>insect</thingToSpawn>-->
+			<animalName>Megascarab</animalName>
+			<spawnCount>1</spawnCount>
+			<minDaysB4Next>.5</minDaysB4Next>
+			<maxDaysB4Next>.7</maxDaysB4Next>
+
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>moult</spawnVerb>
+			
+			<hungerRelative>true</hungerRelative>
+			<healthRelative>true</healthRelative>
+			<randomGrace>true</randomGrace>
+			
+			<tickerLimit>1.5</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+<!---->	
+	<HediffDef>
+		<defName>Hediff_LTF_SlugRottingExugation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Rotting flesh</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>Megaspider_Meat</thingToSpawn>
+			<spawnCount>5</spawnCount>
+			<minDaysB4Next>1.5</minDaysB4Next>
+			<maxDaysB4Next>2</maxDaysB4Next>
+
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>moult</spawnVerb>
+			
+			<hungerRelative>true</hungerRelative>
+			<healthRelative>true</healthRelative>
+			<randomGrace>true</randomGrace>
+			
+			<tickerLimit>2.3</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+<!---->	
+	<HediffDef>
+		<defName>Hediff_LTF_SlugYayo</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Yayo factory</label>
+		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
+		
+		<comps>
+		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+			<thingToSpawn>Yayo</thingToSpawn>
+			<spawnCount>2</spawnCount>
+
+			<minDaysB4Next>2</minDaysB4Next>
+			<maxDaysB4Next>5</maxDaysB4Next>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>synthetization</spawnVerb>
+			
+			<mandatoryGrace>true</mandatoryGrace>
+			<graceDays>2</graceDays>
+			<hungerRelative>true</hungerRelative>
+			<healthRelative>true</healthRelative>
+			
+			<tickerLimit>3.5</tickerLimit>
+		</li>
+		</comps>
+	</HediffDef>
+</Defs>

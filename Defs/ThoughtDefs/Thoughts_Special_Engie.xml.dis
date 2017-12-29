@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Social Interrelational Thoughts -->
+
+<Thoughts>
+	
+	<ThoughtDef>
+		<defName>Engie_Ugly</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>Engie.ThoughtWorker_Engie</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Green screen again. Should i reboot it?</label>
+				<baseOpinionOffset>-5</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Thoughts>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<PawnKindDef>
+    <defName>MantisPlayer</defName>
+    <defaultFactionType>PlayerTribe</defaultFactionType>
+        <label>mantis man</label>
+    <race>Mantis</race>
+    <labelMale>male mantis man</labelMale>
+    <labelFemale>female mantis man</labelFemale>
+    <isFighter>true</isFighter>
+    <combatPower>30</combatPower>
+	
+    <apparelTags>
+      <li>Tribal</li>
+    </apparelTags>
+	
+	<apparelMoney>
+      <min>200</min>
+      <max>400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <backstoryCategory>Tribal</backstoryCategory>
+</PawnKindDef>
+
+</Defs>

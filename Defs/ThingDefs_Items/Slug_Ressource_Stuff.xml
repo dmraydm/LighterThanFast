@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+    <defName>LTF_Kraptyl</defName>
+    <label>Kraptyl</label>
+    <description>An iron-carbon metal alloy deeply corroded by slug dew.</description>
+    <graphicData>
+		<texPath>Things/Item/Resource/Metal</texPath>
+		<graphicClass>Graphic_Random</graphicClass>
+		<color>(131,31,73)</color>
+		<!-- <color>(109,31,47)</color> -->
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+		<MarketValue>.8</MarketValue>
+		<Mass>0.6</Mass>
+		
+		<SharpDamageMultiplier>.8</SharpDamageMultiplier>
+		<BluntDamageMultiplier>.8</BluntDamageMultiplier>
+    </statBases>
+
+    <useHitPoints>false</useHitPoints>
+    <slagDef>LTF_ChunkSlagKraptyl</slagDef>
+	<!--<deepCommonality>5</deepCommonality>-->
+
+	<deepCommonality>0.01</deepCommonality>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+	
+	<stuffProps>
+		<stuffAdjective>corrupted</stuffAdjective>
+		<categories>
+			<li>Metallic</li>
+		</categories>
+		<!-- <commonality>0</commonality> -->
+		<constructEffect>ConstructMetal</constructEffect>
+		
+		<color>(131,31,73)</color>
+		<!-- <color>(138,43,226)</color> -->
+		
+		<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+		
+		<statOffsets>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-10</Cleanliness>
+			<Comfort>-5</Comfort>
+			<EntertainmentStrengthFactor>-1</EntertainmentStrengthFactor>
+			<FoodPoisonChance>2</FoodPoisonChance>
+			
+			<Mass>2</Mass>
+			<MaxHitPoints>-5</MaxHitPoints>
+			<MedicalTendQuality>-5</MedicalTendQuality>
+			<MoveSpeed>-0.05</MoveSpeed>
+			
+			<MeleeDodgeChance>-5</MeleeDodgeChance>
+			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
+			<MeleeWeapon_DamageMultiplier>.95</MeleeWeapon_DamageMultiplier>
+			
+			<PainShockThreshold>1.2</PainShockThreshold>
+			<PsychicSensitivity>1.2</PsychicSensitivity>
+		</statOffsets>
+		
+		<statFactors>
+			<ImmunityGainSpeedFactor>.1</ImmunityGainSpeedFactor>
+			<ImmunityGainSpeed>.2</ImmunityGainSpeed>
+			
+			<AimingDelayFactor>1.2</AimingDelayFactor>
+			<ArmorRating_Blunt>.8</ArmorRating_Blunt>
+			<ArmorRating_Electric>.8</ArmorRating_Electric>
+			<ArmorRating_Heat>.8</ArmorRating_Heat>
+			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
+			<Beauty>.5</Beauty>
+			<BedRestEffectiveness>.8</BedRestEffectiveness>
+			<BrewingSpeed>1.2</BrewingSpeed>
+			<ButcheryFleshEfficiency>1.2</ButcheryFleshEfficiency>
+			<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
+			<Cleanliness>-1.5</Cleanliness>
+			<Comfort>.5</Comfort>
+			<ComfyTemperatureMax>.5</ComfyTemperatureMax>
+			<ComfyTemperatureMin>.5</ComfyTemperatureMin>
+			<ConstructionSpeed>1.2</ConstructionSpeed>
+			<ConstructSuccessChance>.8</ConstructSuccessChance>
+			<CookSpeed>1.2</CookSpeed>
+			<DeteriorationRate>2</DeteriorationRate>
+			<DiplomacyPower>.8</DiplomacyPower>
+			<DoorOpenSpeed>1.2</DoorOpenSpeed>
+			<DrugProductionSpeed>1.2</DrugProductionSpeed>
+			<EatingSpeed>.8</EatingSpeed>
+			<EntertainmentStrengthFactor>.7</EntertainmentStrengthFactor>
+			<Flammability>1.5</Flammability>
+			<FoodPoisonChance>1.5</FoodPoisonChance>
+			<GlobalLearningFactor>.8</GlobalLearningFactor>
+			
+			
+			<Insulation_Cold>.8</Insulation_Cold>
+			<Insulation_Heat>.8</Insulation_Heat>
+			<MarketValue>.8</MarketValue>
+			<Mass>1.2</Mass>
+			<MaxHitPoints>.7</MaxHitPoints>
+			<MedicalOperationSpeed>.8</MedicalOperationSpeed>
+			<MedicalSurgerySuccessChance>.8</MedicalSurgerySuccessChance>
+			<MedicalTendQuality>.8</MedicalTendQuality>
+			<MedicalTendQualityOffset>-0.2</MedicalTendQualityOffset>
+			<MedicalTendSpeed>.8</MedicalTendSpeed>
+
+			<MeleeDodgeChance>.8</MeleeDodgeChance>
+			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
+			<MeleeWeapon_DamageMultiplier>.95</MeleeWeapon_DamageMultiplier>
+			
+			<MentalBreakThreshold>1.5</MentalBreakThreshold>
+			<MinimumHandlingSkill>5</MinimumHandlingSkill>
+			<MoveSpeed>.95</MoveSpeed>
+			<PainShockThreshold>1.2</PainShockThreshold>
+			<PsychicSensitivity>1.2</PsychicSensitivity>
+			<RecruitPrisonerChance>.5</RecruitPrisonerChance>
+			<ResearchSpeed>.8</ResearchSpeed>
+			<ResearchSpeedFactor>.8</ResearchSpeedFactor>
+			<SculptingSpeed>1.2</SculptingSpeed>
+			
+			<SellPriceFactor>.8</SellPriceFactor>
+			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+			<ShootingAccuracy>1.2</ShootingAccuracy>
+			<SmeltingSpeed>1.2</SmeltingSpeed>
+			<SmithingSpeed>1.2</SmithingSpeed>
+			<SocialImpact>.8</SocialImpact>
+			<SurgerySuccessChanceFactor>.8</SurgerySuccessChanceFactor>
+			<TailoringSpeed>1.2</TailoringSpeed>
+			<ToxicSensitivity>1.2</ToxicSensitivity>
+			<TradePriceImprovement>.8</TradePriceImprovement>
+			<TrapMeleeDamage>1.1</TrapMeleeDamage>
+			<TrapSpringChance>.8</TrapSpringChance>
+			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+			<WorkTableWorkSpeedFactor>1.2</WorkTableWorkSpeedFactor>
+			<WorkToBuild>1.5</WorkToBuild>
+			<WorkToMake>1.5</WorkToMake>
+
+		</statFactors>
+		<appearance>Rusting</appearance>
+		<smeltable>true</smeltable>
+	</stuffProps>
+
+	<thingCategories>
+		<li>ResourcesRaw</li>
+	</thingCategories>
+		
+	<techHediffsTags>
+		<li>Advanced</li>
+	</techHediffsTags>
+	
+</ThingDef>
+	
+	<ThingCategoryDef>
+		<defName>LTF_KrapChunks</defName>
+		<label>kraptyl chunks</label>
+		<parent>Chunks</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<!--<iconPath>UI/Icons/ThingCategories/StoneChunks</iconPath>-->
+    </ThingCategoryDef>
+	
+	<ThingDef ParentName="ChunkBase">
+		<defName>LTF_ChunkSlagKraptyl</defName>
+		<label>Kraptyl slag chunk</label>
+		<description>A chunk of Kraptyl slag. Not very useful in its current form but it's possible to smelt Kraptyl from it.</description>
+		<graphicData>
+			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<color>(138,43,226)</color>
+		</graphicData>
+		<statBases>
+			<Mass>7</Mass>
+		</statBases>
+		<soundDrop>ChunkSlag_Drop</soundDrop>
+		<thingCategories>
+			<li>LTF_KrapChunks</li>
+		</thingCategories>
+		<smeltProducts>
+			<LTF_Kraptyl>9</LTF_Kraptyl>
+		</smeltProducts>
+		<!-- <comp><li Class="CompProperties_Steamer"/></comp> -->
+			<!-- <lifespanTicks>15000</lifespanTicks> -->
+		<!-- </li> -->
+		
+	</ThingDef>
+	
+	<ThingDef ParentName="ChunkBase">
+		<defName>LTF_TinyChunkSlagKraptyl</defName>
+		<label>tiny kraptyl slag chunk</label>
+		<description>A tiny chunk of Kraptyl slag. Not very useful in its current form but it's possible to smelt Kraptyl from it.</description>
+		<graphicData>
+			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<color>(138,43,226)</color>
+			<drawSize>.6</drawSize>
+		</graphicData>
+		
+		<!--<stackLimit>5</stackLimit>-->
+
+		<statBases>
+			<Mass>3.5</Mass>
+		</statBases>
+		<soundDrop>ChunkSlag_Drop</soundDrop>
+		<thingCategories>
+			<li>LTF_KrapChunks</li>
+		</thingCategories>
+		<smeltProducts>
+			<LTF_Kraptyl>3</LTF_Kraptyl>
+		</smeltProducts>
+	</ThingDef>
+<!-- FilthKraptyl -->
+	<ThingDef ParentName="BaseFilth">
+		<defName>LTF_FilthKraptyl</defName>
+		<label>Kraptyl chips. Also flammable.</label>
+		<thingClass>LiquidFuel</thingClass>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<Beauty>-25</Beauty>
+			<Cleanliness>-10</Cleanliness>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>1.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/Ash</texPath>
+			<color>(138, 43, 226, 100)</color>
+		</graphicData>
+		<pathCost>3</pathCost>
+		<filth>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>60</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+		</filth>
+
+	</ThingDef>
+	
+</Defs>

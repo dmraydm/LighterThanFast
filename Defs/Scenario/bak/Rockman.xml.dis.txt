@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>RockmenOnly</defName>
+    <label>Rockmen only, or we will rock you jk</label>
+    <description>No pop, no techno</description>
+    <scenario>
+      <summary>Rolling stones are better</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>TribalRockmanPlayer</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>0.5</chance>
+          <hediff>Malnutrition</hediff>
+          <severityRange>
+            <min>0.2</min>
+            <max>0.4</max>
+          </severityRange>
+        </li>
+        <li Class="ScenPart_SetNeedLevel">
+          <def>SetNeedLevel</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1.0</chance>
+          <need>Food</need>
+          <levelRange>
+            <min>0</min>
+            <max>0.1</max>
+          </levelRange>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>A mountain chain is a row of high mountain summits, a linear sequence of interconnected or related mountains,[1] or a contiguous ridge of mountains within a larger mountain range. The term is also used for elongated fold mountains with several parallel chains ("chain mountains"). While in mountain ranges, the term mountain chain is common, in hill ranges a sequence of hills tends to be referred to a ridge or hill chain. Elongated mountain chains occur most frequently in the orogeny of fold mountains, (that are folded by lateral pressure), and nappe belts (where a sheetlike body of rock has been pushed over another rock mass). Other types of range such as horst ranges, fault block mountain or truncated uplands rarely form parallel mountain chains. However, if a truncated upland is eroded into a high table land, the incision of valleys can lead to the formations of mountain or hill chains.
+		  </text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+		<!-- Player starting things -->
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+				<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Fire</thingDef>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksGranite</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>BlocksSlate</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkSlate</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Silver</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Pemmican</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>HerbalMedicine</thingDef>
+			<count>20</count>
+		</li>
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>MeleeWeapon_Club</thingDef>
+			<stuff>Plasteel</stuff>
+			<count>5</count>
+		</li>
+		<li Class="ScenPart_StartingAnimal">
+			<def>StartingAnimal</def>
+			<animalKind>Elephant</animalKind>
+			<count>1</count>
+			<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+		</li>
+
+		<!-- Scatter some things near player start -->
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>WoodLog</thingDef>
+			<count>150</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>Steel</thingDef>
+			<count>300</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkMarble</thingDef>
+			<count>50</count>
+		</li>
+		<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<def>ScatterThingsNearPlayerStart</def>
+			<thingDef>ChunkGranite</thingDef>
+			<count>50</count>
+		</li>
+		
+      </parts>
+    </scenario>
+  </ScenarioDef>
+    
+
+  
+</Defs>

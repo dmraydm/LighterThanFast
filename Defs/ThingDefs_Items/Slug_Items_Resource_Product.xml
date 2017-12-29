@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="OrganicProductBase" >
+<!-- <ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="ResourceVerbBase" > -->
+	<!--<graphicData>
+	<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+	</graphicData>-->
+	<ingestible>
+		<foodType>AnimalProduct</foodType>
+		<ingestEffect>EatMeat</ingestEffect>
+		<ingestSound>RawMeat_Eat</ingestSound>
+		<preferability>RawBad</preferability>
+		<!--<tasteThought>AteRawFood</tasteThought>-->
+	</ingestible>
+
+	<soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+	
+	<socialPropernessMatters>true</socialPropernessMatters>
+	<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>15</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+			<disableIfHatcher>true</disableIfHatcher>
+		</li>
+		<li Class="CompProperties_FoodPoisoningChance">
+			<humanlikeOnly>false</humanlikeOnly>
+		</li>
+	</comps>
+	
+	<researchPrerequisites><li>LTF_Research_SlugProducts</li></researchPrerequisites>
+</ThingDef>
+
+<!-- DewEgg -->
+<ThingDef ParentName="LTF_KeggBase">
+    <defName>LTF_DewEgg</defName>
+    <label>Dew egg</label>
+    <description>This egg will fastly deteriorate and produce slug dew in the process. Waste healthy food for snot ? That's not very academical.</description>
+    <graphicData>
+		<texPath>Things/Item/Resource/LTF_DewEgg</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1</drawSize>
+		<!-- <color>(230, 204, 255)</color> -->
+		<!-- <shaderType>Transparent</shaderType> -->
+	</graphicData>
+
+    <stackLimit>1</stackLimit>
+
+	<!-- equipable -->
+	<equipmentType>Primary</equipmentType>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<category>Item</category>
+	
+	<verbs>
+		<li>
+			<label>throw slug dew egg</label>
+			<!-- <verbClass>Verb_LaunchProjectile</verbClass> -->
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<defaultProjectile>LTF_DewEggProjectile</defaultProjectile>
+			<hasStandardCommand>true</hasStandardCommand>
+			<range>12.9</range>
+			<forcedMissRadius>1.0</forcedMissRadius>
+			<warmupTime>1.5</warmupTime>
+			<noiseRadius>4</noiseRadius>
+			
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+		</li>
+	</verbs>
+
+    <statBases>
+		<MaxHitPoints>15</MaxHitPoints>
+		<Mass>0.16</Mass>
+		<Flammability>1.0</Flammability>
+		<MarketValue>0.03</MarketValue>
+    </statBases>
+	
+	<ingestible><nutrition>0.05</nutrition></ingestible>
+	
+	<fillPercent>0.05</fillPercent>
+	<tickerType>Rare</tickerType>
+
+	<comps>
+		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>7</spawnCount>
+			<spawnIntervalRange>
+				<min>3300</min>
+				<max>3600</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>liquefaction</spawnVerb>
+		</li>
+
+		<li Class="CompProperties_Lifespan">
+			<lifespanTicks>10000</lifespanTicks>
+		</li>
+		<li>
+			<compClass>CompEquippable</compClass>
+		</li>
+	</comps>
+	
+	<!-- <weaponTags> -->
+      <!-- <li>GrenadeEMP</li> -->
+    <!-- </weaponTags> -->
+	
+	<thingCategories>
+		<li>WeaponsRanged</li>
+    	<li>AnimalProductRaw</li>
+		<!-- <li>Grenades</li> -->
+    </thingCategories>
+	<techLevel>Neolithic</techLevel>
+	
+	<researchPrerequisites><li>LTF_Research_SlugProducts</li></researchPrerequisites>
+
+	
+	
+</ThingDef>
+
+<!-- DewEgg projectile -->
+<ThingDef ParentName="BaseGrenadeProjectile">
+	<defName>LTF_DewEggProjectile</defName>
+	<label>dew egg projectile</label>
+
+	<graphicData>
+		<texPath>Things/Item/Resource/LTF_DewEgg</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>.8</drawSize>
+	</graphicData>
+	
+	<projectile>
+		<speed>14</speed>
+		<flyOverhead>false</flyOverhead>
+    	
+		<ai_IsIncendiary>false</ai_IsIncendiary>
+		<explosionRadius >1.4</explosionRadius >
+		<!-- <damageDef>Extinguish</damageDef> -->
+		<damageDef>Bomb</damageDef>
+		<explosionEffect>ExtinguisherExplosion</explosionEffect>
+		<applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+
+		<damageAmountBase>1</damageAmountBase>
+		<!-- <explosionDelay>1</explosionDelay> -->
+		
+		<preExplosionSpawnThingDef>FilthSlugDew</preExplosionSpawnThingDef>
+		<preExplosionSpawnChance>.5</preExplosionSpawnChance>
+			
+		<postExplosionSpawnChance>.4</postExplosionSpawnChance>
+		<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		<postExplosionSpawnThingDef>LTF_SlugDew</postExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<!-- chunkEgg -->
+<ThingDef ParentName="LTF_KeggBase">
+
+    <defName>LTF_ChunkEgg</defName>
+    <label>Chunk egg</label>
+    <description>This egg will fastly deteriorate and produce kraptyl chunks in the process.</description>
+	
+    <graphicData>
+		<texPath>Things/Item/Resource/LTF_ChunkEgg</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1</drawSize>
+		<!-- <color>(138,43,226)</color> -->
+	</graphicData>
+
+		<!-- bug https://ludeon.com/mantis/print_bug_page.php?bug_id=2094 si stack -->
+	<stackLimit>1</stackLimit>
+	
+	<!-- equipable -->
+	<equipmentType>Primary</equipmentType>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<category>Item</category>
+	
+	<verbs>
+		<li>
+			<label>throw chunk egg</label>
+			<!-- <verbClass>Verb_LaunchProjectile</verbClass> -->
+			<verbClass>Verb_ShootOneUse</verbClass>
+			<defaultProjectile>LTF_ChunkEggProjectile</defaultProjectile>
+			<hasStandardCommand>true</hasStandardCommand>
+			<range>12.9</range>
+			<forcedMissRadius>1.0</forcedMissRadius>
+			<warmupTime>1.5</warmupTime>
+			<noiseRadius>4</noiseRadius>
+			
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+		</li>
+	</verbs>
+	
+    <statBases>
+		<MaxHitPoints>10</MaxHitPoints>
+		<Mass>30</Mass>
+		<Flammability>1.5</Flammability>
+		<MarketValue>0.01</MarketValue>
+    </statBases>
+	
+	<ingestible><nutrition>0.1</nutrition></ingestible>
+	
+	<fillPercent>0.1</fillPercent>
+	<tickerType>Rare</tickerType>
+
+	<comps>
+		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>4000</min>
+				<max>6000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>corrosion</spawnVerb>
+		</li>
+	
+		<li Class="CompProperties_Lifespan">
+			<lifespanTicks>24000</lifespanTicks>
+		</li>
+		
+		<li>
+			<compClass>CompEquippable</compClass>
+		</li>
+	</comps>
+	
+	<thingCategories>
+		<li>WeaponsRanged</li>
+    	<li>AnimalProductRaw</li>
+    </thingCategories>
+	<techLevel>Neolithic</techLevel>
+	
+	<researchPrerequisites><li>LTF_Research_SlugProducts</li></researchPrerequisites>
+	
+</ThingDef>
+
+<!-- DewEgg projectile -->
+<ThingDef ParentName="BaseGrenadeProjectile">
+	<defName>LTF_ChunkEggProjectile</defName>
+	<label>chunk egg projectile</label>
+
+	<graphicData>
+		<texPath>Things/Item/Resource/LTF_ChunkEgg</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>.8</drawSize>
+	</graphicData>
+	
+	<projectile>
+		<speed>14</speed>
+		<flyOverhead>false</flyOverhead>
+    	
+		<ai_IsIncendiary>false</ai_IsIncendiary>
+		<explosionRadius >1.9</explosionRadius >
+		<!-- <damageDef>Extinguish</damageDef> -->
+		<damageDef>EMP</damageDef>
+		
+		<applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+
+		<damageAmountBase>10</damageAmountBase>
+		<!-- <explosionDelay>1</explosionDelay> -->
+		
+		<preExplosionSpawnThingDef>LTF_FilthKraptyl</preExplosionSpawnThingDef>
+		<preExplosionSpawnChance>.8</preExplosionSpawnChance>
+			
+		<postExplosionSpawnChance>.1</postExplosionSpawnChance>
+		<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+		<postExplosionSpawnThingDef>LTF_TinyChunkSlagKraptyl</postExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<!-- KrapkenEgg -->
+<ThingDef ParentName="LTF_KeggBase">
+    <defName>LTF_KrapkenEgg</defName>
+    <label>Krapken egg</label>
+   <description>This egg will hatch something. But sometimes it wont. But ... even if you can, should you ?</description>
+   
+   <graphicData>
+		<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+		<drawSize>1.5</drawSize>
+		<!-- <color>(138,43,226)</color> -->
+		<color>(109,31,47)</color>
+	</graphicData>
+
+	<stackLimit>1</stackLimit>
+	
+    <statBases>
+		<MaxHitPoints>20</MaxHitPoints>
+		<Mass>0.3</Mass>
+		<Flammability>1.5</Flammability>
+		<MarketValue>0.01</MarketValue>
+		<DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+	<ingestible><nutrition>0.3</nutrition></ingestible>
+	
+	<fillPercent>0.1</fillPercent>
+	<tickerType>Rare</tickerType>
+	
+    <comps>
+		<li Class="NewHatcher.CompProperties_LTF_Steamer"/>
+		
+		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+			<!--<thingToSpawn>LTF_Krapken</thingToSpawn>-->
+			<!--<thingToSpawn>Chicken</thingToSpawn>-->
+			
+			<animalThing>true</animalThing>
+			<animalName>LTF_Krapken</animalName>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>12000</min>
+				<max>15000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>1</spawnMaxAdjacent>
+			<manHunter>true</manHunter>
+			<spawnForbidden>false</spawnForbidden>
+			<spawnVerb>liquefaction</spawnVerb>
+		</li>
+		<!--
+		<li Class="CompProperties_Lifespan">
+			<lifespanTicks>15000</lifespanTicks>
+		</li>
+		-->
+		<li Class="CompProperties_Breakdownable"/>
+    </comps>
+	
+	<thingCategories>
+		<li>AnimalProductRaw</li>
+    </thingCategories>
+	
+	<researchPrerequisites><li>LTF_Research_SlugProducts</li></researchPrerequisites>
+	
+</ThingDef>
+</Defs>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonEngie</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[engie] [moreit]</li>
+        <li>name->[engie] [it]</li>
+        <li>name->[engie] '[moreit]' [it]</li>
+        <li>name->[it] '[scifi]' [moreit]</li>
+        <li>name->[engie] '[scifi]' [it]</li>
+        <li>name->[engie] '[it]' [scifi]</li>
+      </rulesStrings>
+
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>engie</keyword>
+          <path>EngieNames/Engie</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>moreit</keyword>
+          <path>EngieNames/MoreIt</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>scifi</keyword>
+          <path>EngieNames/Scifi</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>it</keyword>
+          <path>EngieNames/It</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>roman</keyword>
+          <path>Words/Misc/Numbers_SmallRoman</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

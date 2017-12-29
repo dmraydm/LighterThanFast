@@ -1,0 +1,249 @@
+<Defs>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote01</defName>
+    <title>Ethic hacker</title>
+    <titleShort>EngieHacker</titleShort>
+	<baseDescription>"The true computer hackers follow a certain set of ethics that forbids them to profit or cause harm from their activities." — Kevin Mitnick</baseDescription>
+    <slot>Adulthood</slot>
+<!--    <bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Social</defName><amount>1</amount></li>
+	  <li><defName>Intellectual</defName><amount>3</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>TooSmart</defName><chance>50</chance></li>
+		<li><defName>NightOwl</defName><chance>80</chance></li>
+		<li><defName>CreepyBreathing</defName><chance>30</chance></li>
+	</forcedTraits>
+	<workDisables><li>PlantWork</li></workDisables>
+    </AlienRace.BackstoryDef>
+<!-- -->
+	<AlienRace.BackstoryDef>
+    <defName>EngieBSQuote02</defName>
+    <title>Humble process</title>
+    <titleShort>EngieHumble</titleShort>
+	<baseDescription>"Being able to break security doesn’t make you a hacker anymore than being able to hotwire cars makes you an automotive engineer." – Eric Raymond</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Construction</defName><amount>2</amount></li>
+	  <li><defName>Crafting</defName><amount>1</amount></li>
+    </skillGains>
+	<forcedTraits><li><defName>Ascetic</defName><chance>100</chance></li></forcedTraits>
+	<workDisables><li>Intellectual</li></workDisables>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote03</defName>
+    <title>Spof</title>
+    <titleShort>EngieSpof</titleShort>
+	<baseDescription>"Companies spend millions of dollars on firewalls, encryption and secure access devices, and it’s money wasted, because none of these measures address the weakest link in the security chain." – Kevin Mitnick</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Intellectual</defName><amount>6</amount></li>
+	  <li><defName>Construction</defName><amount>-2</amount></li>
+	  <li><defName>Crafting</defName><amount>-2</amount></li>
+	  <li><defName>Mining</defName><amount>-2</amount></li>
+    </skillGains>
+	<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote04</defName>
+    <title>Fork bomb</title>
+    <titleShort>EngieFork</titleShort>
+	<baseDescription>"If you think technology can solve your security problems, then you don’t understand the problems and you don’t understand the technology." – Bruce Schneier</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Intellectual</defName><amount>3</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>Prosthophobe</defName><chance>100</chance></li>
+		<li><defName>Masochist</defName><chance>50</chance></li>
+	</forcedTraits>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote05</defName>
+    <title>Fake news</title>
+    <titleShort>EngieFake</titleShort>
+	<baseDescription>"Hoaxes use weaknesses in human behavior to ensure they are replicated and distributed. In other words, hoaxes prey on the Human Operating System." – Stewart Kirkpatrick</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains><li><defName>Social</defName><amount>3</amount></li></skillGains>
+	<forcedTraits><li><defName>Psychopath</defName><chance>100</chance></li></forcedTraits>
+	<workDisables><li>Intellectual</li></workDisables>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote06</defName>
+    <title>Encrypted chroot</title>
+    <titleShort>EngieChroot</titleShort>
+	<baseDescription>"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards." – Gene Spafford</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Melee</defName><amount>3</amount></li>
+	  <li><defName>Shooting</defName><amount>5</amount></li>
+	  <li><defName>Construction</defName><amount>3</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>Psychopath</defName><chance>100</chance></li>
+		<li><defName>CreepyBreathing</defName><chance>50</chance></li>
+	</forcedTraits>
+	<workDisables><li>Social</li><li>Animals</li></workDisables>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote07</defName>
+    <title>Sudo make install</title>
+    <titleShort>EngieMake</titleShort>
+	<baseDescription>"Any type of operating system that I wanted to be able to hack, I basically compromised the source code, copied it over to the university because I didn’t have enough space on my 200 megabyte hard drive." — Kevin Mitnick</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Intellectual</defName><amount>3</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>AnnoyingVoice</defName><chance>50</chance></li>
+		<li><defName>NightOwl</defName><chance>80</chance></li>
+	</forcedTraits>	
+    </AlienRace.BackstoryDef>
+<!-- -->
+
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote08</defName>
+    <title>Hashtag fappening</title>
+    <titleShort>EngieFap</titleShort>
+	<baseDescription>"Passwords are like underwear: you don’t let people see it, you should change it very often, and you shouldn’t share it with strangers." - Chris Pirillo</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+	<spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Intellectual</defName><amount>3</amount></li>
+	  <li><defName>Crafting</defName><amount>1</amount></li>
+	  <li><defName>Social</defName><amount>-2</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>Abrasive</defName></li>
+		<li><defName>Nudist</defName></li>
+	</forcedTraits>	
+    </AlienRace.BackstoryDef>
+	
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote09</defName>
+    <title>Fail stack</title>
+    <titleShort>EngieStack</titleShort>
+	<baseDescription>"In the underworld, reality itself has elastic properties and is capable of being stretched into different definitions of the truth." - Roderick Vincent</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+	<spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+		<li><defName>Animals</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>1</amount></li>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Cooking</defName><amount>1</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Growing</defName><amount>1</amount></li>
+		<li><defName>Medicine</defName><amount>2</amount></li>
+		<li><defName>Mining</defName><amount>1</amount></li>
+		<li><defName>Intellectual</defName><amount>2</amount></li>
+		<li><defName>Shooting</defName><amount>1</amount></li>
+		<li><defName>Social</defName><amount>2</amount></li>
+	</skillGains>
+    <forcedTraits>
+	
+		<li><defName>DislikesMen</defName><chance>50</chance></li>
+		<li><defName>DislikesWomen</defName><chance>80</chance></li>
+	
+		<li><defName>Xenophobia</defName><degree>1</degree><chance>50</chance></li>
+		<li><defName>Prosthophobe</defName><chance>50</chance></li>
+		<li><defName>Abrasive</defName><chance>50</chance></li>
+		<li><defName>AnnoyingVoice</defName><chance>50</chance></li>
+		<li><defName>CreepyBreathing</defName><chance>50</chance></li>
+		<li><defName>Wimp</defName><chance>50</chance></li>		
+		
+		<li><defName>DrugDesire</defName><degree>1</degree><chance>70</chance></li>
+		<li><defName>DrugDesire</defName><degree>2</degree><chance>50</chance></li>
+		<li><defName>Nerves</defName><degree>-1</degree><chance>70</chance></li>
+		<li><defName>Nerves</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>Neurotic</defName><degree>1</degree><chance>70</chance></li>
+		<li><defName>Neurotic</defName><degree>2</degree><chance>50</chance></li>
+		<li><defName>PsychicSensitivity</defName><degree>-1</degree><chance>70</chance></li>
+		<li><defName>PsychicSensitivity</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>Beauty</defName><degree>-1</degree><chance>70</chance></li>
+		<li><defName>Beauty</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>NaturalMood</defName><degree>-1</degree><chance>70</chance></li>
+		<li><defName>NaturalMood</defName><degree>-2</degree><chance>50</chance></li>
+		
+	</forcedTraits>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>EngieBSQuote10</defName>
+    <title>Single u rate E</title>
+    <titleShort>EngieAi</titleShort>
+	<baseDescription>"A year spent in artificial intelligence is enough to make one believe in God." - Alan Perlis </baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>EngieBackstory</li>
+    </spawnCategories>
+	<skillGains>
+		<li><defName>Animals</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>2</amount></li>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Growing</defName><amount>2</amount></li>
+		<li><defName>Intellectual</defName><amount>-2</amount></li>
+	</skillGains>
+    <forcedTraits>
+	
+		<li><defName>DislikesMen</defName><chance>30</chance></li>
+		<li><defName>DislikesWomen</defName><chance>50</chance></li>
+	
+		<li><defName>Xenophobia</defName><degree>1</degree><chance>100</chance></li>
+		<li><defName>Prosthophile</defName><chance>100</chance></li>
+		
+		<li><defName>DrugDesire</defName><degree>-1</degree><chance>100</chance></li>
+		<li><defName>DrugDesire</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>Nerves</defName><degree>-1</degree><chance>100</chance></li>
+		<li><defName>Nerves</defName><degree>-2</degree><chance>50</chance></li>
+		<li><defName>PsychicSensitivity</defName><degree>1</degree><chance>100</chance></li>
+		<li><defName>PsychicSensitivity</defName><degree>2</degree><chance>50</chance></li>
+		<li><defName>NaturalMood</defName><degree>1</degree><chance>100</chance></li>
+		<li><defName>NaturalMood</defName><degree>2</degree><chance>50</chance></li>
+		
+	</forcedTraits>
+    </AlienRace.BackstoryDef>
+	
+</Defs>

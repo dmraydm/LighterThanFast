@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- T1 -->
+<!-- craft -->	
+	<!-- craft TailoringSpeed SmithingSpeed DrugProductionSpeed ButcheryMechanoidSpeed MechanoidOperationSuccessChance ButcheryMechanoidEfficiency-->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_craftRom</defName>
+		<label>romCraft1</label>
+		<stages><li>
+			<statOffsets>
+				<TailoringSpeed>.064</TailoringSpeed>
+				<SmithingSpeed>.064</SmithingSpeed>
+				
+				<MeleeHitChance>-0.064</MeleeHitChance>
+				<MeleeDodgeChance>-0.064</MeleeDodgeChance>
+				<PlantWorkSpeed>-0.064</PlantWorkSpeed>
+			</statOffsets>
+		</li></stages>
+		<spawnThingOnRemoved>LTF_EngieCraftRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- craft -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_craft2Rom</defName>
+		<label>romCraft2</label>
+		<stages><li>
+			
+			<statOffsets>
+				<TailoringSpeed>.128</TailoringSpeed>
+				<SmithingSpeed>.128</SmithingSpeed>
+				<DrugProductionSpeed>.064</DrugProductionSpeed>
+				<ButcheryMechanoidSpeed>.064</ButcheryMechanoidSpeed>
+				<MechanoidOperationSuccessChance>.064</MechanoidOperationSuccessChance>
+				<ButcheryMechanoidEfficiency>.064</ButcheryMechanoidEfficiency>
+				
+				<MeleeHitChance>-0.128</MeleeHitChance>
+				<MeleeDodgeChance>-0.128</MeleeDodgeChance>
+				<PlantWorkSpeed>-0.128</PlantWorkSpeed>
+			</statOffsets>
+		</li></stages>
+		<!--<tale>TaleDefName</tale>-->
+		<spawnThingOnRemoved>LTF_EngieCraft2Rom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T3 -->
+<!-- craft -->
+	<HediffDef ParentName="Hediff_LTF_artificialT4">
+		<defName>Hediff_LTF_craft3Rom</defName>
+		<label>romCraft3</label>
+		<stages><li>
+
+			<statOffsets>
+				<TailoringSpeed>.256</TailoringSpeed>
+				<SmithingSpeed>.256</SmithingSpeed>
+				<DrugProductionSpeed>.128</DrugProductionSpeed>
+				<ButcheryMechanoidSpeed>.128</ButcheryMechanoidSpeed>
+				<MechanoidOperationSuccessChance>.128</MechanoidOperationSuccessChance>
+				<ButcheryMechanoidEfficiency>.128</ButcheryMechanoidEfficiency>
+				
+				<MeleeHitChance>-0.256</MeleeHitChance>
+				<PlantWorkSpeed>-0.256</PlantWorkSpeed>
+			</statOffsets>
+		</li></stages>
+		<!--<tale>TaleDefName</tale>-->
+		<spawnThingOnRemoved>LTF_EngieCraft3Rom</spawnThingOnRemoved>
+	</HediffDef>
+</Defs>

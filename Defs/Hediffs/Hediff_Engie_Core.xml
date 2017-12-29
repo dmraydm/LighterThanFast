@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- dual core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT1">
+		<defName>Hediff_LTF_02Core</defName>
+		<label>core02Dual</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.008</WorkSpeedGlobal>
+					<GlobalLearningFactor>.008</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.004</MentalBreakThreshold>
+					<PsychicSensitivity>.008</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-1</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-1</ComfyTemperatureMax>
+				</statOffsets>
+				<painFactor>1.04</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie02Core</spawnThingOnRemoved>
+	</HediffDef>
+<!-- quad core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_04Core</defName>
+		<label>core04Quad</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.016</WorkSpeedGlobal>
+					<GlobalLearningFactor>.016</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.008</MentalBreakThreshold>
+					<PsychicSensitivity>.016</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-2</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-2</ComfyTemperatureMax>
+				</statOffsets>
+				<painFactor>1.08</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie04Core</spawnThingOnRemoved>
+	</HediffDef>
+<!-- octo core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_08Core</defName>
+		<label>core08Octo</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.032</WorkSpeedGlobal>
+					<GlobalLearningFactor>.032</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.016</MentalBreakThreshold>
+					<PsychicSensitivity>.032</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-4</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-4</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<painFactor>1.16</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie08Core</spawnThingOnRemoved>
+	</HediffDef>
+<!-- hexa core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT4">
+		<defName>Hediff_LTF_16Core</defName>
+		<label>core16Hexa</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.064</WorkSpeedGlobal>
+					<GlobalLearningFactor>.064</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.032</MentalBreakThreshold>
+					<PsychicSensitivity>.064</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-8</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-8</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<painFactor>1.32</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie16Core</spawnThingOnRemoved>
+	</HediffDef>
+<!-- 32 core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT5">
+		<defName>Hediff_LTF_32Core</defName>
+		<label>core32</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.128</WorkSpeedGlobal>
+					<GlobalLearningFactor>0.128</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.064</MentalBreakThreshold>
+					<PsychicSensitivity>.128</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-16</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-16</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<painFactor>1.64</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie32Core</spawnThingOnRemoved>
+	</HediffDef>
+<!-- 64 core -->
+	<HediffDef ParentName="Hediff_LTF_artificialT6">
+		<defName>Hediff_LTF_64Core</defName>
+		<label>core64</label>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>.256</WorkSpeedGlobal>
+					<GlobalLearningFactor>.256</GlobalLearningFactor>
+					
+					<MentalBreakThreshold>.128</MentalBreakThreshold>
+					<PsychicSensitivity>.256</PsychicSensitivity>
+					
+					<ComfyTemperatureMin>-32</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-32</ComfyTemperatureMax>
+				</statOffsets>
+				
+				<painFactor>2.28</painFactor>
+			</li>
+		</stages>
+		
+		<spawnThingOnRemoved>LTF_Engie64Core</spawnThingOnRemoved>
+	</HediffDef>
+
+</Defs>

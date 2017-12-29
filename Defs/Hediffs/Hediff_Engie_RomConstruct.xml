@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+construct	1;2;3
+craft		1;2;3
+grow		1;2
+taming		1;2
+-->
+
+<!-- roms pourraient être des consumables àla neurotrainer qui pètent les stats -->
+<!-- T1 -->
+<!-- construct -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_constructRom</defName>
+		<label>romCon1</label>
+		<stages><li>
+			<statOffsets>
+				<ConstructionSpeed>.064</ConstructionSpeed>
+				<ConstructSuccessChance>.064</ConstructSuccessChance>
+				
+				<MedicalTendSpeed>-0.064</MedicalTendSpeed>
+				<MedicalTendQuality>-0.064</MedicalTendQuality>
+				<AimingDelayFactor>0.064</AimingDelayFactor>
+			</statOffsets>
+		</li></stages>
+		<!--<tale>TaleDefName</tale>-->
+		<spawnThingOnRemoved>LTF_EngieConstructRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- construct -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_construct2Rom</defName>
+		<label>romCon2</label>
+		<stages><li>
+			<statOffsets>
+				<ConstructionSpeed>.128</ConstructionSpeed>
+				<ConstructSuccessChance>.128</ConstructSuccessChance>
+				<FixBrokenDownBuildingSuccessChance>.064</FixBrokenDownBuildingSuccessChance>
+				<SmoothingSpeed>.064</SmoothingSpeed>
+				
+				<MedicalTendSpeed>-0.128</MedicalTendSpeed>
+				<MedicalTendQuality>-0.128</MedicalTendQuality>
+				<AimingDelayFactor>0.128</AimingDelayFactor>
+			</statOffsets>
+		</li></stages>
+		<!--<tale>TaleDefName</tale>-->
+		<spawnThingOnRemoved>LTF_EngieConstruct2Rom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T3 -->
+<!-- construct -->
+	<HediffDef ParentName="Hediff_LTF_artificialT4">
+		<defName>Hediff_LTF_construct3Rom</defName>
+		<label>romCon3</label>
+		<stages><li>
+
+			<statOffsets>
+				<ConstructionSpeed>.256</ConstructionSpeed>
+				<ConstructSuccessChance>.256</ConstructSuccessChance>
+				<FixBrokenDownBuildingSuccessChance>.128</FixBrokenDownBuildingSuccessChance>
+				<SmoothingSpeed>.128</SmoothingSpeed>
+				
+				<MedicalTendSpeed>-0.256</MedicalTendSpeed>
+				<MedicalTendQuality>-0.256</MedicalTendQuality>
+				<AimingDelayFactor>0.256</AimingDelayFactor>
+			</statOffsets>
+		</li></stages>
+		<!--<tale>TaleDefName</tale>-->
+		<spawnThingOnRemoved>LTF_EngieConstruct3Rom</spawnThingOnRemoved>
+	</HediffDef>
+
+</Defs>

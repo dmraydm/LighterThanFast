@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+  <HediffDef Name="LTF_HybridPartsBase" Abstract="True" ParentName="ImplantHediffBase">
+	<hediffClass>Hediff_Implant</hediffClass>
+-->
+  <!-- Implants -->
+  <!--
+	<HediffDef Name="LTF_HybridPartsBase" Abstract="True" ParentName="AddedBodyPartBase">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(27, 232, 27)</defaultLabelColor>
+		<isBad>false</isBad>
+		<addedPartProps>
+			 <isBionic>true</isBionic>
+			 <isSolid>true</isSolid>
+		</addedPartProps>
+	</HediffDef>
+	-->
+	<HediffDef Name="Hediff_LTF_PartBase" Abstract="True">
+		<hediffClass>Hediff_Implant</hediffClass>
+		<defaultLabelColor>(27, 232, 27)</defaultLabelColor>
+  		<isBad>false</isBad>
+	</HediffDef>
+	
+<!-- LTF_Ovipositor -->
+	<HediffDef ParentName="Hediff_LTF_PartBase">
+		<defName>Hediff_LTF_Ovipositor</defName>
+		<label>ovipositor</label>
+		<labelNoun>a Zoltan ovipositor</labelNoun>
+		
+		<comps>
+			<li Class="NewHatcher.HediffCompProperties_Hatcher">
+				<hatcherDaystoHatch>.35</hatcherDaystoHatch>
+				<thingToHatch>LTF_ZoltanEgg</thingToHatch>
+			</li>
+		</comps>
+
+		<spawnThingOnRemoved>LTF_Ovipositor</spawnThingOnRemoved>
+
+	</HediffDef>
+
+</Defs>

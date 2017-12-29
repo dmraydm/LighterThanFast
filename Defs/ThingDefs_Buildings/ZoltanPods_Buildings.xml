@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- pod electrique Zoltan -->
+    <ThingDef ParentName="BuildingNaturalBase">
+    <defName>LTF_ZoltanPod</defName>
+    <label>Zoltan energy pod</label>
+    <description>A bioluminescent pod produced by Zoltans. Glows in a soft light, emits power, then dies.</description>
+    <thingClass>Building</thingClass>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+  
+    <selectable>true</selectable>
+    
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <rotatable>false</rotatable>
+    
+    <statBases>
+		<MaxHitPoints>20</MaxHitPoints>
+		<Mass>4</Mass>
+		<WorkToBuild>170</WorkToBuild>
+		<Flammability>1.5</Flammability>
+    </statBases>
+
+	<size>(1,1)</size>
+<!--    <designationCategory>Production</designationCategory>-->
+    <passability>Standable</passability>
+	<!--<fillPercent>1.0</fillPercent>-->
+	<fillPercent>0.20</fillPercent>
+	
+	<!--<tickerType>Normal</tickerType>-->
+	<tickerType>Rare</tickerType>
+    <comps>
+		<li Class="CompProperties_Glower">
+			<glowRadius>2</glowRadius>
+			<glowColor>(50,20,250,0)</glowColor>
+		</li>
+		<li Class="CompProperties_Lifespan">
+			<lifespanTicks>6000</lifespanTicks>
+		</li>
+		<li Class="CompProperties_Battery">
+			<storedEnergyMax>300</storedEnergyMax>
+			<efficiency>1</efficiency>
+			<startElectricalFires>true</startElectricalFires>
+			 <shortCircuitInRain>true</shortCircuitInRain>
+			<transmitsPower>true</transmitsPower>
+		</li>
+		
+		<li Class="CompProperties_Flickable" />
+		
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerPlant</compClass>
+			<basePowerConsumption>-120</basePowerConsumption>
+			<transmitsPower>true</transmitsPower>
+		</li>
+		
+		<!--
+		<li Class="CompProperties_Refuelable">
+			<fuelConsumptionRate>0</fuelConsumptionRate>
+			<fuelCapacity>1000</fuelCapacity>
+			<fuelFilter>
+				<thingDefs><li>Chemfuel</li></thingDefs>
+			</fuelFilter>
+		</li>
+		-->
+<!--  
+	  storedEnergyMax 	CompPowerBattery: How much energy it can hold. 	Float value over 0
+efficiency 	CompPowerBattery: How efficient the battery is. 	Float value from 0.0 to 1.0
+transmitsPower 	CompPowerTrader/Transmitter: Whether it transmits electricity or not. 	Boolean
+basePowerConsumption 	CompPowerTrader: How much power it requires to work. 	Float value
+startElectricalFires 	CompPowerTransmitter?: Whether it will trigger short circuit incident or not? 	Boolean
+shortCircuitInRain 	CompPowerTrader?: Whether it will trigger short circuit incident when raining or not? 	Boolean
+powerToggleable 	CompPowerTrader: Whether it can be turned on and off. 
+-->
+    </comps>
+	
+    <graphicData>
+		<drawSize>.5</drawSize>
+		<texPath>Things/Building/Natural/GlowPod</texPath>
+		<!--<color>(20,50,200,0.8)</color>-->
+		<color>RGBA(0.1,0.3,0.7,0.7)</color>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shadowData>
+			<volume>(0.3, 0.6, 0.3)</volume>
+			<offset>(0,0,-0.1)</offset>
+		</shadowData>
+		<damageData>
+			<rect>(0.2,0.2,0.6,0.6)</rect>
+		</damageData>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

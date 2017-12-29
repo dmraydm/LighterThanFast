@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Zoltan Implants -->
+	<!--
+	<HediffDef Name="HybridPartsBase" Abstract="True" ParentName="AddedBodyPartBase">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(232, 157, 27)</defaultLabelColor>
+		<isBad>false</isBad>
+		<addedPartProps>
+		<isBionic>true</isBionic>
+		<isSolid>true</isSolid>
+		</addedPartProps>
+	</HediffDef>
+	-->
+
+	<!--<HediffDef ParentName="HybridPartsBase">-->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(232, 157, 27)</defaultLabelColor>
+		<isBad>false</isBad>
+		<defName>Ovipositor</defName>
+		<label>ovipositor</label>
+		<addedPartProps>
+			<isBionic>true</isBionic>
+			<isSolid>true</isSolid>
+		</addedPartProps>
+		<comps>
+			<li Class="NewHatcher.HediffCompProperties_Hatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>Ovipositor</spawnThingOnRemoved>
+	</HediffDef>
+
+</Defs>

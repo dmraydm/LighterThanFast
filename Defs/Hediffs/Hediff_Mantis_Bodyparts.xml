@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef Name="Hediff_LTF_SteelClaws" ParentName="AddedBodyPartBase" Abstract="true">
+
+		<stages>
+		<li>
+		<capMods>
+		<li>
+		  <capacity>Manipulation</capacity>
+		  <offset>-0.05</offset>
+		</li>
+		</capMods>
+		</li>
+		</stages>
+		<!-- MeleeDPS -->
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<verbs>
+					<li>
+						<verbClass>Verb_MeleeAttack</verbClass>
+						<defaultCooldownTime>1.4</defaultCooldownTime>
+						<meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+						<meleeDamageDef>Scratch</meleeDamageDef>
+					</li>
+				</verbs>  
+			</li>
+		</comps>
+		
+		<addedPartProps>
+			<isBionic>true</isBionic>
+			<isSolid>true</isSolid>
+			<partEfficiency>.85</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+
+	<!-- Mantis Claws -->
+	<HediffDef ParentName="Hediff_LTF_SteelClaws">
+		<defName>Hediff_LTF_LeftSteelClaws</defName>
+		<label>left steel claws</label>
+		
+		<spawnThingOnRemoved>LTF_LeftSteelClaws</spawnThingOnRemoved>
+	</HediffDef>
+
+	<!-- Mantis Claws -->
+	<HediffDef ParentName="Hediff_LTF_SteelClaws">
+		<defName>Hediff_LTF_RightSteelClaws</defName>
+		<label>right steel claws</label>
+		
+		<spawnThingOnRemoved>LTF_RightSteelClaws</spawnThingOnRemoved>
+	</HediffDef>
+	
+</Defs>

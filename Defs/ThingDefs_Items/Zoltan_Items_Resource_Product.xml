@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ZoltanEgg -->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>LTF_ZoltanEgg</defName>
+    <label>Zoltan egg</label>
+    <description>wtf zoltan</description>
+    <graphicData>
+		<drawSize>.7</drawSize>
+		<texPath>Things/Item/Resource/AnimalProductRaw/InsectJelly</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<!--<color>(20,50,200,0.8)</color>-->
+		<color>RGBA(0.2,0.5,0.8,0.7)</color>
+	</graphicData>
+
+	<soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+
+    <stackLimit>1</stackLimit>
+
+    <statBases>
+	<MaxHitPoints>60</MaxHitPoints>
+		<Mass>2</Mass>
+		<Flammability>1.0</Flammability>
+		<MarketValue>1.0</MarketValue>
+    </statBases>
+	<!--<fillPercent>1.0</fillPercent>-->
+	<fillPercent>0.20</fillPercent>
+	
+	<!--<tickerType>Normal</tickerType>-->
+	<tickerType>Rare</tickerType>
+
+	<comps>
+	<li Class="NewHatcher.CompProperties_LTF_Spawner">
+        <thingToSpawn>LTF_ZoltanPod</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>
+			<min>3000</min>
+			<max>7000</max>
+        </spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>false</spawnForbidden>
+		<spawnVerb>evacuation</spawnVerb>
+	</li>
+
+	<li Class="CompProperties_Lifespan">
+		<lifespanTicks>22000</lifespanTicks>
+	</li>
+	</comps>
+	
+	<thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+	
+	</ThingDef>
+</Defs>

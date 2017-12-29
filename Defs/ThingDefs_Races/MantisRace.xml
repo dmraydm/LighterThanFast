@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef Name="BaseMantisPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Combat</li>
+    </inspectorTabs>
+    <comps>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseMantisPawn">
+    <defName>Alien_Mantis</defName>
+    <label>Mantis</label>
+    
+    <description>The violent and hostile Mantis appear, to Humans anyway, to resemble man-sized Praying Mantises, although they are much more aggressive than their namesakes. Whereas praying mantises kill prey merely to survive, the much larger and more intelligent Mantis race kill remorselessly to suit their own personal agendas- usually without survival as a concern, making for a pitiless and brutal insectoid warrior species.
+	
+While humans and most other species have manufactured handheld weaponry to utilize in combat, the Mantis usually default to their agility, and sharpened exoskeletal appendages to tear through their enemies, and their skill as warriors goes almost unchallenged in 1v1 combat even against the rock species. The Mantis also possess extremely acidic saliva which can burn through flesh and melt most metal alloys.
+
+While Mantis excel at combat, especially personal combat, they are the least adept of all the races at technical repairs. They have overcome this problem by frequently taking Engi slaves. Engi slaves can be found on a majority of their bases and ships. Though some individual Mantises have been known to work with the Galactic Federation, the race as a whole tends to be deceptive, opportunistic and untrustworthy, and can commonly be found piloting their signature style of well armed spacecraft, hunting down weaker enemies in pursuit of their belongings. Human children are told tales of their red ships, and of the Mantis invasion of Earth.
+	
+- 115% speed
+- 105% melee evasion
+- 90% construction
+- Claws
+	
+	</description>
+        
+    <statBases>
+		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>30</LeatherAmount>
+		<MarketValue>1000</MarketValue>
+		<MoveSpeed>5.3</MoveSpeed>
+		<Flammability>1.0</Flammability>
+		
+		<CarryingCapacity>75</CarryingCapacity>
+		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<ResearchSpeed>1.0</ResearchSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		<SocialImpact>1.0</SocialImpact>
+		<PlantWorkSpeed>1.0</PlantWorkSpeed>
+		<PlantHarvestYield>1.0</PlantHarvestYield>
+		<ConstructionSpeed>0.9</ConstructionSpeed>
+		
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		<MeleeDodgeChance>1.05</MeleeDodgeChance>
+    </statBases>
+
+	<verbs>
+			<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.55</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.55</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+			<meleeDamageDef>Scratch</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+			<meleeDamageDef>Scratch</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+	</verbs>
+	<!--
+	<verbs>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.6</defaultCooldownTime>
+			<meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+			<meleeDamageDef>Bite</meleeDamageDef>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<surpriseAttack>
+			<extraMeleeDamages>
+				<li>
+				<def>Stun</def>
+				<amount>5</amount>
+				</li>
+			</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+	-->
+	<alienRace>
+
+	<generalSettings>
+		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<alienPartGenerator>
+			<!-- -->
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<li>Thin</li>
+			</alienbodytypes>
+			
+			<bodyAddons>
+                <!-- Left claw-->
+				<li>
+					<path>Mantis/Claws/Left/Left</path>
+					<bodyPart>BodyPart_LTF_LeftClaws</bodyPart>
+					<inFrontOfBody>true</inFrontOfBody>
+					<angle>5</angle>
+					<useSkinColor>true</useSkinColor>
+					<offsets>
+						<!-- Left front -->
+						<front>
+							<bodyTypes>
+								<!--<Male>(-0.33,.1)</Male>-->
+								<Male>(-0.33,.1)</Male>
+								<Female>(-0.36,.1)</Female>
+								<Thin>(-0.33,.1)</Thin>
+								<Hulk>(-0.33,.1)</Hulk>
+							</bodyTypes>
+						</front>
+						<!-- Left side -->
+						<side>
+							<bodyTypes>
+								<!--<Male>(-0.65,.1)</Male>-->
+								<Male>(-0.65,.1)</Male>
+								<Female>(-0.65,.1)</Female>
+								<Thin>(-0.65,.1)</Thin>
+								<Hulk>(-0.65,.1)</Hulk>
+							</bodyTypes>
+						</side>
+					</offsets>
+					<backstoryGraphics>
+						<MantisChildBS02>Mantis/SyntClaws/Left/Left</MantisChildBS02>
+					</backstoryGraphics>
+					<hediffGraphics>
+						<Hediff_LTF_LeftSteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftSteelClaws>
+					</hediffGraphics>
+				</li>
+				<!-- Right claw-->
+                <li>
+					<path>Mantis/Claws/Right/Right</path>
+					<bodyPart>BodyPart_LTF_RightClaws</bodyPart>
+					<inFrontOfBody>true</inFrontOfBody>
+					<useSkinColor>true</useSkinColor>
+					<offsets>
+						<!-- Right side -->
+						<front>
+							<bodyTypes>
+								<!--<Male>(-0.55,.1)</Male>-->
+								<Male>(-0.55,.1)</Male>
+								<Female>(-0.58,.1)</Female>
+								<Thin>(-0.55,.1)</Thin>
+								<Hulk>(-0.55,.1)</Hulk>
+							</bodyTypes>
+						</front>
+
+					</offsets>
+					<backstoryGraphics>
+						<MantisChildBS02>Mantis/SyntClaws/Right/Right</MantisChildBS02>
+					</backstoryGraphics>
+					<hediffGraphics>
+						<Hediff_LTF_RightSteelClaws>Mantis/SyntClaws/Right/Right</Hediff_LTF_RightSteelClaws>
+					</hediffGraphics>
+				</li>				
+            </bodyAddons>
+			<!-- -->
+			<useGenderedHeads>true</useGenderedHeads>
+			<aliencrowntypes>
+				<li>Normal</li>
+			</aliencrowntypes>
+			
+			<!--<useSkincolorForHair>true</useSkincolorForHair>-->
+			<!--<customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize>-->
+			<alienskincolorgen Class="ColorGenerator_Options">
+				<options>
+				<!-- dark -->
+					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+				<!-- green -->
+					<li><weight>16</weight><only>RGBA(0.9,1,0.9,1)</only></li>
+					<li><weight>10</weight><only>RGBA(0.8,1,0.8,1)</only></li>
+					<li><weight>6</weight><only>RGBA(0.7,1,0.7,1)</only></li>
+					<li><weight>4</weight><only>RGBA(0.6,1,0.6,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.5,1,0.5,1)</only></li>
+				<!-- blue -->
+					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
+					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
+				<!-- red -->
+					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
+					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
+					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+				</options>
+			</alienskincolorgen>
+			
+		</alienPartGenerator>
+<!--		
+		<factionRelations>
+			<li>
+			<goodwill>
+			   <min>-100</min>
+			   <max>30</max>
+			</goodwill>
+			</li>
+		</factionRelations>	
+		-->
+		<!-- <chemicalSettings>.8</chemicalSettings> -->
+		<maleGenderProbability>0.5</maleGenderProbability>    
+		<forcedRaceTraitEntries>
+			<!--<li><defName>Brawler</defName><chance>50</chance></li>-->
+
+			<li><defName>Greedy</defName><chance>10</chance></li>
+			<li><defName>Jealous</defName><chance>10</chance></li>
+			<li><defName>Bloodlust</defName><chance>10</chance></li>
+			<li><defName>Abrasive</defName><chance>10</chance></li>
+			<li><defName>Cannibal</defName><chance>10</chance></li>
+			<li><defName>Psychopath</defName><chance>10</chance></li>
+
+			<li><defName>SpeedOffset</defName><degree>1</degree><chance>50</chance></li>
+			<li><defName>SpeedOffset</defName><degree>2</degree><chance>30</chance></li>
+			
+		</forcedRaceTraitEntries>
+	</generalSettings>    
+
+	<graphicPaths>
+		<li>
+			<body>Mantis/Body/</body>
+			<head>Mantis/Head/</head>
+		</li>
+	</graphicPaths>
+
+	<hairSettings>
+		<hasHair>true</hasHair>
+		<hairTags>
+		<li>empty</li>
+		</hairTags>
+	</hairSettings>
+
+	<relationSettings>
+	</relationSettings>
+
+	<pawnKindSettings>
+		<alienslavekinds>
+			<li>
+				<kindDefs>
+					<li>MantisSlave</li>
+				</kindDefs>
+				<chance>40.0</chance>
+			</li>
+		</alienslavekinds>
+		<alienrefugeekinds>
+			<li>
+				<kindDefs>
+					<li>MantisRefugee</li>
+				</kindDefs>
+				<chance>40.0</chance>
+			</li>
+		</alienrefugeekinds>
+		<startingColonists>
+			<li>
+			<pawnKindEntries>
+				<li>
+				<kindDefs>
+					<li>MantisHunter</li>
+					<li>MantisHistGuard</li>
+					<li>MantisShadowscale</li>
+					<li>MantisColonist</li>
+				</kindDefs>
+				<chance>10.0</chance>
+				</li>
+			</pawnKindEntries>
+				<factionDefs>
+					<li>MantisPlayerColony</li>
+					<li>PlayerTribe</li>
+					<!-- <li>KestrelPlayerColony</li> -->
+				</factionDefs>
+			</li>
+		</startingColonists>
+		<alienwandererkinds>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>MantisHunter</li>
+							<li>MantisHistGuard</li>
+							<li>MantisColonist</li>
+							<li>MantisShadowscale</li>
+							<li>MantisHistSpeaker</li>
+							<li>MantisFighter</li>
+						</kindDefs>
+						<chance>50.0</chance>
+					</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>MantisPlayerColony</li> 
+				</factionDefs>
+			</li>
+		</alienwandererkinds>
+	</pawnKindSettings>
+ 
+	<thoughtSettings>
+		<cannotReceiveThoughts></cannotReceiveThoughts>
+		<ateThoughtSpecific></ateThoughtSpecific>
+		<replacerList></replacerList>
+	</thoughtSettings>
+
+	<raceRestriction>
+	</raceRestriction>
+
+</alienRace>
+    
+<race>
+	<thinkTreeMain>Humanlike</thinkTreeMain>
+	<nameGenerator>NamerPersonMantis</nameGenerator>
+	<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+	<intelligence>Humanlike</intelligence>
+	<makesFootprints>true</makesFootprints>
+	<lifeExpectancy>80</lifeExpectancy>
+	<leatherColor>(128,128,128)</leatherColor>
+	<bloodDef></bloodDef>
+	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+	<leatherInsulation>0.70</leatherInsulation>
+	<leatherLabel>Mantis leather</leatherLabel>
+	<leatherMarketValueFactor>3</leatherMarketValueFactor>
+	<nameCategory>HumanStandard</nameCategory>
+	<body>Mantis</body>
+	<baseBodySize>1.0</baseBodySize>
+	<baseHealthScale>1.0</baseHealthScale>
+	<baseHungerRate>1.0</baseHungerRate>
+	<!-- carnivores ?-->
+	<foodType>OmnivoreHuman</foodType>
+	<!-- nuzzle ?
+    <nuzzleMtbHours>3</nuzzleMtbHours>-->
+
+	<gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+		<points>
+		<li>(0.5, 0)</li>
+		<li>(1, 1)</li>
+		<li>(1.01, 0.02)</li>
+		<li>(3.5, 0)</li>
+		</points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+		<!-- TODO -->
+      </hediffGiverSets>
+</race>
+    <recipes>
+		<li>LTF_InstallLeftSteelClaws</li>
+		<li>LTF_InstallRightSteelClaws</li>	
+<!-- -->
+		<li>InstallPowerClaw</li>
+		<li>InstallScytherBlade</li>
+		<li>InstallBionicEye</li>
+		<li>InstallBionicArm</li>
+		<li>InstallBionicLeg</li>
+		<li>InstallSimpleProstheticArm</li>
+		<li>InstallSimpleProstheticLeg</li>
+		<li>InstallPegLeg</li>
+		<li>InstallDenture</li>
+		<li>InstallJoywire</li>
+		<li>InstallPainstopper</li>
+		<li>InstallNaturalHeart</li>
+		<li>InstallNaturalLung</li>
+		<li>InstallNaturalKidney</li>
+		<li>InstallNaturalLiver</li>
+		<li>ExciseCarcinoma</li>
+		<li>RemoveBodyPart</li>
+		<li>Euthanize</li>
+		<li>Anesthetize</li>
+    </recipes>
+    
+</AlienRace.ThingDef_AlienRace>
+</Defs>

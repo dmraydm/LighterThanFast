@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	
+<!-- T1 -->
+<!-- socialing -->
+<!-- Melee HitChance ; foodpoison -->
+	<HediffDef ParentName="Hediff_LTF_artificialT2">
+		<defName>Hediff_LTF_socialRom</defName>
+		<label>romSoc1</label>
+		
+		<stages><li>
+			<statOffsets>
+				<SocialImpact>0.064</SocialImpact>
+				<RecruitPrisonerChance>0.064</RecruitPrisonerChance>
+								
+				<FoodPoisonChance>0.064</FoodPoisonChance>
+				<MeleeHitChance>-0.064</MeleeHitChance>
+				<MeleeDodgeChance>-0.064</MeleeDodgeChance>
+			</statOffsets>
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieSocialRom</spawnThingOnRemoved>
+	</HediffDef>
+<!-- T2 -->
+<!-- socialing -->
+	<HediffDef ParentName="Hediff_LTF_artificialT3">
+		<defName>Hediff_LTF_social2Rom</defName>
+		<label>romSoc2</label>
+		
+		<stages><li>
+			<statOffsets>
+				<SocialImpact>.128</SocialImpact>
+				<RecruitPrisonerChance>.128</RecruitPrisonerChance>
+				<TradePriceImprovement>.064</TradePriceImprovement>
+				<DiplomacyPower>.064</DiplomacyPower>
+				
+				<FoodPoisonChance>.128</FoodPoisonChance>
+				<MeleeHitChance>-0.128</MeleeHitChance>
+				<MeleeDodgeChance>-0.128</MeleeDodgeChance>
+			</statOffsets>
+			
+		</li></stages>
+		
+		<spawnThingOnRemoved>LTF_EngieSocial2Rom</spawnThingOnRemoved>
+	</HediffDef>	
+	
+
+<!-- medical  MedicalTendSpeed MedicalTendQuality MedicalOperationSpeed MedicalSurgerySuccessChance-->
+<!-- MiningSpeed MiningYield -->
+<!-- TradePriceImprovement DiplomacyPower SocialImpact RecruitPrisonerChance -->
+
+</Defs>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>LTF_YarnMaker</defName>
+    <label>Thread spinning tool</label>
+    <description>A place to shape yarns from manufactured or raw ressources.</description>
+	
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+		<texPath>Things/Building/Slug/YarnMaker</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1,1)</drawSize>
+		<shadowData>
+			<volume>(0.3, 0.6, 0.3)</volume>
+		</shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+	
+    <statBases>
+		<WorkToBuild>2000</WorkToBuild>
+		<Mass>50</Mass>
+		<MaxHitPoints>70</MaxHitPoints>
+		<Flammability>1.2</Flammability>
+		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+		<Cleanliness>-2</Cleanliness>
+    </statBases>
+	<minifiedDef>MinifiedFurniture</minifiedDef>
+	
+    <costList>
+		<WoodLog>5</WoodLog>
+		<Steel>5</Steel>
+		<LTF_SlugDew>5</LTF_SlugDew>
+    </costList>
+
+	<costStuffCount>50</costStuffCount>
+    <stuffCategories>
+		<li>Metallic</li>
+		<li>Woody</li>
+    </stuffCategories>
+	<surfaceType>Item</surfaceType>
+	<researchPrerequisites><li>LTF_Research_Slug</li></researchPrerequisites>
+	
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+	<pathCost>50</pathCost>
+	<fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+	
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+
+    <inspectorTabs>
+		<li>ITab_Bills</li>
+    </inspectorTabs>
+
+	<comps>
+		<li Class="CompProperties_AffectedByFacilities">
+			<linkableFacilities>
+				<li>ToolCabinet</li>
+			</linkableFacilities>
+		</li>
+	</comps>
+	
+	<placeWorkers>
+		<li>PlaceWorker_ShowFacilitiesConnections</li>
+	</placeWorkers>
+</ThingDef>
+  
+<!--
+<ThingDef ParentName="BuildingBase">
+    <defName>LTF_SlugFermentingBarrel</defName>
+    <label>slug fermenting barrel</label>
+	<description>A barrel for fermenting slug dew into liquor.</description>
+    <thingClass>Building_FermentingBarrel</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <color>(30,120,50)</color>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+	<statBases>
+		<WorkToBuild>600</WorkToBuild>
+		<Mass>10</Mass>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+	</statBases>
+    
+    <costList>
+		<Steel>5</Steel>
+		<WoodLog>15</WoodLog>
+		<LTF_SlugDew>15</LTF_SlugDew>
+    </costList>
+	<comps>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>-1</minSafeTemperature>
+			<maxSafeTemperature>32</maxSafeTemperature>
+			<progressPerDegreePerTick>0.001</progressPerDegreePerTick>
+		</li>
+	</comps>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+	
+    <researchPrerequisites><li>LTF_Research_Slug</li></researchPrerequisites>
+  </ThingDef>
+  -->
+  </Defs>
