@@ -6,25 +6,53 @@
     <defName>NamerFactionEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Apidaetum [color] [flower]</li>
-        <li>name->The [positive] Hive of the [color] [terrainfeature]</li>
-        <li>name->[flower] Engie [politicalunion]</li>
-        <li>name->Apidaetum [color] [terrainfeature]</li>
-        <li>name->Engie [politicalunion] of [positive]</li>
+        <li>name->DB [it] cluster [version]</li>
+        <li>name->The [scifi] [it] datacenter [version] </li>
+        <li>name->Meta[moreit] [version] [politicalunion]</li>
+        <li>name->Crypto[it] [version] </li>
+        <li>name->[moreit] [politicalunion] of [positive] [version]</li>
+		<li>name->[negative] [games] of [negative] [version]</li>
+		<li>name->[positive] [politicalunion] of [negative] [version]</li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
         </li>
+		
         <li Class="Rule_File">
           <keyword>positive</keyword>
           <path>Words/Nouns/Concepts_Positive</path>
         </li>
-        <li Class="Rule_File">
-          <keyword>flower</keyword>
-          <path>EngieNames/Flower</path>
+		
+		<li Class="Rule_File">
+          <keyword>version</keyword>
+          <path>EngieNames/Version</path>
         </li>
+		
+        <li Class="Rule_File">
+          <keyword>moreit</keyword>
+          <path>EngieNames/MoreIt</path>
+        </li>
+		
+        <li Class="Rule_File">
+          <keyword>scifi</keyword>
+          <path>EngieNames/Scifi</path>
+        </li>
+		
+        <li Class="Rule_File">
+          <keyword>games</keyword>
+          <path>Words/Nouns/Games</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		
+        <li Class="Rule_File">
+          <keyword>it</keyword>
+          <path>EngieNames/It</path>
+		</li>
       </rulesRaw>
     </rulePack>
   </RulePackDef>
@@ -33,24 +61,29 @@
     <defName>NamerBaseEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [terrainfeature] Hive</li>
-        <li>name->[flower] [terrainfeature] Hive</li>
-        <li>name->[flower] [positive] Hive</li>
-        <li>name->[color] [positive] Hive</li>
-        <li>name->[terrainfeature] [positive] Hive</li>
+        <li>name->[moreit] [version] datacenter</li>
+        <li>name->[scifi] retro[moreit] HA cluster</li>
+        <li>name->[scifi] [it]nextGen parts</li>
+        <li>name->[scifi] [it] [version] series</li>
+        <li>name->[moreit] post[version] quantic dream</li>
       </rulesStrings>
-      <rulesRaw>
-        <li Class="Rule_File">
-          <keyword>terrainfeature</keyword>
-          <path>Words/Nouns/TerrainFeatures</path>
+	  
+	  <rulesRaw>
+		<li Class="Rule_File">
+          <keyword>version</keyword>
+          <path>EngieNames/Version</path>
         </li>
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>moreit</keyword>
+          <path>EngieNames/MoreIt</path>
         </li>
         <li Class="Rule_File">
-          <keyword>flower</keyword>
-          <path>EngieNames/Flower</path>
+          <keyword>scifi</keyword>
+          <path>EngieNames/Scifi</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>it</keyword>
+          <path>EngieNames/It</path>
         </li>
       </rulesRaw>
     </rulePack>

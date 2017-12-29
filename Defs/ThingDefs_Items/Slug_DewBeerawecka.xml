@@ -9,7 +9,8 @@
 		<drawSize>1</drawSize>
 		<texPath>Things/Item/SlugBeerawecka</texPath>
 		<graphicClass>Graphic_StackCount</graphicClass>
-		<color>(230, 204, 255)</color>
+		<color>(.9, .8, 1, .8)</color>
+		<!-- <color>(230, 204, 255)</color> -->
     </graphicData>
 	
 	<soundInteract>Interact_BeatFire</soundInteract>

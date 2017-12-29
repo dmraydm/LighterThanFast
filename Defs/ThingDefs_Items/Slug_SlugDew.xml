@@ -8,7 +8,8 @@
     <graphicData>
       <texPath>Things/Item/SlugDew</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <color>(230, 204, 255)</color>
+	  <!-- <color>(230, 204, 255)</color> -->
+	  <color>(.9, .8, 1, .6)</color>
     </graphicData>
 	
     <soundInteract>Interact_BeatFire</soundInteract>
@@ -37,7 +38,8 @@
 		</categories>
 		<!-- <commonality>0.01</commonality> -->
 		
-		<color>(230, 204, 255)</color>
+		<!-- <color>(230, 204, 255)</color> -->
+		<color>(.9, .8, 1, .7)</color>
 		<constructEffect>ConstructWood</constructEffect>
 		<soundImpactStuff>BulletImpactWood</soundImpactStuff>
 		<statOffsets>

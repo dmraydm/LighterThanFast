@@ -6,24 +6,28 @@
     <defName>NamerFactionRockmanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Apidaetum [color] [flower]</li>
-        <li>name->The [positive] Hive of the [color] [terrainfeature]</li>
-        <li>name->[flower] Engie [politicalunion]</li>
-        <li>name->Apidaetum [color] [terrainfeature]</li>
-        <li>name->Engie [politicalunion] of [positive]</li>
+        <li>name->The [color] [minerals] [mountains]</li>
+        <li>name->The [positive] mines of the [color] [mountains]</li>
+        <li>name->[positive] [minerals] [politicalunion]</li>
+        <li>name->[color] [minerals] [terrainfeature]</li>
+        <li>name->[color] [mountains] [politicalunion] </li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
-          <keyword>politicalunion</keyword>
-          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+          <keyword>mountains</keyword>
+          <path>RockmanNames/Mountains</path>
         </li>
         <li Class="Rule_File">
+          <keyword>minerals</keyword>
+          <path>RockmanNames/Minerals</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+		<li Class="Rule_File">
           <keyword>positive</keyword>
           <path>Words/Nouns/Concepts_Positive</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>flower</keyword>
-          <path>EngieNames/Flower</path>
         </li>
       </rulesRaw>
     </rulePack>
@@ -33,24 +37,24 @@
     <defName>NamerBaseRockmanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [terrainfeature] Hive</li>
-        <li>name->[flower] [terrainfeature] Hive</li>
-        <li>name->[flower] [positive] Hive</li>
-        <li>name->[color] [positive] Hive</li>
-        <li>name->[terrainfeature] [positive] Hive</li>
+        <li>name->The [color] [minerals] [mountains]</li>
+        <li>name->[positive] [terrainfeature] of the [color] [mountains]</li>
+        <li>name->[positive] [minerals] [politicalunion]</li>
+        <li>name->[color] [minerals] [terrainfeature]</li>
+        <li>name->[positive] [terrainfeature] [politicalunion] </li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
-          <keyword>terrainfeature</keyword>
-          <path>Words/Nouns/TerrainFeatures</path>
+          <keyword>mountains</keyword>
+          <path>RockmanNames/Mountains</path>
         </li>
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>minerals</keyword>
+          <path>RockmanNames/Minerals</path>
         </li>
         <li Class="Rule_File">
-          <keyword>flower</keyword>
-          <path>EngieNames/Flower</path>
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
         </li>
       </rulesRaw>
     </rulePack>

@@ -8,7 +8,8 @@
     <graphicData>
       <texPath>Things/Item/SlugSilk</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <color>(230, 204, 255)</color>
+	  <color>(.9, .8, 1, .8)</color>
+	  <!-- <color>(230, 204, 255)</color> -->
     </graphicData>
 	
     <statBases>
@@ -23,7 +24,8 @@
         <li>Fabric</li>
       </categories>
       <commonality>.3</commonality>
-	  <color>(230, 204, 255)</color>
+	  <color>(.9, .8, 1, .9)</color>
+	  <!-- <color>(230, 204, 255)</color> -->
       <statOffsets>
         <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
         <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>

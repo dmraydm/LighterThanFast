@@ -30,10 +30,12 @@
           <keyword>it</keyword>
           <path>EngieNames/It</path>
         </li>
+		<!--
         <li Class="Rule_File">
           <keyword>roman</keyword>
           <path>Words/Misc/Numbers_SmallRoman</path>
         </li>
+		-->
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>

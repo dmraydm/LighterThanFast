@@ -8,7 +8,10 @@
     <graphicData>
 		<texPath>Things/Item/Resource/Metal</texPath>
 		<graphicClass>Graphic_Random</graphicClass>
-		<color>(131,31,73)</color>
+		<!-- <color>RGB( .52, .08, .28, .7)</color> -->
+		<!-- <color>(131,77,101)</color> -->
+		<!-- <color>(154,71,86)</color> -->
+		<color>(190,60,65)</color>
 		<!-- <color>(109,31,47)</color> -->
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
@@ -36,7 +39,9 @@
 		<!-- <commonality>0</commonality> -->
 		<constructEffect>ConstructMetal</constructEffect>
 		
-		<color>(131,31,73)</color>
+		<!-- <color>(131,77,101)</color> -->
+		
+		<color>(154,71,86)</color>
 		<!-- <color>(138,43,226)</color> -->
 		
 		<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
