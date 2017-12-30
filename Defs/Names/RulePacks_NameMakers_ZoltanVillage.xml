@@ -6,14 +6,14 @@
     <defName>NamerFactionZoltanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->The [shining] [terrainfeature] [wavyName]</li>
-        <li>name->[shining] [wavyVocab] [wavyName] </li>
+        <li>name->The [illusion] [terrainfeature] [wavyName]</li>
+        <li>name->[shining] [wavyAdj] [wavyName] </li>
         <li>name->[color] [virtuous] [terrainfeature]</li>
-        <li>name->The [shining] [wavyVocab] [wavyName]</li>
-        <li>name->[color] [virtuous] [wavyVocab] [terrainfeature]</li>
+        <li>name->The [transparent] [wavyAdj] [wavyName]</li>
+        <li>name->[color] [virtuous] [wavyAdj] [terrainfeature]</li>
 		<li>name->[color] [shining] [politicalunion]</li>
-		<li>name->[shining] [terrainfeature] [politicalunion]</li>
-		<li>name->[shining] [wavyVocab] [politicalunion]</li>
+		<li>name->[virtuous] [terrainfeature] [politicalunion]</li>
+		<li>name->[illusion] [wavyAdj] [politicalunion]</li>
 		<li>name->[virtuous] [wavyName] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
@@ -25,17 +25,24 @@
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
-        <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
-        </li>
+		
+		
 		<li Class="Rule_File">
-          <keyword>wavyVocab</keyword>
-          <path>ZoltanNames/wavyVocab</path>
+          <keyword>wavyAdj</keyword>
+          <path>ZoltanNames/wavyAdj</path>
         </li>
 		<li Class="Rule_File">
           <keyword>wavyName</keyword>
           <path>ZoltanNames/wavyName</path>
+        </li>
+		<!-- adj -->
+		<li Class="Rule_File">
+          <keyword>transparent</keyword>
+          <path>ZoltanNames/transparent</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>illusion</keyword>
+          <path>ZoltanNames/illusion</path>
         </li>
 		<li Class="Rule_File">
           <keyword>virtuous</keyword>
@@ -58,31 +65,33 @@
     <rulePack>
       <rulesStrings>
         <li>name->The [shining] [terrainfeature] [wavyName]</li>
-        <li>name->[color] [wavyVocab] [wavyName] </li>
-        <li>name->[color] [virtuous] [terrainfeature]</li>
-        <li>name->The [shining] [wavyVocab] [wavyName]</li>
-        <li>name->[color] [virtuous] [wavyVocab] [terrainfeature]</li>
-		<li>name->[color] [shining] [politicalunion]</li>
-		<li>name->[shining] [terrainfeature] [politicalunion]</li>
-		<li>name->[shining] [wavyVocab] [politicalunion]</li>
-		<li>name->[virtuous] [wavyName] [politicalunion]</li>
+        <li>name->[color] [illusion] [wavyName] </li>
+        <li>name->[wavyAdj] [virtuous] [terrainfeature]</li>
+        <li>name->The [wavyAdj] [illusion] [wavyName]</li>
+        <li>name->[virtuous] [wavyAdj] [terrainfeature]</li>
+		<li>name->[color] [shining] [wavyName]</li>
+		<li>name->[transparent] [terrainfeature] [wavyName]</li>
+		<li>name->[shining] [wavyAdj] [wavyName]</li>
+		<li>name->[virtuous] [illusion] [wavyName]</li>
       </rulesStrings>
       <rulesRaw>
-		<li Class="Rule_File">
-          <keyword>politicalunion</keyword>
-          <path>Words/Nouns/PoliticalUnions_Outlander</path>
-        </li>
+		
         <li Class="Rule_File">
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		<li Class="Rule_File">
+			<keyword>illusion</keyword>
+			<path>ZoltanNames/illusion</path>
+        </li>
+		
         <li Class="Rule_File">
           <keyword>positive</keyword>
           <path>Words/Nouns/Concepts_Positive</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>wavyVocab</keyword>
-          <path>ZoltanNames/wavyVocab</path>
+          <keyword>wavyAdj</keyword>
+          <path>ZoltanNames/wavyAdj</path>
         </li>
 		<li Class="Rule_File">
           <keyword>wavyName</keyword>
@@ -96,7 +105,7 @@
           <keyword>shining</keyword>
           <path>ZoltanNames/shining</path>
         </li>
-				<li Class="Rule_File">
+		<li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
         </li>

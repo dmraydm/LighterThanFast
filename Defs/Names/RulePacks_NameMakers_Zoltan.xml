@@ -5,43 +5,74 @@
     <defName>NamerPersonZoltan</defName>
     <rulePack>
 		<rulesStrings>
-        <li>name->[negative] '[color]' [badassanimal]</li>
-        <li>name->[badassanimal] [animal]</li>
-        <li>name->[color] '[negative]' [badassanimal]</li>
-        <li>name->[negative] '[badassanimal]' [animal]</li>
-        <li>name->[animal] '[negative]' [badassanimal]</li>
-        <li>name->[badassanimal] '[color]' [negative]</li>
+        <li>name->[color] '[badassanimal]' [stars]</li>
+		<li>name->[color] '[transparent]' [animal]</li>
+        <li>name->[virtuous] '[stars]' [badassanimal]</li>
+		
+        <li>name->[virtuous] '[stars]' [wavyName]</li>
+        <li>name->[transparent] '[stars]' [wavyName]</li>
+		<li>name->[shining] '[stars]' [wavyName]</li>
+		
+        <li>name->[virtuous] '[wavyName]' [stars]</li>
+		
+		<li>name->[transparent] '[wavyAdj]' [stars]</li>
+		
+		<li>name->[stars] '[illusion]' [wavyName]</li>
+		<li>name->[wavyName] '[shining]' [stars]</li>
+		
+		<li>name->[wavyAdj] '[shining]' [stars]</li>
+		<li>name->[illusion] '[wavyAdj]' [stars]</li>
+
 		</rulesStrings>
 	  
 	<rulesRaw>
 		<li Class="Rule_File">
-          <keyword>badassanimal</keyword>
-          <path>Words/Nouns/Animals_Badass</path>
+          <keyword>transparent</keyword>
+          <path>ZoltanNames/transparent</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>illusion</keyword>
+          <path>ZoltanNames/illusion</path>
+        </li>
+        
+        <li Class="Rule_File">
+          <keyword>shining</keyword>
+          <path>ZoltanNames/shining</path>
+        </li>
+		
+		<li Class="Rule_File">
+          <keyword>wavyAdj</keyword>
+          <path>ZoltanNames/wavyAdj</path>
+        </li>
+		
+		
+		<li Class="Rule_File">
+          <keyword>wavyName</keyword>
+          <path>ZoltanNames/wavyName</path>
         </li>
         <li Class="Rule_File">
+          <keyword>stars</keyword>
+          <path>ZoltanNames/stars</path>
+        </li>
+		<li Class="Rule_File">
           <keyword>animal</keyword>
           <path>Words/Nouns/Animals</path>
         </li>
-        <li Class="Rule_File">
-          <keyword>badass</keyword>
-          <path>Words/Nouns/People_Badass</path>
+		<li Class="Rule_File">
+          <keyword>badassanimal</keyword>
+          <path>Words/Nouns/Animals_Badass</path>
         </li>
-        <li Class="Rule_File">
-          <keyword>games</keyword>
-          <path>Words/Nouns/Games</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>negative</keyword>
-          <path>Words/Nouns/Concepts_Badass</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>roman</keyword>
-          <path>Words/Misc/Numbers_SmallRoman</path>
-        </li>
+		
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
         </li>
+		
+		<li Class="Rule_File">
+          <keyword>virtuous</keyword>
+          <path>ZoltanNames/virtuous</path>
+        </li>
+		
 	</rulesRaw>
 	  
     </rulePack>

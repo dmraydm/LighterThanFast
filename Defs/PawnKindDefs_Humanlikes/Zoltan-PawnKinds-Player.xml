@@ -15,13 +15,13 @@
     <label>colonist</label>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <backstoryCategory>ZoltanBackstory</backstoryCategory>
-	<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
+	<apparelAllowHeadwearChance>0.2</apparelAllowHeadwearChance>
     <apparelTags>
       <li>Tribal</li>
     </apparelTags>
     <apparelMoney>
-      <min>1000</min>
-      <max>1500</max>
+      <min>500</min>
+      <max>1000</max>
     </apparelMoney>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
   </PawnKindDef>

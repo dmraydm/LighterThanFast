@@ -91,12 +91,48 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
                 <li>
                     <factions>
                        <li>ZoltanFaction</li>
+					   <li>ZoltanPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>10</min>
+                       <min>-10</min>
                        <max>20</max>
                     </goodwill>
                 </li>
+				<li>
+                    <factions>
+                       <li>RockmanFaction</li>
+					   <li>RockmanPlayerColony</li>
+					   
+					   <li>PlayerColony</li>
+					   <li>PlayerTribe</li>
+					   <li>EngiePlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-20</min>
+                       <max>20</max>
+                    </goodwill>
+                </li>
+				<li>
+                    <factions>
+                       <li>SlugFaction</li>
+					   <li>SlugPlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-40</min>
+                       <max>-10</max>
+                    </goodwill>
+                </li>  
+				<li>
+                    <factions>
+                       <li>MantisFaction</li>
+					   <li>MantisPlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-30</min>
+                       <max>10</max>
+                    </goodwill>
+                </li>
+				
 		</factionRelations>
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>

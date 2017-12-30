@@ -15,7 +15,7 @@
     <label>colonist</label>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <backstoryCategory>MantisBackstory</backstoryCategory>
-	<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
+	<apparelAllowHeadwearChance>.01</apparelAllowHeadwearChance>
     <apparelTags>
       <li>Tribal</li>
     </apparelTags>

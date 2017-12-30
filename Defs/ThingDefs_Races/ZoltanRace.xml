@@ -113,41 +113,42 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 	    <factionRelations>
                 <li>
                     <factions>
+					   <li>EngieFaction</li>
+					   <li>EngiePlayerColony</li>
+					   
                        <li>RockmanFaction</li>
+					   <li>RockmanPlayerColony</li>
+					   
+					   <li>PlayerColony</li>
+					   <li>PlayerTribe</li>
+					   <li>ZoltanPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>10</min>
+                       <min>-15</min>
                        <max>20</max>
-                    </goodwill>
-                </li>
-                <li>
-                    <factions>
-                       <li>EngieFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>15</min>
-                       <max>25</max>
                     </goodwill>
                 </li>
 				<li>
                     <factions>
                        <li>SlugFaction</li>
+					   <li>SlugPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>10</min>
-                       <max>20</max>
+                       <min>-15</min>
+                       <max>5</max>
                     </goodwill>
                 </li>    
-				                <li>
+				<li>
                     <factions>
                        <li>MantisFaction</li>
+					   <li>MantisPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>5</min>
-                       <max>10</max>
+                       <min>-20</min>
+                       <max>15</max>
                     </goodwill>
                 </li>    
-    </factionRelations>
+		</factionRelations>
 	
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>

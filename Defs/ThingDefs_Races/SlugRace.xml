@@ -40,8 +40,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	
 - 10% psychic sensivity / 110% toxic sensivity
 - 110% Social
-- drools
-- Xenophobic
+- Drools : colonist will generate raw ressources from time to time.
+- Xenophobic trait : social debuff with non slug beings
+- Xenophobic diplomacy : siblings tolerance at most
 	
 	</description>
         
@@ -86,44 +87,42 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 
 	<generalSettings>
 	
-			    <factionRelations>
-                <li>
-                    <factions>
-                       <li>RockmanFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
-                    </goodwill>
-                </li>
-                <li>
-                    <factions>
-                       <li>EngieFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
-                    </goodwill>
-                </li>
-				<li>
-                    <factions>
-                       <li>MantisFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
-                    </goodwill>
-                </li>    
-				<li>
-                    <factions>
-                       <li>ZoltanFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
-                    </goodwill>
-                </li>    
-    </factionRelations>
+		<factionRelations>
+			<li>
+				<factions>
+				   <li>EngieFaction</li>
+				   <li>EngiePlayerColony</li>
+				   
+				   <li>MantisFaction</li>
+				   <li>MantisPlayerColony</li>
+				
+				   <li>RockmanFaction</li>
+				   <li>RockmanPlayerColony</li>
+				   
+				   <li>ZoltanFaction</li>
+				   <li>ZoltanPlayerColony</li>
+				   
+				   <li>PlayerColony</li>
+				   <li>PlayerTribe</li>
+				   <li>Outlander</li>
+				   <li>Tribe</li>
+				</factions>
+				<goodwill>
+				   <min>-40</min>
+				   <max>-15</max>
+				</goodwill>
+			</li>
+			<li>
+				<factions>
+					<li>SlugPlayerColony</li>
+				</factions>
+				<goodwill>
+				   <min>-15</min>
+				   <max>10</max>
+				</goodwill>
+			</li>
+			
+		</factionRelations>
 	
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>

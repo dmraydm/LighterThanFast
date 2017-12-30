@@ -48,7 +48,7 @@
 				<capacities>
 				<li>Blunt</li>
 				</capacities>
-				<power>4</power>
+				<power>6</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -65,7 +65,7 @@
 				<li>Cut</li>
 				</capacities>
 				<power>13</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>3</cooldownTime>
 			</li>
 		</tools>
 

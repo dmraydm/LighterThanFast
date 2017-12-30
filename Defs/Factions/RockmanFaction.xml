@@ -43,7 +43,7 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(230, 150, 130)</li></colorSpectrum>
+		<colorSpectrum><li>(230, 180, 155)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
 		<leaderTitle>Hercules–Corona Borealis GW</leaderTitle>

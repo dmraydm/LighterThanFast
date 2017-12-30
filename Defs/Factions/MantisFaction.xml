@@ -44,7 +44,7 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(130, 230, 130)</li></colorSpectrum>
+		<colorSpectrum><li>(180, 230, 180)</li></colorSpectrum>
 
 		<mustStartOneEnemy>true</mustStartOneEnemy>
 		<leaderTitle>Mandragonfly</leaderTitle>

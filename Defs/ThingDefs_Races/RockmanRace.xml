@@ -39,13 +39,14 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 - 110% mining
 - 133% carrying capacity
 - 90%s speed
-- close to no cloths
-- natural armor
-- fireproof, comfy temp over 9000 (watch out for cold though)
+- Close to no cloths
+- Natural armor
+- Fireproof, comfy temp over 9000 (cold though)
+- 105% psychich sensitivity to depict religious inclination
 	</description>
         
     <statBases>
-		<PsychicSensitivity>1.0</PsychicSensitivity>
+		<PsychicSensitivity>1.05</PsychicSensitivity>
 		<ToxicSensitivity>1.0</ToxicSensitivity>
 		<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 		<ComfyTemperatureMax>9999</ComfyTemperatureMax>
@@ -66,7 +67,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 		-->
 		<ArmorRating_Blunt>.3</ArmorRating_Blunt>
-		<ArmorRating_Sharp>.45</ArmorRating_Sharp>
+		<ArmorRating_Sharp>.55</ArmorRating_Sharp>
     </statBases>
 	<verbs>
 		<li>
@@ -87,6 +88,46 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<alienRace>
 
 	<generalSettings>
+		    <factionRelations>
+                <li>
+                    <factions>
+                       <li>ZoltanFaction</li>
+					   <li>ZoltanPlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-10</min>
+                       <max>15</max>
+                    </goodwill>
+                </li>
+                <li>
+                    <factions>
+                       <li>EngieFaction</li>
+					   <li>EngiePlayerColony</li>
+					   
+					   <li>MantisFaction</li>
+					   <li>MantisPlayerColony</li>
+					   
+					   <li>PlayerColony</li>
+					   <li>PlayerTribe</li>
+					   <li>RockmanPlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>10</max>
+                    </goodwill>
+                </li>
+				<li>
+                    <factions>
+                       <li>SlugFaction</li>
+					   <li>SlugPlayerColony</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>0</max>
+                    </goodwill>
+                </li>    
+		</factionRelations>
+		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
 			<customDrawSize>(1.7, 1.7)</customDrawSize>
@@ -159,16 +200,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!--	<CanLayDown>false</CanLayDown>-->
 	<!--race has their own beds-->
 	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
-<!--		
-		<factionRelations>
-			<li>
-			<goodwill>
-			   <min>-20</min>
-			   <max>40</max>
-			</goodwill>
-			</li>
-		</factionRelations>
-		-->
+
 		<!-- <chemicalSettings>.9</chemicalSettings> -->
 		<maleGenderProbability>0.3</maleGenderProbability>
 				

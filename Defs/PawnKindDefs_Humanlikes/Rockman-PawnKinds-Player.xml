@@ -15,7 +15,7 @@
     <label>colonist</label>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <backstoryCategory>RockmanBackstory</backstoryCategory>
-	<apparelAllowHeadwearChance>.5</apparelAllowHeadwearChance>
+	<!-- <apparelAllowHeadwearChance>.5</apparelAllowHeadwearChance> -->
     <apparelTags>
 		<li>BeltDefensePop</li>
 		<!-- <li>BeltDefense</li> -->

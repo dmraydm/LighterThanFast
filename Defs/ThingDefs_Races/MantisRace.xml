@@ -123,37 +123,38 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<factionRelations>
                 <li>
                     <factions>
-                       <li>RockmanFaction</li>
+						<li>EngieFaction</li>
+						<li>EngiePlayerColony</li>
+
+						<li>RockmanFaction</li>
+						<li>RockmanPlayerColony</li>
+
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+						<li>MantisPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
-                    </goodwill>
-                </li>
-                <li>
-                    <factions>
-                       <li>EngieFaction</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
+                       <min>-60</min>
                        <max>-10</max>
                     </goodwill>
                 </li>
 				<li>
                     <factions>
                        <li>SlugFaction</li>
+					   <li>SlugPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>-15</min>
-                       <max>-10</max>
+                       <min>-70</min>
+                       <max>-20</max>
                     </goodwill>
                 </li>    
 				<li>
                     <factions>
                        <li>ZoltanFaction</li>
+					   <li>ZoltanPlayerColony</li>
                     </factions>
                     <goodwill>
-                       <min>-10</min>
+                       <min>-55</min>
                        <max>-5</max>
                     </goodwill>
                 </li>    
