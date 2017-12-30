@@ -10,20 +10,20 @@
     <forceNormalGearQuality>true</forceNormalGearQuality>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseEngiePawnKind">
-    <defName>Engie</defName>
-    <label>colonist</label>
-    <defaultFactionType>PlayerColony</defaultFactionType>
-    <backstoryCategory>EngieBackstory</backstoryCategory>
+	<PawnKindDef ParentName="BaseEngiePawnKind">
+	<defName>Engie</defName>
+	<label>colonist</label>
+	<defaultFactionType>PlayerColony</defaultFactionType>
+	<backstoryCategory>EngieBackstory</backstoryCategory>
 	<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>1000</min>
-      <max>2400</max>
-    </apparelMoney>
-    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
-  </PawnKindDef>
+	<apparelTags>
+		<li>Tribal</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>500</min>
+		<max>1000</max>
+	</apparelMoney>
+	<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
 
 </Defs>

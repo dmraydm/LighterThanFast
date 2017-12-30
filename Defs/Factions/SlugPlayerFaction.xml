@@ -15,8 +15,8 @@
 		<pawnsPlural>Slugs</pawnsPlural>
 		
 		<baseNameMaker>NamerBaseSlugVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<baseNameMakerPlayer>NamerFactionSlugVillage</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionSlugVillage</factionNameMakerPlayer>
 		<backstoryCategory>SlugBackstory</backstoryCategory>
 
 		<homeIconPath>Slug/npcZoom</homeIconPath>

@@ -21,7 +21,7 @@
     </apparelTags>
     <apparelMoney>
       <min>1000</min>
-      <max>2400</max>
+      <max>1500</max>
     </apparelMoney>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
   </PawnKindDef>

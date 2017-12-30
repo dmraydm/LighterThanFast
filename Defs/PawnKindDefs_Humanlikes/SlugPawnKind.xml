@@ -3,56 +3,47 @@
 
   <!-- ============================ Slug Base ========================== -->
 
-  <PawnKindDef Name="SlugBase" Abstract="True">
+<PawnKindDef Name="SlugBase" Abstract="True">
     <defaultFactionType>SlugFaction</defaultFactionType>
     <race>Alien_Slug</race>
 	<backstoryCategory>SlugBackstory</backstoryCategory>
-    <chemicalAddictionChance>0.005</chemicalAddictionChance>
-    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+	<chemicalAddictionChance>0.15</chemicalAddictionChance>
+    <baseRecruitDifficulty>.8</baseRecruitDifficulty>
     <!--<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>-->
     <apparelTags>
       <li>Tribal</li>
     </apparelTags>
-	 <weaponTags>
-      <li>NonNeolithicOnlyMelee</li>
-      <li>NeolithicMeleeAdvanced</li>
-      <li>NeolithicRanged</li>
-      <li>NeolithicRangedBasic</li>
-      <li>NeolithicRangedHeavy</li>
-      <li>NeolithicRangedHunter</li>
-      <li>NeolithicRangedChief</li>
-    </weaponTags>
-  </PawnKindDef>
+	
+</PawnKindDef>
   
   <!-- ============================ Slug Civilian Base ========================== -->
 
-  <PawnKindDef Name="SlugCivBase" ParentName="SlugBase" Abstract="True">
+<PawnKindDef Name="SlugCivBase" ParentName="SlugBase" Abstract="True">
     <combatPower>25</combatPower>
 	<race>Alien_Slug</race>
     <itemQuality>Normal</itemQuality>
     <isFighter>false</isFighter>
     <gearHealthRange>
-      <min>0.2</min>
-      <max>2.0</max>
+		<min>0.2</min>
+		<max>2.0</max>
     </gearHealthRange>
     <apparelMoney>
-      <min>300</min>
-      <max>900</max>
+		<min>300</min>
+		<max>900</max>
     </apparelMoney>
     <weaponMoney>
-      <min>1400</min>
-      <max>2500</max>
+		<min>1400</min>
+		<max>2500</max>
     </weaponMoney>
     <weaponTags>
-	  <li>NeolithicMeleeAdvanced</li>
-	  <li>NeolithicRangedHeavy</li>
+		<li>SimpleGun</li>
     </weaponTags>
     <techHediffsMoney>
-      <min>200</min>
-      <max>300</max>
+		<min>200</min>
+		<max>300</max>
     </techHediffsMoney>
     <techHediffsTags>
-      <li>Simple</li>
+		<li>Simple</li>
     </techHediffsTags>
     <techHediffsChance>0.01</techHediffsChance>
     <invNutrition>2.55</invNutrition>
@@ -132,9 +123,11 @@
       <min>1400</min>
       <max>3000</max>
     </weaponMoney>
+	
     <weaponTags>
-	  <li>NeolithicRanged</li>
+		<li>Gun</li>
     </weaponTags>
+	
     <techHediffsMoney>
       <min>200</min>
       <max>5000</max>
@@ -157,36 +150,39 @@
  
   <!-- ============================ Slug Military Base ========================== -->
   
-  <PawnKindDef Name="SlugMilBase" ParentName="SlugBase" Abstract="True">
-    <chemicalAddictionChance>0</chemicalAddictionChance>
-    <isFighter>true</isFighter>
-	<race>Alien_Slug</race>
-    <invNutrition>2.55</invNutrition>
-    <itemQuality>Normal</itemQuality>
-	<minGenerationAge>19</minGenerationAge>
-    <maxGenerationAge>50</maxGenerationAge>
-    <gearHealthRange>
-      <min>0.7</min>
-      <max>2.3</max>
-    </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>1500</min>
-      <max>5800</max>
-    </apparelMoney>
-    <weaponMoney>
-      <min>1400</min>
-      <max>20000</max>
-    </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
-    </weaponTags>
+	<PawnKindDef Name="SlugMilBase" ParentName="SlugBase" Abstract="True">
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<isFighter>true</isFighter>
+		<race>Alien_Slug</race>
+		<invNutrition>2.55</invNutrition>
+		<itemQuality>Normal</itemQuality>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+	
+		<apparelTags>
+			<li>Outlander</li>
+		</apparelTags>
+		<weaponTags>
+			<!-- <li>AdvancedGun</li> -->
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+	
+		<apparelMoney>
+			<min>1500</min>
+			<max>5800</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>20000</max>
+		</weaponMoney>
+
     <techHediffsMoney>
-      <min>1000</min>
-      <max>1500</max>
+		<min>1000</min>
+		<max>1500</max>
     </techHediffsMoney>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
@@ -227,9 +223,7 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>1500</min>
       <max>25000</max>
@@ -238,9 +232,15 @@
       <min>1400</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
+	
+    <apparelTags>
+		<li>Outlander</li>
+    </apparelTags>
+	<weaponTags>
+		<li>GunHeavy</li>
+		<!-- <li>GrenadeDestructive</li> -->
     </weaponTags>
+	
     <techHediffsMoney>
       <min>1000</min>
       <max>15000</max>
@@ -296,8 +296,7 @@
       <max>28000</max>
     </weaponMoney>
     <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
+		 <li>GunHeavy</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>
@@ -328,8 +327,7 @@
     </inventoryOptions>
   </PawnKindDef>
 
-  
-  <PawnKindDef ParentName="SlugMilBase">
+<PawnKindDef ParentName="SlugMilBase">
      <defName>SlugShadowscale</defName>
     <label>Shadowscale</label>
     <combatPower>220</combatPower>
@@ -338,10 +336,11 @@
       <min>0.8</min>
       <max>3.5</max>
     </gearHealthRange>
+	
     <apparelTags>
       <li>Military</li>
-	  <li>Tribal</li>
     </apparelTags>
+	
     <apparelMoney>
       <min>2500</min>
       <max>42000</max>
@@ -351,9 +350,7 @@
       <max>28000</max>
     </weaponMoney>
     <weaponTags>
-	  <li>Gun</li>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
+		  <li>EliteGun</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>

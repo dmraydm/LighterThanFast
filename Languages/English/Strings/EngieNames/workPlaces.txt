@@ -1,0 +1,21 @@
+brewery
+factory
+foundry
+power plant
+mill
+refinery
+platform
+openspace
+silo
+supply chain
+datacenter
+warehouse
+perimeter
+boarding
+bzns incubator
+core bzns
+phantom cie
+ghost town
+empty shell
+startup
+licorn

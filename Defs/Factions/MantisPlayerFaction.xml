@@ -15,8 +15,8 @@
 		<pawnsPlural>Mantiss</pawnsPlural>
 		
 		<baseNameMaker>NamerBaseMantisVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<baseNameMakerPlayer>NamerFactionMantisVillage</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionMantisVillage</factionNameMakerPlayer>
 		<backstoryCategory>MantisBackstory</backstoryCategory>
 
 		<homeIconPath>Mantis/npcZoom</homeIconPath>

@@ -7,21 +7,15 @@
     <defaultFactionType>ZoltanFaction</defaultFactionType>
     <race>Alien_Zoltan</race>
 	<backstoryCategory>ZoltanBackstory</backstoryCategory>
-    <chemicalAddictionChance>0.005</chemicalAddictionChance>
-    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
-    <!--<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>-->
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
-	 <weaponTags>
-      <li>NonNeolithicOnlyMelee</li>
-      <li>NeolithicMeleeAdvanced</li>
-      <li>NeolithicRanged</li>
-      <li>NeolithicRangedBasic</li>
-      <li>NeolithicRangedHeavy</li>
-      <li>NeolithicRangedHunter</li>
-      <li>NeolithicRangedChief</li>
-    </weaponTags>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <baseRecruitDifficulty>.5</baseRecruitDifficulty>
+    
+	<apparelTags>
+		<li>Outlander</li>
+		<li>Military</li>
+		<li>BeltDefensePop</li>
+	</apparelTags>
+
   </PawnKindDef>
   
   <!-- ============================ Zoltan Civilian Base ========================== -->
@@ -43,25 +37,15 @@
       <min>1400</min>
       <max>2500</max>
     </weaponMoney>
-    <weaponTags>
-	  <li>NeolithicMeleeAdvanced</li>
-	  <li>NeolithicRangedHeavy</li>
+	<weaponTags>
+      <li>Gun</li>
     </weaponTags>
+
     <techHediffsMoney>
       <min>200</min>
       <max>300</max>
     </techHediffsMoney>
-	<!--
-    <techHediffsTags>
-      <li>Simple</li>
-    </techHediffsTags>
-    <techHediffsChance>0.01</techHediffsChance>
-	-->
-	<techHediffsTags>
-      <li>Zoltan</li>
-    </techHediffsTags>
-    <techHediffsChance>1</techHediffsChance>
-	
+
     <invNutrition>2.55</invNutrition>
     <inventoryOptions>
       <skipChance>0.45</skipChance>
@@ -139,9 +123,12 @@
       <min>1400</min>
       <max>3000</max>
     </weaponMoney>
-    <weaponTags>
-	  <li>NeolithicRanged</li>
+    
+	<weaponTags>
+      <li>Gun</li>
+	  <!-- <li>AdvancedGun</li> -->
     </weaponTags>
+	
     <techHediffsMoney>
       <min>200</min>
       <max>5000</max>
@@ -176,9 +163,7 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>1500</min>
       <max>5800</max>
@@ -187,10 +172,13 @@
       <min>1400</min>
       <max>20000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
+
+	<weaponTags>
+		<!-- <li>EliteGun</li> -->
+		<!-- <li>Gun</li> -->
+		<li>AdvancedGun</li>
     </weaponTags>
+	
     <techHediffsMoney>
       <min>1000</min>
       <max>1500</max>
@@ -234,9 +222,14 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+	
+	<weaponTags>
+		<!-- <li>EliteGun</li> -->
+		<!-- <li>Gun</li> -->
+		<!-- <li>AdvancedGun</li> -->
+		<li>SniperRifle</li>
+    </weaponTags>
+	
     <apparelMoney>
       <min>1500</min>
       <max>25000</max>
@@ -245,9 +238,7 @@
       <min>1400</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-    </weaponTags>
+
     <techHediffsMoney>
       <min>1000</min>
       <max>15000</max>
@@ -291,9 +282,7 @@
       <min>0.5</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>1000</min>
       <max>26000</max>
@@ -302,10 +291,12 @@
       <min>1400</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
+
+	<weaponTags>
+		<li>SniperRifle</li>
+		<!-- <li>GunHeavy</li> -->
     </weaponTags>
+	
     <techHediffsMoney>
       <min>2000</min>
       <max>30000</max>
@@ -345,10 +336,7 @@
       <min>0.8</min>
       <max>3.5</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Military</li>
-	  <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>2500</min>
       <max>42000</max>
@@ -357,11 +345,12 @@
       <min>1600</min>
       <max>28000</max>
     </weaponMoney>
+	
     <weaponTags>
-	  <li>Gun</li>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
+	  <li>AdvancedGun</li>
+		<li>EliteGun</li>
     </weaponTags>
+	
     <techHediffsMoney>
       <min>2000</min>
       <max>8000</max>

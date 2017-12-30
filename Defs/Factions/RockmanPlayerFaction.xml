@@ -15,8 +15,8 @@
 		<pawnsPlural>Rockmans</pawnsPlural>
 		
 		<baseNameMaker>NamerBaseRockmanVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<baseNameMakerPlayer>NamerFactionRockmanVillage</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionRockmanVillage</factionNameMakerPlayer>
 		<backstoryCategory>RockmanBackstory</backstoryCategory>
 
 		<homeIconPath>Rockman/npcZoom</homeIconPath>

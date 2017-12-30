@@ -14,8 +14,8 @@
 		<pawnsPlural>Engies</pawnsPlural>
 		
 		<baseNameMaker>NamerBaseEngieVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+		<baseNameMakerPlayer>NamerFactionEngieVillage</baseNameMakerPlayer>
+		<factionNameMakerPlayer>NamerFactionEngieVillage</factionNameMakerPlayer>
 		<backstoryCategory>EngieBackstory</backstoryCategory>
 
 		<homeIconPath>Engie/npcZoom</homeIconPath>

@@ -5,7 +5,7 @@
 		<label>luminous aurora</label>
 		<description>Source energy seeking Zoltans</description>
 		<pawnsPlural>Bright Zoltans</pawnsPlural>
-		<baseSelectionWeight>.1</baseSelectionWeight>
+		<baseSelectionWeight>.15</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Zoltan/npcZoom</homeIconPath>
@@ -44,7 +44,7 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(130, 130, 230)</li></colorSpectrum>
+		<colorSpectrum><li>(180, 180, 255)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
 		<leaderTitle>petaLumens</leaderTitle>

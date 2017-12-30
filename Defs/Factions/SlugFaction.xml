@@ -5,7 +5,7 @@
 		<label>Awkward gasteropods</label>
 		<description>Far from nebula homelands slugs</description>
 		<pawnsPlural>untrustworthy slugs</pawnsPlural>
-		<baseSelectionWeight>.1</baseSelectionWeight>
+		<baseSelectionWeight>.15</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Slug/npcZoom</homeIconPath>

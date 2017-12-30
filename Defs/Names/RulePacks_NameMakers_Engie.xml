@@ -5,15 +5,39 @@
     <defName>NamerPersonEngie</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] '[animal]' [moreit]</li>
-        <li>name->[moreit] '[color]' [games]</li>
-        <li>name->[engie] '[moreit]' [it]</li>
-        <li>name->[scifi] '[games]' [version]</li>
-        <li>name->[engie] '[it]' [animal]</li>
-        <li>name->[engie] '[scifi]' [animal]</li>
+        <li>name->[color] '[moreit]' [animal]</li>
+        <li>name->[scifi] '[moreit]' [animal]</li>
+        <li>name->[scifi] '[it]' [version]</li>
+		
+        <li>name->[moreit] '[it]' [animal]</li>
+        <li>name->[moreit] '[scifi]' [engie]</li>
+		<li>name->[moreit] '[it]' [engie]</li>
+		
+		<li>name->[version] '[games]' [moreit]</li>
+		
+        <li>name->[workPlaces] '[engie]' [animal]</li>
+        <li>name->[color] '[it]' [version]</li>
+		<li>name->[workPlaces] '[engie]' [moreit]</li>		
+		
+		<li>name->[moreit] '[workPlaces]' [engie]</li>
+		<li>name->[color] '[workPlaces]' [engie]</li>
+		<li>name->[workPlaces] '[version]' [engie]</li>
+		
+		<li>name->[engie] '[animal]' [engie]</li>
+		<li>name->[color] '[animal]' [engie]</li>
       </rulesStrings>
 
       <rulesRaw>
+		<li Class="Rule_File">
+          <keyword>workPlaces</keyword>
+          <path>EngieNames/workPlaces</path>
+        </li>
+	  
+		<li Class="Rule_File">
+          <keyword>tribalword</keyword>
+          <path>Words/Foreign/Tribal</path>
+        </li>
+		
         <li Class="Rule_File">
           <keyword>engie</keyword>
           <path>EngieNames/Engie</path>
@@ -42,12 +66,7 @@
           <keyword>games</keyword>
           <path>Words/Nouns/Games</path>
         </li>
-		<!--
-        <li Class="Rule_File">
-          <keyword>roman</keyword>
-          <path>Words/Misc/Numbers_SmallRoman</path>
-        </li>
-		-->
+
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>

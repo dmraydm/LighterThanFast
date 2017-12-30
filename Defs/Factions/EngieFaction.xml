@@ -5,7 +5,7 @@
 		<label>wild cluster</label>
 		<description>Some wild Engies</description>
 		<pawnsPlural>D state engies</pawnsPlural>
-		<baseSelectionWeight>.1</baseSelectionWeight>
+		<baseSelectionWeight>.2</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Engie/npcZoom</homeIconPath>

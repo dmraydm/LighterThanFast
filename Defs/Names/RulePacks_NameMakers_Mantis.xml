@@ -5,20 +5,37 @@
     <defName>NamerPersonMantis</defName>
     <rulePack>
 		<rulesStrings>
-        <li>name->[badass] '[MantisAdj]' [animal]</li>
-        <li>name->[negative] '[color]' [badassanimal]</li>
-        <li>name->[MantisAdj] '[badass]' [roman] </li>
-        <li>name->[negative] '[MantisAdj]' [badassanimal]</li>
-		<li>name->[roman] '[MantisAdj2]' [MantisNames2]  </li>
-        <li>name->[roman] '[color]' [MantisNames]</li>
-		<li>name->[roman] '[MantisAdj]' [MantisNames]</li>
-		<li>name->[color] '[MantisAdj2]' [MantisNames2]</li>
-		<li>name->[negative] '[MantisAdj2]' [MantisNames]</li>
-        <li>name->[color] '[MantisNames2]' [roman]</li>
-        <li>name->[roman] '[MantisAdj2]' [badassanimal] </li>
+        <li>name->[Locations] '[badass]' [tribalword]</li>
+        <li>name->[Locations] '[Adjective]' [Gangsta]</li>
+		<li>name->[Locations] '[Races]' [Gangsta]</li>
+		<li>name->[Locations] '[Adjective]' [MantisNames]</li>
+		
+		<li>name->[Races] '[Locations]' [badassanimal]</li>
+		
+		
+        <li>name->[tribalword] '[color]' [MantisNames]</li>
+		<li>name->[tribalword] '[Adjective]' [MantisNames]</li>
+		<li>name->[tribalword] '[Races]' [Locations]</li>
+		
+        <li>name->[MantisNames] '[negative]' [Races]</li>		
+		<li>name->[MantisNames] '[Locations]' [Gangsta]</li>
+		<li>name->[MantisNames] '[color]' [Locations]</li>
+		
+		<li>name->[Adjective] '[Locations]' [MantisNames]</li>
+		<li>name->[color] '[Locations]' [Gangsta]</li>
+        <li>name->[color] '[Gangsta]' [Locations]</li>
+		<li>name->[Adjective] '[color]' [MantisNames]</li>
+		
+
+
 		</rulesStrings>
 	  
 	<rulesRaw>
+		<li Class="Rule_File">
+          <keyword>tribalword</keyword>
+          <path>Words/Foreign/Tribal</path>
+        </li>
+	
 		<li Class="Rule_File">
           <keyword>badassanimal</keyword>
           <path>Words/Nouns/Animals_Badass</path>
@@ -40,29 +57,29 @@
           <path>Words/Nouns/Concepts_Badass</path>
         </li>
         <li Class="Rule_File">
-          <keyword>roman</keyword>
-          <path>Words/Misc/Numbers_SmallRoman</path>
-        </li>
-        <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>MantisAdj</keyword>
+          <keyword>Adjective</keyword>
           <path>MantisNames/MantisAdj</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>MantisAdj2</keyword>
-          <path>MantisNames/MantisAdj2</path>
+          <keyword>Locations</keyword>
+          <path>MantisNames/MantisLocations</path>
         </li>
 		<!-- noun -->
 		<li Class="Rule_File">
-          <keyword>MantisNames</keyword>
+          <keyword>Names</keyword>
           <path>MantisNames/MantisNames</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>MantisNames2</keyword>
-          <path>MantisNames/MantisNames2</path>
+          <keyword>Gangsta</keyword>
+          <path>MantisNames/MantisGangsta</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>Races</keyword>
+          <path>MantisNames/MantisRaces</path>
         </li>
 	</rulesRaw>
 	  

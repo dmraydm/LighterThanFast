@@ -8,20 +8,13 @@
     <race>Alien_Engie</race>
 	<backstoryCategory>EngieBackstory</backstoryCategory>
     <chemicalAddictionChance>0.005</chemicalAddictionChance>
-    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
-    <!--<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>-->
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
-	 <weaponTags>
-      <li>NonNeolithicOnlyMelee</li>
-      <li>NeolithicMeleeAdvanced</li>
-      <li>NeolithicRanged</li>
-      <li>NeolithicRangedBasic</li>
-      <li>NeolithicRangedHeavy</li>
-      <li>NeolithicRangedHunter</li>
-      <li>NeolithicRangedChief</li>
-    </weaponTags>
+    <baseRecruitDifficulty>.65</baseRecruitDifficulty>
+    
+	<apparelTags>
+		<li>Outlander</li>
+		<li>Tribal</li>
+	</apparelTags>
+	
   </PawnKindDef>
   
   <!-- ============================ Engie Civilian Base ========================== -->
@@ -32,27 +25,27 @@
     <itemQuality>Normal</itemQuality>
     <isFighter>false</isFighter>
     <gearHealthRange>
-      <min>0.2</min>
-      <max>2.0</max>
+		<min>0.2</min>
+		<max>2.0</max>
     </gearHealthRange>
     <apparelMoney>
-      <min>300</min>
-      <max>900</max>
+		<min>300</min>
+		<max>900</max>
     </apparelMoney>
     <weaponMoney>
-      <min>1400</min>
-      <max>2500</max>
+		<min>1400</min>
+		<max>2500</max>
     </weaponMoney>
     <weaponTags>
-	  <li>NeolithicMeleeAdvanced</li>
-	  <li>NeolithicRangedHeavy</li>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>SimpleGun</li>
     </weaponTags>
     <techHediffsMoney>
-      <min>200</min>
-      <max>300</max>
+		<min>200</min>
+		<max>300</max>
     </techHediffsMoney>
     <techHediffsTags>
-      <li>Simple</li>
+		<li>Simple</li>
     </techHediffsTags>
     <techHediffsChance>0.01</techHediffsChance>
     <invNutrition>2.55</invNutrition>
@@ -86,14 +79,14 @@
     <label>colonist</label>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="EngieCivBase">
-    <defName>EngieHistSpeaker</defName>
-    <label>Hist speaker</label>
-    <labelPlural>Hist speakers</labelPlural>
-    <factionLeader>true</factionLeader>
-	<minGenerationAge>39</minGenerationAge>
-	<maxGenerationAge>100</maxGenerationAge>
-  </PawnKindDef>
+	<PawnKindDef ParentName="EngieCivBase">
+		<defName>EngieHistSpeaker</defName>
+		<label>Hist speaker</label>
+		<labelPlural>Hist speakers</labelPlural>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>39</minGenerationAge>
+		<maxGenerationAge>100</maxGenerationAge>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="EngieCivBase">
     <defName>EngieTrader</defName>
@@ -132,9 +125,14 @@
       <min>1400</min>
       <max>3000</max>
     </weaponMoney>
+	
     <weaponTags>
-	  <li>NeolithicRanged</li>
+		<li>NonNeolithicOnlySimpleMelee</li>
     </weaponTags>
+	<apparelTags>
+			<li>BeltDefense</li>
+	</apparelTags>
+		
     <techHediffsMoney>
       <min>200</min>
       <max>5000</max>
@@ -142,7 +140,7 @@
     <techHediffsTags>
       <li>Simple</li>
     </techHediffsTags>
-    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsChance>0.05</techHediffsChance>
     <invNutrition>2.55</invNutrition>
     <inventoryOptions>
       <skipChance>0.95</skipChance>
@@ -169,9 +167,13 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+    <weaponTags>
+		<li>AdvancedGun</li>
+    </weaponTags>
+	<apparelTags>
+		<li>BeltDefensePop</li>
+	</apparelTags>
+	
     <apparelMoney>
       <min>1500</min>
       <max>5800</max>
@@ -180,10 +182,7 @@
       <min>1400</min>
       <max>20000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
-    </weaponTags>
+
     <techHediffsMoney>
       <min>1000</min>
       <max>1500</max>
@@ -228,8 +227,12 @@
       <max>2.3</max>
     </gearHealthRange>
     <apparelTags>
-      <li>Tribal</li>
+		<li>Outlander</li>
+		<li>Military</li>
     </apparelTags>
+	<weaponTags>
+		<li>GunHeavy</li>
+	</weaponTags>
     <apparelMoney>
       <min>1500</min>
       <max>25000</max>
@@ -238,9 +241,7 @@
       <min>1400</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-    </weaponTags>
+
     <techHediffsMoney>
       <min>1000</min>
       <max>15000</max>
@@ -252,7 +253,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsChance>0.06</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>
@@ -284,9 +285,7 @@
       <min>0.5</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>1000</min>
       <max>26000</max>
@@ -295,18 +294,24 @@
       <min>1400</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
-    </weaponTags>
+
+	<apparelTags>
+		<li>Outlander</li>
+		<li>Military</li>
+		<li>BeltDefensePop</li>
+    </apparelTags>
+	<weaponTags>
+		<li>GunHeavy</li>
+	</weaponTags>
+	
     <techHediffsMoney>
-      <min>2000</min>
-      <max>30000</max>
+		<min>2000</min>
+		<max>30000</max>
     </techHediffsMoney>
     <techHediffsTags>
-      <li>Advanced</li>
+		<li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.08</techHediffsChance>
+    <techHediffsChance>0.07</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>
@@ -338,10 +343,7 @@
       <min>0.8</min>
       <max>3.5</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>Military</li>
-	  <li>Tribal</li>
-    </apparelTags>
+
     <apparelMoney>
       <min>2500</min>
       <max>42000</max>
@@ -350,11 +352,16 @@
       <min>1600</min>
       <max>28000</max>
     </weaponMoney>
-    <weaponTags>
-	  <li>Gun</li>
-	 <li>NeolithicRanged</li>
-	 <li>NeolithicMeleeAdvanced</li>
-    </weaponTags>
+	
+	<apparelTags>
+		<li>Outlander</li>
+		<li>Military</li>
+		<li>BeltDefensePop</li>
+    </apparelTags>
+	<weaponTags>
+		<li>GunHeavy</li>
+	</weaponTags>
+	
     <techHediffsMoney>
       <min>2000</min>
       <max>8000</max>
@@ -362,7 +369,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsChance>0.1</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>

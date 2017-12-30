@@ -15,13 +15,14 @@
     <label>colonist</label>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <backstoryCategory>RockmanBackstory</backstoryCategory>
-	<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
+	<apparelAllowHeadwearChance>.5</apparelAllowHeadwearChance>
     <apparelTags>
-      <li>Tribal</li>
+		<li>BeltDefensePop</li>
+		<!-- <li>BeltDefense</li> -->
     </apparelTags>
     <apparelMoney>
       <min>1000</min>
-      <max>2400</max>
+      <max>2000</max>
     </apparelMoney>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
   </PawnKindDef>

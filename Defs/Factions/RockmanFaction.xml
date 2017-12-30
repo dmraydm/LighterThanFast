@@ -2,10 +2,10 @@
 <Defs>
 	<FactionDef>
 		<defName>RockmanFaction</defName><!-- TribeRockman-->
-		<label>Concretions and mounts</label>
+		<label>Concretions</label>
 		<description>granite and slate chunks come to life. Limestone is ok.</description>
 		<pawnsPlural>mighty rockmen</pawnsPlural>
-		<baseSelectionWeight>.1</baseSelectionWeight>
+		<baseSelectionWeight>.15</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
@@ -46,11 +46,11 @@
 		<colorSpectrum><li>(230, 150, 130)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>Her–CrB GW</leaderTitle>
+		<leaderTitle>Hercules–Corona Borealis GW</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
-			<min>-15</min>
-			<max>50</max>
+			<min>-5</min>
+			<max>9000</max>
 		</allowedArrivalTemperatureRange>
 		
     <pawnGroupMakers>
