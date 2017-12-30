@@ -6,21 +6,48 @@
     <defName>NamerFactionSlugVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Apidaetum [color]</li>
-        <li>name->The [positive] Hive of the [color] [terrainfeature]</li>
-        <li>name->[flower] Engie [politicalunion]</li>
-        <li>name->Apidaetum [color] [terrainfeature]</li>
-        <li>name->Engie [politicalunion] of [positive]</li>
+        <li>name->The [negative] [terrainfeature] [SlugNames]</li>
+        <li>name->[color] [badAdj] [SlugNames2] </li>
+        <li>name->[negative] [badAdj] [terrainfeature]</li>
+        <li>name->The [slugAdj] [SlugNames] [SlugNames2]</li>
+        <li>name->[negative] [color] [SlugNames2] [terrainfeature]</li>
+		<li>name->[slugAdj] [negative] [politicalunion]</li>
+		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
-        <li Class="Rule_File">
+		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
         </li>
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		<!-- adj -->
+        <li Class="Rule_File">
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>badAdj</keyword>
+          <path>SlugNames/BadAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>slugAdj</keyword>
+          <path>SlugNames/SlugAdj</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>SlugNames</keyword>
+          <path>SlugNames/SlugNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>SlugNames2</keyword>
+          <path>SlugNames/SlugNames2</path>
+        </li>
+
       </rulesRaw>
     </rulePack>
   </RulePackDef>
@@ -29,20 +56,46 @@
     <defName>NamerBaseSlugVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [terrainfeature] Hive</li>
-        <li>name->[terrainfeature] Hive</li>
-        <li>name->[positive] Hive</li>
-        <li>name->[color] [positive] Hive</li>
-        <li>name->[terrainfeature] [positive] Hive</li>
+        <li>name->The [negative] [terrainfeature] [SlugNames]</li>
+        <li>name->[color] [badAdj] [SlugNames2] </li>
+        <li>name->[negative] [badAdj] [terrainfeature]</li>
+        <li>name->The [slugAdj] [SlugNames] [SlugNames2]</li>
+        <li>name->[negative] [color] [SlugNames2] [terrainfeature]</li>
+		<li>name->[slugAdj] [negative] [politicalunion]</li>
+		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
         <li Class="Rule_File">
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		<!-- adj -->
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>badAdj</keyword>
+          <path>SlugNames/BadAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>slugAdj</keyword>
+          <path>SlugNames/SlugAdj</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>SlugNames</keyword>
+          <path>SlugNames/SlugNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>SlugNames2</keyword>
+          <path>SlugNames/SlugNames2</path>
         </li>
       </rulesRaw>
     </rulePack>

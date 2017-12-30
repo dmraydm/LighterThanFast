@@ -2,10 +2,10 @@
 <Defs>
 	<FactionDef>
 		<defName>SlugFaction</defName><!-- TribeSlug-->
-		<label>wild cluster</label>
-		<description>Some wild Slugs</description>
-		<pawnsPlural>D state Slugs</pawnsPlural>
-		<baseSelectionWeight>.75</baseSelectionWeight>
+		<label>Awkward gasteropods</label>
+		<description>Far from nebula homelands slugs</description>
+		<pawnsPlural>untrustworthy slugs</pawnsPlural>
+		<baseSelectionWeight>.1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Slug/npcZoom</homeIconPath>
@@ -13,10 +13,6 @@
 		
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
-		<startingGoodwill>
-			<min>10</min>
-			<max>30</max>
-		</startingGoodwill>
 
 		<factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
 		<baseNameMaker>NamerBaseSlugVillage</baseNameMaker>
@@ -26,9 +22,14 @@
 		<hairTags>
 			<li>Slug</li>
 		</hairTags>
+		
+		<startingGoodwill>
+			<min>-5</min>
+			<max>5</max>
+		</startingGoodwill>
 		<naturalColonyGoodwill>
-			<min>-50</min>
-			<max>10</max>
+			<min>-20</min>
+			<max>5</max>
 		</naturalColonyGoodwill>
 
 		<visitorTraderKinds>
@@ -43,14 +44,14 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(180, 180, 180)</li></colorSpectrum>
+		<colorSpectrum><li>(210, 130, 200)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>Systemd</leaderTitle>
+		<leaderTitle>Syrinx aruanus</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
 			<min>-15</min>
-			<max>50</max>
+			<max>30</max>
 		</allowedArrivalTemperatureRange>
 		
     <pawnGroupMakers>

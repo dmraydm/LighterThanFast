@@ -2,10 +2,10 @@
 <Defs>
 	<FactionDef>
 		<defName>MantisFaction</defName><!-- TribeMantis-->
-		<label>wild cluster</label>
-		<description>Some wild Mantiss</description>
-		<pawnsPlural>D state Mantiss</pawnsPlural>
-		<baseSelectionWeight>.75</baseSelectionWeight>
+		<label>razor-sharp swarm</label>
+		<description>Organized group of bloodthirsty mantiss</description>
+		<pawnsPlural>deadly mantiss</pawnsPlural>
+		<baseSelectionWeight>.1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Mantis/npcZoom</homeIconPath>
@@ -13,10 +13,6 @@
 		
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
-		<startingGoodwill>
-			<min>10</min>
-			<max>30</max>
-		</startingGoodwill>
 
 		<factionNameMaker>NamerFactionMantisVillage</factionNameMaker>
 		<baseNameMaker>NamerBaseMantisVillage</baseNameMaker>
@@ -26,9 +22,14 @@
 		<hairTags>
 			<li>Mantis</li>
 		</hairTags>
+		
+		<startingGoodwill>
+			<min>-60</min>
+			<max>-25</max>
+		</startingGoodwill>
 		<naturalColonyGoodwill>
-			<min>-50</min>
-			<max>10</max>
+			<min>-30</min>
+			<max>-10</max>
 		</naturalColonyGoodwill>
 
 		<visitorTraderKinds>
@@ -43,10 +44,10 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(180, 180, 180)</li></colorSpectrum>
+		<colorSpectrum><li>(130, 230, 130)</li></colorSpectrum>
 
-		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>Systemd</leaderTitle>
+		<mustStartOneEnemy>true</mustStartOneEnemy>
+		<leaderTitle>Mandragonfly</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
 			<min>-15</min>

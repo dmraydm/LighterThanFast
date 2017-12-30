@@ -6,20 +6,48 @@
     <defName>NamerFactionZoltanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Apidaetum [color]</li>
-        <li>name->The [positive] Hive of the [color] [terrainfeature]</li>
-        <li>name->[flower] Engie [politicalunion]</li>
-        <li>name->Apidaetum [color] [terrainfeature]</li>
-        <li>name->Engie [politicalunion] of [positive]</li>
+        <li>name->The [shining] [terrainfeature] [wavyName]</li>
+        <li>name->[shining] [wavyVocab] [wavyName] </li>
+        <li>name->[color] [virtuous] [terrainfeature]</li>
+        <li>name->The [shining] [wavyVocab] [wavyName]</li>
+        <li>name->[color] [virtuous] [wavyVocab] [terrainfeature]</li>
+		<li>name->[color] [shining] [politicalunion]</li>
+		<li>name->[shining] [terrainfeature] [politicalunion]</li>
+		<li>name->[shining] [wavyVocab] [politicalunion]</li>
+		<li>name->[virtuous] [wavyName] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
-        <li Class="Rule_File">
+		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
         </li>
         <li Class="Rule_File">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
+        <li Class="Rule_File">
           <keyword>positive</keyword>
           <path>Words/Nouns/Concepts_Positive</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>wavyVocab</keyword>
+          <path>ZoltanNames/wavyVocab</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>wavyName</keyword>
+          <path>ZoltanNames/wavyName</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>virtuous</keyword>
+          <path>ZoltanNames/virtuous</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>shining</keyword>
+          <path>ZoltanNames/shining</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
         </li>
       </rulesRaw>
     </rulePack>
@@ -29,13 +57,21 @@
     <defName>NamerBaseZoltanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [terrainfeature] Hive</li>
-        <li>name->[terrainfeature] Hive</li>
-        <li>name->[positive] Hive</li>
-        <li>name->[color] [positive] Hive</li>
-        <li>name->[terrainfeature] [positive] Hive</li>
+        <li>name->The [shining] [terrainfeature] [wavyName]</li>
+        <li>name->[color] [wavyVocab] [wavyName] </li>
+        <li>name->[color] [virtuous] [terrainfeature]</li>
+        <li>name->The [shining] [wavyVocab] [wavyName]</li>
+        <li>name->[color] [virtuous] [wavyVocab] [terrainfeature]</li>
+		<li>name->[color] [shining] [politicalunion]</li>
+		<li>name->[shining] [terrainfeature] [politicalunion]</li>
+		<li>name->[shining] [wavyVocab] [politicalunion]</li>
+		<li>name->[virtuous] [wavyName] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
         <li Class="Rule_File">
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
@@ -43,6 +79,26 @@
         <li Class="Rule_File">
           <keyword>positive</keyword>
           <path>Words/Nouns/Concepts_Positive</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>wavyVocab</keyword>
+          <path>ZoltanNames/wavyVocab</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>wavyName</keyword>
+          <path>ZoltanNames/wavyName</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>virtuous</keyword>
+          <path>ZoltanNames/virtuous</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>shining</keyword>
+          <path>ZoltanNames/shining</path>
+        </li>
+				<li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
         </li>
       </rulesRaw>
     </rulePack>

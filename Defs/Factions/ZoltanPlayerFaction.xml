@@ -2,7 +2,8 @@
 <Defs>
 	<FactionDef Abstract="True" Name="ZoltanFactionBase">
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
-		<colorSpectrum><li>(0.3, 0.3, 0.3)</li></colorSpectrum>
+		<!-- blue -->
+		<colorSpectrum><li>(0.3, 0.3, 0.7)</li></colorSpectrum>
 	</FactionDef>
 
 	<FactionDef ParentName="ZoltanFactionBase">

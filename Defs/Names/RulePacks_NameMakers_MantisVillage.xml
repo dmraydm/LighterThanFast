@@ -6,21 +6,44 @@
     <defName>NamerFactionMantisVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Apidaetum [color]</li>
-        <li>name->The [positive] Hive of the [color] [terrainfeature]</li>
-        <li>name->[flower] Engie [politicalunion]</li>
-        <li>name->Apidaetum [color] [terrainfeature]</li>
-        <li>name->Engie [politicalunion] of [positive]</li>
+        <li>name->The [color] [politicalunion] for [MantisNames]</li>
+        <li>name->[color] [negative] [MantisNames] </li>
+        <li>name->[negative] [MantisAdj] [terrainfeature]</li>
+        <li>name->The [MantisAdj] [terrainfeature] [MantisNames]</li>
+        <li>name->The [color] [terrainfeature] [MantisNames]</li>
+		<li>name->[MantisAdj] [MantisNames] [politicalunion]</li>
+		<li>name->[MantisAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[MantisAdj] [MantisName] [politicalunion]</li>
+		<li>name->[MantisAdj] [MantisNames] [politicalunion]</li>
       </rulesStrings>
       <rulesRaw>
-        <li Class="Rule_File">
+		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
         </li>
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		<!-- adj -->
+		<li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>MantisAdj</keyword>
+          <path>MantisNames/MantisAdj</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>MantisNames</keyword>
+          <path>MantisNames/MantisNames</path>
+        </li>
+
       </rulesRaw>
     </rulePack>
   </RulePackDef>
@@ -29,21 +52,44 @@
     <defName>NamerBaseMantisVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [terrainfeature] Hive</li>
-        <li>name->[terrainfeature] Hive</li>
-        <li>name->[positive] Hive</li>
-        <li>name->[color] [positive] Hive</li>
-        <li>name->[terrainfeature] [positive] Hive</li>
+        <li>name->The [negative] [terrainfeature] [MantisNames]</li>
+        <li>name->[color] [negative] [MantisNames] </li>
+        <li>name->[negative] [MantisAdj] [terrainfeature]</li>
+        <li>name->The [MantisAdj] [terrainfeature] [MantisNames]</li>
+        <li>name->The [color] [MantisNames] [terrainfeature]</li>
+		<li>name->[MantisAdj] [negative] [politicalunion]</li>
+		<li>name->[MantisAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[MantisAdj] [MantisName] [politicalunion]</li>
+		<li>name->The [politicalunion] for [color] [MantisNames] </li>
       </rulesStrings>
       <rulesRaw>
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
         <li Class="Rule_File">
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		<!-- adj -->
         <li Class="Rule_File">
-          <keyword>positive</keyword>
-          <path>Words/Nouns/Concepts_Positive</path>
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
         </li>
+		<li Class="Rule_File">
+          <keyword>MantisAdj</keyword>
+          <path>MantisNames/MantisAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>MantisNames</keyword>
+          <path>MantisNames/MantisNames</path>
+        </li>
+
       </rulesRaw>
     </rulePack>
   </RulePackDef>

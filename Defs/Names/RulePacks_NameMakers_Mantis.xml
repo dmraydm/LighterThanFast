@@ -5,12 +5,17 @@
     <defName>NamerPersonMantis</defName>
     <rulePack>
 		<rulesStrings>
+        <li>name->[badass] '[MantisAdj]' [animal]</li>
         <li>name->[negative] '[color]' [badassanimal]</li>
-        <li>name->[badassanimal] [animal]</li>
-        <li>name->[color] '[negative]' [badassanimal]</li>
-        <li>name->[negative] '[badassanimal]' [animal]</li>
-        <li>name->[animal] '[negative]' [badassanimal]</li>
-        <li>name->[badassanimal] '[color]' [negative]</li>
+        <li>name->[MantisAdj] '[badass]' [roman] </li>
+        <li>name->[negative] '[MantisAdj]' [badassanimal]</li>
+		<li>name->[roman] '[MantisAdj2]' [MantisNames2]  </li>
+        <li>name->[roman] '[color]' [MantisNames]</li>
+		<li>name->[roman] '[MantisAdj]' [MantisNames]</li>
+		<li>name->[color] '[MantisAdj2]' [MantisNames2]</li>
+		<li>name->[negative] '[MantisAdj2]' [MantisNames]</li>
+        <li>name->[color] '[MantisNames2]' [roman]</li>
+        <li>name->[roman] '[MantisAdj2]' [badassanimal] </li>
 		</rulesStrings>
 	  
 	<rulesRaw>
@@ -41,6 +46,23 @@
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>MantisAdj</keyword>
+          <path>MantisNames/MantisAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>MantisAdj2</keyword>
+          <path>MantisNames/MantisAdj2</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>MantisNames</keyword>
+          <path>MantisNames/MantisNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>MantisNames2</keyword>
+          <path>MantisNames/MantisNames2</path>
         </li>
 	</rulesRaw>
 	  

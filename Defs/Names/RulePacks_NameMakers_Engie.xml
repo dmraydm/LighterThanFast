@@ -5,12 +5,12 @@
     <defName>NamerPersonEngie</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[engie] [moreit]</li>
-        <li>name->[engie] [it]</li>
+        <li>name->[color] '[animal]' [moreit]</li>
+        <li>name->[moreit] '[color]' [games]</li>
         <li>name->[engie] '[moreit]' [it]</li>
-        <li>name->[it] '[scifi]' [moreit]</li>
-        <li>name->[engie] '[scifi]' [it]</li>
-        <li>name->[engie] '[it]' [scifi]</li>
+        <li>name->[scifi] '[games]' [version]</li>
+        <li>name->[engie] '[it]' [animal]</li>
+        <li>name->[engie] '[scifi]' [animal]</li>
       </rulesStrings>
 
       <rulesRaw>
@@ -29,6 +29,18 @@
         <li Class="Rule_File">
           <keyword>it</keyword>
           <path>EngieNames/It</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>version</keyword>
+          <path>EngieNames/Version</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>animal</keyword>
+          <path>Words/Nouns/Animals</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>games</keyword>
+          <path>Words/Nouns/Games</path>
         </li>
 		<!--
         <li Class="Rule_File">

@@ -6,15 +6,21 @@
     <defName>NamerFactionEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->DB [it] cluster [version]</li>
-        <li>name->The [scifi] [it] datacenter [version] </li>
-        <li>name->Meta[moreit] [version] [politicalunion]</li>
-        <li>name->Crypto[it] [version] </li>
-        <li>name->[moreit] [politicalunion] of [positive] [version]</li>
-		<li>name->[negative] [games] of [negative] [version]</li>
-		<li>name->[positive] [politicalunion] of [negative] [version]</li>
+        <li>name->[color] [it] [moreit] </li>
+        <li>name->The [scifi] [terrainfeature] [version] </li>
+		<li>name->The [positive] [terrainfeature] [version] </li>
+        <li>name->[it] [version] [politicalunion]</li>
+        <li>name->[terrainfeature] for [moreit][version]  </li>
+		<li>name->[moreit] [version] [terrainfeature]</li>
+        <li>name->[moreit] [politicalunion] of [moreit]</li>
+		<li>name->[negative] [version] of [moreit]</li>
+		<li>name->[positive] [politicalunion] of [it]</li>
       </rulesStrings>
       <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
         <li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
@@ -61,14 +67,22 @@
     <defName>NamerBaseEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[moreit] [version] datacenter</li>
-        <li>name->[scifi] retro[moreit] HA cluster</li>
-        <li>name->[scifi] [it]nextGen parts</li>
-        <li>name->[scifi] [it] [version] series</li>
-        <li>name->[moreit] post[version] quantic dream</li>
+        <li>name->[terrainfeature] [version] [moreit]</li>
+        <li>name->[scifi] [moreit] [terrainfeature]</li>
+        <li>name->[scifi] [color] [terrainfeature]</li>
+        <li>name->[it] [version] [terrainfeature]</li>
+        <li>name->[color] [terrainfeature] [moreit]</li>
       </rulesStrings>
 	  
 	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
 		<li Class="Rule_File">
           <keyword>version</keyword>
           <path>EngieNames/Version</path>
@@ -84,6 +98,10 @@
         <li Class="Rule_File">
           <keyword>it</keyword>
           <path>EngieNames/It</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
         </li>
       </rulesRaw>
     </rulePack>

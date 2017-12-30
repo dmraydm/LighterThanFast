@@ -86,6 +86,19 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 	<alienRace>
 
 	<generalSettings>
+	
+		<factionRelations>
+                <li>
+                    <factions>
+                       <li>ZoltanFaction</li>
+                    </factions>
+                    <goodwill>
+                       <min>10</min>
+                       <max>20</max>
+                    </goodwill>
+                </li>
+		</factionRelations>
+		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
 			<alienbodytypes>
@@ -130,16 +143,7 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 				</options>
 			</alienskincolorgen>
 		</alienPartGenerator>
-		<!--
-		<factionRelations>
-			<li>
-			<goodwill>
-			   <min>-60</min>
-			   <max>40</max>
-			</goodwill>
-			</li>
-		</factionRelations>
-		-->
+
 		<!-- <chemicalSettings>.5</chemicalSettings> -->
 		<maleGenderProbability>1</maleGenderProbability>    
 		<forcedRaceTraitEntries>

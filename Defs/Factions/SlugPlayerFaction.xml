@@ -2,7 +2,8 @@
 <Defs>
 	<FactionDef Abstract="True" Name="SlugFactionBase">
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
-		<colorSpectrum><li>(0.3, 0.3, 0.3)</li></colorSpectrum>
+		<!-- rose -->
+		<colorSpectrum><li>(0.2, 0.7, 0.6)</li></colorSpectrum>
 	</FactionDef>
 
 	<FactionDef ParentName="SlugFactionBase">

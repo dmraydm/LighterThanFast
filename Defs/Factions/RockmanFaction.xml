@@ -2,10 +2,10 @@
 <Defs>
 	<FactionDef>
 		<defName>RockmanFaction</defName><!-- TribeRockman-->
-		<label>wild cluster</label>
-		<description>Some wild Rockmans</description>
-		<pawnsPlural>D state Rockmans</pawnsPlural>
-		<baseSelectionWeight>.75</baseSelectionWeight>
+		<label>Concretions and mounts</label>
+		<description>granite and slate chunks come to life. Limestone is ok.</description>
+		<pawnsPlural>mighty rockmen</pawnsPlural>
+		<baseSelectionWeight>.1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
@@ -13,10 +13,6 @@
 		
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
-		<startingGoodwill>
-			<min>10</min>
-			<max>30</max>
-		</startingGoodwill>
 
 		<factionNameMaker>NamerFactionRockmanVillage</factionNameMaker>
 		<baseNameMaker>NamerBaseRockmanVillage</baseNameMaker>
@@ -26,8 +22,12 @@
 		<hairTags>
 			<li>Rockman</li>
 		</hairTags>
+		<startingGoodwill>
+			<min>-10</min>
+			<max>-5</max>
+		</startingGoodwill>
 		<naturalColonyGoodwill>
-			<min>-50</min>
+			<min>-5</min>
 			<max>10</max>
 		</naturalColonyGoodwill>
 
@@ -43,10 +43,10 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(180, 180, 180)</li></colorSpectrum>
+		<colorSpectrum><li>(230, 150, 130)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>Systemd</leaderTitle>
+		<leaderTitle>Her–CrB GW</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
 			<min>-15</min>

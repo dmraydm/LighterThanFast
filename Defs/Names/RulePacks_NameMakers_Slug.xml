@@ -5,18 +5,22 @@
     <defName>NamerPersonSlug</defName>
     <rulePack>
 		<rulesStrings>
-        <li>name->[negative] '[color]' [badassanimal]</li>
-        <li>name->[badassanimal] [animal]</li>
-        <li>name->[color] '[negative]' [badassanimal]</li>
-        <li>name->[negative] '[badassanimal]' [animal]</li>
-        <li>name->[animal] '[negative]' [badassanimal]</li>
-        <li>name->[badassanimal] '[color]' [negative]</li>
+        <li>name->[negative] '[slugAdj]' [SlugNames2]</li>
+        <li>name->[SlugNames] [animal]</li>
+        <li>name->[slugAdj] '[negative]' [SlugNames2]</li>
+        <li>name->[negative] '[SlugNames]' [animal]</li>
+        <li>name->[animal] '[negative]' [SlugNames]</li>
+        <li>name->[color] '[slugAdj]' [SlugNames2]</li>
 		</rulesStrings>
 	  
 	<rulesRaw>
 		<li Class="Rule_File">
-          <keyword>badassanimal</keyword>
-          <path>Words/Nouns/Animals_Badass</path>
+          <keyword>SlugNames</keyword>
+          <path>SlugNames/SlugNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>SlugNames2</keyword>
+          <path>SlugNames/SlugNames2</path>
         </li>
         <li Class="Rule_File">
           <keyword>animal</keyword>
@@ -41,6 +45,10 @@
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>slugAdj</keyword>
+          <path>SlugNames/SlugAdj</path>
         </li>
 	</rulesRaw>
 	  

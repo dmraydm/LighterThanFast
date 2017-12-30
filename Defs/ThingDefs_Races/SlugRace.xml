@@ -85,6 +85,46 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	<alienRace>
 
 	<generalSettings>
+	
+			    <factionRelations>
+                <li>
+                    <factions>
+                       <li>RockmanFaction</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>-10</max>
+                    </goodwill>
+                </li>
+                <li>
+                    <factions>
+                       <li>EngieFaction</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>-10</max>
+                    </goodwill>
+                </li>
+				<li>
+                    <factions>
+                       <li>MantisFaction</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>-10</max>
+                    </goodwill>
+                </li>    
+				<li>
+                    <factions>
+                       <li>ZoltanFaction</li>
+                    </factions>
+                    <goodwill>
+                       <min>-15</min>
+                       <max>-10</max>
+                    </goodwill>
+                </li>    
+    </factionRelations>
+	
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
 			<alienbodytypes>
@@ -123,17 +163,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 				</options>
 			</alienskincolorgen>
 		</alienPartGenerator>
-<!--		
-		<factionRelations>
-			<li>
-			<goodwill>
-			   <min>-50</min>
-			   <max>20</max>
-			</goodwill>
-			</li>
-		</factionRelations>
-		-->
-		<!-- <chemicalSettings>1</chemicalSettings> -->
+
 		<maleGenderProbability>0.5</maleGenderProbability>    
 		<forcedRaceTraitEntries>
 			<li><defName>Xenophobia</defName><degree>1</degree></li>

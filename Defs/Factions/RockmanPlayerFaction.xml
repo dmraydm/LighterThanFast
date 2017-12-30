@@ -2,7 +2,8 @@
 <Defs>
 	<FactionDef Abstract="True" Name="RockmanFactionBase">
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
-		<colorSpectrum><li>(0.3, 0.3, 0.3)</li></colorSpectrum>
+		<!-- red -->
+		<colorSpectrum><li>(0.7, 0.3, 0.3)</li></colorSpectrum>
 	</FactionDef>
 
 	<FactionDef ParentName="RockmanFactionBase">

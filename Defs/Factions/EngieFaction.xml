@@ -5,7 +5,7 @@
 		<label>wild cluster</label>
 		<description>Some wild Engies</description>
 		<pawnsPlural>D state engies</pawnsPlural>
-		<baseSelectionWeight>.75</baseSelectionWeight>
+		<baseSelectionWeight>.1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Engie/npcZoom</homeIconPath>
@@ -13,10 +13,6 @@
 		
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
-		<startingGoodwill>
-			<min>10</min>
-			<max>30</max>
-		</startingGoodwill>
 
 		<factionNameMaker>NamerFactionEngieVillage</factionNameMaker>
 		<baseNameMaker>NamerBaseEngieVillage</baseNameMaker>
@@ -26,9 +22,14 @@
 		<hairTags>
 			<li>Engie</li>
 		</hairTags>
+		
+		<startingGoodwill>
+			<min>-5</min>
+			<max>15</max>
+		</startingGoodwill>
 		<naturalColonyGoodwill>
-			<min>-50</min>
-			<max>10</max>
+			<min>-15</min>
+			<max>15</max>
 		</naturalColonyGoodwill>
 
 		<visitorTraderKinds>

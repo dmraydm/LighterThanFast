@@ -1,0 +1,12 @@
+Wave
+disturbance
+Energy
+Medium
+Mechanism
+Vibration
+Transverse
+Particle
+Crest
+Trough
+Compression
+Rarefaction
