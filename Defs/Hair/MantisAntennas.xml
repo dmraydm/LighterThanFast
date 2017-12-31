@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+  <HairDef>
+    <defName>CurlAntenna</defName>
+    <label>curl</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/curl</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef>
+ 
+   <HairDef>
+    <defName>BoltAntenna</defName>
+    <label>bolt</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/bolt</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+  
+<HairDef>
+    <defName>HeartAntenna</defName>
+    <label>heart</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/heart</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+ <HairDef>
+    <defName>RamAntenna</defName>
+    <label>ram</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/ram</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+ <HairDef>
+    <defName>StraightAntenna</defName>
+    <label>straight</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/straight</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+  <HairDef>
+    <defName>LowAntenna</defName>
+    <label>low</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/low</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+  <HairDef>
+    <defName>VeeAntenna</defName>
+    <label>vee</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/vee</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+  <HairDef>
+    <defName>PeakAntenna</defName>
+    <label>peak</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/peak</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef>
+</Defs>

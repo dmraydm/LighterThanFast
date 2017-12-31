@@ -258,6 +258,19 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	</thoughtSettings>
 
 	<raceRestriction>
+	<!--
+	    <buildingList>
+                <li>HoneyCapsule</li>
+                <li>HoneyVat</li>
+                <li>ApiniWaxFloor</li>
+                <li>ApiniWaxTile</li>
+    </buildingList>
+    
+    <conceptList>
+        <li>BeeswaxMaking</li>
+        <li>ApiniMakingHoney</li>
+    </conceptList>
+	-->
 	</raceRestriction>
 
 </alienRace>

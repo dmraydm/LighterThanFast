@@ -300,7 +300,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 	<hairSettings>
 		<hasHair>true</hasHair>
 		<hairTags>
-		<li>empty</li>
+			<li>LTF_Mantis</li>
 		</hairTags>
 	</hairSettings>
 
