@@ -180,9 +180,8 @@ namespace NewHatcher
                 {
                     this.energy = this.EnergyMax;
                 }
-
-                SetLayerCounter();
             }
+            SetLayerCounter();
         }
 
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
@@ -206,13 +205,13 @@ namespace NewHatcher
 
                 // LTF : 1 shieldLayer per hit
                 this.energy--;
+                if (this.energy < 0) this.energy = 0f;
                 //this.energy -= haxLevelPerLayer;
-                SetLayerCounter();
                 //this.layerCounter--;
-                
+
                 if (dinfo.Def == DamageDefOf.EMP)
                 {
-                    this.energy = -1f;
+                    this.energy = 0f;
                     //this.layerCounter = 0;
                     SetLayerCounter();
                 }
@@ -224,6 +223,8 @@ namespace NewHatcher
                 {
                     this.AbsorbedDamage(dinfo);
                 }
+
+                SetLayerCounter();
                 return true;
             }
             return false;
@@ -240,8 +241,9 @@ namespace NewHatcher
             //float layerCntF = this.energy * this.EnergyMax;
             //this.layerCounter = Mathf.RoundToInt(this.energy) - 1;
             this.layerCounter = Mathf.RoundToInt(this.energy);
+            if ( this.layerCounter < 0f) this.layerCounter = 0;
             this.layersToSynthetize = (int)this.EnergyMax - this.layerCounter;
-            //Log.Warning("energy:" + energy + "layerNum:" + layerCounter);
+            Log.Warning("energy:" + energy + "layerNum:" + layerCounter);
         }
 
         private void AbsorbedDamage(DamageInfo dinfo)
@@ -358,7 +360,7 @@ namespace NewHatcher
                 fullMatrix.SetTRS(wearerPos, Quaternion.AngleAxis(0, Vector3.up), fullS);
 
                 // counter base
-                if (this.energy > 0)
+                if (this.layerCounter > 0)
                    {
 
                     //Log.Warning( "Energy : " + this.energy + "/" + this.EnergyMax + " Layers : " + this.layerCounter + "/" + layerNumberMax);

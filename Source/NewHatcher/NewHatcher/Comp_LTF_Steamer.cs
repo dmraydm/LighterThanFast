@@ -27,8 +27,7 @@ namespace NewHatcher
         public override void CompTickRare()
         {
             steamEmitter = this.parent;
-            Log.Warning(steamEmitter.Label + " tick = " + this.sprayTicksLeft);
-
+            //Log.Warning(steamEmitter.Label + " tick = " + this.sprayTicksLeft);
 
             if (steamEmitter == null)
             {
@@ -41,7 +40,7 @@ namespace NewHatcher
                 this.sprayTicksLeft -= 250;
                 if (Rand.Value < 1f)
                 {
-                    Log.Warning("Puffing");
+                    //Log.Warning("Puffing");
                     MoteMaker.ThrowAirPuffUp(steamEmitter.TrueCenter(), steamEmitter.Map);
 
                 }
