@@ -243,7 +243,7 @@ namespace NewHatcher
             this.layerCounter = Mathf.RoundToInt(this.energy);
             if ( this.layerCounter < 0f) this.layerCounter = 0;
             this.layersToSynthetize = (int)this.EnergyMax - this.layerCounter;
-            Log.Warning("energy:" + energy + "layerNum:" + layerCounter);
+            //Log.Warning("energy:" + energy + "layerNum:" + layerCounter);
         }
 
         private void AbsorbedDamage(DamageInfo dinfo)
