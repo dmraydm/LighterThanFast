@@ -300,11 +300,8 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
  
 	<thoughtSettings>
 		<cannotReceiveThoughts></cannotReceiveThoughts>
-		
 		<ateThoughtSpecific></ateThoughtSpecific>
-
-		<replacerList>
-		</replacerList>
+		<replacerList></replacerList>
 	</thoughtSettings>
 
 	<raceRestriction>
@@ -385,7 +382,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       </hediffGiverSets>
 </race>
     <recipes>
-		<li>InstallOvipositor</li>
+		<!-- <li>InstallOvipositor</li> -->
 		<!--base-->
 		
       <li>InstallPowerClaw</li>

@@ -469,7 +469,7 @@
           <groups>
             <li>Waist</li>
           </groups>
-
+<!--
 		   <parts>
             <li>
               <def>LTF_Ovipositor</def>
@@ -480,7 +480,7 @@
               </groups>
             </li>
 			</parts>
-
+-->
         </li>
         <li>
           <def>LeftLeg</def>

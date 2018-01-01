@@ -4,7 +4,7 @@
 	<ThoughtDef>
 		<defName>LTF_WearingOvipocitor</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>Hediff_LTF_Ovipositor</hediff>
+		<hediff>Hediff_LTF_ZoltanEgg</hediff>
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>
