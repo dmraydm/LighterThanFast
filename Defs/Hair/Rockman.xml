@@ -11,73 +11,14 @@
 		</hairTags>
  </HairDef>
  
- <!--Engie-->  
-  <HairDef>
-    <defName>EngieElec</defName>
-    <label>elec</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/EngieElec</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
-  <HairDef>
-    <defName>EngieElec2</defName>
-    <label>elec2</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/EngieElec2</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
- 
-   <HairDef>
-    <defName>EngieCirc</defName>
-    <label>circ</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/EngieCirc</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
-
-   <HairDef>
-    <defName>EngieBulb</defName>
-    <label>bulb</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/EngieBulb</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
-<!--Rockman-->
- <HairDef>
-    <defName>RockmanTip</defName>
-    <label>tip</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/RockmanTip</texPath>
-		<hairTags>
-			<li>Rockman</li>
-		</hairTags>
- </HairDef>
-
    <HairDef>
     <defName>RockmanTail</defName>
     <label>tail</label>
     <hairGender>Any</hairGender>
-    <texPath>Hair/RockmanTail</texPath>
+    <texPath>Hair/Rockman/RockmanTail</texPath>
 		<hairTags>
 			<li>Rockman</li>
 		</hairTags>
  </HairDef>
- <!--Zoltan-->
- <HairDef>
-    <defName>ZoltanWire</defName>
-    <label>wire</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/ZoltanWire</texPath>
-		<hairTags>
-			<li>Zoltan</li>
-		</hairTags>
- </HairDef> 
+ 
 </Defs>

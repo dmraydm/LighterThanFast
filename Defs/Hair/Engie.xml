@@ -4,7 +4,7 @@
     <defName>EngieElec</defName>
     <label>elec</label>
     <hairGender>Any</hairGender>
-    <texPath>Hair/EngieElec</texPath>
+    <texPath>Hair/Engie/EngieElec</texPath>
 		<hairTags>
 			<li>Engie</li>
 		</hairTags>
@@ -13,7 +13,7 @@
     <defName>EngieElec2</defName>
     <label>elec2</label>
     <hairGender>Any</hairGender>
-    <texPath>Hair/EngieElec2</texPath>
+    <texPath>Hair/Engie/EngieElec2</texPath>
 		<hairTags>
 			<li>Engie</li>
 		</hairTags>
@@ -23,7 +23,7 @@
     <defName>EngieCirc</defName>
     <label>circ</label>
     <hairGender>Any</hairGender>
-    <texPath>Hair/EngieCirc</texPath>
+    <texPath>Hair/Engie/EngieCirc</texPath>
 		<hairTags>
 			<li>Engie</li>
 		</hairTags>
@@ -33,7 +33,7 @@
     <defName>EngieBulb</defName>
     <label>bulb</label>
     <hairGender>Any</hairGender>
-    <texPath>Hair/EngieBulb</texPath>
+    <texPath>Hair/Engie/EngieBulb</texPath>
 		<hairTags>
 			<li>Engie</li>
 		</hairTags>

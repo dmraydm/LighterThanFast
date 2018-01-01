@@ -92,15 +92,17 @@
 	<thingDef>HerbalMedicine</thingDef>
 	<count>20</count>
 	</li>
-	<li Class="ScenPart_StartingThing_Defined">
-	<def>StartingThing_Defined</def>
-	<thingDef>MeleeWeapon_Club</thingDef>
-	<stuff>WoodLog</stuff>
-	</li>
+
 	<li Class="ScenPart_StartingThing_Defined">
 		<def>StartingThing_Defined</def>
 		<thingDef>MeleeWeapon_Spear</thingDef>
 		<stuff>WoodLog</stuff>
+	</li>
+	<!-- weapon -->
+	<li Class="ScenPart_StartingThing_Defined">
+	<def>StartingThing_Defined</def>
+	<thingDef>MeleeWeapon_Club</thingDef>
+	<stuff>WoodLog</stuff>
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
 		<def>StartingThing_Defined</def>

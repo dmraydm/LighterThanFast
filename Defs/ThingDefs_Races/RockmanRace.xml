@@ -220,6 +220,8 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<li>
 			<body>Rockman/Body/</body>
 			<head>Rockman/Head/</head>
+			<skeleton>Humanoid/HumanoidDessicated</skeleton>
+			<skull>Humanoid/Skull</skull>
 		</li>
 	</graphicPaths>
 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--Zoltan-->
+ <HairDef>
+    <defName>ZoltanWire</defName>
+    <label>wire</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/Zoltan/ZoltanWire</texPath>
+		<hairTags>
+			<li>Zoltan</li>
+		</hairTags>
+ </HairDef> 
+</Defs>

@@ -241,32 +241,32 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 				<li>Normal</li>
 			</aliencrowntypes>
 			
-			<!--<useSkincolorForHair>true</useSkincolorForHair>-->
+			<useSkincolorForHair>true</useSkincolorForHair>
 			<!--<customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize>-->
 			<alienskincolorgen Class="ColorGenerator_Options">
 				<options>
-				<!-- dark -->
-					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
-					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+				<!-- brown -->
+					<li><weight>10</weight><only>RGBA(.9, .8, .5,1)</only></li>
+					<li><weight>5</weight><only>RGBA(.7, .8, .4,1)</only></li>
+					<li><weight>2</weight><only>RGBA(.7, .6, .3,1)</only></li>
 				<!-- green -->
-					<li><weight>16</weight><only>RGBA(0.9,1,0.9,1)</only></li>
-					<li><weight>10</weight><only>RGBA(0.8,1,0.8,1)</only></li>
-					<li><weight>6</weight><only>RGBA(0.7,1,0.7,1)</only></li>
-					<li><weight>4</weight><only>RGBA(0.6,1,0.6,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.5,1,0.5,1)</only></li>
+					<li><weight>16</weight><only>RGBA(.9, 1, .8, 1)</only></li>
+					<li><weight>10</weight><only>RGBA(.7, 1, .8, 1)</only></li>
+					<li><weight>6</weight><only>RGBA(.7, 1, .6, 1)</only></li>
+					<li><weight>4</weight><only>RGBA(.5, 1, .6, 1)</only></li>
+					<li><weight>2</weight><only>RGBA(.5, 1, .4, 1)</only></li>
 				<!-- blue -->
-					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
-					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
-					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
-					<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
+					<li><weight>8</weight><only>RGBA(.8, .9, 1, 1)</only></li>
+					<li><weight>5</weight><only>RGBA(.8, .7, 1, 1)</only></li>
+					<li><weight>3</weight><only>RGBA(.6, .7, 1, 1)</only></li>
+					<li><weight>2</weight><only>RGBA(.6, .5, 1, 1)</only></li>
+					<li><weight>1</weight><only>RGBA(.4, .5, 1, 1)</only></li>
 				<!-- red -->
-					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
-					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
-					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
-					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
-					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+					<li><weight>8</weight><only>RGBA(1, .9, .8, 1)</only></li>
+					<li><weight>5</weight><only>RGBA(1, .7, .8, 1)</only></li>
+					<li><weight>3</weight><only>RGBA(1, .7, .6, 1)</only></li>
+					<li><weight>2</weight><only>RGBA(1, .5, .6, 1)</only></li>
+					<li><weight>1</weight><only>RGBA(1, .5, .4, 1)</only></li>
 				</options>
 			</alienskincolorgen>
 			
@@ -294,6 +294,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<li>
 			<body>Mantis/Body/</body>
 			<head>Mantis/Head/</head>
+			<skeleton>Humanoid/HumanoidDessicated</skeleton>
+			<skull>Humanoid/Skull</skull>
 		</li>
 	</graphicPaths>
 

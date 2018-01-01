@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ <!-- unisex -->
+ <HairDef>
+    <defName>Bolt</defName>
+    <label>bolt</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/Mantis/bolt</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+  <!-- male -->
+ <HairDef>
+    <defName>CrownStache</defName>
+    <label>crownstache</label>
+    <hairGender>Male</hairGender>
+    <texPath>Hair/Mantis/Male/crownstache</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+ <HairDef>
+    <defName>Stache</defName>
+    <label>stache</label>
+    <hairGender>Male</hairGender>
+    <texPath>Hair/Mantis/Male/stache</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+   <HairDef>
+    <defName>Crown</defName>
+    <label>crown</label>
+    <hairGender>Male</hairGender>
+    <texPath>Hair/Mantis/Male/crown</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef>
+ 
+ <!-- female -->
+ 
+ <HairDef>
+    <defName>Stache</defName>
+    <label>stache</label>
+    <hairGender>Female</hairGender>
+    <texPath>Hair/Mantis/Female/stache</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef> 
+ 
+   <HairDef>
+    <defName>Crown</defName>
+    <label>crown</label>
+    <hairGender>Female</hairGender>
+    <texPath>Hair/Mantis/Female/crown</texPath>
+		<hairTags>
+			<li>LTF_Mantis</li>
+		</hairTags>
+ </HairDef>
+</Defs>

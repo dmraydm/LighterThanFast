@@ -103,6 +103,11 @@
 			<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
 		</li>
 
+		<li Class="ScenPart_StartingThing_Defined">
+			<def>StartingThing_Defined</def>
+			<thingDef>Gun_PumpShotgun</thingDef>
+		</li>
+		
 		<!-- Scatter some things near player start -->
 		<li Class="ScenPart_ScatterThingsNearPlayerStart">
 			<def>ScatterThingsNearPlayerStart</def>
