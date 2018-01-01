@@ -20,6 +20,8 @@ namespace NewHatcher
         //private float energyYieldPct;
         private float energySynthesisCapacity;
 
+        float layerMulti = 3.5f;
+
         private const float shieldLayerWork = 7200f; // 120sec = 60 tick * 120 = 7200 tick
         private float benchRadius = 13;
 
@@ -51,7 +53,7 @@ namespace NewHatcher
 //            float meleeValue = layerSynthetizer.GetStatValue(StatDefOf.MeleeDodgeChance, true);
             //float yeldValue = layerSynthetizer.GetStatValue(StatDefOf., true);
 
-            return (intelligenceValue + Rand.Range(rangedValue*.75f , rangedValue*1.25f)) * craftValue;
+            return (intelligenceValue + Rand.Range(rangedValue*.75f , rangedValue*1.25f)) * craftValue * layerMulti;
         }
 
         // Appel ? debug JobDriver_OperateDeepDrill.cs

@@ -160,8 +160,8 @@ namespace NewHatcher
             if (base.Wearer == null)
             {
                 this.energy = 0f;
-                this.layerCounter = 0;
-                
+                SetLayerCounter();
+
                 return;
             }
 
@@ -207,11 +207,14 @@ namespace NewHatcher
                 // LTF : 1 shieldLayer per hit
                 this.energy--;
                 //this.energy -= haxLevelPerLayer;
-                this.layerCounter--;
+                SetLayerCounter();
+                //this.layerCounter--;
                 
                 if (dinfo.Def == DamageDefOf.EMP)
                 {
                     this.energy = -1f;
+                    //this.layerCounter = 0;
+                    SetLayerCounter();
                 }
                 if (this.layerCounter == 0f)
                 {
@@ -267,7 +270,7 @@ namespace NewHatcher
                 MoteMaker.ThrowDustPuff(loc, base.Wearer.Map, Rand.Range(0.8f, 1.2f));
             }
             this.energy = 0f;
-            this.layerCounter = 0;
+            SetLayerCounter();
             this.ticksToReset = this.StartingTicksToReset;
         }
 
