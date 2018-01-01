@@ -37,7 +37,25 @@
 		</comps>
 
 		<spawnThingOnRemoved>LTF_Ovipositor</spawnThingOnRemoved>
-
+<!--
 	</HediffDef>
+		<HediffDef ParentName="AddedBodyPartBase">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<defaultLabelColor>(232, 157, 27)</defaultLabelColor>
+		<isBad>false</isBad>
+		<defName>Ovipositor</defName>
+		<label>ovipositor</label>
+		<addedPartProps>
+			<isBionic>true</isBionic>
+			<isSolid>true</isSolid>
+		</addedPartProps>
+		<comps>
+			<li Class="NewHatcher.HediffCompProperties_Hatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>Ovipositor</spawnThingOnRemoved>
+	</HediffDef>
+	-->
 
 </Defs>
