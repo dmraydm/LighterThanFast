@@ -19,12 +19,14 @@
         <li>name->[color] '[it]' [version]</li>
 		<li>name->[workPlaces] '[engie]' [moreit]</li>		
 		
-		<li>name->[moreit] '[workPlaces]' [engie]</li>
-		<li>name->[color] '[workPlaces]' [engie]</li>
+		<li>name->[moreit] '[sci]' [engie]</li>
+		<li>name->[color] '[scifi]' [engie]</li>
 		<li>name->[workPlaces] '[version]' [engie]</li>
 		
-		<li>name->[engie] '[animal]' [engie]</li>
+		<li>name->[it] '[animal]' [engie]</li>
 		<li>name->[color] '[animal]' [engie]</li>
+		
+		<li>name->[scifi] [workPlaces]</li>
       </rulesStrings>
 
       <rulesRaw>

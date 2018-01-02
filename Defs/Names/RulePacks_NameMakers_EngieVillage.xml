@@ -6,12 +6,16 @@
     <defName>NamerFactionEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] [it] [workPlaces] </li>
-        <li>name->The [scifi] [terrainfeature] [version] </li>
-		<li>name->The [positive] [terrainfeature] engi [type] [workPlaces] </li>
+        <li>name->[color] [it] [workPlaces]</li>
+		<li>name->[it] [scifi] [workPlaces]</li>
+		<li>name->[it] [scifi] [terrainfeature]</li>
+        <li>name->The [scifi] [terrainfeature] [version]</li>
+		<li>name->The [positive] [terrainfeature] engi [type] [workPlaces]</li>
         <li>name->[it] [workPlaces] [politicalunion]</li>
-        <li>name->[terrainfeature] for [moreit] [version]  </li>
+        <li>name->[terrainfeature] for [moreit] [version]</li>
 		<li>name->[moreit] [workPlaces] [terrainfeature]</li>
+		<li>name->[terrainfeature] for [scifi] [version]</li>
+		<li>name->[scifi] [workPlaces] [terrainfeature]</li>
         <li>name->[politicalunion] [type] of [moreit]</li>
 		<li>name->[negative] [workPlaces] of [moreit]</li>
 		<li>name->[positive] [politicalunion] of [it]</li>
@@ -109,7 +113,11 @@
         <li>name->[workPlaces] [version] [terrainfeature]</li>
         <li>name->[color] [terrainfeature] [workPlaces]</li>
 		
-		<li>name->[color] [version] [workPlaces]</li>
+		<li>name->[color] [moreit] [workPlaces]</li>
+
+        <li>name->[color] [scifi] [terrainfeature]</li>
+		<li>name->[color] [scifi] [workPlaces]</li>
+
 		
 		<li>name->[lightVessel] [type] [vesselRelated]</li>
 		<li>name->[mediumVessel] [type] [terrainfeature]</li>

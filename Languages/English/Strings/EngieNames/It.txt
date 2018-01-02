@@ -120,7 +120,7 @@ Node
 Offline
 Online
 Opensource
-Operatingsystem
+Operating system
 Option
 Output
 Page

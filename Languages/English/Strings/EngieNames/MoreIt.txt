@@ -1,7 +1,7 @@
 Agile
 Archaeology
 Architecture
-Aspectoriented
+Aspect oriented
 Basili
 Beck 
 Boehm
@@ -36,7 +36,7 @@ Methodology
 Meyer
 Modeling
 Models 	
-Objectorientation
+Object oriented
 Ontology
 Orientations 	
 Orthogonality

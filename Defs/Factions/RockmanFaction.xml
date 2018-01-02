@@ -48,7 +48,7 @@
 		<colorSpectrum><li>(230, 180, 155)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>H–C Borealis Gateway</leaderTitle>
+		<leaderTitle>HCB Gateway</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
 			<min>-5</min>
