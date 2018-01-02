@@ -5,7 +5,8 @@
 		<label>Concretions</label>
 		<description>granite and slate chunks come to life. Limestone is ok.</description>
 		<pawnsPlural>mighty rockmen</pawnsPlural>
-		<baseSelectionWeight>.15</baseSelectionWeight>
+		
+		<baseSelectionWeight>.5</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
@@ -22,6 +23,7 @@
 		<hairTags>
 			<li>Rockman</li>
 		</hairTags>
+		
 		<startingGoodwill>
 			<min>-10</min>
 			<max>-5</max>
@@ -46,7 +48,7 @@
 		<colorSpectrum><li>(230, 180, 155)</li></colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
-		<leaderTitle>Hercules–Corona Borealis GW</leaderTitle>
+		<leaderTitle>H–C Borealis Gateway</leaderTitle>
 
 		<allowedArrivalTemperatureRange>
 			<min>-5</min>

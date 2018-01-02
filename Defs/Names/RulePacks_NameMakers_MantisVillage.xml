@@ -15,8 +15,35 @@
 		<li>name->[Adjective] [terrainfeature] [politicalunion]</li>
 		<li>name->[Adjective] [Locations] [politicalunion]</li>
 		<li>name->[Adjective] [Races] [politicalunion]</li>
+		
+		<li>name->[mediumVessel] [type] [terrainfeature]</li>
+		<li>name->[mediumVessel] [vesselRelated] [politicalunion]</li>
+		<li>name->[Adjective] [heavyVessel] [type] [politicalunion]</li>
+		<li>name->[Adjective] [lightVessel] [type] [Locations] </li>
+		
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
 		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
@@ -76,8 +103,35 @@
 		<li>name->[Adjective] [Locations] [terrainfeature]</li>
 		<li>name->[Adjective] [Races] [politicalunion]</li>
 		<li>name->[MantisNames] [Adjective] [Locations]</li>
+		
+		<li>name->The [mediumVessel] [type] [vesselRelated]</li>
+		<li>name->The [mediumVessel] [type] [terrainfeature]</li>
+		<li>name->[heavyVessel] [type] [Locations]</li>
+		
+		<li>name->[Adjective] [lightVessel] [vesselRelated] [Locations]</li>
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
 		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>

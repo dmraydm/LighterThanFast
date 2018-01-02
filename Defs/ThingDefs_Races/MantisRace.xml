@@ -187,8 +187,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Male>(-.33,	.15)</Male>
 								<!-- +-0.2 -->
 								<Female>(-.415,	.15)</Female>
-								<Male>(-.315,	.15)</Male>
-								<Male>(-.315,	.15)</Male>
+								<Thin>(-.415,	.15)</Thin>
+								<Hulk>(-.315,	.15)</Hulk>
 							</bodyTypes>
 						</front>
 						<!-- seen left ~ M -0.024 F -->
@@ -231,7 +231,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<!-- -11.75 -->
 								<Male>(-.53,	.15)</Male>
 								<Female>(-.46,	.15)</Female>
-								<Thin>(-.55,	.15)</Thin>
+								<Thin>(-.46,	.15)</Thin>
 								<Hulk>(-.55,	.15)</Hulk>
 							</bodyTypes>
 						</front>

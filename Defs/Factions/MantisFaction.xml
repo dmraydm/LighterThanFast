@@ -5,7 +5,8 @@
 		<label>razor-sharp swarm</label>
 		<description>Organized group of bloodthirsty mantiss</description>
 		<pawnsPlural>deadly mantiss</pawnsPlural>
-		<baseSelectionWeight>.2</baseSelectionWeight>
+		
+		<baseSelectionWeight>1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Mantis/npcZoom</homeIconPath>

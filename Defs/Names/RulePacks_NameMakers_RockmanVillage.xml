@@ -19,8 +19,44 @@
 		
         <li>name->[minerals] [Religious] [politicalunion]</li>
         <li>name->[color] [minerals] [Religious] [terrainfeature]</li>
+		
+		<li>name->[color] [mediumVessel] [type] [vesselRelated]</li>
+		<li>name->[color] [heavyVessel] [type] [Religious]</li>
+		<li>name->[heavyVessel] [type] [Religious] [politicalunion]</li>
+		<!--
+		<li>[Religious] [vesselRelated] [politicalunion]</li>
+		<li>[color] [heavyVessel] [type] [vesselRelated]</li>
+		-->
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+	  
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+
+		<!-- nouns -->
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
         <li Class="Rule_File">
           <keyword>mountains</keyword>
           <path>RockmanNames/Mountains</path>
@@ -29,6 +65,8 @@
           <keyword>minerals</keyword>
           <path>RockmanNames/Minerals</path>
         </li>
+
+		<!-- adj -->
         <li Class="Rule_File">
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
@@ -41,6 +79,7 @@
           <keyword>Religious</keyword>
           <path>RockmanNames/Religious</path>
         </li>
+		
       </rulesRaw>
     </rulePack>
   </RulePackDef>
@@ -49,8 +88,7 @@
     <defName>NamerBaseRockmanVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[terrainfeature] [color] [minerals]</li>
-		<li>name->[terrainfeature] [color] [mountains]</li>
+		<li>name->[color] [terrainfeature] [mountains]</li>
         <li>name->[positive] [terrainfeature] of [mountains]</li>
         <li>name->[positive] [minerals] [mountains]</li>
 		<li>name->[positive] [mountains] [minerals]</li>
@@ -65,8 +103,37 @@
 		<li>name->[positive] [Religious] [Mountains]</li>
 		<li>name->[color] [Religious] [Mountains]</li>
 		
+		<li>name->[color] [mediumVessel] [type] [vesselRelated]</li>
+		<li>name->[heavyVessel] [type] [terrainfeature] [Religious]</li>
+		<li>name->[heavyVessel] [type] [Religious] [politicalunion]</li>
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
         <li Class="Rule_File">
           <keyword>mountains</keyword>
           <path>RockmanNames/Mountains</path>
@@ -75,6 +142,7 @@
           <keyword>minerals</keyword>
           <path>RockmanNames/Minerals</path>
         </li>
+<!-- Adj -->
 		<li Class="Rule_File">
           <keyword>Religious</keyword>
           <path>RockmanNames/Religious</path>
@@ -83,6 +151,7 @@
           <keyword>color</keyword>
           <path>Words/Nouns/Colors</path>
         </li>
+		
       </rulesRaw>
     </rulePack>
   </RulePackDef>

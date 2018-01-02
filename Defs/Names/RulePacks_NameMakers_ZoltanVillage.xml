@@ -15,8 +15,36 @@
 		<li>name->[virtuous] [terrainfeature] [politicalunion]</li>
 		<li>name->[illusion] [wavyAdj] [politicalunion]</li>
 		<li>name->[virtuous] [wavyName] [politicalunion]</li>
+
+		<li>name->[lightVessel] [type] [vesselRelated]</li>
+		<li>name->[mediumVessel] [type] [terrainfeature]</li>
+		<li>name->[virtuous] [mediumVessel] [type] [politicalunion]</li>
+		<li>name->[wavyAdj] [mediumVessel] [type] [vesselRelated]</li>
+		<li>name->[virtuous] [vesselRelated] [politicalunion]</li>
+		<li>name->[wavyAdj] [mediumVessel] [type] [politicalunion]</li>
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
 		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
@@ -73,8 +101,36 @@
 		<li>name->[transparent] [terrainfeature] [wavyName]</li>
 		<li>name->[shining] [wavyAdj] [wavyName]</li>
 		<li>name->[virtuous] [illusion] [wavyName]</li>
+		
+		<li>name->[lightVessel] [type] [vesselRelated]</li>
+		<li>name->[mediumVessel] [type] [terrainfeature]</li>
+		<li>name->[virtuous] [mediumVessel] [type] [politicalunion]</li>
+		<li>name->[wavyAdj] [mediumVessel] [type] [vesselRelated]</li>
+		<li>name->[virtuous] [vesselRelated] [politicalunion]</li>
+		<li>name->[wavyAdj] [mediumVessel] [type] [politicalunion]</li>
       </rulesStrings>
-      <rulesRaw>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
 		
         <li Class="Rule_File">
           <keyword>terrainfeature</keyword>

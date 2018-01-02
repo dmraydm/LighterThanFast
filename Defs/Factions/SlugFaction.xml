@@ -5,7 +5,8 @@
 		<label>Awkward gasteropods</label>
 		<description>Far from nebula homelands slugs</description>
 		<pawnsPlural>untrustworthy slugs</pawnsPlural>
-		<baseSelectionWeight>.15</baseSelectionWeight>
+		
+		<baseSelectionWeight>1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Slug/npcZoom</homeIconPath>
@@ -24,8 +25,8 @@
 		</hairTags>
 		
 		<startingGoodwill>
-			<min>-5</min>
-			<max>5</max>
+			<min>-30</min>
+			<max>-10</max>
 		</startingGoodwill>
 		<naturalColonyGoodwill>
 			<min>-20</min>

@@ -5,7 +5,8 @@
 		<label>luminous aurora</label>
 		<description>Source energy seeking Zoltans</description>
 		<pawnsPlural>Bright Zoltans</pawnsPlural>
-		<baseSelectionWeight>.15</baseSelectionWeight>
+		
+		<baseSelectionWeight>1</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Zoltan/npcZoom</homeIconPath>
