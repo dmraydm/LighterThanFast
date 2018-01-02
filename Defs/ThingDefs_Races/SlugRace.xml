@@ -134,6 +134,56 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 				<li>Thin</li>
 			</alienbodytypes>
 			<useGenderedHeads>false</useGenderedHeads>
+			
+			<bodyAddons>
+			               <!-- SlugStache-->
+				<li>
+					<path>Slug/Stache/Stache</path>
+					<bodyPart>BodyPart_LTF_SlugStache</bodyPart>
+					<inFrontOfBody>true</inFrontOfBody>
+					<useSkinColor>true</useSkinColor>
+					
+					<offsets>
+						<!-- front -->
+						<front>
+							<bodyTypes>
+								<Male>(-.42,	.5)</Male>
+								<Female>(-.42,	.5)</Female>
+								<Thin>(-.42,	.5)</Thin>
+								<Hulk>(-.42,	.5)</Hulk>
+							</bodyTypes>
+						</front>
+						<!-- side -->
+						<side>
+							<bodyTypes>
+								<!-- <Male>(-.42,	.5)</Male> -->
+								<Male>(-.44,	.55)</Male>
+								<!-- <Female>(-.465,	.5)</Female> -->
+								<Female>(-.475,	.545)</Female>
+								<Thin>(-.465,	.53)</Thin>
+								<Hulk>(-.47,	.54)</Hulk>
+							</bodyTypes>
+						</side>
+						<!-- back -->
+						<back>
+							<bodyTypes>
+								<Male>(0,	.85)</Male>
+								<Female>(0, .87)</Female>
+								<Thin>(0,	.85)</Thin>
+								<Hulk>(0,	.85)</Hulk>
+							</bodyTypes>
+						</back>
+					</offsets>
+					
+					<hiddenUnderApparelFor>
+						<li>FullHead</li>
+					</hiddenUnderApparelFor>
+				</li>
+			</bodyAddons>	
+
+			<headBodyPartDef>BodyPart_LTF_SlugStache</headBodyPartDef>
+			<useSkincolorForHair>true</useSkincolorForHair>
+			
 			<alienskincolorgen Class="ColorGenerator_Options">
 				<options>
 				<!-- dark -->
@@ -181,8 +231,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	<hairSettings>
 		<hasHair>true</hasHair>
 		<hairTags>
-		<li>Tribal</li>
-		<li>empty</li>
+			<li>LTF_Slug</li>
 		</hairTags>
 	</hairSettings>
 
@@ -288,7 +337,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
       <leatherLabel>Slug leather</leatherLabel>
       <leatherMarketValueFactor>3</leatherMarketValueFactor>
       <nameCategory>HumanStandard</nameCategory>
-      <body>Human</body>
+      <body>Slug</body>
       <baseBodySize>1.0</baseBodySize>
       <baseHealthScale>1.0</baseHealthScale>
       <baseHungerRate>1.0</baseHungerRate>

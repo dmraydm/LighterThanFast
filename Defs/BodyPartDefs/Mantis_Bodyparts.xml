@@ -39,7 +39,8 @@
 	</BodyPartDef>
 	
 	<!-- right claw -->  
-	<BodyPartDef ParentName="BodyPart_LTF_Claws">
+	<!-- <BodyPartDef ParentName="BodyPart_LTF_Claws"> -->
+	<BodyPartDef>
 		<defName>BodyPart_LTF_MantisStache</defName>
 		<label>mantis stache</label>
 		<hitPoints>5</hitPoints>

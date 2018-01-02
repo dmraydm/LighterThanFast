@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HairDef>
+		<defName>Antenna</defName>
+		<label>antenna</label>
+		<hairGender>Any</hairGender>
+		<texPath>Hair/Slug/Antenna</texPath>
+		<hairTags>
+			<li>LTF_Slug</li>
+		</hairTags>
+	</HairDef> 
+ 
+</Defs>
