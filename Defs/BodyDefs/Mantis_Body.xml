@@ -299,6 +299,14 @@
                     <li>FullHead</li>
                   </groups>
                 </li>
+				 <li>
+                  <def>BodyPart_LTF_MantisStache</def>
+                  <coverage>0.03</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+
               </parts>
             </li>
           </parts>

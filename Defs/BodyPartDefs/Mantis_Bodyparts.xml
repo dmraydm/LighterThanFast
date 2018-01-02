@@ -16,7 +16,7 @@
 	<BodyPartDef Name="BodyPart_LTF_Claws" Abstract="True">
 		<hitPoints>20</hitPoints>
 		<isSolid>true</isSolid>
-		<frostbiteVulnerability>.1</frostbiteVulnerability>
+		<frostbiteVulnerability>.05</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.01</oldInjuryBaseChance>
 		<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
 		<skinCovered>true</skinCovered>
@@ -36,5 +36,19 @@
 		<defName>BodyPart_LTF_LeftClaws</defName>
 		<label>left claws</label>
 		<spawnThingOnRemoved>LTF_MantisLeftClaws</spawnThingOnRemoved>
+	</BodyPartDef>
+	
+	<!-- right claw -->  
+	<BodyPartDef ParentName="BodyPart_LTF_Claws">
+		<defName>BodyPart_LTF_MantisStache</defName>
+		<label>mantis stache</label>
+		<hitPoints>5</hitPoints>
+		<isSolid>true</isSolid>
+		<frostbiteVulnerability>.2</frostbiteVulnerability>
+		<oldInjuryBaseChance>0.03</oldInjuryBaseChance>
+		<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<!-- <spawnThingOnRemoved>LTF_MantisRightClaws</spawnThingOnRemoved> -->
 	</BodyPartDef>
 </Defs>

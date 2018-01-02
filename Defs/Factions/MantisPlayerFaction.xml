@@ -8,7 +8,7 @@
 
 	<FactionDef ParentName="MantisFactionBase">
 		<defName>MantisPlayerColony</defName>
-		<label>Tribal mantis hive</label>
+		<label>Tribal hive</label>
 		<description>Will your tribes kill each other before or after diner ?</description>
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Mantis</basicMemberKind>

@@ -180,24 +180,34 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<angle>5</angle>
 					<useSkinColor>true</useSkinColor>
 					<offsets>
-						<!-- Left front -->
+						<!-- seen right ~ -0.4325 --> 
 						<front>
 							<bodyTypes>
-								<!--<Male>(-0.33,.1)</Male>-->
-								<Male>(-0.33,.1)</Male>
-								<Female>(-0.36,.1)</Female>
-								<Thin>(-0.33,.1)</Thin>
-								<Hulk>(-0.33,.1)</Hulk>
+								<!-- +0.1075 --> <!-- 2150/2 -->
+								<Male>(-.33,	.15)</Male>
+								<!-- +-0.2 -->
+								<Female>(-.415,	.15)</Female>
+								<Male>(-.315,	.15)</Male>
+								<Male>(-.315,	.15)</Male>
 							</bodyTypes>
 						</front>
+						<!-- seen left ~ M -0.024 F -->
+						<back>
+							<bodyTypes>
+								<Male>(	-.12,	.52)</Male>
+								<Female>(-.035,	.52)</Female>
+								<Thin>(	-.13,	.52)</Thin>
+								<Hulk>(	-.13,	.52)</Hulk>
+							</bodyTypes>
+						</back>
 						<!-- Left side -->
 						<side>
 							<bodyTypes>
 								<!--<Male>(-0.65,.1)</Male>-->
-								<Male>(-0.65,.1)</Male>
-								<Female>(-0.65,.1)</Female>
-								<Thin>(-0.65,.1)</Thin>
-								<Hulk>(-0.65,.1)</Hulk>
+								<Male>(-.65,	.15)</Male>
+								<Female>(-.65,	.15)</Female>
+								<Thin>(-.65,	.15)</Thin>
+								<Hulk>(-.65,	.15)</Hulk>
 							</bodyTypes>
 						</side>
 					</offsets>
@@ -215,16 +225,26 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<inFrontOfBody>true</inFrontOfBody>
 					<useSkinColor>true</useSkinColor>
 					<offsets>
-						<!-- Right side -->
+						<!-- seen left -->
 						<front>
 							<bodyTypes>
-								<!--<Male>(-0.55,.1)</Male>-->
-								<Male>(-0.55,.1)</Male>
-								<Female>(-0.58,.1)</Female>
-								<Thin>(-0.55,.1)</Thin>
-								<Hulk>(-0.55,.1)</Hulk>
+								<!-- -11.75 -->
+								<Male>(-.53,	.15)</Male>
+								<Female>(-.46,	.15)</Female>
+								<Thin>(-.55,	.15)</Thin>
+								<Hulk>(-.55,	.15)</Hulk>
 							</bodyTypes>
 						</front>
+						<!-- seen right -->
+						
+						<back>
+							<bodyTypes>
+								<Male>(	.09,	.52)</Male>
+								<Female>(0.005,	.52)</Female>
+								<Thin>(	.08,	.52)</Thin>
+								<Hulk>(	.08,	.52)</Hulk>
+							</bodyTypes>
+						</back>
 
 					</offsets>
 					<backstoryGraphics>
@@ -233,6 +253,55 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<hediffGraphics>
 						<Hediff_LTF_RightSteelClaws>Mantis/SyntClaws/Right/Right</Hediff_LTF_RightSteelClaws>
 					</hediffGraphics>
+				</li>
+                <!-- MantisStache-->
+				<li>
+					<path>Mantis/Stache/stache</path>
+					<bodyPart>BodyPart_LTF_MantisStache</bodyPart>
+					<inFrontOfBody>true</inFrontOfBody>
+					<useSkinColor>true</useSkinColor>
+					
+					<offsets>
+						<!-- front -->
+						<front>
+							<bodyTypes>
+								<Male>(-.42,	.5)</Male>
+								<Female>(-.42,	.5)</Female>
+								<Thin>(-.42,	.5)</Thin>
+								<Hulk>(-.42,	.5)</Hulk>
+							</bodyTypes>
+						</front>
+						<!-- side -->
+						<side>
+							<bodyTypes>
+								<Male>(-.42,	.5)</Male>
+								<Female>(-.48,	.5)</Female>
+								<Thin>(-.42,	.5)</Thin>
+								<Hulk>(-.42,	.5)</Hulk>
+							</bodyTypes>
+						</side>
+						<!-- back -->
+						<back>
+							<bodyTypes>
+								<Male>(0,	.85)</Male>
+								<Female>(0, .87)</Female>
+								<Thin>(0,	.85)</Thin>
+								<Hulk>(0,	.85)</Hulk>
+							</bodyTypes>
+						</back>
+					</offsets>
+					
+					<!--
+					<backstoryGraphics>
+						<MantisChildBS02>Mantis/SyntClaws/Left/Left</MantisChildBS02>
+					</backstoryGraphics>
+					<hediffGraphics>
+						<Hediff_LTF_LeftSteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftSteelClaws>
+					</hediffGraphics>
+					-->
+					<hiddenUnderApparelFor>
+						<li>FullHead</li>
+					</hiddenUnderApparelFor>
 				</li>				
             </bodyAddons>
 			<!-- -->
@@ -240,6 +309,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 			<aliencrowntypes>
 				<li>Normal</li>
 			</aliencrowntypes>
+			<!-- stache attempt -->
+			<headBodyPartDef>BodyPart_LTF_MantisStache</headBodyPartDef>
 			
 			<useSkincolorForHair>true</useSkincolorForHair>
 			<!--<customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize>-->

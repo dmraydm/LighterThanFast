@@ -8,7 +8,7 @@
 
 	<FactionDef ParentName="SlugFactionBase">
 		<defName>SlugPlayerColony</defName>
-		<label>Tribal slug shell</label>
+		<label>Tribal shell</label>
 		<description>Your very own drool factory</description>
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Slug</basicMemberKind>

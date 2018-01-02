@@ -8,7 +8,7 @@
 
 	<FactionDef ParentName="ZoltanFactionBase">
 		<defName>ZoltanPlayerColony</defName>
-		<label>Tribal zoltans</label>
+		<label>Tribal aurora</label>
 		<description>Some say squared light speed matters in energy. Will your tribe shine ?</description>
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Zoltan</basicMemberKind>
