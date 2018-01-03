@@ -1,0 +1,860 @@
+<Defs>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS10</defName>
+		<title>Agate</title>
+		<titleShort>Agate</titleShort>
+		<baseDescription>Provides inner stability, helps to recollect, to adopt an attitude of withdrawal and interiorization that promotes discernment and thus brings a new perspective. Agate gives us a certain fluidity, both physically and emotionally, thus enabling us to assimilate experiences in full awareness.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>2</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>FastLearner</defName></li>
+		</forcedTraits>
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS11</defName>
+		<title>Aquamarine</title>
+		<titleShort>Aquamarine</titleShort>
+		<baseDescription>Associated with the throat chakra. Promotes communication, frees the word frank and sincere. Brings the perseverance and dynamism necessary to achieve one's goal.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>3</amount></li>
+			<li><defName>Construction</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Abrasive</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS12</defName>
+		<title>Amazonite</title>
+		<titleShort>Amazonite</titleShort>
+		<baseDescription>Harmony stone, relieves and brings comfort. Lets release tensions and frustrations, sources of irritability. Soothes the emotions, favoring a certain lightness in the face of the tests. Dispel the sadness and the impression of being a victim in the face of life. Lets take control in hand while releasing internal tensions.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Artistic</defName><amount>3</amount></li>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Ascetic</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS13</defName>
+		<title>Amber</title>
+		<titleShort>Amber</titleShort>
+		<baseDescription>Vitality, warm and comforting energy. Brings joy to everyday life. The warm and joyful nature of amber brings a form of carelessness making more spontaneous and jovial relationships. This fossilized pine resin was also used to help infants during dental surges in ancient times.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>4</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>DrugDesire</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS14</defName>
+		<title>Amethyst</title>
+		<titleShort>Amethyst</titleShort>
+		<baseDescription>Stone of spirituality. Helps overcome grief, breakage or separation.Calms anxieties. Brings relaxation and serenity. Helps people with drinking problems or other addictions to resist temptation. Promotes enlightenment and wisdom Promotes a more restful and serene sleep, mitigates nightmares.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Intellectual</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>DrugDesire</defName><degree>-1</degree><chance>30</chance></li>
+			<li><defName>NightOwl</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+    </AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS15</defName>
+		<title>Apophyllite</title>
+		<titleShort>Apophyllite</titleShort>
+		<baseDescription>Ideal for reiki, magnetism, channeling ... It is a precious help in remote energy care, especially if it is associated with other stones such as rock crystal for example.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>3</amount></li>
+			<li><defName>Artistic</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>PsychicSensitivity</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS16</defName>
+		<title>Aventurine</title>
+		<titleShort>Aventurine</titleShort>
+		<baseDescription>Promotes the emergence of the inner child, helps the expression of feelings while keeping his self-control. Ideal for the emotional, the hypersensitive because it allows the control of extreme emotions that can manifest in the form of anger and aggression.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>1</amount></li>
+			<li><defName>Artistic</defName><amount>2</amount></li>
+			<li><defName>Melee</defName><amount>1</amount></li>
+			<li><defName>Animals</defName><amount>1</amount></li>
+			<li><defName>Shooting</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Kind</defName></li>
+			<li><defName>Wimp</defName><chance>0</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS17</defName>
+		<title>Bronzite</title>
+		<titleShort>Bronzite</titleShort>
+		<baseDescription>This stone is a variety of garnet Enstatite. The Romans wore it as a protective amulet. Crushed stone was used to strengthen nerves and protect against mental illness. Bronzitis is both energizing and soothing. Indeed, it restores strength and vitality especially in the lower body. It relieves the upper body of accumulated tension, soothes anger and brings softness.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+			<li><defName>Melee</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>PsychicSensitivity</defName><degree>-1</degree></li>
+			<li><defName>Nimble</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS18</defName>
+		<title>Chalcedony</title>
+		<titleShort>Chalcedony</titleShort>
+		<baseDescription>Stone of the speakers, singers and people whose speaking is important. It calms, soothes and provides a good speech while avoiding stuttering. Allows you to get rid of angry rants, unspoken ones that hinder free expression and remain blocked in the throat.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Psychopath</defName><chance>0</chance></li>
+			<li><defName>Jealous</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS19</defName>
+		<title>Calcite</title>
+		<titleShort>Calcite</titleShort>
+		<baseDescription>Ideal to find the positive and enthusiastic side of life. Helps regaining a positive momentum thanks to the dynamic and positive properties. In ancient cultures, calcite was used as lime for skin problems, infected wounds and warts.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Cooking</defName><amount>1</amount></li>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Bloodlust</defName></li>
+			<li><defName>Cannibal</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS20</defName>
+		<title>Celestine</title>
+		<titleShort>Celestine</titleShort>
+		<baseDescription>Its gentle vibration makes it possible to connect to the spiritual world and to return more easily to a meditative state. Develops inner clarity, medium potentials, and the ability to connect on the astral plane. Brings a lot of tenderness and appeasement.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>4</amount></li>
+			<li><defName>Artistic</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>PsychicSensitivity</defName><degree>-1</degree></li>
+			<li><defName>DrugDesire</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS21</defName>
+		<title>Chiastolite</title>
+		<titleShort>Chiastolite</titleShort>
+		<baseDescription>Variety of Andalusite. Anchor stone promoting the centering and alignment of psychic centers. Also called "cross stone". Raises the veil of illusion and makes more realistic and objective. Its cross shape is also the symbol of multiplying = x, it multiplies our faculties of perception of the reality, multiplies our reactivity when our senses are asleep and work in slow motion.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Construction</defName><amount>2</amount></li>
+			<li><defName>Mining</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Nimble</defName></li>
+			<li><defName>Prosthophile</defName></li>
+			<li><defName>DrugDesire</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS22</defName>
+		<title>Chrysocolla</title>
+		<titleShort>Chrysocolla</titleShort>
+		<baseDescription>This stone allows the American Indians to keep the "cold head". It symbolizes the water that fecundates the forest, which is why they call it the "stone of fertility". It calms nervousness, cools the body and suppresses cramps especially at the bottom of the belly during menstruation.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>2</amount></li>
+			<li><defName>Construction</defName><amount>-3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>SuperImmune</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS23</defName>
+		<title>Chrysoprase</title>
+		<titleShort>Chrysoprase</titleShort>
+		<baseDescription>Restores self-confidence. According to Hildegarde de Bingen, detoxifies the body (filtering action on the energy of the liver and gallbladder) and the mind (allows to chase away negative thoughts and blockages resulting in relationship or sexual problems). Lets be more positive towards oneself, to be satisfied with one's life without being jealous of others.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Psychopath</defName></li>
+			<li><defName></defName><chance></chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS24</defName>
+		<title>Citrine</title>
+		<titleShort>Citrine</titleShort>
+		<baseDescription>According to tradition the citrine would have a beneficial role to help overcome the lack of drive, moral fatigue. Restores courage after a long illness. Toning effect.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Artistic</defName><amount>5</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Masochist</defName></li>
+			<li><defName>Abrasive</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+<!--
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS25</defName>
+		<title>Cornelian</title>
+		<titleShort>Cornelian</titleShort>
+		<baseDescription>Hildegarde de Bingen advised her for pregnant women to promote good childbirth. On the other hand, according to numerous testimonies, it would seem essential to withdraw it when the work begins, that is to say during the first contractions, with the risk of "blocking the work". Low libido.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName></defName><amount></amount></li>
+			<li><defName></defName><amount></amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName></defName><chance></chance></li>
+			<li><defName></defName><chance></chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+-->
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS26</defName>
+		<title>Rock crystal</title>
+		<titleShort>Rock crystal</titleShort>
+		<baseDescription>Powerful amplifier. Amplifies the aura. It strengthens and revitalizes the body. Brings clarity and understanding about our life. Helps solve problems simply by developing our intellectual faculties. Activates and strengthens the energy of other stones.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>1</amount></li>
+			<li><defName>Mining</defName><amount>1</amount></li>
+			<li><defName>Construction</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>PsychicSensitivity</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS27</defName>
+		<title>Dumortierite</title>
+		<titleShort>Dumortierite</titleShort>
+		<baseDescription>According to Hildegarde de Bingen the Dumortierite would be favorable for the throat. Soothing stone, this stone would be nicknamed the stone "do not worry". Brings lightness and keeps his self-control in the face of fear and destabilizing situations. Brings optimism and promotes the emergence of a positive attitude to the trials of life. Restore courage and lightness.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+			<li><defName>Animals</defName><amount>3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>NaturalMood</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS28</defName>
+		<title>Fluorite</title>
+		<titleShort>Fluorite</titleShort>
+		<baseDescription>The stone of the structure. Helps to organize life, thoughts. Ideal for learning situations because fluorine facilitates understanding and stimulates memory.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Construction</defName><amount>3</amount></li>
+			<li><defName>Artistic</defName><amount>-2</amount></li>
+			<li><defName>Intellectual</defName><amount>1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Neurotic</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS29</defName>
+		<title>Jade</title>
+		<titleShort>Jade</titleShort>
+		<baseDescription>Strengthens the energy of the kidneys and the bladder (water element in traditional Chinese medicine) Restores an inner balance, stability. Harmonize the physical and spiritual plan so very spiritual people will find some anchoring, some stability in the material world and vice versa for people too materialistic.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Artistic</defName><amount>2</amount></li>
+			<li><defName>Construction</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>DislikesMen</defName><chance>50</chance></li>
+			<li><defName>DislikesWomen</defName><chance>50</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS30</defName>
+		<title>Jasper</title>
+		<titleShort>Jasper</titleShort>
+		<baseDescription>Strengthens the aura and cleans the accumulated negative energies. Jaspers in general act on the 1st chakra in connection with vitality and rooting. It is advisable to wear them on the skin and for a long time because they act smoothly. In the Middle Ages, the jasper was the stone of the warrior, indeed it favors our warlike and combative nature but in the good sense of the word. Strengthens courage and perseverance.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Shooting</defName><amount>1</amount></li>
+			<li><defName>Melee</defName><amount>2</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>ShootingAccuracy</defName><chance>1</chance></li>
+			<li><defName>Wimp</defName><chance>0</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS31</defName>
+		<title>Labradorite</title>
+		<titleShort>Labradorite</titleShort>
+		<baseDescription>Emotional sponges. Guarantees any altruistic person to remain in the help, in the empathy while protecting themselves. Labradorite envelops with its coat of light while absorbing negative energies. Protects us from the outside world in case of hostility.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Medicine</defName><amount>2</amount></li>
+			<li><defName>Animals</defName><amount>1</amount></li>
+			<li><defName>Melee</defName><amount>-1</amount></li>
+			<li><defName>Shooting</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Wimp</defName><chance>50</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS32</defName>
+		<title>Lapis lazuli</title>
+		<titleShort>Lapis lazuli</titleShort>
+		<baseDescription>Relaxes the nervous and the hyperactive brain. Supports during a job requiring a lot of intellectual attention. Improves memory and vision.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>3</amount></li>
+			<li><defName>Growing</defName><amount>-2</amount></li>
+			<li><defName>Mining</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Nerves</defName><degree>-1</degree></li>
+			<li><defName>Beauty</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS33</defName>
+		<title>Lepidolite</title>
+		<titleShort>Lepidolite</titleShort>
+		<baseDescription>Useful in times of great changes because it allows to remain calm while making the necessary changes.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>-1</amount></li>
+			<li><defName>Construction</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Prosthophile</defName></li>
+			<li><defName>Industriousness</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS34</defName>
+		<title>Shiva lingam</title>
+		<titleShort>Shiva lingam</titleShort>
+		<baseDescription>For Hindus, this stone is considered sacred; indeed it is "harvested" in the dry season, in a sacred place of pilgrimage. This extremely powerful stone carries with it the masculine and feminine energies. Yin and yang are gathered through this pebble of the sacred river. The Shiva lingam also symbolizes the non-manifested, that is, it represents in the visible matter, the very essence of the non-visible. Restores strength and courage in difficult times.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Melee</defName><amount>2</amount></li>
+			<li><defName>Construction</defName><amount>1</amount></li>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Jealous</defName><chance>50</chance></li>
+			<li><defName>Neurotic</defName><degree>1</degree><chance>50</chance></li>
+			<li><defName>Greedy</defName><chance>50</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS35</defName>
+		<title>Tourmaline</title>
+		<titleShort>Tourmaline</titleShort>
+		<baseDescription>Protects against electromagnetic and geobiological nuisances.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Artistic</defName><amount>-1</amount></li>
+			<li><defName>Animals</defName><amount>-1</amount></li>
+			<li><defName>Mining</defName><amount>3</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>PsychicSensitivity</defName><degree>-1</degree></li>
+			<li><defName>PsychicSensitivity</defName><degree>-2</degree><chance>50</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS36</defName>
+		<title>Unakite</title>
+		<titleShort>Unakite</titleShort>
+		<baseDescription>Promotes rest, inner peace re-generation in the sense of (re-giving birth). Helps to become patient in accepting reality while dispelling sadness and self-deprecation. At the physical level, it promotes healing processes.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>3</amount></li>
+			<li><defName>Melee</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Psychopath</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS37</defName>
+		<title>Malachite</title>
+		<titleShort>Malachite</titleShort>
+		<baseDescription>Corresponds to the Arnica stones. It's the stones of all shock</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Melee</defName><amount>3</amount></li>
+			<li><defName>Shooting</defName><amount>2</amount></li>
+			<li><defName>Medicine</defName><amount>-4</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>ShootingAccuracy</defName><chance>-1</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+
+
+    </AlienRace.BackstoryDef>
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS38</defName>
+		<title>Obsidian</title>
+		<titleShort>Obsidian</titleShort>
+		<baseDescription>Recommended to fight the black magic, the attacks of the astral bottom. Anchoring stone bringing to the consciousness memories buried in the depths. Fast and dazzling to fight the attacks of the invisible, the negative energies in us and outside of us.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Construction</defName><amount>2</amount></li>
+			<li><defName>Crafting</defName><amount>1</amount></li>
+			<li><defName>Artistic</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>FastLearner</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+    <AlienRace.BackstoryDef>
+		<defName>RockmanChildBS39</defName>
+		<title>Chrysoberyl cat's eye</title>
+		<titleShort>Brings good fortune. Improves vision of things. Makes more flexible and dynamic.</titleShort>
+		<baseDescription></baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Social</defName><amount>3</amount></li>
+			<li><defName>Construction</defName><amount>1</amount></li>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Prosthophobe</defName></li>
+			<li><defName>Beauty</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS40</defName>
+		<title>Moon stone</title>
+		<titleShort>Moon stone</titleShort>
+		<baseDescription>Promotes the emergence of femininity. Reinforce yin side, in relation with the feminine, the receptive, the intuitive. Promotes fertility. Stimulates creativity and inspiration for painting, music, singing and all other forms of art. Brings softness and sensitivity.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Artistic</defName><amount>1</amount></li>
+			<li><defName>Growing</defName><amount>2</amount></li>
+			<li><defName>Social</defName><amount>1</amount></li>
+			<li><defName>Construction</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>GreenThumb</defName></li>
+			<li><defName>Jealous</defName><chance>50</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS41</defName>
+		<title>Pyrite</title>
+		<titleShort>Pyrite</titleShort>
+		<baseDescription>Used to light the fire in the Stone Age. Its warming nature brings vitality and vitality to the body. Very powerful solar energy. Brings to light hidden behaviors or events, remaining in the shadows.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>2</amount></li>
+			<li><defName>Melee</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Pyromaniac</defName></li>
+			<li><defName>SuperImmune</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS42</defName>
+		<title>Rhodonite</title>
+		<titleShort>Rhodonite</titleShort>
+		<baseDescription>Stone of the wounds of the soul and the body. Allows you to forgive and free from rancor and internalized anger, vexations or provocations.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Artistic</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>xenophobic</defName><chance>-1</chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS43</defName>
+		<title>Rhodocrosite</title>
+		<titleShort>Rhodocrosite</titleShort>
+		<baseDescription>Comforts and relieves emotionally injured people. Provides tranquility and relaxation. Helps digest literally and figuratively.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Cooking</defName><amount>2</amount></li>
+			<li><defName>Social</defName><amount>1</amount></li>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Melee</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>DrugDesire</defName><degree>1</degree></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS44</defName>
+		<title>Serpentine</title>
+		<titleShort>Serpentine</titleShort>
+		<baseDescription>Protection stone. In the Middle Ages it was used to fight witchcraft and disease. Balances moods, calms and soothes anxieties.</baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName>Medicine</defName><amount>1</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
+			<li><defName>Intellectual</defName><amount>-1</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Beauty</defName><degree>2</degree></li>
+			<li><defName>Masochist</defName></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+	<!--
+	<AlienRace.BackstoryDef>
+		<defName>RockmanChildBS40</defName>
+		<title></title>
+		<titleShort></titleShort>
+		<baseDescription></baseDescription>
+		<slot>Childhood</slot>
+
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains>
+			<li><defName></defName><amount></amount></li>
+			<li><defName></defName><amount></amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName></defName><chance></chance></li>
+			<li><defName></defName><chance></chance></li>
+		</forcedTraits>		
+		<spawnCategories>
+		  <li>RockmanBackstory</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+	-->
+	
+</Defs>

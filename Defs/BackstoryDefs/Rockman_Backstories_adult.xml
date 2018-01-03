@@ -325,22 +325,54 @@
       <li>RockmanBackstory</li>
     </spawnCategories>
 	<skillGains>
-		<li><defName>Animals</defName><amount></amount></li>
-		<li><defName>Artistic</defName><amount></amount></li>
-		<li><defName>Construction</defName><amount></amount></li>
-		<li><defName>Cooking</defName><amount></amount></li>
-		<li><defName>Crafting</defName><amount></amount></li>
-		<li><defName>Growing</defName><amount></amount></li>
-		<li><defName>Medicine</defName><amount></amount></li>
-		<li><defName>Mining</defName><amount></amount></li>
-		<li><defName>Intellectual</defName><amount></amount></li>
-		<li><defName>Shooting</defName><amount></amount></li>
-		<li><defName>Social</defName><amount></amount></li>
-    </skillGains>
-	<forcedTraits>
-		<li><defName>TooSmart</defName><chance>50</chance></li>
-		<li><defName>NightOwl</defName><chance>80</chance></li>
-		<li><defName>CreepyBreathing</defName><chance>30</chance></li>
+			Animals
+			Artistic
+			Construction
+			Cooking
+			Crafting
+			Growing
+			Medicine
+			Mining
+			Intellectual
+			Shooting
+			Social
+
+Abrasive
+AnnoyingVoice
+Ascetic
+Beauty
+Bloodlust
+Brawler
+Cannibal
+CreepyBreathing
+DislikesMen
+DislikesWomen
+DrugDesire
+FastLearner
+Gay
+Greedy
+GreenThumb
+Industriousness
+Jealous
+Kind
+Masochist
+NaturalMood
+Nerves
+Neurotic
+NightOwl
+Nimble
+Nudist
+Prosthophile
+Prosthophobe
+PsychicSensitivity
+Psychopath
+Pyromaniac
+ShootingAccuracy
+SpeedOffset
+SuperImmune
+TooSmart
+Wimp
+
 	</forcedTraits>
 	<workDisables><li>PlantWork</li></workDisables>
     </AlienRace.BackstoryDef>
