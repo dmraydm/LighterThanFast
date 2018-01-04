@@ -223,8 +223,10 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<li>
 			<body>Slug/Body/</body>
 			<head>Slug/Head/</head>
-			<skeleton>Humanoid/HumanoidDessicated</skeleton>
-			<skull>Humanoid/Skull</skull>
+			<skeleton>Humanoid/RotenBody/Slug/SlugRoten</skeleton>
+			<skull>Humanoid/Skull/Slug/SlugSkull</skull>
+			<!-- <skeleton>Humanoid/HumanoidDessicated</skeleton>
+			<skull>Humanoid/Skull</skull> -->
 		</li>
 	</graphicPaths>
 

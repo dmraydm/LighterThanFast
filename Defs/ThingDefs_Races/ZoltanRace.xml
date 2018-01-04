@@ -222,8 +222,10 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<li>
 			<body>Zoltan/Body/</body>
 			<head>Zoltan/Head/</head>
-			<skeleton>Humanoid/HumanoidDessicated</skeleton>
-			<skull>Humanoid/Skull</skull>
+			<skeleton>Humanoid/RotenBody/Zoltan/ZoltanRoten</skeleton>
+			<skull>Humanoid/Skull/Zoltan/ZoltanSkull</skull>
+			<!-- <skeleton>Humanoid/HumanoidDessicated</skeleton>
+			<skull>Humanoid/Skull</skull> -->
 		</li>
 	</graphicPaths>
 

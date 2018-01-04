@@ -226,8 +226,10 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<li>
 			<body>Engie/Body/</body>
 			<head>Engie/Head/</head>
-			<skeleton>Humanoid/HumanoidDessicated</skeleton>
-			<skull>Humanoid/Skull</skull>
+			<skeleton>Humanoid/RotenBody/Engie/EngieRoten</skeleton>
+			<skull>Humanoid/Skull/Engie/EngieSkull</skull>
+			<!--<skeleton>Humanoid/HumanoidDessicated</skeleton>
+			<skull>Humanoid/Skull</skull>-->
 		</li>
 	</graphicPaths>
 

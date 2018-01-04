@@ -365,8 +365,11 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<li>
 			<body>Mantis/Body/</body>
 			<head>Mantis/Head/</head>
+			<skeleton>Humanoid/RotenBody/Mantis/MantisRoten</skeleton>
+			<skull>Humanoid/Skull/Mantis/MantisSkull</skull>
+			<!--
 			<skeleton>Humanoid/HumanoidDessicated</skeleton>
-			<skull>Humanoid/Skull</skull>
+			<skull>Humanoid/Skull</skull>-->
 		</li>
 	</graphicPaths>
 
