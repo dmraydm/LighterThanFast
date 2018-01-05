@@ -6,24 +6,24 @@
     <combatPower>40</combatPower>
     <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
     <isFighter>false</isFighter>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
     <forceNormalGearQuality>true</forceNormalGearQuality>
   </PawnKindDef>
 
 	<PawnKindDef ParentName="BaseEngiePawnKind">
-	<defName>Engie</defName>
-	<label>colonist</label>
-	<defaultFactionType>PlayerColony</defaultFactionType>
-	<backstoryCategory>EngieBackstory</backstoryCategory>
-	<apparelAllowHeadwearChance>.01</apparelAllowHeadwearChance>
-	<apparelTags>
-		<li>Tribal</li>
-	</apparelTags>
-	<apparelMoney>
-		<min>200</min>
-		<max>300</max>
-	</apparelMoney>
-	<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+		<defName>Engie</defName>
+		<label>colonist</label>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<backstoryCategory>EngieBackstory</backstoryCategory>
+		<apparelAllowHeadwearChance>.01</apparelAllowHeadwearChance>
+		<apparelTags>
+			<li>Tribal</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>200</min>
+			<max>300</max>
+		</apparelMoney>
+		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
 	</PawnKindDef>
 
 </Defs>

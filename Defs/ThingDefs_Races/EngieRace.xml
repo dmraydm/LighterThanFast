@@ -309,15 +309,20 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
 					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
 
+					<li><weight>2</weight><only>RGBA(.7,0.5,0.9,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.9,0.5,0.8,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.8,0.6,0.9,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.9,0.4,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.8,0.5,0.9,1)</only></li>
 				<!-- green -->
+				<!--
 					<li><weight>8</weight><only>RGBA(0.9,1,0.9,1)</only></li>
 					<li><weight>5</weight><only>RGBA(0.8,1,0.8,1)</only></li>
 					<li><weight>3</weight><only>RGBA(0.7,1,0.7,1)</only></li>
 					<li><weight>2</weight><only>RGBA(0.6,1,0.6,1)</only></li>
 					<li><weight>1</weight><only>RGBA(0.5,1,0.5,1)</only></li>
-
+-->
 				<!-- blue -->
-
 					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
 					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
 					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>

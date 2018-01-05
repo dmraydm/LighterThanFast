@@ -12,8 +12,11 @@
     
 	<apparelTags>
 		<li>Outlander</li>
+	<!--
+		<li>Outlander</li>
 		<li>Military</li>
 		<li>BeltDefensePop</li>
+		-->
 	</apparelTags>
 
   </PawnKindDef>
@@ -33,14 +36,16 @@
       <min>300</min>
       <max>900</max>
     </apparelMoney>
+	
+	<!--
     <weaponMoney>
-      <min>1400</min>
-      <max>2500</max>
+      <min>200</min>
+      <max>400</max>
     </weaponMoney>
 	<weaponTags>
-      <li>Gun</li>
+		<li>Gun</li>
     </weaponTags>
-
+	-->
     <techHediffsMoney>
       <min>200</min>
       <max>300</max>
@@ -90,6 +95,13 @@
     <defName>ZoltanTrader</defName>
     <label>colony trader</label>
     <trader>true</trader>
+	<weaponMoney>
+      <min>200</min>
+      <max>400</max>
+    </weaponMoney>
+	<weaponTags>
+		<li>Gun</li>
+    </weaponTags>
   </PawnKindDef>
 
     <PawnKindDef ParentName="ZoltanCivBase">
@@ -119,14 +131,14 @@
       <min>700</min>
       <max>4000</max>
     </apparelMoney>
+	
     <weaponMoney>
       <min>1400</min>
       <max>3000</max>
     </weaponMoney>
     
 	<weaponTags>
-      <li>Gun</li>
-	  <!-- <li>AdvancedGun</li> -->
+	  <li>AdvancedGun</li>
     </weaponTags>
 	
     <techHediffsMoney>
@@ -136,7 +148,7 @@
     <techHediffsTags>
       <li>Simple</li>
     </techHediffsTags>
-    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsChance>0.0001</techHediffsChance>
     <invNutrition>2.55</invNutrition>
     <inventoryOptions>
       <skipChance>0.95</skipChance>
@@ -164,6 +176,10 @@
       <max>2.3</max>
     </gearHealthRange>
 
+	<apparelTags>
+		<li>Military</li>
+	</apparelTags>
+	
     <apparelMoney>
       <min>1500</min>
       <max>5800</max>
@@ -174,8 +190,6 @@
     </weaponMoney>
 
 	<weaponTags>
-		<!-- <li>EliteGun</li> -->
-		<!-- <li>Gun</li> -->
 		<li>AdvancedGun</li>
     </weaponTags>
 	
@@ -224,9 +238,6 @@
     </gearHealthRange>
 	
 	<weaponTags>
-		<!-- <li>EliteGun</li> -->
-		<!-- <li>Gun</li> -->
-		<!-- <li>AdvancedGun</li> -->
 		<li>SniperRifle</li>
     </weaponTags>
 	
@@ -250,7 +261,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsChance>0.0003</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>
@@ -293,8 +304,7 @@
     </weaponMoney>
 
 	<weaponTags>
-		<li>SniperRifle</li>
-		<!-- <li>GunHeavy</li> -->
+		<li>GunHeavy</li>
     </weaponTags>
 	
     <techHediffsMoney>
@@ -304,7 +314,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.08</techHediffsChance>
+    <techHediffsChance>0.001</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>
@@ -347,7 +357,6 @@
     </weaponMoney>
 	
     <weaponTags>
-	  <li>AdvancedGun</li>
 		<li>EliteGun</li>
     </weaponTags>
 	
@@ -358,7 +367,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsChance>0.002</techHediffsChance>
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>

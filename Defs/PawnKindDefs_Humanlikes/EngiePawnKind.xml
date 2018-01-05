@@ -11,7 +11,7 @@
     <baseRecruitDifficulty>.65</baseRecruitDifficulty>
     
 	<apparelTags>
-		<li>Outlander</li>
+		<!-- <li>Outlander</li> -->
 		<li>Tribal</li>
 	</apparelTags>
 	
@@ -30,18 +30,20 @@
     </gearHealthRange>
     <apparelMoney>
 		<min>300</min>
-		<max>900</max>
+		<max>800</max>
     </apparelMoney>
+	<!--
     <weaponMoney>
-		<min>1400</min>
-		<max>2500</max>
+		<min>100</min>
+		<max>200</max>
     </weaponMoney>
     <weaponTags>
 		<li>NeolithicMeleeAdvanced</li>
 		<li>SimpleGun</li>
     </weaponTags>
+	-->
     <techHediffsMoney>
-		<min>200</min>
+		<min>20</min>
 		<max>300</max>
     </techHediffsMoney>
     <techHediffsTags>
@@ -64,8 +66,8 @@
           <choiceChance>10</choiceChance>
           <thingDef>Silver</thingDef>
           <countRange>
-            <min>700</min>
-            <max>1000</max>
+            <min>100</min>
+            <max>500</max>
           </countRange>
         </li>
       </subOptionsChooseOne>
@@ -92,6 +94,17 @@
     <defName>EngieTrader</defName>
     <label>colony trader</label>
     <trader>true</trader>
+	<apparelTags>
+		<li>outlander</li>
+	</apparelTags>
+	<weaponMoney>
+		<min>100</min>
+		<max>500</max>
+    </weaponMoney>
+    <weaponTags>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>SimpleGun</li>
+    </weaponTags>
   </PawnKindDef>
 
     <PawnKindDef ParentName="EngieCivBase">
@@ -111,6 +124,7 @@
   <PawnKindDef ParentName="EngieCivBase">
     <defName>EngieGuard</defName>
     <label>guard</label>
+
     <combatPower>50</combatPower>
     <maxGenerationAge>40</maxGenerationAge>
     <gearHealthRange>
@@ -125,13 +139,14 @@
       <min>1400</min>
       <max>3000</max>
     </weaponMoney>
-	
+
+	<apparelTags>
+		<li>outlander</li>
+	</apparelTags>	
     <weaponTags>
 		<li>NonNeolithicOnlySimpleMelee</li>
     </weaponTags>
-	<apparelTags>
-			<li>BeltDefense</li>
-	</apparelTags>
+
 		
     <techHediffsMoney>
       <min>200</min>
@@ -172,6 +187,8 @@
     </weaponTags>
 	<apparelTags>
 		<li>BeltDefensePop</li>
+		<li>outlander</li>
+		<li>military</li>
 	</apparelTags>
 	
     <apparelMoney>
@@ -226,10 +243,6 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-		<li>Outlander</li>
-		<li>Military</li>
-    </apparelTags>
 	<weaponTags>
 		<li>GunHeavy</li>
 	</weaponTags>
@@ -296,8 +309,6 @@
     </weaponMoney>
 
 	<apparelTags>
-		<li>Outlander</li>
-		<li>Military</li>
 		<li>BeltDefensePop</li>
     </apparelTags>
 	<weaponTags>
