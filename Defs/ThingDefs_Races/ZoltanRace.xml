@@ -34,12 +34,13 @@
     <description>With the majority of their bodies composed of pure, harnessable energy, the Zoltan are ambivalent towards the Galactic Federation. Whilst a deeply officious and obtuse people, they generally favour diplomacy over acts of aggression and are known for being fair and just in their dealings with others. Due to their alliance with the Engi, Zoltans often appear in Engi Homeworlds or the various Engi-Controlled Sectors of space, although they inhabit their own home systems as well.
 	
 Being ingenious experts of technology, the Zoltan race pioneered a unique ship-based shielding technology which can be found on nearly every Zoltan vessel. These shields are very difficult to breach, however they cannot regenerate during a battle - unless a Shield Overcharger drone is deployed. Therefore, once they are impacted by enemy fire enough to deactivate them, Zoltan vessels must rely on conventional shielding systems. They and the Engi control many sectors, but they themselves are rarely seen outside them.
-	
-- 85% health + explodes upon death
-- 110% research
-- glows in the dark (sometimes)
-- lay eggs that pop power pods
-	
+
+- 110% Research
+- 120% Recruit prisonner chance / Diplomacy power
+- 85% Health 
+- Explodes upon death
+- Glows in the dark (sometimes)
+- Lays eggs that pop power pods
 	
 	</description>
         
@@ -55,13 +56,18 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.1</ResearchSpeed>
+		
 		<MiningSpeed>1.0</MiningSpeed>
 		<SocialImpact>1.0</SocialImpact>
 		<PlantWorkSpeed>1.0</PlantWorkSpeed>
 		<PlantHarvestYield>1.0</PlantHarvestYield>
 		<ConstructionSpeed>1.0</ConstructionSpeed>
+		
 		<ArmorRating_Blunt>.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>.15</ArmorRating_Sharp>
+		
+		<RecruitPrisonerChance>1.2</RecruitPrisonerChance>
+		<DiplomacyPower>1.2</DiplomacyPower>
     </statBases>
 	
 	<comps>

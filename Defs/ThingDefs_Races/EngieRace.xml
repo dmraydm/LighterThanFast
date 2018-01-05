@@ -1,4 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+<li>AccuracyLong</li>
+<li>AccuracyMedium</li>
+<li>AccuracyShort</li>
+<li>AccuracyTouch</li>
+<li>AimingDelayFactor</li>
+<li>AnimalGatherSpeed</li>
+<li>AnimalGatherYield</li>
+<li>ArmorRating_Blunt</li>
+<li>ArmorRating_Electric</li>
+<li>ArmorRating_Heat</li>
+<li>ArmorRating_Sharp</li>
+<li>Beauty</li>
+<li>BedRestEffectiveness</li>
+<li>BluntDamageMultiplier</li>
+<li>BrewingSpeed</li>
+<li>ButcheryFleshEfficiency</li>
+<li>ButcheryFleshSpeed</li>
+<li>ButcheryMechanoidEfficiency</li>
+<li>ButcheryMechanoidSpeed</li>
+<li>CarryingCapacity</li>
+<li>Cleanliness</li>
+<li>Comfort</li>
+<li>ComfyTemperatureMax</li>
+<li>ComfyTemperatureMin</li>
+<li>ConstructionSpeed</li>
+<li>ConstructSuccessChance</li>
+<li>CookSpeed</li>
+<li>DeteriorationRate</li>
+<li>DiplomacyPower</li>
+<li>DoorOpenSpeed</li>
+<li>DrugProductionSpeed</li>
+<li>EatingSpeed</li>
+<li>EnergyShieldEnergyMax</li>
+<li>EnergyShieldRechargeRate</li>
+<li>EntertainmentStrengthFactor</li>
+<li>FixBrokenDownBuildingSuccessChance</li>
+<li>Flammability</li>
+<li>FoodPoisonChance</li>
+<li>GlobalLearningFactor</li>
+<li>ImmunityGainSpeed</li>
+<li>ImmunityGainSpeedFactor</li>
+<li>Insulation_Cold</li>
+<li>Insulation_Heat</li>
+<li>LeatherAmount</li>
+<li>MarketValue</li>
+<li>Mass</li>
+<li>MaxHitPoints</li>
+<li>MeatAmount</li>
+<li>MechanoidOperationSuccessChance</li>
+<li>MedicalOperationSpeed</li>
+<li>MedicalPotency</li>
+<li>MedicalSurgerySuccessChance</li>
+<li>MedicalTendQuality</li>
+<li>MedicalTendQualityOffset</li>
+<li>MedicalTendSpeed</li>
+<li>MeleeDodgeChance</li>
+<li>MeleeDPS</li>
+<li>MeleeHitChance</li>
+<li>MeleeWeapon_AverageDPS</li>
+<li>MeleeWeapon_CooldownMultiplier</li>
+<li>MeleeWeapon_DamageMultiplier</li>
+<li>MentalBreakThreshold</li>
+<li>MinimumHandlingSkill</li>
+<li>MiningSpeed</li>
+<li>MiningYield</li>
+<li>MoveSpeed</li>
+<li>PainShockThreshold</li>
+<li>PlantHarvestYield</li>
+<li>PlantWorkSpeed</li>
+<li>PsychicSensitivity</li>
+<li>RangedWeapon_Cooldown</li>
+<li>RecruitPrisonerChance</li>
+<li>ResearchSpeed</li>
+<li>ResearchSpeedFactor</li>
+<li>SculptingSpeed</li>
+<li>SellPriceFactor</li>
+<li>SharpDamageMultiplier</li>
+<li>ShootingAccuracy</li>
+<li>SmeltingSpeed</li>
+<li>SmithingSpeed</li>
+<li>SmokepopBeltRadius</li>
+<li>SmoothingSpeed</li>
+<li>SocialImpact</li>
+<li>SurgerySuccessChanceFactor</li>
+<li>TailoringSpeed</li>
+<li>TameAnimalChance</li>
+<li>ToxicSensitivity</li>
+<li>TradePriceImprovement</li>
+<li>TrainAnimalChance</li>
+<li>TrapMeleeDamage</li>
+<li>TrapSpringChance</li>
+<li>Weapon_Bulk</li>
+<li>WorkSpeedGlobal</li>
+<li>WorkTableWorkSpeedFactor</li>
+<li>WorkToBuild</li>
+<li>WorkToMake</li>
+-->
+
 <Defs>
 <ThingDef Name="BaseEngiePawn" Abstract="True">
     <thingClass>Pawn</thingClass>
@@ -35,10 +134,10 @@
     <description>Though their current home planetary systems are well documented, the true origins of the emotionless Engi are a mystery; it is known that the majority of their bodies are made from trillions of nanomachines, which give the illusion of a silvery 'skin' with a metallic sheen, and that they can adopt different shapes to better cope with their environment, although they generally maintain a humanoid form, which most other races are habitually more comfortable with.
 The Engi also wield powerful knowledge of machinery, and are generally natural mechanics - especially when they're only expected to service and repair comparatively primitive human technology. While the Engi are extremely intelligent, their primarily robotic body composition is very fragile. The delicate and very technical inner workings of an Engi are not nearly as rugged as regular organic material, like that found in humans. As a result, Engi usually make poor fighters; however, their immaculate knowledge of mechanics coupled with their immunity to most diseases as a result of their cybernetic bodies can make them excellent allies. The Engi still require oxygen to survive despite their mostly robotic makeup, however. The many scientific anomalies of the Engi have been points of contention between human scientists for years; they argue incessantly over whether the Engi are organic lifeforms by definition, or rather sentient machines. Most accept the notion, though, that they're simply a bridge between the two.
 
-- 110% construction
-- 95% social
-- 90% shooting accuracy
-- 85% melee hit chance
+- 125% construction
+- 90% social
+- 75% melee hit chance / 80% shooting accuracy
+- 130% Immunity
 - 4x sockets(1x cpu 1x rom)
 
 	</description>
@@ -55,16 +154,26 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.0</ResearchSpeed>
-		<MiningSpeed>1.0</MiningSpeed>
-		<SocialImpact>0.95</SocialImpact>
+		
+		<SocialImpact>.9</SocialImpact>
 		<PlantWorkSpeed>1.0</PlantWorkSpeed>
 		<PlantHarvestYield>1.0</PlantHarvestYield>
-		<ConstructionSpeed>1.1</ConstructionSpeed>
+		<MiningSpeed>1.0</MiningSpeed>
+		
+		<ConstructionSpeed>1.25</ConstructionSpeed>
+		<ConstructSuccessChance>1.25</ConstructSuccessChance>
+		<DrugProductionSpeed>1.25</DrugProductionSpeed>		
+		<SmeltingSpeed>1.25</SmeltingSpeed>
+		<SmithingSpeed>1.25</SmithingSpeed>
+		<TailoringSpeed>1.25</TailoringSpeed>
+
 		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 		
-		<ShootingAccuracy>.9</ShootingAccuracy>
-		<MeleeHitChance>.85</MeleeHitChance>
+		<ShootingAccuracy>.8</ShootingAccuracy>
+		<MeleeHitChance>.75</MeleeHitChance>
+		
+		<ImmunityGainSpeed>1.3</ImmunityGainSpeed>
     </statBases>
 	
 	<verbs>

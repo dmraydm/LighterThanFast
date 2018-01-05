@@ -20,8 +20,8 @@
       <li>Tribal</li>
     </apparelTags>
     <apparelMoney>
-      <min>500</min>
-      <max>1000</max>
+      <min>300</min>
+      <max>700</max>
     </apparelMoney>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
   </PawnKindDef>

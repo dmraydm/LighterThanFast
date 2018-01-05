@@ -38,9 +38,11 @@ While humans and most other species have manufactured handheld weaponry to utili
 
 While Mantis excel at combat, especially personal combat, they are the least adept of all the races at technical repairs. They have overcome this problem by frequently taking Engi slaves. Engi slaves can be found on a majority of their bases and ships. Though some individual Mantises have been known to work with the Galactic Federation, the race as a whole tends to be deceptive, opportunistic and untrustworthy, and can commonly be found piloting their signature style of well armed spacecraft, hunting down weaker enemies in pursuit of their belongings. Human children are told tales of their red ships, and of the Mantis invasion of Earth.
 	
-- 115% speed
-- 105% melee evasion
-- 90% construction
+- 115% Speed
+- 130% Melee hit chance / 125% Shooting hit chance
+- 120% sharp damage / 105% Melee evasion
+- 75% Construction / 75% Drug production
+- 85% Mining / 90% Smelting Smithing Tailoring
 - Claws
 	
 	</description>
@@ -57,16 +59,29 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
-		<ResearchSpeed>1.0</ResearchSpeed>
-		<MiningSpeed>1.0</MiningSpeed>
+
 		<SocialImpact>1.0</SocialImpact>
 		<PlantWorkSpeed>1.0</PlantWorkSpeed>
 		<PlantHarvestYield>1.0</PlantHarvestYield>
-		<ConstructionSpeed>0.9</ConstructionSpeed>
+		<ResearchSpeed>1.0</ResearchSpeed>
 		
+		<MiningSpeed>.85</MiningSpeed>
+		<MiningYield>.85</MiningYield>
+		<ConstructionSpeed>.75</ConstructionSpeed>
+		<ConstructSuccessChance>.75</ConstructSuccessChance>
+		<DrugProductionSpeed>.75</DrugProductionSpeed>		
+		<SmeltingSpeed>.9</SmeltingSpeed>
+		<SmithingSpeed>.9</SmithingSpeed>
+		<TailoringSpeed>.9</TailoringSpeed>
+
+		<!-- armor -->
 		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		<!-- fight -->
+		<ShootingAccuracy>1.25</ShootingAccuracy>
+		<MeleeHitChance>1.3</MeleeHitChance>
 		<MeleeDodgeChance>1.05</MeleeDodgeChance>
+		<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
     </statBases>
 
 	<verbs>

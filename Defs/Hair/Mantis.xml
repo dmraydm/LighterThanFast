@@ -22,8 +22,8 @@
  </HairDef> 
   <!-- male -->
    <HairDef>
-    <defName>Crown</defName>
-    <label>crown</label>
+    <defName>CrownMale</defName>
+    <label>crownmale</label>
     <hairGender>Male</hairGender>
     <texPath>Hair/Mantis/Male/crown</texPath>
 		<hairTags>
@@ -33,8 +33,8 @@
  
  <!-- female -->
    <HairDef>
-    <defName>Crown</defName>
-    <label>crown</label>
+    <defName>CrownFemale</defName>
+    <label>crownfemale</label>
     <hairGender>Female</hairGender>
     <texPath>Hair/Mantis/Female/crown</texPath>
 		<hairTags>
