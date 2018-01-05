@@ -139,8 +139,29 @@
 		<li><defName>Nerves</defName><degree>-1</degree></li>
 		<li><defName>Wimp</defName></li>
 	</forcedTraits>
-		
+	
 	</AlienRace.BackstoryDef>
+	    <AlienRace.BackstoryDef>
+		<defName>MantisChildBS07</defName>
+		<title>No stache</title>
+		<titleShort>nostache</titleShort>
+		<baseDescription>NAME has no stache. Because of that, HE has always been bullied by HIS siblings. HIS combat skills are indeed lower than a regular mantis, but HE still likes a good fight and be the center of attention.</baseDescription>
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<spawnCategories>
+			<li>MantisBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Animals</defName><amount>1</amount></li>
+			<li><defName>Melee</defName><amount>-2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Masochist</defName></li>
+		</forcedTraits>
+		
+    </AlienRace.BackstoryDef>
+	
 	<!--
 	<AlienRace.BackstoryDef>
 		<defName>RockmanChildBS02</defName>

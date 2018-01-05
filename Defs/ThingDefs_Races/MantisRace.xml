@@ -305,15 +305,10 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							</bodyTypes>
 						</back>
 					</offsets>
-					
-					<!--
-					<backstoryGraphics>
-						<MantisChildBS02>Mantis/SyntClaws/Left/Left</MantisChildBS02>
-					</backstoryGraphics>
-					<hediffGraphics>
-						<Hediff_LTF_LeftSteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftSteelClaws>
-					</hediffGraphics>
-					-->
+						<backstoryGraphics>
+							<MantisChildBS07>Mantis/Stache/empty</MantisChildBS07>
+						</backstoryGraphics>
+
 					<hiddenUnderApparelFor>
 						<li>FullHead</li>
 					</hiddenUnderApparelFor>
