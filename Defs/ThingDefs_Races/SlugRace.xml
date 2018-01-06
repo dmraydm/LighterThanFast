@@ -213,7 +213,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 			</alienskincolorgen>
 		</alienPartGenerator>
 
-		<maleGenderProbability>0.5</maleGenderProbability>    
+		<maleGenderProbability>.5</maleGenderProbability>    
 		<forcedRaceTraitEntries>
 			<li><defName>Xenophobia</defName><degree>1</degree></li>
 		</forcedRaceTraitEntries>
@@ -262,11 +262,6 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 				<pawnKindEntries>
 					<li>
                     <kindDefs>
-					<!--
-                        <li>SlugHunter</li>
-						<li>SlugHistGuard</li>
-						<li>SlugShadowscale</li>
-						-->
 						<li>SlugColonist</li>
                     </kindDefs>
                     <chance>10.0</chance>

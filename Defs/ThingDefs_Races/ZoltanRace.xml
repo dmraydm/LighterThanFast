@@ -254,35 +254,33 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 				<chance>40.0</chance>
 			</li>
 		</alienslavekinds>
+		
 		<alienrefugeekinds>
-		<li>
-		<kindDefs>
-		<li>ZoltanRefugee</li>
-		</kindDefs>
-		<chance>40.0</chance>
-		</li>
-		</alienrefugeekinds>
-		<startingColonists>
-		<li>
-		<pawnKindEntries>
-		<li>
+			<li>
 			<kindDefs>
-				<!--
-				<li>ZoltanHunter</li>
-				<li>ZoltanHistGuard</li>
-				<li>ZoltanShadowscale</li>
-				-->
-				<li>ZoltanColonist</li>
+				<li>ZoltanRefugee</li>
 			</kindDefs>
-			<chance>10.0</chance>
-		</li>
-		</pawnKindEntries>
-			<factionDefs>
-				<li>ZoltanPlayerColony</li>
-				<li>PlayerTribe</li>
-			</factionDefs>
-		</li>
+			<chance>40.0</chance>
+			</li>
+		</alienrefugeekinds>
+		
+		<startingColonists>
+			<li>
+			<pawnKindEntries>
+				<li>
+					<kindDefs>
+						<li>ZoltanColonist</li>
+					</kindDefs>
+					<chance>10.0</chance>
+				</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>ZoltanPlayerColony</li>
+					<li>PlayerTribe</li>
+				</factionDefs>
+			</li>
 		</startingColonists>
+		
 		<alienwandererkinds>
 		<li>
 		<pawnKindEntries>

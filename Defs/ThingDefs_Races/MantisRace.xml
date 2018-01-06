@@ -354,7 +354,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		</alienPartGenerator>
 
 		<!-- <chemicalSettings>.8</chemicalSettings> -->
-		<maleGenderProbability>0.5</maleGenderProbability>    
+		<maleGenderProbability>.5</maleGenderProbability>    
 		<forcedRaceTraitEntries>
 			<!--<li><defName>Brawler</defName><chance>50</chance></li>-->
 
@@ -416,9 +416,6 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 			<pawnKindEntries>
 				<li>
 				<kindDefs>
-					<li>MantisHunter</li>
-					<li>MantisHistGuard</li>
-					<li>MantisShadowscale</li>
 					<li>MantisColonist</li>
 				</kindDefs>
 				<chance>10.0</chance>

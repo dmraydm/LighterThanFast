@@ -176,7 +176,7 @@
 			<li>Outlander</li>
 		</apparelTags>
 		<weaponTags>
-			<!-- <li>AdvancedGun</li> -->
+			<li>AdvancedGun</li>
 			<li>GrenadeDestructive</li>
 		</weaponTags>
 	
@@ -246,8 +246,7 @@
 		<li>Outlander</li>
     </apparelTags>
 	<weaponTags>
-		<li>GunHeavy</li>
-		<!-- <li>GrenadeDestructive</li> -->
+		<li>SniperRifle</li>
     </weaponTags>
 	
     <techHediffsMoney>
@@ -305,7 +304,9 @@
       <max>28000</max>
     </weaponMoney>
     <weaponTags>
-		 <li>GunHeavy</li>
+		<li>AdvancedGun</li>
+		<li>EliteGun</li>
+		<li>SniperRifle</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>
@@ -359,7 +360,9 @@
       <max>28000</max>
     </weaponMoney>
     <weaponTags>
-		  <li>EliteGun</li>
+		<li>AdvancedGun</li>
+		<li>EliteGun</li>
+		<li>SniperRifle</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>

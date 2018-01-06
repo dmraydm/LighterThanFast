@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <PawnKindDef Abstract="True" Name="BaseEngiePawnKind">
-    <race>Alien_Engie</race>
-    <combatPower>40</combatPower>
-    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
-    <isFighter>false</isFighter>
-    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BaseEngiePawnKind">
+		<race>Alien_Engie</race>
+		<combatPower>40</combatPower>
+		<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseEngiePawnKind">
 		<defName>Engie</defName>

@@ -304,6 +304,18 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 				
 			<alienskincolorgen Class="ColorGenerator_Options">
 				<options>
+				
+				<!-- silver -->
+					<li><weight>7</weight><only>(180,173,150)</only></li>
+				<!-- gold -->
+					<li><weight>2</weight><only>(255,235,122)</only></li>
+				<!-- steel -->
+					<li><weight>10</weight><only>(102,102,105)</only></li>
+				<!-- plasteel -->
+					<li><weight>5</weight><only>(160,178,181)</only></li>
+				<!-- uranium -->
+					<li><weight>1</weight><only>(100,100,100)</only></li>
+				
 				<!-- dark -->
 					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
 					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
@@ -372,11 +384,11 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 	</hairSettings>
 
 	<relationSettings>
-				<relationChanceModifierChild>1</relationChanceModifierChild>
-				<relationChanceModifierExLover>1</relationChanceModifierExLover>
-				<relationChanceModifierLover>1</relationChanceModifierLover>
-				<relationChanceModifierParent>1</relationChanceModifierParent>
-				<relationChanceModifierSibling>1</relationChanceModifierSibling>
+		<relationChanceModifierChild>1</relationChanceModifierChild>
+		<relationChanceModifierExLover>1</relationChanceModifierExLover>
+		<relationChanceModifierLover>1</relationChanceModifierLover>
+		<relationChanceModifierParent>1</relationChanceModifierParent>
+		<relationChanceModifierSibling>1</relationChanceModifierSibling>
 	</relationSettings>
 
 	<pawnKindSettings>
@@ -400,13 +412,10 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 				<li>
 				<pawnKindEntries>
 					<li>
-                    <kindDefs>
-                        <li>EngieHunter</li>
-						<li>EngieHistGuard</li>
-						<li>EngieShadowscale</li>
+					<kindDefs>
 						<li>EngieColonist</li>
-                    </kindDefs>
-                    <chance>10.0</chance>
+					</kindDefs>
+					<chance>10.0</chance>
 					</li>
 				</pawnKindEntries>
 					<factionDefs>

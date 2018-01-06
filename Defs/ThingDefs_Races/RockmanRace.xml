@@ -39,10 +39,9 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 - 110% mining
 - 133% carrying capacity
 - 90%s speed
-- Close to no cloths
 - Natural armor
-- Fireproof, comfy temp over 9000 (cold though)
-- 105% psychich sensitivity to depict religious inclination
+- Fireproof, comfy temp over 9000 (frost may bite though)
+- 105% psychic sensitivity to depict religious inclination
 	</description>
         
     <statBases>
@@ -130,18 +129,34 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
-			<customDrawSize>(1.7, 1.7)</customDrawSize>
+			<customDrawSize>(1.5, 1.5)</customDrawSize>
 			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
-
-			<useGenderedHeads>false</useGenderedHeads>
-
+			<alienbodytypes>
+				<li>Hulk</li>
+			</alienbodytypes>
+			
+			<aliencrowntypes>
+				<li>Normal</li>
+			</aliencrowntypes>
+			<!--
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+			</alienbodytypes>
+			-->
+			<useGenderedHeads>true</useGenderedHeads>
+			<useGenderedBodies>true</useGenderedBodies>
+			<!--
+			<alienbodytypes>
+				<li>Female</li>
+				<li>Male</li>
+			</alienbodytypes>
 			<aliencrowntypes>
 				<li>Circle</li>
 				<li>Veggy</li>
 				<li>Animal</li>
 				<li>Moai</li>
 			</aliencrowntypes>
-			<!--
 			<alienbodytypes>
 				<li>Thin</li>
 				<li>Female</li>
@@ -150,19 +165,9 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 -->
 			<alienskincolorgen Class="ColorGenerator_Options">
 				<options>
-				<!-- silver -->
-					<li><weight>1</weight><only>(180,173,150)</only></li>
-				<!-- gold -->
-					<li><weight>1</weight><only>(255,235,122)</only></li>
-				<!-- steel -->
-					<li><weight>1</weight><only>(102,102,105)</only></li>
-				<!-- plastell -->
-					<li><weight>1</weight><only>(160,178,181)</only></li>
-				<!-- uranium -->
-					<li><weight>1</weight><only>(100,100,100)</only></li>
+				
 				<!--jade-->
 					<li><weight>1</weight><only>(85,118,69)</only></li>
-
 				<!--sandstone-->
 					<li><weight>40</weight><only>(126,104,94)</only></li>
 				<!-- granite-->
@@ -202,18 +207,20 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
 
 		<!-- <chemicalSettings>.9</chemicalSettings> -->
-		<maleGenderProbability>0.3</maleGenderProbability>
+		<maleGenderProbability>0.9</maleGenderProbability>
 				
 		<forcedRaceTraitEntries>
 			<li><defName>Ascetic</defName><chance>30</chance></li>		
 			<li><defName>SpeedOffset</defName><degree>-1</degree><chance>30</chance></li>
 		</forcedRaceTraitEntries>
 		
+		<!--
 		<disallowedTraits>
                <li>Jealous</li>
 			   <li>Greedy</li>
 			   <li>Nudist</li>
 		</disallowedTraits>
+		-->
 	</generalSettings>    
 
 	<graphicPaths>
@@ -232,7 +239,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<hasHair>true</hasHair>
 		<hairTags>
 		<!--<li>Rockman</li>-->
-		<li>empty</li>
+			<li>empty</li>
 		</hairTags>
 	</hairSettings>
 
@@ -256,19 +263,17 @@ While the Rockmen are generally not an adventurous race, and can only be consist
                     <chance>40.0</chance>
                 </li>
             </alienrefugeekinds>
+			
 			<startingColonists>
 				<li>
-				<pawnKindEntries>
-					<li>
-                    <kindDefs>
-                        <li>RockmanHunter</li>
-						<li>RockmanHistGuard</li>
-						<li>RockmanShadowscale</li>
-						<li>RockmanColonist</li>
-                    </kindDefs>
-                    <chance>10.0</chance>
-					</li>
-				</pawnKindEntries>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>RockmanColonist</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
 					<factionDefs>
 						<li>RockmanPlayerColony</li>
 						<li>PlayerTribe</li>
@@ -299,14 +304,15 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	</pawnKindSettings>
  
 	<thoughtSettings>
-		<cannotReceiveThoughts><li>Naked</li></cannotReceiveThoughts>
-		
 		<ateThoughtSpecific></ateThoughtSpecific>
 
 		<replacerList>
 		</replacerList>
 	</thoughtSettings>
-
+	
+	<raceRestriction>
+	</raceRestriction>
+<!--
 	<raceRestriction>
 		<apparelList></apparelList>
 		<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
@@ -316,38 +322,39 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			<li>LTF_shieldHelm</li>
 		</whiteApparelList>
 	</raceRestriction>
-
+-->
 </alienRace>
     
 <race>
-      <thinkTreeMain>Humanlike</thinkTreeMain>
-      <nameGenerator>NamerPersonRockman</nameGenerator>
-      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-      <intelligence>Humanlike</intelligence>
-      <makesFootprints>true</makesFootprints>
-      <lifeExpectancy>80</lifeExpectancy>
-	  <!-- granite -->
-      <leatherColor>(105,95,97)</leatherColor>
-      <bloodDef></bloodDef>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.95</leatherInsulation>
-      <leatherLabel>Rockman leather</leatherLabel>
-      <leatherMarketValueFactor>4</leatherMarketValueFactor>
-      <nameCategory>HumanStandard</nameCategory>
-      <body>Human</body>
-      <baseBodySize>1.63</baseBodySize>
-      <baseHealthScale>1.5</baseHealthScale>
-      <baseHungerRate>1.5</baseHungerRate>
-      <foodType>OmnivoreHuman</foodType>
-      <gestationPeriodDays>45</gestationPeriodDays>
-      <litterSizeCurve>
-        <points>
-          <li>(0.5, 0)</li>
-          <li>(1, 1)</li>
-          <li>(1.01, 0.02)</li>
-          <li>(3.5, 0)</li>
-        </points>
-      </litterSizeCurve>
+	<thinkTreeMain>Humanlike</thinkTreeMain>
+	<nameGenerator>NamerPersonRockman</nameGenerator>
+	<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+	<intelligence>Humanlike</intelligence>
+	<makesFootprints>true</makesFootprints>
+	<lifeExpectancy>80</lifeExpectancy>
+	<!-- granite -->
+	<leatherColor>(105,95,97)</leatherColor>
+	<bloodDef></bloodDef>
+	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+	<leatherInsulation>0.95</leatherInsulation>
+	<leatherLabel>Rockman leather</leatherLabel>
+	<leatherMarketValueFactor>4</leatherMarketValueFactor>
+	<nameCategory>HumanStandard</nameCategory>
+	<body>Human</body>
+	<baseBodySize>1.63</baseBodySize>
+	<baseHealthScale>1.5</baseHealthScale>
+	<baseHungerRate>1.5</baseHungerRate>
+	<foodType>OmnivoreHuman</foodType>
+	<gestationPeriodDays>45</gestationPeriodDays>
+	<litterSizeCurve>
+		<points>
+			<li>(0.5, 0)</li>
+			<li>(1, 1)</li>
+			<li>(1.01, 0.02)</li>
+			<li>(3.5, 0)</li>
+		</points>
+	</litterSizeCurve>
+	
       <lifeStageAges>
         <li>
           <def>HumanlikeBaby</def>

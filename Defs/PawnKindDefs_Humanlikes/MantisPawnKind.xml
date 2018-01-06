@@ -288,7 +288,7 @@
       <max>2.3</max>
     </gearHealthRange>
     <apparelTags>
-      <li>Tribal</li>
+      <li>Outlander</li>
     </apparelTags>
     <apparelMoney>
       <min>1000</min>
@@ -299,8 +299,7 @@
       <max>28000</max>
     </weaponMoney>
     <weaponTags>
-		<li>NeolithicRanged</li>
-		<li>NeolithicMeleeAdvanced</li>
+		<li>EliteGun</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>
@@ -356,6 +355,8 @@
     <weaponTags>
 		<li>Gun</li>
 		<li>EliteGun</li>
+		<li>AdvancedGun</li>
+		<li>SniperRifle</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>

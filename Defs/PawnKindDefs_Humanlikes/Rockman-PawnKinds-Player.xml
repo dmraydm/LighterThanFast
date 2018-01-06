@@ -6,7 +6,7 @@
 		<combatPower>40</combatPower>
 		<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
 		<isFighter>false</isFighter>
-		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 	</PawnKindDef>
 
@@ -17,9 +17,11 @@
 		<backstoryCategory>RockmanBackstory</backstoryCategory>
 		<!-- <apparelAllowHeadwearChance>.5</apparelAllowHeadwearChance> -->
 		<apparelTags>
-			<li>BeltDefensePop</li>
+			<li>Tribal</li>
+			<!-- <li>BeltDefensePop</li> -->
 		<!-- <li>BeltDefense</li> -->
 		</apparelTags>
+		
 		<apparelMoney>
 		<min>100</min>
 		<max>400</max>
