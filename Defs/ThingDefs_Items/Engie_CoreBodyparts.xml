@@ -13,9 +13,6 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
 			<LTF_EngieSingleCore>2</LTF_EngieSingleCore>
 		</costList>
 	</ThingDef>
@@ -31,9 +28,7 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
+			<Steel>2</Steel>
 			<LTF_Engie02Core>2</LTF_Engie02Core>
 		</costList>
 	</ThingDef>
@@ -49,9 +44,7 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
+			<Steel>4</Steel>
 			<LTF_Engie04Core>2</LTF_Engie04Core>
 		</costList>
 	</ThingDef>
@@ -67,9 +60,7 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>2</Gold>
-			<Plasteel>5</Plasteel>
+			<Steel>8</Steel>
 			<LTF_Engie08Core>2</LTF_Engie08Core>
 		</costList>
 	</ThingDef>
@@ -85,9 +76,7 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>4</Plasteel>
+			<Steel>16</Steel>
 			<LTF_Engie16Core>2</LTF_Engie16Core>
 		</costList>
 	</ThingDef>
@@ -102,9 +91,7 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>8</Gold>
-			<Plasteel>5</Plasteel>
+			<Steel>32</Steel>
 			<LTF_Engie32Core>2</LTF_Engie32Core>
 		</costList>
 	</ThingDef>

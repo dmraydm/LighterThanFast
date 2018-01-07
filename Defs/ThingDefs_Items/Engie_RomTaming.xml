@@ -15,11 +15,8 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
-			<Hay>200</Hay>
+			<Hay>100</Hay>
 		</costList>
 	</ThingDef>
 	<!-- T2 -->
@@ -36,8 +33,9 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>5</Gold>
 			<LTF_EngieTamingRom>2</LTF_EngieTamingRom>
+			<Milk>5</Milk>
+			<EggChickenFertilized>5</EggChickenFertilized>
 		</costList>
 	</ThingDef>	
 </Defs>

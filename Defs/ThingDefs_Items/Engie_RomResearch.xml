@@ -37,7 +37,7 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>1</Gold>
+			<DevilstrandCloth>50</DevilstrandCloth>
 			<LTF_EngieResearchRom>2</LTF_EngieResearchRom>
 		</costList>
 	</ThingDef>
@@ -56,9 +56,8 @@
 		
 		<costList>
 			<LTF_Kraptyl>50</LTF_Kraptyl>
-			<LTF_EngieCook2Rom>1</LTF_EngieCook2Rom>
-			<LTF_EngieRawRom>2</LTF_EngieRawRom>
-			<DevilstrandCloth>150</DevilstrandCloth>
+			<LTF_EngieCook2Rom>2</LTF_EngieCook2Rom>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
 			<Telescope>1</Telescope>
 			<InsectJelly>10</InsectJelly>
 		</costList>

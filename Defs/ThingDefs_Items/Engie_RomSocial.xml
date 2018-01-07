@@ -15,11 +15,8 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>5</Gold>
-			<Plasteel>5</Plasteel>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
-			<MealLavish>5</MealLavish>
+			<SmokeleafJoint>5</SmokeleafJoint>
 			<!-- TODO -->
 		</costList>
 	</ThingDef>
@@ -37,8 +34,8 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>1</Gold>
 			<LTF_EngieSocialRom>2</LTF_EngieSocialRom>
+			<MealLavish>5</MealLavish>
 		</costList>
 	</ThingDef>
 	

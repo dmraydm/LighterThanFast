@@ -15,17 +15,17 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
 		</costList>
-		
+		<!--
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
 		<li>Stony</li>
 		</stuffCategories>
-		
+		-->
+
+
 	</ThingDef>
 	<!-- T2 -->
 	<!-- mining -->
@@ -41,14 +41,13 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>2</Gold>
-			<Plasteel>1</Plasteel>
 			<LTF_EngieMiningRom>2</LTF_EngieMiningRom>
+			<ChunkSlagSteel>7</ChunkSlagSteel>
 		</costList>
 		
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
-		<li>Metallic</li>
+			<li>Stony</li>
 		</stuffCategories>
 	</ThingDef>
 	

@@ -15,11 +15,8 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
-			<HerbalMedicine>10</HerbalMedicine>
-			<Medicine>1</Medicine>
+			<HerbalMedicine>5</HerbalMedicine>
 		</costList>
 		
 	</ThingDef>
@@ -38,9 +35,10 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>5</Gold>
+			<Gold>2</Gold>
 			<LTF_EngieMedicineRom>2</LTF_EngieMedicineRom>
-			<HospitalBed>2</HospitalBed>
+			<Medicine>5</Medicine>
+			<Penoxycyline>1</Penoxycyline>
 		</costList>
 	</ThingDef>
 <!-- K1 -->
@@ -58,12 +56,10 @@
 		
 		<costList>
 			<LTF_Kraptyl>50</LTF_Kraptyl>
-			<LTF_EngieMedicine2Rom>1</LTF_EngieMedicine2Rom>
-			<LTF_EngieRawRom>2</LTF_EngieRawRom>
-			<Luciferium>2</Luciferium>
+			<LTF_EngieMedicine2Rom>2</LTF_EngieMedicine2Rom>
+			<Luciferium>1</Luciferium>
 			<GlitterworldMedicine>1</GlitterworldMedicine>
 			<Hyperweave>1</Hyperweave>
-			<Penoxycyline>1</Penoxycyline>
 		</costList>
 	</ThingDef>
 		

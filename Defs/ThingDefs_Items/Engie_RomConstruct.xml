@@ -13,12 +13,18 @@
 			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
 		</graphicData>
 		
+		<!--
 		<costList>
 			<Steel>10</Steel>
 			<Gold>1</Gold>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
 			<Stool>5</Stool>
 		</costList>
+		-->
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
 		
 	</ThingDef>
 	<!-- T2 -->
@@ -35,10 +41,13 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>2</Gold>
 			<LTF_EngieConstructRom>2</LTF_EngieConstructRom>
-			<Table2x4c>5</Table2x4c>
 		</costList>
+		
+		<costStuffCount>105</costStuffCount>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
 		
 	</ThingDef>
 		<!-- T3 -->
@@ -57,9 +66,13 @@
 		<costList>
 			<Gold>2</Gold>
 			<LTF_EngieConstruct2Rom>2</LTF_EngieConstruct2Rom>
-			<DiningChair>5</DiningChair>
 		</costList>
 		
+		<costStuffCount>5</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+
 	</ThingDef>
 	
 </Defs>

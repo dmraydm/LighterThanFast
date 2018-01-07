@@ -71,6 +71,10 @@
 			<Flammability>1.2</Flammability>
 			<Beauty>-2</Beauty>
 		</statBases>
+		<costList>
+			<Gold>1</Gold>
+			<Plasteel>5</Plasteel>
+		</costList>
 	</ThingDef>
 	<ThingDef Name ="LTF_EngieRom" ParentName="LTF_EngieArtificial" Abstract="True" >
 		<statBases>
@@ -81,6 +85,11 @@
 			<Flammability>1.2</Flammability>
 			<Beauty>-4</Beauty>
 		</statBases>
+		<costList>
+			<Plasteel>5</Plasteel>
+			<Gold>1</Gold>
+			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+		</costList>
 	</ThingDef>
 
 </Defs>

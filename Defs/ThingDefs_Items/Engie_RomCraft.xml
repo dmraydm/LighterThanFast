@@ -13,12 +13,7 @@
 			<onGroundRandomRotateAngle>50</onGroundRandomRotateAngle>
 		</graphicData>
 		
-		<costList>
-			<Steel>10</Steel>
-			<Gold>1</Gold>
-			<Plasteel>5</Plasteel>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
-		</costList>
+		<!-- <costList></costList> -->
 		<costStuffCount>105</costStuffCount>
 		<stuffCategories>
 			<li>Leathery</li>
@@ -39,7 +34,6 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>2</Gold>
 			<LTF_EngieCraftRom>2</LTF_EngieCraftRom>
 			<Apparel_CowboyHat>5</Apparel_CowboyHat>
 		</costList>
@@ -58,7 +52,6 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>2</Gold>
 			<LTF_EngieCraft2Rom>2</LTF_EngieCraft2Rom>
 			<Apparel_Parka>5</Apparel_Parka>
 		</costList>

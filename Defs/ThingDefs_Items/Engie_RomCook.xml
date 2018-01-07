@@ -15,9 +15,6 @@
 		</graphicData>
 		
 		<costList>
-			<Steel>10</Steel>
-			<Gold>5</Gold>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
 			<MealSimple>10</MealSimple>
 			<Kibble>1</Kibble>
 		</costList>
@@ -37,7 +34,7 @@
 		</graphicData>
 		
 		<costList>
-			<Gold>2</Gold>
+			<Gold>1</Gold>
 			<LTF_EngieCookRom>2</LTF_EngieCookRom>
 			<MealFine>10</MealFine>
 			<Pemmican>1</Pemmican>
@@ -58,8 +55,7 @@
 		
 		<costList>
 			<LTF_Kraptyl>50</LTF_Kraptyl>
-			<LTF_EngieCook2Rom>1</LTF_EngieCook2Rom>
-			<LTF_EngieRawRom>2</LTF_EngieRawRom>
+			<LTF_EngieCook2Rom>2</LTF_EngieCook2Rom>
 			<Megaspider_Meat>25</Megaspider_Meat>
 			<Human_Meat>1</Human_Meat>
 		</costList>
