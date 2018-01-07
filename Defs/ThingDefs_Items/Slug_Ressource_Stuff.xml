@@ -8,11 +8,8 @@
     <graphicData>
 		<texPath>Things/Item/Resource/Metal</texPath>
 		<graphicClass>Graphic_Random</graphicClass>
-		<!-- <color>RGB( .52, .08, .28, .7)</color> -->
-		<!-- <color>(131,77,101)</color> -->
-		<!-- <color>(154,71,86)</color> -->
-		<color>(190,60,65)</color>
-		<!-- <color>(109,31,47)</color> -->
+		<!-- <color>(190,60,65)</color>  -->
+		<color>(138,113,226)</color>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
@@ -39,10 +36,8 @@
 		<!-- <commonality>0</commonality> -->
 		<constructEffect>ConstructMetal</constructEffect>
 		
-		<!-- <color>(131,77,101)</color> -->
-		
-		<color>(154,71,86)</color>
 		<!-- <color>(138,43,226)</color> -->
+		<color>(138,113,226)</color>
 		
 		<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
 		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
@@ -172,7 +167,7 @@
 		<graphicData>
 			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<color>(138,43,226)</color>
+			<color>(138,63,226)</color>
 		</graphicData>
 		<statBases>
 			<Mass>7</Mass>
@@ -197,7 +192,7 @@
 		<graphicData>
 			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<color>(138,43,226)</color>
+			<color>(138,63,226)</color>
 			<drawSize>.6</drawSize>
 		</graphicData>
 		
@@ -228,7 +223,7 @@
 		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Ash</texPath>
-			<color>(138, 43, 226, 100)</color>
+			<color>(138, 63, 226, 100)</color>
 		</graphicData>
 		<pathCost>3</pathCost>
 		<filth>
