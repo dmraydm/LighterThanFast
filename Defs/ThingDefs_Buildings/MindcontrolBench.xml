@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BenchBase">
+		<defName>LTF_MindcontrolBench</defName>
+		<label>mind control bench</label>
+		<thingClass>Building_WorkTable</thingClass>
+		<description>A work station to rule them all.</description>
+		<graphicData>
+			<texPath>Things/Building/MindcontrolBench/MindcontrolBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3.5,3)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<surfaceType>Item</surfaceType>
+		<rotatable>false</rotatable>
+<!-- hasTooltip -->
+		<costList>
+			<Steel>43</Steel>
+			<Component>1</Component>
+			
+			<LTF_SlugDew>100</LTF_SlugDew>
+			<LTF_Kraptyl>57</LTF_Kraptyl>
+		</costList>
+		<!-- ToDO -->
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<!-- <li>Stony</li> -->
+		</stuffCategories>
+		<killedLeavings>
+			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>
+			<LTF_Kraptyl>23</LTF_Kraptyl>
+			<Steel>17</Steel>
+			<LTF_SlugDew>13</LTF_SlugDew>
+		</killedLeavings>
+		
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.1</Flammability>
+			<Cleanliness>.1</Cleanliness>
+		</statBases>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<size>(3,1)</size>
+		
+		<designationCategory>Production</designationCategory>
+		<passability>Impassable</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<!-- <pathCost>80</pathCost> -->
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<!--
+		<recipes>
+			<li>ButcherCorpseMechanoid</li>
+		</recipes>
+		-->
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			
+			<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<startElectricalFires>true</startElectricalFires>
+			<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(138,43,226,0)</glowColor>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<!--
+			<li>
+				<compClass>NewHatcher.Comp_LTF_RegisterPawn</compClass>
+			</li>
+			-->
+			
+		</comps>
+		
+		<!--
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+		</building>
+		-->
+		<researchPrerequisites><li>LTF_Research_Mindcontrol</li></researchPrerequisites>
+		
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		
+	</ThingDef>
+
+</Defs>

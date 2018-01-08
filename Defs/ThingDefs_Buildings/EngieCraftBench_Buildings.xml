@@ -28,7 +28,7 @@
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
 			<li>Stony</li>
-			<!-- <li>Metallic</li> -->
+			<li>Metallic</li>
 		</stuffCategories>
 		<killedLeavings>
 			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>

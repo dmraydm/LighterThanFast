@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--=============================== Tier 2: better ===================================-->
+	<ResearchProjectDef>
+		<defName>LTF_Research_EngieT2Roms</defName>
+		<label>Engie T2 things</label>
+		<description>Required to craft T2 roms</description>
+		<baseCost>1387</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>LTF</tab>
+		<prerequisites>
+			<li>LTF_Research_EngieT1Roms</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>.5</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>LTF_Research_Mindcontrol</defName>
+		<label>Slug enthusiastic</label>
+		<description>great power comes with facilities</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>LTF</tab>
+		<prerequisites>
+			<li>LTF_Research_SlugProducts</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>4.4</researchViewY>
+	</ResearchProjectDef>
+
+	
+
+</Defs>

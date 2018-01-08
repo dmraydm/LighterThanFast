@@ -12,7 +12,7 @@
 - /!\ LTF refuses all responsibility for fires when comes the rain again
 Falling on my head like a memory.</description>
 		<graphicData>
-			<texPath>Things/Building/ShieldBench/LTF_ShieldBench</texPath>
+			<texPath>Things/Building/ShieldBench/ShieldBench</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3.5,1.5)</drawSize>
@@ -62,24 +62,21 @@ Falling on my head like a memory.</description>
 		
 		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+		
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<startElectricalFires>false</startElectricalFires>
 				<basePowerConsumption>350</basePowerConsumption>
 			</li>
-
-			<!-- <li Class="CompProperties_FireOverlay"><fireSize>1</fireSize></li> -->
 			
-			<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompProperties_Flickable"/>
-
 			<li Class="CompProperties_Glower">
 				<glowRadius>2</glowRadius>
 				<glowColor>(50,220,50,0)</glowColor>
 			</li>
 			
-			<li Class="CompProperties_Breakdownable"/>
-
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>3</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>

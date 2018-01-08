@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--=============================== Tier 3: chill ===================================-->	
+	<ResearchProjectDef>
+		<defName>LTF_Research_EngieT3Roms</defName>
+		<label>Engie T3 things</label>
+		<description>Required to craft T3 roms</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>LTF</tab>
+		<prerequisites>
+			<li>LTF_Research_EngieT2Roms</li>
+		</prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>.5</researchViewY>
+	</ResearchProjectDef>	
+
+</Defs>
