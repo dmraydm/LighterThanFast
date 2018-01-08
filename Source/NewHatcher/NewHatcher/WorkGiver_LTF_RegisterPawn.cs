@@ -8,13 +8,13 @@ using RimWorld;
 namespace NewHatcher
 
 {
-    public class WorkGiver_ShieldBench : WorkGiver_Scanner
+    public class WorkGiver_MindcontrolBench : WorkGiver_Scanner
     {
         public override ThingRequest PotentialWorkThingRequest
         {
             get
             {
-                return ThingRequest.ForDef(ThingDef.Named("LTF_ShieldBench"));
+                return ThingRequest.ForDef(ThingDef.Named("LTF_MindcontrolBench"));
             }
         }
 
@@ -33,6 +33,7 @@ namespace NewHatcher
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
+			// ??????????
             return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDefOf.DeepDrill).Cast<Thing>();
         }
 
@@ -41,7 +42,7 @@ namespace NewHatcher
             List<Building> allBuildingsColonist = pawn.Map.listerBuildings.allBuildingsColonist;
             for (int i = 0; i < allBuildingsColonist.Count; i++)
             {
-                if (allBuildingsColonist[i].def == ThingDef.Named("LTF_ShieldBench"))
+                if (allBuildingsColonist[i].def == ThingDef.Named("LTF_MindcontrolBench"))
                 {
                     CompPowerTrader comp = allBuildingsColonist[i].GetComp<CompPowerTrader>();
                     if (comp == null || comp.PowerOn)
@@ -57,43 +58,47 @@ namespace NewHatcher
         {
             get
             {
-                return DefDatabase<JobDef>.GetNamed("LTF_OperateShieldBench");
+                return DefDatabase<JobDef>.GetNamed("LTF_RegisterPawn");
             }
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            // non faction bench
             if (t.Faction != pawn.Faction)
             {
                 return false;
             }
             Building building = t as Building;
+
+            // Null bench
             if (building == null)
             {
                 return false;
             }
-			// HERE IF IT FAILS
+            // Forbidden
             if (building.IsForbidden(pawn))
             {
                 return false;
             }
             LocalTargetInfo target = building;
+            // Pawn can reserve
             if (!pawn.CanReserve(target, 1, -1, null, forced))
             {
                 return false;
             }
-            Comp_LTF_SynthetizeShieldLayer comp_SynthetizeShieldLayer = building.TryGetComp<Comp_LTF_SynthetizeShieldLayer>();
-            return comp_SynthetizeShieldLayer.PowerAndWearerInRadius() && !building.IsBurning();
+
+            Comp_LTF_RegisterPawn comp_RegisterPawn = building.TryGetComp<Comp_LTF_RegisterPawn>();
+            // No target set
+            if (!comp_RegisterPawn.isTargetSet())
+            {
+                return false;
+            }
+            return comp_RegisterPawn.PowerAndTargetPawnInRadius() && !building.IsBurning();
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            //return new Job(JobDefOf.OperateDeepDrill, t, 1500, true);
-            //JobDriver_OperateShieldBench whatever = null;
-//            ThingDef.Named("LTF_OperateShieldBench").;
-            //whatever = JobDef("LTF_OperateShieldBench");
-            //whatever.job.def
-            //return new Job(JobDef.Named("LTF_OperateShieldBench"), t, 1500, true);
             return new Job(JobDefToUse, t, 1500, true);
         }
     }

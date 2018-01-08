@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+		<defName>WorkGiver_registerPawn</defName>
+		<label>registers</label>
+		<giverClass>NewHatcher.WorkGiver_MindcontrolBench</giverClass>
+		<!-- <workType>LayerSynthetize</workType> -->
+		<workType>Crafting</workType>
+		<verb>registers some guy</verb>
+		<gerund>registering for later mind control</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+			<!-- <li>Research</li> -->
+			<li>Sight</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  </Defs>

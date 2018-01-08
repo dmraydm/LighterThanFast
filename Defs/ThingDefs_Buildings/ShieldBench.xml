@@ -30,10 +30,12 @@ Falling on my head like a memory.</description>
 			<Component>1</Component>
 			<LTF_Kraptyl>23</LTF_Kraptyl>
 		</costList>
+		<resourcesFractionWhenDeconstructed>.3</resourcesFractionWhenDeconstructed>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
+		
 		<killedLeavings>
 			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>
 			<LTF_Kraptyl>7</LTF_Kraptyl>
