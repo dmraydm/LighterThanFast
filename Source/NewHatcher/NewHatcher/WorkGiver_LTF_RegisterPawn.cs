@@ -33,8 +33,10 @@ namespace NewHatcher
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-			// ??????????
-            return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDefOf.DeepDrill).Cast<Thing>();
+            // ??????????
+            //StatDef.Named("SmithingSpeed")
+            //return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDefOf.DeepDrill).Cast<Thing>();
+            return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("LTF_MindcontrolBench")).Cast<Thing>();
         }
 
         public override bool ShouldSkip(Pawn pawn)

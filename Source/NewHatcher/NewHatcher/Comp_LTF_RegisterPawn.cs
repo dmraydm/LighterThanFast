@@ -11,13 +11,20 @@ using Verse;
 using Verse.Sound;
 
 
+using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using UnityEngine;
+
 namespace NewHatcher
 {
     public class CompTargetEffect_PreRegisterPawn : CompTargetEffect
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {
-            Log.Warning("DoEffectOn");
+            Log.Warning(">>> DoEffectOn  <<<");
             //user though
             Pawn pawn = (Pawn)target;
             if (pawn.Dead)
@@ -45,7 +52,7 @@ namespace NewHatcher
     {
         public override void DoEffect(Pawn usedBy)
         {
-            Log.Warning("DoEffect");
+            Log.Warning(">>> DoEffect <<<");
             //base.DoEffect(usedBy);
             base.DoEffect(usedBy);
             SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera(usedBy.MapHeld);
@@ -58,7 +65,10 @@ namespace NewHatcher
         private CompPowerTrader powerComp;
         private CompMannable mannableComp;
 
-        private bool enabled = false;
+        public Thing mindcontrolGun;
+        private CompEquippable MindcontrolGunCompEq;
+                 
+        private bool mindcontrolEnabled = false;
 		
         private float registerPawnProgress	= 0;
         private float workerEmpathyForTarget;
@@ -67,10 +77,21 @@ namespace NewHatcher
 		private Pawn toRegisterTarget = null;
 		private Pawn registeredTarget = null;
 
-        float layerMulti = 3.5f;
-
         private const float registerPawnWork = 99999f; // 120sec = 60 tick * 120 = 7200 tick
+
         private float benchRadius = 35.7f;
+
+        
+
+        protected int burstCooldownTicksLeft;
+        protected int burstWarmupTicksLeft;
+
+        protected StunHandler stunner;
+        protected LocalTargetInfo currentTargetInt = LocalTargetInfo.Invalid;
+        protected LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
+        private LocalTargetInfo lastAttackedTarget;
+        private int lastAttackTargetTick;
+        private const float SightRadiusTurret = 13.4f;
 
 
 
@@ -86,8 +107,72 @@ namespace NewHatcher
         {
             this.powerComp = this.parent.TryGetComp<CompPowerTrader>();
             this.mannableComp = this.parent.TryGetComp<CompMannable>();
+            //this.equippableComp = this.parent.TryGetComp<CompEquippable>();
+
+            //if ( (powerComp == null) || (mannableComp == null) || (equippableComp == null))
+            if (powerComp == null) 
+            {
+                Log.Warning("power comp Null");
+            }
+            if (mannableComp == null)
+            {
+                Log.Warning("manable comp null");
+            }
+            //this.MakeGun();
+            Log.Warning("PostSpawnSetup end");
         }
-    
+
+        public CompEquippable MindBenchCompEq
+        {
+            get
+            {
+                return this.mindcontrolGun.TryGetComp<CompEquippable>();
+            }
+        }
+        /*
+        public void DeSpawn()
+        {
+            base.DeSpawn();
+            this.ResetCurrentTarget();
+        }
+        */
+
+        public Verb AttackVerb
+        {
+            get
+            {
+                return this.MindBenchCompEq.verbTracker.PrimaryVerb;
+            }
+        }
+
+        public void MakeGun()
+        {
+            this.mindcontrolGun = ThingMaker.MakeThing(this.parent.def.building.turretGunDef, null);
+            this.UpdateGunVerbs();
+            Log.Warning("MakeGun end");
+        }
+
+        private void UpdateGunVerbs()
+        {
+            List<Verb> allVerbs = this.mindcontrolGun.TryGetComp<CompEquippable>().AllVerbs;
+            for (int i = 0; i < allVerbs.Count; i++)
+            {
+                Verb verb = allVerbs[i];
+                verb.caster = this.parent;
+                verb.castCompleteCallback = new Action(this.BurstComplete);
+               Log.Warning(this.parent.Label + i + ":" + verb.ToString());
+            }
+            //Log.Warning("updateverbs end");
+        }
+
+        // public override LocalTargetInfo CurrentTarget
+        public LocalTargetInfo CurrentTarget
+        {
+            get
+            {
+                return this.currentTargetInt;
+            }
+        }
 
         public override void PostExposeData()
         {
@@ -102,7 +187,11 @@ namespace NewHatcher
 //            float meleeValue = masterMind.GetStatValue(StatDefOf.MeleeDodgeChance, true);
             //float yeldValue = masterMind.GetStatValue(StatDefOf., true);
 
-            return (intelligenceValue + Rand.Range(rangedValue*.75f , rangedValue*1.25f)) * craftValue * layerMulti;
+            float factor = (intelligenceValue + Rand.Range(rangedValue * .75f, rangedValue * 1.25f)) * craftValue;
+
+            Log.Warning("Empathy:" +factor);
+
+            return factor;
         }
 
         // Appel ? debug JobDriver_OperateDeepDrill.cs
@@ -132,26 +221,27 @@ namespace NewHatcher
             }
             else
             {
-                Log.Warning("can register someone Null");
+                Log.Warning("Mastermind : can register Null");
             }
             
         }
         /*
         Turret?
         public override void OrderAttack(LocalTargetInfo targ)
+        */
+        public void OrderAttack(LocalTargetInfo targ)
         {
             if (!targ.IsValid)
             {
                 if (this.forcedTarget.IsValid)
                 {
-                    this.ResetForcedTarget();
+                    this.TargetReset();
                 }
                 return;
             }
         }
-        */
 
-            public void setToRegisterTarget(Pawn newTarget)
+        public void setToRegisterTarget(Pawn newTarget)
         {
             if(newTarget != null)
             {
@@ -221,7 +311,7 @@ namespace NewHatcher
                 {
 					registeredTarget = targetPawn;
 					toRegisterTarget = null;
-					enabled = true;
+                    mindcontrolEnabled = true;
                     return;
                 }
                 else
@@ -305,17 +395,46 @@ namespace NewHatcher
             {
                 action = new Action(this.ShowReport),
                 defaultLabel = "Mind logs",
-                defaultDesc = "mindControl desc",
+                defaultDesc = "Show a report of actors",
                 icon = ContentFinder<Texture2D>.Get("UI/Commands/LaunchReport", true)
             };
 
-            yield return new Command_Action
+            /*
+            if (this.CanSetForcedTarget)
             {
-                action = new Action(this.TargetReset),
-                defaultLabel = "Reset",
-                defaultDesc = "Resets the pawn targeted.",
-                icon = ContentFinder<Texture2D>.Get("UI/Commands/HoldFire", true)
-            };
+                yield return new Command_VerbTarget
+                {
+                    defaultLabel = "Pre register",
+                    defaultDesc = "Record someone to mind map",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/Attack", true),
+                    verb = this.MindcontrolGunCompEq.PrimaryVerb,
+                    hotKey = KeyBindingDefOf.Misc4
+                };
+            }
+            */
+
+            if (toRegisterTarget != null)
+            {
+                yield return new Command_Action
+                {
+                    action = new Action(this.TargetReset),
+                    defaultLabel = "Reset",
+                    defaultDesc = "Reset the target",
+                    icon = ContentFinder<Texture2D>.Get("UI/Buttons/Delete", true)
+                };
+            }
+            
+
+            if (mindcontrolEnabled)
+            {
+                yield return new Command_Action
+                {
+                    action = new Action(this.TargetReset),
+                    defaultLabel = "Mind control",
+                    defaultDesc = "Take control maybe",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
+                };
+            }
         }
         /*
          public override GizmoResult GizmoOnGUI(Vector2 topLeft)
@@ -385,6 +504,18 @@ namespace NewHatcher
 
             Dialog_MessageBox window = new Dialog_MessageBox(stringBuilder.ToString(), null, null, null, null, null, false);
             Find.WindowStack.Add(window);
+        }
+
+        protected void BurstComplete()
+        {
+            if (this.parent.def.building.turretBurstCooldownTime >= 0f)
+            {
+                this.burstCooldownTicksLeft = this.parent.def.building.turretBurstCooldownTime.SecondsToTicks();
+            }
+            else
+            {
+                this.burstCooldownTicksLeft = this.MindcontrolGunCompEq.PrimaryVerb.verbProps.defaultCooldownTime.SecondsToTicks();
+            }
         }
 
         public override string CompInspectStringExtra()

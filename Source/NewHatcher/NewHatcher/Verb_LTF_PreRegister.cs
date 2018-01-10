@@ -15,7 +15,8 @@ namespace NewHatcher
 
 		public override void WarmupComplete()
 		{
-			base.WarmupComplete();
+            Log.Warning("Verb WarmupComplete");
+            base.WarmupComplete();
 			if (base.CasterIsPawn && base.CasterPawn.skills != null)
 			{
                 Log.Warning("WarmupComplete");
@@ -33,6 +34,7 @@ namespace NewHatcher
 
 		protected override bool TryCastShot()
 		{
+            Log.Warning("Verb TryCastShot");
             bool flag = true;
             /*
              * base.TryCastShot();

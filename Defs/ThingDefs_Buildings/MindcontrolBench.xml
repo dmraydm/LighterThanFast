@@ -3,7 +3,9 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>LTF_MindcontrolBench</defName>
 		<label>mind control bench</label>
+		
 		<thingClass>Building_WorkTable</thingClass>
+		
 		<description>A work station to rule them all.</description>
 		<graphicData>
 			<texPath>Things/Building/MindcontrolBench/MindcontrolBench</texPath>
@@ -101,14 +103,16 @@
 			</li>
 			
 			<li Class="CompProperties_Usable">
-				<useJob>LTF_PreRegister</useJob>
+				<!-- <useJob>LTF_PreRegister</useJob> -->
+				<useJob>UseItem</useJob>
 				<useLabel>pre mind control</useLabel>
 			</li>
 
 			<li Class="CompProperties_UseEffect">
 				<compClass>NewHatcher.CompUseEffect_LTF_MindcontrolRegister</compClass>
 			</li>
-
+			
+			
 			<li Class="CompProperties_Mannable">
 				<manWorkType>Violent</manWorkType>
 			</li>
