@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<WorkGiverDef>
-		<defName>WorkGiver_registerPawn</defName>
-		<label>registers</label>
-		<giverClass>NewHatcher.WorkGiver_MindcontrolBench</giverClass>
+		<defName>WorkGiver_LTF_MindMine</defName>
+		<label>mind mines</label>
+		
+		<giverClass>NewHatcher.WorkGiver_LTF_MindMine</giverClass>
 		<!-- <workType>LayerSynthetize</workType> -->
 		<workType>Crafting</workType>
-		<verb>registers some guy</verb>
-		<gerund>registering for later mind control</gerund>
+		
+		<verb>mind map some guy</verb>
+		
+		<gerund>mind mapping</gerund>
 		<priorityInType>100</priorityInType>
+		
 		<requiredCapacities>
 			<li>Manipulation</li>
 			<!-- <li>Research</li> -->

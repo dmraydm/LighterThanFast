@@ -2,14 +2,8 @@
 <Defs>
 
 	<JobDef>
-		<defName>LTF_PreRegister</defName>
-		<driverClass>NewHatcher.JobDriver_LTF_PreRegister</driverClass>
-		<reportString>Registering someone at TargetA.</reportString>
-	</JobDef>
-
-	<JobDef>
-		<defName>LTF_RegisterPawn</defName>
-		<driverClass>NewHatcher.JobDriver_LTF_RegisterPawn</driverClass>
+		<defName>JobDriver_LTF_MindMine</defName>
+		<driverClass>NewHatcher.JobDriver_LTF_MindMine</driverClass>
 		<reportString>Get to know someone at TargetA.</reportString>
 	</JobDef>
 

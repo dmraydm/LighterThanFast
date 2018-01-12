@@ -23,35 +23,31 @@ Falling on my head like a memory.</description>
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<size>(3,1)</size>
 		<surfaceType>Item</surfaceType>
 <!-- hasTooltip -->
 		<costList>
 			<Plasteel>43</Plasteel>
 			<Component>1</Component>
-			<LTF_Kraptyl>23</LTF_Kraptyl>
+			<LTF_EngieCraftRom>3</LTF_EngieCraftRom>
+			<LTF_Kraptyl>79</LTF_Kraptyl>
+			<Uranium>1</Uranium>
 		</costList>
 		<resourcesFractionWhenDeconstructed>.3</resourcesFractionWhenDeconstructed>
 		<costStuffCount>150</costStuffCount>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
-		
-		<killedLeavings>
-			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>
-			<LTF_Kraptyl>7</LTF_Kraptyl>
-			<Plasteel>17</Plasteel>
-		</killedLeavings>
 
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.7</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
-			<WorkToBuild>5000</WorkToBuild>
+			<WorkToBuild>7779</WorkToBuild>
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>1.1</Flammability>
 			<Cleanliness>-2</Cleanliness>
 		</statBases>
-		<size>(3,1)</size>
 		<minifiedDef>MinifiedFurniture</minifiedDef>
 		
 		<designationCategory>Security</designationCategory>
@@ -59,6 +55,7 @@ Falling on my head like a memory.</description>
 		
 		<passability>PassThroughOnly</passability>
 		<pathCost>80</pathCost>
+		
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		

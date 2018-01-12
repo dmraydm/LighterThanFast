@@ -33,6 +33,7 @@ namespace NewHatcher
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
+            //return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDef.Named("LTF_ShieldBench")).Cast<Thing>();
             return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDefOf.DeepDrill).Cast<Thing>();
         }
 
@@ -82,7 +83,11 @@ namespace NewHatcher
             {
                 return false;
             }
-            Comp_LTF_SynthetizeShieldLayer comp_SynthetizeShieldLayer = building.TryGetComp<Comp_LTF_SynthetizeShieldLayer>();
+            Comp_LTF_SynthetizeShieldLayer comp_SynthetizeShieldLayer = null;
+            comp_SynthetizeShieldLayer = building.TryGetComp<Comp_LTF_SynthetizeShieldLayer>();
+            if (comp_SynthetizeShieldLayer == null)
+            { Log.Warning("comp_SynthetizeShieldLayer null"); }
+
             return comp_SynthetizeShieldLayer.PowerAndWearerInRadius() && !building.IsBurning();
         }
 

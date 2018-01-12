@@ -22,15 +22,16 @@
 		<surfaceType>Item</surfaceType>
 		<rotatable>false</rotatable>
 		<!-- <size>(3,2)</size> -->
-		<size>(3,2,2)</size>
+		<size>(3,2)</size>
 <!-- hasTooltip -->
 		<costList>
 			<Steel>43</Steel>
-			<Component>1</Component>
-			
+			<Component>3</Component>
+			<LTF_EngieCraftRom>1</LTF_EngieCraftRom>
 			<LTF_SlugDew>100</LTF_SlugDew>
 			<LTF_Kraptyl>57</LTF_Kraptyl>
 		</costList>
+		<resourcesFractionWhenDeconstructed>.3</resourcesFractionWhenDeconstructed>
 		<!-- ToDO -->
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -38,18 +39,12 @@
 			<li>Woody</li>
 			<!-- <li>Stony</li> -->
 		</stuffCategories>
-		<killedLeavings>
-			<LTF_ChunkSlagKraptyl>1</LTF_ChunkSlagKraptyl>
-			<LTF_Kraptyl>23</LTF_Kraptyl>
-			<Steel>17</Steel>
-			<LTF_SlugDew>13</LTF_SlugDew>
-		</killedLeavings>
 		
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>1</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
-			<WorkToBuild>5000</WorkToBuild>
+			<WorkToBuild>11357</WorkToBuild>
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>1.1</Flammability>
 			<Cleanliness>.1</Cleanliness>
@@ -57,22 +52,14 @@
 		<minifiedDef>MinifiedFurniture</minifiedDef>
 		
 		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>35</specialDisplayRadius>
 		
 		<passability>Impassable</passability>
 		<canOverlapZones>false</canOverlapZones>
+		
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<specialDisplayRadius>35</specialDisplayRadius>
-		<!--
-		<recipes>
-			<li>ButcherCorpseMechanoid</li>
-		</recipes>
-		-->
-		<!--
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		-->
+		
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_Breakdownable"/>
@@ -107,39 +94,22 @@
 				<useJob>UseItem</useJob>
 				<useLabel>pre mind control</useLabel>
 			</li>
-
+			<!-- Effet masterMind -->
 			<li Class="CompProperties_UseEffect">
 				<compClass>NewHatcher.CompUseEffect_LTF_MindcontrolRegister</compClass>
 			</li>
-			
-			
-			<li Class="CompProperties_Mannable">
-				<manWorkType>Violent</manWorkType>
-			</li>
-
+			<!-- Effet target -->
 			<li>
-				<compClass>NewHatcher.CompTargetEffect_PreRegisterPawn</compClass>
+				<compClass>NewHatcher.CompTargetEffect_LTF_MindcontrolRegister</compClass>
 			</li>
+			
+			<!-- Main -->
 			<li>
-				<compClass>NewHatcher.Comp_LTF_RegisterPawn</compClass>
+				<compClass>NewHatcher.Comp_LTF_MindControl</compClass>
 			</li>
 			
 		</comps>
-		<building>
-			<turretGunDef>LTF_MindcontrolBench_Mortar</turretGunDef>
-			<turretTopGraphicPath>Things/Building/Security/TurretMortar_Top</turretTopGraphicPath>
-			<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
-			<buildingTags>
-				<li>LTF_MindcontrolBench</li>
-			</buildingTags>
-		</building>
-	
-		<!--
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-			
-		</building>
-		-->
+
 		<researchPrerequisites><li>LTF_Research_Mindcontrol</li></researchPrerequisites>
 		
 		<placeWorkers>
@@ -149,79 +119,4 @@
 		
 	</ThingDef>
 	
-
-<!--Hack  Weapon hack mannable equipable verb -->
-	<ThingDef Name="BaseArtilleryWeapon" Abstract="True">
-		<category>Item</category>
-		<thingClass>ThingWithComps</thingClass>
-		<label>MindControl error</label>
-		<useHitPoints>false</useHitPoints>
-		<equipmentType>Primary</equipmentType>
-		<tickerType>Never</tickerType>
-
-		<techLevel>Industrial</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<canBeSpawningInventory>false</canBeSpawningInventory>
-		<menuHidden>True</menuHidden>
-		<tradeability>Never</tradeability>
-		<weaponTags>
-			<!-- <li>LTF_MindcontrolBench</li> -->
-			<li>Artillery</li>
-		</weaponTags>
-		<comps>
-			<li>
-				<compClass>CompEquippable</compClass>
-			</li>
-		<!-- <li Class="CompProperties_ChangeableProjectile" /> -->
-		</comps>
-		<!--
-    <building>
-      <fixedStorageSettings>
-        <filter>
-          <categories>
-            <li>MortarShells</li>
-          </categories>
-        </filter>
-      </fixedStorageSettings>
-      <defaultStorageSettings>
-        <filter>
-          <categories>
-            <li>MortarShells</li>
-          </categories>
-          <exceptedThingDefs>
-            <li>Shell_Firefoam</li>
-            <li>Shell_AntigrainWarhead</li>
-          </exceptedThingDefs>
-        </filter>
-      </defaultStorageSettings>
-    </building>
-	-->
-  </ThingDef>
-	<!-- Verb -->
-	<ThingDef ParentName="BaseArtilleryWeapon">
-		<defName>LTF_MindcontrolBench_Mortar</defName>
-		<label>Mindcontrol bench mortar ?</label>
-		<description>Mindcontrol truc.</description>
-		<weaponTags>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-		<li>
-			<verbClass>NewHatcher.Verb_LTF_PreRegister</verbClass>
-			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-			<hasStandardCommand>true</hasStandardCommand>
-			<warmupTime>0.1</warmupTime>
-			<requireLineOfSight>false</requireLineOfSight>
-			<minRange>1</minRange>
-			<range>35</range>
-			<burstShotCount>1</burstShotCount>
-			<soundCast>Mortar_LaunchA</soundCast>
-			<muzzleFlashScale>16</muzzleFlashScale>
-			
-			<targetParams>
-				<canTargetPawns>true</canTargetPawns>
-			</targetParams>
-		</li>
-		</verbs>
-	</ThingDef>
 </Defs>

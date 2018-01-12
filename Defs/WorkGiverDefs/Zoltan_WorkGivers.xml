@@ -7,8 +7,10 @@
 		<!-- <workType>LayerSynthetize</workType> -->
 		<workType>Crafting</workType>
 		<verb>synthetizes a shield layer</verb>
+		
 		<gerund>shield layer synthetizing</gerund>
 		<priorityInType>100</priorityInType>
+		
 		<requiredCapacities>
 			<li>Manipulation</li>
 			<li>Sight</li>
