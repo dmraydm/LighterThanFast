@@ -65,29 +65,55 @@ namespace NewHatcher
         {
             if (t.Faction != pawn.Faction)
             {
+                //Log.Warning("strike! bench not mine");
                 return false;
             }
             Building building = t as Building;
             if (building == null)
             {
+                //Log.Warning("strike! building null");
                 return false;
             }
             // HERE IF IT FAILS
             if (building.IsForbidden(pawn))
             {
+               // Log.Warning("strike! forbiden");
                 return false;
             }
             LocalTargetInfo target = building;
             if (!pawn.CanReserve(target, 1, -1, null, forced))
             {
+                //Log.Warning("strike! cant reserver");
                 return false;
             }
             Comp_LTF_MindControl comp_mindControl = null;
             comp_mindControl = building.TryGetComp<Comp_LTF_MindControl>();
             if (comp_mindControl == null )
-            { Log.Warning("comp_mindControl null"); }
+                { Log.Warning("comp_mindControl null"); }
 
-            return comp_mindControl.PowerAndTargetPawnInRadius() && !building.IsBurning();
+            if (!comp_mindControl.GotThePower())
+            {
+                //Log.Warning("strike! no powwer");
+                return false;
+            }
+
+            if (!comp_mindControl.ActorInRadius()){
+                //Log.Warning("strike! no one");
+                return false;
+            }
+            if (building.IsBurning())
+            {
+                //Log.Warning("strike! on fire");
+                return false;
+            }
+
+            if (comp_mindControl.IsWorkDone())
+            {
+               //Log.Warning("strike! job done");
+                return false;
+            }
+
+            return true;
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)

@@ -26,8 +26,8 @@
 <!-- hasTooltip -->
 		<costList>
 			<Steel>43</Steel>
-			<Component>3</Component>
-			<LTF_EngieCraftRom>1</LTF_EngieCraftRom>
+			<Component>1</Component>
+			<LTF_EngieSocialRom>1</LTF_EngieSocialRom>
 			<LTF_SlugDew>100</LTF_SlugDew>
 			<LTF_Kraptyl>57</LTF_Kraptyl>
 		</costList>
@@ -80,25 +80,26 @@
 					<li>ToolCabinet</li>
 				</linkableFacilities>
 			</li>
-			<li Class="CompProperties_Targetable">
-				<compClass>CompTargetable_SinglePawn</compClass>
-				<psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
-			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>4.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 			</li>
 			
+			<!-- Allows to target something -->
+			<li Class="CompProperties_Targetable">
+				<compClass>CompTargetable_SinglePawn</compClass>
+				<psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+			</li>
+			<!-- Associates object to effects -->
 			<li Class="CompProperties_Usable">
-				<!-- <useJob>LTF_PreRegister</useJob> -->
 				<useJob>UseItem</useJob>
 				<useLabel>pre mind control</useLabel>
 			</li>
-			<!-- Effet masterMind -->
+			<!-- masterMind effect -->
 			<li Class="CompProperties_UseEffect">
 				<compClass>NewHatcher.CompUseEffect_LTF_MindcontrolRegister</compClass>
 			</li>
-			<!-- Effet target -->
+			<!-- target effect -->
 			<li>
 				<compClass>NewHatcher.CompTargetEffect_LTF_MindcontrolRegister</compClass>
 			</li>
@@ -112,9 +113,11 @@
 
 		<researchPrerequisites><li>LTF_Research_Mindcontrol</li></researchPrerequisites>
 		
+		<!--
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
+		-->
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		
 	</ThingDef>

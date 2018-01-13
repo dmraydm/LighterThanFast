@@ -6,7 +6,7 @@
 		
 		<giverClass>NewHatcher.WorkGiver_LTF_MindMine</giverClass>
 		<!-- <workType>LayerSynthetize</workType> -->
-		<workType>Crafting</workType>
+		<workType>Warden</workType>
 		
 		<verb>mind map some guy</verb>
 		
@@ -14,9 +14,8 @@
 		<priorityInType>100</priorityInType>
 		
 		<requiredCapacities>
-			<li>Manipulation</li>
-			<!-- <li>Research</li> -->
-			<li>Sight</li>
+			<!-- <li>Talking</li> -->
+			<li>Hearing</li>
 		</requiredCapacities>
 	</WorkGiverDef>
   </Defs>
