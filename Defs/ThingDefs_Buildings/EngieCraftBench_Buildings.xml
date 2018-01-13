@@ -87,11 +87,7 @@
 		</building>
 		
 		<researchPrerequisites><li>LTF_Research_EngieBench</li></researchPrerequisites>
-		<!--
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
-		-->
+
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		
 	</ThingDef>

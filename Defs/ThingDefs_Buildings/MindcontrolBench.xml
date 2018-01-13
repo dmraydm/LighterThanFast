@@ -113,11 +113,6 @@
 
 		<researchPrerequisites><li>LTF_Research_Mindcontrol</li></researchPrerequisites>
 		
-		<!--
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
-		-->
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		
 	</ThingDef>

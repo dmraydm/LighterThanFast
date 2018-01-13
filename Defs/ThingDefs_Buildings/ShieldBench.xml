@@ -91,7 +91,6 @@ Falling on my head like a memory.</description>
 		<researchPrerequisites><li>LTF_Research_ZoltanShieldBench</li></researchPrerequisites>
 		
 		<placeWorkers>
-			<!-- <li>PlaceWorker_ShowFacilitiesConnections</li> -->
 			<li>PlaceWorker_NotUnderRoof</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>

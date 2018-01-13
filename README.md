@@ -1,6 +1,4 @@
 # LighterThanFast
-# ---------------
-# Description : 
-# Adds 5 races to the game
+# Adds 5 races to RimWorld
 # Dependencies : 
 # Alien framework 2.0 : https://github.com/erdelf/AlienRaces
