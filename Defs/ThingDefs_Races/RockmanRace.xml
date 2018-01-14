@@ -129,7 +129,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
-			<customDrawSize>(1.5, 1.5)</customDrawSize>
+			<customDrawSize>(1.5, 1.3)</customDrawSize>
 			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
 			<alienbodytypes>
 				<li>Hulk</li>

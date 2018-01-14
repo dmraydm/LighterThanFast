@@ -158,6 +158,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 	
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
+			<customDrawSize>(.9,.9)</customDrawSize>
 			<alienbodytypes>
 				<li>Female</li>
 				<li>Male</li>
@@ -333,7 +334,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <body>Zoltan</body>
 	  
 	  <!--<body>Human</body>-->
-      <baseBodySize>1.0</baseBodySize>
+      <baseBodySize>.9</baseBodySize>
       <baseHealthScale>.85</baseHealthScale>
       <baseHungerRate>1.0</baseHungerRate>
       <foodType>OmnivoreHuman</foodType>
