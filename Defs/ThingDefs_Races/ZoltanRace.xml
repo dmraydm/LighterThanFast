@@ -166,7 +166,10 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 				<li>Hulk</li>
 				<li>Thin</li>
 			</alienbodytypes>
-			<useGenderedHeads>false</useGenderedHeads>
+			<aliencrowntypes>
+				<li>Normal</li>
+			</aliencrowntypes>
+			<useGenderedHeads>true</useGenderedHeads>
 			<bodyAddons>
 			</bodyAddons>
 			<alienskincolorgen Class="ColorGenerator_Options">
