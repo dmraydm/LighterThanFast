@@ -22,7 +22,8 @@ Thanks Psyonix ! When is the new version §§§
 	</description>
 	<techLevel>Spacer</techLevel>
 	<graphicData>
-		<texPath>Things/Apparel/shieldHelm/shieldHelm</texPath>
+		<texPath>Things/Apparel/Shieldmet/Shieldmet</texPath>
+		<!-- <shaderType>CutoutComplex</shaderType> -->
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
 	
@@ -74,7 +75,7 @@ Thanks Psyonix ! When is the new version §§§
 	<researchPrerequisites><li>LTF_Research_ShieldHelm</li></researchPrerequisites>
 	
 	<apparel>
-		<wornGraphicPath>Things/Apparel/shieldHelm/shieldHelm</wornGraphicPath>
+		<wornGraphicPath>Things/Apparel/Shieldmet/Shieldmet</wornGraphicPath>
 		<careIfWornByCorpse>true</careIfWornByCorpse>
 		<bodyPartGroups>
 			<li>FullHead</li>
