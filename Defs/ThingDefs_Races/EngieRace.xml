@@ -173,7 +173,6 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<ShootingAccuracy>.8</ShootingAccuracy>
 		<MeleeHitChance>.75</MeleeHitChance>
 		
-		<ImmunityGainSpeed>1.3</ImmunityGainSpeed>
     </statBases>
 	
 	<verbs>
@@ -356,8 +355,9 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<maleGenderProbability>1</maleGenderProbability>    
 		<forcedRaceTraitEntries>
 			<li><defName>Beauty</defName><degree>2</degree><chance>0</chance></li>
-			<li><defName>Greedy</defName><chance>0</chance></li>
-			<li><defName>Jealous</defName><chance>0</chance></li>
+			<li>
+				<defName>SuperImmune</defName>
+			</li>
 
 			<li><defName>Industriousness</defName><degree>1</degree><chance>30</chance></li>
 			<li><defName>Industriousness</defName><degree>2</degree><chance>20</chance></li>
