@@ -129,7 +129,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
-			<customDrawSize>(1.35, 1.35)</customDrawSize>
+			<customDrawSize>(1.5, 1.5)</customDrawSize>
 			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
 			<alienbodytypes>
 				<li>Hulk</li>
@@ -137,8 +137,10 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			
 			<aliencrowntypes>
 				<li>Normal</li>
+				<li>Burn</li>
 				<li>Groot</li>
-				<li>Circle</li>
+				<li>Regular</li>
+
 			</aliencrowntypes>
 			<!--
 			<alienbodytypes>
@@ -167,31 +169,25 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 -->
             <alienskinsecondcolorgen Class="ColorGenerator_Options">
                 <options>
-                    <li>
-                        <weight>20</weight>
-                        <only>RGBA(1.0,.5,.3,1)</only>
-                    </li>
-                    <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.9,0.3,0.8,1)</only>
-                    </li>
-                    <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.5,0.3,.9,1)</only>
-                    </li>
-					<li>
-                        <weight>3</weight>
-                        <only>RGBA(.3,.9,.2,1)</only>
-                    </li>
-					<li>
-                        <weight>3</weight>
-                        <only>RGBA(.3,.9,.9,1)</only>
-                    </li>
+					<!-- red -->
+                    <li><weight>30</weight><only>RGBA(1.0,.5,.1,1)</only></li>
+					<!-- orange -->
+					<li><weight>20</weight><only>RGBA(.9,.5,.1,1)</only></li>
+					<!-- yellow -->
+					<li><weight>10</weight><only>RGBA(.9,.5,.1,1)</only></li>
 					
-					<li>
-                        <weight>3</weight>
-                        <only>RGBA(.9,.5,.3,1)</only>
-                    </li>
+					<!-- violet red-->
+                    <li><weight>20</weight><only>RGBA(0.9,0.1,0.7,1)</only></li>
+					<!-- violet blue-->
+                    <li><weight>10</weight><only>RGBA(0.5,0.1,.9,1)</only></li>
+					
+					<!-- green -->
+					<li><weight>15</weight><only>RGBA(.1,.9,.2,1)</only></li>
+					<!-- green blue -->
+					<li><weight>10</weight><only>RGBA(.1,.9,.9,1)</only></li>
+					<!-- blue -->
+                    <li><weight>5</weight><only>RGBA(.1,.3,.9,1)</only></li>
+
                 </options>
             </alienskinsecondcolorgen>
 			
@@ -201,15 +197,15 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 				<!--jade-->
 					<li><weight>1</weight><only>(85,118,69)</only></li>
 				<!--sandstone-->
-					<li><weight>40</weight><only>(126,104,94)</only></li>
+					<li><weight>10</weight><only>(126,104,94)</only></li>
 				<!-- granite-->
-					<li><weight>40</weight><only>(105,95,97)</only></li>
+					<li><weight>10</weight><only>(105,95,97)</only></li>
 				<!-- limestone-->
-					<li><weight>40</weight><only>(158,153,135)</only></li>
+					<li><weight>10</weight><only>(158,153,135)</only></li>
 				<!-- slate-->
-					<li><weight>40</weight><only>(70,70,70)</only></li>
+					<li><weight>10</weight><only>(70,70,70)</only></li>
 				<!-- marble-->
-					<li><weight>40</weight><only>(132,135,132)</only></li>
+					<li><weight>10</weight><only>(132,135,132)</only></li>
 					
 					
 				<!-- dark -->
@@ -219,17 +215,21 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
 -->
 				<!-- red -->
+				<!--
 					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
 					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
 					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
 					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
 					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+					-->
 				<!-- red+green -->
+				<!--
 					<li><weight>8</weight><only>RGBA(1,1,0.9,1)</only></li>
 					<li><weight>5</weight><only>RGBA(1,1,0.8,1)</only></li>
 					<li><weight>3</weight><only>RGBA(1,1,0.7,1)</only></li>
 					<li><weight>2</weight><only>RGBA(1,1,0.6,1)</only></li>
 					<li><weight>1</weight><only>RGBA(1,1,0.5,1)</only></li>
+					-->
 				</options>
 			</alienskincolorgen>
 		</alienPartGenerator>
@@ -239,7 +239,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
 
 		<!-- <chemicalSettings>.9</chemicalSettings> -->
-		<maleGenderProbability>0.9</maleGenderProbability>
+		<maleGenderProbability>.9</maleGenderProbability>
 				
 		<forcedRaceTraitEntries>
 			<li><defName>Ascetic</defName><chance>30</chance></li>		
@@ -373,7 +373,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<leatherMarketValueFactor>4</leatherMarketValueFactor>
 	<nameCategory>HumanStandard</nameCategory>
 	<body>Human</body>
-	<baseBodySize>1.63</baseBodySize>
+	<baseBodySize>1.5</baseBodySize>
 	<baseHealthScale>1.5</baseHealthScale>
 	<baseHungerRate>1.5</baseHungerRate>
 	<foodType>OmnivoreHuman</foodType>
