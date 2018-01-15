@@ -246,14 +246,53 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
 			<alienbodytypes>
-				<li>Female</li>
 				<li>Male</li>
 				<li>Fat</li>
 				<li>Hulk</li>
 				<li>Thin</li>
 			</alienbodytypes>
 			<useGenderedHeads>false</useGenderedHeads>
+
+			<bodyAddons>
+			               <!-- Engie screen-->
+				<li>
+					<path>Engie/Screen/Template</path>
+					<bodyPart>BodyPart_LTF_Hmi</bodyPart>
+					<inFrontOfBody>true</inFrontOfBody>
+					<useSkinColor>false</useSkinColor>
+					
+					<offsets>
+						<!-- front -->
+						<front>
+							<bodyTypes>
+								<Male>(-.42,	.55)</Male>
+								<Fat>(-.42,	.5)</Fat>
+								<Thin>(-.42,	.5)</Thin>
+								<Hulk>(-.42,	.5)</Hulk>
+							</bodyTypes>
+						</front>
+						<!-- side -->
+						<side>
+							<bodyTypes>
+								<!-- <Male>(-.42,	.5)</Male> -->
+								<Male>(-.465,	.55)</Male>
+								<!-- <Female>(-.465,	.5)</Female> -->
+								<Fat>(-.475,	.545)</Fat>
+								<Thin>(-.465,	.53)</Thin>
+								<Hulk>(-.47,	.54)</Hulk>
+							</bodyTypes>
+						</side>
+					</offsets>
+					<!--
+					<hiddenUnderApparelFor>
+						<li>FullHead</li>
+					</hiddenUnderApparelFor>
+					-->
+				</li>
+			</bodyAddons>
+			
 			<aliencrowntypes>
+			<!--
 				<li>Amiga</li>
 				<li>Atari</li>
 				<li>Average</li>
@@ -281,6 +320,8 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 				<li>Warhol</li>
 				<li>Wav</li>
 				<li>Xp</li>
+				-->
+				<li>Normal</li>
 			</aliencrowntypes>
 			
 		   <alienhaircolorgen Class="ColorGenerator_Options">
