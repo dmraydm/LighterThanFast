@@ -267,7 +267,7 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 							<bodyTypes>
 								<Male>(-.42,	.55)</Male>
 								<Fat>(-.42,	.5)</Fat>
-								<Thin>(-.42,	.5)</Thin>
+								<Thin>(-.42,	.55)</Thin>
 								<Hulk>(-.42,	.5)</Hulk>
 							</bodyTypes>
 						</front>
@@ -275,10 +275,10 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 						<side>
 							<bodyTypes>
 								<!-- <Male>(-.42,	.5)</Male> -->
-								<Male>(-.465,	.55)</Male>
+								<Male>(-.445,	.55)</Male>
 								<!-- <Female>(-.465,	.5)</Female> -->
 								<Fat>(-.475,	.545)</Fat>
-								<Thin>(-.465,	.53)</Thin>
+								<Thin>(-.5,	.55)</Thin>
 								<Hulk>(-.47,	.54)</Hulk>
 							</bodyTypes>
 						</side>
