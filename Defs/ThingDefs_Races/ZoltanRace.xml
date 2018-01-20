@@ -39,7 +39,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 - 120% Recruit prisonner chance / Diplomacy power
 - 85% Health 
 - Explodes upon death
-- Glows in the dark (sometimes)
+- Glows in the dark
 - Lays eggs that pop power pods
 	
 	</description>
@@ -70,14 +70,14 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<DiplomacyPower>1.2</DiplomacyPower>
     </statBases>
 	
-	<!-- <comps> -->
+	<comps>
 		<!-- glows -->
-		<!--
 		<li Class="CompProperties_Glower">
 			<glowRadius>5</glowRadius>
-			<glowColor>(73,123,138,0)</glowColor>
+			<glowColor>(50,180,130,0)</glowColor>
 		</li>
--->
+	</comps>
+	
 		<!-- spawns eggs that spawn eneryg pods -->
 		<!-- à travers backstroy -->
 		<!--
@@ -95,7 +95,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 			<healthRelative>true</healthRelative>
 		</li>
 		-->
-	<!-- </comps> -->
+	<!--  -->
 		
 	<verbs>
 		<li>
