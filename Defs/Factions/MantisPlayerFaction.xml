@@ -3,7 +3,10 @@
 	<FactionDef Abstract="True" Name="MantisFactionBase">
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
 		<!-- green -->
-		<colorSpectrum><li>(0.3, 0.7, 0.3)</li></colorSpectrum>
+		<colorSpectrum>
+			<li>(204, 255, 51)</li>
+			<li>(51, 153, 51)</li>
+		</colorSpectrum>
 	</FactionDef>
 
 	<FactionDef ParentName="MantisFactionBase">

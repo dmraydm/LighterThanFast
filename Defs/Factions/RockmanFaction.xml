@@ -45,7 +45,11 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(230, 180, 155)</li></colorSpectrum>
+		<colorSpectrum>
+			<li>(153, 51, 0)</li>
+			<li>(204, 153, 0)</li>
+			<li>(102, 102, 51)</li>
+		</colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
 		<leaderTitle>HCB Gateway</leaderTitle>

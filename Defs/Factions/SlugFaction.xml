@@ -45,7 +45,10 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
-		<colorSpectrum><li>(210, 130, 200)</li></colorSpectrum>
+		<colorSpectrum>
+			<li>(153, 153, 255)</li>
+			<li>(255, 153, 102)</li>
+		</colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
 		<leaderTitle>Syrinx aruanus</leaderTitle>

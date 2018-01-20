@@ -3,7 +3,10 @@
 	<FactionDef Abstract="True" Name="SlugFactionBase">
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
 		<!-- rose -->
-		<colorSpectrum><li>(0.2, 0.7, 0.6)</li></colorSpectrum>
+		<colorSpectrum>
+			<li>(153, 153, 255)</li>
+			<li>(255, 153, 102)</li>
+		</colorSpectrum>
 	</FactionDef>
 
 	<FactionDef ParentName="SlugFactionBase">
