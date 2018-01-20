@@ -1,35 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <HairDef>
-    <defName>EngieElec</defName>
-    <label>elec</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Engie/Elec</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
-  <HairDef>
-    <defName>EngieElec2</defName>
-    <label>elec2</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Engie/Elec2</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
- 
-   <HairDef>
-    <defName>EngieCirc</defName>
-    <label>circ</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Engie/Circ</texPath>
-		<hairTags>
-			<li>Engie</li>
-		</hairTags>
- </HairDef>
-
-   <HairDef>
     <defName>EngieMad</defName>
     <label>mad</label>
     <hairGender>Any</hairGender>

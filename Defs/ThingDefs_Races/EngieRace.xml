@@ -300,80 +300,30 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 			</bodyAddons>
 			
 			<aliencrowntypes>
-			<!--
-				<li>Amiga</li>
-				<li>Atari</li>
-				<li>Average</li>
-				<li>Bios</li>
-				<li>Bsod</li>
-				<li>Clint</li>
-				<li>Falken</li>
-				<li>Fo1</li>
-				<li>Fo2</li>
-				<li>Ftl</li>
-				<li>Googi</li>
-				<li>Hal</li>
-				<li>Hand</li>
-				<li>Joust</li>
-				<li>Loading</li>
-				<li>Nyan</li>
-				<li>Reboot</li>
-				<li>Rtype</li>
-				<li>Sf2</li>
-				<li>Sol</li>
-				<li>Test</li>
-				<li>Tetris</li>
-				<li>Ubuntu</li>
-				<li>Voyager</li>
-				<li>Warhol</li>
-				<li>Wav</li>
-				<li>Xp</li>
-				-->
 				<li>Normal</li>
 			</aliencrowntypes>
 			
-		   <alienhaircolorgen Class="ColorGenerator_Options">
-				<options>
-					<li><weight>5</weight><only>RGBA(0.9,0.5,0.5,1)</only></li>
-					<li><weight>5</weight><only>RGBA(.5,.9,.5,1)</only></li>
-					<li><weight>5</weight><only>RGBA(.5,.5,.9,1)</only></li>
-					
-					<li><weight>10</weight><only>RGBA(1,.7,.8,1)</only></li>
-					<li><weight>10</weight><only>RGBA(.7,1,.8,1)</only></li>
-					<li><weight>10</weight><only>RGBA(.8,.7,1,1)</only></li>
-					
-					<li><weight>15</weight><only>RGBA(.9,1,.9,1)</only></li>
-					<li><weight>15</weight><only>RGBA(.9,.9,.8,1)</only></li>
-					<li><weight>15</weight><only>RGBA(.9,.8,.9,1)</only></li>
-					
-					<li><weight>45</weight><only>RGBA(1,1,1,1)</only></li>
-				</options>
-			</alienhaircolorgen>
-				
-			<alienskincolorgen Class="ColorGenerator_Options">
+		   <alienskincolorgen Class="ColorGenerator_Options">
 				<options>
 				
 				<!-- silver -->
-					<li><weight>7</weight><only>(180,173,150)</only></li>
+					<li><weight>15</weight><only>(180,173,150)</only></li>
 				<!-- gold -->
-					<li><weight>2</weight><only>(255,235,122)</only></li>
+					<li><weight>5</weight><only>(255,235,122)</only></li>
 				<!-- steel -->
-					<li><weight>10</weight><only>(102,102,105)</only></li>
+					<li><weight>40</weight><only>(102,102,105)</only></li>
 				<!-- plasteel -->
-					<li><weight>5</weight><only>(160,178,181)</only></li>
+					<li><weight>10</weight><only>(160,178,181)</only></li>
 				<!-- uranium -->
-					<li><weight>1</weight><only>(100,100,100)</only></li>
+					<li><weight>2</weight><only>(100,100,100)</only></li>
+				<!-- kraptyl -->
+				<li><weight>10</weight><only>(138,113,226)</only></li>
 				
 				<!-- dark -->
-					<li><weight>10</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
-					<li><weight>5</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
+					<li><weight>10</weight><only>RGBA(0.9,.8,0.9,1)</only></li>
+					<li><weight>5</weight><only>RGBA(0.8,0.8,0.7,1)</only></li>
+					<li><weight>2</weight><only>RGBA(0.6,0.7,0.7,1)</only></li>
 
-					<li><weight>2</weight><only>RGBA(.7,0.5,0.9,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.9,0.5,0.8,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.8,0.6,0.9,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.9,0.4,0.7,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.8,0.5,0.9,1)</only></li>
 				<!-- green -->
 				<!--
 					<li><weight>8</weight><only>RGBA(0.9,1,0.9,1)</only></li>
@@ -383,18 +333,12 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 					<li><weight>1</weight><only>RGBA(0.5,1,0.5,1)</only></li>
 -->
 				<!-- blue -->
-					<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
-					<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
-					<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
-					<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.9,0.9,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.8,0.8,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.7,0.7,1,1)</only></li>
+					<li><weight>1</weight><only>RGBA(0.6,0.6,1,1)</only></li>
 					<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
-				
-				<!-- red -->
-					<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
-					<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
-					<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
-					<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
-					<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
+
 				
 				</options>
 			</alienskincolorgen>

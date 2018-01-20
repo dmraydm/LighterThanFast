@@ -11,45 +11,4 @@
 		</hairTags>
  </HairDef>
  
-   <HairDef>
-    <defName>RockTail</defName>
-    <label>tail</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Rockman/RockTail/RockTail</texPath>
-		<hairTags>
-			<li>Rockman</li>
-		</hairTags>
-	</HairDef>
- 
-	<HairDef>
-    <defName>RockCrack</defName>
-    <label>crack</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Rockman/Crack/Crack</texPath>
-		<hairTags>
-			<li>Rockman</li>
-		</hairTags>
-	</HairDef>
-	
-	<HairDef>
-    <defName>RockLake</defName>
-    <label>lake</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Rockman/Lake/Lake</texPath>
-		<hairTags>
-			<li>Rockman</li>
-		</hairTags>
-	</HairDef>
-	
-	<HairDef>
-    <defName>RockFlow</defName>
-    <label>flow</label>
-    <hairGender>Any</hairGender>
-    <texPath>Hair/Rockman/Flow/Flow</texPath>
-		<hairTags>
-			<li>Rockman</li>
-		</hairTags>
-	</HairDef>
-
- 
 </Defs>

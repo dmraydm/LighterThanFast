@@ -241,6 +241,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 
 	<graphicPaths>
 		<li>
+			<headOffset>(0,	.01)</headOffset>
 			<body>Zoltan/Body/</body>
 			<head>Zoltan/Head/</head>
 			<skeleton>Humanoid/RotenBody/Zoltan/ZoltanRoten</skeleton>
@@ -249,11 +250,11 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 	</graphicPaths>
 
 	<hairSettings>
-		<hasHair>true</hasHair>
-		<hairTags>
-			<li>empty</li>
+		<hasHair>false</hasHair>
+		<!-- <hairTags> -->
+			<!-- <li>empty</li> -->
 			<!-- <li>zoltan</li> -->
-		</hairTags>
+		<!-- </hairTags> -->
 	</hairSettings>
 
 	<relationSettings>
