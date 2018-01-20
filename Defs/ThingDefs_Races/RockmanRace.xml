@@ -136,11 +136,14 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			</alienbodytypes>
 			
 			<aliencrowntypes>
-				<li>Normal</li>
-				<li>Burn</li>
-				<li>Groot</li>
-				<li>Regular</li>
-
+				<li>Built</li>
+				<li>Coral</li>
+				<li>Crack</li>
+				<li>Lake</li>
+				<li>Marble</li>
+				<li>Moon</li>
+				<li>Veggy</li>
+				<li>Raw</li>
 			</aliencrowntypes>
 			<!--
 			<alienbodytypes>
@@ -238,7 +241,6 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!--race has their own beds-->
 	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
 
-		<!-- <chemicalSettings>.9</chemicalSettings> -->
 		<maleGenderProbability>.9</maleGenderProbability>
 				
 		<forcedRaceTraitEntries>
@@ -261,8 +263,6 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			<head>Rockman/Head/</head>
 			<skeleton>Humanoid/RotenBody/Rock/RockRoten</skeleton>
 			<skull>Humanoid/Skull/Rock/RockSkull</skull>
-			<!--<skeleton>Humanoid/HumanoidDessicated</skeleton>
-			<skull>Humanoid/Skull</skull>-->
 		</li>
 	</graphicPaths>
 
@@ -270,7 +270,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<getsGreyAt>110</getsGreyAt>
 		<hasHair>true</hasHair>
 		<hairTags>
-		<!--<li>Rockman</li>-->
+			<li>Rockman</li>
 			<li>empty</li>
 		</hairTags>
 	</hairSettings>
@@ -389,34 +389,36 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	
       <lifeStageAges>
         <li>
-          <def>HumanlikeBaby</def>
-          <minAge>0</minAge>
+			<def>HumanlikeBaby</def>
+			<minAge>0</minAge>
         </li>
         <li>
-          <def>HumanlikeToddler</def>
-          <minAge>1.2</minAge>
+			  <def>HumanlikeToddler</def>
+			  <minAge>1.2</minAge>
         </li>
         <li>
-          <def>HumanlikeChild</def>
-          <minAge>4</minAge>
+			  <def>HumanlikeChild</def>
+			  <minAge>4</minAge>
         </li>
         <li>
-          <def>HumanlikeTeenager</def>
-          <minAge>13</minAge>
+			  <def>HumanlikeTeenager</def>
+			  <minAge>13</minAge>
         </li>
         <li>
-          <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
-          <soundWounded>Pawn_Bear_Injured</soundWounded>
-          <soundDeath>Pawn_Bear_Death</soundDeath>
-          <soundCall>Pawn_Bear_Call</soundCall>
-          <soundAngry>Pawn_Bear_Angry</soundAngry>
+			  <def>HumanlikeAdult</def>
+			  <minAge>18</minAge>
+			  <soundWounded>Pawn_Bear_Injured</soundWounded>
+			  <soundDeath>Pawn_Bear_Death</soundDeath>
+			  <soundCall>Pawn_Bear_Call</soundCall>
+			  <soundAngry>Pawn_Bear_Angry</soundAngry>
         </li>
 
       </lifeStageAges>
+	  
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+	  
       <ageGenerationCurve>
         <points>
           <li>(14,0)</li>
@@ -456,5 +458,15 @@ While the Rockmen are generally not an adventurous race, and can only be consist
       <li>Anesthetize</li>
     </recipes>
     
+	<modExtensions>
+		<li Class="PawnGlow.PawnGlowProperties">
+			<bodyPath>Rockman/Effects/BodyGlow/Naked</bodyPath>
+			<headPath>Rockman/Effects/HeadGlow/Glow</headPath>
+			<bodyOffsetY>0.002</bodyOffsetY>
+			<!-- <headOffsetY>0.003</headOffsetY> -->
+			<drawHead>true</drawHead>
+		</li>
+	</modExtensions>
+	
 </AlienRace.ThingDef_AlienRace>
 </Defs>
