@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Hediffs are RimWorld's status effects. They can influence different pawn stats, represent diseases, and more -->
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Hediff_LTF_MindBreak</defName>
+		<label>Mind broken</label>
+		<labelNoun>a staged breakdown</labelNoun>
+
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+				<min>5000</min>
+				<max>7000</max>
+			</disappearsAfterTicks>
+			</li>
+		</comps>
+		
+		<initialSeverity>1</initialSeverity>
+
+		<stages>
+			<li>
+				<label>MentalBroken</label>
+				
+				<painFactor>.5</painFactor>
+				<painOffset>-10</painOffset>
+				
+				<opinionOfOthersFactor>.5</opinionOfOthersFactor>
+				<hungerRateFactor>.5</hungerRateFactor>
+				<restFallFactor>.5</restFallFactor>
+
+				<socialFightChanceFactor>3</socialFightChanceFactor>
+
+				<!-- <makeImmuneTo>HediffDefName</makeImmuneTo> -->
+				<!-- <tale>TaleDefName</tale> -->
+
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>.25</offset>
+					</li>
+				</capMods>
+
+				<statOffsets>
+					<MentalBreakThreshold>10</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+
+		<!-- <tendable>true</tendable> -->
+		<makesSickThought>true</makesSickThought>
+		<makesAlert>true</makesAlert>
+
+		<scenarioCanAdd>true</scenarioCanAdd>
+
+		<defaultLabelColor>(.9, .8, 1)</defaultLabelColor>
+
+	</HediffDef>
+
+</Defs>

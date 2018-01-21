@@ -372,7 +372,7 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<hasHair>true</hasHair>
 		<hairTags>
 			<li>Engie</li>
-			<li>empty</li>
+			<li>EmptyHair</li>
 		</hairTags>
 	</hairSettings>
 

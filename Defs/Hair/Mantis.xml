@@ -8,6 +8,8 @@
     <texPath>Hair/empty</texPath>
 		<hairTags>
 			<li>LTF_Mantis</li>
+			<li>MantisHair</li>
+			<li>Mantis</li>
 		</hairTags>
  </HairDef> 
  
@@ -18,6 +20,8 @@
     <texPath>Hair/Mantis/Any/bolt</texPath>
 		<hairTags>
 			<li>LTF_Mantis</li>
+			<li>MantisHair</li>
+			<li>Mantis</li>
 		</hairTags>
  </HairDef> 
   <!-- male -->
@@ -28,6 +32,8 @@
     <texPath>Hair/Mantis/Male/crown</texPath>
 		<hairTags>
 			<li>LTF_Mantis</li>
+			<li>MantisHair</li>
+			<li>Mantis</li>
 		</hairTags>
  </HairDef>
  
@@ -39,6 +45,8 @@
     <texPath>Hair/Mantis/Female/crown</texPath>
 		<hairTags>
 			<li>LTF_Mantis</li>
+			<li>MantisHair</li>
+			<li>Mantis</li>
 		</hairTags>
  </HairDef>
 </Defs>

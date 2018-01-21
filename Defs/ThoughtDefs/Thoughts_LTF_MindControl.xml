@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- victim -->
+<ThoughtDef>
+	<defName>LTF_MinedShame</defName>
+	<durationDays>10.0</durationDays>
+	<stackLimit>15</stackLimit>
+	<stages>
+		<li>
+			<label>got manipulated</label>
+			<description>I was not in control of my body.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>LTF_MindBreak</defName>
+	<durationDays>.1</durationDays>
+	<stackLimit>2</stackLimit>
+	<stages>
+		<li>
+			<label>under psychic assault</label>
+			<description>I cant control my?! Who are you What is happening? *drools* *rolls eyes in foolish*</description>
+			<baseMoodEffect>-9999</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<!-- masterMind -->
+<ThoughtDef>
+    <defName>LTF_MinedSomeonePride</defName>
+    <durationDays>3.0</durationDays>
+    <stackLimit>1</stackLimit>
+	<nullifyingTraits>
+		<li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+		<li>
+			<label>made {0} my b*tch</label>
+			<description>It was my puppet! Let's try take over the world!</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		</li>
+    </stages>
+</ThoughtDef>
+  
+<ThoughtDef>
+	<defName>LTF_MinedSomeoneShame</defName>
+    <durationDays>10.0</durationDays>
+    <stackLimit>10</stackLimit>
+	<nullifyingTraits>
+		<li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+		<li>
+			<label>mentally abused {0}</label>
+			<description>I wonder how {0} feels, maybe I should apologize.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		</li>
+    </stages>
+</ThoughtDef>
+  
+</Defs>

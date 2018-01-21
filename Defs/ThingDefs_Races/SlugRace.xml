@@ -233,7 +233,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	<hairSettings>
 		<hasHair>true</hasHair>
 		<hairTags>
-			<li>LTF_Slug</li>
+			<li>LTF_SlugHair</li>
 		</hairTags>
 	</hairSettings>
 

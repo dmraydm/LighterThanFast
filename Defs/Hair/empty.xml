@@ -8,6 +8,7 @@
     <texPath>Hair/empty</texPath>
 		<hairTags>
 			<li>empty</li>
+			<li>EmptyHair</li>
 		</hairTags>
  </HairDef>
  

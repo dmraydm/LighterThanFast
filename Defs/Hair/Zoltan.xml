@@ -2,12 +2,13 @@
 <Defs>
 <!--Zoltan-->
  <HairDef>
-    <defName>ZoltanWire</defName>
-    <label>wire</label>
+    <defName>LTF_ZoltanHair</defName>
+    <label>ltf_ZoltanWire</label>
     <hairGender>Any</hairGender>
     <texPath>Hair/Zoltan/ZoltanWire</texPath>
 		<hairTags>
-			<li>Zoltan</li>
+			<li>LTF_ZoltanHair</li>
+			<li>ZoltanHair</li>
 		</hairTags>
  </HairDef> 
 </Defs>

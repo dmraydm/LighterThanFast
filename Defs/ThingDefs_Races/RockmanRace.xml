@@ -264,12 +264,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	</graphicPaths>
 
 	<hairSettings>
-		<!-- <getsGreyAt>110</getsGreyAt> -->
 		<hasHair>false</hasHair>
-		<!-- <hairTags> -->
-			<!-- <li>Rockman</li> -->
-			<!-- <li>empty</li> -->
-		<!-- </hairTags> -->
 	</hairSettings>
 
 	<relationSettings>
