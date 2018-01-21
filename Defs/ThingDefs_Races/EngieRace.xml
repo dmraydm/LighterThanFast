@@ -376,13 +376,67 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		</hairTags>
 	</hairSettings>
 
-	<relationSettings>
-		<relationChanceModifierChild>1</relationChanceModifierChild>
-		<relationChanceModifierExLover>1</relationChanceModifierExLover>
-		<relationChanceModifierLover>1</relationChanceModifierLover>
-		<relationChanceModifierParent>1</relationChanceModifierParent>
-		<relationChanceModifierSibling>1</relationChanceModifierSibling>
-	</relationSettings>
+        <relationSettings>
+            
+            <relationChanceModifierLover>.5</relationChanceModifierLover>
+			<relationChanceModifierExLover>.5</relationChanceModifierExLover>
+			
+            <relationChanceModifierFiance>.5</relationChanceModifierFiance>
+			<relationChanceModifierSpouse>.5</relationChanceModifierSpouse>
+			<relationChanceModifierExSpouse>.5</relationChanceModifierExSpouse>
+			
+            <relationChanceModifierParent>1</relationChanceModifierParent>
+			<relationChanceModifierChild>3</relationChanceModifierChild>
+            <relationChanceModifierSibling>3</relationChanceModifierSibling>
+         			
+            <renamer>
+			
+				<li>
+					<relation>Lover</relation>
+					<label>Access token ok</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				<li>
+					<relation>ExLover</relation>
+					<label>Access token ko</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+
+				<li>
+					<relation>Fiance</relation>
+					<label>Authorize --request</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				<li>
+					<relation>Spouse</relation>
+					<label>Rsrc server</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				<li>
+					<relation>ExSpouse</relation>
+					<label>Api key ko</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				
+
+				<li>
+					<relation>Parent</relation>
+					<label>Parent process</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				<li>
+					<relation>Child</relation>
+					<label>Fork</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+				<li>
+					<relation>Sibling</relation>
+					<label>Thread</label>
+					<femaleLabel>Impossible conception</femaleLabel>
+				</li>
+
+            </renamer>
+        </relationSettings>
 
 	<pawnKindSettings>
             <alienslavekinds>

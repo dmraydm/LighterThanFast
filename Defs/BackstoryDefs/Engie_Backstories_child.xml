@@ -72,12 +72,15 @@
 			<li>EngieBackstory</li>
 		</spawnCategories>
 		
-		<workDisables><li>ManualSkilled</li><li>Crafting</li></workDisables>
+		<workDisables>
+			<li>ManualSkilled</li>
+			<li>Crafting</li>
+		</workDisables>
 		
 		<skillGains>
 			<li>
 			<defName>Intellectual</defName>
-			<amount>5</amount>
+			<amount>6</amount>
 		  </li>
 		</skillGains>
     </AlienRace.BackstoryDef>
@@ -94,12 +97,14 @@
 		</spawnCategories>
 		<skillGains>
 			<li><defName>Construction</defName><amount>3</amount></li>
-			<li><defName>Growing</defName><amount>-3</amount></li>
+			<li><defName>Crafting</defName><amount>4</amount></li>
 		</skillGains>
 
-		<forcedTraits>
-		   <li><defName>Nerves</defName><degree>-1</degree></li>
-		</forcedTraits>
+		<workDisables>
+			<li>PlantWork</li>
+			<li>Animals</li>
+		</workDisables>
+		
     </AlienRace.BackstoryDef>
 
     <AlienRace.BackstoryDef>
@@ -203,5 +208,128 @@
 	<forcedHediffs><li>Hediff_LTF_EngieChemfuelLeak</li></forcedHediffs>
 </AlienRace.BackstoryDef>
 
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS12</defName>
+    <title>Orphan</title>
+    <titleShort>orphan</titleShort>
+    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <slot>Childhood</slot>
+    
+	<spawnCategories>
+		<li>EngieBackstory</li>
+	</spawnCategories>
+    <skillGains>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>1</amount></li>
+		<li><defName>Intellectual</defName><amount>1</amount></li>
+		
+		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>-2</amount></li>
+		<li><defName>Mining</defName><amount>-1</amount></li>
+    </skillGains>
 
+	<workDisables>
+		<li>Social</li>
+	</workDisables>
+	
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+	</relationSettings>
+			
+</AlienRace.BackstoryDef>
+<!--
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS13</defName>
+    <title>Orphan</title>
+    <titleShort>orphan</titleShort>
+    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <slot>Childhood</slot>
+    
+	<spawnCategories>
+		<li>EngieBackstory</li>
+	</spawnCategories>
+    <skillGains>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>1</amount></li>
+		<li><defName>Intellectual</defName><amount>1</amount></li>
+		
+		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>-2</amount></li>
+		<li><defName>Mining</defName><amount>-1</amount></li>
+    </skillGains>
+
+	<workDisables>
+		<li>Social</li>
+	</workDisables>
+	
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+	</relationSettings>
+			
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS14</defName>
+    <title>Orphan</title>
+    <titleShort>orphan</titleShort>
+    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <slot>Childhood</slot>
+    
+	<spawnCategories>
+		<li>EngieBackstory</li>
+	</spawnCategories>
+    <skillGains>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>1</amount></li>
+		<li><defName>Intellectual</defName><amount>1</amount></li>
+		
+		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>-2</amount></li>
+		<li><defName>Mining</defName><amount>-1</amount></li>
+    </skillGains>
+
+	<workDisables>
+		<li>Social</li>
+	</workDisables>
+	
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+	</relationSettings>
+			
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>EngieChildBS15</defName>
+    <title>Orphan</title>
+    <titleShort>orphan</titleShort>
+    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <slot>Childhood</slot>
+    
+	<spawnCategories>
+		<li>EngieBackstory</li>
+	</spawnCategories>
+    <skillGains>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+		<li><defName>Artistic</defName><amount>1</amount></li>
+		<li><defName>Intellectual</defName><amount>1</amount></li>
+		
+		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Animals</defName><amount>-2</amount></li>
+		<li><defName>Mining</defName><amount>-1</amount></li>
+    </skillGains>
+
+	<workDisables>
+		<li>Social</li>
+	</workDisables>
+	
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+	</relationSettings>
+			
+</AlienRace.BackstoryDef>
+-->
 </Defs>

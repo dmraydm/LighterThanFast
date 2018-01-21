@@ -5,28 +5,31 @@
     <defName>NamerPersonEngie</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[color] '[moreit]' [animal]</li>
-        <li>name->[scifi] '[moreit]' [animal]</li>
-        <li>name->[scifi] '[it]' [version]</li>
+        <li>name->[color] '[moreit]' [OpSys]</li>
+        <li>name->[color] '[it]' [versionNum]</li>
+		<li>name->[color] '[engie]' [alpha]</li>
 		
-        <li>name->[moreit] '[it]' [animal]</li>
-        <li>name->[moreit] '[scifi]' [engie]</li>
-		<li>name->[moreit] '[it]' [engie]</li>
+        <li>name->[scifi] '[alpha]' [versionName]</li>
+        <li>name->[scifi] '[it]' [alpha]</li>
 		
-		<li>name->[version] '[games]' [moreit]</li>
+        <li>name->[OpSys] '[versionName]' [animal]</li>
+		<li>name->[OpSys] '[versionName]' [versionNum]</li>
+		<li>name->[OpSys] '[alpha]' [versionNum] </li>
+
+		<li>name->[moreit] '[OpSys]' [alpha]</li>
+        
+		<li>name->[versionNum] '[OpSys]' [engie]</li>
+		<li>name->[it] '[alpha]' [engie]</li>
 		
-        <li>name->[workPlaces] '[engie]' [animal]</li>
-        <li>name->[color] '[it]' [version]</li>
+		<li>name->[alpha] '[games]' [versionNum]</li>
 		<li>name->[workPlaces] '[engie]' [moreit]</li>		
+        
 		
-		<li>name->[moreit] '[sci]' [engie]</li>
-		<li>name->[color] '[scifi]' [engie]</li>
-		<li>name->[workPlaces] '[version]' [engie]</li>
+		<li>name->[alpha] '[scifi]' [versionNum]</li>
+		<li>name->[alpha] '[color]' [engie]</li>
+		<li>name->[alpha] '[color]' [versionNum]</li>
+		<li>name->[alpha] '[versionName]' [versionNum]</li>
 		
-		<li>name->[it] '[animal]' [engie]</li>
-		<li>name->[color] '[animal]' [engie]</li>
-		
-		<li>name->[scifi] [workPlaces]</li>
       </rulesStrings>
 
       <rulesRaw>
@@ -39,6 +42,7 @@
           <keyword>tribalword</keyword>
           <path>Words/Foreign/Tribal</path>
         </li>
+		
 		
         <li Class="Rule_File">
           <keyword>engie</keyword>
@@ -55,11 +59,27 @@
         <li Class="Rule_File">
           <keyword>it</keyword>
           <path>EngieNames/It</path>
+		</li>
+		
+		<li Class="Rule_File">
+          <keyword>OpSys</keyword>
+          <path>EngieNames/OperatingSystems</path>
+        </li>
+		
+		<li Class="Rule_File">
+          <keyword>alpha</keyword>
+          <path>Common/GreekAlphabet</path>
+        </li>
+		
+		<li Class="Rule_File">
+          <keyword>versionNum</keyword>
+          <path>EngieNames/VersionNum</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>version</keyword>
-          <path>EngieNames/Version</path>
+          <keyword>versionName</keyword>
+          <path>EngieNames/VersionName</path>
         </li>
+		
 		<li Class="Rule_File">
           <keyword>animal</keyword>
           <path>Words/Nouns/Animals</path>

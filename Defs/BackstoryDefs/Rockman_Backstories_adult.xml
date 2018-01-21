@@ -314,29 +314,23 @@
 	<workDisables><li>ManualDumb</li></workDisables>
     </AlienRace.BackstoryDef>
 <!--
-    <AlienRace.BackstoryDef>
-    <defName>RockmanBSQuote01</defName>
-    <title></title>
-    <titleShort></titleShort>
-	<baseDescription></baseDescription>
-    <slot>Adulthood</slot>
-    <bodyTypeGlobal>Male</bodyTypeGlobal>
-      <spawnCategories>
-      <li>RockmanBackstory</li>
-    </spawnCategories>
-	<skillGains>
-			Animals
-			Artistic
-			Construction
-			Cooking
-			Crafting
-			Growing
-			Medicine
-			Mining
-			Intellectual
-			Shooting
-			Social
 
+	Skills
+	
+Animals
+Artistic
+Construction
+Cooking
+Crafting
+Growing
+Medicine
+Mining
+Intellectual
+Shooting
+Social
+
+	Traits
+	
 Abrasive
 AnnoyingVoice
 Ascetic
@@ -373,8 +367,16 @@ SuperImmune
 TooSmart
 Wimp
 
-	</forcedTraits>
-	<workDisables><li>PlantWork</li></workDisables>
-    </AlienRace.BackstoryDef>
+Animals
+Caring
+Firefighting
+Intellectual
+ManualDumb
+ManualSkilled
+Mining
+PlantWork
+Social
+
+
 -->
 </Defs>

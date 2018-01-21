@@ -70,7 +70,11 @@ namespace NewHatcher
         private float benchRadius = 35.7f;
 
         private Pawn masterMind = null;
+        //private string iniatorStrId = string.Empty;
+
         private Pawn mindTarget = null;
+        //private string targetStrId = string.Empty;
+
         string tName = string.Empty;
         string tRace = string.Empty;
         string mName = string.Empty;
@@ -111,6 +115,7 @@ namespace NewHatcher
             }
         }
 
+        // calculate the best way for iniator to mine target
         public void SetBestVector()
         {
             int max = (int)MindVector.Na;
@@ -141,6 +146,8 @@ namespace NewHatcher
             //Log.Warning(" Best >> emp:" + empathy + "man:" + manipulation + "asc:" + ascendancy + ";max:" + vectorName[bestVector]);
         }
 
+        // calculate the worst way for iniator to mine target.
+        // target fight back ?
         public void SetWorstVector()
         {
             int min = (int)MindVector.Na;
@@ -166,16 +173,25 @@ namespace NewHatcher
             worstVectorValue = worstValue;
             //Log.Warning(" Worst >> emp:"+empathy + "man:"+manipulation + "asc:"+ascendancy+";min:"+ vectorName[worstVector]);
         }
+
         // get power comp
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             this.powerComp = this.parent.TryGetComp<CompPowerTrader>();
-
             if (powerComp == null)
             {
                 Log.Warning("power comp Null");
             }
+            /*
+            if(iniatorStrId == "" || iniatorStrId == "")
+            {
+                Log.Warning("No str to  pawn init");
+            }
+            else
+            {
 
+            }
+            */
             //Log.Warning("PostSpawnSetup end");
         }
 
@@ -189,12 +205,16 @@ namespace NewHatcher
 
         public override void PostExposeData()
         {
-            //Scribe_Deep.Look<Pawn>(ref this.masterMind, "LTF_masterMind");
-            //Scribe_Deep.Look<Pawn>(ref this.mindTarget, "LTF_mindTarget");
-            //Scribe_References.Look<Pawn>(ref this.mindTarget, "LTF_mindTarget");
-            //Scribe_References.Look<Pawn>(ref this.mindTarget, "LTF_mindTarget");
+            Scribe_References.Look(ref masterMind, "LTF_masterMind");
+            Scribe_References.Look(ref mindTarget, "LTF_mindTarget");
+
+            Scribe_Values.Look(ref tName, "LTF_tName");
+            Scribe_Values.Look(ref tRace, "LTF_tRace");
+            Scribe_Values.Look(ref mName, "LTF_mName");
+            Scribe_Values.Look(ref mRace, "LTF_mRace");
 
             Scribe_Values.Look(ref workProgress, "LTF_workProgress");
+
             Scribe_Values.Look(ref bestVector, "LTF_bestVector");
             Scribe_Values.Look(ref bestVectorValue, "LTF_bestVectorValue");
             Scribe_Values.Look(ref worstVector, "LTF_worstVector");
@@ -320,10 +340,11 @@ namespace NewHatcher
         {
             if (newmasterMind != null)
             {
+                //iniatorStrId = newmasterMind.ThingID;
                 masterMind = newmasterMind;
                 mName = masterMind.NameStringShort;
                 mRace = masterMind.def.label;
-
+                //ThingUtility.
                 masterMindN++;
             }
             else
@@ -342,6 +363,7 @@ namespace NewHatcher
         {
             if ((newTarget != null) && (!newTarget.Dead) && (newTarget.Map != null))
             {
+                //targetStrId = newTarget.ThingID;
                 mindTarget = newTarget;
                 tName = mindTarget.NameStringShort;
                 tRace = mindTarget.def.label;
@@ -439,6 +461,7 @@ namespace NewHatcher
             float tVariousness = (defaultWorkAmount / 5);
             float rVariousness = (defaultWorkAmount / 8);
 
+            //this.CompatibilityFactorCurve.Evaluate(initiator.relations.CompatibilityWith(recipient));
 
             //if ()
             if (bestVectorValue > 1f) mBonus = 1.2f;
@@ -494,6 +517,7 @@ namespace NewHatcher
 
         public void TargetReset()
         {
+            //targetStrId = "";
             mindcontrolEnabled = false;
             mindTarget = null;
             masterMind = null;
@@ -519,15 +543,13 @@ namespace NewHatcher
                 if (TryMindReach())
                 {
                     MentalStateDef mentalStateEffect = null;
-                    //MentalBreakDef mentalBreakEffect = null;
-                    /*
-                    IEnumerable<MentalBreakDef> theOnlyAllowedMentalBreaks = pawn.story.traits.TheOnlyAllowedMentalBreaks;
-                    if (!theOnlyAllowedMentalBreaks.Contains(this.def) && theOnlyAllowedMentalBreaks.Any((MentalBreakDef x) => x.intensity == this.def.intensity && x.Worker.BreakCanOccur(pawn)))
-                        mindTarget.MentalState.pawn.MentalState.
-                            TryStartMentalState(mentalState, reason2, false, causedByMood, null);
 
-                    TryStart
-                    */
+                    if ((mindTarget == null) || (masterMind == null))
+                    {
+                        Log.Warning("how so far ?");
+                        return;
+                    }
+
                     if (animalVictim())
                     {
                         mentalStateEffect = MentalStateDefOf.Manhunter;
@@ -537,29 +559,96 @@ namespace NewHatcher
                         switch (bestVector)
                         {
                             case (int)MindVector.Empat:
-                                mentalStateEffect = MentalStateDefOf.WanderSad;
-                                //...mindTarget.mindState.mentalStateHandler.TryStartMentalState()
+                                // will wake up if sleeping
+                                //mentalStateEffect = MentalStateDefOf.WanderSad;
                             break;
                             case (int)MindVector.Manip:
-                                mentalStateEffect = MentalStateDefOf.PanicFlee;
+                                //mentalStateEffect = MentalStateDefOf.PanicFlee;
+                                //mentalStateEffect = MentalStateDefOf.WanderSad;
                                 break;
                             case (int)MindVector.Ascen:
+                                /*
                                 mentalStateEffect = MentalStateDefOf.Berserk;
-                                
+                                mindTarget.mindState.mentalStateHandler.TryStartMentalState(mentalStateEffect, null, true, false, null);
+                                */
                                 break;
                             default:
                                 Log.Warning("Wtf vector");
                                 break;
                         }
-                    }
 
-                    mindTarget.mindState.mentalStateHandler.TryStartMentalState(mentalStateEffect, null, true, false, null);
+                        Thought_Memory victimBreak = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MindBreak"));
+                        Thought_Memory victimShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedShame"));
+                        // Initiator
+                        Thought_Memory InitiatorPride = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeonePride"));
+                        Thought_Memory InitiatorShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeoneShame"));
+
+                        if ( (victimBreak == null) || (victimShame == null) || (victimBreak == null) || (victimBreak == null))
+                        {
+                            Log.Warning("1+ though null");
+                        }
+                        else
+                        {
+                            mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimBreak, null);
+                            mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimShame, null);
+
+                            masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorPride, null);
+                            masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorShame, null);
+
+                            //wakes up target if laying
+                            mindTarget.ClearMind();
+                            if (mindTarget.story != null)
+                            {
+                                //Log.Warning(tName + " ok Story ");
+                                List<Trait> targetTraits = new List<Trait>();
+                                targetTraits = mindTarget.story.traits.allTraits;
+                                //Log.Warning(tName + " traits found: " + targetTraits.Count );
+
+                                IEnumerable<MentalBreakDef> breaks = DefDatabase<MentalBreakDef>.AllDefsListForReading;
+
+                                MentalBreakDef chosenBreak = breaks.RandomElement<MentalBreakDef>();
+
+                                if (chosenBreak == null) {
+                                    Log.Warning("null break");
+                                }
+                                //Log.Warning(tName + "break : " + chosenBreak.defName);
+
+                                MentalStateDef chosenState = chosenBreak.mentalState;
+                                if (chosenState == null)
+                                {
+                                    Log.Warning("null state");
+                                }
+                                //Log.Warning(tName + "state : " + chosenState.defName);
+                                mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
+
+                                /*for (int i = 0; i < targetTraits.Count; i++){
+                                    Log.Warning(tName + " : " + targetTraits[i].CurrentData.label);
+                                    TraitDegreeData currentData = targetTraits[i].CurrentData;
+                                    if (currentData.randomMentalState != null){
+                                        if (trait.CurrentData.theOnlyAllowedMentalBreaks != null){
+                                            Log.Warning(tName + " : " + trait.CurrentData.label);
+                                            for (int j = 0; j < trait.CurrentData.theOnlyAllowedMentalBreaks.Count; j++){
+                                                Log.Warning (tName + " : " + trait.CurrentData.theOnlyAllowedMentalBreaks[j].defName );
+                                            }
+                                        }
+                                    }
+                                  }
+                                */
+
+                            }
+                            else
+                            {
+                                Log.Warning(tName + " : null story");
+                            }
+                        }
+                    }
+                    
                     TargetReset();
                     return;
                 }
                 else
                 {
-                    Log.Error("shield bench tried to enable mindcontrol but couldn't.");
+                    Log.Error("mind control bench tried to enable mindcontrol but couldn't.");
                 }
             }
         }
@@ -631,18 +720,17 @@ namespace NewHatcher
                         defaultDesc = "Reset the target",
                         icon = ContentFinder<Texture2D>.Get("UI/Buttons/Delete", true)
                     };
-                }
 
-
-                if (mindcontrolEnabled)
-                {
-                    yield return new Command_Action
+                    if (mindcontrolEnabled)
                     {
-                        action = new Action(this.TryMindcontrol),
-                        defaultLabel = "Mind control",
-                        defaultDesc = "Take control maybe",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
-                    };
+                        yield return new Command_Action
+                        {
+                            action = new Action(this.TryMindcontrol),
+                            defaultLabel = "Mind control",
+                            defaultDesc = "Take control maybe",
+                            icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
+                        };
+                    }
                 }
             }
         }

@@ -6,21 +6,21 @@
     <rulePack>
 		<rulesStrings>
         <li>name->[color] '[badassanimal]' [stars]</li>
-		<li>name->[color] '[transparent]' [animal]</li>
+		<li>name->[transparent] '[alpha]' [animal]</li>
         <li>name->[virtuous] '[stars]' [badassanimal]</li>
 		
         <li>name->[virtuous] '[stars]' [wavyName]</li>
-        <li>name->[transparent] '[stars]' [wavyName]</li>
+        <li>name->[transparent] '[stars]' [alpha]</li>
 		<li>name->[shining] '[stars]' [wavyName]</li>
 		
-        <li>name->[virtuous] '[wavyName]' [stars]</li>
+        <li>name->[alpha] '[wavyName]' [stars]</li>
 		
-		<li>name->[transparent] '[wavyAdj]' [stars]</li>
+		<li>name->[transparent] '[wavyAdj]' [alpha]</li>
 		
 		<li>name->[stars] '[illusion]' [wavyName]</li>
 		<li>name->[wavyName] '[shining]' [stars]</li>
 		
-		<li>name->[wavyAdj] '[shining]' [stars]</li>
+		<li>name->[wavyAdj] '[stars]' [alpha]</li>
 		<li>name->[illusion] '[wavyAdj]' [stars]</li>
 
 		</rulesStrings>
@@ -61,6 +61,10 @@
 		<li Class="Rule_File">
           <keyword>badassanimal</keyword>
           <path>Words/Nouns/Animals_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>alpha</keyword>
+          <path>Common/GreekAlphabet</path>
         </li>
 		
         <li Class="Rule_File">
