@@ -93,7 +93,7 @@
 			<!-- Associates object to effects -->
 			<li Class="CompProperties_Usable">
 				<useJob>UseItem</useJob>
-				<useLabel>pre mind control</useLabel>
+				<useLabel>Register victim</useLabel>
 			</li>
 			<!-- masterMind effect -->
 			<li Class="CompProperties_UseEffect">

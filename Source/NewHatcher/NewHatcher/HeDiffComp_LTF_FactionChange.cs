@@ -8,6 +8,7 @@ using System.Text;
 using UnityEngine;
 
 using Verse;
+
 using Verse.Sound;
 
 namespace NewHatcher
@@ -15,8 +16,11 @@ namespace NewHatcher
     // Main
     public class HediffComp_LTF_FactionChange : HediffComp
     {
-        private int ticksLeft = 1000;
-        //Pawn Slave = null;
+        private int ticksLeft = 0;
+
+        public Faction ownFaction;
+        public Faction forcedFaction;
+        public Pawn Initiator;
 
         public HediffCompProperties_LTF_FactionChange Props
         {
@@ -30,7 +34,7 @@ namespace NewHatcher
         {
             get
             {
-                return base.CompShouldRemove || this.ticksLeft <= -5;
+                return base.CompShouldRemove || this.ticksLeft <= -5 || Initiator.Dead;
             }
         }
 
@@ -38,6 +42,34 @@ namespace NewHatcher
         {
             base.CompPostMake();
             this.ticksLeft = this.Props.defaultTicks.RandomInRange;
+        }
+
+        public override string CompTipStringExtra
+        {
+            get
+            {
+                string result = string.Empty;
+                //int ticksLeft = (int)(ticksLeft * 60000);
+                if (ownFaction != null)
+                {
+                    if (this.ticksLeft > 0)
+                    {
+                        result = ticksLeft.ToStringTicksToPeriod(true, false, true) + " before "+ Initiator.Name +" release.\n";
+                        result += parent.pawn.Name + " belongs to " + ownFaction.Name +".";
+                    }
+                }
+                return result;
+            }
+        }
+
+        public override void CompExposeData()
+        {
+            Scribe_Values.Look(ref ticksLeft, "LTF_SlaveTicks");
+
+            Scribe_References.Look(ref ownFaction, "LTF_ownFaction");
+            Scribe_References.Look(ref forcedFaction, "LTF_forcedFaction");
+
+            Scribe_References.Look(ref Initiator, "LTF_mindIniator");
         }
 
         public override void CompPostTick(ref float severityAdjustment)
@@ -67,6 +99,7 @@ namespace NewHatcher
             {
                 //Log.Warning(parent.Label + " releasing ");
                 Release();
+                Panic();
             }
         }
 
@@ -77,8 +110,14 @@ namespace NewHatcher
                 return false;
 
             //Log.Warning("Trying to enslave " + this.parent.pawn.Label);
-            parent.pawn.SetFaction(Props.forcedFaction);
-            //Log.Warning("Enslaving Ok");
+            if (parent.pawn.Faction == forcedFaction)
+            {
+                Log.Warning("Tried to enslave²");
+                return false;
+            }
+
+            parent.pawn.SetFaction(forcedFaction, Initiator);
+
             return true;
             
         }
@@ -87,10 +126,39 @@ namespace NewHatcher
             if (!NullCheck("release"))
                 return;
 
-            //  Log.Warning(this.parent.Label + " : " + Props.ownFaction + " " + Props.forcedFaction);
-            parent.pawn.SetFaction(Props.ownFaction);
+            //  Log.Warning(this.parent.Label + " : " + ownFaction + " " + forcedFaction);
+            if (parent.pawn.Faction != ownFaction)
+            {
+                Log.Warning("Tried to release²");
+                return;
+            }
 
+            parent.pawn.SetFaction(ownFaction, null);
+            
         }
+
+        private void Panic()
+        {
+            MentalStateDef result = null;
+
+            if(Rand.Range(0,1) > .5f)
+            {
+                result = MentalStateDefOf.PanicFlee;
+            }
+            else
+            {
+                result = MentalStateDefOf.Berserk;
+            }
+
+            if (result == null)
+            {
+                Log.Warning("null panic");
+                return;
+            }
+
+            parent.pawn.mindState.mentalStateHandler.TryStartMentalState(result, null, true, false, null);
+        }
+        
 
         private bool NullCheck( string functionCall)
         {
@@ -114,14 +182,20 @@ namespace NewHatcher
                 Log.Warning(functionCall + " null faction ");
                 return false;
             }
-            if (Props.ownFaction == null)
+            if (ownFaction == null)
             {
                 Log.Warning(functionCall + " null own ");
                 return false;
             }
-            if (Props.forcedFaction == null)
+            if (forcedFaction == null)
             {
                 Log.Warning(functionCall + " null forced ");
+                return false;
+            }
+
+            if(Initiator == null)
+            {
+                Log.Warning(functionCall + " null initaor ");
                 return false;
             }
 
@@ -130,7 +204,7 @@ namespace NewHatcher
 
 
 
-        public bool Init(Faction own, Faction forced, int duration)
+        public bool Init(Faction own, Pawn masterMind, int duration)
         {
             
             if (this.parent == null)
@@ -165,8 +239,11 @@ namespace NewHatcher
 
             //Log.Warning("faction found : " + almostOwnFaction.Name);
 
-            Props.ownFaction = own;
-            Props.forcedFaction = forced;
+            ownFaction = own;
+            Initiator = masterMind;
+
+            forcedFaction = Initiator.Faction;
+
             ticksLeft = duration;
 
             //Log.Warning("Init done, enslaving");

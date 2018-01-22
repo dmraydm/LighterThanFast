@@ -68,9 +68,11 @@ namespace NewHatcher
     {
         private CompPowerTrader powerComp;
         private float benchRadius = 35.7f;
+        private float goodwillImpact = -30f;
 
         private Pawn masterMind = null;
         private Pawn mindTarget = null;
+        private Faction backupFaction = null;
 
         string tName = string.Empty;
         string tRace = string.Empty;
@@ -312,7 +314,6 @@ namespace NewHatcher
             return (vector != NaValue);
         }
 
-        // Appel ? debug JobDriver_OperateDeepDrill.cs
         public void MindMineTick(Pawn masterMind)
         {
             
@@ -361,9 +362,12 @@ namespace NewHatcher
         {
             if ((newTarget != null) && (!newTarget.Dead) && (newTarget.Map != null))
             {
+                ResetProgress();
                 mindTarget = newTarget;
                 tName = mindTarget.NameStringShort;
                 tRace = mindTarget.def.label;
+                if (!animalVictim())
+                    backupFaction = mindTarget.Faction;
             }
             else
             {
@@ -488,6 +492,7 @@ namespace NewHatcher
         public void ResetProgress()
         {
             workProgress = 0;
+            mindcontrolEnabled = false;
         }
 
         public bool animalVictim(){
@@ -515,9 +520,10 @@ namespace NewHatcher
         public void TargetReset()
         {
             mindcontrolEnabled = false;
+            backupFaction = null;
             mindTarget = null;
             masterMind = null;
-            workProgress = 0;
+            ResetProgress();
             VectorReset();
             //Log.Warning("target reset to null");
             return;
@@ -569,21 +575,27 @@ namespace NewHatcher
                 BodyPartRecord bodyPart = null;
                 HediffDef hediff2use = null;
 
-                Log.Warning("retrieving hediif def");
+                //Log.Warning("retrieving hediif def");
                 hediff2use = HediffDef.Named("Hediff_LTF_FactionChange");
 
                 mindTarget.RaceProps.body.GetPartsWithTag("ConsciousnessSource").TryRandomElement(out bodyPart);
-                Log.Warning("Found bodypart " + bodyPart.def);
+                if (bodyPart == null)
+                {
+                    Log.Warning("null body part");
+                    return;
+                }
+
+                //Log.Warning("Found bodypart " + bodyPart.def);
                 changeFactionHediff = HediffMaker.MakeHediff(hediff2use, mindTarget, bodyPart);
-                
-                Log.Warning("Trying to add hediif " + mindTarget.Label);
-                mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
-                Log.Warning("added hedif");
                 if (changeFactionHediff == null)
                 {
                     Log.Warning("hediff null");
                     return;
                 }
+
+                //Log.Warning("Trying to add hediif " + mindTarget.Label);
+                mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
+                //Log.Warning("added hedif");
 
                 HediffComp_LTF_FactionChange hediff_changeFaction = null;
 
@@ -598,8 +610,9 @@ namespace NewHatcher
                             return;
                         }
 
-                        if( hediff_changeFaction.Init(mindTarget.Faction, masterMind.Faction, 10000))
+                        if( hediff_changeFaction.Init(mindTarget.Faction, masterMind, 10000))
                         {
+                            BadWill();
                             TargetReset();
                             return;
                         }
@@ -702,6 +715,7 @@ namespace NewHatcher
                                 }
                                 //Log.Warning(tName + "state : " + chosenState.defName);
                                 mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
+                                BadWill();
 
                                 /*for (int i = 0; i < targetTraits.Count; i++){
                                     Log.Warning(tName + " : " + targetTraits[i].CurrentData.label);
@@ -813,6 +827,7 @@ namespace NewHatcher
                             icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
                         };
 
+                        if (!animalVictim())
                         yield return new Command_Action
                         {
                             action = new Action(this.TryFactionChange),
@@ -823,37 +838,32 @@ namespace NewHatcher
                     }
                 }
             }
-        }
-        /*
-         public override GizmoResult GizmoOnGUI(Vector2 topLeft)
-		{
-			Rect overRect = new Rect(topLeft.x, topLeft.y, this.Width, 75f);
-			Find.WindowStack.ImmediateWindow(1523289473, overRect, WindowLayer.GameUI, delegate
-			{
-				Rect rect = overRect.AtZero().ContractedBy(6f);
-				Rect rect2 = rect;
-				rect2.height = overRect.height / 2f;
-				Text.Font = GameFont.Tiny;
-				Widgets.Label(rect2, "FuelLevelGizmoLabel".Translate());
-				Rect rect3 = rect;
-				rect3.yMin = overRect.height / 2f;
-				float fillPercent = this.refuelable.Fuel / this.refuelable.Props.fuelCapacity;
-				Widgets.FillableBar(rect3, fillPercent, Gizmo_RefuelableFuelStatus.FullBarTex, Gizmo_RefuelableFuelStatus.EmptyBarTex, false);
-				if (this.refuelable.Props.targetFuelLevelConfigurable)
-				{
-					float num = this.refuelable.TargetFuelLevel / this.refuelable.Props.fuelCapacity;
-					float x = rect3.x + num * rect3.width - (float)Gizmo_RefuelableFuelStatus.TargetLevelArrow.width * 0.5f / 2f;
-					float y = rect3.y - (float)Gizmo_RefuelableFuelStatus.TargetLevelArrow.height * 0.5f;
-					GUI.DrawTexture(new Rect(x, y, (float)Gizmo_RefuelableFuelStatus.TargetLevelArrow.width * 0.5f, (float)Gizmo_RefuelableFuelStatus.TargetLevelArrow.height * 0.5f), Gizmo_RefuelableFuelStatus.TargetLevelArrow);
-				}
-				Text.Font = GameFont.Small;
-				Text.Anchor = TextAnchor.MiddleCenter;
-				Widgets.Label(rect3, this.refuelable.Fuel.ToString("F0") + " / " + this.refuelable.Props.fuelCapacity.ToString("F0"));
-				Text.Anchor = TextAnchor.UpperLeft;
-			}, true, false, 1f);
-			return new GizmoResult(GizmoState.Clear);
+
+            if ((Prefs.DevMode) && (!IsWorkDone()))
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Haaax: insta ready",
+                    action = delegate
+                    {
+                        workProgress = workGoal;
+                        mindcontrolEnabled = true;
+                    }
+                };
             }
-         */
+        }
+
+        void BadWill()
+        {
+            if (backupFaction == null)
+            {
+                Log.Warning("back faction null");
+                return;
+            }
+            backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+            backupFaction.SetHostileTo(masterMind.Faction, true);
+        }
+        
 
         public void ShowReport()
         {
@@ -878,7 +888,7 @@ namespace NewHatcher
             stringBuilder.AppendLine("|\t|");
             stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")");
             stringBuilder.AppendLine("|\t|");
-            stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ")");
+            stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")");
             stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("+---[Vectors]");
             stringBuilder.AppendLine("|\t|");

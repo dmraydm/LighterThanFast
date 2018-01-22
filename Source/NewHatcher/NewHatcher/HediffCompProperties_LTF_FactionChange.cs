@@ -23,9 +23,6 @@ namespace NewHatcher
 {
     public class HediffCompProperties_LTF_FactionChange : HediffCompProperties
     {
-        public Faction ownFaction;
-        public Faction forcedFaction;
-
         public IntRange defaultTicks = default(IntRange);
 
         public bool manHunter = false;

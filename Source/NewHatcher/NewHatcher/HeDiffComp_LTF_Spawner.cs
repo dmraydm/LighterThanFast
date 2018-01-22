@@ -34,7 +34,16 @@ namespace NewHatcher
 			}
 		}
 
-		public override void CompPostTick(ref float severityAdjustment)
+
+        public override void CompExposeData()
+        {
+            Scribe_Values.Look(ref spawnTicker, "LTF_spawnTicker");
+            Scribe_Values.Look(ref hungerReset, "LTF_hungerReset");
+            Scribe_Values.Look(ref healthReset, "LTF_healthReset");
+            Scribe_Values.Look(ref graceTicks, "LTF_graceTicks");
+        }
+
+        public override void CompPostTick(ref float severityAdjustment)
 		{
 			
 			pawn = parent.pawn;

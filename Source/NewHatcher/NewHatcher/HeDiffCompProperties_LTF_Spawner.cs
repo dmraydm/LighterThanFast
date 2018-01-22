@@ -44,7 +44,6 @@ namespace NewHatcher
 		public HeDiffCompProperties_LTF_Spawner()
 		{
 			this.compClass = typeof(HeDiffComp_LTF_Spawner);
-			//this.tickerLimit = this.spawnIntervalRange.RandomInRange;
 		}
 	}
 }
