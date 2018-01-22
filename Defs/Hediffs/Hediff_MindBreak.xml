@@ -59,4 +59,25 @@
 
 	</HediffDef>
 
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Hediff_LTF_FactionChange</defName>
+		<label>Mind enslaved</label>
+		<labelNoun>a staged enslavment</labelNoun>
+
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="NewHatcher.HediffCompProperties_LTF_FactionChange">
+				
+			</li>
+		</comps>
+		
+		<initialSeverity>1</initialSeverity>
+
+
+		<makesAlert>true</makesAlert>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<defaultLabelColor>(.9, .8, 1)</defaultLabelColor>
+
+	</HediffDef>
+	
 </Defs>

@@ -53,6 +53,8 @@
     <Compile Include="Comp_LTF_MindControl.cs" />
     <Compile Include="Comp_LTF_SynthetizeShieldLayer.cs" />
     <Compile Include="Comp_LTF_Overlay.cs" />
+    <Compile Include="HediffCompProperties_LTF_FactionChange.cs" />
+    <Compile Include="HeDiffComp_LTF_FactionChange.cs" />
     <Compile Include="JobDriver_LTF_MindMine.cs" />
     <Compile Include="JobDriver_OperateShieldBench.cs" />
     <Compile Include="LTF_ShieldHelm.cs" />

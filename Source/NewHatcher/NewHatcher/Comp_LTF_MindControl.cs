@@ -70,10 +70,7 @@ namespace NewHatcher
         private float benchRadius = 35.7f;
 
         private Pawn masterMind = null;
-        //private string iniatorStrId = string.Empty;
-
         private Pawn mindTarget = null;
-        //private string targetStrId = string.Empty;
 
         string tName = string.Empty;
         string tRace = string.Empty;
@@ -182,17 +179,17 @@ namespace NewHatcher
             {
                 Log.Warning("power comp Null");
             }
-            /*
-            if(iniatorStrId == "" || iniatorStrId == "")
+            if (masterMind != null)
             {
-                Log.Warning("No str to  pawn init");
+                mName = masterMind.NameStringShort;
+                mRace = masterMind.def.label;
             }
-            else
-            {
 
+            if (mindTarget != null)
+            {
+                tName = mindTarget.NameStringShort;
+                tRace = mindTarget.def.label;
             }
-            */
-            //Log.Warning("PostSpawnSetup end");
         }
 
         /*
@@ -205,6 +202,7 @@ namespace NewHatcher
 
         public override void PostExposeData()
         {
+            base.PostExposeData();
             Scribe_References.Look(ref masterMind, "LTF_masterMind");
             Scribe_References.Look(ref mindTarget, "LTF_mindTarget");
 
@@ -317,6 +315,7 @@ namespace NewHatcher
         // Appel ? debug JobDriver_OperateDeepDrill.cs
         public void MindMineTick(Pawn masterMind)
         {
+            
             if (animalVictim())
             {
                 workProgress += animalVector;
@@ -340,7 +339,6 @@ namespace NewHatcher
         {
             if (newmasterMind != null)
             {
-                //iniatorStrId = newmasterMind.ThingID;
                 masterMind = newmasterMind;
                 mName = masterMind.NameStringShort;
                 mRace = masterMind.def.label;
@@ -363,7 +361,6 @@ namespace NewHatcher
         {
             if ((newTarget != null) && (!newTarget.Dead) && (newTarget.Map != null))
             {
-                //targetStrId = newTarget.ThingID;
                 mindTarget = newTarget;
                 tName = mindTarget.NameStringShort;
                 tRace = mindTarget.def.label;
@@ -517,13 +514,98 @@ namespace NewHatcher
 
         public void TargetReset()
         {
-            //targetStrId = "";
             mindcontrolEnabled = false;
             mindTarget = null;
             masterMind = null;
             workProgress = 0;
+            VectorReset();
             //Log.Warning("target reset to null");
             return;
+        }
+
+        private void VectorReset()
+        {
+            bestVector = (int)MindVector.Na;
+            bestVectorValue = 0f;
+            worstVector = (int)MindVector.Na;
+            worstVectorValue = 0f;
+        }
+
+        private void TryFactionChange()
+        {
+            if ((!GotThePower()))
+            {
+                Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return;
+            }
+
+            if (!ActorInRadius())
+            {
+                Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return;
+            }
+            if (!IsWorkDone())
+            {
+                Messages.Message("Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return;
+            }
+
+            if (mindTarget.Faction == masterMind.Faction)
+            {
+                Messages.Message( mName + " and " + tName + " are from the same faction. How wrong for so long ?", this.parent, MessageTypeDefOf.TaskCompletion);
+                return;
+            }
+
+            if (TryMindReach())
+            {
+                if ((mindTarget == null) || (masterMind == null))
+                {
+                    Log.Warning("how so far ?");
+                    return;
+                }
+
+
+                Hediff changeFactionHediff = null;
+                BodyPartRecord bodyPart = null;
+                HediffDef hediff2use = null;
+
+                Log.Warning("retrieving hediif def");
+                hediff2use = HediffDef.Named("Hediff_LTF_FactionChange");
+
+                mindTarget.RaceProps.body.GetPartsWithTag("ConsciousnessSource").TryRandomElement(out bodyPart);
+                Log.Warning("Found bodypart " + bodyPart.def);
+                changeFactionHediff = HediffMaker.MakeHediff(hediff2use, mindTarget, bodyPart);
+                
+                Log.Warning("Trying to add hediif " + mindTarget.Label);
+                mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
+                Log.Warning("added hedif");
+                if (changeFactionHediff == null)
+                {
+                    Log.Warning("hediff null");
+                    return;
+                }
+
+                HediffComp_LTF_FactionChange hediff_changeFaction = null;
+
+                List<Hediff> allHediffs = mindTarget.health.hediffSet.hediffs;
+                for (int i = 0; i < allHediffs.Count; i++)
+                {
+                    if (allHediffs[i].def == hediff2use)
+                    {
+                        hediff_changeFaction = allHediffs[i].TryGetComp<HediffComp_LTF_FactionChange>();
+                        if (hediff_changeFaction == null) {
+                            Log.Warning("null faction");
+                            return;
+                        }
+
+                        if( hediff_changeFaction.Init(mindTarget.Faction, masterMind.Faction, 10000))
+                        {
+                            TargetReset();
+                            return;
+                        }
+                    }
+                }
+            }
         }
 
         private void TryMindcontrol()
@@ -689,7 +771,7 @@ namespace NewHatcher
 
             if (benchTargetPawnDistance > benchRadius)
             {
-                Log.Warning("target too far");
+                Messages.Message("Target is too far." , this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
             }
             return true;
@@ -729,6 +811,14 @@ namespace NewHatcher
                             defaultLabel = "Mind control",
                             defaultDesc = "Take control maybe",
                             icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
+                        };
+
+                        yield return new Command_Action
+                        {
+                            action = new Action(this.TryFactionChange),
+                            defaultLabel = "Alpha mind",
+                            defaultDesc = "Take control maybe",
+                            icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
                         };
                     }
                 }

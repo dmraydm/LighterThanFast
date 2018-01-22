@@ -19,12 +19,6 @@ public class Comp_LTF_Spawner : ThingComp
 	{
 		private int ticksUntilSpawn;
 
-		/*
-		 *Pawn pawn = null;
-if (this.parent instanceof Pawn) {
-  pawn = this.parent as Pawn;
-}
-		 */
 		public CompProperties_LTF_Spawner Props
 		{
 			get
