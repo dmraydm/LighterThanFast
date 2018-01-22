@@ -86,7 +86,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	<alienRace>
 
 	<generalSettings>
-	
+		<humanRecipeImport>true</humanRecipeImport>
 		<factionRelations>
 			<li>
 				<factions>
@@ -412,6 +412,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
       <li>InstallNaturalKidney</li>
       <li>InstallNaturalLiver</li>
       <li>ExciseCarcinoma</li>
+	  <li>AdministerMechSerumHealer</li>
       <li>RemoveBodyPart</li>
       <li>Euthanize</li>
       <li>Anesthetize</li>

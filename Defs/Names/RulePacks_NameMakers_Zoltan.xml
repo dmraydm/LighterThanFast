@@ -22,6 +22,9 @@
 		
 		<li>name->[wavyAdj] '[stars]' [alpha]</li>
 		<li>name->[illusion] '[wavyAdj]' [stars]</li>
+		
+		<li>name->[virtuous] '[alpha]' [wavyName]</li>
+		<li>name->[transparent] '[color]' [wavyName]</li>
 
 		</rulesStrings>
 	  

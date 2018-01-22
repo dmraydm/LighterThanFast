@@ -135,6 +135,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 	<alienRace>
 
 	<generalSettings>
+		<humanRecipeImport>true</humanRecipeImport>
 		<factionRelations>
                 <li>
                     <factions>
@@ -559,6 +560,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<li>InstallNaturalLung</li>
 		<li>InstallNaturalKidney</li>
 		<li>InstallNaturalLiver</li>
+		<li>AdministerMechSerumHealer</li>
 		<li>ExciseCarcinoma</li>
 		<li>RemoveBodyPart</li>
 		<li>Euthanize</li>

@@ -87,44 +87,45 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<alienRace>
 
 	<generalSettings>
-		    <factionRelations>
-                <li>
-                    <factions>
-                       <li>ZoltanFaction</li>
-					   <li>ZoltanPlayerColony</li>
-                    </factions>
-                    <goodwill>
-                       <min>-10</min>
-                       <max>15</max>
-                    </goodwill>
-                </li>
-                <li>
-                    <factions>
-                       <li>EngieFaction</li>
-					   <li>EngiePlayerColony</li>
-					   
-					   <li>MantisFaction</li>
-					   <li>MantisPlayerColony</li>
-					   
-					   <li>PlayerColony</li>
-					   <li>PlayerTribe</li>
-					   <li>RockmanPlayerColony</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>10</max>
-                    </goodwill>
-                </li>
-				<li>
-                    <factions>
-                       <li>SlugFaction</li>
-					   <li>SlugPlayerColony</li>
-                    </factions>
-                    <goodwill>
-                       <min>-15</min>
-                       <max>0</max>
-                    </goodwill>
-                </li>    
+		<humanRecipeImport>true</humanRecipeImport>
+		<factionRelations>
+			<li>
+				<factions>
+				   <li>ZoltanFaction</li>
+				   <li>ZoltanPlayerColony</li>
+				</factions>
+				<goodwill>
+				   <min>-10</min>
+				   <max>15</max>
+				</goodwill>
+			</li>
+			<li>
+				<factions>
+				   <li>EngieFaction</li>
+				   <li>EngiePlayerColony</li>
+				   
+				   <li>MantisFaction</li>
+				   <li>MantisPlayerColony</li>
+				   
+				   <li>PlayerColony</li>
+				   <li>PlayerTribe</li>
+				   <li>RockmanPlayerColony</li>
+				</factions>
+				<goodwill>
+				   <min>-15</min>
+				   <max>10</max>
+				</goodwill>
+			</li>
+			<li>
+				<factions>
+				   <li>SlugFaction</li>
+				   <li>SlugPlayerColony</li>
+				</factions>
+				<goodwill>
+				   <min>-15</min>
+				   <max>0</max>
+				</goodwill>
+			</li>    
 		</factionRelations>
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
@@ -445,6 +446,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
       <li>InstallNaturalKidney</li>
       <li>InstallNaturalLiver</li>
       <li>ExciseCarcinoma</li>
+	  <li>AdministerMechSerumHealer</li>
       <li>RemoveBodyPart</li>
       <li>Euthanize</li>
       <li>Anesthetize</li>

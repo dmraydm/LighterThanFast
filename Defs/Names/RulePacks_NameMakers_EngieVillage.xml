@@ -8,21 +8,28 @@
       <rulesStrings>
         <li>name->[color] [it] [workPlaces]</li>
 		<li>name->[it] [scifi] [workPlaces]</li>
-		<li>name->[it] [scifi] [terrainfeature]</li>
-        <li>name->The [scifi] [terrainfeature] [version]</li>
 		<li>name->The [positive] [terrainfeature] engi [type] [workPlaces]</li>
-        <li>name->[it] [workPlaces] [politicalunion]</li>
-        <li>name->[terrainfeature] for [moreit] [version]</li>
-		<li>name->[moreit] [workPlaces] [terrainfeature]</li>
-		<li>name->[terrainfeature] for [scifi] [version]</li>
-		<li>name->[scifi] [workPlaces] [terrainfeature]</li>
-        <li>name->[politicalunion] [type] of [moreit]</li>
 		<li>name->[negative] [workPlaces] of [moreit]</li>
-		<li>name->[positive] [politicalunion] of [it]</li>
+		<li>name->[vesselRelated] [lightVessel] [workPlaces]</li>
+		<li>name->[OpSys] [versionName] [workPlaces]</li>
 		
-		<li>name->[lightVessel] [type] [vesselRelated]</li>
+		<li>name->[it] [scifi] [terrainfeature]</li>
+        <li>name->The [scifi] [terrainfeature] [[versionNum]</li>
 		<li>name->[mediumVessel] [type] [terrainfeature]</li>
-		<li>name->[mediumVessel] [type] [vesselRelated] [politicalunion]</li>
+        <li>name->[scifi] [workPlaces] [terrainfeature]</li>
+		<li>name->[moreit] [workPlaces] [terrainfeature]</li>
+		
+		<li>name->[alpha] [moreit] [terrainfeature]</li>
+		<li>name->[scifi] [terrainfeature] [versionNum]</li>
+		
+		
+        <li>name->[politicalunion] [type] of [moreit]</li>
+		<li>name->[politicalunion] [alpha] of [it]</li>
+		
+		
+		
+		<li>name->[it] [workPlaces] [politicalunion]</li>
+		<li>name->[mediumVessel] [alpha] [politicalunion]</li>
       </rulesStrings>
 	  
 	  <rulesRaw>
@@ -48,6 +55,16 @@
         </li>
 		
 		<li Class="Rule_File">
+          <keyword>OpSys</keyword>
+          <path>EngieNames/OperatingSystems</path>
+        </li>
+		
+		<li Class="Rule_File">
+          <keyword>alpha</keyword>
+          <path>Common/GreekAlphabet</path>
+        </li>
+		
+		<li Class="Rule_File">
           <keyword>workPlaces</keyword>
           <path>EngieNames/workPlaces</path>
         </li>
@@ -67,8 +84,12 @@
         </li>
 		
 		<li Class="Rule_File">
-          <keyword>version</keyword>
-          <path>EngieNames/Version</path>
+          <keyword>versionNum</keyword>
+          <path>EngieNames/VersionNum</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>versionName</keyword>
+          <path>EngieNames/VersionName</path>
         </li>
 		
         <li Class="Rule_File">
@@ -102,15 +123,15 @@
     <defName>NamerBaseEngieVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[version] [moreit] [terrainfeature]</li>
+        <li>name->[versionNum] [moreit] [terrainfeature]</li>
         <li>name->[scifi] [moreit] [workPlaces]</li>
         <li>name->[color] [moreit] [terrainfeature]</li>
-        <li>name->[it] [version] [terrainfeature]</li>
-        <li>name->[moreit] [version] [workPlaces]</li>
+        <li>name->[it] [versionNum] [terrainfeature]</li>
+        <li>name->[moreit] [versionName] [workPlaces]</li>
 		
-		<li>name->[terrainfeature] [version] [workPlaces]</li>
+		<li>name->[versionName] [versionNum] [terrainfeature]</li>
         <li>name->[scifi] [terrainfeature] [workPlaces]</li>
-        <li>name->[workPlaces] [version] [terrainfeature]</li>
+        <li>name->[workPlaces] [versionNum] [terrainfeature]</li>
         <li>name->[color] [terrainfeature] [workPlaces]</li>
 		
 		<li>name->[color] [moreit] [workPlaces]</li>
@@ -154,10 +175,16 @@
           <keyword>workPlaces</keyword>
           <path>EngieNames/workPlaces</path>
         </li>
+		
 		<li Class="Rule_File">
-          <keyword>version</keyword>
-          <path>EngieNames/Version</path>
+          <keyword>versionNum</keyword>
+          <path>EngieNames/VersionNum</path>
         </li>
+		<li Class="Rule_File">
+          <keyword>versionName</keyword>
+          <path>EngieNames/VersionName</path>
+        </li>
+		
         <li Class="Rule_File">
           <keyword>moreit</keyword>
           <path>EngieNames/MoreIt</path>
