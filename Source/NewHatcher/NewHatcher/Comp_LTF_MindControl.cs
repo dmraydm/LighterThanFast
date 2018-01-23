@@ -58,7 +58,7 @@ namespace NewHatcher
             //Log.Warning(">>> DoEffect <<<");
             //base.DoEffect(usedBy);
             base.DoEffect(usedBy);
-            SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera(usedBy.MapHeld);
+            SoundDefOf.LessonActivated.PlayOneShotOnCamera(usedBy.MapHeld);
             //usedBy.records.Increment(RecordDefOf.ArtifactsActivated);
         }
     }
@@ -519,6 +519,7 @@ namespace NewHatcher
             return (IsTargetSet() && IsMasterMindSet());
         }
 
+
         public void TargetReset()
         {
             mindcontrolEnabled = false;
@@ -539,37 +540,38 @@ namespace NewHatcher
             worstVectorValue = 0f;
         }
 
-        private void TryFactionChange()
+        private bool TryFactionChange()
         {
             if ((!GotThePower()))
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
-                return;
+                return false;
             }
             if (!IsTargetSet()) {
                 Messages.Message(tName + " /target is Missing", this.parent, MessageTypeDefOf.TaskCompletion);
-                return;
+                return false;
             }
             if (!IsMasterMindSet())
             {
                 Messages.Message(mName + " /mastermind is Missing", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
             }
 
             if (!ActorInRadius())
             {
                 Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
-                return;
+                return false;
             }
             if (!IsWorkDone())
             {
                 Messages.Message("Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
-                return;
+                return false;
             }
 
             if (mindTarget.Faction == masterMind.Faction)
             {
                 Messages.Message(mName + " and " + tName + " are from the same faction. How wrong for so long ?", this.parent, MessageTypeDefOf.TaskCompletion);
-                return;
+                return false;
             }
 
             if (TryMindReach())
@@ -577,11 +579,10 @@ namespace NewHatcher
                 if ((mindTarget == null) || (masterMind == null))
                 {
                     Log.Warning("how so far ?");
-                    return;
+                    return false;
                 }
-
-
                 Hediff changeFactionHediff = null;
+
                 BodyPartRecord bodyPart = null;
                 HediffDef hediff2use = null;
 
@@ -592,187 +593,252 @@ namespace NewHatcher
                 if (bodyPart == null)
                 {
                     Log.Warning("null body part");
-                    return;
+                    return false;
                 }
 
                 //Log.Warning("Found bodypart " + bodyPart.def);
                 changeFactionHediff = HediffMaker.MakeHediff(hediff2use, mindTarget, bodyPart);
                 if (changeFactionHediff == null)
                 {
-                    Log.Warning("hediff null");
-                    return;
+                    Log.Warning("hediff maker null");
+                    return false;
                 }
-
-                //Log.Warning("Trying to add hediif " + mindTarget.Label);
-                mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
-                //Log.Warning("added hedif");
-
-                HediffComp_LTF_FactionChange hediff_changeFaction = null;
 
                 List<Hediff> allHediffs = mindTarget.health.hediffSet.hediffs;
                 for (int i = 0; i < allHediffs.Count; i++)
                 {
                     if (allHediffs[i].def == hediff2use)
                     {
-                        hediff_changeFaction = allHediffs[i].TryGetComp<HediffComp_LTF_FactionChange>();
-                        if (hediff_changeFaction == null) {
-                            Log.Warning("null faction");
-                            return;
-                        }
-
-                        if (hediff_changeFaction.Init(mindTarget.Faction, masterMind, 10000))
-                        {
-                            BadWill();
-                            return;
-                        }
+                        Log.Warning("Already enslaved cant do it twice");
+                        return false;
                     }
                 }
+
+                HediffComp_LTF_FactionChange newComp = changeFactionHediff.TryGetComp<HediffComp_LTF_FactionChange>();
+                if (newComp == null)
+                {
+                    Log.ErrorOnce("newComp not found",1);
+                    return false;
+                }
+
+                if (!newComp.Init(mindTarget.Faction, masterMind, (Building)parent, 10000))
+                {
+                    Log.Warning("failed to Init");
+                    return false;
+                }
+
+                mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
+                return true;
             }
+            return false;
+        }
+
+        // Gizmo Commands
+
+        public void TargetResetCmd()
+        {
+            TargetReset();
+            SoundDefOf.LessonDeactivated.PlayOneShotOnCamera(null);
         }
 
         private void TryDisorientAndReset()
         {
-//            Log.Warning("Dis 0");
-            TryFactionChange();
-  //          Log.Warning("Dis 1");
-            TryMindControl();
-    //        Log.Warning("Dis 2");
-            TargetReset();
+            if (mindTarget.Faction != masterMind.Faction)
+            {
+                if(!TryFactionChange()) return;
+            }
+                
+
+            if( TryMindControl() )
+            {
+                BadWill();
+                TargetReset();
+                SoundDef.Named("LetterArriveBadUrgentSmall").PlayOneShotOnCamera(null);
+            }
+            
         }
 
         private void TryEnslaveAndReset()
         {
-            TryFactionChange();
-            TargetReset();
+            if( TryFactionChange())
+            {
+                BadWill();
+                TargetReset();
+                SoundDef.Named("LetterArriveGood").PlayOneShotOnCamera(null);
+            }
         }
-                                        
-        private void TryMindControl()
+
+        private void TryManhunterAndReset()
+        {
+            if (TryManhunter())
+            {
+                TargetReset();
+                SoundDef.Named("LetterArriveBadUrgentBig").PlayOneShotOnCamera(null);
+            }
+        }
+
+        // For animals
+        private bool TryManhunter()
+        {
+            if ((!GotThePower()))
+            {
+                Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
+            }
+
+            if (!ActorInRadius())
+            {
+                Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
+            }
+
+            if (!IsWorkDone())
+            {
+                Messages.Message("Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
+            }
+
+            if (TryMindReach())
+            {
+                MentalStateDef chosenState = null;
+                chosenState = MentalStateDefOf.Manhunter;
+                Log.Warning(tName + "state : " + chosenState.defName);
+                mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
+
+                return true;
+            }
+            else
+            {
+                Log.Error("mind control bench tried to enable mindcontrol but couldn't.");
+                return false;
+            }
+
+        }
+    
+        // For humanlike
+        // Applies mentalstate
+        private bool TryMindControl()
         {
             if ( (!GotThePower()) )
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
-            } else if (!ActorInRadius()) {
-                    Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
             }
-             else if ( !IsWorkDone())
+
+            if (!ActorInRadius()) {
+                Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
+            }
+
+            if ( !IsWorkDone())
             {
                 Messages.Message( "Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
+                return false;
             }
-            else
-            {
-                if (TryMindReach())
-                {
-                    MentalStateDef mentalStateEffect = null;
 
-                    if ((mindTarget == null) || (masterMind == null))
+            if (TryMindReach())
+            {
+                MentalStateDef chosenState = null;
+                if ((mindTarget == null) || (masterMind == null))
+                {
+                    Log.Warning("how so far ?");
+                    return false;
+                }
+
+                    switch (bestVector)
                     {
-                        Log.Warning("how so far ?");
-                        return;
+                        case (int)MindVector.Empat:
+                            // will wake up if sleeping
+                            //mentalStateEffect = MentalStateDefOf.WanderSad;
+                        break;
+                        case (int)MindVector.Manip:
+                            //mentalStateEffect = MentalStateDefOf.PanicFlee;
+                            //mentalStateEffect = MentalStateDefOf.WanderSad;
+                            break;
+                        case (int)MindVector.Ascen:
+                            /*
+                            mentalStateEffect = MentalStateDefOf.Berserk;
+                            mindTarget.mindState.mentalStateHandler.TryStartMentalState(mentalStateEffect, null, true, false, null);
+                            */
+                            break;
+                        default:
+                            Log.Warning("Wtf vector");
+                            break;
                     }
 
-                    if (animalVictim())
+                    Thought_Memory victimBreak = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MindBreak"));
+                    Thought_Memory victimShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedShame"));
+                    // Initiator
+                    Thought_Memory InitiatorPride = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeonePride"));
+                    Thought_Memory InitiatorShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeoneShame"));
+
+                    if ( (victimBreak == null) || (victimShame == null) || (victimBreak == null) || (victimBreak == null))
                     {
-                        mentalStateEffect = MentalStateDefOf.Manhunter;
+                        Log.Warning("Thought null");
                     }
                     else
                     {
-                        switch (bestVector)
-                        {
-                            case (int)MindVector.Empat:
-                                // will wake up if sleeping
-                                //mentalStateEffect = MentalStateDefOf.WanderSad;
-                            break;
-                            case (int)MindVector.Manip:
-                                //mentalStateEffect = MentalStateDefOf.PanicFlee;
-                                //mentalStateEffect = MentalStateDefOf.WanderSad;
-                                break;
-                            case (int)MindVector.Ascen:
-                                /*
-                                mentalStateEffect = MentalStateDefOf.Berserk;
-                                mindTarget.mindState.mentalStateHandler.TryStartMentalState(mentalStateEffect, null, true, false, null);
-                                */
-                                break;
-                            default:
-                                Log.Warning("Wtf vector");
-                                break;
-                        }
+                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimBreak, null);
+                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimShame, null);
 
-                        Thought_Memory victimBreak = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MindBreak"));
-                        Thought_Memory victimShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedShame"));
-                        // Initiator
-                        Thought_Memory InitiatorPride = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeonePride"));
-                        Thought_Memory InitiatorShame = (Thought_Memory)ThoughtMaker.MakeThought(ThoughtDef.Named("LTF_MinedSomeoneShame"));
+                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorPride, null);
+                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorShame, null);
 
-                        if ( (victimBreak == null) || (victimShame == null) || (victimBreak == null) || (victimBreak == null))
+                        //wakes up target if laying
+                        mindTarget.ClearMind();
+                        if (mindTarget.story != null)
                         {
-                            Log.Warning("1+ though null");
+                            //Log.Warning(tName + " ok Story ");
+                            List<Trait> targetTraits = new List<Trait>();
+                            targetTraits = mindTarget.story.traits.allTraits;
+                            //Log.Warning(tName + " traits found: " + targetTraits.Count );
+
+                            IEnumerable<MentalBreakDef> breaks = DefDatabase<MentalBreakDef>.AllDefsListForReading;
+                            MentalBreakDef chosenBreak = breaks.RandomElement<MentalBreakDef>();
+                            if (chosenBreak == null) {
+                                Log.Warning("null break");
+                            }
+                            //Log.Warning(tName + "break : " + chosenBreak.defName);
+
+                            chosenState = chosenBreak.mentalState;
+                            if (chosenState == null)
+                            {
+                                Log.Warning("null state");
+                            }
+
+                            /*for (int i = 0; i < targetTraits.Count; i++){
+                                Log.Warning(tName + " : " + targetTraits[i].CurrentData.label);
+                                TraitDegreeData currentData = targetTraits[i].CurrentData;
+                                if (currentData.randomMentalState != null){
+                                    if (trait.CurrentData.theOnlyAllowedMentalBreaks != null){
+                                        Log.Warning(tName + " : " + trait.CurrentData.label);
+                                        for (int j = 0; j < trait.CurrentData.theOnlyAllowedMentalBreaks.Count; j++){
+                                            Log.Warning (tName + " : " + trait.CurrentData.theOnlyAllowedMentalBreaks[j].defName );
+                                        }
+                                    }
+                                }
+                                }
+                            */
+
                         }
                         else
                         {
-                            mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimBreak, null);
-                            mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimShame, null);
-
-                            masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorPride, null);
-                            masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorShame, null);
-
-                            //wakes up target if laying
-                            mindTarget.ClearMind();
-                            if (mindTarget.story != null)
-                            {
-                                //Log.Warning(tName + " ok Story ");
-                                List<Trait> targetTraits = new List<Trait>();
-                                targetTraits = mindTarget.story.traits.allTraits;
-                                //Log.Warning(tName + " traits found: " + targetTraits.Count );
-
-                                IEnumerable<MentalBreakDef> breaks = DefDatabase<MentalBreakDef>.AllDefsListForReading;
-
-                                MentalBreakDef chosenBreak = breaks.RandomElement<MentalBreakDef>();
-
-                                if (chosenBreak == null) {
-                                    Log.Warning("null break");
-                                }
-                                //Log.Warning(tName + "break : " + chosenBreak.defName);
-
-                                MentalStateDef chosenState = chosenBreak.mentalState;
-                                if (chosenState == null)
-                                {
-                                    Log.Warning("null state");
-                                }
-                                Log.Warning(tName + "state : " + chosenState.defName);
-                                mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
-
-                                BadWill();
-
-                                /*for (int i = 0; i < targetTraits.Count; i++){
-                                    Log.Warning(tName + " : " + targetTraits[i].CurrentData.label);
-                                    TraitDegreeData currentData = targetTraits[i].CurrentData;
-                                    if (currentData.randomMentalState != null){
-                                        if (trait.CurrentData.theOnlyAllowedMentalBreaks != null){
-                                            Log.Warning(tName + " : " + trait.CurrentData.label);
-                                            for (int j = 0; j < trait.CurrentData.theOnlyAllowedMentalBreaks.Count; j++){
-                                                Log.Warning (tName + " : " + trait.CurrentData.theOnlyAllowedMentalBreaks[j].defName );
-                                            }
-                                        }
-                                    }
-                                  }
-                                */
-
-                            }
-                            else
-                            {
-                                Log.Warning(tName + " : null story");
-                            }
+                            Log.Warning(tName + " : null story");
+                            return false;
                         }
                     }
-                    
-                    
-                    return;
-                }
-                else
-                {
-                    Log.Error("mind control bench tried to enable mindcontrol but couldn't.");
-                }
+
+                Log.Warning(tName + "state : " + chosenState.defName);
+                mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
+
+                return true;
             }
+            else
+            {
+                Log.Error("mind control bench tried to enable mindcontrol but couldn't.");
+                return false;
+            }
+            
         }
 
         public bool GotThePower()
@@ -824,7 +890,7 @@ namespace NewHatcher
         {
             if ((powerComp != null) && (powerComp.PowerOn))
             {
-                if (IsTargetSet())
+                if (AreActorsSet())
                 {
                     yield return new Command_Action
                     {
@@ -836,7 +902,7 @@ namespace NewHatcher
 
                     yield return new Command_Action
                     {
-                        action = new Action(this.TargetReset),
+                        action = new Action(this.TargetResetCmd),
                         defaultLabel = "Spare",
                         defaultDesc = "Reset the target",
                         icon = ContentFinder<Texture2D>.Get("UI/Buttons/Delete", true)
@@ -844,38 +910,56 @@ namespace NewHatcher
 
                     if (mindcontrolEnabled)
                     {
-                        yield return new Command_Action
-                        {
-                            action = new Action(this.TryDisorientAndReset),
-                            defaultLabel = "Mind control",
-                            defaultDesc = "Take control maybe",
-                            icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
-                        };
-
+                        // Humanlike
                         if (!animalVictim())
+                        {
+                            yield return new Command_Action
+                            {
+                                action = new Action(this.TryDisorientAndReset),
+                                defaultLabel = "Fool me once",
+                                defaultDesc = "This is madness",
+                                icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
+                            };
+
+
+                            yield return new Command_Action
+                            {
+                                action = new Action(this.TryEnslaveAndReset),
+                                defaultLabel = "Mind control",
+                                defaultDesc = "Take control for a moment",
+                                icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
+                            };
+                        }
+                        //Animal
+                        else
+                        {
+                            yield return new Command_Action
+                            {
+                                action = new Action(this.TryManhunterAndReset),
+                                defaultLabel = "Go my minions",
+                                defaultDesc = "Make an animal angry",
+                                icon = ContentFinder<Texture2D>.Get("UI/Commands/Manhunter", true)
+                            };
+                        }
+                            
+                    }
+
+                    if ((Prefs.DevMode) && (!IsWorkDone()))
+                    {
                         yield return new Command_Action
                         {
-                            action = new Action(this.TryEnslaveAndReset),
-                            defaultLabel = "Alpha mind",
-                            defaultDesc = "Take control maybe",
-                            icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
+                            defaultLabel = "Haaax: insta ready",
+                            action = delegate
+                            {
+                                workProgress = workGoal;
+                                mindcontrolEnabled = true;
+                            }
                         };
                     }
                 }
             }
 
-            if ((Prefs.DevMode) && (!IsWorkDone()))
-            {
-                yield return new Command_Action
-                {
-                    defaultLabel = "Haaax: insta ready",
-                    action = delegate
-                    {
-                        workProgress = workGoal;
-                        mindcontrolEnabled = true;
-                    }
-                };
-            }
+
         }
 
         void BadWill()
@@ -889,7 +973,9 @@ namespace NewHatcher
             {
                 backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
                 backupFaction.SetHostileTo(masterMind.Faction, true);
-            }
+                Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
+
+            }  
         }
         
 
@@ -916,7 +1002,16 @@ namespace NewHatcher
             stringBuilder.AppendLine("|\t|");
             stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")" + " from " + masterMind.Faction.Name + ".");
             stringBuilder.AppendLine("|\t|");
-            stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
+
+            if (animalVictim())
+            {
+                stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
+            }
+            else
+            {
+                stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
+            }
+
             stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("+---[Vectors]");
             stringBuilder.AppendLine("|\t|");
@@ -979,7 +1074,7 @@ namespace NewHatcher
                     percWorkPerSec.ToString("0.00") + " %perSec)"
                 });
             }
-            return "No target set.";
+            return "No victim registered.";
             
         }
     }

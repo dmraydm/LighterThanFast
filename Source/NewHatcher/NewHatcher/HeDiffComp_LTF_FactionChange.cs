@@ -18,9 +18,11 @@ namespace NewHatcher
     {
         private int ticksLeft = 0;
 
-        public Faction ownFaction;
-        public Faction forcedFaction;
-        public Pawn Initiator;
+        public Faction ownFaction = null;
+        public Faction forcedFaction = null;
+        public Pawn Initiator = null;
+        public Building MindControlBench = null;
+        public Comp_LTF_MindControl BenchComp = null;
 
         public HediffCompProperties_LTF_FactionChange Props
         {
@@ -34,14 +36,47 @@ namespace NewHatcher
         {
             get
             {
-                return base.CompShouldRemove || this.ticksLeft <= -5 || Initiator.Dead;
+                return base.CompShouldRemove || Time2Release() || NullInitiator() || NullVictim() || NullBench();
             }
         }
+
+        private bool Time2Release()
+        {
+            bool test = (this.ticksLeft <= -5);
+            //Log.Warning("release" + test);
+            return (test);
+        }
+
+        private bool NullVictim()
+        {
+            bool test = (parent.pawn == null || parent.pawn.Map == null);
+            //Log.Warning("release" + test);
+            return (test);
+        }
+        private bool NullInitiator()
+        {
+            bool test = (Initiator == null || Initiator.Dead || Initiator.Faction != Faction.OfPlayer || Initiator.Map == null);
+           // Log.Warning("initiator" + test);
+            return (test);
+        }
+
+        private bool NullBench()
+        {
+            bool test = (MindControlBench == null || BenchComp == null || !BenchComp.GotThePower());
+            //Log.Warning("bench" + test);
+            return (test);
+        }
+        
 
         public override void CompPostMake()
         {
             base.CompPostMake();
-            this.ticksLeft = this.Props.defaultTicks.RandomInRange;
+            // no need maybe
+            //this.ticksLeft = this.Props.defaultTicks.RandomInRange;
+            if (MindControlBench != null)
+            {
+                CompInit();
+            }
         }
 
         public override string CompTipStringExtra
@@ -70,6 +105,7 @@ namespace NewHatcher
             Scribe_References.Look(ref forcedFaction, "LTF_forcedFaction");
 
             Scribe_References.Look(ref Initiator, "LTF_mindIniator");
+            Scribe_References.Look(ref MindControlBench, "LTF_MindControlBench");
         }
 
         public override void CompPostTick(ref float severityAdjustment)
@@ -95,7 +131,7 @@ namespace NewHatcher
             ticksLeft--;
             //Log.Warning(parent.Label + " tick " + ticksLeft);
 
-            if (ticksLeft <= 0)
+            if ((ticksLeft <= 0) || NullInitiator() || NullVictim() || NullBench())
             {
                 //Log.Warning(parent.Label + " releasing ");
                 Release();
@@ -205,9 +241,16 @@ namespace NewHatcher
             return true;
         }
 
+        private void CompInit()
+        {
+            BenchComp = MindControlBench.TryGetComp<Comp_LTF_MindControl>();
+            if (BenchComp == null)
+            {
+                Log.Warning("no bnch comp found");
+            }
+        }
 
-
-        public bool Init(Faction own, Pawn masterMind, int duration)
+        public bool Init(Faction own, Pawn masterMind, Building bench, int duration)
         {
             
             if (this.parent == null)
@@ -227,9 +270,9 @@ namespace NewHatcher
                 return false;
             }
 
-            //Log.Warning("asking " + parent.Label + own.Name + "->" + forced.Name + "(" + duration + ")");
-
+            //Faction
             Faction almostOwnFaction = null;
+            //useless hax ?
             if (parent.pawn.Faction == null)
             {
                 Log.Warning("null faction Init");
@@ -240,7 +283,10 @@ namespace NewHatcher
                 almostOwnFaction = own;
             }
 
-            //Log.Warning("faction found : " + almostOwnFaction.Name);
+            //Log.Warning("asking " + parent.Label + own.Name + "->" + forced.Name + "(" + duration + ")" + ("faction found : " + almostOwnFaction.Name);
+
+            MindControlBench = bench;
+            CompInit();
 
             ownFaction = own;
             Initiator = masterMind;
