@@ -208,6 +208,8 @@ namespace NewHatcher
             Scribe_References.Look(ref masterMind, "LTF_masterMind");
             Scribe_References.Look(ref mindTarget, "LTF_mindTarget");
 
+            Scribe_References.Look(ref backupFaction, "LTF_backupFaction");
+
             Scribe_Values.Look(ref tName, "LTF_tName");
             Scribe_Values.Look(ref tRace, "LTF_tRace");
             Scribe_Values.Look(ref mName, "LTF_mName");
@@ -316,7 +318,7 @@ namespace NewHatcher
 
         public void MindMineTick(Pawn masterMind)
         {
-            
+
             if (animalVictim())
             {
                 workProgress += animalVector;
@@ -442,7 +444,7 @@ namespace NewHatcher
             //if (masterMind.skills.GetSkill(SkillDefOf.Animals).Level * artificialBoost > (mindTarget.RaceProps.wildness / 5))
             if (masterMind.skills.GetSkill(SkillDefOf.Animals).Level * artificialBoost > (mindTarget.RaceProps.wildness / 5))
             {
-                ratio = masterMind.skills.GetSkill(SkillDefOf.Animals).Level / (mindTarget.RaceProps.wildness );
+                ratio = masterMind.skills.GetSkill(SkillDefOf.Animals).Level / (mindTarget.RaceProps.wildness);
             }
 
             animalVector = brainGatherFactor + masterMind.skills.GetSkill(SkillDefOf.Animals).Level / 3 + ratio;// * artificialBoost;
@@ -495,7 +497,7 @@ namespace NewHatcher
             mindcontrolEnabled = false;
         }
 
-        public bool animalVictim(){
+        public bool animalVictim() {
             return mindTarget.RaceProps.Animal;
         }
 
@@ -544,6 +546,14 @@ namespace NewHatcher
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return;
             }
+            if (!IsTargetSet()) {
+                Messages.Message(tName + " /target is Missing", this.parent, MessageTypeDefOf.TaskCompletion);
+                return;
+            }
+            if (!IsMasterMindSet())
+            {
+                Messages.Message(mName + " /mastermind is Missing", this.parent, MessageTypeDefOf.TaskCompletion);
+            }
 
             if (!ActorInRadius())
             {
@@ -558,7 +568,7 @@ namespace NewHatcher
 
             if (mindTarget.Faction == masterMind.Faction)
             {
-                Messages.Message( mName + " and " + tName + " are from the same faction. How wrong for so long ?", this.parent, MessageTypeDefOf.TaskCompletion);
+                Messages.Message(mName + " and " + tName + " are from the same faction. How wrong for so long ?", this.parent, MessageTypeDefOf.TaskCompletion);
                 return;
             }
 
@@ -610,10 +620,9 @@ namespace NewHatcher
                             return;
                         }
 
-                        if( hediff_changeFaction.Init(mindTarget.Faction, masterMind, 10000))
+                        if (hediff_changeFaction.Init(mindTarget.Faction, masterMind, 10000))
                         {
                             BadWill();
-                            TargetReset();
                             return;
                         }
                     }
@@ -621,7 +630,23 @@ namespace NewHatcher
             }
         }
 
-        private void TryMindcontrol()
+        private void TryDisorientAndReset()
+        {
+//            Log.Warning("Dis 0");
+            TryFactionChange();
+  //          Log.Warning("Dis 1");
+            TryMindControl();
+    //        Log.Warning("Dis 2");
+            TargetReset();
+        }
+
+        private void TryEnslaveAndReset()
+        {
+            TryFactionChange();
+            TargetReset();
+        }
+                                        
+        private void TryMindControl()
         {
             if ( (!GotThePower()) )
             {
@@ -713,8 +738,9 @@ namespace NewHatcher
                                 {
                                     Log.Warning("null state");
                                 }
-                                //Log.Warning(tName + "state : " + chosenState.defName);
+                                Log.Warning(tName + "state : " + chosenState.defName);
                                 mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
+
                                 BadWill();
 
                                 /*for (int i = 0; i < targetTraits.Count; i++){
@@ -739,7 +765,7 @@ namespace NewHatcher
                         }
                     }
                     
-                    TargetReset();
+                    
                     return;
                 }
                 else
@@ -755,8 +781,6 @@ namespace NewHatcher
         }
         public bool ActorInRadius()
         {
-            if (!AreActorsSet()) return false;
-
             return ( TryMindReach() );
         }
 
@@ -788,6 +812,7 @@ namespace NewHatcher
                 Messages.Message("Target is too far." , this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
             }
+
             return true;
 
         }
@@ -821,7 +846,7 @@ namespace NewHatcher
                     {
                         yield return new Command_Action
                         {
-                            action = new Action(this.TryMindcontrol),
+                            action = new Action(this.TryDisorientAndReset),
                             defaultLabel = "Mind control",
                             defaultDesc = "Take control maybe",
                             icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
@@ -830,7 +855,7 @@ namespace NewHatcher
                         if (!animalVictim())
                         yield return new Command_Action
                         {
-                            action = new Action(this.TryFactionChange),
+                            action = new Action(this.TryEnslaveAndReset),
                             defaultLabel = "Alpha mind",
                             defaultDesc = "Take control maybe",
                             icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
@@ -860,8 +885,11 @@ namespace NewHatcher
                 Log.Warning("back faction null");
                 return;
             }
-            backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-            backupFaction.SetHostileTo(masterMind.Faction, true);
+            if(masterMind.Faction != backupFaction)
+            {
+                backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                backupFaction.SetHostileTo(masterMind.Faction, true);
+            }
         }
         
 
@@ -886,9 +914,9 @@ namespace NewHatcher
             stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("+---[Actors]");
             stringBuilder.AppendLine("|\t|");
-            stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")");
+            stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")" + " from " + masterMind.Faction.Name + ".");
             stringBuilder.AppendLine("|\t|");
-            stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")");
+            stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
             stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("+---[Vectors]");
             stringBuilder.AppendLine("|\t|");

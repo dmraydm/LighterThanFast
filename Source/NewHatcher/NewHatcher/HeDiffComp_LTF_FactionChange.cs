@@ -133,6 +133,9 @@ namespace NewHatcher
                 return;
             }
 
+            //parent.pawn.mindState.mentalStateHandler.Reset();
+            
+
             parent.pawn.SetFaction(ownFaction, null);
             
         }
