@@ -661,8 +661,8 @@ namespace NewHatcher
             if( TryMindControl() )
             {
                 BadWillHumanlike();
-                TargetReset();
                 SoundDef.Named("LetterArriveBadUrgentSmall").PlayOneShotOnCamera(null);
+                TargetReset();
             }
             
         }
@@ -672,8 +672,8 @@ namespace NewHatcher
             if( TryFactionChange())
             {
                 BadWillHumanlike();
-                TargetReset();
                 SoundDef.Named("LetterArriveGood").PlayOneShotOnCamera(null);
+                TargetReset();
             }
         }
 
@@ -681,9 +681,10 @@ namespace NewHatcher
         {
             if (TryManhunter())
             {
-                TargetReset();
                 BadWillAnimal();
                 SoundDef.Named("LetterArriveBadUrgentBig").PlayOneShotOnCamera(null);
+                TargetReset();
+                
             }
         }
 
@@ -988,8 +989,8 @@ namespace NewHatcher
             if(mindTarget.Faction != null)
             {
                 mindTarget.Faction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-                backupFaction.SetHostileTo(masterMind.Faction, true);
-                Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
+                mindTarget.Faction.SetHostileTo(masterMind.Faction, true);
+                Messages.Message(mindTarget.Faction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
             }
         }
 
@@ -1036,7 +1037,15 @@ namespace NewHatcher
 
             if (animalVictim())
             {
-                stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
+                if(mindTarget.Faction == null)
+                {
+                    stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
+                }
+                else
+                {
+                    stringBuilder.AppendLine("|\t+-FactionAnimal\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
+                }
+                    
             }
             else
             {
