@@ -20,7 +20,7 @@
 	<stackLimit>75</stackLimit>
     <statBases>
 		<MarketValue>0.1</MarketValue>
-		<Mass>0.045</Mass>
+		<Mass>.8</Mass>
 		<MaxHitPoints>10</MaxHitPoints>
     </statBases>
 	<tickerType>Rare</tickerType>

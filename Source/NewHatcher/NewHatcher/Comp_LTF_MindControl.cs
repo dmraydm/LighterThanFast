@@ -224,7 +224,10 @@ namespace NewHatcher
 
             Scribe_Values.Look(ref this.mindcontrolEnabled, "LTF_mindEnabled");
         }
-
+        public Faction GetFactionBackup()
+        {
+            return (backupFaction);
+        }
         private float SetVector(int vectorId)
         {
             SkillDef firstSkill = null;
@@ -542,6 +545,12 @@ namespace NewHatcher
 
         private bool TryFactionChange()
         {
+            if (animalVictim())
+            {
+                Log.Warning("not allowed for animals");
+                return false;
+            }
+
             if ((!GotThePower()))
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
@@ -651,7 +660,7 @@ namespace NewHatcher
 
             if( TryMindControl() )
             {
-                BadWill();
+                BadWillHumanlike();
                 TargetReset();
                 SoundDef.Named("LetterArriveBadUrgentSmall").PlayOneShotOnCamera(null);
             }
@@ -662,7 +671,7 @@ namespace NewHatcher
         {
             if( TryFactionChange())
             {
-                BadWill();
+                BadWillHumanlike();
                 TargetReset();
                 SoundDef.Named("LetterArriveGood").PlayOneShotOnCamera(null);
             }
@@ -673,6 +682,7 @@ namespace NewHatcher
             if (TryManhunter())
             {
                 TargetReset();
+                BadWillAnimal();
                 SoundDef.Named("LetterArriveBadUrgentBig").PlayOneShotOnCamera(null);
             }
         }
@@ -680,6 +690,13 @@ namespace NewHatcher
         // For animals
         private bool TryManhunter()
         {
+
+            if (!animalVictim())
+            {
+                Log.Warning("not allowed for humans");
+                return false;
+            }
+
             if ((!GotThePower()))
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
@@ -719,6 +736,12 @@ namespace NewHatcher
         // Applies mentalstate
         private bool TryMindControl()
         {
+            if (animalVictim())
+            {
+                Log.Warning("not allowed for animals");
+                return false;
+            }
+
             if ( (!GotThePower()) )
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
@@ -778,11 +801,11 @@ namespace NewHatcher
                     }
                     else
                     {
-                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimBreak, null);
-                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimShame, null);
+                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimBreak, masterMind);
+                        mindTarget.needs.mood.thoughts.memories.TryGainMemory(victimShame, masterMind);
 
-                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorPride, null);
-                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorShame, null);
+                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorPride, mindTarget);
+                        masterMind.needs.mood.thoughts.memories.TryGainMemory(InitiatorShame, mindTarget);
 
                         //wakes up target if laying
                         mindTarget.ClearMind();
@@ -958,11 +981,19 @@ namespace NewHatcher
                     }
                 }
             }
-
-
         }
 
-        void BadWill()
+        void BadWillAnimal()
+        {
+            if(mindTarget.Faction != null)
+            {
+                mindTarget.Faction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                backupFaction.SetHostileTo(masterMind.Faction, true);
+                Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
+            }
+        }
+
+        void BadWillHumanlike()
         {
             if (backupFaction == null)
             {

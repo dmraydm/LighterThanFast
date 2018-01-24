@@ -146,7 +146,7 @@ namespace NewHatcher
                 return false;
 
             //Log.Warning("Trying to enslave " + this.parent.pawn.Label);
-            if (parent.pawn.Faction == forcedFaction)
+            if (parent.pawn.Faction != BenchComp.GetFactionBackup())
             {
                 Log.Warning("Tried to enslave²");
                 return false;
@@ -157,23 +157,21 @@ namespace NewHatcher
             return true;
             
         }
-        private void Release()
+        private bool Release()
         {
             if (!NullCheck("release"))
-                return;
+                return false;
 
             //  Log.Warning(this.parent.Label + " : " + ownFaction + " " + forcedFaction);
-            if (parent.pawn.Faction != ownFaction)
+            if (parent.pawn.Faction == BenchComp.GetFactionBackup())
             {
                 Log.Warning("Tried to release²");
-                return;
+                return false;
             }
 
             //parent.pawn.mindState.mentalStateHandler.Reset();
-            
-
-            parent.pawn.SetFaction(ownFaction, null);
-            
+            parent.pawn.SetFaction(BenchComp.GetFactionBackup(), null);
+            return true;
         }
 
         private void Panic()
