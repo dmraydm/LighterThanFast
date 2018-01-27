@@ -1,0 +1,76 @@
+<Defs>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>MantisBSBlue01</defName>
+    <title>Malfunction Defense System</title>
+    <titleShort>whitehat</titleShort>
+	<baseDescription>While wandering in the Slug Home Nebula, NAME found a Slug vessel broadcasting the distress signal and contacted them. "Ah, yesss, we are having problems with our oxygen generation unit. Perhaps your crew can assist in repairsss?". Once on board, it became clear that nothing was wrong with their O2 system. Almost expecting this, NAME calmly responded to the trap. Once a couple of the Slugs had been spread across the walls of their ship, the rest surrendered.</baseDescription>
+    <slot>Adulthood</slot>
+<!--    <bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>MantisBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Crafting</defName><amount>2</amount></li>
+	  <li><defName>Intellectual</defName><amount>1</amount></li>
+    </skillGains>
+    </AlienRace.BackstoryDef>
+<!-- -->
+	<AlienRace.BackstoryDef>
+    <defName>MantisBSBlue02</defName>
+    <title>met legendary KazaaakplethKilik</title>
+    <titleShort>Diplomat</titleShort>
+	<baseDescription>NAME crossed paths with a Mantis ship that looked to have had dozens of layers of armor-plating added over what must have been a hundred year career. Its captain was legendary thief KazaaakplethKilik. NAME's crew looked frightened. NAME stepped forward. HE and KazaaakplethKilik performed a weird kind of alien haka, while the crew was charging the battle systems. After destroying KazaaakplethKilik ship, HE quickly teleported and brought him back. HIS haste had paid off and HE registered KazaaakplethKilik into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>MantisBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Social</defName><amount>2</amount></li>
+	  <li><defName>Crafting</defName><amount>1</amount></li>
+    </skillGains>
+    </AlienRace.BackstoryDef>
+<!-- -->
+	<AlienRace.BackstoryDef>
+		<defName>MantisBSBlue03</defName>
+		<title>Confused</title>
+		<titleShort>confused</titleShort>
+		<baseDescription>While wandering in the Engi Homeworlds, a spaceship you received a hail from a nearby civilian Engi vessel. Their Captain appeared on screen: "Strange bug. Can you assist in debugging?" "Found malfunctioning Mantis. Believes it is human. Will receive input only from human. Danger Evaluation: Extremely High. Provide assistance." The crew sent his human crew member and HE was grateful to see 'another human', and introduced himself as NAME. HE explained HE was from a nearby human colony and would appreciate being returned there. The colony is a mining operation that specializes in FTL fuel. Robert's family, the head engineers, are excited to see him, and very grateful for his return. Apparently HE ran away to 'join the Federation' like his older brother, but was never accepted onto a ship. The crew offered HIM a position. HE graciously accepted, having always wanted to serve in the Federation.</baseDescription>
+		<slot>Adulthood</slot>
+		
+		<spawnCategories>
+		  <li>MantisBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li><defName>Intellectual</defName><amount>-2</amount></li>
+			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Melee</defName><amount>2</amount></li>
+			<li><defName>Shooting</defName><amount>2</amount></li>
+		</skillGains>
+		<forcedTraits>
+			<li><defName>Nerves</defName><degree>-1</degree></li>
+		</forcedTraits>
+    </AlienRace.BackstoryDef>
+<!-- -->
+    <AlienRace.BackstoryDef>
+    <defName>MantisBSBlue04</defName>
+    <title>Mantis distress call</title>
+    <titleShort>By the sword</titleShort>
+	<baseDescription>While visiting Mantis Homeworlds, a crew came across an Engi wreck with one life-sign aboard; it turned out to be the sole survivor of the Mantis boarding party that wiped out the ship's crew. HE's in no state to fight and HE's brought aboard. The crew sent its mantis member to negotiate. After a short time alone with the commando, the crew was told HE wished to join the crew. Although the crew was surprised at NAME willingness to swap allegiances, it trusted its crewmember judgement about him.
+.</baseDescription>
+    <slot>Adulthood</slot>
+    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <spawnCategories>
+      <li>MantisBackstory</li>
+    </spawnCategories>
+	<skillGains>
+      <li><defName>Intellectual</defName><amount>3</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>Prosthophobe</defName><chance>100</chance></li>
+		<li><defName>Masochist</defName><chance>50</chance></li>
+	</forcedTraits>
+    </AlienRace.BackstoryDef>
+	
+</Defs>

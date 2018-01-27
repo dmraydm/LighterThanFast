@@ -19,9 +19,7 @@
     <hairGender>Any</hairGender>
     <texPath>Hair/Mantis/Any/bolt</texPath>
 		<hairTags>
-			<li>LTF_Mantis</li>
 			<li>MantisHair</li>
-			<li>Mantis</li>
 		</hairTags>
  </HairDef> 
   <!-- male -->

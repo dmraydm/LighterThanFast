@@ -19,7 +19,7 @@ namespace NewHatcher
         private int ticksLeft = 0;
 
         public Faction ownFaction = null;
-        public Faction forcedFaction = null;
+
         public Pawn Initiator = null;
         public Building MindControlBench = null;
         public Comp_LTF_MindControl BenchComp = null;
@@ -42,8 +42,8 @@ namespace NewHatcher
 
         private bool Time2Release()
         {
-            bool test = (this.ticksLeft <= -5);
-            //Log.Warning("release" + test);
+            bool test = (this.ticksLeft <= 0);
+            //Log.Warning("time 2 release" + test);
             return (test);
         }
 
@@ -102,10 +102,10 @@ namespace NewHatcher
             Scribe_Values.Look(ref ticksLeft, "LTF_SlaveTicks");
 
             Scribe_References.Look(ref ownFaction, "LTF_ownFaction");
-            Scribe_References.Look(ref forcedFaction, "LTF_forcedFaction");
 
             Scribe_References.Look(ref Initiator, "LTF_mindIniator");
             Scribe_References.Look(ref MindControlBench, "LTF_MindControlBench");
+            
         }
 
         public override void CompPostTick(ref float severityAdjustment)
@@ -128,12 +128,40 @@ namespace NewHatcher
                 return;
             }
 
+            if (BenchComp == null)
+            {
+                //Log.Warning("Trying to load comp");
+                CompInit();
+            }
+
             ticksLeft--;
             //Log.Warning(parent.Label + " tick " + ticksLeft);
 
-            if ((ticksLeft <= 0) || NullInitiator() || NullVictim() || NullBench())
+            bool gottaPanic = false;
+
+            if (Time2Release())
             {
-                //Log.Warning(parent.Label + " releasing ");
+                //Log.Warning("Natural end");
+                gottaPanic = true;
+            }
+
+            if (NullInitiator()) {
+                //Log.Warning("no master");
+                gottaPanic = true;
+            }
+            if (NullVictim()){
+                Log.Warning("no victim how the f*");
+                gottaPanic = true;
+            }
+
+            if (NullBench())
+            {
+                Log.Warning("no bench");
+                gottaPanic = true;
+            }
+
+            if (gottaPanic)
+            {
                 Release();
                 Panic();
             }
@@ -145,14 +173,26 @@ namespace NewHatcher
             if (!NullCheck("enslave"))
                 return false;
 
-            //Log.Warning("Trying to enslave " + this.parent.pawn.Label);
-            if (parent.pawn.Faction != BenchComp.GetFactionBackup())
+            if (parent.pawn.Faction == null)
+            {
+                Log.Warning("Wtf null faction");
+            }
+
+            //if (parent.pawn.Faction != BenchComp.GetFactionBackup())
+            if (parent.pawn.Faction == Faction.OfPlayer)
             {
                 Log.Warning("Tried to enslave²");
                 return false;
             }
+            /*
+            else
+            {
+                Log.Warning("Enslave " + this.parent.pawn.Label + ":" + parent.pawn.Faction.Name + "=>" + Faction.OfPlayer.Name);
+            }
+            */
+            ownFaction = parent.pawn.Faction;
 
-            parent.pawn.SetFaction(forcedFaction, Initiator);
+            parent.pawn.SetFaction(Faction.OfPlayer, Initiator);
 
             return true;
             
@@ -162,12 +202,23 @@ namespace NewHatcher
             if (!NullCheck("release"))
                 return false;
 
-            //  Log.Warning(this.parent.Label + " : " + ownFaction + " " + forcedFaction);
-            if (parent.pawn.Faction == BenchComp.GetFactionBackup())
+            if (parent.pawn.Faction == null)
+            {
+                Log.Warning("Wtf null faction");
+            }
+
+
+            if (parent.pawn.Faction != Faction.OfPlayer)
             {
                 Log.Warning("Tried to release²");
                 return false;
             }
+            /*
+            else
+            {
+                Log.Warning(this.parent.Label + " : " + parent.pawn.Faction.Name + " => " + BenchComp.GetFactionBackup());
+            }
+            */
 
             //parent.pawn.mindState.mentalStateHandler.Reset();
             parent.pawn.SetFaction(BenchComp.GetFactionBackup(), null);
@@ -222,11 +273,6 @@ namespace NewHatcher
             if (ownFaction == null)
             {
                 Log.Warning(functionCall + " null own ");
-                return false;
-            }
-            if (forcedFaction == null)
-            {
-                Log.Warning(functionCall + " null forced ");
                 return false;
             }
 
@@ -288,8 +334,6 @@ namespace NewHatcher
 
             ownFaction = own;
             Initiator = masterMind;
-
-            forcedFaction = Initiator.Faction;
 
             ticksLeft = duration;
 

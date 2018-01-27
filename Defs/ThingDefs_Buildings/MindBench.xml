@@ -2,16 +2,16 @@
 <Defs>
 	<ThingDef ParentName="BenchBase">
 		<defName>LTF_MindcontrolBench</defName>
-		<label>mind control bench</label>
+		<label>mind bench</label>
 		
 		<thingClass>Building_WorkTable</thingClass>
-		
+		<!-- <thingClass>NewHatcher.LTF_MindcontrolBench</thingClass> -->
 		<description>A work station to rule them all.</description>
 		<graphicData>
 			<texPath>Things/Building/MindcontrolBench/MindcontrolBench</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(3.5,3)</drawSize>
+			<drawSize>(3.5,1.5)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>

@@ -9,9 +9,7 @@ namespace NewHatcher
     public class Comp_LTF_Overlay : ThingComp
     {
         private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_Flicker>("Things/Special/Loop", ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
-        //private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_Flicker>( this.Props.path, ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
-        //private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_Flicker>(this.Props.path, ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
-        
+                
         public CompProperties_LTF_Overlay Props
         {
             get

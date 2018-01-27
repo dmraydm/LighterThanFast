@@ -6,7 +6,6 @@
 		<hairGender>Any</hairGender>
 		<texPath>Hair/Slug/Antenna</texPath>
 		<hairTags>
-			<li>LTF_Slug</li>
 			<li>SlugHair</li>
 		</hairTags>
 	</HairDef> 

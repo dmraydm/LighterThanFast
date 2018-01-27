@@ -7,7 +7,7 @@
     <hairGender>Any</hairGender>
     <texPath>Hair/Engie/Mad</texPath>
 		<hairTags>
-			<li>Engie</li>
+			<li>EngieHair</li>
 		</hairTags>
  </HairDef>
 
@@ -17,7 +17,7 @@
     <hairGender>Any</hairGender>
     <texPath>Hair/Engie/Pel</texPath>
 		<hairTags>
-			<li>Engie</li>
+			<li>EngieHair</li>
 		</hairTags>
  </HairDef>
  
@@ -27,7 +27,7 @@
     <hairGender>Any</hairGender>
     <texPath>Hair/Engie/Tel</texPath>
 		<hairTags>
-			<li>Engie</li>
+			<li>EngieHair</li>
 		</hairTags>
  </HairDef>
  
@@ -37,7 +37,7 @@
     <hairGender>Any</hairGender>
     <texPath>Hair/Engie/Tux</texPath>
 		<hairTags>
-			<li>Engie</li>
+			<li>EngieHair</li>
 		</hairTags>
  </HairDef>
 </Defs>

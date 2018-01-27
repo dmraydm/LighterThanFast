@@ -12,6 +12,9 @@ using Verse.Sound;
 
 namespace NewHatcher
 {
+    //TODO 
+    // problem if 2 pawns minded : backup faciton relations will be decreased even if both pawns are not from the same faciton
+
     // target effect ; register pawn in benchComp
     public class CompTargetEffect_LTF_MindcontrolRegister : CompTargetEffect
     {
@@ -30,6 +33,7 @@ namespace NewHatcher
                 Thing bench = user.CurJob.targetA.Thing;
                 Comp_LTF_MindControl comp_mindControl = bench.TryGetComp<Comp_LTF_MindControl>();
 
+                comp_mindControl.ResetProgress();
                 comp_mindControl.SetTarget(mindable);
                 comp_mindControl.ImTheMastermind(user);
                 comp_mindControl.InitActorsValues();
@@ -42,7 +46,7 @@ namespace NewHatcher
                 {
                     comp_mindControl.InitWork();
                 }
-                comp_mindControl.ResetProgress();
+                
             }
             else
             {
@@ -64,6 +68,7 @@ namespace NewHatcher
     }
 
     // Main
+    [StaticConstructorOnStartup]
     public class Comp_LTF_MindControl : ThingComp
     {
         private CompPowerTrader powerComp;
@@ -72,6 +77,7 @@ namespace NewHatcher
 
         private Pawn masterMind = null;
         private Pawn mindTarget = null;
+        private Pawn lastTarget = null;
         private Faction backupFaction = null;
 
         string tName = string.Empty;
@@ -104,6 +110,126 @@ namespace NewHatcher
         private float workProgress = 0;
 
         private bool mindcontrolEnabled = false;
+        bool mindReachable = false;
+        // GFX
+        //private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_
+            //Graphic_Flicker>("Things/Special/Loop", ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
+
+        private static readonly Material femaleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/female", ShaderDatabase.Transparent);
+        private static readonly Material maleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/male", ShaderDatabase.Transparent);
+
+        private static readonly Material animalGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/animal", ShaderDatabase.Transparent);
+        private static readonly Material humanGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/human", ShaderDatabase.Transparent);
+        private static readonly Material alienGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/alien", ShaderDatabase.Transparent);
+
+        private static readonly Material empathyGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/empathy", ShaderDatabase.Transparent);
+        private static readonly Material manipulationGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/manipulation", ShaderDatabase.Transparent);
+        private static readonly Material ascensionGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/ascension", ShaderDatabase.Transparent);
+
+        private static readonly Material controlGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/control", ShaderDatabase.Transparent);
+        private static readonly Material foolGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/fool", ShaderDatabase.Transparent);
+        private static readonly Material selfharmGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/selfharm", ShaderDatabase.Transparent);
+
+        private static readonly Material lockGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/target/lock", ShaderDatabase.Transparent);
+        private static readonly Material notInRangeGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/target/notInRange", ShaderDatabase.Transparent);
+
+        private static readonly Material relationGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/relation", ShaderDatabase.Transparent);
+
+        private static readonly Material readyGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/ready", ShaderDatabase.Transparent);
+
+        public override void PostDraw()
+        {
+            base.PostDraw();
+ 
+            if( (!powerComp.PowerOn) || (!AreActorsSet()) )
+            {
+                //Log.Warning("nopeverlay");
+                return;
+            }
+
+            
+            Vector3 dotS = new Vector3(.11f, 1f, .11f);
+            Matrix4x4 matrix = default(Matrix4x4);
+
+            Vector3 benchPos = this.parent.DrawPos;
+            benchPos.y += 4;
+
+            if (mindTarget.gender == Gender.Female)            {
+                DrawDot(benchPos, dotS, matrix, femaleGfx, -1.03f, .22f);
+            }else{
+                DrawDot(benchPos, dotS, matrix, maleGfx, -.83f, .135f);
+            }
+
+            
+            if (animalVictim())            {
+                DrawDot(benchPos, dotS, matrix, animalGfx, -0.63f, .22f);
+            }else if (humanVictim())            {
+                DrawDot(benchPos, dotS, matrix, humanGfx, -0.63f, .04f);
+            }else{
+                DrawDot(benchPos, dotS, matrix, alienGfx, -.43f, .135f);
+            }
+
+            switch (bestVector)
+            {
+                case (int)MindVector.Empat:
+                    DrawDot(benchPos, dotS, matrix, empathyGfx, -1.03f, .03f);
+                    break;
+                case (int)MindVector.Manip:
+                    DrawDot(benchPos, dotS, matrix, manipulationGfx, -1.03f, -.14f);
+                    break;
+                case (int)MindVector.Ascen:
+                    DrawDot(benchPos, dotS, matrix, ascensionGfx, -.83f, -.055f);
+                    break;
+                default:
+                    Log.Warning("Wtf pstdraw vector");
+                    break;
+            }
+
+            if ( ( animalVictim() && !(backupFaction == null) ) ||
+                ( !animalVictim() && backupFaction != Faction.OfPlayer))
+                DrawDot(benchPos, dotS, matrix, relationGfx, -.43f, -.05f);
+
+            //DrawDot(benchPos, dotS, matrix, foolGfx, -.83f, -.235f);
+            //DrawDot(benchPos, dotS, matrix, controlGfx, -.63f, -.15f);
+
+            if (!mindReachable)
+                DrawDot(benchPos, dotS, matrix, notInRangeGfx, -.43f, -.235f);
+
+            //DrawDot(benchPos, dotS, matrix, selfharmGfx, -1.03f, -.32f);
+
+            //DrawDot(benchPos, dotS, matrix, lockGfx, -.63f, -.32f);
+
+            if (mindcontrolEnabled)
+                DrawPulse((Thing)parent, readyGfx, benchPos);
+
+        }
+
+        private void DrawDot(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotGfx, float x, float z)
+        {
+            Vector3 dotPos = benchPos;
+            dotPos.x += x;
+            dotPos.z += z;
+            matrix.SetTRS(dotPos, Quaternion.AngleAxis(0f, Vector3.up), dotS);
+            Graphics.DrawMesh(MeshPool.plane14, matrix, dotGfx, 0);
+        }
+
+
+        private void DrawPulse(Thing thing, Material mat, Vector3 drawPos)
+        {
+            float num = (Time.realtimeSinceStartup + 397f * (float)(thing.thingIDNumber % 571)) * 4f;
+            float num2 = ((float)Math.Sin((double)num) + 1f) * 0.5f;
+            num2 = 0.3f + num2 * 0.7f;
+            Material material = FadedMaterialPool.FadedVersionOf(mat, num2);
+
+            drawPos.x += .9f;
+            drawPos.z += -.32f;
+
+            Vector3 readyS = new Vector3(.25f, 1f, .25f);
+            Matrix4x4 matrix = default(Matrix4x4);
+            matrix.SetTRS(drawPos, Quaternion.AngleAxis(0f, Vector3.up), readyS);
+
+            Graphics.DrawMesh(MeshPool.plane14, matrix, material, 0);
+        }
 
         // progress in work
         public float ProgressToRegister
@@ -223,6 +349,7 @@ namespace NewHatcher
             Scribe_Values.Look(ref worstVectorValue, "LTF_worstVectorValue");
 
             Scribe_Values.Look(ref this.mindcontrolEnabled, "LTF_mindEnabled");
+            Scribe_Values.Look(ref this.mindReachable, "LTF_mindReachable");
         }
         public Faction GetFactionBackup()
         {
@@ -249,7 +376,7 @@ namespace NewHatcher
                     secondSkill = SkillDefOf.Medicine;
                     break;
                 default:
-                    Log.Warning("Wtf vector");
+                    Log.Warning("Wtf set vector");
                     break;
             }
 
@@ -504,6 +631,11 @@ namespace NewHatcher
             return mindTarget.RaceProps.Animal;
         }
 
+        public bool humanVictim()
+        {
+            return (mindTarget.kindDef.race.defName == "Human");
+        }
+
         public bool IsWorkDone()
         {
             return (mindcontrolEnabled);
@@ -662,6 +794,7 @@ namespace NewHatcher
             {
                 BadWillHumanlike();
                 SoundDef.Named("LetterArriveBadUrgentSmall").PlayOneShotOnCamera(null);
+                //lastTarget = mindTarget;
                 TargetReset();
             }
             
@@ -673,6 +806,7 @@ namespace NewHatcher
             {
                 BadWillHumanlike();
                 SoundDef.Named("LetterArriveGood").PlayOneShotOnCamera(null);
+                //lastTarget = mindTarget;
                 TargetReset();
             }
         }
@@ -683,6 +817,7 @@ namespace NewHatcher
             {
                 BadWillAnimal();
                 SoundDef.Named("LetterArriveBadUrgentBig").PlayOneShotOnCamera(null);
+                lastTarget = mindTarget;
                 TargetReset();
                 
             }
@@ -786,7 +921,7 @@ namespace NewHatcher
                             */
                             break;
                         default:
-                            Log.Warning("Wtf vector");
+                            Log.Warning("Wtf mind vector");
                             break;
                     }
 
@@ -876,6 +1011,7 @@ namespace NewHatcher
 
         public bool TryMindReach()
         {
+            mindReachable = false;
             // bench pos & map
             if ((this.benchRadius <= 1) || (this.parent.Position == null) || (this.parent.Map == null))
             {
@@ -884,7 +1020,8 @@ namespace NewHatcher
             }
             if ((mindTarget == null) || (mindTarget.Map == null) || (mindTarget.Position == null))
             {
-                Log.Warning("null mindTarget");
+                //Log.Warning("null mindTarget");
+                ResetProgress();
                 return false;
             }
 
@@ -903,6 +1040,7 @@ namespace NewHatcher
                 return false;
             }
 
+            mindReachable = true;
             return true;
 
         }
@@ -1117,5 +1255,16 @@ namespace NewHatcher
             return "No victim registered.";
             
         }
+
+        public override void PostDrawExtraSelectionOverlays()
+        {
+            if ( mindTarget != null && mindTarget.Map != null)
+            {
+                GenDraw.DrawLineBetween(this.parent.TrueCenter(), mindTarget.TrueCenter());
+            }
+                
+        }
+
+       
     }
 }
