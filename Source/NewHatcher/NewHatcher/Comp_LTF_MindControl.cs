@@ -113,7 +113,10 @@ namespace NewHatcher
         bool mindReachable = false;
         // GFX
         //private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_
-            //Graphic_Flicker>("Things/Special/Loop", ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
+        //Graphic_Flicker>("Things/Special/Loop", ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
+
+        const int workBarNum = 27;
+        const int powerBarNum = 10;
 
         private static readonly Material femaleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/female", ShaderDatabase.Transparent);
         private static readonly Material maleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/male", ShaderDatabase.Transparent);
@@ -135,37 +138,77 @@ namespace NewHatcher
 
         private static readonly Material relationGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/relation", ShaderDatabase.Transparent);
 
+        private static readonly Material powerGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/powerOn", ShaderDatabase.Transparent);
+        private static readonly Material clockworkGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/work", ShaderDatabase.Transparent);
         private static readonly Material readyGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/ready", ShaderDatabase.Transparent);
+
+        //Bars
+        private static readonly Material workBarSGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarS", ShaderDatabase.Transparent);
+        private static readonly Material workBarMGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarM", ShaderDatabase.Transparent);
+        private static readonly Material workBarLGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarL", ShaderDatabase.Transparent);
+
+        private static readonly Material powerBarGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/powerBar", ShaderDatabase.Transparent);
 
         public override void PostDraw()
         {
             base.PostDraw();
  
-            if( (!powerComp.PowerOn) || (!AreActorsSet()) )
+            if(!GotThePower())
             {
                 //Log.Warning("nopeverlay");
                 return;
             }
 
+            Vector3 benchPos = this.parent.DrawPos;
+            if (benchPos == null)
+            {
+                Log.Warning("null pos draw");
+                return;
+            }
+            // higher than ground to be visible
+            benchPos.y += 4;
+
+
+            float progressSize = (ProgressToRegister > 1f) ? (1f) : (ProgressToRegister*1.5f);
+
+            // Power On indicator
+            if (!mindcontrolEnabled)
+            {
+                Vector3 powerOnS = new Vector3(2.5f, 1f, 1.25f);
+                Matrix4x4 pwrMatrix = default(Matrix4x4);
+
+                Material material = FadedMaterialPool.FadedVersionOf(powerGfx, progressSize);
+                DrawDot(benchPos, powerOnS, pwrMatrix, material, 0f, 0f);
+            }
             
+
             Vector3 dotS = new Vector3(.11f, 1f, .11f);
             Matrix4x4 matrix = default(Matrix4x4);
 
-            Vector3 benchPos = this.parent.DrawPos;
-            benchPos.y += 4;
+            if (!AreActorsSet()) {
+                //Log.Warning("no actor need");
+                return;
+            }
 
-            if (mindTarget.gender == Gender.Female)            {
+            if (mindTarget.gender == Gender.Female)
+            {
                 DrawDot(benchPos, dotS, matrix, femaleGfx, -1.03f, .22f);
-            }else{
+            }
+            else
+            {
                 DrawDot(benchPos, dotS, matrix, maleGfx, -.83f, .135f);
             }
 
-            
-            if (animalVictim())            {
+            if (animalVictim())
+            {
                 DrawDot(benchPos, dotS, matrix, animalGfx, -0.63f, .22f);
-            }else if (humanVictim())            {
+            }
+            else if (humanVictim())
+            {
                 DrawDot(benchPos, dotS, matrix, humanGfx, -0.63f, .04f);
-            }else{
+            }
+            else
+            {
                 DrawDot(benchPos, dotS, matrix, alienGfx, -.43f, .135f);
             }
 
@@ -185,8 +228,8 @@ namespace NewHatcher
                     break;
             }
 
-            if ( ( animalVictim() && !(backupFaction == null) ) ||
-                ( !animalVictim() && backupFaction != Faction.OfPlayer))
+            if ((animalVictim() && !(backupFaction == null)) ||
+                (!animalVictim() && backupFaction != Faction.OfPlayer))
                 DrawDot(benchPos, dotS, matrix, relationGfx, -.43f, -.05f);
 
             //DrawDot(benchPos, dotS, matrix, foolGfx, -.83f, -.235f);
@@ -202,6 +245,100 @@ namespace NewHatcher
             if (mindcontrolEnabled)
                 DrawPulse((Thing)parent, readyGfx, benchPos);
 
+            if (!IsWorkDone())
+            {
+                //work needed indicator
+                DrawBar(benchPos, dotS, matrix, clockworkGfx, -1.26f, .56f);
+
+                // power bars
+                if (IsVectorSet(bestVector))
+                {
+
+                    // bestVectorValue (0-1) / neededPowerBarN 1-10
+                    int neededPowerBarN = Mathf.RoundToInt(bestVectorValue * powerBarNum);
+
+                    if (neededPowerBarN < 1)neededPowerBarN = 1;
+                    if (neededPowerBarN > 10)neededPowerBarN = 10;
+
+                    
+                    for (int i = 1; i < neededPowerBarN+1; i++)
+                    {
+                        Vector3 powerBarS = new Vector3(.345f, 1f, .26f);
+                        Matrix4x4 powerBarMatrix = default(Matrix4x4);
+                        float ord = 0f;
+                        if (i < 6)
+                        {
+                            ord = (-.2f + (i * .0585f)); //-.21
+                        }
+                        else
+                        {
+                            ord = (-.13f + (i * .0585f));
+                        }
+                        Material fMat = null;
+                        //Log.Warning("pow drawin" + i);
+                        if (Rand.Chance(0.1f))
+                        {
+                            fMat = powerBarGfx;
+                        }
+                        else
+                        {
+                            fMat = FadedMaterialPool.FadedVersionOf(powerBarGfx, .65f);
+                        }
+                        DrawBar(benchPos, powerBarS, powerBarMatrix, fMat, -1.315f, ord);
+                    }
+                }
+
+                // work progress bars
+                int neededWorkBarN = Mathf.RoundToInt(ProgressToRegister * workBarNum);
+                if (neededWorkBarN > 1)
+                {
+                    if (neededWorkBarN > workBarNum) neededWorkBarN=workBarNum;
+                    
+                    for (int i = 1; i < neededWorkBarN+1; i++)
+                    {
+                        //Log.Warning("trying to work bar");
+                        Vector3 wBarS = new Vector3(.35f, 1f, .275f); //(.21f, 1f, .13f);
+                        Matrix4x4 wBarMatrix = default(Matrix4x4);
+                        float zOffset = 0f;
+
+                        Material wBarMat = null;
+                        if (i < 8)
+                        {
+                            wBarMat = workBarSGfx;
+                        }
+                        else if (i < 21)
+                        {
+                            wBarMat = workBarMGfx;
+                            zOffset += .013f;
+                        }
+                        else
+                        {
+                            wBarMat = workBarLGfx;
+                            zOffset += .02f;
+                        }
+
+                        Material fMat = null;
+
+                        if (Rand.Chance(0.85f))
+                        {
+                             fMat = FadedMaterialPool.FadedVersionOf(wBarMat, .65f);
+                        }
+                        else
+                        {
+                            fMat = wBarMat;
+                        }
+
+                        float myX = -1.145f + (i * .0825f); // -1.13
+                        float myY = .562f + zOffset;
+
+                        //Log.Warning("wBar" + neededWorkBarN + " x;y: "+ myX+ ";"+ myY );
+                        DrawBar(benchPos, wBarS, wBarMatrix, fMat, myX, myY);
+                    }
+                }
+            }
+            
+
+
         }
 
         private void DrawDot(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotGfx, float x, float z)
@@ -210,9 +347,30 @@ namespace NewHatcher
             dotPos.x += x;
             dotPos.z += z;
             matrix.SetTRS(dotPos, Quaternion.AngleAxis(0f, Vector3.up), dotS);
+            if(MeshPool.plane14 == null)
+            {
+                Log.Warning("14 null");
+                return;
+            }
+
             Graphics.DrawMesh(MeshPool.plane14, matrix, dotGfx, 0);
         }
 
+        private void DrawBar(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotGfx, float x, float z)
+        {
+            Vector3 dotPos = benchPos;
+            dotPos.x += x;
+            dotPos.z += z;
+            matrix.SetTRS(dotPos, Quaternion.AngleAxis(0f, Vector3.up), dotS);
+            if (MeshPool.plane10 == null)
+            {
+                Log.Warning("10 null");
+                return;
+            }
+            //Log.Warning("ok mesh ?");
+            Graphics.DrawMesh(MeshPool.plane10, matrix, dotGfx, 0);
+            //Log.Warning("ko mesh ?");
+        }
 
         private void DrawPulse(Thing thing, Material mat, Vector3 drawPos)
         {
@@ -440,7 +598,7 @@ namespace NewHatcher
             aleas = Rand.Range(worstVectorValue * -.5f, worstVectorValue * 1.5f);
         }
 
-        //vector can be empathy/ascendency
+        //vector can be empathy/manipulation/ascendency
         private bool IsVectorSet(float vector)
         {
             return (vector != NaValue);
@@ -1160,13 +1318,12 @@ namespace NewHatcher
 
             if ( ! AreActorsSet() )
             {
-                stringBuilder.AppendLine("No story to tell.");
+                stringBuilder.AppendLine("Nothing to say.");
+                stringBuilder.AppendLine("First, set a target by right clicking the bench with a colonist.");
                 return;
             }
 
             // Mastermind 
-
-           // stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("|");
             stringBuilder.AppendLine("+---[Actors]");
             stringBuilder.AppendLine("|\t|");
@@ -1175,10 +1332,12 @@ namespace NewHatcher
 
             if (animalVictim())
             {
+                   // wild animal
                 if(mindTarget.Faction == null)
                 {
                     stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
                 }
+                    // faction animal
                 else
                 {
                     stringBuilder.AppendLine("|\t+-FactionAnimal\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
@@ -1187,6 +1346,11 @@ namespace NewHatcher
             }
             else
             {
+                if (mindTarget.Faction == null)
+                {
+                    Log.Warning("mindTarget.Faction == null");
+                    return;
+                }
                 stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
             }
 
@@ -1198,6 +1362,8 @@ namespace NewHatcher
             }
             else
             {
+                if (!IsVectorSet(bestVector)) { Log.Warning(" no master leverage"); return; }
+                if (!IsVectorSet(worstVector)) { Log.Warning(" no victim leverage"); return; }
                 stringBuilder.AppendLine("|\t+-Leverage  : " + vectorName[bestVector] + "(" + bestVectorValue + ")");
                 stringBuilder.AppendLine("|\t|");
                 stringBuilder.AppendLine("|\t+-Weak\t: " + vectorName[worstVector] + "(" + worstVectorValue + ")");
@@ -1262,9 +1428,6 @@ namespace NewHatcher
             {
                 GenDraw.DrawLineBetween(this.parent.TrueCenter(), mindTarget.TrueCenter());
             }
-                
         }
-
-       
     }
 }
