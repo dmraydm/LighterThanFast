@@ -17,6 +17,7 @@
 		</forcedTraits>
     </AlienRace.BackstoryDef>
 	<!-- -->
+	<!--
 	<AlienRace.BackstoryDef>
 		<defName>MantisChildBS02</defName>
 		<title>Repaired</title>
@@ -38,14 +39,8 @@
 		<forcedTraits>
 			<li><defName>Wimp</defName></li>
 		</forcedTraits>
-
- <!-- the part is badly initiated, i get : Part is null. It should be set before PostAdd for Hediff_SteelClaws. It refers to Hediff_AddedPart.cs I am pretty sure it's not the mod fault, but i thought maybe you could help me. I understand that it's the implant that is lacking if (base.Part == null). 		 -->
-		<!-- <forcedHediffs> -->
-			<!-- <li>Hediff_LTF_LeftSteelClaws</li> -->
-			<!-- <li>Hediff_LTF_RightSteelClaws</li> -->
-		<!-- </forcedHediffs> -->
-		
 	</AlienRace.BackstoryDef>
+	-->
 	<!-- -->
 	<AlienRace.BackstoryDef>
 		<defName>MantisChildBS03</defName>
@@ -83,11 +78,11 @@
 			<li><defName>Construction</defName><amount>-1</amount></li>
 			<li><defName>Crafting</defName><amount>-1</amount></li>
 		</skillGains>
-		
-		<!-- <forcedHediffs> -->
-			<!-- <li>Hediff_LTF_LeftSteelClaws</li> -->
-			<!-- <li>Hediff_LTF_RightSteelClaws</li> -->
-		<!-- </forcedHediffs> -->
+		<!-- the part is badly initiated, i get : Part is null. It should be set before PostAdd for Hediff_SteelClaws. It refers to Hediff_AddedPart.cs I am pretty sure it's not the mod fault, but i thought maybe you could help me. I understand that it's the implant that is lacking if (base.Part == null). 		 -->
+		<forcedHediffs>
+			<li>Hediff_LTF_LeftSteelClaws</li>
+			<li>Hediff_LTF_RightSteelClaws</li>
+		</forcedHediffs>
 		
 	</AlienRace.BackstoryDef>
 <!-- -->

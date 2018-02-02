@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<ThingDef Name="BaseMantisPawn" Abstract="True">
-    <thingClass>Pawn</thingClass>
-    <category>Pawn</category>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Pawn</altitudeLayer>
-    <useHitPoints>false</useHitPoints>
-    <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
-    <inspectorTabs>
-        <li>ITab_Pawn_Health</li>
-        <li>ITab_Pawn_Needs</li>
-        <li>ITab_Pawn_Character</li>
-        <li>ITab_Pawn_Training</li>
-        <li>ITab_Pawn_Gear</li>
-        <li>ITab_Pawn_Guest</li>
-        <li>ITab_Pawn_Prisoner</li>
-        <li>ITab_Pawn_Social</li>
-        <li>ITab_Pawn_Combat</li>
-    </inspectorTabs>
-    <comps>
-        <li>
-            <compClass>CompAttachBase</compClass>
-        </li>
-    </comps>
-    <drawGUIOverlay>true</drawGUIOverlay>
-</ThingDef>
 
-<AlienRace.ThingDef_AlienRace ParentName="BaseMantisPawn">
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
     <defName>Alien_Mantis</defName>
     <label>Mantis</label>
     
@@ -193,7 +166,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<path>Mantis/Claws/Left/Left</path>
 					<bodyPart>BodyPart_LTF_LeftClaws</bodyPart>
 					<inFrontOfBody>true</inFrontOfBody>
-					<angle>5</angle>
+					<angle>10</angle>
 					<useSkinColor>true</useSkinColor>
 					<offsets>
 						<!-- seen right ~ -0.4325 --> 
@@ -227,9 +200,11 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							</bodyTypes>
 						</side>
 					</offsets>
+					<!--
 					<backstoryGraphics>
 						<MantisChildBS02>Mantis/SyntClaws/Left/Left</MantisChildBS02>
 					</backstoryGraphics>
+					-->
 					<hediffGraphics>
 						<Hediff_LTF_LeftSteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftSteelClaws>
 					</hediffGraphics>
@@ -261,11 +236,21 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(	.08,	.52)</Hulk>
 							</bodyTypes>
 						</back>
-
+						<side>
+							<bodyTypes>
+								<!--<Male>(-0.65,.1)</Male>-->
+								<Male>(-.65,	.15)</Male>
+								<Female>(-.65,	.15)</Female>
+								<Thin>(-.65,	.15)</Thin>
+								<Hulk>(-.65,	.15)</Hulk>
+							</bodyTypes>
+						</side>
 					</offsets>
+					<!--
 					<backstoryGraphics>
 						<MantisChildBS02>Mantis/SyntClaws/Right/Right</MantisChildBS02>
 					</backstoryGraphics>
+					-->
 					<hediffGraphics>
 						<Hediff_LTF_RightSteelClaws>Mantis/SyntClaws/Right/Right</Hediff_LTF_RightSteelClaws>
 					</hediffGraphics>

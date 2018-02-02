@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<ThingDef Name="BaseZoltanPawn" Abstract="True">
-    <thingClass>Pawn</thingClass>
-    <category>Pawn</category>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Pawn</altitudeLayer>
-    <useHitPoints>false</useHitPoints>
-    <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
-    <inspectorTabs>
-        <li>ITab_Pawn_Health</li>
-        <li>ITab_Pawn_Needs</li>
-        <li>ITab_Pawn_Character</li>
-        <li>ITab_Pawn_Training</li>
-        <li>ITab_Pawn_Gear</li>
-        <li>ITab_Pawn_Guest</li>
-        <li>ITab_Pawn_Prisoner</li>
-        <li>ITab_Pawn_Social</li>
-        <li>ITab_Pawn_Combat</li>
-    </inspectorTabs>
-    <comps>
-        <li>
-            <compClass>CompAttachBase</compClass>
-        </li>
-    </comps>
-    <drawGUIOverlay>true</drawGUIOverlay>
-</ThingDef>
 
-<AlienRace.ThingDef_AlienRace ParentName="BaseZoltanPawn">
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
     <defName>Alien_Zoltan</defName>
     <label>Zoltan</label>
     <description>With the majority of their bodies composed of pure, harnessable energy, the Zoltan are ambivalent towards the Galactic Federation. Whilst a deeply officious and obtuse people, they generally favour diplomacy over acts of aggression and are known for being fair and just in their dealings with others. Due to their alliance with the Engi, Zoltans often appear in Engi Homeworlds or the various Engi-Controlled Sectors of space, although they inhabit their own home systems as well.
