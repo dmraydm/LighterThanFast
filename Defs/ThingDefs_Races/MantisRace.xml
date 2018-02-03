@@ -259,7 +259,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 				<li>
 					<path>Mantis/Stache/stache</path>
 					<bodyPart>BodyPart_LTF_MantisStache</bodyPart>
-					<inFrontOfBody>true</inFrontOfBody>
+					<!-- <inFrontOfBody>true</inFrontOfBody> -->
+					<inFrontOfBody>false</inFrontOfBody>
 					<useSkinColor>true</useSkinColor>
 					
 					<offsets>

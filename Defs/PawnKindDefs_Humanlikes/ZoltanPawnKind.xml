@@ -224,6 +224,14 @@
 		<combatPower>70</combatPower>
 	</PawnKindDef>
 
+		<PawnKindDef ParentName="EngieMilBase">
+		<defName>ZoltanGrenadier</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<combatPower>60</combatPower>
+	</PawnKindDef>
   
 	<PawnKindDef ParentName="ZoltanMilBase">
 		<defName>ZoltanHunter</defName>

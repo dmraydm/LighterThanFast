@@ -221,6 +221,13 @@
             <max>1</max>
           </countRange>
         </li>
+		<li>
+          <thingDef>Component</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
@@ -232,7 +239,15 @@
     <label>Fighter</label>
     <combatPower>70</combatPower>
   </PawnKindDef>
-
+  
+	<PawnKindDef ParentName="EngieMilBase">
+		<defName>EngieGrenadier</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<combatPower>60</combatPower>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="EngieMilBase">
     <defName>EngieHunter</defName>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Outlander"]/pawnGroupMakers/li[1]/options</xpath>  <!-- Outlander "normal" group -->
+		<value>
+			
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			<MantisHunter>16</MantisHunter><RockmanHunter>8</RockmanHunter><SlugHunter>16</SlugHunter>
+			<MantisGrenadier>4</MantisGrenadier><RockmanGrenadier>2</RockmanGrenadier><SlugGrenadier>1</SlugGrenadier>
+			
+			<!-- <MantisGuard>16</MantisGuard><MantisHunter>16</MantisHunter><MantisGrenadier>4</MantisGrenadier> -->
+		</value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Outlander"]/pawnGroupMakers/li[2]/guards</xpath>  <!-- Outlander Caravan guard group -->
+		<value>
+			
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			<MantisHunter>16</MantisHunter><RockmanHunter>8</RockmanHunter><SlugHunter>16</SlugHunter>
+			<MantisGrenadier>4</MantisGrenadier><RockmanGrenadier>2</RockmanGrenadier><SlugGrenadier>1</SlugGrenadier>
+			
+			<!-- <MantisGuard>16</MantisGuard><MantisHunter>16</MantisHunter><MantisGrenadier>4</MantisGrenadier> -->
+		</value>
+	</Operation> 
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Outlander"]/pawnGroupMakers/li[3]/options</xpath>  <!-- Outlander base group -->
+		<value>
+			
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			
+			<!-- <MantisGuard>16</MantisGuard> -->
+		</value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[1]/options</xpath>  <!-- Pirate "normal" group -->
+		<value>
+		
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			<MantisHunter>16</MantisHunter><RockmanHunter>8</RockmanHunter><SlugHunter>16</SlugHunter>
+			<MantisGrenadier>4</MantisGrenadier><RockmanGrenadier>2</RockmanGrenadier><SlugGrenadier>1</SlugGrenadier>
+			<MantisFighter>4</MantisFighter><RockmanFighter>4</RockmanFighter><SlugFighter>4</SlugFighter>
+			
+			<!-- <MantisGuard>16</MantisGuard><MantisHunter>16</MantisHunter><MantisGrenadier>4</MantisGrenadier><MantisFighter>4</MantisFighter> -->
+		</value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[2]/options</xpath>  <!-- Pirate "normal" melee only group -->
+		<value>
+			
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			<MantisGrenadier>4</MantisGrenadier><RockmanGrenadier>2</RockmanGrenadier><SlugGrenadier>1</SlugGrenadier>
+			<MantisFighter>4</MantisFighter><RockmanFighter>4</RockmanFighter><SlugFighter>4</SlugFighter>
+			
+			<!-- <MantisGuard>16</MantisGuard><MantisGrenadier>4</MantisGrenadier><MantisFighter>4</MantisFighter> -->
+		</value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[3]/options</xpath>  <!-- Pirate base group -->
+		<value>
+
+			<MantisGuard>16</MantisGuard><RockmanGuard>8</RockmanGuard><SlugGuard>4</SlugGuard>
+			<MantisHunter>16</MantisHunter><RockmanHunter>8</RockmanHunter><SlugHunter>16</SlugHunter>
+			<MantisGrenadier>4</MantisGrenadier><RockmanGrenadier>2</RockmanGrenadier><SlugGrenadier>1</SlugGrenadier>
+			<MantisFighter>4</MantisFighter><RockmanFighter>4</RockmanFighter><SlugFighter>4</SlugFighter>
+			
+			<!-- <MantisGuard>16</MantisGuard><MantisHunter>16</MantisHunter><MantisGrenadier>4</MantisGrenadier><MantisFighter>4</MantisFighter> -->
+		</value>
+	</Operation> 
+	
+</Patch>

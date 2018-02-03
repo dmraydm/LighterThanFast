@@ -227,6 +227,14 @@
 		<combatPower>70</combatPower>
 	</PawnKindDef>
 
+	<PawnKindDef ParentName="RockmanMilBase">
+		<defName>RockmanGrenadier</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<combatPower>60</combatPower>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="RockmanMilBase">
     <defName>RockmanHunter</defName>

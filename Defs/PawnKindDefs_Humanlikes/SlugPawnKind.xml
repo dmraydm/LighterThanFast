@@ -177,7 +177,6 @@
 		</apparelTags>
 		<weaponTags>
 			<li>AdvancedGun</li>
-			<li>GrenadeDestructive</li>
 		</weaponTags>
 	
 		<apparelMoney>
@@ -193,6 +192,12 @@
 		<min>1000</min>
 		<max>1500</max>
     </techHediffsMoney>
+	
+	<combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>3</max>
+    </combatEnhancingDrugsCount>
+	
     <inventoryOptions>
       <skipChance>0.8</skipChance>
       <subOptionsChooseOne>
@@ -210,6 +215,27 @@
             <max>1</max>
           </countRange>
         </li>
+		<li>
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+		<li>
+          <thingDef>LTF_SlugDew</thingDef>
+          <countRange>
+            <min>5</min>
+            <max>75</max>
+          </countRange>
+        </li>
+		<li>
+          <thingDef>LTF_SlugSilk</thingDef>
+          <countRange>
+            <min>5</min>
+            <max>75</max>
+          </countRange>
+        </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
@@ -221,7 +247,15 @@
     <label>Fighter</label>
     <combatPower>70</combatPower>
   </PawnKindDef>
-
+	
+	<PawnKindDef ParentName="SlugMilBase">
+		<defName>SlugGrenadier</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<combatPower>60</combatPower>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="SlugMilBase">
     <defName>SlugHunter</defName>

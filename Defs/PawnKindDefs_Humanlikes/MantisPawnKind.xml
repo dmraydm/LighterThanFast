@@ -186,6 +186,12 @@
 		<li>Gun</li>
 		<li>AdvancedGun</li>
 	</weaponTags>
+	
+	<combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+	
     <techHediffsMoney>
       <min>1000</min>
       <max>1500</max>
@@ -207,6 +213,13 @@
             <max>1</max>
           </countRange>
         </li>
+		<li>
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
@@ -219,6 +232,14 @@
     <combatPower>70</combatPower>
   </PawnKindDef>
 
+  	<PawnKindDef ParentName="MantisMilBase">
+		<defName>MantisGrenadier</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<combatPower>60</combatPower>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="MantisMilBase">
     <defName>MantisHunter</defName>
