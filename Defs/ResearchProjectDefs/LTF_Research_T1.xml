@@ -20,7 +20,7 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_SlugProducts</defName>
 		<label>Slug amateur</label>
-		<description>metallic assisted sharpness</description>
+		<description>Probably more drooling related things.</description>
 		<baseCost>500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
@@ -34,7 +34,7 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_ShieldHelm</defName>
 		<label>shield helms</label>
-		<description>metallic assisted sharpness</description>
+		<description>helmet and bench doing shields together</description>
 		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>

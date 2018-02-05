@@ -166,8 +166,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<path>Mantis/Claws/Left/Left</path>
 					<bodyPart>BodyPart_LTF_LeftClaws</bodyPart>
 					<inFrontOfBody>true</inFrontOfBody>
-					<angle>10</angle>
-					<useSkinColor>true</useSkinColor>
+					<angle>3</angle>
+					<useSkinColor>false</useSkinColor>
 					<offsets>
 						<!-- seen right ~ -0.4325 --> 
 						<front>
@@ -214,7 +214,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<path>Mantis/Claws/Right/Right</path>
 					<bodyPart>BodyPart_LTF_RightClaws</bodyPart>
 					<inFrontOfBody>true</inFrontOfBody>
-					<useSkinColor>true</useSkinColor>
+					<useSkinColor>false</useSkinColor>
 					<offsets>
 						<!-- seen left -->
 						<front>
@@ -260,7 +260,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<path>Mantis/Stache/stache</path>
 					<bodyPart>BodyPart_LTF_MantisStache</bodyPart>
 					<!-- <inFrontOfBody>true</inFrontOfBody> -->
-					<inFrontOfBody>false</inFrontOfBody>
+					<inFrontOfBody>true</inFrontOfBody>
 					<useSkinColor>true</useSkinColor>
 					
 					<offsets>

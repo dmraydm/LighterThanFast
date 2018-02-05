@@ -316,7 +316,8 @@
 <!--
 
 	Skills
-	
+<skillGains>
+<li>	
 Animals
 Artistic
 Construction
@@ -330,7 +331,7 @@ Shooting
 Social
 
 	Traits
-	
+<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
 Abrasive
 AnnoyingVoice
 Ascetic
@@ -367,6 +368,8 @@ SuperImmune
 TooSmart
 Wimp
 
+<workDisables>
+<li>
 Animals
 Caring
 Firefighting
@@ -376,6 +379,7 @@ ManualSkilled
 Mining
 PlantWork
 Social
+Violent
 
 
 -->
