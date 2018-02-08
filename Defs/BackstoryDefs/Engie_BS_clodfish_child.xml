@@ -34,6 +34,12 @@
 			<li><defName>Melee</defName><amount>-3</amount></li>
 			<li><defName>Shooting</defName><amount>-2</amount></li>
 		</skillGains>
+		<!--
+		<relationSettings>
+            <relationChanceModifierParent>1</relationChanceModifierParent>
+        </relationSettings>
+	-->	
+	
     </AlienRace.BackstoryDef>
 
     <AlienRace.BackstoryDef>
@@ -52,7 +58,11 @@
 		<li><defName>Social</defName><amount>1</amount></li>
 		<li><defName>Crafting</defName><amount>-4</amount></li>
     </skillGains>
-	
+<!--	
+	<forcedHediffs>
+		<li>Hediff_MissingPart</li>
+	</forcedHediffs>
+	-->
     </AlienRace.BackstoryDef>
 
     <AlienRace.BackstoryDef>
@@ -80,7 +90,7 @@
 		<defName>EngieChildClodfish05</defName>
 		<title>Feeler</title>
 		<titleShort>Feeler</titleShort>
-		<baseDescription>NAME made a horrible discovery after HE formed, HE could feel. NAME kept this crime hidden as best HE could until HE joined an Engi effort to colonise a new planet. After witnessing the effect of the bioweapons used to suppress the local wildlife NAME broke down. Discovered NAME ran into the forest leaving only a trail of tears. </baseDescription>
+		<baseDescription>NAME made a horrible discovery after HE formed, HE could feel. NAME kept this crime hidden as best HE could until HE joined an Engi effort to colonise a new planet. After witnessing his/her species use bioweapons to suppress the local wildlife, NAME broke down. Discovered, NAME ran into the forest leaving only a trail of tears. </baseDescription>
 		<slot>Childhood</slot>
 
 		<spawnCategories>

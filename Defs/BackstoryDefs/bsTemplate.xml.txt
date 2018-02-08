@@ -1,0 +1,91 @@
+<Defs>
+<AlienRace.BackstoryDef>
+    <defName>RockmanBSQuote13</defName>
+    <title>Vermiculite</title>
+    <titleShort>Vermiculite</titleShort>
+	<baseDescription>"Consciousness cannot be accounted for in physical terms. For consciousness is absolutely fundamental. It cannot be accounted for in terms of anything else." - Erwin Schrödinger</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Artistic</defName><amount>2</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+		<li><defName>Nerves</defName><degree>1</degree><chance>70</chance></li>
+	</forcedTraits>
+	<workDisables><li>Caring</li></workDisables>
+	
+</AlienRace.BackstoryDef>
+</Defs>	
+<!--
+
+<skillGains>
+<li>	
+Animals
+Artistic
+Construction
+Cooking
+Crafting
+Growing
+Medicine
+Mining
+Intellectual
+Shooting
+Social
+
+	Traits
+<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
+Abrasive
+AnnoyingVoice
+Ascetic
+Beauty
+Bloodlust
+Brawler
+Cannibal
+CreepyBreathing
+DislikesMen
+DislikesWomen
+DrugDesire
+FastLearner
+Gay
+Greedy
+GreenThumb
+Industriousness
+Jealous
+Kind
+Masochist
+NaturalMood
+Nerves
+Neurotic
+NightOwl
+Nimble
+Nudist
+Prosthophile
+Prosthophobe
+PsychicSensitivity
+Psychopath
+Pyromaniac
+ShootingAccuracy
+SpeedOffset
+SuperImmune
+TooSmart
+Wimp
+
+<workDisables>
+<li>
+Animals
+Caring
+Firefighting
+Intellectual
+ManualDumb
+ManualSkilled
+Mining
+PlantWork
+Social
+Violent
+
+
+-->

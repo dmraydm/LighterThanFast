@@ -1,0 +1,172 @@
+<Defs>
+<AlienRace.BackstoryDef>
+    <defName>RockAdultClodfish01</defName>
+    <title>Clergy</title>
+    <titleShort>Clergy</titleShort>
+	<baseDescription>The Dream had led NAME to them, the dream of the mountain. They were a mix of rough and smooth skins but all of them were unnaturally shiny. They led HIM to that trail room, the trail of the mountain, and undressed HIM. Standing on that metal grate alone NAME wonder what this trail would do to HIM, HE was answered by the explosion of steam that came from under HIS feet. This was the one trail you were not expected to surmount consciously, only to survive. The pain of steam searing HIS skin mercifully knocked him out, in the subsequent dream NAME learned the true will of the Mountain and awoke as a Shiny Skin.</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Intellectual</defName><amount>4</amount></li>
+		<li><defName>Social</defName><amount>2</amount></li>
+    </skillGains>
+	
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>RockAdultClodfish02</defName>
+    <title>Planter</title>
+    <titleShort>Planter</titleShort>
+	<baseDescription>NAME was not of the clergy but HIS connection with the mountain was undeniable. NAME was born far any settlement and so lived on only what the Living Mountain provided him. When HE was finally discovered gnawing on some precious salt ore HE was initially condemned as an unmarked, someone who had accomplished no trails and had no cravings. Yet the clergy found use of HIM. HE continued his lifelong odyssey around the mountain but now caring for the sacred trees and planting the next generation. After years of carefully salting the ground for HIS seeds NAME struggled to not help the newborns wrestle their ways from the ground.</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Growing</defName><amount>4</amount></li>
+		<li><defName>Animals</defName><amount>4</amount></li>
+		<li><defName>Construction</defName><amount>-3</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+		<li><defName>Nudist</defName><chance>100</chance></li>
+	</forcedTraits>
+	
+	
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>RockAdultClodfish03</defName>
+    <title>Meteoritick shield warrior</title>
+    <titleShort>Meteoritick</titleShort>
+	<baseDescription>The only time NAME had ever expressed joy was when HIS dream of joining the Metoritick Shield was realised. Defending HIS people in the infinite expanse of space was an honour only a few were merited and after HIS background, HE never thought HE was going to make it. But now HE was here and HE can only watch in pride as the carvings on his arm grow more intricate as enemy ship after enemy ship evaporates under the might of the Metoritick Shield Force’s might.</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	
+	<skillGains>
+		<li><defName>Shooting</defName><amount>3</amount></li>
+		<li><defName>Intellectual</defName><amount>2</amount></li>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+    </skillGains>
+
+	<workDisables><li>PlantWork</li></workDisables>
+	
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>RockAdultClodfish04</defName>
+    <title>Temple builder</title>
+    <titleShort>Builder</titleShort>
+	<baseDescription>NAME had seen the buildings that the humans erected, imgalomations of steel, wood, plastics and metals. Putrid with their lack of connection to their ancestors, their intricate designs a mere facade covering the emptiness in spirit. Other Rockmen builders had been impressed by their marvels but not NAME, to NAME tradition was everything. Besides times were good, the war had provided plenty of building material to pull off his fallen brethren.</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Construction</defName><amount>5</amount></li>
+		<li><defName>Crafting</defName><amount>-3</amount></li>
+    </skillGains>
+	
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>RockAdultClodfish05</defName>
+    <title>Traitor</title>
+    <titleShort>Traitor</titleShort>
+	<baseDescription>NAME had looked upon human wonders and lost all his faith in the way of the Living Mountain. NAME questioned why Rockmen worship a mere pile of rocks letting the humans get ahead in fields of science, culture and society. NAME questioned why Rockmen continue to bash each other to pieces while graveyards of rockmen ship prove that human coordination is far more power than any rockman gains from constant competition. NAME does not regret betraying the rockmen in favour for the Federation, even if that means after his time comes he will be sent to the enturnal crevice to wallow in darkness for the rest of times.</baseDescription>
+    <slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Social</defName><amount>2</amount></li>
+		<li><defName>Growing</defName><amount>2</amount></li>
+		<li><defName>Construction</defName><amount>2</amount></li>
+		<li><defName>Intellectual</defName><amount>2</amount></li>
+    </skillGains>
+	
+</AlienRace.BackstoryDef>
+
+</Defs>
+<!--
+
+<skillGains>
+<li>	
+Animals
+Artistic
+Construction
+Cooking
+Crafting
+Growing
+Medicine
+Mining
+Intellectual
+Shooting
+Social
+
+	Traits
+<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
+Abrasive
+AnnoyingVoice
+Ascetic
+Beauty
+Bloodlust
+Brawler
+Cannibal
+CreepyBreathing
+DislikesMen
+DislikesWomen
+DrugDesire
+FastLearner
+Gay
+Greedy
+GreenThumb
+Industriousness
+Jealous
+Kind
+Masochist
+NaturalMood
+Nerves
+Neurotic
+NightOwl
+Nimble
+Nudist
+Prosthophile
+Prosthophobe
+PsychicSensitivity
+Psychopath
+Pyromaniac
+ShootingAccuracy
+SpeedOffset
+SuperImmune
+TooSmart
+Wimp
+
+<workDisables>
+<li>
+Animals
+Caring
+Firefighting
+Intellectual
+ManualDumb
+ManualSkilled
+Mining
+PlantWork
+Social
+Violent
+
+
+-->

@@ -1,0 +1,184 @@
+<Defs>
+<AlienRace.BackstoryDef>
+    <defName>RockChildClodfish01</defName>
+    <title>Sculptor</title>
+    <titleShort>Sculptor</titleShort>
+	<baseDescription>There is no place for art in Rockman culture with one exception. Born with the rare trait of opposable thumbs NAME spent his childhood with the Smooth Skin Clergy learning the stories of his people. More importantly HE learned how to translate that into carvings and with a hammer and a chisel NAME set about weaving intricate patterns into his fellow rockmen. Everyday when NAME woke up he pray, hands joined, to the Living Mountain and thanked it for his life with trials or pain.</baseDescription>
+    <slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Artistic</defName><amount>2</amount></li>
+		<li><defName>Crafting</defName><amount>2</amount></li>
+    </skillGains>
+	
+	<forcedHediffs>
+		<li>BionicArm</li>
+	</forcedHediffs>
+	
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>RockChildClodfish02</defName>
+    <title>Child of the smooth skin clergy</title>
+    <titleShort>smooth</titleShort>
+	<baseDescription>When you are born with more brains than brawn in the Rockmen world you have few options, one of them is the clergy. Running away from the abusive life the Graphite Shield provided him NAME thought he had finally escaped the pain, HE was tragically mistaken. To induct him the clergy subjected him to the eternal waters, a fast flowing river filled with sediments and hallucinogens. NAME’S only reprieve from the excruciating continuing agony was the brief visions of the Living Mountains and the Rock Gods that dwelled inside. After a decade of screaming NAME emerged from the river as a Smooth Skin.</baseDescription>
+    <slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Intellectual</defName><amount>4</amount></li>
+    </skillGains>
+	<forcedTraits>
+		<li><defName>Masochist</defName><chance>100</chance></li>
+		<li><defName>Nerves</defName><degree>2</degree><chance>100</chance></li>
+	</forcedTraits>
+	
+	
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+    <defName>RockChildClodfish03</defName>
+    <title>Alpha</title>
+    <titleShort>Alpha</titleShort>
+	<baseDescription>The core tenant of Rockman culture is strength and NAME had it. Inducted into the Graphite Shield two years early NAME missed some important lessons the nursery had to teach HIM, such as empathy. Rather NAME learned that the only way to communicate was strength and the only way to lead was to dominate. When HIS class neared the trial of leadership NAMES teachers noted a lack of anxiousnesses. Asked about HIS peculiar behaviour NAME admitted HE wasn’t worried about whether or not HE would be the leader. Rather HE was deciding which classmates were suitable to serve under HIM and which ones he would kill.</baseDescription>
+    <slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	
+	<skillGains>
+		<li><defName>Shooting</defName><amount>2</amount></li>
+		<li><defName>Melee</defName><amount>3</amount></li>
+    </skillGains>
+	
+	<forcedTraits><li><defName>Psychopath</defName><chance>100</chance></li></forcedTraits>
+	<workDisables><li>Social</li></workDisables>
+	
+</AlienRace.BackstoryDef>
+<!--
+<AlienRace.BackstoryDef>
+    <defName>RockChildClodfish04</defName>
+    <title>Servitor</title>
+    <titleShort>Servitor</titleShort>
+	<baseDescription>The core tenant of Rockman culture is strength and NAME didn’t have it. Trial after trial after trial saw NAME on his knees and with the disapproving eyes of those NAME craved respect from burning into him. Disgusted by his weakness NAME’s society turned NAME into something other than a rockman so they weren’t related to him and his weakness, a servitor. One night as NAME was sound in bed HE was pulled kicking and screaming into a Smooth Stone temple. On the alter the Clergy castrated HIM and chipped away at HIS rock skin, HIS very rockmanhood, save for a spot on his helm. There they Carved one symbol, the only one HE will ever have. The carving of a slave.</baseDescription>
+    <slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Artistic</defName><amount>2</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+		<li><defName>Nerves</defName><degree>1</degree><chance>70</chance></li>
+	</forcedTraits>
+	<workDisables><li>Caring</li></workDisables>
+	
+</AlienRace.BackstoryDef>
+-->
+
+<AlienRace.BackstoryDef>
+    <defName>RockChildClodfish05</defName>
+    <title>Rooted</title>
+    <titleShort>Rooted</titleShort>
+	<baseDescription>A little known fact about Rockmen is they are in fact plants, born of the stone seed to burst from the ground. NAME however could not burst from the ground like HIS peers as misfortune struck HIM early, ironically in the form of a boulder. Using all HIS strength and all the strength from the ground NAME just managed to stop the rolling doom from crushing him. As birthing is seen as the first trial NAME received no help, so he spent HIS childhood growing stronger. Slowly and without sleep pushing the boulder off HIMSELF. When HE finally birthed he was immensely strong but HE had little intelligence.</baseDescription>
+    <slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>RockmanBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li><defName>Melee</defName><amount>10</amount></li>
+		<li><defName>Shooting</defName><amount>-2</amount></li>
+    </skillGains>
+	
+	<forcedTraits>
+		<li><defName>Nudist</defName><chance>100</chance></li>
+	</forcedTraits>
+	
+	<workDisables>
+		<li>Social</li>
+		<li>ManualSkilled</li>
+	</workDisables>
+	
+</AlienRace.BackstoryDef>
+
+</Defs>
+<!--
+
+<skillGains>
+<li>	
+Animals
+Artistic
+Construction
+Cooking
+Crafting
+Growing
+Medicine
+Mining
+Intellectual
+Shooting
+Social
+
+	Traits
+<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
+Abrasive
+AnnoyingVoice
+Ascetic
+Beauty
+Bloodlust
+Brawler
+Cannibal
+CreepyBreathing
+DislikesMen
+DislikesWomen
+DrugDesire
+FastLearner
+Gay
+Greedy
+GreenThumb
+Industriousness
+Jealous
+Kind
+Masochist
+NaturalMood
+Nerves
+Neurotic
+NightOwl
+Nimble
+Nudist
+Prosthophile
+Prosthophobe
+PsychicSensitivity
+Psychopath
+Pyromaniac
+ShootingAccuracy
+SpeedOffset
+SuperImmune
+TooSmart
+Wimp
+
+<workDisables>
+<li>
+Animals
+Caring
+Firefighting
+Intellectual
+ManualDumb
+ManualSkilled
+Mining
+PlantWork
+Social
+Violent
+
+
+-->
