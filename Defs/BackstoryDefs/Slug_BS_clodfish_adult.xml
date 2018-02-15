@@ -1,0 +1,124 @@
+<Defs>
+
+<AlienRace.BackstoryDef>
+    <defName>SlugAdultClodfish01</defName>
+    <title>Puppet Master</title>
+    <titleShort>Puppeteer</titleShort>
+    <baseDescription>In his first transit to another planet NAME was captured and enslaved by a crime gang. Using HIS psychic abilities NAME was not only able to get out of enslavement but even join the crime gang. In a month he was a vital part of the gang, finding where prey was hiding, finding moles and inspiring men but that wasn’t good enough for him. In a year HE orchestrated a coup and took over the gang and all without ever picking up a gun. </baseDescription> 
+
+    <slot>Adulthood</slot>
+
+    <spawnCategories>
+        <li>SlugBackstory</li>
+    </spawnCategories>
+    <skillGains>
+        <li><defName>Shooting</defName><amount>-3</amount></li>
+		<li><defName>Intellectual</defName><amount>2</amount></li>
+		<li><defName>Social</defName><amount>2</amount></li>
+    </skillGains>
+
+    <forcedTraits>
+        <li><defName>Jealous</defName></li>
+    </forcedTraits>
+
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>SlugAdultClodfish02</defName>
+    <title>Privateer</title>
+    <titleShort>Privateer</titleShort>
+    <baseDescription>Wealth and status, the two things that matter most to a slug and by becoming a privateer you can ascertain both. On shore leave NAME could brag to all the honeys about all the perilous battles he’s been on protecting the borders of the slug worlds. When on the job HE could take HIS part of the loot from the poor little refugee ship that the slugs needed “protection” from. </baseDescription> 
+
+    <slot>Adulthood</slot>
+
+    <spawnCategories>
+        <li>SlugBackstory</li>
+    </spawnCategories>
+    <skillGains>
+        <li><defName>Shooting</defName><amount>-3</amount></li>
+		<li><defName>Melee</defName><amount>3</amount></li>
+    </skillGains>
+
+    <forcedTraits>
+        <li><defName>Psychopath</defName></li>
+		<li><defName>Brawler</defName></li>
+    </forcedTraits>
+
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>SlugAdultClodfish03</defName>
+    <title>Engi helper</title>
+    <titleShort>Helper</titleShort>
+    <baseDescription>Taking apart machines and putting them back together can be a real pain in the neck, more so if the machine only has a loose screw. That's why NAME put his telekinetic mind powers to use starting a business in an engi mechanical centre. NAME felt needed and valuable fixing tiny little issues in a blink of an eye for his engi friends, especially when they gave him the nickname TimeSaver NAME.</baseDescription> 
+
+    <slot>Adulthood</slot>
+
+    <spawnCategories>
+        <li>SlugBackstory</li>
+    </spawnCategories>
+	
+    <skillGains>
+        <li><defName>Crafting</defName><amount>3</amount></li>
+		<li><defName>Construction</defName><amount>2</amount></li>
+    </skillGains>
+
+    <forcedTraits>
+        <li><defName>Kind</defName></li>
+    </forcedTraits>
+	
+    <workDisables><li>PlantWork</li></workDisables>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>SlugAdultClodfish04</defName>
+    <title>Farm saver</title>
+    <titleShort>Savior</titleShort>
+	<baseDescription>Persuaded by some kind Federation humans to become part of something bigger than HIM, NAME joined the Federation red cross. A non-profit organisation aimed at reducing galactic suffering, NAME's division was food production. HE would be sent down to with teams of biologists, farmers and fellow revitaliser slugs to save poverty stricken planets of doomed ecosystems and poor harvests.</baseDescription> 
+
+    <slot>Adulthood</slot>
+
+    <spawnCategories>
+        <li>SlugBackstory</li>
+    </spawnCategories>
+	
+    <skillGains>
+        <li><defName>Growing</defName><amount>5</amount></li>
+		<li><defName>Animals</defName><amount>3</amount></li>
+    </skillGains>
+
+    <forcedTraits>
+        <li><defName>Kind</defName></li>
+    </forcedTraits>
+	
+    <workDisables><li>Violent</li></workDisables>
+
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>SlugAdultClodfish05</defName>
+    <title>Circus performer</title>
+    <titleShort>performer</titleShort>
+    <baseDescription>NAME ship crashed landed onto a primitive world where HE was taken in by a travelling circus. Suddenly the star performer in a freak show NAME didn’t really know what to make of his life. However, feeling the happiness that emanate from the crowd was like a drug to NAME, and HE soon became addicted. So despite the terrible food, hygiene and disease NAME didn’t think it was all that bad. Apart from the wild animal performances though, those scared HIM.
+</baseDescription> 
+
+    <slot>Adulthood</slot>
+
+    <spawnCategories>
+        <li>SlugBackstory</li>
+    </spawnCategories>
+
+    <skillGains>
+        <li><defName>Artistic</defName><amount>5</amount></li>
+		<li><defName>Social</defName><amount>3</amount></li>
+    </skillGains>
+
+    <forcedTraits>
+        <li><defName>DrugDesire</defName><degree>1</degree><chance>100</chance></li>
+    </forcedTraits>
+	
+    <workDisables><li>Animals</li></workDisables>
+
+</AlienRace.BackstoryDef>
+
+</Defs>
