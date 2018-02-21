@@ -14,11 +14,10 @@
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
-		<MarketValue>.8</MarketValue>
+		<MarketValue>2.37</MarketValue>
 		<Mass>0.6</Mass>
-		
-		<SharpDamageMultiplier>.8</SharpDamageMultiplier>
-		<BluntDamageMultiplier>.8</BluntDamageMultiplier>
+		<Flammability>1.5</Flammability>
+		<DeteriorationRate>5</DeteriorationRate>
     </statBases>
 
     <useHitPoints>false</useHitPoints>
@@ -42,101 +41,39 @@
 		<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
 		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-		
-		<statOffsets>
-			<Beauty>-1</Beauty>
-			<Cleanliness>-10</Cleanliness>
-			<Comfort>-5</Comfort>
-			<EntertainmentStrengthFactor>-1</EntertainmentStrengthFactor>
-			<FoodPoisonChance>2</FoodPoisonChance>
-			
-			<Mass>2</Mass>
-			<MaxHitPoints>-5</MaxHitPoints>
-			<MedicalTendQuality>-5</MedicalTendQuality>
-			<MoveSpeed>-0.05</MoveSpeed>
-			
-			<MeleeDodgeChance>-5</MeleeDodgeChance>
-			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
-			<MeleeWeapon_DamageMultiplier>.95</MeleeWeapon_DamageMultiplier>
-			
-			<PainShockThreshold>1.2</PainShockThreshold>
-			<PsychicSensitivity>1.2</PsychicSensitivity>
-		</statOffsets>
-		
+	  <statOffsets>
+        <Beauty>-3</Beauty>
+      </statOffsets>
 		<statFactors>
-			<ImmunityGainSpeedFactor>.1</ImmunityGainSpeedFactor>
-			<ImmunityGainSpeed>.2</ImmunityGainSpeed>
-			
-			<AimingDelayFactor>1.2</AimingDelayFactor>
+			<Beauty>.5</Beauty>
 			<ArmorRating_Blunt>.8</ArmorRating_Blunt>
 			<ArmorRating_Electric>.8</ArmorRating_Electric>
 			<ArmorRating_Heat>.8</ArmorRating_Heat>
 			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
-			<Beauty>.5</Beauty>
-			<BedRestEffectiveness>.8</BedRestEffectiveness>
-			<BrewingSpeed>1.2</BrewingSpeed>
-			<ButcheryFleshEfficiency>1.2</ButcheryFleshEfficiency>
-			<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
-			<Cleanliness>-1.5</Cleanliness>
-			<Comfort>.5</Comfort>
-			<ComfyTemperatureMax>.5</ComfyTemperatureMax>
-			<ComfyTemperatureMin>.5</ComfyTemperatureMin>
-			<ConstructionSpeed>1.2</ConstructionSpeed>
-			<ConstructSuccessChance>.8</ConstructSuccessChance>
-			<CookSpeed>1.2</CookSpeed>
+			
+			<ConstructionSpeed>.8</ConstructionSpeed>
 			<DeteriorationRate>2</DeteriorationRate>
-			<DiplomacyPower>.8</DiplomacyPower>
-			<DoorOpenSpeed>1.2</DoorOpenSpeed>
-			<DrugProductionSpeed>1.2</DrugProductionSpeed>
-			<EatingSpeed>.8</EatingSpeed>
-			<EntertainmentStrengthFactor>.7</EntertainmentStrengthFactor>
+
 			<Flammability>1.5</Flammability>
-			<FoodPoisonChance>1.5</FoodPoisonChance>
-			<GlobalLearningFactor>.8</GlobalLearningFactor>
-			
-			
+
 			<Insulation_Cold>.8</Insulation_Cold>
 			<Insulation_Heat>.8</Insulation_Heat>
-			<MarketValue>.8</MarketValue>
-			<Mass>1.2</Mass>
+			
 			<MaxHitPoints>.7</MaxHitPoints>
-			<MedicalOperationSpeed>.8</MedicalOperationSpeed>
-			<MedicalSurgerySuccessChance>.8</MedicalSurgerySuccessChance>
-			<MedicalTendQuality>.8</MedicalTendQuality>
-			<MedicalTendQualityOffset>-0.2</MedicalTendQualityOffset>
-			<MedicalTendSpeed>.8</MedicalTendSpeed>
 
-			<MeleeDodgeChance>.8</MeleeDodgeChance>
 			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
 			<MeleeWeapon_DamageMultiplier>.95</MeleeWeapon_DamageMultiplier>
 			
-			<MentalBreakThreshold>1.5</MentalBreakThreshold>
-			<MinimumHandlingSkill>5</MinimumHandlingSkill>
-			<MoveSpeed>.95</MoveSpeed>
-			<PainShockThreshold>1.2</PainShockThreshold>
-			<PsychicSensitivity>1.2</PsychicSensitivity>
-			<RecruitPrisonerChance>.5</RecruitPrisonerChance>
-			<ResearchSpeed>.8</ResearchSpeed>
-			<ResearchSpeedFactor>.8</ResearchSpeedFactor>
-			<SculptingSpeed>1.2</SculptingSpeed>
-			
 			<SellPriceFactor>.8</SellPriceFactor>
 			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
-			<ShootingAccuracy>1.2</ShootingAccuracy>
-			<SmeltingSpeed>1.2</SmeltingSpeed>
-			<SmithingSpeed>1.2</SmithingSpeed>
-			<SocialImpact>.8</SocialImpact>
-			<SurgerySuccessChanceFactor>.8</SurgerySuccessChanceFactor>
-			<TailoringSpeed>1.2</TailoringSpeed>
-			<ToxicSensitivity>1.2</ToxicSensitivity>
-			<TradePriceImprovement>.8</TradePriceImprovement>
+
 			<TrapMeleeDamage>1.1</TrapMeleeDamage>
 			<TrapSpringChance>.8</TrapSpringChance>
-			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
-			<WorkTableWorkSpeedFactor>1.2</WorkTableWorkSpeedFactor>
+
+			<WorkTableWorkSpeedFactor>.95</WorkTableWorkSpeedFactor>
+			
 			<WorkToBuild>1.5</WorkToBuild>
 			<WorkToMake>1.5</WorkToMake>
-
 		</statFactors>
 		<appearance>Rusting</appearance>
 		<smeltable>true</smeltable>
