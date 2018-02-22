@@ -17,7 +17,7 @@
 		<MarketValue>2.37</MarketValue>
 		<Mass>0.6</Mass>
 		<Flammability>1.5</Flammability>
-		<DeteriorationRate>5</DeteriorationRate>
+		<!-- <DeteriorationRate>5</DeteriorationRate> -->
     </statBases>
 
     <useHitPoints>false</useHitPoints>
@@ -52,7 +52,6 @@
 			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
 			
 			<ConstructionSpeed>.8</ConstructionSpeed>
-			<DeteriorationRate>2</DeteriorationRate>
 
 			<Flammability>1.5</Flammability>
 
