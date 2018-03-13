@@ -3,9 +3,11 @@
 
   <ThingDef ParentName="BenchBase">
     <defName>LTF_RegularRockmanStove</defName>
-    <label>Stonemade stove</label>
+    <label>Rock stove</label>
 	<thingClass>Building_WorkTable</thingClass>
-    <description>Warm and cozy.</description>
+    <description>Warm and cozy.
+- provides lot of warmth from chemfuel.
+- melts chunks.</description>
     
     <graphicData>
 		<texPath>Things/Building/Rockman/LTF_Stove</texPath>

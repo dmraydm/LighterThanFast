@@ -9,7 +9,8 @@
 		<description>The engi bench is required to build :
 - mantis blades
 - engi roms
-- zoltan shield helms</description>
+- zoltan shield helms
+[ProductionTab]</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<tab>LTF</tab>
@@ -23,7 +24,9 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_MantisBlade</defName>
 		<label>Mantis sharpen</label>
-		<description>Mantis metallic blades assist them becoming sharper.</description>
+		<description>Mantis metallic blades assist them becoming sharper.
+[EngiCraftBench]</description>
+		
 		<baseCost>500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
@@ -37,7 +40,9 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_RockmanStove</defName>
 		<label>Rockman temperature sheperd</label>
-		<description>The rockman stone stove provides warmth from chemfuel. It also allows to melt chunks.</description>
+		<description>The rock stove provides warmth from chemfuel.
+It also allows to melt chunks.
+[ProductionTab]</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
@@ -53,7 +58,8 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_Slug</defName>
 		<label>Slug neophyte</label>
-		<description>This race though. beerawecka recipe and silk made of dew.</description>
+		<description>Beerawecka recipe and silk made of dew.
+[ButcherTable][TailoringBench]</description>
 		<baseCost>750</baseCost>
 		<techLevel>Medieval</techLevel>
 		<tab>LTF</tab>
@@ -68,7 +74,8 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_ZoltanShieldBench</defName>
 		<label>Zoltan subatomic layers theory</label>
-		<description>The zoltan shield bench is required to effectivly recharge the shield helm.</description>
+		<description>The zoltan shield bench is required to effectivly recharge the shield helm.
+[SecurityTab]</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<tab>LTF</tab>

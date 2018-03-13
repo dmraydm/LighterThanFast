@@ -17,6 +17,8 @@
 	<workSkill>Crafting</workSkill>
 	<recipeUsers>
 		<li>LTF_YarnMaker</li>
+		<li>HandTailoringBench</li>
+		<li>ElectricTailoringBench</li>
 	</recipeUsers>
     <requiredGiverWorkType>Crafting</requiredGiverWorkType>
 	<skillRequirements>
