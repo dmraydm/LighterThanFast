@@ -23,7 +23,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 		<ComfyTemperatureMax>9999</ComfyTemperatureMax>
 		<LeatherAmount>50</LeatherAmount>
-		<MarketValue>1000</MarketValue>
+		<MarketValue>2000</MarketValue>
 		<MoveSpeed>4.15</MoveSpeed>
 		<Flammability>0</Flammability>
 		<CarryingCapacity>100</CarryingCapacity>
@@ -329,7 +329,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 	<intelligence>Humanlike</intelligence>
 	<makesFootprints>true</makesFootprints>
-	<lifeExpectancy>80</lifeExpectancy>
+	<lifeExpectancy>250</lifeExpectancy>
 	<!-- granite -->
 	<leatherColor>(105,95,97)</leatherColor>
 	<bloodDef></bloodDef>
@@ -360,19 +360,19 @@ While the Rockmen are generally not an adventurous race, and can only be consist
         </li>
         <li>
 			  <def>HumanlikeToddler</def>
-			  <minAge>1.2</minAge>
+			  <minAge>6</minAge>
         </li>
         <li>
 			  <def>HumanlikeChild</def>
-			  <minAge>4</minAge>
+			  <minAge>12</minAge>
         </li>
         <li>
 			  <def>HumanlikeTeenager</def>
-			  <minAge>13</minAge>
+			  <minAge>24</minAge>
         </li>
         <li>
 			  <def>HumanlikeAdult</def>
-			  <minAge>18</minAge>
+			  <minAge>36</minAge>
 			  <soundWounded>Pawn_Bear_Injured</soundWounded>
 			  <soundDeath>Pawn_Bear_Death</soundDeath>
 			  <soundCall>Pawn_Bear_Call</soundCall>
@@ -387,14 +387,13 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	  
       <ageGenerationCurve>
         <points>
-          <li>(14,0)</li>
-          <li>(16,100)</li>
-          <li>(50,100)</li>
-          <li>(60,30)</li>
-          <li>(70,18)</li>
-          <li>(80,10)</li>
-          <li>(90,3)</li>
-          <li>(100,0)</li>
+          <li>(20,0)</li>
+          <li>(36,1)</li>
+          <li>(50,20)</li>
+          <li>(70,80)</li>
+          <li>(120,100)</li>
+		  <li>(180,50)</li>
+		  <li>(250,0)</li>
         </points>
       </ageGenerationCurve>
       <hediffGiverSets>

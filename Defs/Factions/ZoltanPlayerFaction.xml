@@ -4,9 +4,19 @@
 		<homeIconPath>World/WorldObjects/Defaultbase</homeIconPath>
 		<!-- blue -->
 		<colorSpectrum>
+		<!--
 			<li>(153, 255, 51)</li>
 			<li>(0, 255, 153)</li>
 			<li>(0, 102, 255)</li>
+			-->
+						<!-- yellowish green -->
+			<li>(190, 255, 50)</li>
+			<!-- green -->
+			<li>(0, 255, 153)</li>
+			<!-- cyan cobalt -->
+			<li>(90, 255, 200)</li>
+			<!-- blue -->
+			<li>(40, 120, 255)</li>
 		</colorSpectrum>
 	</FactionDef>
 

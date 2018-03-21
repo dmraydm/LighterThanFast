@@ -26,7 +26,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<ComfyTemperatureMin>-15</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
 		<LeatherAmount>30</LeatherAmount>
-		<MarketValue>1000</MarketValue>
+		<MarketValue>2000</MarketValue>
 		<MoveSpeed>5.3</MoveSpeed>
 		<Flammability>1.0</Flammability>
 		

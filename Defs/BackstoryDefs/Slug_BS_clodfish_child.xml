@@ -34,9 +34,9 @@
         <li>SlugBackstory</li>
     </spawnCategories>
     <skillGains>
-        <li><defName>Construction</defName><amount>3</amount></li>
-<li><defName>Mining</defName><amount>3</amount></li>
-<li><defName>Social</defName><amount>-2</amount></li>
+		<li><defName>Construction</defName><amount>3</amount></li>
+		<li><defName>Mining</defName><amount>3</amount></li>
+		<li><defName>Social</defName><amount>-2</amount></li>
     </skillGains>
 
     <forcedTraits>

@@ -56,7 +56,7 @@
 
 		<allowedArrivalTemperatureRange>
 			<min>-5</min>
-			<max>9000</max>
+			<max>200</max>
 		</allowedArrivalTemperatureRange>
 		
     <pawnGroupMakers>
