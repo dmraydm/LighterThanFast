@@ -50,10 +50,10 @@
 			<li>(153, 153, 255)</li>
 			<li>(255, 153, 102)</li>
 			-->
+
 			<li>(150, 0, 255)</li>
-			<li>(150, 150, 255)</li>
-			<li>(255, 150, 100)</li>
-			<li>(200, 180, 0)</li>
+			<li>(220, 200, 250)</li>
+			<li>(220, 120, 250)</li>
 		</colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>

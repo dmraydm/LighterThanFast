@@ -51,20 +51,11 @@
 			<li>(51, 153, 51)</li>
 			-->
 			
-			<!-- <li>(150, 0, 170)</li> -->
-			<!-- <li>(200, 40, 250)</li> -->
-			
+			<!-- green -->
+			<li>(50, 250, 70)</li>
+			<li>(0, 180, 0)</li>
 			<!-- red -->
 			<li>(190, 0, 40)</li>
-			<li>(230, 70, 90)</li>
-			
-			<!-- green -->
-			<li>(100, 220, 120)</li>
-			<li>(0, 180, 0)</li>
-			
-			
-			
-
 		</colorSpectrum>
 
 		<mustStartOneEnemy>true</mustStartOneEnemy>

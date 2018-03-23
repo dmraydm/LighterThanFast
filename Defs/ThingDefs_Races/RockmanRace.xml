@@ -343,7 +343,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<baseHealthScale>1.5</baseHealthScale>
 	<baseHungerRate>1.5</baseHungerRate>
 	<foodType>OmnivoreHuman</foodType>
-	<gestationPeriodDays>45</gestationPeriodDays>
+	<gestationPeriodDays>100</gestationPeriodDays>
 	<litterSizeCurve>
 		<points>
 			<li>(0.5, 0)</li>

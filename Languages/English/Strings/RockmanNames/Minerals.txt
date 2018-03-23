@@ -28,6 +28,7 @@ Angelite
 Anglesite
 Anhydrite
 Ankerite
+Ankoleite
 Annabergite
 Anorthite
 Anorthosite
@@ -157,7 +158,6 @@ Clinoptilolite
 Coal
 Cobalt
 Cobaltite
-Cobaltite
 Cobaltocalcite
 Coconinoite
 Coesite
@@ -177,8 +177,8 @@ Corundum
 Covellite
 Creedite
 Cristobalite
-Crocoite
 Crocidolite
+Crocoite
 Cryolite
 Cubanite
 Cumengite
@@ -190,10 +190,9 @@ Cyanotrichite
 Cylindrite
 Danburite
 Datolite
-Datolite
-Descloizite
 Demantoid
 Deposits
+Descloizite
 Diaboleite
 Diamond
 Digenite
@@ -235,7 +234,6 @@ Fayalite
 Fedorite
 Feldspar
 Ferberite
-Ferro-edenite
 Ferroglaucophane
 Fiedlerite
 Flint
@@ -249,7 +247,6 @@ Fuchsite
 Fulgarite
 Gadolinite
 Gahnite
-Galena
 Galena
 Garnet
 Gaspeite
@@ -309,8 +306,8 @@ Hypersthene
 Ice
 Idocrase
 Igneous
-Ilvaite
 Ilmenite
+Ilvaite
 Indicolite
 Inesite
 Iolite
@@ -366,7 +363,6 @@ Liroconite
 Lithiophilite
 Lollingite
 Lorenzenite
-Larimar
 Ludlamite
 Macphersonite
 Magnesite
@@ -377,7 +373,6 @@ Manganese
 Manganite
 Marble
 Marcasite
-Marcasite
 Massicot
 Melanite
 Melanophlogite
@@ -385,12 +380,6 @@ Melanterite
 Meneghinite
 Mercury
 Mesolite
-Meta-ankoleite
-Meta-autunite
-Meta-torbernite
-Meta-uranocircite
-Meta-variscite
-Meta-zeunerite
 Metamorphic
 Meteorites
 Miargyrite
@@ -398,18 +387,17 @@ Mica
 Microcline
 Microlite
 Milarite
-Milky_quartz
 Millerite
 Mimetite
-Minasgeraisite -
+Minasgeraisite
 Mineraloids
 Minium
 Mixite
 Moctezumite
 Moissanite
 Moldavite
-Molybdenum
 Molybdenite
+Molybdenum
 Monazite
 Montebrasite
 Montmorillonite
@@ -437,9 +425,8 @@ Norbergite
 Obsidian
 Okenite
 Oligoclase
-Olivine
-Olivine
 Olivenite
+Olivine
 Onyx
 Opal
 Organics
@@ -513,17 +500,16 @@ Rhodolite
 Rhodonite
 Richterite
 Riebeckite
-Rock_crystal
+Rock_Crystal
 Rockbridgeite
 Romanechite
 Rosasite
-Rose_quartz
 Roselite
 Ruby
 Rutile
 Safflorite
 Sainfeldite
-Sal_ammoniac
+Sal_Ammoniac
 Samarskite
 Sanbornite
 Sandstone
@@ -559,7 +545,6 @@ Sjogrenite
 Sklodowskite
 Skutterudite
 Smithsonite
-Smoky_quartz
 Sodalite
 Spangolite
 Sperrylite
@@ -567,7 +552,6 @@ Spessartine
 Sphaerocobaltite
 Sphalerite
 Sphene
-Spinel
 Spinel
 Spodumene
 Staurolite
@@ -616,8 +600,8 @@ Thorogummite
 Tin
 Tinaksite
 Tincalconite
-Titanium
 Titanite
+Titanium
 Topaz
 Topazolite
 Torbernite

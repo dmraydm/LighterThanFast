@@ -46,9 +46,9 @@
 		</baseTraderKinds>
 		
 		<colorSpectrum>
-			<li>(153, 51, 0)</li>
-			<li>(204, 153, 0)</li>
-			<li>(102, 102, 51)</li>
+			<li>(150, 40, 0)</li>
+			<li>(200, 150, 0)</li>
+			<li>(100, 100, 50)</li>
 		</colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>
