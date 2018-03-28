@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Lighter than fast</name>
+	<name>Lighter Than Fast</name>
 	<author>Gouda quiche</author>
 	<url>about:blank</url>
 	<targetVersion>0.18.1722</targetVersion>
 	<description>Add 5 races from Faster Than Light : 
-- Engi
-- Mantis
-- Rockman
-- Slug
-- Zoltan
+	- Engi, poor at combat, yet skilled builders
+	- Mantis, fast, feared fighter, poor builder
+	- Rockmen, slow, lot of hp, fireproof
+	- Slug, xenophobe, high psychic resistance
+	- Zoltan, glows, generates power, explodes upon death
+	
+Dependencies:
+	- Humanoid Alien Races 2.0
+
+More Faster Than Light in RimWorld:
+	- Crystal
+	- Clone Bay
 </description>
 </ModMetaData>

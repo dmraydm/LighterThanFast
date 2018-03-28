@@ -211,7 +211,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 
 	<graphicPaths>
 		<li>
-			<headOffset>(0,	.01)</headOffset>
+			<headOffset>(0,	.015)</headOffset>
 			<body>Zoltan/Body/</body>
 			<head>Zoltan/Head/</head>
 			<skeleton>Humanoid/RotenBody/Zoltan/ZoltanRoten</skeleton>

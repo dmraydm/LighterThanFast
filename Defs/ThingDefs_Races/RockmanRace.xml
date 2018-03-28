@@ -8,12 +8,12 @@
     <description>The Rockmen, as they have been nicknamed by humans, are called so because of their unique skin which according to scientific experiments can be nearly as hard and rugged as solid rock. Additionally, the Rockmen are extremely well conditioned and physically strong to compensate for their thick rock-like skin, giving them an astounding resilience. As a result of their physical attributes, the Rockmen have evolved throughout their race's existence into a warrior race which values personal strength and martial prowess over nearly everything else.
 While the Rockmen are generally not an adventurous race, and can only be consistently located within their own territories' borders, the Rockmen are liable to open fire on any ship they encounter that they aren't familiar with. Still, there are always exceptions to the rule, and having Rockmen crew can be very beneficial. Also, from random occurrences, some Rockmen seem to be quite religious.
 	
-- 150% hp 
-- 110% mining
-- 133% carrying capacity
-- 90%s speed
-- Natural armor
-- Fireproof, comfy temp over 9000 (frost may bite though)
++ 150% Health scale
++ 110% mining
++ Fireproof, comfy temp over 9000 (frost may bite though)
++ Natural armor
+- 85% speed
+- 150% Hunger rate
 - 105% psychic sensitivity to depict religious inclination
 	</description>
         
@@ -24,7 +24,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<ComfyTemperatureMax>9999</ComfyTemperatureMax>
 		<LeatherAmount>50</LeatherAmount>
 		<MarketValue>2000</MarketValue>
-		<MoveSpeed>4.15</MoveSpeed>
+		<MoveSpeed>3.92</MoveSpeed>
 		<Flammability>0</Flammability>
 		<CarryingCapacity>100</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
@@ -103,7 +103,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		
 		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
 		<alienPartGenerator>
-			<customDrawSize>(1.25, 1.15)</customDrawSize>
+			<customDrawSize>(1.25, 1.2)</customDrawSize>
 			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
 			<alienbodytypes>
 				<li>Female</li>
@@ -211,11 +211,11 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!--race has their own beds-->
 	<!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
 
-		<maleGenderProbability>.5</maleGenderProbability>
+		<maleGenderProbability>.85</maleGenderProbability>
 				
 		<forcedRaceTraitEntries>
 			<li><defName>Ascetic</defName><chance>30</chance></li>		
-			<li><defName>SpeedOffset</defName><degree>-1</degree><chance>30</chance></li>
+			<li><defName>SpeedOffset</defName><degree>-1</degree><chance>10</chance></li>
 		</forcedRaceTraitEntries>
 		
 		<!--
@@ -229,7 +229,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 
 	<graphicPaths>
 		<li>
-			<headOffset>(0,	-0.01)</headOffset>
+			<headOffset>(0,	-0.025)</headOffset>
 			<body>Rockman/Body/</body>
 			<head>Rockman/Head/</head>
 			<skeleton>Humanoid/RotenBody/Rock/RockRoten</skeleton>
