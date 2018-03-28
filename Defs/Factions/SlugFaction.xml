@@ -6,7 +6,7 @@
 		<description>Far from nebula homelands slugs</description>
 		<pawnsPlural>untrustworthy slugs</pawnsPlural>
 		
-		<baseSelectionWeight>1</baseSelectionWeight>
+		<baseSelectionWeight>.4</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Slug/npcZoom</homeIconPath>

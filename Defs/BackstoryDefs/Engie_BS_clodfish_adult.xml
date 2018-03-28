@@ -4,7 +4,7 @@
     <defName>EngieAdultClodfish01</defName>
     <title>Mad scientist</title>
     <titleShort>Mad scientist</titleShort>
-	<baseDescription>Wishing for a perfectly deterministic universe Name spent HIS days crafting predictive algorithms. After another failed attempt due to the irrational feelings of races like the humans, rockmen and mantis, NAME came to a cold horrible realisation. The only way the universe will be balanced would be without those races. NAME started his mechanoid program with outstanding results. </baseDescription>
+	<baseDescription>Wishing for a perfectly deterministic universe NAME spent HIS days crafting predictive algorithms. After another failed attempt due to the irrational feelings of races like the humans, rockmen and mantis, NAME came to a cold horrible realisation. The only way the universe will be balanced would be without those races. NAME started his mechanoid program with outstanding results. </baseDescription>
     <slot>Adulthood</slot>
 <!--    <bodyTypeGlobal>Male</bodyTypeGlobal>-->
       <spawnCategories>
@@ -89,7 +89,7 @@
     <defName>EngieAdultClodfish05</defName>
     <title>Ship builder</title>
     <titleShort>Ship builder</titleShort>
-	<baseDescription>Needing work name applied to the Varcalia ship yards to help build federation stealth cruisers. Starting as a mere plasma welder NAME worked HIS way up with pure elbow grease until HE found herself as a team leader of a plasma welding team. Sometimes when HE watches those ships fly into a sea of stars HE wonders if HE could be more than what HE is.</baseDescription>
+	<baseDescription>Needing work NAME applied to the Varcalia ship yards to help build federation stealth cruisers. Starting as a mere plasma welder NAME worked HIS way up with pure elbow grease until HE found herself as a team leader of a plasma welding team. Sometimes when HE watches those ships fly into a sea of stars HE wonders if HE could be more than what HE is.</baseDescription>
     <slot>Adulthood</slot>
     <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
 	<spawnCategories>

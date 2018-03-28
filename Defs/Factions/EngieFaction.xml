@@ -6,7 +6,7 @@
 		<description>Some wild Engies</description>
 		<pawnsPlural>D state engies</pawnsPlural>
 		
-		<baseSelectionWeight>2</baseSelectionWeight>
+		<baseSelectionWeight>.7</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Engie/npcZoom</homeIconPath>

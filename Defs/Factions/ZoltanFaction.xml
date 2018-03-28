@@ -6,7 +6,7 @@
 		<description>Source energy seeking Zoltans</description>
 		<pawnsPlural>Bright Zoltans</pawnsPlural>
 		
-		<baseSelectionWeight>1</baseSelectionWeight>
+		<baseSelectionWeight>.45</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Zoltan/npcZoom</homeIconPath>

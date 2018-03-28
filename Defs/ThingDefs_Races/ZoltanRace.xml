@@ -8,8 +8,8 @@
 	
 Being ingenious experts of technology, the Zoltan race pioneered a unique ship-based shielding technology which can be found on nearly every Zoltan vessel. These shields are very difficult to breach, however they cannot regenerate during a battle - unless a Shield Overcharger drone is deployed. Therefore, once they are impacted by enemy fire enough to deactivate them, Zoltan vessels must rely on conventional shielding systems. They and the Engi control many sectors, but they themselves are rarely seen outside them.
 
-- 110% Research
-- 120% Recruit prisonner chance / Diplomacy power
+- 105% Research
+- 115% Recruit prisoner chance
 - 85% Health 
 - Explodes upon death
 - Glows in the dark
@@ -28,7 +28,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<Flammability>1.0</Flammability>
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
-		<ResearchSpeed>1.1</ResearchSpeed>
+		<ResearchSpeed>1.05</ResearchSpeed>
 		
 		<MiningSpeed>1.0</MiningSpeed>
 		<SocialImpact>1.0</SocialImpact>
@@ -39,8 +39,8 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<ArmorRating_Blunt>.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>.15</ArmorRating_Sharp>
 		
-		<RecruitPrisonerChance>1.2</RecruitPrisonerChance>
-		<DiplomacyPower>1.2</DiplomacyPower>
+		<RecruitPrisonerChance>1.15</RecruitPrisonerChance>
+		<!-- <DiplomacyPower>1.1</DiplomacyPower> -->
     </statBases>
 	
 	<comps>

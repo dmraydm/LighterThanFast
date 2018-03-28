@@ -6,7 +6,7 @@
 		<description>granite and slate chunks come to life. Limestone is ok.</description>
 		<pawnsPlural>mighty rockmen</pawnsPlural>
 		
-		<baseSelectionWeight>.5</baseSelectionWeight>
+		<baseSelectionWeight>.3</baseSelectionWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
