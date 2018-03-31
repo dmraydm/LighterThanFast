@@ -54,38 +54,55 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<ShootingAccuracy>1.25</ShootingAccuracy>
 		<MeleeHitChance>1.3</MeleeHitChance>
 		<MeleeDodgeChance>1.05</MeleeDodgeChance>
-		<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+		
     </statBases>
 
 	<verbs>
 			<li>
 			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.55</defaultCooldownTime>
-			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<defaultCooldownTime>2</defaultCooldownTime>
+			<meleeDamageBaseAmount>4</meleeDamageBaseAmount>
 			<meleeDamageDef>Blunt</meleeDamageDef>
 			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 		</li>
 		<li>
 			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.55</defaultCooldownTime>
-			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<defaultCooldownTime>2</defaultCooldownTime>
+			<meleeDamageBaseAmount>4</meleeDamageBaseAmount>
 			<meleeDamageDef>Blunt</meleeDamageDef>
 			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 		</li>
+		
 		<li>
 			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<defaultCooldownTime>1.6</defaultCooldownTime>
 			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-			<meleeDamageDef>Scratch</meleeDamageDef>
+			<meleeDamageDef>Stab</meleeDamageDef>
 			<linkedBodyPartsGroup>LeftHandClawsGroup</linkedBodyPartsGroup>
 		</li>
 		<li>
 			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.5</defaultCooldownTime>
+			<defaultCooldownTime>1.6</defaultCooldownTime>
 			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-			<meleeDamageDef>Scratch</meleeDamageDef>
+			<meleeDamageDef>Stab</meleeDamageDef>
 			<linkedBodyPartsGroup>RightHandClawsGroup</linkedBodyPartsGroup>
 		</li>
+		
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.2</defaultCooldownTime>
+			<meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>2.2</defaultCooldownTime>
+			<meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+			<meleeDamageDef>Cut</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHandClawsGroup</linkedBodyPartsGroup>
+		</li>
+		
 	</verbs>
 	<!--
 	<verbs>
@@ -530,6 +547,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
     <recipes>
 		<li>LTF_InstallLeftSteelClaws</li>
 		<li>LTF_InstallRightSteelClaws</li>	
+		<li>LTF_InstallLeftPlasteelClaws</li>
+		<li>LTF_InstallRightPlasteelClaws</li>	
 <!-- -->
 		<li>InstallPowerClaw</li>
 		<li>InstallScytherBlade</li>

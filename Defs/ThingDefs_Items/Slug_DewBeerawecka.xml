@@ -19,7 +19,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
 	<stackLimit>75</stackLimit>
     <statBases>
-		<MarketValue>0.1</MarketValue>
+		<MarketValue>4.3</MarketValue>
 		<Mass>.8</Mass>
 		<MaxHitPoints>10</MaxHitPoints>
     </statBases>

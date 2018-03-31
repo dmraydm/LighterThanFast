@@ -3,7 +3,7 @@
 	
 	<!-- T1 -->
 	<!-- research -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieResearchRom</defName>
 		<label>romRes1</label>
 		<description>A researching field enhanced ROM. May have downsides.</description>
@@ -18,14 +18,14 @@
 			<Steel>10</Steel>
 			<Gold>1</Gold>
 			<Plasteel>5</Plasteel>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
 			<Wort>100</Wort>
 			<!-- TODO -->
 		</costList>
 	</ThingDef>
 	<!-- T2 -->
 	<!-- research -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieResearch2Rom</defName>
 		<label>romRes2</label>
 		<description>A researching field enhanced ROM. May have downsides.</description>
@@ -38,12 +38,12 @@
 		
 		<costList>
 			<DevilstrandCloth>50</DevilstrandCloth>
-			<LTF_EngieResearchRom>2</LTF_EngieResearchRom>
+			<LTF_EngieResearchRom>1</LTF_EngieResearchRom>
 		</costList>
 	</ThingDef>
 	<!-- K1 -->
 	<!-- research -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT3">
 		<defName>LTF_EngieResearchKrom</defName>
 		<label>kromRes1</label>
 		<description>A researching field enhanced ROM. May have downsides.</description>
@@ -56,7 +56,7 @@
 		
 		<costList>
 			<LTF_Kraptyl>50</LTF_Kraptyl>
-			<LTF_EngieCook2Rom>2</LTF_EngieCook2Rom>
+			<LTF_EngieResearch2Rom>2</LTF_EngieResearch2Rom>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
 			<Telescope>1</Telescope>
 			<InsectJelly>10</InsectJelly>

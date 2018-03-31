@@ -72,7 +72,6 @@
 		
 		<initialSeverity>1</initialSeverity>
 
-
 		<makesAlert>true</makesAlert>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<defaultLabelColor>(.9, .8, 1)</defaultLabelColor>

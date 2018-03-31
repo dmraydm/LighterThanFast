@@ -40,6 +40,11 @@ namespace NewHatcher
             }
         }
 
+        public Faction SayFaction()
+        {
+            return ownFaction;
+        }
+
         private bool Time2Release()
         {
             bool test = (this.ticksLeft <= 0);

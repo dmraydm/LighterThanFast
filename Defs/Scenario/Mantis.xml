@@ -74,12 +74,7 @@
 		</levelRange>
 	</li>
 
-		<!-- Starting research -->
-	<li Class="ScenPart_StartingResearch">
-		<def>StartingResearch</def>
-		<project>LTF_Research_MantisBlade</project>
-	</li>
-	
+
 	<!-- Player starting things -->
 		<li Class="ScenPart_StartingThing_Defined">
 			<def>StartingThing_Defined</def>

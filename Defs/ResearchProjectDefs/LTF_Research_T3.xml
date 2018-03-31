@@ -7,14 +7,15 @@
 		<label>Engie T3 things.</label>
 		<description>Required to craft T3 roms.
 ie up to 125% research if you install t3 research rom.
+
 [EngiCraftBench]</description>
 		<baseCost>1500</baseCost>
-		<techLevel>Spacer</techLevel>
+		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>LTF_Research_EngieT2Roms</li>
 		</prerequisites>
-		<researchViewX>6</researchViewX>
+		<researchViewX>3</researchViewX>
 		<researchViewY>.5</researchViewY>
 	</ResearchProjectDef>	
 

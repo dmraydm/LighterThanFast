@@ -3,7 +3,7 @@
 
 	<!-- T1 -->
 	<!--Tame -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieTamingRom</defName>
 		<label>romTam1</label>
 		<description>A taming ways enhanced ROM. May have dowsides.</description>
@@ -15,13 +15,13 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
 			<Hay>100</Hay>
 		</costList>
 	</ThingDef>
 	<!-- T2 -->
 	<!--Tame -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieTaming2Rom</defName>
 		<label>romTam2</label>
 		<description>A taming ways enhanced ROM. May have dowsides.</description>
@@ -33,7 +33,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieTamingRom>2</LTF_EngieTamingRom>
+			<LTF_EngieTamingRom>1</LTF_EngieTamingRom>
 			<Milk>5</Milk>
 			<EggChickenFertilized>5</EggChickenFertilized>
 		</costList>

@@ -2,7 +2,7 @@
 <Defs>
 	<!-- T1 -->
 	<!--Construct-->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieConstructRom</defName>
 		<label>romCon1</label>
 		<description>A building area enhanced ROM. May have dowsides. </description>
@@ -29,7 +29,7 @@
 	</ThingDef>
 	<!-- T2 -->
 	<!--Construct-->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieConstruct2Rom</defName>
 		<label>romCon2</label>
 		<description>A building area enhanced ROM. May have dowsides. </description>
@@ -41,7 +41,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieConstructRom>2</LTF_EngieConstructRom>
+			<LTF_EngieConstructRom>1</LTF_EngieConstructRom>
 		</costList>
 		
 		<costStuffCount>105</costStuffCount>
@@ -52,7 +52,7 @@
 	</ThingDef>
 		<!-- T3 -->
 	<!--Construct-->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT3">
 		<defName>LTF_EngieConstruct3Rom</defName>
 		<label>romCon3</label>
 		<description>A building area enhanced ROM. May have dowsides. </description>

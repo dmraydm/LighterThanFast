@@ -60,7 +60,7 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 	<!-- Starting research -->
 	<li Class="ScenPart_StartingResearch">
 		<def>StartingResearch</def>
-		<project>LTF_Research_ShieldHelm</project>
+		<project>LTF_Research_Shieldmet</project>
 	</li>
 	
 	<!-- Player starting things -->

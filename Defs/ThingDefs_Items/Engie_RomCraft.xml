@@ -2,7 +2,7 @@
 <Defs>
 	<!-- T1 -->
 	<!-- Craft -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieCraftRom</defName>
 		<label>romCra1</label>
 		<description>A crafting perimeter enhanced ROM. May have downsides.</description>
@@ -22,7 +22,7 @@
 	</ThingDef>
 	<!-- T2 -->
 	<!-- Craft -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieCraft2Rom</defName>
 		<label>romCra2</label>
 		<description>A crafting perimeter enhanced ROM. May have downsides.</description>
@@ -34,13 +34,13 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieCraftRom>2</LTF_EngieCraftRom>
+			<LTF_EngieCraftRom>1</LTF_EngieCraftRom>
 			<Apparel_CowboyHat>5</Apparel_CowboyHat>
 		</costList>
 	</ThingDef>
 	<!-- T2 -->
 	<!-- Craft -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT3">
 		<defName>LTF_EngieCraft3Rom</defName>
 		<label>romCra3</label>
 		<description>A crafting perimeter enhanced ROM. May have downsides.</description>

@@ -3,7 +3,7 @@
 	
 	<!-- T1 -->
 	<!-- cook -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieCookRom</defName>
 		<label>romCook1</label>
 		<description>A cooking field enhanced ROM. May have downsides.</description>
@@ -22,7 +22,7 @@
 	</ThingDef>
 	<!-- T2 -->
 	<!-- cook -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieCook2Rom</defName>
 		<label>romCook2</label>
 		<description>A cooking field enhanced ROM. May have downsides.</description>
@@ -35,14 +35,14 @@
 		
 		<costList>
 			<Gold>1</Gold>
-			<LTF_EngieCookRom>2</LTF_EngieCookRom>
+			<LTF_EngieCookRom>1</LTF_EngieCookRom>
 			<MealFine>10</MealFine>
 			<Pemmican>1</Pemmican>
 		</costList>
 	</ThingDef>
 	<!-- K1 -->
 	<!-- cook -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT3">
 		<defName>LTF_EngieCookKrom</defName>
 		<label>kromCook1</label>
 		<description>A cooking field enhanced ROM. May have downsides.</description>

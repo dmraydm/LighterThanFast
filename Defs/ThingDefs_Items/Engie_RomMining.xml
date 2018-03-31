@@ -3,7 +3,7 @@
 	
 	<!-- T1 -->
 	<!-- mining -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieMiningRom</defName>
 		<label>romMin1</label>
 		<description>A mininging field enhanced ROM. May have downsides.</description>
@@ -15,7 +15,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
 			<ChunkSlagSteel>3</ChunkSlagSteel>
 		</costList>
 		<!--
@@ -29,7 +29,7 @@
 	</ThingDef>
 	<!-- T2 -->
 	<!-- mining -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieMining2Rom</defName>
 		<label>romMin2</label>
 		<description>A mininging field enhanced ROM. May have downsides.</description>
@@ -41,7 +41,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieMiningRom>2</LTF_EngieMiningRom>
+			<LTF_EngieMiningRom>1</LTF_EngieMiningRom>
 			<ChunkSlagSteel>7</ChunkSlagSteel>
 		</costList>
 		

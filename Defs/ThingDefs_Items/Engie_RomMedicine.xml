@@ -3,7 +3,7 @@
 	
 	<!-- T1 -->
 	<!-- medicine -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieMedicineRom</defName>
 		<label>romMed1</label>
 		<description>A medicineing field enhanced ROM. May have downsides.</description>
@@ -15,7 +15,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
 			<HerbalMedicine>5</HerbalMedicine>
 		</costList>
 		
@@ -23,7 +23,7 @@
 <!-- T2 -->
 	<!-- medicine -->
 	
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieMedicine2Rom</defName>
 		<label>romMed2</label>
 		<description>A medicineing field enhanced ROM. May have downsides.</description>
@@ -36,14 +36,14 @@
 		
 		<costList>
 			<Gold>2</Gold>
-			<LTF_EngieMedicineRom>2</LTF_EngieMedicineRom>
+			<LTF_EngieMedicineRom>1</LTF_EngieMedicineRom>
 			<Medicine>5</Medicine>
 			<Penoxycyline>1</Penoxycyline>
 		</costList>
 	</ThingDef>
 <!-- K1 -->
 	<!-- medicine -->	
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT3">
 		<defName>LTF_EngieMedicineKrom</defName>
 		<label>kromMed1</label>
 		<description>A medicining field enhanced ROM. May have downsides.</description>

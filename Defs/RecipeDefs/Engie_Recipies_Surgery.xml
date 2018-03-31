@@ -87,10 +87,12 @@
 	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
 </RecipeDef>
 <RecipeDef Name="LTF_InstallT2Rom" ParentName="LTF_InstallRom" Abstract="true">
-	<researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite>
+	<!-- <researchPrerequisite>LTF_Research_EngieT2Roms</researchPrerequisite> -->
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
 </RecipeDef>
 <RecipeDef Name="LTF_InstallT3Rom" ParentName="LTF_InstallRom" Abstract="true">
-	<researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite>
+	<!-- <researchPrerequisite>LTF_Research_EngieT3Roms</researchPrerequisite> -->
+	<researchPrerequisite>LTF_Research_EngieT1Roms</researchPrerequisite>
 </RecipeDef>
 
 

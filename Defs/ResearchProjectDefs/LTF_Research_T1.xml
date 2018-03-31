@@ -3,54 +3,84 @@
 	
 <!--=============================== Tier 1: cool ===================================-->
 
+<!-- Engi -->
 	<ResearchProjectDef>
 		<defName>LTF_Research_EngieT1Roms</defName>
 		<label>Engie T1 things</label>
-		<description>Required to craft and install engi roms.
-[EngiCraftBench][SurgeryRecipe]</description>
+		<description>Required to craft T1 roms.
+Required to install any Engi roms.
+		
+[EngiCraftBench]
+[SurgeryRecipe]</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>MicroelectronicsBasics</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>1</researchViewX>
 		<researchViewY>.5</researchViewY>
 	</ResearchProjectDef>
+<!-- Mantis -->
+		<ResearchProjectDef>
+		<defName>LTF_Research_MantisBladeT1</defName>
+		<label>Mantis sharpen</label>
+		<description>Plasteel and Mantis claws synergize unexpectedly well.
 
+[EngiCraftBench]
+[ElectricSmithy]
+[FueledSmithy]</description>
+		
+		<baseCost>1200</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>LTF</tab>
+		<prerequisites>
+			<li>LTF_Research_MantisBladeT0</li>
+			<li>LongBlades</li>
+			<li>LTF_Research_EngieBench</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.8</researchViewY>
+	</ResearchProjectDef>
+<!-- Slug	 -->
 	<ResearchProjectDef>
 		<defName>LTF_Research_SlugProducts</defName>
 		<label>Slug amateur</label>
 		<description>Torturing nature recipes.
+		
 - Egg + dew = more dew
 - Egg + krap chunk = more chunk
 - Fertilized egg + krap chunk = ???
 You can also throw these eggs for results.
+
 [ButcherTable]</description>
-		<baseCost>500</baseCost>
+		<baseCost>700</baseCost>
 		<techLevel>Industrial</techLevel>
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>LTF_Research_Slug</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>1</researchViewX>
 		<researchViewY>4.4</researchViewY>
 	</ResearchProjectDef>
-
+<!-- Zoltan -->
 	<ResearchProjectDef>
-		<defName>LTF_Research_ShieldHelm</defName>
-		<label>shield helms</label>
+		<defName>LTF_Research_Shieldmet</defName>
+		<label>Shieldmet</label>
 		<description>Helmet and bench doing shields together.
-[EngiCraftBench][Smithy]</description>
-		<baseCost>1500</baseCost>
-		<techLevel>Industrial</techLevel>
+A worn shieldmet will stock shield layers if a shield bench fills it.
+		
+[EngiCraftBench]</description>
+		<baseCost>1300</baseCost>
+		<techLevel>Spacer</techLevel>
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>Smithing</li>
 			<li>Greatbows</li>
 			<li>MicroelectronicsBasics</li>
+			<li>LTF_Research_ZoltanShieldBench</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>1</researchViewX>
 		<researchViewY>5.7</researchViewY>
 	</ResearchProjectDef>
 	

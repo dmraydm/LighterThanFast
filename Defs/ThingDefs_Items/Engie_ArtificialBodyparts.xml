@@ -71,6 +71,7 @@
 			<Flammability>1.2</Flammability>
 			<Beauty>-2</Beauty>
 		</statBases>
+		
 		<costList>
 			<Gold>1</Gold>
 			<Plasteel>5</Plasteel>
@@ -85,11 +86,21 @@
 			<Flammability>1.2</Flammability>
 			<Beauty>-4</Beauty>
 		</statBases>
+		
 		<costList>
 			<Plasteel>5</Plasteel>
 			<Gold>1</Gold>
 			<LTF_EngieRawRom>1</LTF_EngieRawRom>
 		</costList>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieRomT1" ParentName="LTF_EngieRom" Abstract="True" >
+			<researchPrerequisites><li>LTF_Research_EngieT1Roms</li></researchPrerequisites>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieRomT2" ParentName="LTF_EngieRom" Abstract="True" >
+			<researchPrerequisites><li>LTF_Research_EngieT2Roms</li></researchPrerequisites>
+	</ThingDef>
+	<ThingDef Name ="LTF_EngieRomT3" ParentName="LTF_EngieRom" Abstract="True" >
+			<researchPrerequisites><li>LTF_Research_EngieT3Roms</li></researchPrerequisites>
 	</ThingDef>
 
 </Defs>

@@ -67,12 +67,14 @@ Thanks Psyonix ! When is the new version §§§
 		<soundWorking>Recipe_Machining</soundWorking>
 		<recipeUsers>
 			<li>LTF_EngieBench</li>
+			<!--
 			<li>ElectricSmithy</li>
 			<li>FueledSmithy</li>
+			-->
 		</recipeUsers>
 	</recipeMaker>
 	
-	<researchPrerequisites><li>LTF_Research_ShieldHelm</li></researchPrerequisites>
+	<researchPrerequisites><li>LTF_Research_Shieldmet</li></researchPrerequisites>
 	
 	<apparel>
 		<wornGraphicPath>Things/Apparel/Shieldmet/Shieldmet</wornGraphicPath>

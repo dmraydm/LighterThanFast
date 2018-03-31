@@ -3,7 +3,7 @@
 	
 	<!-- T1 -->
 	<!-- social -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT1">
 		<defName>LTF_EngieSocialRom</defName>
 		<label>romSoc1</label>
 		<description>A socialing field enhanced ROM. May have downsides.</description>
@@ -15,14 +15,14 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieRawRom>1</LTF_EngieRawRom>
+			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
 			<SmokeleafJoint>5</SmokeleafJoint>
 			<!-- TODO -->
 		</costList>
 	</ThingDef>
 	<!-- T2 -->
 	<!-- social -->
-	<ThingDef ParentName="LTF_EngieRom">
+	<ThingDef ParentName="LTF_EngieRomT2">
 		<defName>LTF_EngieSocial2Rom</defName>
 		<label>romSoc2</label>
 		<description>A socialing field enhanced ROM. May have downsides.</description>
@@ -34,7 +34,7 @@
 		</graphicData>
 		
 		<costList>
-			<LTF_EngieSocialRom>2</LTF_EngieSocialRom>
+			<LTF_EngieSocialRom>1</LTF_EngieSocialRom>
 			<MealLavish>5</MealLavish>
 		</costList>
 	</ThingDef>
