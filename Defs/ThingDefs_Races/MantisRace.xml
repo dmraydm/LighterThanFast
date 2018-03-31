@@ -224,6 +224,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					-->
 					<hediffGraphics>
 						<Hediff_LTF_LeftSteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftSteelClaws>
+						<Hediff_LTF_LeftPlasteelClaws>Mantis/SyntClaws/Left/Left</Hediff_LTF_LeftPlasteelClaws>
 					</hediffGraphics>
 				</li>
 				<!-- Right claw-->
@@ -270,6 +271,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					-->
 					<hediffGraphics>
 						<Hediff_LTF_RightSteelClaws>Mantis/SyntClaws/Right/Right</Hediff_LTF_RightSteelClaws>
+						<Hediff_LTF_RightPlasteelClaws>Mantis/SyntClaws/Right/Right</Hediff_LTF_RightPlasteelClaws>
 					</hediffGraphics>
 				</li>
                 <!-- MantisStache-->
