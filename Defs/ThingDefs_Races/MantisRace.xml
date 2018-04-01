@@ -166,7 +166,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
                 </li>    
 		</factionRelations>
 	
-		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<!-- <pawnsSpecificBackstories>true</pawnsSpecificBackstories> -->
+		<pawnsSpecificBackstories>false</pawnsSpecificBackstories>
 		<alienPartGenerator>
 			<!-- -->
 			<alienbodytypes>
@@ -194,7 +195,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<!-- +-0.2 -->
 								<Female>(-.415,	.15)</Female>
 								<Thin>(-.415,	.15)</Thin>
-								<Hulk>(-.315,	.15)</Hulk>
+								<Hulk>(-.25,	.15)</Hulk>
+								<Fat>(-.25,	.15)</Fat>
 							</bodyTypes>
 						</front>
 						<!-- seen left ~ M -0.024 F -->
@@ -202,8 +204,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							<bodyTypes>
 								<Male>(	-.12,	.52)</Male>
 								<Female>(-.035,	.52)</Female>
-								<Thin>(	-.13,	.52)</Thin>
-								<Hulk>(	-.13,	.52)</Hulk>
+								<Thin>(	-.035,	.52)</Thin>
+								<Hulk>(	-.2,	.52)</Hulk>
+								<Fat>(	-.2,	.52)</Fat>
 							</bodyTypes>
 						</back>
 						<!-- Left side -->
@@ -211,9 +214,10 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							<bodyTypes>
 								<!--<Male>(-0.65,.1)</Male>-->
 								<Male>(-.65,	.15)</Male>
-								<Female>(-.65,	.15)</Female>
-								<Thin>(-.65,	.15)</Thin>
+								<Female>(-.62,	.15)</Female>
+								<Thin>(-.62,	.15)</Thin>
 								<Hulk>(-.65,	.15)</Hulk>
+								<Fat>(-.65,	.15)</Fat>
 							</bodyTypes>
 						</side>
 					</offsets>
@@ -241,7 +245,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Male>(-.53,	.15)</Male>
 								<Female>(-.46,	.15)</Female>
 								<Thin>(-.46,	.15)</Thin>
-								<Hulk>(-.55,	.15)</Hulk>
+								<!-- <Hulk>(-.46,	.15)</Hulk> -->
+								<Hulk>(-.61,	.15)</Hulk>
+								<Fat>(-.61,	.15)</Fat>
 							</bodyTypes>
 						</front>
 						<!-- seen right -->
@@ -250,17 +256,20 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							<bodyTypes>
 								<Male>(	.09,	.52)</Male>
 								<Female>(0.005,	.52)</Female>
-								<Thin>(	.08,	.52)</Thin>
-								<Hulk>(	.08,	.52)</Hulk>
+								<Thin>(0.005,	.52)</Thin>
+								<!-- <Hulk>(	.08,	.52)</Hulk> -->
+								<Hulk>(	.17,	.52)</Hulk>
+								<Fat>(	.17,	.52)</Fat>
 							</bodyTypes>
 						</back>
 						<side>
 							<bodyTypes>
 								<!--<Male>(-0.65,.1)</Male>-->
 								<Male>(-.65,	.15)</Male>
-								<Female>(-.65,	.15)</Female>
-								<Thin>(-.65,	.15)</Thin>
+								<Female>(-.62,	.15)</Female>
+								<Thin>(-.62,	.15)</Thin>
 								<Hulk>(-.65,	.15)</Hulk>
+								<Fat>(-.65,	.15)</Fat>
 							</bodyTypes>
 						</side>
 					</offsets>
@@ -290,6 +299,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Female>(-.42,	.5)</Female>
 								<Thin>(-.42,	.5)</Thin>
 								<Hulk>(-.42,	.5)</Hulk>
+								<Fat>(-.42,	.5)</Fat>
 							</bodyTypes>
 						</front>
 						<!-- side -->
@@ -297,8 +307,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 							<bodyTypes>
 								<Male>(-.42,	.5)</Male>
 								<Female>(-.48,	.5)</Female>
-								<Thin>(-.42,	.5)</Thin>
+								<Thin>(-.48,	.5)</Thin>
 								<Hulk>(-.42,	.5)</Hulk>
+								<Fat>(-.42,	.5)</Fat>
 							</bodyTypes>
 						</side>
 						<!-- back -->
@@ -308,6 +319,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Female>(0, .87)</Female>
 								<Thin>(0,	.85)</Thin>
 								<Hulk>(0,	.85)</Hulk>
+								<Fat>(0,	.85)</Fat>
 							</bodyTypes>
 						</back>
 					</offsets>
@@ -362,17 +374,11 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<!-- <chemicalSettings>.8</chemicalSettings> -->
 		<maleGenderProbability>.5</maleGenderProbability>    
 		<forcedRaceTraitEntries>
-			<!--<li><defName>Brawler</defName><chance>50</chance></li>-->
-
-			<li><defName>Greedy</defName><chance>10</chance></li>
 			<li><defName>Jealous</defName><chance>10</chance></li>
 			<li><defName>Bloodlust</defName><chance>10</chance></li>
-			<li><defName>Abrasive</defName><chance>10</chance></li>
-			<li><defName>Cannibal</defName><chance>10</chance></li>
-			<li><defName>Psychopath</defName><chance>10</chance></li>
 
-			<li><defName>SpeedOffset</defName><degree>1</degree><chance>50</chance></li>
-			<li><defName>SpeedOffset</defName><degree>2</degree><chance>30</chance></li>
+			<li><defName>SpeedOffset</defName><degree>1</degree><chance>20</chance></li>
+			<li><defName>SpeedOffset</defName><degree>2</degree><chance>10</chance></li>
 			
 		</forcedRaceTraitEntries>
 	</generalSettings>    
