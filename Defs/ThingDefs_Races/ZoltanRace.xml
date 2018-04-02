@@ -209,6 +209,56 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		
 	</generalSettings>    
 
+	<pawnKindSettings>
+    <alienslavekinds>
+        <li><kindDefs><li>ZoltanSlave</li></kindDefs><chance>10.0</chance></li>
+    </alienslavekinds>
+    <alienrefugeekinds>
+        <li><kindDefs><li>ZoltanRefugee</li></kindDefs><chance>10.0</chance></li>
+    </alienrefugeekinds>
+    <startingColonists>
+        <li>
+			<pawnKindEntries><li><kindDefs><li>ZoltanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+			<factionDefs>
+				<!-- <li>PlayerColony</li> -->
+				<li>PlayerTribe</li>
+				<li>ZoltanPlayerColony</li>
+			</factionDefs>
+        </li>
+    </startingColonists>
+
+    <alienwandererkinds>
+		<li>
+			<pawnKindEntries><li><kindDefs><li>Villager</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+        <li>
+            <pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>30.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+		
+		<li>
+            <pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>RockmanWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+            <factionDefs><li>ZoltanPlayerColony</li><li>PlayerTribe</li></factionDefs>
+        </li>
+
+    </alienwandererkinds>
+
+	</pawnKindSettings>
+
+	
 	<graphicPaths>
 		<li>
 			<headOffset>(0,	.015)</headOffset>
@@ -218,79 +268,16 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 			<skull>Humanoid/Skull/Zoltan/ZoltanSkull</skull>
 		</li>
 	</graphicPaths>
-
 	<hairSettings>
 		<hasHair>false</hasHair>
 	</hairSettings>
-
 	<relationSettings>
 	</relationSettings>
-
-	<pawnKindSettings>
-		<alienslavekinds>
-			<li>
-				<kindDefs>
-					<li>ZoltanSlave</li>
-				</kindDefs>
-				<chance>40.0</chance>
-			</li>
-		</alienslavekinds>
-		
-		<alienrefugeekinds>
-			<li>
-			<kindDefs>
-				<li>ZoltanRefugee</li>
-			</kindDefs>
-			<chance>40.0</chance>
-			</li>
-		</alienrefugeekinds>
-		
-		<startingColonists>
-			<li>
-			<pawnKindEntries>
-				<li>
-					<kindDefs>
-						<li>ZoltanColonist</li>
-					</kindDefs>
-					<chance>10.0</chance>
-				</li>
-				</pawnKindEntries>
-				<factionDefs>
-					<li>ZoltanPlayerColony</li>
-					<li>PlayerTribe</li>
-				</factionDefs>
-			</li>
-		</startingColonists>
-		
-		<alienwandererkinds>
-		<li>
-		<pawnKindEntries>
-		<li>
-			<kindDefs>
-				<li>ZoltanHunter</li>
-				<li>ZoltanHistGuard</li>
-				<li>ZoltanColonist</li>
-				<li>ZoltanShadowscale</li>
-				<li>ZoltanHistSpeaker</li>
-				<li>ZoltanFighter</li>
-			</kindDefs>
-		<chance>50.0</chance>
-		</li>
-		</pawnKindEntries>
-		<factionDefs>
-			<li>ZoltanPlayerColony</li>
-			<li>PlayerTribe</li>
-		</factionDefs>
-		</li>
-		</alienwandererkinds>
-	</pawnKindSettings>
- 
 	<thoughtSettings>
 		<cannotReceiveThoughts></cannotReceiveThoughts>
 		<ateThoughtSpecific></ateThoughtSpecific>
 		<replacerList></replacerList>
 	</thoughtSettings>
-
 	<raceRestriction>
 	</raceRestriction>
 
@@ -311,20 +298,19 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <leatherMarketValueFactor>3</leatherMarketValueFactor>
       <nameCategory>HumanStandard</nameCategory>
       <body>Zoltan</body>
-	  
-	  <!--<body>Human</body>-->
+		  <!--<body>Human</body>-->
       <baseBodySize>.9</baseBodySize>
       <baseHealthScale>.85</baseHealthScale>
       <baseHungerRate>1.0</baseHungerRate>
       <foodType>OmnivoreHuman</foodType>
       <gestationPeriodDays>45</gestationPeriodDays>
       <litterSizeCurve>
-        <points>
-          <li>(.5, 0)</li>
-          <li>(1, 1)</li>
-          <li>(1.01, 0.02)</li>
-          <li>(3.5, 0)</li>
-        </points>
+		<points>
+			<li>(.5, 0)</li>
+			<li>(1, 1)</li>
+			<li>(1.01, 0.02)</li>
+			<li>(3.5, 0)</li>
+		</points>
       </litterSizeCurve>
       <lifeStageAges>
         <li><def>HumanlikeBaby</def><minAge>0</minAge></li>
@@ -366,7 +352,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<!--<li>Zoltan</li>-->
 		<!-- TODO -->
       </hediffGiverSets>
-</race>
+	</race>
     <recipes>
 		<!-- <li>InstallOvipositor</li> -->
 		<!--base-->

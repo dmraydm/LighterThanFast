@@ -11,8 +11,15 @@
 		
 		<homeIconPath>Mantis/npcZoom</homeIconPath>
 		<expandingIconTexture>Mantis/npc</expandingIconTexture>
-		
+
+		<canSiege>true</canSiege>
 		<canMakeRandomly>true</canMakeRandomly>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(40, 3)</li>
+				<li>(500, 1)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
 		<canStageAttacks>true</canStageAttacks>
 
 		<factionNameMaker>NamerFactionMantisVillage</factionNameMaker>
@@ -70,29 +77,30 @@
       <li>
         <kindDef>Normal</kindDef>
         <options>
-          <MantisColonist>50</MantisColonist>
-          <MantisGuard>90</MantisGuard>
-          <MantisHistSpeaker>250</MantisHistSpeaker>
-          <MantisFighter>100</MantisFighter>
-          <MantisHunter>130</MantisHunter>
-          <MantisHistGuard>130</MantisHistGuard>
-          <MantisShadowscale>170</MantisShadowscale>
+			<MantisColonist>50</MantisColonist>
+			<MantisGuard>90</MantisGuard>
+			<MantisGrenadier>50</MantisGrenadier>
+			<MantisFighter>100</MantisFighter>
+			<MantisHunter>80</MantisHunter>
+			<MantisHistGuard>40</MantisHistGuard>
+			<MantisShadowscale>10</MantisShadowscale>
         </options>
       </li>
 	  <li>
       <kindDef>Trader</kindDef>
         <traders>
-          <MantisTrader>1</MantisTrader>
+			<MantisTrader>1</MantisTrader>
         </traders>
         <carriers>
-          <Muffalo>2</Muffalo>
-          <Dromedary>2</Dromedary>
+			<Muffalo>2</Muffalo>
+			<Dromedary>2</Dromedary>
         </carriers>
         <guards>
-          <MantisGuard>90</MantisGuard>
-          <MantisFighter>100</MantisFighter>
-          <MantisHunter>130</MantisHunter>
-          <MantisHistGuard>130</MantisHistGuard>
+			<MantisGrenadier>20</MantisGrenadier>
+			<MantisGuard>50</MantisGuard>
+			<MantisFighter>100</MantisFighter>
+			<MantisHunter>50</MantisHunter>
+			<MantisHistGuard>15</MantisHistGuard>
         </guards>
       </li>
 	  <li>
@@ -100,11 +108,10 @@
         <options>
           <MantisColonist>50</MantisColonist>
           <MantisGuard>90</MantisGuard>
-          <MantisHistSpeaker>250</MantisHistSpeaker>
           <MantisFighter>100</MantisFighter>
-          <MantisHunter>130</MantisHunter>
-          <MantisHistGuard>130</MantisHistGuard>
-          <MantisShadowscale>170</MantisShadowscale>
+          <MantisHunter>50</MantisHunter>
+          <MantisHistGuard>100</MantisHistGuard>
+          <MantisShadowscale>100</MantisShadowscale>
         </options>
       </li>
     </pawnGroupMakers>

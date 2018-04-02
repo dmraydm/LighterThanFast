@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Zoltan</defName>
+		<alienRace>
+	<pawnKindSettings>
+    <alienslavekinds>
+        <li><kindDefs><li>ZoltanSlave</li></kindDefs><chance>10.0</chance></li>
+    </alienslavekinds>
+    <alienrefugeekinds>
+        <li><kindDefs><li>ZoltanRefugee</li></kindDefs><chance>10.0</chance></li>
+    </alienrefugeekinds>
+    <startingColonists>
+        <li>
+			<pawnKindEntries><li><kindDefs><li>ZoltanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+			<factionDefs>
+				<li>PlayerColony</li>
+				<li>PlayerTribe</li>
+				<li>ZoltanPlayerColony</li>
+			</factionDefs>
+        </li>
+    </startingColonists>
+    <alienwandererkinds>
+		<li>
+			<pawnKindEntries><li><kindDefs><li>Villager</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+        <li>
+            <pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>30.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+		
+		<li>
+            <pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>RockmanWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+		<li>
+            <pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+            <factionDefs><li>PlayerColony</li></factionDefs>
+        </li>
+
+    </alienwandererkinds>
+	</pawnKindSettings>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

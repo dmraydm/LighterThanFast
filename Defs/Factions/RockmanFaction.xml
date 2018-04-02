@@ -12,6 +12,7 @@
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
 		<expandingIconTexture>Rockman/npc</expandingIconTexture>
 		
+		<canSiege>true</canSiege>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
 
@@ -21,7 +22,9 @@
 		<backstoryCategory>RockmanBackstory</backstoryCategory>		
 
 		<hairTags>
-			<li>Rockman</li>
+			<li>Rural</li>
+			<li>Tribal</li>
+			<li>Empty</li>
 		</hairTags>
 		
 		<startingGoodwill>
@@ -63,13 +66,14 @@
       <li>
         <kindDef>Normal</kindDef>
         <options>
-          <RockmanColonist>50</RockmanColonist>
-          <RockmanGuard>90</RockmanGuard>
-          <RockmanHistSpeaker>250</RockmanHistSpeaker>
-          <RockmanFighter>100</RockmanFighter>
-          <RockmanHunter>130</RockmanHunter>
-          <RockmanHistGuard>130</RockmanHistGuard>
-          <RockmanShadowscale>170</RockmanShadowscale>
+          <RockmanColonist>30</RockmanColonist>
+          <RockmanGuard>40</RockmanGuard>
+		  <RockmanGrenadier>100</RockmanGrenadier>
+          <RockmanHistSpeaker>10</RockmanHistSpeaker>
+          <RockmanFighter>50</RockmanFighter>
+          <RockmanHunter>40</RockmanHunter>
+          <RockmanHistGuard>10</RockmanHistGuard>
+          <RockmanShadowscale>5</RockmanShadowscale>
         </options>
       </li>
 	  <li>
@@ -82,22 +86,26 @@
           <Dromedary>2</Dromedary>
         </carriers>
         <guards>
-          <RockmanGuard>90</RockmanGuard>
-          <RockmanFighter>100</RockmanFighter>
-          <RockmanHunter>130</RockmanHunter>
-          <RockmanHistGuard>130</RockmanHistGuard>
+			<RockmanGrenadier>100</RockmanGrenadier>
+			<RockmanGuard>40</RockmanGuard>
+			<RockmanFighter>50</RockmanFighter>
+			<RockmanHunter>20</RockmanHunter>
+			<RockmanHistGuard>10</RockmanHistGuard>
+			<RockmanShadowscale>5</RockmanShadowscale>
+			<RockmanHistSpeaker>20</RockmanHistSpeaker>
         </guards>
       </li>
 	  <li>
         <kindDef>FactionBase</kindDef>
         <options>
-          <RockmanColonist>50</RockmanColonist>
-          <RockmanGuard>90</RockmanGuard>
-          <RockmanHistSpeaker>250</RockmanHistSpeaker>
-          <RockmanFighter>100</RockmanFighter>
-          <RockmanHunter>130</RockmanHunter>
-          <RockmanHistGuard>130</RockmanHistGuard>
-          <RockmanShadowscale>170</RockmanShadowscale>
+			<RockmanGrenadier>100</RockmanGrenadier>
+			<RockmanColonist>50</RockmanColonist>
+			<RockmanGuard>20</RockmanGuard>
+			<RockmanHistSpeaker>20</RockmanHistSpeaker>
+			<RockmanFighter>80</RockmanFighter>
+			<RockmanHunter>50</RockmanHunter>
+			<RockmanHistGuard>40</RockmanHistGuard>
+			<RockmanShadowscale>10</RockmanShadowscale>
         </options>
       </li>
     </pawnGroupMakers>

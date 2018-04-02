@@ -106,21 +106,13 @@
 		</li>
 	</comps>
 	
-	<!-- <weaponTags> -->
-      <!-- <li>GrenadeEMP</li> -->
-    <!-- </weaponTags> -->
-	
 	<thingCategories>
 		<li>WeaponsRanged</li>
     	<li>AnimalProductRaw</li>
-		<!-- <li>Grenades</li> -->
     </thingCategories>
 	<techLevel>Neolithic</techLevel>
 	
 	<researchPrerequisites><li>LTF_Research_SlugProducts</li></researchPrerequisites>
-
-	
-	
 </ThingDef>
 
 <!-- DewEgg projectile -->

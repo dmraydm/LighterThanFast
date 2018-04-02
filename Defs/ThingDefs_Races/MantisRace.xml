@@ -195,8 +195,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<!-- +-0.2 -->
 								<Female>(-.415,	.15)</Female>
 								<Thin>(-.415,	.15)</Thin>
-								<Hulk>(-.25,	.15)</Hulk>
-								<Fat>(-.25,	.15)</Fat>
+								<Hulk>(-0.29,	.15)</Hulk>
+								<Fat>(-0.29,	.15)</Fat>
 							</bodyTypes>
 						</front>
 						<!-- seen left ~ M -0.024 F -->
@@ -246,8 +246,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Female>(-.46,	.15)</Female>
 								<Thin>(-.46,	.15)</Thin>
 								<!-- <Hulk>(-.46,	.15)</Hulk> -->
-								<Hulk>(-.61,	.15)</Hulk>
-								<Fat>(-.61,	.15)</Fat>
+								<Hulk>(-.57,	.15)</Hulk>
+								<Fat>(-.57,	.15)</Fat>
 							</bodyTypes>
 						</front>
 						<!-- seen right -->
@@ -395,6 +395,55 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		</li>
 	</graphicPaths>
 
+	<pawnKindSettings>
+		<alienslavekinds>
+			<li><kindDefs><li>MantisSlave</li></kindDefs><chance>10.0</chance></li>
+		</alienslavekinds>
+		<alienrefugeekinds>
+			<li><kindDefs><li>MantisRefugee</li></kindDefs><chance>10.0</chance></li>
+		</alienrefugeekinds>
+		<startingColonists>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>MantisColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+				
+				<factionDefs>
+					<li>MantisPlayerColony</li>
+					<li>PlayerTribe</li>
+					<!-- <li>MantisPlayerColony</li> -->
+				</factionDefs>
+			</li>
+		</startingColonists>
+		
+		<alienwandererkinds>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>Villager</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>30.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>RockmanWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+				<factionDefs><li>MantisPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+		</alienwandererkinds>
+		
+	</pawnKindSettings>
+	
+	
 	<hairSettings>
 		<hasHair>true</hasHair>
 		<hairTags>
@@ -402,72 +451,13 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 			<li>EmptyHair</li>
 		</hairTags>
 	</hairSettings>
-
 	<relationSettings>
 	</relationSettings>
-
-	<pawnKindSettings>
-		<alienslavekinds>
-			<li>
-				<kindDefs>
-					<li>MantisSlave</li>
-				</kindDefs>
-				<chance>40.0</chance>
-			</li>
-		</alienslavekinds>
-		<alienrefugeekinds>
-			<li>
-				<kindDefs>
-					<li>MantisRefugee</li>
-				</kindDefs>
-				<chance>40.0</chance>
-			</li>
-		</alienrefugeekinds>
-		<startingColonists>
-			<li>
-			<pawnKindEntries>
-				<li>
-				<kindDefs>
-					<li>MantisColonist</li>
-				</kindDefs>
-				<chance>10.0</chance>
-				</li>
-			</pawnKindEntries>
-				<factionDefs>
-					<li>MantisPlayerColony</li>
-					<li>PlayerTribe</li>
-					<!-- <li>KestrelPlayerColony</li> -->
-				</factionDefs>
-			</li>
-		</startingColonists>
-		<alienwandererkinds>
-			<li>
-				<pawnKindEntries>
-					<li>
-						<kindDefs>
-							<li>MantisHunter</li>
-							<li>MantisHistGuard</li>
-							<li>MantisColonist</li>
-							<li>MantisShadowscale</li>
-							<li>MantisHistSpeaker</li>
-							<li>MantisFighter</li>
-						</kindDefs>
-						<chance>50.0</chance>
-					</li>
-				</pawnKindEntries>
-				<factionDefs>
-					<li>MantisPlayerColony</li> 
-				</factionDefs>
-			</li>
-		</alienwandererkinds>
-	</pawnKindSettings>
- 
 	<thoughtSettings>
 		<cannotReceiveThoughts></cannotReceiveThoughts>
 		<ateThoughtSpecific></ateThoughtSpecific>
 		<replacerList></replacerList>
 	</thoughtSettings>
-
 	<raceRestriction>
 	</raceRestriction>
 

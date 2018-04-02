@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Rockman</defName>
+		<alienRace>
+			<pawnKindSettings>
+				<alienslavekinds>
+					<li><kindDefs><li>RockmanSlave</li></kindDefs><chance>10.0</chance></li>
+				</alienslavekinds>
+				<alienrefugeekinds>
+					<li><kindDefs><li>RockmanRefugee</li></kindDefs><chance>10.0</chance></li>
+				</alienrefugeekinds>
+				<startingColonists>
+					<li>
+						<pawnKindEntries><li><kindDefs><li>RockmanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+						<factionDefs>
+							<!-- <li>PlayerColony</li> -->
+							<li>PlayerTribe</li>
+							<li>RockmanPlayerColony</li>
+						</factionDefs>
+					</li>
+				</startingColonists>
+				<alienwandererkinds>
+					<li><pawnKindEntries><li><kindDefs><li>Villager</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+						<factionDefs><li>Outlander</li></factionDefs>
+					</li>
+					<li><pawnKindEntries><li><kindDefs><li>RockmanWanderer</li></kindDefs><chance>30.0</chance></li></pawnKindEntries>
+						<factionDefs><li>RockmanFaction</li></factionDefs>
+					</li>
+					<li><pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>7.5</chance></li></pawnKindEntries>
+						<factionDefs><li>MantisFaction</li></factionDefs>
+					</li>
+					<li><pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+						<factionDefs><li>SlugFaction</li></factionDefs>
+					</li>
+					<li><pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>7.5</chance></li></pawnKindEntries>
+						<factionDefs><li>EngieFaction</li></factionDefs>
+					</li>
+					<li><pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+						<factionDefs><li>ZoltanFaction</li></factionDefs>
+					</li>
+				</alienwandererkinds>
+			</pawnKindSettings>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

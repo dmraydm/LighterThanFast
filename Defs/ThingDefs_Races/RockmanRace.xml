@@ -120,47 +120,26 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 				<li>Moon</li>
 				<li>Raw</li>
 			</aliencrowntypes>
-			<!--
-			<alienbodytypes>
-				<li>Female</li>
-				<li>Male</li>
-			</alienbodytypes>
-			-->
+
 			<useGenderedHeads>true</useGenderedHeads>
 			<!-- <useGenderedBodies>true</useGenderedBodies> -->
-			<!--
-			<alienbodytypes>
-				<li>Female</li>
-				<li>Male</li>
-			</alienbodytypes>
-			<aliencrowntypes>
-				<li>Circle</li>
-				<li>Veggy</li>
-				<li>Animal</li>
-				<li>Moai</li>
-			</aliencrowntypes>
-			<alienbodytypes>
-				<li>Thin</li>
-				<li>Female</li>
-				<li>Male</li>
-			</alienbodytypes>
--->
+
             <alienskinsecondcolorgen Class="ColorGenerator_Options">
                 <options>
-					<li><weight>10</weight><only>RGBA(.7,0,1,1)</only></li>		
 					<!-- violet blue-->
+					<li><weight>10</weight><only>RGBA(.7,0,1,1)</only></li>		
                     <li><weight>10</weight><only>RGBA(.5,0,1,1)</only></li>
+					
 					<!-- red -->
                     <li><weight>30</weight><only>RGBA(1,0,0,1)</only></li>
 					<li><weight>25</weight><only>RGBA(1,.3,0,1)</only></li>
+					
 					<!-- orange -->
 					<li><weight>20</weight><only>RGBA(1,.5,0,1)</only></li>
 					<li><weight>15</weight><only>RGBA(1,.8,0,1)</only></li>
+					
 					<!-- yellow -->
 					<li><weight>10</weight><only>RGBA(1,1,0,1)</only></li>
-
-
-
                 </options>
             </alienskinsecondcolorgen>
 			
@@ -179,8 +158,6 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 					<li><weight>10</weight><only>(70,70,70)</only></li>
 				<!-- marble-->
 					<li><weight>10</weight><only>(132,135,132)</only></li>
-					
-
 				</options>
 			</alienskincolorgen>
 		</alienPartGenerator>
@@ -192,17 +169,10 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<maleGenderProbability>.85</maleGenderProbability>
 				
 		<forcedRaceTraitEntries>
-			<li><defName>Ascetic</defName><chance>30</chance></li>		
+			<li><defName>Ascetic</defName><chance>10</chance></li>		
 			<li><defName>SpeedOffset</defName><degree>-1</degree><chance>10</chance></li>
 		</forcedRaceTraitEntries>
 		
-		<!--
-		<disallowedTraits>
-               <li>Jealous</li>
-			   <li>Greedy</li>
-			   <li>Nudist</li>
-		</disallowedTraits>
-		-->
 	</generalSettings>    
 
 	<graphicPaths>
@@ -215,77 +185,58 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		</li>
 	</graphicPaths>
 
-	<hairSettings>
-		<hasHair>false</hasHair>
-	</hairSettings>
-
-	<relationSettings>
-	</relationSettings>
-
-	<pawnKindSettings>
-            <alienslavekinds>
-                <li>
-                    <kindDefs>
-                        <li>RockmanSlave</li>
-                    </kindDefs>
-                    <chance>40.0</chance>
-                </li>
-            </alienslavekinds>
-            <alienrefugeekinds>
-                <li>
-                    <kindDefs>
-						<li>RockmanRefugee</li>
-                    </kindDefs>
-                    <chance>40.0</chance>
-                </li>
-            </alienrefugeekinds>
-			
+		<pawnKindSettings>
+			<alienslavekinds>
+				<li><kindDefs><li>RockmanSlave</li></kindDefs><chance>10.0</chance></li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li><kindDefs><li>RockmanRefugee</li></kindDefs><chance>10.0</chance></li>
+			</alienrefugeekinds>
 			<startingColonists>
 				<li>
-					<pawnKindEntries>
-						<li>
-							<kindDefs>
-								<li>RockmanColonist</li>
-							</kindDefs>
-							<chance>10.0</chance>
-						</li>
-					</pawnKindEntries>
+					<pawnKindEntries><li><kindDefs><li>RockmanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
 					<factionDefs>
-						<li>RockmanPlayerColony</li>
+						<!-- <li>PlayerColony</li> -->
 						<li>PlayerTribe</li>
-						<!-- <li>KestrelPlayerColony</li> -->
+						<li>RockmanPlayerColony</li>
 					</factionDefs>
 				</li>
 			</startingColonists>
-            <alienwandererkinds>
-                <li>
-                    <pawnKindEntries>
-                        <li>
-                            <kindDefs>
-                                <li>RockmanHunter</li>
-								<li>RockmanHistGuard</li>
-								<li>RockmanColonist</li>
-								<li>RockmanShadowscale</li>
-								<li>RockmanHistSpeaker</li>
-								<li>RockmanFighter</li>
-                            </kindDefs>
-                            <chance>50.0</chance>
-                        </li>
-                    </pawnKindEntries>
-                    <factionDefs>
-                        <li>RockmanPlayerColony</li> 
-                    </factionDefs>
-                </li>
-            </alienwandererkinds>
-	</pawnKindSettings>
- 
+			
+			<alienwandererkinds>
+				<li><pawnKindEntries>
+						<li><kindDefs><li>Villager</li><li>RockmanWanderer</li>
+						</kindDefs><chance>40.0</chance></li>
+					</pawnKindEntries>
+					<factionDefs><li>PlayerTribe</li><li>RockmanPlayerColony</li></factionDefs>
+				</li>
+				<li><pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>7.5</chance></li></pawnKindEntries>
+					<factionDefs><li>PlayerTribe</li><li>RockmanPlayerColony</li></factionDefs>
+				</li>
+				<li><pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+					<factionDefs><li>PlayerTribe</li><li>RockmanPlayerColony</li></factionDefs>
+				</li>
+				<li><pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>7.5</chance></li></pawnKindEntries>
+					<factionDefs><li>PlayerTribe</li><li>RockmanPlayerColony</li></factionDefs>
+				</li>
+				<li><pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+					<factionDefs><li>PlayerTribe</li><li>RockmanPlayerColony</li></factionDefs>
+				</li>
+			</alienwandererkinds>
+			
+		</pawnKindSettings>
+	
+	<hairSettings>
+		<hasHair>false</hasHair>
+	</hairSettings>
+	<relationSettings>
+	</relationSettings>
 	<thoughtSettings>
 		<ateThoughtSpecific></ateThoughtSpecific>
 
 		<replacerList>
 		</replacerList>
 	</thoughtSettings>
-	
 	<raceRestriction>
 	</raceRestriction>
 

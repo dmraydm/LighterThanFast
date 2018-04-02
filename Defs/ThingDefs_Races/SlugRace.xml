@@ -202,92 +202,67 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		</li>
 	</graphicPaths>
 
+	<pawnKindSettings>
+		<alienslavekinds>
+			<li><kindDefs><li>SlugSlave</li></kindDefs><chance>10.0</chance></li>
+		</alienslavekinds>
+		<alienrefugeekinds>
+			<li><kindDefs><li>SlugRefugee</li></kindDefs><chance>10.0</chance></li>
+		</alienrefugeekinds>
+		<startingColonists>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>SlugColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
+				<factionDefs>
+					<li>SlugPlayerColony</li>
+					<li>PlayerTribe</li>
+					<!-- <li>SlugPlayerColony</li> -->
+				</factionDefs>
+			</li>
+		</startingColonists>
+		
+		<alienwandererkinds>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>Villager</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>SlugWanderer</li></kindDefs><chance>40.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>MantisWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>RockmanWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>EngieWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries><li><kindDefs><li>ZoltanWanderer</li></kindDefs><chance>5.0</chance></li></pawnKindEntries>
+				<factionDefs><li>SlugPlayerColony</li><li>PlayerTribe</li></factionDefs>
+			</li>
+		</alienwandererkinds>
+		
+	</pawnKindSettings>
+	
 	<hairSettings>
 		<hasHair>true</hasHair>
 		<hairTags>
 			<li>SlugHair</li>
 		</hairTags>
 	</hairSettings>
-
 	<relationSettings>
 	</relationSettings>
-
-	<pawnKindSettings>
-            <alienslavekinds>
-                <li>
-                    <kindDefs>
-                        <li>SlugSlave</li>
-                    </kindDefs>
-                    <chance>40.0</chance>
-                </li>
-            </alienslavekinds>
-            <alienrefugeekinds>
-                <li>
-                    <kindDefs>
-						<li>SlugRefugee</li>
-                    </kindDefs>
-                    <chance>40.0</chance>
-                </li>
-            </alienrefugeekinds>
-			<startingColonists>
-				<li>
-				<pawnKindEntries>
-					<li>
-                    <kindDefs>
-						<li>SlugColonist</li>
-                    </kindDefs>
-                    <chance>10.0</chance>
-					</li>
-				</pawnKindEntries>
-					<factionDefs>
-						<li>SlugPlayerColony</li>
-						<li>PlayerTribe</li>
-						<!-- <li>KestrelPlayerColony</li>  -->
-					</factionDefs>
-				</li>
-			</startingColonists>
-            <alienwandererkinds>
-                <li>
-                    <pawnKindEntries>
-                        <li>
-                            <kindDefs>
-                                <li>SlugHunter</li>
-								<li>SlugHistGuard</li>
-								<li>SlugColonist</li>
-								<li>SlugShadowscale</li>
-								<li>SlugHistSpeaker</li>
-								<li>SlugFighter</li>
-                            </kindDefs>
-                            <chance>50.0</chance>
-                        </li>
-                    </pawnKindEntries>
-                    <factionDefs>
-                        <li>SlugPlayerColony</li> 
-                    </factionDefs>
-                </li>
-            </alienwandererkinds>
-	</pawnKindSettings>
- 
 	<thoughtSettings>
 		<cannotReceiveThoughts></cannotReceiveThoughts>
 		<ateThoughtSpecific></ateThoughtSpecific>
 		<replacerList></replacerList>
 	</thoughtSettings>
-
 	<raceRestriction>
-	<!--
-	    <buildingList>
-                <li>HoneyCapsule</li>
-                <li>HoneyVat</li>
-                <li>ApiniWaxFloor</li>
-                <li>ApiniWaxTile</li>
-    </buildingList>
-    
-    <conceptList>
-        <li>BeeswaxMaking</li>
-        <li>ApiniMakingHoney</li>
-    </conceptList>
-	-->
 	</raceRestriction>
 
 </alienRace>

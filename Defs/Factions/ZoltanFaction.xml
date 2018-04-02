@@ -12,6 +12,7 @@
 		<homeIconPath>Zoltan/npcZoom</homeIconPath>
 		<expandingIconTexture>Zoltan/npc</expandingIconTexture>
 		
+		<canSiege>true</canSiege>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canStageAttacks>true</canStageAttacks>
 
@@ -21,7 +22,10 @@
 		<backstoryCategory>ZoltanBackstory</backstoryCategory>		
 
 		<hairTags>
-			<li>Zoltan</li>
+			<!-- <li>Crystal</li> -->
+			<li>Urban</li>
+			<li>Punk</li>
+			<li>Empty</li>
 		</hairTags>
 		
 		<startingGoodwill>
@@ -64,49 +68,48 @@
 			<max>50</max>
 		</allowedArrivalTemperatureRange>
 		
-    <pawnGroupMakers>
-      <li>
-        <kindDef>Normal</kindDef>
-        <options>
-          <ZoltanColonist>50</ZoltanColonist>
-          <ZoltanGuard>90</ZoltanGuard>
-          <ZoltanHistSpeaker>250</ZoltanHistSpeaker>
-          <ZoltanFighter>100</ZoltanFighter>
-          <ZoltanHunter>130</ZoltanHunter>
-          <ZoltanHistGuard>130</ZoltanHistGuard>
-          <ZoltanShadowscale>170</ZoltanShadowscale>
-        </options>
-      </li>
-	  <li>
-      <kindDef>Trader</kindDef>
-        <traders>
-          <ZoltanTrader>1</ZoltanTrader>
-        </traders>
-        <carriers>
-          <Muffalo>2</Muffalo>
-          <Dromedary>2</Dromedary>
-        </carriers>
-        <guards>
-          <ZoltanGuard>90</ZoltanGuard>
-          <ZoltanFighter>100</ZoltanFighter>
-          <ZoltanHunter>130</ZoltanHunter>
-          <ZoltanHistGuard>130</ZoltanHistGuard>
-        </guards>
-      </li>
-	  <li>
-        <kindDef>FactionBase</kindDef>
-        <options>
-          <ZoltanColonist>50</ZoltanColonist>
-          <ZoltanGuard>90</ZoltanGuard>
-          <ZoltanHistSpeaker>250</ZoltanHistSpeaker>
-          <ZoltanFighter>100</ZoltanFighter>
-          <ZoltanHunter>130</ZoltanHunter>
-          <ZoltanHistGuard>130</ZoltanHistGuard>
-          <ZoltanShadowscale>170</ZoltanShadowscale>
-        </options>
-      </li>
-    </pawnGroupMakers>
+		<pawnGroupMakers>
+			<li><kindDef>Normal</kindDef>
+				<options>
+					<ZoltanColonist>50</ZoltanColonist>
+					<ZoltanGuard>90</ZoltanGuard>
+					<ZoltanGrenadier>20</ZoltanGrenadier>
+					<ZoltanHistSpeaker>50</ZoltanHistSpeaker>
+					<ZoltanFighter>5</ZoltanFighter>
+					<ZoltanHunter>80</ZoltanHunter>
+					<ZoltanHistGuard>10</ZoltanHistGuard>
+					<ZoltanShadowscale>5</ZoltanShadowscale>
+				</options>
+			</li>
+			<li><kindDef>Trader</kindDef>
+				<traders>
+					<ZoltanTrader>4</ZoltanTrader>
+					<ZoltanArmlessTrader>1</ZoltanArmlessTrader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<ZoltanGrenadier>50</ZoltanGrenadier>
+					<ZoltanGuard>90</ZoltanGuard>
+					<ZoltanFighter>5</ZoltanFighter>
+					<ZoltanHunter>90</ZoltanHunter>
+					<ZoltanHistGuard>80</ZoltanHistGuard>
+					<ZoltanHistSpeaker>20</ZoltanHistSpeaker>
+				</guards>
+			</li>
+			<li><kindDef>FactionBase</kindDef>
+				<options>
+					<ZoltanColonist>50</ZoltanColonist>
+					<ZoltanGuard>90</ZoltanGuard>
+					<ZoltanHistSpeaker>50</ZoltanHistSpeaker>
+					<ZoltanFighter>5</ZoltanFighter>
+					<ZoltanHunter>40</ZoltanHunter>
+					<ZoltanHistGuard>100</ZoltanHistGuard>
+					<ZoltanShadowscale>50</ZoltanShadowscale>
+				</options>
+			</li>
+		</pawnGroupMakers>
 	</FactionDef>
-	  
-	
 </Defs>
