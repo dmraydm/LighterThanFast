@@ -4,7 +4,7 @@
 		<defName>WorkGiver_LTF_MindMine</defName>
 		<label>mind mines</label>
 		
-		<giverClass>NewHatcher.WorkGiver_LTF_MindMine</giverClass>
+		<giverClass>LighterThanFast.WorkGiver_LTF_MindMine</giverClass>
 		<!-- <workType>LayerSynthetize</workType> -->
 		<workType>Warden</workType>
 		

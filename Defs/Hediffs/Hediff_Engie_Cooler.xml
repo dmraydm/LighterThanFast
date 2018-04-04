@@ -21,7 +21,7 @@
 		</stages>
 		
 		<comps>
-			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+			<li Class="LighterThanFast.HeDiffCompProperties_LTF_Steamer">
 				<MinTicksBetweenSprays>2560</MinTicksBetweenSprays>
 				<MaxTicksBetweenSprays>5120</MaxTicksBetweenSprays>
 			</li>
@@ -54,7 +54,7 @@
 		</stages>
 		
 		<comps>
-			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+			<li Class="LighterThanFast.HeDiffCompProperties_LTF_Steamer">
 				<MinTicksBetweenSprays>1280</MinTicksBetweenSprays>
 				<MaxTicksBetweenSprays>2560</MaxTicksBetweenSprays>
 			</li>
@@ -82,7 +82,7 @@
 		</stages>
 		
 		<comps>
-			<li Class="NewHatcher.HeDiffCompProperties_LTF_Steamer">
+			<li Class="LighterThanFast.HeDiffCompProperties_LTF_Steamer">
 				<MinTicksBetweenSprays>640</MinTicksBetweenSprays>
 				<MaxTicksBetweenSprays>1280</MaxTicksBetweenSprays>
 			</li>

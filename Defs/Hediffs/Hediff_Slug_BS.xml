@@ -8,7 +8,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>1</spawnCount>
 
@@ -36,7 +36,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>3</spawnCount>
 
@@ -63,7 +63,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>7</spawnCount>
 			<minDaysB4Next>.6</minDaysB4Next>
@@ -91,14 +91,14 @@
 		
 		<comps>
 		<!--
-		<li Class="NewHatcher.HediffCompProperties_LTF_MegascarabSpawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_MegascarabSpawner">
 			<spawnIntervalRange>
 				<min>60000</min>
 				<max>120000</max>
 			</spawnIntervalRange>
 		</li>
 		-->
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<animalThing>true</animalThing>
 			<!--<thingToSpawn>insect</thingToSpawn>-->
 			<animalName>Megascarab</animalName>
@@ -126,7 +126,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>Megaspider_Meat</thingToSpawn>
 			<spawnCount>5</spawnCount>
 			<minDaysB4Next>1.5</minDaysB4Next>
@@ -152,7 +152,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>Yayo</thingToSpawn>
 			<spawnCount>2</spawnCount>
 

@@ -3,7 +3,7 @@
 	<WorkGiverDef>
 		<defName>WorkGiver_ShieldBench</defName>
 		<label>synthetizes a shield layer to transmit it to shield helm</label>
-		<giverClass>NewHatcher.WorkGiver_ShieldBench</giverClass>
+		<giverClass>LighterThanFast.WorkGiver_ShieldBench</giverClass>
 		<!-- <workType>LayerSynthetize</workType> -->
 		<workType>Crafting</workType>
 		<verb>synthetizes a shield layer</verb>

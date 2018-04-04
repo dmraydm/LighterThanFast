@@ -8,7 +8,7 @@
 	<!-- <label>zoltan Shield helm</label> -->
 	<!-- <labelShort>Z.t1shH</labelShort> -->
 	<label>shieldmet</label>
-	<thingClass>NewHatcher.LTF_ShieldHelm</thingClass>
+	<thingClass>LighterThanFast.LTF_ShieldHelm</thingClass>
 		
     <description>A single-person energy shield device. Contrary to the shield belt, this device will attempt to stop hits instead of damages. It means it can blocks either 4 squirrel scratchs either 4 rockets.
 	

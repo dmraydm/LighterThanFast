@@ -3,7 +3,7 @@
 
 	<JobDef>
 		<defName>JobDriver_LTF_MindMine</defName>
-		<driverClass>NewHatcher.JobDriver_LTF_MindMine</driverClass>
+		<driverClass>LighterThanFast.JobDriver_LTF_MindMine</driverClass>
 		<reportString>Get to know someone at TargetA.</reportString>
 	</JobDef>
 

@@ -8,7 +8,7 @@
 		<labelNoun>Tell me if you see this zoltanHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<minDaysB4Next>.3</minDaysB4Next>
@@ -22,7 +22,7 @@
 			<spawnVerb>1st law violation</spawnVerb>
 		</li>
 		<!--
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>

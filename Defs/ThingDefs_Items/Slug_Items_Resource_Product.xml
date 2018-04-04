@@ -86,7 +86,7 @@
 	<tickerType>Rare</tickerType>
 
 	<comps>
-		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>7</spawnCount>
 			<spawnIntervalRange>
@@ -205,7 +205,7 @@
 	<tickerType>Rare</tickerType>
 
 	<comps>
-		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>
@@ -299,9 +299,9 @@
 	<tickerType>Rare</tickerType>
 	
     <comps>
-		<li Class="NewHatcher.CompProperties_LTF_Steamer"/>
+		<li Class="LighterThanFast.CompProperties_LTF_Steamer"/>
 		
-		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.CompProperties_LTF_Spawner">
 			<!--<thingToSpawn>LTF_Krapken</thingToSpawn>-->
 			<!--<thingToSpawn>Chicken</thingToSpawn>-->
 			

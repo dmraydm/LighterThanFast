@@ -4,7 +4,7 @@
 		<defName>LTF_ShieldBench</defName>
 		<label>shield bench</label>
 		<thingClass>Building_WorkTable</thingClass>
-		<!-- <thingClass>Newhatcher.</thingClass> -->
+		
 		<description>A work station to synthetise shields layer for helm wearers in range.
 		
 - Needs to be located outdoors.
@@ -83,7 +83,7 @@ Falling on my head like a memory.</description>
 			</li>			
 			
 			<li>
-				<compClass>NewHatcher.Comp_LTF_SynthetizeShieldLayer</compClass>
+				<compClass>LighterThanFast.Comp_LTF_SynthetizeShieldLayer</compClass>
 			</li>
 			
 		</comps>

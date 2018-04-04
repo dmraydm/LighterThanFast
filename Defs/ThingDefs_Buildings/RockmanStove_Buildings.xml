@@ -109,7 +109,7 @@
 			<offset>(-0.1,5,-0.1)</offset>
 		</li>
 -->
-		<li Class="NewHatcher.CompProperties_LTF_Overlay">
+		<li Class="LighterThanFast.CompProperties_LTF_Overlay">
 			<!-- <fireSize>1</fireSize> -->
 			<!-- <fireSize>.5</fireSize> -->
 			<!-- <offset>(-0.1,5,-0.1)</offset> -->

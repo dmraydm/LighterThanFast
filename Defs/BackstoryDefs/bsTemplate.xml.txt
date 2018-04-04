@@ -1,18 +1,17 @@
-<Defs>
+﻿<Defs>
 <AlienRace.BackstoryDef>
     <defName>RockmanBSQuote13</defName>
     <title>Vermiculite</title>
     <titleShort>Vermiculite</titleShort>
-	<baseDescription>"Consciousness cannot be accounted for in physical terms. For consciousness is absolutely fundamental. It cannot be accounted for in terms of anything else." - Erwin Schrödinger</baseDescription>
+	<baseDescription>This is my story</baseDescription>
     <slot>Adulthood</slot>
 
 	<spawnCategories>
-		<li>RockmanBackstory</li>
+		<li>RelevantCategory</li>
 	</spawnCategories>
 	<skillGains>
 		<li><defName>Artistic</defName><amount>2</amount></li>
-    </skillGains>
-	
+	</skillGains>
 	<forcedTraits>
 		<li><defName>Nerves</defName><degree>1</degree><chance>70</chance></li>
 	</forcedTraits>
@@ -21,9 +20,8 @@
 </AlienRace.BackstoryDef>
 </Defs>	
 <!--
+Skills
 
-<skillGains>
-<li>	
 Animals
 Artistic
 Construction
@@ -36,8 +34,8 @@ Intellectual
 Shooting
 Social
 
-	Traits
-<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
+Traits
+
 Abrasive
 AnnoyingVoice
 Ascetic
@@ -75,7 +73,7 @@ TooSmart
 Wimp
 
 <workDisables>
-<li>
+
 Animals
 Caring
 Firefighting
@@ -86,6 +84,5 @@ Mining
 PlantWork
 Social
 Violent
-
 
 -->

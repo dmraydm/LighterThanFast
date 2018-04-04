@@ -3,7 +3,7 @@
 
   <JobDef>
     <defName>LTF_OperateShieldBench</defName>
-    <driverClass>NewHatcher.JobDriver_OperateShieldBench</driverClass>
+    <driverClass>LighterThanFast.JobDriver_OperateShieldBench</driverClass>
     <reportString>synthetizing shield layer at TargetA.</reportString>
   </JobDef>
 

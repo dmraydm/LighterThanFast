@@ -54,7 +54,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<!-- spawns eggs that spawn eneryg pods -->
 		<!-- à travers backstroy -->
 		<!--
-		<li Class="NewHatcher.HeDiffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HeDiffCompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_ZoltanEgg</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>

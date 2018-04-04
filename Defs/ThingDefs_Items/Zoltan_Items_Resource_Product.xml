@@ -31,7 +31,7 @@
 	<tickerType>Rare</tickerType>
 
 	<comps>
-	<li Class="NewHatcher.CompProperties_LTF_Spawner">
+	<li Class="LighterThanFast.CompProperties_LTF_Spawner">
         <thingToSpawn>LTF_ZoltanPod</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>

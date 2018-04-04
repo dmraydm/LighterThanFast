@@ -166,7 +166,7 @@
 			<eggProgressUnfertilizedMax>0.1</eggProgressUnfertilizedMax>
 			<eggCountRange>1</eggCountRange>
 		</li>-->
-		<li Class="NewHatcher.CompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>

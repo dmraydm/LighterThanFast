@@ -9,7 +9,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="NewHatcher.HediffCompProperties_LTF_Spawner">
+		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
 			<thingToSpawn>Chemfuel</thingToSpawn>
 			<spawnCount>5</spawnCount>
 			
