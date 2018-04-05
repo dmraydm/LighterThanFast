@@ -24,7 +24,7 @@ namespace LighterThanFast
                 //Comp_LTF_RegisterPawn comp_registerPawn = this.$this.job.targetA.Thing.TryGetComp<Comp_LTF_RegisterPawn>();
                 Comp_LTF_MindControl comp_mindControl = null;
                 comp_mindControl = job.targetA.Thing.TryGetComp<Comp_LTF_MindControl>();
-                return !(comp_mindControl.GotThePower() && comp_mindControl.ActorInRadius());
+                return !(comp_mindControl.GotThePower && comp_mindControl.ActorInRadius());
             });
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
             Toil work = new Toil();

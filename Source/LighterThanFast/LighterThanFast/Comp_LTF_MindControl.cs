@@ -155,7 +155,7 @@ namespace LighterThanFast
         {
             base.PostDraw();
  
-            if(!GotThePower())
+            if(!GotThePower)
             {
                 //Log.Warning("nopeverlay");
                 return;
@@ -187,7 +187,7 @@ namespace LighterThanFast
             Vector3 dotS = new Vector3(.11f, 1f, .11f);
             Matrix4x4 matrix = default(Matrix4x4);
 
-            if (!AreActorsSet()) {
+            if (!AreActorsSet) {
                 //Log.Warning("no actor need");
                 return;
             }
@@ -247,7 +247,7 @@ namespace LighterThanFast
             if (mindcontrolEnabled)
                 DrawPulse((Thing)parent, readyGfx, benchPos);
 
-            if (!IsWorkDone())
+            if (!IsWorkDone)
             {
                 //work needed indicator
                 DrawBar(benchPos, dotS, matrix, clockworkGfx, -1.26f, .56f);
@@ -796,9 +796,12 @@ namespace LighterThanFast
             return (mindTarget.kindDef.race.defName == "Human");
         }
 
-        public bool IsWorkDone()
+        public bool IsWorkDone
         {
-            return (mindcontrolEnabled);
+            get
+            {
+                return (mindcontrolEnabled);
+            }
         }
 
         public bool IsTargetSet()
@@ -809,9 +812,12 @@ namespace LighterThanFast
         {
             return (masterMind != null);
         }
-        public bool AreActorsSet()
+        public bool AreActorsSet
         {
-            return (IsTargetSet() && IsMasterMindSet());
+            get
+            {
+                return (IsTargetSet() && IsMasterMindSet());
+            }
         }
 
 
@@ -880,7 +886,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if ((!GotThePower()))
+            if ((!GotThePower))
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -900,7 +906,7 @@ namespace LighterThanFast
                 Messages.Message(mName + " did not find " + tName + " in radius.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
             }
-            if (!IsWorkDone())
+            if (!IsWorkDone)
             {
                 Messages.Message("Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -1027,7 +1033,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if ((!GotThePower()))
+            if ((!GotThePower))
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -1039,7 +1045,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if (!IsWorkDone())
+            if (!IsWorkDone)
             {
                 Messages.Message("Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -1072,7 +1078,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if ( (!GotThePower()) )
+            if ( (!GotThePower) )
             {
                 Messages.Message(parent.Label + " requires more power.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -1083,7 +1089,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if ( !IsWorkDone())
+            if ( !IsWorkDone)
             {
                 Messages.Message( "Work is not done.", this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
@@ -1194,9 +1200,12 @@ namespace LighterThanFast
             
         }
 
-        public bool GotThePower()
+        public bool GotThePower
         {
+            get
+            {
                 return ((this.powerComp != null) && (this.powerComp.PowerOn));
+            }
         }
         public bool ActorInRadius()
         {
@@ -1249,8 +1258,9 @@ namespace LighterThanFast
                     int victimNum = TryFindVictims(false, false).Count;
                     yield return new Command_Action
                     {
-                        defaultLabel = "Debug "+victimNum+" victims",
-                        defaultDesc = "victim debug through anatomy",
+                        defaultLabel = "Debug " + victimNum + " victims",
+                        defaultDesc = "debug victim through anatomy",
+                        icon = ContentFinder<Texture2D>.Get("UI/Commands/DebugMind", true),
                         action = delegate
                         {
                             TryFindVictims(true, true);
@@ -1258,8 +1268,9 @@ namespace LighterThanFast
                     };
                     yield return new Command_Action
                     {
-                        defaultLabel = "Debug",
-                        defaultDesc = "bench debug: "+processDebug+"->"+!processDebug,
+                        defaultLabel = processDebug + "->" + !processDebug,
+                        defaultDesc = "debug bench ",
+                        icon = ContentFinder<Texture2D>.Get("UI/Commands/Debug", true),
                         action = delegate
                         {
                             ToggleDebug();
@@ -1267,22 +1278,22 @@ namespace LighterThanFast
                     };
                 }
 
-                if (AreActorsSet())
+                if (AreActorsSet)
                 {
                     yield return new Command_Action
                     {
                         action = new Action(this.ShowReport),
                         defaultLabel = "Mind log",
-                        defaultDesc = "Show a detailed report",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/LaunchReport", true)
+                        defaultDesc = "How i mind enslaved " + tName + " by " + mName + ", an executionner diary",
+                        icon = ContentFinder<Texture2D>.Get("UI/Commands/ShowMind", true)
                     };
 
                     yield return new Command_Action
                     {
                         action = new Action(this.TargetResetCmd),
-                        defaultLabel = "Spare",
+                        defaultLabel = "Spare " + tName,
                         defaultDesc = "Reset the target",
-                        icon = ContentFinder<Texture2D>.Get("UI/Buttons/Delete", true)
+                        icon = ContentFinder<Texture2D>.Get("UI/Commands/CancelMind", true)
                     };
 
                     if (mindcontrolEnabled)
@@ -1312,29 +1323,48 @@ namespace LighterThanFast
                         {
                             yield return new Command_Action
                             {
-                                action = new Action(this.TryManhunterAndReset),
-                                defaultLabel = "Go my minions",
-                                defaultDesc = "Make an animal angry",
-                                icon = ContentFinder<Texture2D>.Get("UI/Commands/Manhunter", true)
+                                icon = ContentFinder<Texture2D>.Get("UI/Commands/Manhunter", true),
+                                defaultLabel = "Make " + tName + " manhunter",
+                                defaultDesc = "Go my minions",
+                                action = new Action(this.TryManhunterAndReset)
                             };
                         }
-                            
+
                     }
 
-                    if (Prefs.DevMode){
-                        if (!IsWorkDone()) {
-                            yield return new Command_Action
+                    if (Prefs.DevMode)
+                    {
+                        if (AreActorsSet)
+                        {
+                            if (!IsWorkDone)
                             {
-                                defaultLabel = "Ready up",
-                                action = delegate
+                                yield return new Command_Action
                                 {
-                                    workProgress = workGoal;
-                                    mindcontrolEnabled = true;
-                                }
-                            };
+                                    icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxFull", true),
+                                    defaultLabel = (int)workProgress + "->" + (int)workGoal,
+                                    defaultDesc = "Ready up",
+                                    action = delegate
+                                    {
+                                        workProgress = workGoal;
+                                        mindcontrolEnabled = true;
+                                    }
+                                };
+                            }
+                            if(workProgress!=0)
+                            {
+                                yield return new Command_Action
+                                {
+                                    icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxEmpty", true),
+                                    defaultLabel = (int)workProgress + "->0",
+                                    defaultDesc = "Reset",
+                                    action = delegate
+                                    {
+                                        workProgress = 0;
+                                        mindcontrolEnabled = false;
+                                    }
+                                };
+                            }
                         }
-                                              
-
                     }
                 }
             }
@@ -1375,11 +1405,10 @@ namespace LighterThanFast
             stringBuilder.AppendLine("| Mind log |");
             stringBuilder.AppendLine("+--------------+");
 
-
-            if ( ! AreActorsSet() )
+            if ( ! AreActorsSet )
             {
                 stringBuilder.AppendLine("Nothing to say.");
-                stringBuilder.AppendLine("First, set a target by right clicking the bench with a colonist.");
+                stringBuilder.AppendLine("First, set a target by right clicking the mind control bench with a colonist.");
                 return;
             }
 
@@ -1402,7 +1431,6 @@ namespace LighterThanFast
                 {
                     stringBuilder.AppendLine("|\t+-FactionAnimal\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
                 }
-                    
             }
             else
             {
@@ -1448,12 +1476,10 @@ namespace LighterThanFast
 
         public override string CompInspectStringExtra()
         {
-            if (this.powerComp == null || !this.powerComp.PowerOn)
-            {
+            if (!GotThePower)
                 return null;
-            }
 
-            if (AreActorsSet())
+            if (AreActorsSet)
             {
                 float SLP = 0f;
                 //  per sec

@@ -22,10 +22,14 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<ToxicSensitivity>1.0</ToxicSensitivity>
 		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
-		<LeatherAmount>30</LeatherAmount>
+
 		<MarketValue>1800</MarketValue>
 		<MoveSpeed>4.61</MoveSpeed>
+
+		<MeatAmount>25</MeatAmount>
+		<LeatherAmount>0</LeatherAmount>		
 		<Flammability>1.0</Flammability>
+		
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.05</ResearchSpeed>
@@ -289,13 +293,18 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
       <intelligence>Humanlike</intelligence>
       <makesFootprints>true</makesFootprints>
-      <lifeExpectancy>80</lifeExpectancy>
-      <leatherColor>(128,128,128)</leatherColor>
-      <bloodDef></bloodDef>
+      <lifeExpectancy>100</lifeExpectancy>
+	  
+      <leatherColor>(128,250,128)</leatherColor>
+      <bloodDef>LTF_FilthKraptyl</bloodDef>
+	  <useMeatFrom>Human</useMeatFrom>
+	  
+	  
       <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
+	  <leatherInsulation>0.2</leatherInsulation>
       <leatherLabel>Zoltan leather</leatherLabel>
-      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+      <leatherMarketValueFactor>1</leatherMarketValueFactor>
+	  
       <nameCategory>HumanStandard</nameCategory>
       <body>Zoltan</body>
 		  <!--<body>Human</body>-->

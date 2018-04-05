@@ -80,7 +80,7 @@ namespace LighterThanFast
 
         private bool NullBench()
         {
-            bool test = (MindControlBench == null || BenchComp == null || !BenchComp.GotThePower());
+            bool test = (MindControlBench == null || BenchComp == null || !BenchComp.GotThePower);
             //Log.Warning("bench" + test);
             return (test);
         }
@@ -89,8 +89,6 @@ namespace LighterThanFast
         public override void CompPostMake()
         {
             base.CompPostMake();
-            // no need maybe
-            //this.ticksLeft = this.Props.defaultTicks.RandomInRange;
             if (MindControlBench != null)
             {
                 CompInit();

@@ -22,10 +22,15 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<ToxicSensitivity>1.0</ToxicSensitivity>
 		<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 		<ComfyTemperatureMax>9999</ComfyTemperatureMax>
-		<LeatherAmount>50</LeatherAmount>
+
 		<MarketValue>2000</MarketValue>
 		<MoveSpeed>3.92</MoveSpeed>
+
 		<Flammability>0</Flammability>
+		<!-- base 1.5 -->
+		<MeatAmount>45</MeatAmount>
+		<LeatherAmount>30</LeatherAmount>
+		
 		<CarryingCapacity>100</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.0</ResearchSpeed>
@@ -251,11 +256,20 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<lifeExpectancy>250</lifeExpectancy>
 	<!-- granite -->
 	<leatherColor>(105,95,97)</leatherColor>
-	<bloodDef></bloodDef>
 	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-	<leatherInsulation>0.95</leatherInsulation>
+	<leatherInsulation>1.2</leatherInsulation>
+	
 	<leatherLabel>Rockman leather</leatherLabel>
 	<leatherMarketValueFactor>4</leatherMarketValueFactor>
+	<leatherStatFactors>
+		<ArmorRating_Blunt>2.5</ArmorRating_Blunt>
+		<ArmorRating_Sharp>4.0</ArmorRating_Sharp>
+		<ArmorRating_Heat>8</ArmorRating_Heat>
+	</leatherStatFactors>
+	<bloodDef>RockRubble</bloodDef>
+	
+	<useMeatFrom>Human</useMeatFrom>
+
 	<nameCategory>HumanStandard</nameCategory>
 	<body>Human</body>
 	<baseBodySize>1.5</baseBodySize>

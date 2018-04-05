@@ -23,10 +23,14 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<ToxicSensitivity>1.1</ToxicSensitivity>
 		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
-		<LeatherAmount>30</LeatherAmount>
+		
+		<MeatAmount>80</MeatAmount>
+		<LeatherAmount>20</LeatherAmount>	
+		<Flammability>1</Flammability>
+		
 		<MarketValue>1800</MarketValue>
 		<MoveSpeed>4.61</MoveSpeed>
-		<Flammability>1.0</Flammability>
+
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.0</ResearchSpeed>
@@ -273,13 +277,24 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
       <intelligence>Humanlike</intelligence>
       <makesFootprints>true</makesFootprints>
-      <lifeExpectancy>80</lifeExpectancy>
-      <leatherColor>(128,128,128)</leatherColor>
-      <bloodDef></bloodDef>
+      <lifeExpectancy>90</lifeExpectancy>
+      <leatherColor>(196,128,164)</leatherColor>
+      
+	  <bloodDef>FilthSlugDew</bloodDef>
+	  <useMeatFrom>Human</useMeatFrom>
+	  
       <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
+      <leatherInsulation>0.80</leatherInsulation>
+	  	<leatherStatFactors>
+			<PsychicSensitivity>.9</PsychicSensitivity>
+			<ToxicSensitivity>1.1</ToxicSensitivity>
+			<ArmorRating_Blunt>2</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+		</leatherStatFactors>
+	
       <leatherLabel>Slug leather</leatherLabel>
       <leatherMarketValueFactor>3</leatherMarketValueFactor>
+	  
       <nameCategory>HumanStandard</nameCategory>
       <body>Slug</body>
       <baseBodySize>1.0</baseBodySize>

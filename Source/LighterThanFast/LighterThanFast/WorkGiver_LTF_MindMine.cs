@@ -91,7 +91,7 @@ namespace LighterThanFast
             if (comp_mindControl == null )
                 { Log.Warning("comp_mindControl null"); }
 
-            if (!comp_mindControl.GotThePower())
+            if (!comp_mindControl.GotThePower)
             {
                 //Log.Warning("strike! no powwer");
                 return false;
@@ -107,7 +107,7 @@ namespace LighterThanFast
                 return false;
             }
 
-            if (comp_mindControl.IsWorkDone())
+            if (comp_mindControl.IsWorkDone)
             {
                //Log.Warning("strike! job done");
                 return false;

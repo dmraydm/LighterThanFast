@@ -22,10 +22,14 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<ToxicSensitivity>1.0</ToxicSensitivity>
 		<ComfyTemperatureMin>-15</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
-		<LeatherAmount>30</LeatherAmount>
+		
 		<MarketValue>1700</MarketValue>
 		<MoveSpeed>4.61</MoveSpeed>
+		
 		<Flammability>1.0</Flammability>
+		<LeatherAmount>0</LeatherAmount>
+		<MeatAmount>20</MeatAmount>
+		
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
 		<ResearchSpeed>1.0</ResearchSpeed>
@@ -47,23 +51,22 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		
 		<ShootingAccuracy>.8</ShootingAccuracy>
 		<MeleeHitChance>.75</MeleeHitChance>
-		
     </statBases>
 	
 	<verbs>
 		<li>
-		<verbClass>Verb_MeleeAttack</verbClass>
-		<defaultCooldownTime>1.55</defaultCooldownTime>
-		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-		<meleeDamageDef>Blunt</meleeDamageDef>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.55</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 		</li>
 		<li>
-		<verbClass>Verb_MeleeAttack</verbClass>
-		<defaultCooldownTime>1.55</defaultCooldownTime>
-		<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-		<meleeDamageDef>Blunt</meleeDamageDef>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<defaultCooldownTime>1.55</defaultCooldownTime>
+			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 		</li>
 	</verbs>
 	<alienRace>
@@ -378,81 +381,87 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 
 	</alienRace>
     
-<race>
-      <thinkTreeMain>Humanlike</thinkTreeMain>
-      <nameGenerator>NamerPersonEngie</nameGenerator>
-      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-      <intelligence>Humanlike</intelligence>
-      <makesFootprints>true</makesFootprints>
-      <lifeExpectancy>80</lifeExpectancy>
-      <leatherColor>(128,128,128)</leatherColor>
-      <bloodDef></bloodDef>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
-      <leatherLabel>engie leather</leatherLabel>
-      <leatherMarketValueFactor>3</leatherMarketValueFactor>
-      <nameCategory>HumanStandard</nameCategory>
-      <body>Engie</body>
-      <baseBodySize>1.0</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
-      <baseHungerRate>1.0</baseHungerRate>
-      <foodType>OmnivoreHuman</foodType>
-      <gestationPeriodDays>45</gestationPeriodDays>
-      <litterSizeCurve>
-        <points>
-          <li>(0.5, 0)</li>
-          <li>(1, 1)</li>
-          <li>(1.01, 0.02)</li>
-          <li>(3.5, 0)</li>
-        </points>
-      </litterSizeCurve>
-      <lifeStageAges>
-        <li>
-          <def>HumanlikeBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeToddler</def>
-          <minAge>1.2</minAge>
-        </li>
-        <li>
-          <def>HumanlikeChild</def>
-          <minAge>4</minAge>
-        </li>
-        <li>
-          <def>HumanlikeTeenager</def>
-          <minAge>13</minAge>
-        </li>
-        <li>
-          <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
-		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
-          <soundAngry>Pawn_Mech_Scyther_Wounded</soundAngry>
-        </li>
+	<race>
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<nameGenerator>NamerPersonEngie</nameGenerator>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<intelligence>Humanlike</intelligence>
+		<makesFootprints>true</makesFootprints>
+		<lifeExpectancy>128</lifeExpectancy>
 
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-      <ageGenerationCurve>
-        <points>
-          <li>(14,0)</li>
-          <li>(16,100)</li>
-          <li>(50,100)</li>
-          <li>(60,30)</li>
-          <li>(70,18)</li>
-          <li>(80,10)</li>
-          <li>(90,3)</li>
-          <li>(100,0)</li>
-        </points>
-      </ageGenerationCurve>
-      <hediffGiverSets>
-        <li>OrganicStandard</li>
-		<!-- TODO -->
-      </hediffGiverSets>
-</race>
+		<leatherColor>(128,128,128)</leatherColor>
+		<bloodDef>LTF_FilthKraptyl</bloodDef>
+		<useMeatFrom>Human</useMeatFrom>
+
+		<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+		<leatherInsulation>0.2</leatherInsulation>
+		<leatherLabel>engie leather</leatherLabel>
+		<leatherMarketValueFactor>1</leatherMarketValueFactor>
+
+		<nameCategory>HumanStandard</nameCategory>
+		<body>Engie</body>
+		<baseBodySize>1.0</baseBodySize>
+		<baseHealthScale>1.0</baseHealthScale>
+		<baseHungerRate>1.0</baseHungerRate>
+		<foodType>OmnivoreHuman</foodType>
+		<gestationPeriodDays>45</gestationPeriodDays>
+		
+		<litterSizeCurve>
+		<points>
+			<li>(0.5, 0)</li>
+			<li>(1, 1)</li>
+			<li>(1.01, 0.02)</li>
+			<li>(3.5, 0)</li>
+		</points>
+		</litterSizeCurve>
+		<lifeStageAges>
+			<li>
+				<def>HumanlikeBaby</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>HumanlikeToddler</def>
+				<minAge>1</minAge>
+			</li>
+			<li>
+				<def>HumanlikeChild</def>
+				<minAge>2</minAge>
+			</li>
+			<li>
+				<def>HumanlikeTeenager</def>
+				<minAge>4</minAge>
+			</li>
+			<li>
+				<def>HumanlikeAdult</def>
+				<minAge>8</minAge>
+				<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				<soundAngry>Pawn_Mech_Scyther_Wounded</soundAngry>
+			</li>
+		</lifeStageAges>
+		
+		<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<ageGenerationCurve>
+			<points>
+				<li>(14,0)</li>
+				<li>(16,100)</li>
+				<li>(50,100)</li>
+				<li>(60,30)</li>
+				<li>(70,18)</li>
+				<li>(80,10)</li>
+				<li>(90,3)</li>
+				<li>(100,0)</li>
+			</points>
+		</ageGenerationCurve>
+		<hediffGiverSets>
+			<li>OrganicStandard</li>
+			<!-- TODO -->
+		</hediffGiverSets>
+	</race>
+	
     <recipes>
 	<!-- Cooler -->
 		<li>LTF_Install01Cooler</li>

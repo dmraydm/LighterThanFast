@@ -25,10 +25,14 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<ToxicSensitivity>1.0</ToxicSensitivity>
 		<ComfyTemperatureMin>-15</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
-		<LeatherAmount>30</LeatherAmount>
-		<MarketValue>2000</MarketValue>
-		<MoveSpeed>5.3</MoveSpeed>
+		
+		<LeatherAmount>0</LeatherAmount>
+		<MeatAmount>90</MeatAmount>
 		<Flammability>1.0</Flammability>
+		
+		<MarketValue>1900</MarketValue>
+		<MoveSpeed>5.3</MoveSpeed>
+
 		
 		<CarryingCapacity>75</CarryingCapacity>
 		<MentalBreakThreshold>0.01</MentalBreakThreshold>
@@ -469,14 +473,22 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 	<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 	<intelligence>Humanlike</intelligence>
 	<makesFootprints>true</makesFootprints>
-	<lifeExpectancy>80</lifeExpectancy>
-	<leatherColor>(128,128,128)</leatherColor>
-	<bloodDef></bloodDef>
+	
+	<lifeExpectancy>75</lifeExpectancy>
+
+	<bloodDef>FilthBloodInsect</bloodDef>
+	<useMeatFrom>Megaspider</useMeatFrom>
+	  
+	  <!-- leather should not be -->
+	<!-- <useLeatherFrom>GrizzlyBear</useLeatherFrom> -->
 	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+	<leatherColor>(32,240,32)</leatherColor>
 	<leatherInsulation>0.70</leatherInsulation>
 	<leatherLabel>Mantis leather</leatherLabel>
-	<leatherMarketValueFactor>3</leatherMarketValueFactor>
+	<leatherMarketValueFactor>2</leatherMarketValueFactor>
+	
 	<nameCategory>HumanStandard</nameCategory>
+	
 	<body>Mantis</body>
 	<baseBodySize>1.0</baseBodySize>
 	<baseHealthScale>1.0</baseHealthScale>
@@ -510,11 +522,11 @@ While Mantis excel at combat, especially personal combat, they are the least ade
         </li>
         <li>
           <def>HumanlikeTeenager</def>
-          <minAge>13</minAge>
+          <minAge>10</minAge>
         </li>
         <li>
           <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
+          <minAge>15</minAge>
           <soundWounded>Pawn_Bear_Injured</soundWounded>
           <soundDeath>Pawn_Bear_Death</soundDeath>
           <soundCall>Pawn_Bear_Call</soundCall>
