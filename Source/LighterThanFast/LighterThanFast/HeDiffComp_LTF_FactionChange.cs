@@ -23,6 +23,7 @@ namespace LighterThanFast
         public PawnKindDef originKindDef = null;
 
         public Pawn Initiator = null;
+        public Pawn Victim = null;
         public Building MindControlBench = null;
         public Comp_LTF_MindControl BenchComp = null;
 
@@ -39,8 +40,7 @@ namespace LighterThanFast
         public void ToggleDebug(bool debug=false)
         {
             //Caller debug, not hediff one
-            if (debug)
-                Log.Warning("gotta debug: " + LTF_debug + "->" + !LTF_debug);
+            Tools.Warn("Remote debug: " + LTF_debug + "->" + !LTF_debug, debug);
 
             LTF_debug =! LTF_debug;
         }
@@ -49,7 +49,7 @@ namespace LighterThanFast
         {
             get
             {
-                return base.CompShouldRemove || Time2Release() || NullInitiator() || NullVictim() || NullBench();
+                return base.CompShouldRemove || Time2Release || NullInitiator() || NullVictim() || NullBench();
             }
         }
 
@@ -58,42 +58,57 @@ namespace LighterThanFast
         public PawnKindDef SayKindDef() => originKindDef;
 
 
-        private bool Time2Release()
+        private bool Time2Release
         {
-            bool test = (this.ticksLeft <= 0);
-            //Log.Warning("time 2 release" + test);
-            return (test);
+            get
+            {
+                return (this.ticksLeft <= 0);
+            }
         }
-
         private bool NullVictim()
         {
-            bool test = (parent.pawn == null || parent.pawn.Map == null);
-            //Log.Warning("release" + test);
+            bool test = (Victim == null || Victim.Map == null);
+            //Tools.Warn("release" + test);
             return (test);
         }
         private bool NullInitiator()
         {
             bool test = (Initiator == null || Initiator.Dead || Initiator.Faction != Faction.OfPlayer || Initiator.Map == null);
-           // Log.Warning("initiator" + test);
+            // Tools.Warn("initiator" + test);
+            
             return (test);
         }
-
         private bool NullBench()
         {
             bool test = (MindControlBench == null || BenchComp == null || !BenchComp.GotThePower);
-            //Log.Warning("bench" + test);
+            //Tools.Warn("bench" + test);
             return (test);
         }
-        
+
 
         public override void CompPostMake()
         {
             base.CompPostMake();
-            if (MindControlBench != null)
+            
+            if(Victim != parent.pawn)
             {
-                CompInit();
+                Tools.Warn("Translating Init", LTF_debug);
+                Victim = parent.pawn;
+            }
+                
+
+            //victim init
+            Tools.Warn("Cant find parent pawn victim", LTF_debug && (Victim == null));
+
+            // bench init
+            if (BenchComp == null) {
+                if (MindControlBench == null)
+                {
+                    Tools.Warn("Cant find control bench", LTF_debug);
+                } else BenchCompInit();
             }
         }
+
 
         public override string CompTipStringExtra
         {
@@ -106,18 +121,18 @@ namespace LighterThanFast
                     if (this.ticksLeft > 0)
                     {
                         result = ticksLeft.ToStringTicksToPeriod(true, false, true) + " before "+ Initiator.LabelShort +" releases to " + originFaction.Name + "."; ;
-                        //result += parent.pawn.LabelShort + 
+                        //result += Victim.LabelShort + 
                     }
                 }
 
                 if (LTF_debug)
                 {
-                    result += "\n[debugOn]";
+                    result += "\n[Debug]: ";
 
-                    result += ";F(hasName"+ ((originFaction == null) ? ("null") : (originFaction.HasName.ToString())) + "):" + ((originFaction == null)?("null"):(originFaction.Name));
+                    result += "; F(hasName"+ ((originFaction == null) ? ("null") : (originFaction.HasName.ToString())) + "):" + ((originFaction == null)?("null"):(originFaction.Name));
 
-                    result += ";KL:" + ((originKindDefLabel == null) ? ("null") : (originKindDefLabel));
-                    result += ";K:" + ((originKindDef == null) ? ("null") : (originKindDef.defName));
+                    result += "; KL:" + ((originKindDefLabel == null) ? ("null") : (originKindDefLabel));
+                    result += "; K:" + ((originKindDef == null) ? ("null") : (originKindDef.defName));
                 }
                 return result;
             }
@@ -132,6 +147,7 @@ namespace LighterThanFast
             Scribe_Values.Look(ref originKindDefLabel, "LTF_originKindLabel");
             
             Scribe_References.Look(ref Initiator, "LTF_mindIniator");
+            Scribe_References.Look(ref Victim, "LTF_victim");
             Scribe_References.Look(ref MindControlBench, "LTF_MindControlBench");
             
         }
@@ -140,51 +156,49 @@ namespace LighterThanFast
         {
             if (this.parent == null)
             {
-                Log.Warning("null comp");
+                Tools.Warn("Hediff cant find parent",LTF_debug);
                 return;
             }
-
-            if (this.parent.pawn == null)
+            if (Victim == null)
             {
-                Log.Warning("null pawn");
+                Tools.Warn("null victim", LTF_debug);
                 return;
             }
-
-            if(this.parent.pawn.Map == null)
+            if(Victim.Map == null)
             {
-                Log.Warning(parent.Label + " null map");
+                Tools.Warn(Victim.LabelShort + ":" + parent.Label + " null map", LTF_debug);
                 return;
             }
-
             if (BenchComp == null)
             {
-                //Log.Warning("Trying to load comp");
-                CompInit();
+                Tools.Warn("Trying to load comp because it's null", LTF_debug);
+                BenchCompInit();
             }
 
             ticksLeft--;
-            //Log.Warning(parent.Label + " tick " + ticksLeft);
+            Tools.WarnRare(parent.Label + " tick " + ticksLeft, 300, false);
 
             bool gottaPanic = false;
 
-            if (Time2Release())
+            if (Time2Release)
             {
-                //Log.Warning("Natural end");
+                Tools.Warn("Natural end", LTF_debug);
                 gottaPanic = true;
             }
 
             if (NullInitiator()) {
-                //Log.Warning("no master");
+                Tools.Warn("no executioner, "+Victim.LabelShort+" will try to panic", LTF_debug);
                 gottaPanic = true;
             }
+
             if (NullVictim()){
-                Log.Warning("no victim how the f*");
+                Tools.Warn("no victim, should never happen", LTF_debug);
                 gottaPanic = true;
             }
 
             if (NullBench())
             {
-                Log.Warning("no bench");
+                Tools.Warn("no bench, did it get destroyed or has no power ?", LTF_debug);
                 gottaPanic = true;
             }
 
@@ -201,28 +215,28 @@ namespace LighterThanFast
             if (!NullCheck("enslave"))
                 return false;
 
-            if (parent.pawn.Faction == null)
+            if (Victim.Faction == null)
             {
-                Log.Warning("Wtf null faction");
+                Tools.Warn("Wtf null faction", LTF_debug);
             }
 
-            //if (parent.pawn.Faction != BenchComp.GetFactionBackup())
-            if (parent.pawn.Faction == Faction.OfPlayer)
+            //if (Victim.Faction != BenchComp.GetFactionBackup())
+            if (Victim.Faction == Faction.OfPlayer)
             {
-                Log.Warning("Tried to enslave²");
+                Tools.Warn("Tried to enslave²", LTF_debug);
                 return false;
             }
             /*
             else
             {
-                Log.Warning("Enslave " + this.parent.pawn.Label + ":" + parent.pawn.Faction.Name + "=>" + Faction.OfPlayer.Name);
+                Tools.Warn("Enslave " + this.Victim.Label + ":" + Victim.Faction.Name + "=>" + Faction.OfPlayer.Name);
             }
             */
-            originFaction = parent.pawn.Faction;
-            originKindDefLabel = parent.pawn.KindLabel;
-            originKindDef = parent.pawn.kindDef;
+            originFaction = Victim.Faction;
+            originKindDefLabel = Victim.KindLabel;
+            originKindDef = Victim.kindDef;
 
-            parent.pawn.SetFaction(Faction.OfPlayer, Initiator);
+            Victim.SetFaction(Faction.OfPlayer, Initiator);
 
             return true;
             
@@ -232,26 +246,25 @@ namespace LighterThanFast
             if (!NullCheck("release"))
                 return false;
 
-            if (parent.pawn.Faction == null)
+            if (Victim.Faction == null)
             {
-                Log.Warning("Wtf null faction");
+                Tools.Warn("Wtf null faction", LTF_debug);
             }
 
-
-            if (parent.pawn.Faction != Faction.OfPlayer)
+            if (Victim.Faction != Faction.OfPlayer)
             {
-                Log.Warning("Tried to release²");
+                Tools.Warn("Tried to release²", LTF_debug);
                 return false;
             }
             /*
             else
             {
-                Log.Warning(this.parent.Label + " : " + parent.pawn.Faction.Name + " => " + BenchComp.GetFactionBackup());
+                Tools.Warn(this.parent.Label + " : " + Victim.Faction.Name + " => " + BenchComp.GetFactionBackup());
             }
             */
 
-            //parent.pawn.mindState.mentalStateHandler.Reset();
-            parent.pawn.SetFaction(BenchComp.GetFactionBackup(), null);
+            //Victim.mindState.mentalStateHandler.Reset();
+            Victim.SetFaction(BenchComp.GetFactionBackup(), null);
             return true;
         }
         private void Panic()
@@ -269,84 +282,86 @@ namespace LighterThanFast
 
             if (result == null)
             {
-                Log.Warning("null panic");
+                Tools.Warn("null panic");
                 return;
             }
 
-            parent.pawn.mindState.mentalStateHandler.TryStartMentalState(result, null, true, false, null);
+            Victim.mindState.mentalStateHandler.TryStartMentalState(result, null, true, false, null);
         }
         
 
         private bool NullCheck( string functionCall)
         {
             if (parent == null) {
-                Log.Warning(functionCall + " null comp ");
+                Tools.Warn(functionCall + " null comp ", LTF_debug);
                 return false;
             }
             
-            if (parent.pawn == null)
+            if (Victim == null)
             {
-                Log.Warning(functionCall + " null pawn ");
+                Tools.Warn(functionCall + " null pawn ", LTF_debug);
                 return false;
             }
-            if (parent.pawn.Map == null)
+            if (Victim.Map == null)
             {
-                Log.Warning(functionCall + " null map ");
+                Tools.Warn(functionCall + " null map ", LTF_debug);
                 return false;
             }
-            if (parent.pawn.Faction == null)
+            if (Victim.Faction == null)
             {
-                Log.Warning(functionCall + " null faction ");
+                Tools.Warn(functionCall + " null faction ", LTF_debug);
                 return false;
             }
             if (originFaction == null)
             {
-                Log.Warning(functionCall + " null own ");
+                Tools.Warn(functionCall + " null own ", LTF_debug);
                 return false;
             }
 
             if(Initiator == null)
             {
-                Log.Warning(functionCall + " null initaor ");
+                Tools.Warn(functionCall + " null initaor ", LTF_debug);
                 return false;
             }
 
             return true;
         }
-        private void CompInit()
+        private void BenchCompInit()
         {
             BenchComp = MindControlBench.TryGetComp<Comp_LTF_MindControl>();
             if (BenchComp == null)
             {
-                Log.Warning("no bnch comp found");
+                Tools.Warn("no bnch comp found", LTF_debug);
             }
         }
         public bool Init(Faction own, Pawn masterMind, Building bench, int duration)
         {
             
-            if (this.parent == null)
+            if ((this.parent == null) || (parent.pawn == null))
             {
-                Log.Warning("null comp Init");
+                Tools.Warn("null comp Init", LTF_debug);
                 return false;
             }
-            if (parent.pawn == null)
+            Victim = parent.pawn;
+
+            if (Victim == null)
             {
-                Log.Warning("null pawn Init");
+                Tools.Warn("null pawn Init", LTF_debug);
                 return false;
             }
 
-            if (parent.pawn.Map == null)
+            if (Victim.Map == null)
             {
-                Log.Warning("null map Init");
+                Tools.Warn("null map Init", LTF_debug);
                 return false;
             }
 
             //Faction
             Faction almostoriginFaction = null;
             //useless hax ?
-            if (parent.pawn.Faction == null)
+            if (Victim.Faction == null)
             {
-                Log.Warning("null faction Init");
+                Tools.Warn("null faction Init");
                 almostoriginFaction = FactionUtility.DefaultFactionFrom(FactionDefOf.Tribe);
             }
             else
@@ -354,17 +369,17 @@ namespace LighterThanFast
                 almostoriginFaction = own;
             }
 
-            //Log.Warning("asking " + parent.Label + own.Name + "->" + forced.Name + "(" + duration + ")" + ("faction found : " + almostoriginFaction.Name);
+            //Tools.Warn("asking " + parent.Label + own.Name + "->" + forced.Name + "(" + duration + ")" + ("faction found : " + almostoriginFaction.Name);
 
             MindControlBench = bench;
-            CompInit();
+            BenchCompInit();
 
             originFaction = own;
             Initiator = masterMind;
 
             ticksLeft = duration;
 
-            //Log.Warning("Init done, enslaving");
+            //Tools.Warn("Init done, enslaving");
             return (Enslave());
         }
 

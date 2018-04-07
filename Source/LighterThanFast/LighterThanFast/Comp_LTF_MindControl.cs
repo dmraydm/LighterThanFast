@@ -20,7 +20,7 @@ namespace LighterThanFast
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {
-            //Log.Warning(">>> DoEffectOn  <<<");
+            Tools.Warn(">>> DoEffectOn  <<<", false);
 
             Pawn mindable = (Pawn)target;
             if (mindable.Dead)
@@ -50,7 +50,7 @@ namespace LighterThanFast
             }
             else
             {
-                Log.Warning("Null worker bench");
+                Tools.Warn("Null worker bench");
             }
         }
     }
@@ -59,8 +59,7 @@ namespace LighterThanFast
     {
         public override void DoEffect(Pawn usedBy)
         {
-            //Log.Warning(">>> DoEffect <<<");
-            //base.DoEffect(usedBy);
+            Tools.Warn(">>> DoEffect <<<",false);
             base.DoEffect(usedBy);
             SoundDefOf.LessonActivated.PlayOneShotOnCamera(usedBy.MapHeld);
             //usedBy.records.Increment(RecordDefOf.ArtifactsActivated);
@@ -113,43 +112,7 @@ namespace LighterThanFast
         bool mindReachable = false;
 
         bool processDebug = false;
-        // GFX
-        //private static readonly Graphic OverlayGraphic = GraphicDatabase.Get<Graphic_
-        //Graphic_Flicker>("Things/Special/Loop", ShaderDatabase.TransparentPostLight, Vector2.one, Color.white);
 
-        const int workBarNum = 27;
-        const int powerBarNum = 10;
-
-        private static readonly Material femaleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/female", ShaderDatabase.Transparent);
-        private static readonly Material maleGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/gender/male", ShaderDatabase.Transparent);
-
-        private static readonly Material animalGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/animal", ShaderDatabase.Transparent);
-        private static readonly Material humanGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/human", ShaderDatabase.Transparent);
-        private static readonly Material alienGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/nature/alien", ShaderDatabase.Transparent);
-
-        private static readonly Material empathyGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/empathy", ShaderDatabase.Transparent);
-        private static readonly Material manipulationGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/manipulation", ShaderDatabase.Transparent);
-        private static readonly Material ascensionGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/leverage/ascension", ShaderDatabase.Transparent);
-
-        private static readonly Material controlGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/control", ShaderDatabase.Transparent);
-        private static readonly Material foolGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/fool", ShaderDatabase.Transparent);
-        private static readonly Material selfharmGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/effect/selfharm", ShaderDatabase.Transparent);
-
-        private static readonly Material lockGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/target/lock", ShaderDatabase.Transparent);
-        private static readonly Material notInRangeGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/target/notInRange", ShaderDatabase.Transparent);
-
-        private static readonly Material relationGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/relation", ShaderDatabase.Transparent);
-
-        private static readonly Material powerGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/powerOn", ShaderDatabase.Transparent);
-        private static readonly Material clockworkGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/work", ShaderDatabase.Transparent);
-        private static readonly Material readyGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/ready", ShaderDatabase.Transparent);
-
-        //Bars
-        private static readonly Material workBarSGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarS", ShaderDatabase.Transparent);
-        private static readonly Material workBarMGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarM", ShaderDatabase.Transparent);
-        private static readonly Material workBarLGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/workBarL", ShaderDatabase.Transparent);
-
-        private static readonly Material powerBarGfx = MaterialPool.MatFrom("Things/Building/MindcontrolBench/icon/bar/powerBar", ShaderDatabase.Transparent);
 
         public override void PostDraw()
         {
@@ -157,111 +120,104 @@ namespace LighterThanFast
  
             if(!GotThePower)
             {
-                //Log.Warning("nopeverlay");
+                Tools.Warn("no power no overlay", false);
                 return;
             }
 
             Vector3 benchPos = this.parent.DrawPos;
             if (benchPos == null)
             {
-                Log.Warning("null pos draw");
+                Tools.Warn("null bench pos draw", processDebug);
                 return;
             }
-            // higher than ground to be visible
+            // higher than ground to be visible ; maybe too high ?
             benchPos.y += 4;
 
-
+            // brain overlay size - PowerOn
             float progressSize = (ProgressToRegister > 1f) ? (1f) : (ProgressToRegister*1.5f);
 
             // Power On indicator
             if (!mindcontrolEnabled)
             {
                 Vector3 powerOnS = new Vector3(2.5f, 1f, 1.25f);
-                Matrix4x4 pwrMatrix = default(Matrix4x4);
-
-                Material material = FadedMaterialPool.FadedVersionOf(powerGfx, progressSize);
-                DrawDot(benchPos, powerOnS, pwrMatrix, material, 0f, 0f);
+                Material material = FadedMaterialPool.FadedVersionOf(Gfx.powerMat, progressSize);
+                Gfx.DrawDot(benchPos, powerOnS, material, 0f, 0f);
             }
-            
 
             Vector3 dotS = new Vector3(.11f, 1f, .11f);
-            Matrix4x4 matrix = default(Matrix4x4);
 
             if (!AreActorsSet) {
-                //Log.Warning("no actor need");
+                Tools.Warn("no actor no draw", false);
                 return;
             }
 
             if (mindTarget.gender == Gender.Female)
             {
-                DrawDot(benchPos, dotS, matrix, femaleGfx, -1.03f, .22f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.femaleMat, -1.03f, .22f);
             }
             else
             {
-                DrawDot(benchPos, dotS, matrix, maleGfx, -.83f, .135f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.maleMat, -.83f, .135f);
             }
 
-            if (animalVictim())
+            if (AnimalVictim)
             {
-                DrawDot(benchPos, dotS, matrix, animalGfx, -0.63f, .22f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.animalMat, -0.63f, .22f);
             }
-            else if (humanVictim())
+            else if (HumanVictim)
             {
-                DrawDot(benchPos, dotS, matrix, humanGfx, -0.63f, .04f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.humanMat, -0.63f, .04f);
             }
             else
             {
-                DrawDot(benchPos, dotS, matrix, alienGfx, -.43f, .135f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.alienMat, -.43f, .135f);
             }
 
             switch (bestVector)
             {
                 case (int)MindVector.Empat:
-                    DrawDot(benchPos, dotS, matrix, empathyGfx, -1.03f, .03f);
+                    Gfx.DrawDot(benchPos, dotS, Gfx.empathyMat, -1.03f, .03f);
                     break;
                 case (int)MindVector.Manip:
-                    DrawDot(benchPos, dotS, matrix, manipulationGfx, -1.03f, -.14f);
+                    Gfx.DrawDot(benchPos, dotS, Gfx.manipulationMat, -1.03f, -.14f);
                     break;
                 case (int)MindVector.Ascen:
-                    DrawDot(benchPos, dotS, matrix, ascensionGfx, -.83f, -.055f);
+                    Gfx.DrawDot(benchPos, dotS, Gfx.ascensionMat, -.83f, -.055f);
                     break;
                 default:
-                    Log.Warning("Wtf pstdraw vector");
+                    Tools.Warn("Wtf pstdraw vector", processDebug);
                     break;
             }
 
-            if ((animalVictim() && !(backupFaction == null)) ||
-                (!animalVictim() && backupFaction != Faction.OfPlayer))
-                DrawDot(benchPos, dotS, matrix, relationGfx, -.43f, -.05f);
+            if ((AnimalVictim && !(backupFaction == null)) ||
+                (!AnimalVictim && backupFaction != Faction.OfPlayer))
+                Gfx.DrawDot(benchPos, dotS, Gfx.relationMat, -.43f, -.05f);
 
-            //DrawDot(benchPos, dotS, matrix, foolGfx, -.83f, -.235f);
-            //DrawDot(benchPos, dotS, matrix, controlGfx, -.63f, -.15f);
+            //DrawDot(benchPos, dotS, matrix, foolMat, -.83f, -.235f);
+            //DrawDot(benchPos, dotS, matrix, controlMat, -.63f, -.15f);
 
             if (!mindReachable)
-                DrawDot(benchPos, dotS, matrix, notInRangeGfx, -.43f, -.235f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.notInRangeMat, -.43f, -.235f);
 
-            //DrawDot(benchPos, dotS, matrix, selfharmGfx, -1.03f, -.32f);
-
-            //DrawDot(benchPos, dotS, matrix, lockGfx, -.63f, -.32f);
+            //DrawDot(benchPos, dotS, matrix, selfharmMat, -1.03f, -.32f);
+            //DrawDot(benchPos, dotS, matrix, lockMat, -.63f, -.32f);
 
             if (mindcontrolEnabled)
-                DrawPulse((Thing)parent, readyGfx, benchPos);
+                DrawPulse((Thing)parent, Gfx.readyMat, benchPos);
 
             if (!IsWorkDone)
             {
                 //work needed indicator
-                DrawBar(benchPos, dotS, matrix, clockworkGfx, -1.26f, .56f);
+                Gfx.DrawDot(benchPos, dotS, Gfx.clockworkMat, -1.26f, .56f);
 
                 // power bars
                 if (IsVectorSet(bestVector))
                 {
-
                     // bestVectorValue (0-1) / neededPowerBarN 1-10
-                    int neededPowerBarN = Mathf.RoundToInt(bestVectorValue * powerBarNum);
+                    int neededPowerBarN = Mathf.RoundToInt(bestVectorValue * Gfx.powerBarNum);
 
                     if (neededPowerBarN < 1)neededPowerBarN = 1;
                     if (neededPowerBarN > 10)neededPowerBarN = 10;
-
                     
                     for (int i = 1; i < neededPowerBarN+1; i++)
                     {
@@ -277,88 +233,36 @@ namespace LighterThanFast
                             ord = (-.13f + (i * .0585f));
                         }
                         Material fMat = null;
-                        //Log.Warning("pow drawin" + i);
+                        //Tools.Warn("pow drawin" + i);
                         if (Rand.Chance(0.1f))
                         {
-                            fMat = powerBarGfx;
+                            fMat = Gfx.powerBarMat;
                         }
                         else
                         {
-                            fMat = FadedMaterialPool.FadedVersionOf(powerBarGfx, .65f);
+                            fMat = FadedMaterialPool.FadedVersionOf(Gfx.powerBarMat, .65f);
                         }
                         DrawBar(benchPos, powerBarS, powerBarMatrix, fMat, -1.315f, ord);
                     }
                 }
 
                 // work progress bars
-                int neededWorkBarN = Mathf.RoundToInt(ProgressToRegister * workBarNum);
+                int neededWorkBarN = Mathf.RoundToInt(ProgressToRegister * Gfx.workBarNum);
                 if (neededWorkBarN > 1)
                 {
-                    if (neededWorkBarN > workBarNum) neededWorkBarN=workBarNum;
-                    
-                    for (int i = 1; i < neededWorkBarN+1; i++)
+                    if (neededWorkBarN > Gfx.workBarNum) neededWorkBarN= Gfx.workBarNum;
+
+                    for (int i = 1; i < neededWorkBarN + 1; i++)
                     {
-                        //Log.Warning("trying to work bar");
-                        Vector3 wBarS = new Vector3(.35f, 1f, .275f); //(.21f, 1f, .13f);
-                        Matrix4x4 wBarMatrix = default(Matrix4x4);
-                        float zOffset = 0f;
-
-                        Material wBarMat = null;
-                        if (i < 8)
-                        {
-                            wBarMat = workBarSGfx;
-                        }
-                        else if (i < 21)
-                        {
-                            wBarMat = workBarMGfx;
-                            zOffset += .013f;
-                        }
-                        else
-                        {
-                            wBarMat = workBarLGfx;
-                            zOffset += .02f;
-                        }
-
-                        Material fMat = null;
-
-                        if (Rand.Chance(0.85f))
-                        {
-                             fMat = FadedMaterialPool.FadedVersionOf(wBarMat, .65f);
-                        }
-                        else
-                        {
-                            fMat = wBarMat;
-                        }
-
-                        float myX = -1.145f + (i * .0825f); // -1.13
-                        float myY = .562f + zOffset;
-
-                        //Log.Warning("wBar" + neededWorkBarN + " x;y: "+ myX+ ";"+ myY );
-                        DrawBar(benchPos, wBarS, wBarMatrix, fMat, myX, myY);
+                        Gfx.DrawBar(benchPos, -1.5f, .12f, i);
                     }
                 }
             }
-            
-
-
         }
 
-        private void DrawDot(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotGfx, float x, float z)
-        {
-            Vector3 dotPos = benchPos;
-            dotPos.x += x;
-            dotPos.z += z;
-            matrix.SetTRS(dotPos, Quaternion.AngleAxis(0f, Vector3.up), dotS);
-            if(MeshPool.plane14 == null)
-            {
-                Log.Warning("14 null");
-                return;
-            }
 
-            Graphics.DrawMesh(MeshPool.plane14, matrix, dotGfx, 0);
-        }
 
-        private void DrawBar(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotGfx, float x, float z)
+        private void DrawBar(Vector3 benchPos, Vector3 dotS, Matrix4x4 matrix, Material dotMat, float x, float z)
         {
             Vector3 dotPos = benchPos;
             dotPos.x += x;
@@ -366,12 +270,12 @@ namespace LighterThanFast
             matrix.SetTRS(dotPos, Quaternion.AngleAxis(0f, Vector3.up), dotS);
             if (MeshPool.plane10 == null)
             {
-                Log.Warning("10 null");
+                Tools.Warn("10 null");
                 return;
             }
-            //Log.Warning("ok mesh ?");
-            Graphics.DrawMesh(MeshPool.plane10, matrix, dotGfx, 0);
-            //Log.Warning("ko mesh ?");
+            //Tools.Warn("ok mesh ?");
+            Graphics.DrawMesh(MeshPool.plane10, matrix, dotMat, 0);
+            //Tools.Warn("ko mesh ?");
         }
 
         private void DrawPulse(Thing thing, Material mat, Vector3 drawPos)
@@ -428,7 +332,7 @@ namespace LighterThanFast
                 TargetReset();
             };
 
-            //Log.Warning(" Best >> emp:" + empathy + "man:" + manipulation + "asc:" + ascendancy + ";max:" + vectorName[bestVector]);
+            //Tools.Warn(" Best >> emp:" + empathy + "man:" + manipulation + "asc:" + ascendancy + ";max:" + vectorName[bestVector]);
         }
 
         // calculate the worst way for iniator to mine target.
@@ -456,7 +360,7 @@ namespace LighterThanFast
 
             worstVector = min;
             worstVectorValue = worstValue;
-            //Log.Warning(" Worst >> emp:"+empathy + "man:"+manipulation + "asc:"+ascendancy+";min:"+ vectorName[worstVector]);
+            //Tools.Warn(" Worst >> emp:"+empathy + "man:"+manipulation + "asc:"+ascendancy+";min:"+ vectorName[worstVector]);
         }
 
         // get power comp
@@ -465,7 +369,7 @@ namespace LighterThanFast
             this.powerComp = this.parent.TryGetComp<CompPowerTrader>();
             if (powerComp == null)
             {
-                Log.Warning("power comp Null");
+                Tools.Warn("power comp Null");
             }
             if (masterMind != null)
             {
@@ -536,7 +440,7 @@ namespace LighterThanFast
                     secondSkill = SkillDefOf.Medicine;
                     break;
                 default:
-                    Log.Warning("Wtf set vector");
+                    Tools.Warn("Wtf set vector");
                     break;
             }
 
@@ -588,8 +492,8 @@ namespace LighterThanFast
                         + (mS2 - tS2 + s2Ratio) * S2Fascination
                      ) * scaling;
 
-            //Log.Warning(vectorName[vectorId] + ": (" + mS1 + "-" + tS1 + "+" + s1Ratio + ") * " + S1Fascination + " + (" + mS2 + " - " + tS2 + "+" + s2Ratio + ") * " + S2Fascination + ") * " + scaling + "=" + result);
-            //Log.Warning("result:" + result);
+            //Tools.Warn(vectorName[vectorId] + ": (" + mS1 + "-" + tS1 + "+" + s1Ratio + ") * " + S1Fascination + " + (" + mS2 + " - " + tS2 + "+" + s2Ratio + ") * " + S2Fascination + ") * " + scaling + "=" + result);
+            //Tools.Warn("result:" + result);
 
             // output +- 0-1 (1.5)
             return result;
@@ -609,14 +513,14 @@ namespace LighterThanFast
         public void MindMineTick(Pawn masterMind)
         {
 
-            if (animalVictim())
+            if (AnimalVictim)
             {
                 workProgress += animalVector;
             }
             else
             {
                 SetAleas();
-                //Log.Warning("Tick " + workProgress + "/" + workGoal + ";" + workProgress + " += " + bestVectorValue + " * 3 + " + aleas + "jobDone : " + IsWorkDone());
+                //Tools.Warn("Tick " + workProgress + "/" + workGoal + ";" + workProgress + " += " + bestVectorValue + " * 3 + " + aleas + "jobDone : " + IsWorkDone());
 
                 workProgress += bestVectorValue * 3 + aleas;
             }
@@ -640,7 +544,7 @@ namespace LighterThanFast
             }
             else
             {
-                Log.Warning("cant Mastermind Null");
+                Tools.Warn("cant Mastermind Null");
             }
         }
 
@@ -658,12 +562,12 @@ namespace LighterThanFast
                 mindTarget = newTarget;
                 tName = mindTarget.NameStringShort;
                 tRace = mindTarget.def.label;
-                if (!animalVictim())
+                if (!AnimalVictim)
                     backupFaction = mindTarget.Faction;
             }
             else
             {
-                Log.Warning("Trying to register a null pawn");
+                Tools.Warn("Trying to register a null pawn");
             }
 
         }
@@ -672,8 +576,8 @@ namespace LighterThanFast
 
         public void InitActorsValues()
         {
-            //Log.Warning("InitActorsValues");
-            if (animalVictim())
+            //Tools.Warn("InitActorsValues");
+            if (AnimalVictim)
             {
                 InitAnimalVector();
             }
@@ -685,7 +589,6 @@ namespace LighterThanFast
                 SetWorstVector();
             }
         }
-
         public void InitLeverageVector()
         {
             empathy = SetVector((int)MindVector.Empat);
@@ -693,7 +596,6 @@ namespace LighterThanFast
             ascendancy = SetVector((int)MindVector.Ascen);
 
         }
-
         public void InitAnimalVector()
         {
             animalVector = 0f;
@@ -744,7 +646,6 @@ namespace LighterThanFast
         {
             workGoal = defaultWorkAmount * mindTarget.RaceProps.baseBodySize;
         }
-
         public void InitWork()
         {
             float mBonus = 0;
@@ -775,9 +676,9 @@ namespace LighterThanFast
             }
             randWorkAmount *= Rand.Range(worstVectorValue, bestVectorValue);
 
-            //String bla = string.Empty; Log.Warning( bla );
+            //String bla = string.Empty; Tools.Warn( bla );
             workGoal = defaultWorkAmount - mBonus * mVariousness + tBonus * tVariousness + rVariousness * randWorkAmount;
-            //Log.Warning("Work  : " + workProgress + "/" + workGoal + "(" + mBonus + ";" + tBonus + ";" + randWorkAmount + ")");
+            //Tools.Warn("Work  : " + workProgress + "/" + workGoal + "(" + mBonus + ";" + tBonus + ";" + randWorkAmount + ")");
 
         }
 
@@ -787,13 +688,20 @@ namespace LighterThanFast
             mindcontrolEnabled = false;
         }
 
-        public bool animalVictim() {
-            return mindTarget.RaceProps.Animal;
+        public bool AnimalVictim {
+            get
+            {
+                return mindTarget.RaceProps.Animal;
+            }
         }
 
-        public bool humanVictim()
+        public bool HumanVictim
         {
-            return (mindTarget.kindDef.race.defName == "Human");
+            get
+            {
+                //return (mindTarget.kindDef.race.defName == "Human");
+                return (mindTarget.def.defName == "Human");
+            }
         }
 
         public bool IsWorkDone
@@ -829,7 +737,7 @@ namespace LighterThanFast
             masterMind = null;
             ResetProgress();
             VectorReset();
-            //Log.Warning("target reset to null");
+            //Tools.Warn("target reset to null");
             return;
         }
 
@@ -849,7 +757,7 @@ namespace LighterThanFast
 
             List<Pawn> allPawnsSpawned = this.parent.Map.mapPawns.SpawnedPawnsInFaction(Faction.OfPlayer);
             
-            //if (debug) Log.Warning("Found " + allPawnsSpawned.Count + " mindslaved :" + allPawnsSpawned.ToString());
+            //if (debug) Tools.Warn("Found " + allPawnsSpawned.Count + " mindslaved :" + allPawnsSpawned.ToString());
 
             foreach (Pawn current in allPawnsSpawned)
             {
@@ -867,22 +775,17 @@ namespace LighterThanFast
                     comp.ToggleDebug(debug);
 
                 if (debug)
-                    Log.Warning(" Tryfind:"+current.LabelShort + "; Faction:" + comp.SayFaction() +"; KindLabel:"+comp.SayKindDefLabel()+"; Kind:"+comp.SayKindDef());
+                    Tools.Warn(" Tryfind:"+current.LabelShort + "; Faction:" + comp.SayFaction() +"; KindLabel:"+comp.SayKindDefLabel()+"; Kind:"+comp.SayKindDef());
             }
 
             return MindArmy;
         }
 
-        private void ToggleDebug()
-        {
-            processDebug = !processDebug;
-        }
-
         private bool TryFactionChange()
         {
-            if (animalVictim())
+            if (AnimalVictim)
             {
-                Log.Warning("not allowed for animals");
+                Tools.Warn("not allowed for animals", processDebug);
                 return false;
             }
 
@@ -922,7 +825,7 @@ namespace LighterThanFast
             {
                 if ((mindTarget == null) || (masterMind == null))
                 {
-                    Log.Warning("how so far ?");
+                    Tools.Warn("how so far ?", processDebug);
                     return false;
                 }
                 Hediff changeFactionHediff = null;
@@ -930,21 +833,21 @@ namespace LighterThanFast
                 BodyPartRecord bodyPart = null;
                 HediffDef hediff2use = null;
 
-                //Log.Warning("retrieving hediif def");
+                //Tools.Warn("retrieving hediif def");
                 hediff2use = HediffDef.Named("Hediff_LTF_FactionChange");
 
                 mindTarget.RaceProps.body.GetPartsWithTag("ConsciousnessSource").TryRandomElement(out bodyPart);
                 if (bodyPart == null)
                 {
-                    Log.Warning("null body part");
+                    Tools.Warn("null body part", processDebug);
                     return false;
                 }
 
-                //Log.Warning("Found bodypart " + bodyPart.def);
+                //Tools.Warn("Found bodypart " + bodyPart.def);
                 changeFactionHediff = HediffMaker.MakeHediff(hediff2use, mindTarget, bodyPart);
                 if (changeFactionHediff == null)
                 {
-                    Log.Warning("hediff maker null");
+                    Tools.Warn("hediff maker null", processDebug);
                     return false;
                 }
 
@@ -953,7 +856,7 @@ namespace LighterThanFast
                 {
                     if (allHediffs[i].def == hediff2use)
                     {
-                        Log.Warning("Already enslaved cant do it twice");
+                        Tools.Warn("Already enslaved cant do it twice", processDebug);
                         return false;
                     }
                 }
@@ -961,17 +864,17 @@ namespace LighterThanFast
                 HediffComp_LTF_FactionChange newComp = changeFactionHediff.TryGetComp<HediffComp_LTF_FactionChange>();
                 if (newComp == null)
                 {
-                    Log.ErrorOnce("newComp not found",1);
-                    return false;
-                }
-
-                if (!newComp.Init(mindTarget.Faction, masterMind, (Building)parent, 10000))
-                {
-                    Log.Warning("failed to Init");
+                    Tools.Warn("newComp not found", processDebug);
                     return false;
                 }
 
                 mindTarget.health.AddHediff(changeFactionHediff, bodyPart, null);
+
+                if (!newComp.Init(mindTarget.Faction, masterMind, (Building)parent, 10000))
+                {
+                    Tools.Warn("failed to Init", processDebug);
+                    return false;
+                }
                 return true;
             }
             return false;
@@ -1027,9 +930,9 @@ namespace LighterThanFast
         private bool TryManhunter()
         {
 
-            if (!animalVictim())
+            if (!AnimalVictim)
             {
-                Log.Warning("not allowed for humans");
+                Tools.Warn("not allowed for humans");
                 return false;
             }
 
@@ -1055,7 +958,7 @@ namespace LighterThanFast
             {
                 MentalStateDef chosenState = null;
                 chosenState = MentalStateDefOf.Manhunter;
-                Log.Warning(tName + "state : " + chosenState.defName);
+                Tools.Warn(tName + "state : " + chosenState.defName);
                 mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
 
                 return true;
@@ -1072,9 +975,9 @@ namespace LighterThanFast
         // Applies mentalstate
         private bool TryMindControl()
         {
-            if (animalVictim())
+            if (AnimalVictim)
             {
-                Log.Warning("not allowed for animals");
+                Tools.Warn("not allowed for animals");
                 return false;
             }
 
@@ -1100,7 +1003,7 @@ namespace LighterThanFast
                 MentalStateDef chosenState = null;
                 if ((mindTarget == null) || (masterMind == null))
                 {
-                    Log.Warning("how so far ?");
+                    Tools.Warn("how so far ?");
                     return false;
                 }
 
@@ -1121,7 +1024,7 @@ namespace LighterThanFast
                             */
                             break;
                         default:
-                            Log.Warning("Wtf mind vector");
+                            Tools.Warn("Wtf mind vector");
                             break;
                     }
 
@@ -1133,7 +1036,7 @@ namespace LighterThanFast
 
                     if ( (victimBreak == null) || (victimShame == null) || (victimBreak == null) || (victimBreak == null))
                     {
-                        Log.Warning("Thought null");
+                        Tools.Warn("Thought null");
                     }
                     else
                     {
@@ -1147,32 +1050,32 @@ namespace LighterThanFast
                         mindTarget.ClearMind();
                         if (mindTarget.story != null)
                         {
-                            //Log.Warning(tName + " ok Story ");
+                            //Tools.Warn(tName + " ok Story ");
                             List<Trait> targetTraits = new List<Trait>();
                             targetTraits = mindTarget.story.traits.allTraits;
-                            //Log.Warning(tName + " traits found: " + targetTraits.Count );
+                            //Tools.Warn(tName + " traits found: " + targetTraits.Count );
 
                             IEnumerable<MentalBreakDef> breaks = DefDatabase<MentalBreakDef>.AllDefsListForReading;
                             MentalBreakDef chosenBreak = breaks.RandomElement<MentalBreakDef>();
                             if (chosenBreak == null) {
-                                Log.Warning("null break");
+                                Tools.Warn("null break");
                             }
-                            //Log.Warning(tName + "break : " + chosenBreak.defName);
+                            //Tools.Warn(tName + "break : " + chosenBreak.defName);
 
                             chosenState = chosenBreak.mentalState;
                             if (chosenState == null)
                             {
-                                Log.Warning("null state");
+                                Tools.Warn("null state");
                             }
 
                             /*for (int i = 0; i < targetTraits.Count; i++){
-                                Log.Warning(tName + " : " + targetTraits[i].CurrentData.label);
+                                Tools.Warn(tName + " : " + targetTraits[i].CurrentData.label);
                                 TraitDegreeData currentData = targetTraits[i].CurrentData;
                                 if (currentData.randomMentalState != null){
                                     if (trait.CurrentData.theOnlyAllowedMentalBreaks != null){
-                                        Log.Warning(tName + " : " + trait.CurrentData.label);
+                                        Tools.Warn(tName + " : " + trait.CurrentData.label);
                                         for (int j = 0; j < trait.CurrentData.theOnlyAllowedMentalBreaks.Count; j++){
-                                            Log.Warning (tName + " : " + trait.CurrentData.theOnlyAllowedMentalBreaks[j].defName );
+                                            Tools.Warn (tName + " : " + trait.CurrentData.theOnlyAllowedMentalBreaks[j].defName );
                                         }
                                     }
                                 }
@@ -1182,12 +1085,12 @@ namespace LighterThanFast
                         }
                         else
                         {
-                            Log.Warning(tName + " : null story");
+                            Tools.Warn(tName + " : null story");
                             return false;
                         }
                     }
 
-                Log.Warning(tName + "state : " + chosenState.defName);
+                Tools.Warn(tName + "state : " + chosenState.defName);
                 mindTarget.mindState.mentalStateHandler.TryStartMentalState(chosenState, null, true, false, null);
 
                 return true;
@@ -1218,19 +1121,19 @@ namespace LighterThanFast
             // bench pos & map
             if ((this.benchRadius <= 1) || (this.parent.Position == null) || (this.parent.Map == null))
             {
-                Log.Warning("null bench");
+                Tools.Warn("null bench", processDebug);
                 return false;
             }
             if ((mindTarget == null) || (mindTarget.Map == null) || (mindTarget.Position == null))
             {
-                //Log.Warning("null mindTarget");
+                Tools.Warn("null mindTarget",processDebug);
                 ResetProgress();
                 return false;
             }
 
             if ((masterMind == null) || (masterMind.Map == null) || (masterMind.Position == null))
             {
-                Log.Warning("null masterMind");
+                Tools.Warn("null masterMind", processDebug);
                 return false;
             }
 
@@ -1239,7 +1142,7 @@ namespace LighterThanFast
 
             if (benchTargetPawnDistance > benchRadius)
             {
-                Messages.Message("Target is too far." , this.parent, MessageTypeDefOf.TaskCompletion);
+                Messages.Message(mindTarget.LabelShort+" is too far." , this.parent, MessageTypeDefOf.TaskCompletion);
                 return false;
             }
 
@@ -1247,6 +1150,109 @@ namespace LighterThanFast
             return true;
 
         }
+
+        void BadWillAnimal()
+        {
+            if (mindTarget.Faction != null)
+            {
+                mindTarget.Faction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                mindTarget.Faction.SetHostileTo(masterMind.Faction, true);
+                Messages.Message(mindTarget.Faction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
+            }
+        }
+        void BadWillHumanlike()
+        {
+            if (backupFaction == null)
+            {
+                Tools.Warn("back faction null");
+                return;
+            }
+            if (masterMind.Faction != backupFaction)
+            {
+                backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                backupFaction.SetHostileTo(masterMind.Faction, true);
+                Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
+
+            }
+        }
+        public void ShowReport()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            String buffer = string.Empty;
+
+            stringBuilder.AppendLine("| Mind log |");
+            stringBuilder.AppendLine("+--------------+");
+
+            if (!AreActorsSet)
+            {
+                stringBuilder.AppendLine("Nothing to say.");
+                stringBuilder.AppendLine("First, set a target by right clicking the mind control bench with a colonist.");
+                return;
+            }
+
+            // Mastermind 
+            stringBuilder.AppendLine("|");
+            stringBuilder.AppendLine("+---[Actors]");
+            stringBuilder.AppendLine("|\t|");
+            stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")" + " from " + masterMind.Faction.Name + ".");
+            stringBuilder.AppendLine("|\t|");
+
+            if (AnimalVictim)
+            {
+                // wild animal
+                if (mindTarget.Faction == null)
+                {
+                    stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
+                }
+                // faction animal
+                else
+                {
+                    stringBuilder.AppendLine("|\t+-FactionAnimal\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
+                }
+            }
+            else
+            {
+                if (mindTarget.Faction == null)
+                {
+                    Tools.Warn("mindTarget.Faction == null");
+                    return;
+                }
+                stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
+            }
+
+            stringBuilder.AppendLine("|");
+            stringBuilder.AppendLine("+---[Vectors]");
+            stringBuilder.AppendLine("|\t|");
+            if (AnimalVictim)
+            {
+                stringBuilder.AppendLine("|\t+-Leverage  : " + animalVector);
+            }
+            else
+            {
+                if (!IsVectorSet(bestVector)) { Tools.Warn(" no master leverage", processDebug); return; }
+                if (!IsVectorSet(worstVector)) { Tools.Warn(" no victim leverage", processDebug); return; }
+                stringBuilder.AppendLine("|\t+-Leverage  : " + vectorName[bestVector] + "(" + bestVectorValue + ")");
+                stringBuilder.AppendLine("|\t|");
+                stringBuilder.AppendLine("|\t+-Weak\t: " + vectorName[worstVector] + "(" + worstVectorValue + ")");
+            }
+
+            if (masterMindN > 1)
+            {
+                stringBuilder.AppendLine("|");
+                stringBuilder.AppendLine("+---[Numbers]");
+                stringBuilder.AppendLine("|\t|");
+                stringBuilder.AppendLine("|\t+-Malus - tormentor number(" + masterMindN + ") : " + "TODO");
+            }
+            //stringBuilder.AppendLine("|");
+            stringBuilder.AppendLine("|");
+            stringBuilder.AppendLine("+---[Progress]");
+            stringBuilder.AppendLine("\t|");
+            stringBuilder.AppendLine("\t" + ProgressToRegister.ToStringPercent("F0"));
+
+            Dialog_MessageBox window = new Dialog_MessageBox(stringBuilder.ToString(), null, null, null, null, null, false);
+            Find.WindowStack.Add(window);
+        }
+
 
         [DebuggerHidden]
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -1260,7 +1266,8 @@ namespace LighterThanFast
                     {
                         defaultLabel = "Debug " + victimNum + " victims",
                         defaultDesc = "debug victim through anatomy",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/DebugMind", true),
+                        //icon = ContentFinder<Texture2D>.Get("UI/Commands/DebugMind", true),
+                        icon = Gfx.DebugMindGz,
                         action = delegate
                         {
                             TryFindVictims(true, true);
@@ -1270,10 +1277,11 @@ namespace LighterThanFast
                     {
                         defaultLabel = processDebug + "->" + !processDebug,
                         defaultDesc = "debug bench ",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/Debug", true),
+                        //icon = ContentFinder<Texture2D>.Get("UI/Commands/Debug", true),
+                        icon = (processDebug)?(Gfx.DebugOnGz):(Gfx.DebugOffGz),
                         action = delegate
                         {
-                            ToggleDebug();
+                            processDebug = !processDebug;
                         }
                     };
                 }
@@ -1285,7 +1293,8 @@ namespace LighterThanFast
                         action = new Action(this.ShowReport),
                         defaultLabel = "Mind log",
                         defaultDesc = "How i mind enslaved " + tName + " by " + mName + ", an executionner diary",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/ShowMind", true)
+                        icon = Gfx.MindLogGz,
+                        //icon = ContentFinder<Texture2D>.Get("UI/Commands/ShowMind", true)
                     };
 
                     yield return new Command_Action
@@ -1293,29 +1302,32 @@ namespace LighterThanFast
                         action = new Action(this.TargetResetCmd),
                         defaultLabel = "Spare " + tName,
                         defaultDesc = "Reset the target",
-                        icon = ContentFinder<Texture2D>.Get("UI/Commands/CancelMind", true)
+                        icon = Gfx.MindCancelGz,
+                        //icon = ContentFinder<Texture2D>.Get("UI/Commands/CancelMind", true)
                     };
 
                     if (mindcontrolEnabled)
                     {
                         // Humanlike
-                        if (!animalVictim())
+                        if (!AnimalVictim)
                         {
+                            /*
                             yield return new Command_Action
                             {
                                 action = new Action(this.TryDisorientAndReset),
                                 defaultLabel = "Fool me once",
                                 defaultDesc = "This is madness",
-                                icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
+                                icon = Gfx.min
+                                //icon = ContentFinder<Texture2D>.Get("UI/Commands/MindControl", true)
                             };
-
-
+                            */
                             yield return new Command_Action
                             {
                                 action = new Action(this.TryEnslaveAndReset),
                                 defaultLabel = "Mind control",
                                 defaultDesc = "Take control for a moment",
-                                icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
+                                icon = Gfx.MindFactionChangeGz,
+                              //  icon = ContentFinder<Texture2D>.Get("UI/Commands/FactionChange", true)
                             };
                         }
                         //Animal
@@ -1323,7 +1335,8 @@ namespace LighterThanFast
                         {
                             yield return new Command_Action
                             {
-                                icon = ContentFinder<Texture2D>.Get("UI/Commands/Manhunter", true),
+                                //icon = ContentFinder<Texture2D>.Get("UI/Commands/Manhunter", true),
+                                icon = Gfx.MindManhunterGz,
                                 defaultLabel = "Make " + tName + " manhunter",
                                 defaultDesc = "Go my minions",
                                 action = new Action(this.TryManhunterAndReset)
@@ -1340,13 +1353,14 @@ namespace LighterThanFast
                             {
                                 yield return new Command_Action
                                 {
-                                    icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxFull", true),
+                                    //icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxFull", true),
+                                    icon = Gfx.HaxFullGz,
                                     defaultLabel = (int)workProgress + "->" + (int)workGoal,
                                     defaultDesc = "Ready up",
                                     action = delegate
                                     {
                                         workProgress = workGoal;
-                                        mindcontrolEnabled = true;
+                                        //mindcontrolEnabled = true;
                                     }
                                 };
                             }
@@ -1354,13 +1368,14 @@ namespace LighterThanFast
                             {
                                 yield return new Command_Action
                                 {
-                                    icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxEmpty", true),
+                                    //icon = ContentFinder<Texture2D>.Get("UI/Commands/HaxEmpty", true),
+                                    icon = Gfx.HaxEmptyGz,
                                     defaultLabel = (int)workProgress + "->0",
                                     defaultDesc = "Reset",
                                     action = delegate
                                     {
                                         workProgress = 0;
-                                        mindcontrolEnabled = false;
+                                        //mindcontrolEnabled = false;
                                     }
                                 };
                             }
@@ -1368,110 +1383,6 @@ namespace LighterThanFast
                     }
                 }
             }
-        }
-
-        void BadWillAnimal()
-        {
-            if(mindTarget.Faction != null)
-            {
-                mindTarget.Faction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-                mindTarget.Faction.SetHostileTo(masterMind.Faction, true);
-                Messages.Message(mindTarget.Faction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
-            }
-        }
-
-        void BadWillHumanlike()
-        {
-            if (backupFaction == null)
-            {
-                Log.Warning("back faction null");
-                return;
-            }
-            if(masterMind.Faction != backupFaction)
-            {
-                backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-                backupFaction.SetHostileTo(masterMind.Faction, true);
-                Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
-
-            }  
-        }
-        
-
-        public void ShowReport()
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-            String buffer = string.Empty;
-
-            stringBuilder.AppendLine("| Mind log |");
-            stringBuilder.AppendLine("+--------------+");
-
-            if ( ! AreActorsSet )
-            {
-                stringBuilder.AppendLine("Nothing to say.");
-                stringBuilder.AppendLine("First, set a target by right clicking the mind control bench with a colonist.");
-                return;
-            }
-
-            // Mastermind 
-            stringBuilder.AppendLine("|");
-            stringBuilder.AppendLine("+---[Actors]");
-            stringBuilder.AppendLine("|\t|");
-            stringBuilder.AppendLine("|\t+-Tormentor : " + mName + "(" + mRace + ")" + " from " + masterMind.Faction.Name + ".");
-            stringBuilder.AppendLine("|\t|");
-
-            if (animalVictim())
-            {
-                   // wild animal
-                if(mindTarget.Faction == null)
-                {
-                    stringBuilder.AppendLine("|\t+-PetaPls\t: " + tName + "(" + tRace + ").");
-                }
-                    // faction animal
-                else
-                {
-                    stringBuilder.AppendLine("|\t+-FactionAnimal\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
-                }
-            }
-            else
-            {
-                if (mindTarget.Faction == null)
-                {
-                    Log.Warning("mindTarget.Faction == null");
-                    return;
-                }
-                stringBuilder.AppendLine("|\t+-Victim\t: " + tName + "(" + tRace + ")" + " from " + mindTarget.Faction.Name + ".");
-            }
-
-            stringBuilder.AppendLine("|");
-            stringBuilder.AppendLine("+---[Vectors]");
-            stringBuilder.AppendLine("|\t|");
-            if (animalVictim()){
-                stringBuilder.AppendLine("|\t+-Leverage  : " +animalVector );
-            }
-            else
-            {
-                if (!IsVectorSet(bestVector)) { Log.Warning(" no master leverage"); return; }
-                if (!IsVectorSet(worstVector)) { Log.Warning(" no victim leverage"); return; }
-                stringBuilder.AppendLine("|\t+-Leverage  : " + vectorName[bestVector] + "(" + bestVectorValue + ")");
-                stringBuilder.AppendLine("|\t|");
-                stringBuilder.AppendLine("|\t+-Weak\t: " + vectorName[worstVector] + "(" + worstVectorValue + ")");
-            }
-
-            if (masterMindN > 1)
-            {
-                stringBuilder.AppendLine("|");
-                stringBuilder.AppendLine("+---[Numbers]");
-                stringBuilder.AppendLine("|\t|");
-                stringBuilder.AppendLine("|\t+-Malus - tormentor number(" + masterMindN+") : " + "TODO");
-            }
-            //stringBuilder.AppendLine("|");
-            stringBuilder.AppendLine("|");
-            stringBuilder.AppendLine("+---[Progress]");
-            stringBuilder.AppendLine("\t|");
-            stringBuilder.AppendLine("\t" + ProgressToRegister.ToStringPercent("F0") );
-
-            Dialog_MessageBox window = new Dialog_MessageBox(stringBuilder.ToString(), null, null, null, null, null, false);
-            Find.WindowStack.Add(window);
         }
 
         public override string CompInspectStringExtra()
@@ -1483,7 +1394,7 @@ namespace LighterThanFast
             {
                 float SLP = 0f;
                 //  per sec
-                if (animalVictim())
+                if (AnimalVictim)
                     SLP = animalVector * 60;
                 else
                     SLP = bestVectorValue * 60;
@@ -1507,7 +1418,6 @@ namespace LighterThanFast
             return "No victim registered.";
             
         }
-
         public override void PostDrawExtraSelectionOverlays()
         {
             if ( mindTarget != null && mindTarget.Map != null)
