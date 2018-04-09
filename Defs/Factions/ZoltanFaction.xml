@@ -89,23 +89,27 @@
 				<carriers>
 					<Muffalo>2</Muffalo>
 					<Dromedary>2</Dromedary>
+					<Elephant>5</Elephant>
 				</carriers>
 				<guards>
-					<ZoltanGrenadier>50</ZoltanGrenadier>
+					<ZoltanColonist>20</ZoltanColonist>
+					<ZoltanGrenadier>30</ZoltanGrenadier>
 					<ZoltanGuard>90</ZoltanGuard>
 					<ZoltanFighter>5</ZoltanFighter>
 					<ZoltanHunter>90</ZoltanHunter>
 					<ZoltanHistGuard>80</ZoltanHistGuard>
 					<ZoltanHistSpeaker>20</ZoltanHistSpeaker>
+					<ZoltanShadowscale>10</ZoltanShadowscale>
 				</guards>
 			</li>
 			<li><kindDef>FactionBase</kindDef>
 				<options>
 					<ZoltanColonist>50</ZoltanColonist>
-					<ZoltanGuard>90</ZoltanGuard>
+					<ZoltanGrenadier>10</ZoltanGrenadier>
+					<ZoltanGuard>70</ZoltanGuard>
 					<ZoltanHistSpeaker>50</ZoltanHistSpeaker>
-					<ZoltanFighter>5</ZoltanFighter>
-					<ZoltanHunter>40</ZoltanHunter>
+					<ZoltanFighter>20</ZoltanFighter>
+					<ZoltanHunter>80</ZoltanHunter>
 					<ZoltanHistGuard>100</ZoltanHistGuard>
 					<ZoltanShadowscale>50</ZoltanShadowscale>
 				</options>

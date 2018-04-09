@@ -75,31 +75,35 @@
       <li>
         <kindDef>Normal</kindDef>
         <options>
-          <SlugColonist>50</SlugColonist>
-          <SlugGuard>90</SlugGuard>
-		  <SlugGrenadier>80</SlugGrenadier>
-          <SlugHistSpeaker>10</SlugHistSpeaker>
-          <SlugFighter>100</SlugFighter>
-          <SlugHunter>50</SlugHunter>
-          <SlugHistGuard>15</SlugHistGuard>
-          <SlugShadowscale>5</SlugShadowscale>
+			<SlugColonist>50</SlugColonist>
+			<SlugAddicted>40</SlugAddicted>
+			<SlugGuard>90</SlugGuard>
+			<SlugGrenadier>80</SlugGrenadier>
+			<SlugHistSpeaker>10</SlugHistSpeaker>
+			<SlugFighter>100</SlugFighter>
+			<SlugHunter>50</SlugHunter>
+			<SlugHistGuard>15</SlugHistGuard>
+			<SlugShadowscale>5</SlugShadowscale>
         </options>
       </li>
 	  <li>
       <kindDef>Trader</kindDef>
         <traders>
-          <SlugTrader>8</SlugTrader>
-		  <SlugAddicted>1</SlugAddicted>
+			<SlugTrader>8</SlugTrader>
+			<SlugAddicted>1</SlugAddicted>
         </traders>
         <carriers>
-          <Muffalo>2</Muffalo>
-          <Dromedary>2</Dromedary>
+			<Muffalo>1</Muffalo>
+			<Alpaca>2</Alpaca>
         </carriers>
         <guards>
-          <SlugGuard>90</SlugGuard>
-          <SlugFighter>100</SlugFighter>
-          <SlugHunter>100</SlugHunter>
-          <SlugHistGuard>80</SlugHistGuard>
+			<SlugColonist>50</SlugColonist>
+			<SlugAddicted>40</SlugAddicted>
+			<SlugGrenadier>80</SlugGrenadier>
+			<SlugGuard>90</SlugGuard>
+			<SlugFighter>100</SlugFighter>
+			<SlugHunter>100</SlugHunter>
+			<SlugHistGuard>80</SlugHistGuard>
         </guards>
       </li>
 	  <li>

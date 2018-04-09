@@ -92,10 +92,11 @@
 					<Dromedary>2</Dromedary>
 				</carriers>
 				<guards>
-					<EngieGrenadier>50</EngieGrenadier>
+					<EngieColonist>50</EngieColonist>
+					<EngieGrenadier>10</EngieGrenadier>
 					<EngieGuard>90</EngieGuard>
-					<EngieFighter>10</EngieFighter>
-					<EngieHunter>100</EngieHunter>
+					<EngieFighter>50</EngieFighter>
+					<EngieHunter>80</EngieHunter>
 					<EngieHistGuard>100</EngieHistGuard>
 					<EngieShadowscale>5</EngieShadowscale>
 				</guards>

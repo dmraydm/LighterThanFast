@@ -5,29 +5,21 @@
     <defName>NamerPersonMantis</defName>
     <rulePack>
 		<rulesStrings>
-        <li>name->[Locations] '[badass]' [tribalword]</li>
-        <li>name->[Locations] '[Adjective]' [Gangsta]</li>
-		<li>name->[Locations] '[Races]' [Gangsta]</li>
-		<li>name->[Locations] '[Adjective]' [MantisNames]</li>
+        <li>name->[MantisLocations] '[MantisNames]' [MantisGangsta]</li>
+		<li>name->[MantisLocations] '[MantisAdj] [MantisRaces]' [MantisGangsta]</li>
+		<li>name->[MantisAdj] '[MantisLocations] [Weapons]' [MantisNames]</li>
 		
-		<li>name->[Races] '[Locations]' [badassanimal]</li>
+		<li>name->[tribalword] '[MantisAdj] [MantisLocations]' [MantisNames]</li>
+		<li>name->[tribalword] '[MantisRaces] [MantisGangsta]' [MantisLocations]</li>
 		
+        <li>name->[MantisNames] '[MantisRaces] [Weapons]' [MantisLocations]</li>		
+		<li>name->[MantisNames] '[MantisRaces] [MantisLocations]' [MantisGangsta]</li>
 		
-        <li>name->[tribalword] '[color]' [MantisNames]</li>
-		<li>name->[tribalword] '[Adjective]' [MantisNames]</li>
-		<li>name->[tribalword] '[Races]' [Locations]</li>
-		
-        <li>name->[MantisNames] '[negative]' [Races]</li>		
-		<li>name->[MantisNames] '[Locations]' [Gangsta]</li>
-		<li>name->[MantisNames] '[color]' [Locations]</li>
-		
-		<li>name->[Adjective] '[Locations]' [MantisNames]</li>
-		<li>name->[color] '[Locations]' [Gangsta]</li>
-        <li>name->[color] '[Gangsta]' [Locations]</li>
-		<li>name->[Adjective] '[color]' [MantisNames]</li>
-		
+		<li>name->[MantisAdj] '[MantisLocations] [MantisGangsta]' [MantisRaces]</li>
+        <li>name->[negative] '[MantisGangsta] [Weapons]' [MantisLocations]</li>
 
-
+		<li>name->[MantisRaces] '[Bodyparts] [MantisLocations]' [MantisGangsta]</li>
+		<li>name->[MantisGangsta] '[Bodyparts] [Weapons]' [MantisGangsta]</li>
 		</rulesStrings>
 	  
 	<rulesRaw>
@@ -36,21 +28,9 @@
           <path>Words/Foreign/Tribal</path>
         </li>
 	
-		<li Class="Rule_File">
-          <keyword>badassanimal</keyword>
-          <path>Words/Nouns/Animals_Badass</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>animal</keyword>
-          <path>Words/Nouns/Animals</path>
-        </li>
         <li Class="Rule_File">
           <keyword>badass</keyword>
           <path>Words/Nouns/People_Badass</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>games</keyword>
-          <path>Words/Nouns/Games</path>
         </li>
         <li Class="Rule_File">
           <keyword>negative</keyword>
@@ -61,26 +41,35 @@
           <path>Words/Nouns/Colors</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>Adjective</keyword>
+          <keyword>MantisAdj</keyword>
           <path>MantisNames/MantisAdj</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>Locations</keyword>
+          <keyword>MantisLocations</keyword>
           <path>MantisNames/MantisLocations</path>
         </li>
 		<!-- noun -->
 		<li Class="Rule_File">
-          <keyword>Names</keyword>
+          <keyword>MantisNames</keyword>
           <path>MantisNames/MantisNames</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>Gangsta</keyword>
+          <keyword>MantisGangsta</keyword>
           <path>MantisNames/MantisGangsta</path>
         </li>
 		<li Class="Rule_File">
-          <keyword>Races</keyword>
+          <keyword>MantisRaces</keyword>
           <path>MantisNames/MantisRaces</path>
         </li>
+		<li Class="Rule_File">
+          <keyword>Weapons</keyword>
+			<path>Words/Nouns/Weapons</path>
+		</li>
+		<li Class="Rule_File">
+			<keyword>Bodyparts</keyword>
+			<path>Words/Nouns/Bodyparts</path>
+		</li>
+		
 	</rulesRaw>
 	  
     </rulePack>

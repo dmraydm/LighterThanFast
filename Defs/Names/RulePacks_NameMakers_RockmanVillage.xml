@@ -77,7 +77,7 @@
         </li>
 		<li Class="Rule_File">
           <keyword>Religious</keyword>
-          <path>RockmanNames/Religious</path>
+          <path>Location/Religious</path>
         </li>
 		
       </rulesRaw>
@@ -145,7 +145,7 @@
 <!-- Adj -->
 		<li Class="Rule_File">
           <keyword>Religious</keyword>
-          <path>RockmanNames/Religious</path>
+          <path>Location/Religious</path>
         </li>
         <li Class="Rule_File">
           <keyword>color</keyword>

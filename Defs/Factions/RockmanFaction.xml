@@ -82,10 +82,12 @@
           <RockmanTrader>1</RockmanTrader>
         </traders>
         <carriers>
-          <Muffalo>2</Muffalo>
-          <Dromedary>2</Dromedary>
+			<Muffalo>1</Muffalo>
+			<Alpaca>2</Alpaca>
+			<Dromedary>2</Dromedary>
         </carriers>
         <guards>
+			<RockmanColonist>30</RockmanColonist>
 			<RockmanGrenadier>100</RockmanGrenadier>
 			<RockmanGuard>40</RockmanGuard>
 			<RockmanFighter>50</RockmanFighter>

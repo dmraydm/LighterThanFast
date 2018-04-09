@@ -96,6 +96,7 @@
 			<Dromedary>2</Dromedary>
         </carriers>
         <guards>
+			<MantisColonist>50</MantisColonist>
 			<MantisGrenadier>20</MantisGrenadier>
 			<MantisGuard>50</MantisGuard>
 			<MantisFighter>100</MantisFighter>
