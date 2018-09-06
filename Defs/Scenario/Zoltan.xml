@@ -76,7 +76,7 @@ In a parallel circuit, a quicker method of finding  the equivalent resistance is
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
 	<def>StartingThing_Defined</def>
-	<thingDef>HerbalMedicine</thingDef>
+	<thingDef>MedicineHerbal</thingDef>
 	<count>20</count>
 	
 	</li>

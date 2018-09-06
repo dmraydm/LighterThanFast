@@ -14,8 +14,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 + Natural armor
 - 85% speed
 - 150% Hunger rate
-- 105% psychic sensitivity to depict religious inclination
-	</description>
+- 105% psychic sensitivity to depict religious inclination</description>
         
     <statBases>
 		<PsychicSensitivity>1.05</PsychicSensitivity>
@@ -106,7 +105,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			</li>    
 		</factionRelations>
 		
-		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<!-- <pawnsSpecificBackstories>true</pawnsSpecificBackstories> -->
 		<alienPartGenerator>
 			<customDrawSize>(1.25, 1.2)</customDrawSize>
 			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
@@ -189,7 +188,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			<skull>Humanoid/Skull/Rock/RockSkull</skull>
 		</li>
 	</graphicPaths>
-
+<!--
 		<pawnKindSettings>
 			<alienslavekinds>
 				<li><kindDefs><li>RockmanSlave</li></kindDefs><chance>10.0</chance></li>
@@ -201,7 +200,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 				<li>
 					<pawnKindEntries><li><kindDefs><li>RockmanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
 					<factionDefs>
-						<!-- <li>PlayerColony</li> -->
+
 						<li>PlayerTribe</li>
 						<li>RockmanPlayerColony</li>
 					</factionDefs>
@@ -230,7 +229,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 			</alienwandererkinds>
 			
 		</pawnKindSettings>
-	
+	-->
 	<hairSettings>
 		<hasHair>false</hasHair>
 	</hairSettings>
@@ -255,6 +254,9 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<makesFootprints>true</makesFootprints>
 	<lifeExpectancy>250</lifeExpectancy>
 	<!-- granite -->
+	<bloodDef>Filth_RubbleRock</bloodDef>
+	<useMeatFrom>Human</useMeatFrom>
+	<!--
 	<leatherColor>(105,95,97)</leatherColor>
 	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
 	<leatherInsulation>1.2</leatherInsulation>
@@ -266,9 +268,10 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 		<ArmorRating_Sharp>4.0</ArmorRating_Sharp>
 		<ArmorRating_Heat>8</ArmorRating_Heat>
 	</leatherStatFactors>
-	<bloodDef>RockRubble</bloodDef>
+	-->
 	
-	<useMeatFrom>Human</useMeatFrom>
+	
+	
 
 	<nameCategory>HumanStandard</nameCategory>
 	<body>Human</body>
@@ -336,7 +339,7 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 </race>
     <recipes>
       <li>InstallPowerClaw</li>
-      <li>InstallScytherBlade</li>
+      <!--<li>InstallScytherBlade</li>-->
       <li>InstallBionicEye</li>
       <li>InstallBionicArm</li>
       <li>InstallBionicLeg</li>
@@ -356,16 +359,6 @@ While the Rockmen are generally not an adventurous race, and can only be consist
       <li>Euthanize</li>
       <li>Anesthetize</li>
     </recipes>
-    
-	<modExtensions>
-		<li Class="PawnGlow.PawnGlowProperties">
-			<bodyPath>Rockman/Effects/BodyGlow/Naked</bodyPath>
-			<headPath>Rockman/Effects/HeadGlow/Glow</headPath>
-			<!-- <bodyOffsetY>0.002</bodyOffsetY> -->
-			<headOffsetY>0.03</headOffsetY>
-			<drawHead>true</drawHead>
-		</li>
-	</modExtensions>
-	
+
 </AlienRace.ThingDef_AlienRace>
 </Defs>

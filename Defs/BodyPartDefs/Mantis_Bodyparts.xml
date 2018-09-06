@@ -15,10 +15,10 @@
 <!-- template claw -->
 	<BodyPartDef Name="BodyPart_LTF_Claws" Abstract="True">
 		<hitPoints>20</hitPoints>
-		<isSolid>true</isSolid>
+		<!-- <isSolid>true</isSolid> -->
 		<frostbiteVulnerability>.05</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.01</oldInjuryBaseChance>
-		<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+		<!-- B19 <oldInjuryBaseChance>0.01</oldInjuryBaseChance> -->
+		<!-- <amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance> -->
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<tags>
@@ -44,10 +44,10 @@
 		<defName>BodyPart_LTF_MantisStache</defName>
 		<label>mantis stache</label>
 		<hitPoints>5</hitPoints>
-		<isSolid>true</isSolid>
+		<!-- <isSolid>true</isSolid> -->
 		<frostbiteVulnerability>.2</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.03</oldInjuryBaseChance>
-		<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+		<!-- <oldInjuryBaseChance>0.03</oldInjuryBaseChance> -->
+		<!-- <amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance> -->
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<!-- <spawnThingOnRemoved>LTF_MantisRightClaws</spawnThingOnRemoved> -->

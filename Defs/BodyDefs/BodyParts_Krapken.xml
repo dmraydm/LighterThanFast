@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- B19 <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance> -->
 <Defs>
 
   <BodyPartDef>
     <defName>Mantle</defName>
     <label>mantle</label>
     <hitPoints>40</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <!--  -->
     <skinCovered>true</skinCovered>
-    <dontSuggestAmputation>true</dontSuggestAmputation>
+    <!-- <dontSuggestAmputation>true</dontSuggestAmputation> -->
   </BodyPartDef>
 
 <BodyPartDef>
     <defName>CephalicRegion</defName>
     <label>cephalic region</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
-    <dontSuggestAmputation>true</dontSuggestAmputation>
+    <!-- <dontSuggestAmputation>true</dontSuggestAmputation> -->
   </BodyPartDef>
   
     <BodyPartDef>
     <defName>LeftGills</defName>
     <label>left gills</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>false</skinCovered>
     <tags>
       <li>BreathingSource</li>
@@ -35,7 +36,7 @@
     <defName>RightGills</defName>
     <label>right gills</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>false</skinCovered>
     <tags>
       <li>BreathingSource</li>
@@ -47,7 +48,7 @@
     <defName>LeftFunnel</defName>
     <label>left funnel</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
 	<frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -59,7 +60,7 @@
     <defName>RightFunnel</defName>
     <label>right funnel</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
 	<frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -71,7 +72,7 @@
     <defName>SystemicHeart</defName>
     <label>systemic heart</label>
     <hitPoints>10</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
 	<frostbiteVulnerability>0</frostbiteVulnerability>
     <skinCovered>false</skinCovered>
     <tags>
@@ -83,7 +84,7 @@
     <defName>BranchialHeart</defName>
     <label>branchial heart</label>
     <hitPoints>10</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
 	<frostbiteVulnerability>0</frostbiteVulnerability>
     <skinCovered>false</skinCovered>
     <tags>
@@ -103,7 +104,7 @@
     <defName>Base1Tentacle</defName>
     <label>base tentacle part #1</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -115,7 +116,7 @@
     <defName>Upper1Tentacle</defName>
     <label>upper tentacle part #1</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -127,7 +128,7 @@
     <defName>Lower1Tentacle</defName>
     <label>lower tentacle part #1</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -141,8 +142,8 @@
     <label>tip of tentacle #1</label>
     <hitPoints>15</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -155,7 +156,7 @@
     <defName>Base2Tentacle</defName>
     <label>base tentacle part #2</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -167,7 +168,7 @@
     <defName>Upper2Tentacle</defName>
     <label>upper tentacle part #2</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -179,7 +180,7 @@
     <defName>Lower2Tentacle</defName>
     <label>lower tentacle part #2</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -193,8 +194,8 @@
     <label>tip of tentacle #2</label>
     <hitPoints>25</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -207,7 +208,7 @@
     <defName>Base3Tentacle</defName>
     <label>base tentacle part #3</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -219,7 +220,7 @@
     <defName>Upper3Tentacle</defName>
     <label>upper tentacle part #3</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -231,7 +232,7 @@
     <defName>Lower3Tentacle</defName>
     <label>lower tentacle part #3</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -245,8 +246,8 @@
     <label>tip of tentacle #3</label>
     <hitPoints>35</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -259,7 +260,7 @@
     <defName>Base4Tentacle</defName>
     <label>base tentacle part #4</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -271,7 +272,7 @@
     <defName>Upper4Tentacle</defName>
     <label>upper tentacle part #4</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -283,7 +284,7 @@
     <defName>Lower4Tentacle</defName>
     <label>lower tentacle part #4</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -297,8 +298,8 @@
     <label>tip of tentacle #4</label>
     <hitPoints>45</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -311,7 +312,7 @@
     <defName>Base5Tentacle</defName>
     <label>base tentacle part #5</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -323,7 +324,7 @@
     <defName>Upper5Tentacle</defName>
     <label>upper tentacle part #5</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -335,7 +336,7 @@
     <defName>Lower5Tentacle</defName>
     <label>lower tentacle part #5</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -349,8 +350,8 @@
     <label>tip of tentacle #5</label>
     <hitPoints>15</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -363,7 +364,7 @@
     <defName>Base6Tentacle</defName>
     <label>base tentacle part #6</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -375,7 +376,7 @@
     <defName>Upper6Tentacle</defName>
     <label>upper tentacle part #6</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -387,7 +388,7 @@
     <defName>Lower6Tentacle</defName>
     <label>lower tentacle part #6</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -401,8 +402,8 @@
     <label>tip of tentacle #6</label>
     <hitPoints>15</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -415,7 +416,7 @@
     <defName>Base7Tentacle</defName>
     <label>base tentacle part #7</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -427,7 +428,7 @@
     <defName>Upper7Tentacle</defName>
     <label>upper tentacle part #7</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -439,7 +440,7 @@
     <defName>Lower7Tentacle</defName>
     <label>lower tentacle part #7</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -453,8 +454,8 @@
     <label>tip of tentacle #7</label>
     <hitPoints>15</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>
@@ -467,7 +468,7 @@
     <defName>Base8Tentacle</defName>
     <label>base tentacle part #8</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbSegment</li>
@@ -479,7 +480,7 @@
     <defName>Upper8Tentacle</defName>
     <label>upper tentacle part #8</label>
     <hitPoints>25</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <skinCovered>true</skinCovered>
     <tags>
 		<li>ManipulationLimbCore</li><li>ManipulationLimbSegment</li>
@@ -491,7 +492,7 @@
     <defName>Lower8Tentacle</defName>
     <label>lower tentacle part #8</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
     <skinCovered>true</skinCovered>
     <tags>
@@ -505,8 +506,8 @@
     <label>tip of tentacle #8</label>
     <hitPoints>15</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <amputateIfGeneratedInjuredChance>0.3</amputateIfGeneratedInjuredChance>
+    
+    
     <skinCovered>true</skinCovered>
     <tags>
       <li>ManipulationLimbDigit</li>

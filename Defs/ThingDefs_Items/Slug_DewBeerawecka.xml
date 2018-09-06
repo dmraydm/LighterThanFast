@@ -22,6 +22,7 @@
 		<MarketValue>4.3</MarketValue>
 		<Mass>.8</Mass>
 		<MaxHitPoints>10</MaxHitPoints>
+		<Nutrition>0.1</Nutrition>
     </statBases>
 	<tickerType>Rare</tickerType>
  
@@ -30,13 +31,14 @@
 		<preferability>DesperateOnly</preferability>
 		<foodType>AnimalProduct, Fluid</foodType>
 		 <!--<foodType>Processed</foodType>-->
-		<nutrition>0.1</nutrition>
+		<!-- B19 <nutrition>0.1</nutrition> -->
 		
 		<ingestEffect>EatVegetarian</ingestEffect>
 		<ingestSound>Meal_Eat</ingestSound>
 		
 		<!--<tasteThought>Ate_LTF_SlugDewBeerawecka</tasteThought>-->
 		<joy>0.01</joy>
+		<joyKind>Chemical</joyKind>
 		
 		<drugCategory>Hard</drugCategory>
 		<baseIngestTicks>240</baseIngestTicks>
@@ -73,8 +75,8 @@
 	</ingestible>
 	
     <comps>
-		<li Class="CompProperties_FoodPoisoningChance">
-			<humanlikeOnly>false</humanlikeOnly>
+		<li Class="CompProperties_FoodPoisonable">
+			<!-- B19 <humanlikeOnly>false</humanlikeOnly> -->
 		</li>
 		<li Class="CompProperties_Rottable">
 			<daysToRotStart>60</daysToRotStart>

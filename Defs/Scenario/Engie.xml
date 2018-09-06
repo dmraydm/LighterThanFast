@@ -89,7 +89,7 @@
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
 	<def>StartingThing_Defined</def>
-	<thingDef>HerbalMedicine</thingDef>
+	<thingDef>MedicineHerbal</thingDef>
 	<count>20</count>
 	</li>
 
@@ -140,7 +140,7 @@
 	</li>
 	<li Class="ScenPart_ScatterThingsNearPlayerStart">
 		<def>ScatterThingsNearPlayerStart</def>
-		<thingDef>Component</thingDef>
+		<thingDef>ComponentIndustrial</thingDef>
 		<count>7</count>
 	</li>
 	

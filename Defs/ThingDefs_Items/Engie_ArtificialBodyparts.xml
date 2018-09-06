@@ -34,7 +34,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		
-		<isBodyPartOrImplant>true</isBodyPartOrImplant>
+		<!-- B19 <isBodyPartOrImplant>true</isBodyPartOrImplant> -->
 	
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>

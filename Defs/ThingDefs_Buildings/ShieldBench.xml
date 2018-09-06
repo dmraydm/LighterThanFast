@@ -28,7 +28,7 @@ Falling on my head like a memory.</description>
 <!-- hasTooltip -->
 		<costList>
 			<Plasteel>43</Plasteel>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<LTF_EngieCraftRom>3</LTF_EngieCraftRom>
 			<LTF_Kraptyl>79</LTF_Kraptyl>
 			<Uranium>1</Uranium>
@@ -48,7 +48,7 @@ Falling on my head like a memory.</description>
 			<Flammability>1.1</Flammability>
 			<Cleanliness>-2</Cleanliness>
 		</statBases>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<minifiedDef>MinifiedThing</minifiedDef>
 		
 		<designationCategory>Security</designationCategory>
 		<specialDisplayRadius>12.7</specialDisplayRadius>
@@ -67,7 +67,7 @@ Falling on my head like a memory.</description>
 		
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<startElectricalFires>false</startElectricalFires>
+				<!-- <startElectricalFires>false</startElectricalFires> -->
 				<basePowerConsumption>350</basePowerConsumption>
 			</li>
 			

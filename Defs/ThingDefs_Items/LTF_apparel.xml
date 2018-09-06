@@ -18,8 +18,7 @@
 - A bench is required to make it work efficiently.
 - Precautionary principle could make you think twice.
 	
-Thanks Psyonix ! When is the new version §§§
-	</description>
+Thanks Psyonix ! When is the new version §§§</description>
 	<techLevel>Spacer</techLevel>
 	<graphicData>
 		<texPath>Things/Apparel/Shieldmet/Shieldmet</texPath>
@@ -48,7 +47,7 @@ Thanks Psyonix ! When is the new version §§§
 	</equippedStatOffsets>
 
 	<costList>
-		<Component>2</Component>
+		<ComponentIndustrial>2</ComponentIndustrial>
 		<Plasteel>73</Plasteel>
 		<Steel>11</Steel>
 		<LTF_Kraptyl>17</LTF_Kraptyl>

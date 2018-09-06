@@ -13,7 +13,7 @@
 		
 		<costList>
 			<Steel>10</Steel>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		
 	</ThingDef>

@@ -248,7 +248,7 @@ namespace LighterThanFast
 
         private void AbsorbedDamage(DamageInfo dinfo)
         {
-            SoundDefOf.EnergyShieldAbsorbDamage.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
+            SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
             this.impactAngleVect = Vector3Utility.HorizontalVectorFromAngle(dinfo.Angle);
             Vector3 loc = base.Wearer.TrueCenter() + this.impactAngleVect.RotatedBy(180f) * 0.5f;
             float num = Mathf.Min(10f, 2f + (float)dinfo.Amount / 10f);
@@ -264,7 +264,7 @@ namespace LighterThanFast
 
         private void Break()
         {
-            SoundDefOf.EnergyShieldBroken.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
+            SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
             MoteMaker.MakeStaticMote(base.Wearer.TrueCenter(), base.Wearer.Map, ThingDefOf.Mote_ExplosionFlash, 12f);
             for (int i = 0; i < 6; i++)
             {
@@ -280,7 +280,7 @@ namespace LighterThanFast
         {
             if (base.Wearer.Spawned)
             {
-                SoundDefOf.EnergyShieldReset.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
+                SoundDefOf.EnergyShield_Reset.PlayOneShot(new TargetInfo(base.Wearer.Position, base.Wearer.Map, false));
                 MoteMaker.ThrowLightningGlow(base.Wearer.TrueCenter(), base.Wearer.Map, 3f);
             }
             this.ticksToReset = -1;
@@ -407,8 +407,13 @@ namespace LighterThanFast
 
             }
         }
-
-        public override bool AllowVerbCast(IntVec3 root, Map map, LocalTargetInfo targ)
+        /*
+        public override bool AllowVerbCast(IntVec3 root, Map map, LocalTargetInfo targ, Verb verb)
+        {
+            return base.AllowVerbCast(root, map, targ, verb);
+        }
+        */
+        public override bool AllowVerbCast(IntVec3 root, Map map, LocalTargetInfo targ, Verb verb)
         {
             return ReachabilityImmediate.CanReachImmediate(root, targ, map, PathEndMode.Touch, null);
         }

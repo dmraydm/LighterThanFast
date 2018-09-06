@@ -248,8 +248,9 @@ namespace LighterThanFast
 				List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
 				for (int i = 0; i < hediffs.Count; i++)
 				{
-					if (hediffs[i] is Hediff_Injury && !hediffs[i].IsOld())
-					{
+                    //if (hediffs[i] is Hediff_Injury && !hediffs[i].IsOld())
+                    if (hediffs[i] is Hediff_Injury && !hediffs[i].IsPermanent())
+                    {
 						num += hediffs[i].Severity;
 					}
 				}
@@ -323,11 +324,11 @@ namespace LighterThanFast
                 {
                     if (this.Props.animalThing)
                     {
-                        result = " No " + Props.animalName + " for " + (graceTicks).ToStringTicksToPeriod(true, false, true);
+                        result = " No " + Props.animalName + " for " + (graceTicks).ToStringTicksToPeriod();
                     }
                     else
                     {
-                        result = " No " + Props.thingToSpawn.label + " for " + (graceTicks).ToStringTicksToPeriod(true, false, true);
+                        result = " No " + Props.thingToSpawn.label + " for " + (graceTicks).ToStringTicksToPeriod();
                     }
 
                     if (hungerReset > 0)
@@ -345,7 +346,7 @@ namespace LighterThanFast
                 }
                 else{
 
-                    result = ticksLeft.ToStringTicksToPeriod(true, false, true) + " before ";
+                    result = ticksLeft.ToStringTicksToPeriod() + " before ";
                     if (this.Props.animalThing)
                     {
                         result += Props.animalName;

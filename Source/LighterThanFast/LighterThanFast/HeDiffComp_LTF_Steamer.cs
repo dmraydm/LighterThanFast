@@ -79,7 +79,7 @@ namespace LighterThanFast
             get
             {
                 string result = string.Empty;
-                result += "Puff in " + this.sprayTicksLeft.ToStringTicksToPeriod(true, false, true);
+                result += "Puff in " + this.sprayTicksLeft.ToStringTicksToPeriod();
                 return result;
             }
         }

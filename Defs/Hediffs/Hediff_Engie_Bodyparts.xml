@@ -5,8 +5,8 @@
 		<defaultLabelColor>(138,43,226)</defaultLabelColor>
 		
 		<addedPartProps>
-			<isBionic>true</isBionic>
-			<isSolid>true</isSolid>
+			<!-- B19 <isBionic>true</isBionic> -->
+			<!-- <isSolid>true</isSolid> -->
 		</addedPartProps>
 	</HediffDef>
 	<!-- template t0-->

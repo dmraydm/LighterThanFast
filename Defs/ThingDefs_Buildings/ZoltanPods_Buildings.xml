@@ -6,7 +6,10 @@
     <label>Zoltan energy pod</label>
     <description>A bioluminescent pod produced by Zoltans. Glows in a soft light, emits power, then dies.</description>
     <thingClass>Building</thingClass>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <altitudeLayer>Building</altitudeLayer>
   
     <selectable>true</selectable>
@@ -40,7 +43,8 @@
 		<li Class="CompProperties_Battery">
 			<storedEnergyMax>300</storedEnergyMax>
 			<efficiency>1</efficiency>
-			<startElectricalFires>true</startElectricalFires>
+
+			<!-- <startElectricalFires>true</startElectricalFires> -->
 			 <shortCircuitInRain>true</shortCircuitInRain>
 			<transmitsPower>true</transmitsPower>
 		</li>

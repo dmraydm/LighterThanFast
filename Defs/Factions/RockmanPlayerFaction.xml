@@ -18,11 +18,20 @@
 		<basicMemberKind>Rockman</basicMemberKind>
 		<pawnsPlural>Rockmans</pawnsPlural>
 		
-		<baseNameMaker>NamerBaseRockmanVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionRockmanVillage</baseNameMakerPlayer>
+		<!--
+		<settlementNameMaker>NamerBaseRockmanVillage</settlementNameMaker>
+		<settlementNameMakerPlayer>NamerFactionRockmanVillage</settlementNameMakerPlayer>
 		<factionNameMakerPlayer>NamerFactionRockmanVillage</factionNameMakerPlayer>
-		<backstoryCategory>RockmanBackstory</backstoryCategory>
+		-->
+		<settlementNameMaker>NamerBaseRockmanVillage</settlementNameMaker>
+		<factionNameMaker>NamerFactionRockmanVillage</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerFactionRockmanVillage</playerInitialSettlementNameMaker>
+		<!-- <backstoryCategory>RockmanBackstory</backstoryCategory> -->
 
+		<backstoryCategories>
+			<li>RockmanBackstory</li>
+		</backstoryCategories>
+		
 		<homeIconPath>Rockman/npcZoom</homeIconPath>
 		<expandingIconTexture>Rockman/City</expandingIconTexture>
 <!-- techLevel : Industrial Medieval Neolithic -->		

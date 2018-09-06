@@ -6,10 +6,10 @@
 		<defName>BodyPart_LTF_SlugStache</defName>
 		<label>slug stache</label>
 		<hitPoints>5</hitPoints>
-		<isSolid>true</isSolid>
+		<!-- <isSolid>true</isSolid> -->
 		<frostbiteVulnerability>.3</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.03</oldInjuryBaseChance>
-		<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+		<!-- <oldInjuryBaseChance>0.03</oldInjuryBaseChance> -->
+		<!-- <amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance> -->
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<!-- <spawnThingOnRemoved>LTF_MantisRightClaws</spawnThingOnRemoved> -->

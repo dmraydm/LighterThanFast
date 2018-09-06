@@ -28,8 +28,8 @@
 		</comps>
 		
 		<addedPartProps>
-			<isBionic>true</isBionic>
-			<isSolid>true</isSolid>
+			<!-- B19 <isBionic>true</isBionic> -->
+			<!-- <isSolid>true</isSolid> -->
 		</addedPartProps>
 		
 		<spawnThingOnRemoved>LTF_Engie01Cooler</spawnThingOnRemoved>

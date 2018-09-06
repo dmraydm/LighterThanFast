@@ -18,6 +18,7 @@
     <techLevel>Industrial</techLevel>
     <ingestible>
       <foodType>Processed</foodType>
+	  <joyKind>Chemical</joyKind>
       <joy>0.80</joy>
       <drugCategory>Hard</drugCategory>
       <baseIngestTicks>240</baseIngestTicks>
@@ -132,8 +133,7 @@
         <hediff>ChemicalDamageSevere</hediff>
         <chance>0.15</chance>
         <partsToAffect>
-          <li>LeftKidney</li>
-          <li>RightKidney</li>
+          <li>Kidney</li>
         </partsToAffect>
       </li>
     </onGeneratedAddictedEvents>
@@ -164,8 +164,7 @@
 				<minSeverity>0.50</minSeverity>
 				<baseMtbDays>120</baseMtbDays>
 				<partsToAffect>
-					<li>LeftKidney</li>
-					<li>RightKidney</li>
+					<li>Kidney</li>
 				</partsToAffect>
 			</li>
 		</hediffGivers>
@@ -204,11 +203,11 @@
         </capMods>
         <mentalStateGivers>
 					<li>
-						<mentalState>BingingDrugExtreme</mentalState>
+						<mentalState>Binging_DrugExtreme</mentalState>
 						<mtbDays>40</mtbDays>
 					</li>
           <li>
-            <mentalState>WanderPsychotic</mentalState>
+            <mentalState>Wander_Psychotic</mentalState>
             <mtbDays>10</mtbDays>
           </li>
         </mentalStateGivers>

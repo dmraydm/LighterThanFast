@@ -10,8 +10,11 @@
     <race>Alien_Mantis</race>
     <combatPower>100</combatPower>
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategory>Civil</backstoryCategory>
-    <defaultFactionType>SpacerHostile</defaultFactionType>
+    <backstoryCategories>
+		<li>Civil</li>
+	</backstoryCategories>
+    <!-- <defaultFactionType>SpacerHostile</defaultFactionType> -->
+	<defaultFactionType>Pirate</defaultFactionType>
     <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
     <maxGenerationAge>50</maxGenerationAge>
     <itemQuality>Good</itemQuality>
@@ -25,7 +28,7 @@
       <li>BeltDefensePop</li>
     </apparelTags>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
     <weaponMoney>
       <min>300</min>
       <max>900</max>
@@ -53,8 +56,10 @@
     <race>Alien_Mantis</race>
     <combatPower>25</combatPower>
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategory>Civil</backstoryCategory>
-    <defaultFactionType>Spacer</defaultFactionType>
+    <backstoryCategories>
+		<li>Civil</li>
+	</backstoryCategories>
+    <defaultFactionType>Ancients</defaultFactionType>
     <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
     <forceNormalGearQuality>true</forceNormalGearQuality>
     <isFighter>false</isFighter>
@@ -71,7 +76,7 @@
       <li>Spacer</li>
     </apparelTags>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
   </PawnKindDef>
 
 </Defs>

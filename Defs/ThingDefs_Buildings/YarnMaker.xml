@@ -25,7 +25,7 @@
 		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
 		<Cleanliness>-2</Cleanliness>
     </statBases>
-	<minifiedDef>MinifiedFurniture</minifiedDef>
+	<minifiedDef>MinifiedThing</minifiedDef>
 	
     <costList>
 		<WoodLog>5</WoodLog>

@@ -3,7 +3,7 @@
 
 <!-- T1 -->
 <!-- grow -->
-<!-- ShootingAccuracy -->
+<!-- ShootingAccuracyPawn -->
 	<!-- grow PlantWorkSpeed PlantHarvestYield-->
 	<HediffDef ParentName="Hediff_LTF_artificialT2">
 		<defName>Hediff_LTF_growRom</defName>
@@ -16,7 +16,7 @@
 				
 				<TailoringSpeed>-0.032</TailoringSpeed>
 				<SmithingSpeed>-0.032</SmithingSpeed>
-				<ShootingAccuracy>-0.064</ShootingAccuracy>
+				<ShootingAccuracyPawn>-0.064</ShootingAccuracyPawn>
 			</statOffsets>
 		</li></stages>
 		
@@ -36,7 +36,7 @@
 				
 				<TailoringSpeed>-0.064</TailoringSpeed>
 				<SmithingSpeed>-0.064</SmithingSpeed>
-				<ShootingAccuracy>-0.128</ShootingAccuracy>
+				<ShootingAccuracyPawn>-0.128</ShootingAccuracyPawn>
 			</statOffsets>
 		</li></stages>
 		

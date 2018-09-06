@@ -6,7 +6,7 @@
 		<description>Far from nebula homelands slugs</description>
 		<pawnsPlural>untrustworthy slugs</pawnsPlural>
 		
-		<baseSelectionWeight>.4</baseSelectionWeight>
+		<settlementGenerationWeight>.4</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		
 		<homeIconPath>Slug/npcZoom</homeIconPath>
@@ -23,10 +23,16 @@
 		<canStageAttacks>true</canStageAttacks>
 
 		<factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
-		<baseNameMaker>NamerBaseSlugVillage</baseNameMaker>
+		<settlementNameMaker>NamerBaseSlugVillage</settlementNameMaker>
+		
 		<techLevel>Industrial</techLevel>
-		<backstoryCategory>SlugBackstory</backstoryCategory>		
+		<!--<backstoryCategory>SlugBackstory</backstoryCategory>		-->
 
+		<backstoryCategories>
+			<li>Raider</li>
+			<li>SlugBackstory</li>
+		</backstoryCategories>
+		
 		<hairTags>
 			<li>Slug</li>
 		</hairTags>
@@ -70,10 +76,18 @@
 			<min>-15</min>
 			<max>30</max>
 		</allowedArrivalTemperatureRange>
-		
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>	
     <pawnGroupMakers>
       <li>
-        <kindDef>Normal</kindDef>
+        <kindDef>Combat</kindDef>
         <options>
 			<SlugColonist>50</SlugColonist>
 			<SlugAddicted>40</SlugAddicted>
@@ -107,7 +121,7 @@
         </guards>
       </li>
 	  <li>
-        <kindDef>FactionBase</kindDef>
+        <kindDef>Settlement</kindDef>
         <options>
           <SlugColonist>50</SlugColonist>
           <SlugGuard>90</SlugGuard>

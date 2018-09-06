@@ -1,0 +1,23 @@
+		<!--
+    		<modExtensions>
+			<li Class="PawnGlow.PawnGlowProperties">
+				<bodyPath>Zoltan/Effects/BodyGlow/Naked</bodyPath>
+				<headPath>Zoltan/Effects/HeadGlow/Glow</headPath>
+				<bodyOffsetY>0.002</bodyOffsetY>
+				<headOffsetY>0.003</headOffsetY>..
+				<drawHead>true</drawHead>
+			</li>
+		</modExtensions>
+		-->
+
+    <!--
+	<modExtensions>
+		<li Class="PawnGlow.PawnGlowProperties">
+			<bodyPath>Rockman/Effects/BodyGlow/Naked</bodyPath>
+			<headPath>Rockman/Effects/HeadGlow/Glow</headPath>
+			<bodyOffsetY>0.002</bodyOffsetY> ..
+			<headOffsetY>0.03</headOffsetY>
+			<drawHead>true</drawHead>
+		</li>
+	</modExtensions>
+	-->

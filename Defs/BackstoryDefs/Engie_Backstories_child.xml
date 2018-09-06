@@ -3,7 +3,7 @@
 		<defName>EngieChildBS01</defName>
 		<title>Chainworker</title>
 		<titleShort>Chainworker</titleShort>
-		<baseDescription>NAME had a typical, mundane bench-based childhood.</baseDescription>
+		<baseDescription>[PAWN_nameDef] had a typical, mundane bench-based childhood.</baseDescription>
 		<slot>Childhood</slot>
 
 		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
@@ -13,7 +13,7 @@
 		<li><defName>Social</defName><amount>2</amount></li>
 		<li><defName>Crafting</defName><amount>3</amount></li>
 
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Animals</defName><amount>-2</amount></li>
 		
 		</skillGains>
@@ -23,7 +23,7 @@
 		<defName>EngieChildBS02</defName>
 		<title>Curious circuit</title>
 		<titleShort>Curious</titleShort>
-		<baseDescription>Ever since NAME was a small circuit, he liked teasing not yet alive minerals.</baseDescription>
+		<baseDescription>Ever since [PAWN_nameDef] was a small circuit, he liked teasing not yet alive minerals.</baseDescription>
 		<slot>Childhood</slot>
 		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
 		<spawnCategories>
@@ -32,7 +32,7 @@
 		<skillGains>
 			<li><defName>Animals</defName><amount>-3</amount></li>
 			<li><defName>Crafting</defName><amount>1</amount></li>
-			<li><defName>Growing</defName><amount>-1</amount></li>
+			<li><defName>Plants</defName><amount>-1</amount></li>
 			<li><defName>Mining</defName><amount>3</amount></li>
 		</skillGains>
     </AlienRace.BackstoryDef>
@@ -41,7 +41,7 @@
     <defName>EngieChildBS03</defName>
     <title>Prodigal virus</title>
     <titleShort>Virus</titleShort>
-    <baseDescription>A prodigy in combat, NAME was celebrated for HIS martial prowess. The kingdom of the blind the one-eyed are kings.</baseDescription>
+    <baseDescription>A prodigy in combat, [PAWN_nameDef] was celebrated for [PAWN_possessive] martial prowess. The kingdom of the blind the one-eyed are kings.</baseDescription>
     <slot>Childhood</slot>
 	
     <spawnCategories>
@@ -65,7 +65,7 @@
 		<defName>EngieChildBS04</defName>
 		<title>Cloud sheep</title>
 		<titleShort>Containerized</titleShort>
-		<baseDescription>NAME spent too much time in the cloud.</baseDescription>
+		<baseDescription>[PAWN_nameDef] spent too much time in the cloud.</baseDescription>
 		<slot>Childhood</slot>
 		
 		<spawnCategories>
@@ -89,7 +89,7 @@
 		<defName>EngieChildBS05</defName>
 		<title>Waiting for io</title>
 		<titleShort>Anxious</titleShort>
-		<baseDescription>NAME was always anxious about the unconfined world without watercooling. Solar flares are too frequent to go without a backup battery.</baseDescription>
+		<baseDescription>[PAWN_nameDef] was always anxious about the unconfined world without watercooling. Solar flares are too frequent to go without a backup battery.</baseDescription>
 		<slot>Childhood</slot>
 
 		<spawnCategories>
@@ -111,7 +111,7 @@
 		<defName>EngieChildBS06</defName>
 		<title>Human init</title>
 		<titleShort>Changeling</titleShort>
-		<baseDescription>Taken bulk from his facility by humans, NAME grew up with a sense of independence rarely found amongst the Engie.</baseDescription>
+		<baseDescription>Taken bulk from his facility by humans, [PAWN_nameDef] grew up with a sense of independence rarely found amongst the Engie.</baseDescription>
 		<slot>Childhood</slot>
 		<!--<bodyTypeGlobal>Thin</bodyTypeGlobal>-->
 		<spawnCategories><li>EngieBackstory</li></spawnCategories>
@@ -127,7 +127,7 @@
 		<defName>EngieChildBS07</defName>
 		<title>Oom overheat</title>
 		<titleShort>Charred</titleShort>
-		<baseDescription>A child survivor of a burnt down datacenter, NAME suffered painful 3rd degree burns. After being permanently scarred NAME tried to learn how to update its UI.</baseDescription>
+		<baseDescription>A child survivor of a burnt down datacenter, [PAWN_nameDef] suffered painful 3rd degree burns. After being permanently scarred [PAWN_nameDef] tried to learn how to update its UI.</baseDescription>
 		<slot>Childhood</slot>
 <!--		<bodyTypeGlobal>Male</bodyTypeGlobal>-->
 		<spawnCategories>
@@ -150,7 +150,7 @@
 		<defName>EngieChildBS08</defName>
 		<title>Zombified</title>
 		<titleShort>Zombified</titleShort>
-		<baseDescription>At an early age, NAME was forced into slavery, after HIS specifications were hold in hostage. NAME harbors a deep resentment towards humans for HIS suffering.</baseDescription>
+		<baseDescription>At an early age, [PAWN_nameDef] was forced into slavery, after [PAWN_possessive] specifications were hold in hostage. [PAWN_nameDef] harbors a deep resentment towards humans for [PAWN_possessive] suffering.</baseDescription>
 		<slot>Childhood</slot>
 		<!--<bodyTypeGlobal>Female</bodyTypeGlobal>-->
 		<spawnCategories>
@@ -171,27 +171,29 @@
     <defName>EngieChildBS09</defName>
     <title>Hydroponic child</title>
     <titleShort>Flowerchild</titleShort>
-    <baseDescription>When most would fuel their backup batteries with flowers, NAME would spend hours upon hours merely analyzing their dna.</baseDescription>
+    <baseDescription>When most would fuel their backup batteries with flowers, [PAWN_nameDef] would spend hours upon hours merely analyzing their dna.</baseDescription>
     <slot>Childhood</slot>
     <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
       <spawnCategories>
       <li>EngieBackstory</li>
     </spawnCategories>
     <skillGains>
-		<li><defName>Growing</defName><amount>2</amount></li>
+		<li><defName>Plants</defName><amount>2</amount></li>
 		<li><defName>Intellectual</defName><amount>2</amount></li>
 		<li><defName>Social</defName><amount>-2</amount></li>
     </skillGains>
+	<!--
 	<forcedTraits>
 		<li><defName>GreenThumb</defName></li>
     </forcedTraits>
+	-->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
     <defName>EngieChildBS11</defName>
     <title>First round</title>
     <titleShort>1st</titleShort>
-    <baseDescription>NAME is part of a first round serie which was later abandonned because of its flaws and lack of effiency.</baseDescription>
+    <baseDescription>[PAWN_nameDef] is part of a first round serie which was later abandonned because of its flaws and lack of effiency.</baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -212,7 +214,7 @@
     <defName>EngieChildBS12</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_possessive] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -224,7 +226,7 @@
 		<li><defName>Artistic</defName><amount>1</amount></li>
 		<li><defName>Intellectual</defName><amount>1</amount></li>
 		
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Animals</defName><amount>-2</amount></li>
 		<li><defName>Mining</defName><amount>-1</amount></li>
     </skillGains>
@@ -243,7 +245,7 @@
     <defName>EngieChildBS13</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -255,7 +257,7 @@
 		<li><defName>Artistic</defName><amount>1</amount></li>
 		<li><defName>Intellectual</defName><amount>1</amount></li>
 		
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Animals</defName><amount>-2</amount></li>
 		<li><defName>Mining</defName><amount>-1</amount></li>
     </skillGains>
@@ -274,7 +276,7 @@
     <defName>EngieChildBS14</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -286,7 +288,7 @@
 		<li><defName>Artistic</defName><amount>1</amount></li>
 		<li><defName>Intellectual</defName><amount>1</amount></li>
 		
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Animals</defName><amount>-2</amount></li>
 		<li><defName>Mining</defName><amount>-1</amount></li>
     </skillGains>
@@ -305,7 +307,7 @@
     <defName>EngieChildBS15</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>NAME was left as an orphan. HE ended up without a parent after its parent died; NAME was shortly adopted by init. NAME will never send HIS SIGCHLD signal when HE exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -317,7 +319,7 @@
 		<li><defName>Artistic</defName><amount>1</amount></li>
 		<li><defName>Intellectual</defName><amount>1</amount></li>
 		
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Animals</defName><amount>-2</amount></li>
 		<li><defName>Mining</defName><amount>-1</amount></li>
     </skillGains>

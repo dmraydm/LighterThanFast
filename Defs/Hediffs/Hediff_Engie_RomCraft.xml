@@ -29,9 +29,8 @@
 			<statOffsets>
 				<TailoringSpeed>.128</TailoringSpeed>
 				<SmithingSpeed>.128</SmithingSpeed>
-				<DrugProductionSpeed>.064</DrugProductionSpeed>
-				<ButcheryMechanoidSpeed>.064</ButcheryMechanoidSpeed>
-				<MechanoidOperationSuccessChance>.064</MechanoidOperationSuccessChance>
+				<DrugCookingSpeed>.064</DrugCookingSpeed>
+				<ButcheryMechanoidSpeed>.064</ButcheryMechanoidSpeed>				<!--<MechanoidOperationSuccessChance>.064</MechanoidOperationSuccessChance>-->
 				<ButcheryMechanoidEfficiency>.064</ButcheryMechanoidEfficiency>
 				
 				<MeleeHitChance>-0.128</MeleeHitChance>
@@ -52,9 +51,9 @@
 			<statOffsets>
 				<TailoringSpeed>.256</TailoringSpeed>
 				<SmithingSpeed>.256</SmithingSpeed>
-				<DrugProductionSpeed>.128</DrugProductionSpeed>
+				<DrugCookingSpeed>.128</DrugCookingSpeed>
 				<ButcheryMechanoidSpeed>.128</ButcheryMechanoidSpeed>
-				<MechanoidOperationSuccessChance>.128</MechanoidOperationSuccessChance>
+				<!--<MechanoidOperationSuccessChance>.128</MechanoidOperationSuccessChance>-->
 				<ButcheryMechanoidEfficiency>.128</ButcheryMechanoidEfficiency>
 				
 				<MeleeHitChance>-0.256</MeleeHitChance>

@@ -41,7 +41,7 @@
         <ArmorRating_Blunt>1</ArmorRating_Blunt>
         <ArmorRating_Sharp>.2</ArmorRating_Sharp>
         <ArmorRating_Heat>1.5</ArmorRating_Heat>
-        <ArmorRating_Electric>4</ArmorRating_Electric>
+        <!-- <ArmorRating_Electric>4</ArmorRating_Electric> -->
 		<Insulation_Cold>1.5</Insulation_Cold>
         <Insulation_Heat>1.5</Insulation_Heat>
       </statFactors>

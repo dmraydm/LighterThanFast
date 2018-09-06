@@ -20,13 +20,15 @@
 			<depth>Inside</depth>
 			</li>
 		
-			<li><def>LeftEye</def>
+			<li><def>Eye</def>
+			<customLabel>left eye</customLabel>
 			<coverage>0.015</coverage>
 			<groups><li>FullHead</li><li>Eyes</li></groups>
 			<depth>Outside</depth>
 			</li>
 		
-			<li><def>RightEye</def>
+			<li><def>Eye</def>
+			<customLabel>right eye</customLabel>
 			<coverage>0.015</coverage>
 			<groups><li>FullHead</li><li>Eyes</li></groups>
 			<depth>Outside</depth>
@@ -75,13 +77,15 @@
 				<groups><li>Mantle</li></groups>
 				</li>
 		
-				<li><def>LeftKidney</def>
+				<li><def>Kidney</def>
+				<customLabel>left kidney</customLabel>
 				<coverage>0.0005</coverage>
 				<depth>Inside</depth>
 				<groups><li>Mantle</li></groups>
 				</li>
 		
-				<li><def>RightKidney</def>
+				<li><def>Kidney</def>
+				<customLabel>right kidney</customLabel>
 				<coverage>0.0005</coverage>
 				<depth>Inside</depth>
 				<groups><li>Mantle</li></groups>

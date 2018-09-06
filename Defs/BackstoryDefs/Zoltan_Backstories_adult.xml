@@ -3,8 +3,11 @@
 		<defName>ZoltanBSQuote01</defName>
 		<title>Pump up the volume</title>
 		<titleShort>DJ</titleShort>
-		<baseDescription>NAME loves to drop a good beat or whatever it's called</baseDescription>
+		<baseDescription>[PAWN_nameDef] loves to drop a good beat or whatever it's called</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		
 		<spawnCategories>
 		  <li>ZoltanBackstory</li>
@@ -19,8 +22,11 @@
 		<defName>ZoltanBSQuote02</defName>
 		<title>Private dancer</title>
 		<titleShort>ZoltanDancer</titleShort>
-		<baseDescription>NAME met her Rockman dancing partner in a marble career. They became famous while she was whirling in the air magnifying her partner powerfull crystals juggling with her fragile body. The spectacle inspired manies and started some kind of transrace golden age.</baseDescription>
+		<baseDescription>[PAWN_nameDef] met her Rockman dancing partner in a marble career. They became famous while she was whirling in the air magnifying her partner powerfull crystals juggling with her fragile body. The spectacle inspired manies and started some kind of transrace golden age.</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		
 		<spawnCategories><li>ZoltanBackstory</li></spawnCategories>
 		<skillGains>
@@ -61,7 +67,7 @@
 			<li><defName>Construction</defName><amount></amount></li>
 			<li><defName>Cooking</defName><amount></amount></li>
 			<li><defName>Crafting</defName><amount></amount></li>
-			<li><defName>Growing</defName><amount></amount></li>
+			<li><defName>Plants</defName><amount></amount></li>
 			<li><defName>Medicine</defName><amount></amount></li>
 			<li><defName>Mining</defName><amount></amount></li>
 			<li><defName>Intellectual</defName><amount></amount></li>

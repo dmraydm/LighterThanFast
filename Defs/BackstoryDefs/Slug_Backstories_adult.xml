@@ -4,8 +4,11 @@
 		<defName>SlugBSQuote01</defName>
 		<title>Stamp inc ceo</title>
 		<titleShort>StampLicker</titleShort>
-		<baseDescription>NAME was spotted by stampInc and ended up as a CEO there</baseDescription>
+		<baseDescription>[PAWN_nameDef] was spotted by stampInc and ended up as a CEO there</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		
 		<spawnCategories>
 		  <li>SlugBackstory</li>
@@ -31,8 +34,11 @@
 		<defName>SlugBSQuote02</defName>
 		<title>Boat licker</title>
 		<titleShort>Boat</titleShort>
-		<baseDescription>NAME bought a boat but didnt like it. NAMED liked the customers though and somehow managed to create a boat club. NAME built a distribution network, made connections, a lot of money, having moved upwards of a million dollars worth of product over the fiscal year. </baseDescription>
+		<baseDescription>[PAWN_nameDef] bought a boat but didnt like it. [PAWN_nameDef]D liked the customers though and somehow managed to create a boat club. [PAWN_nameDef] built a distribution network, made connections, a lot of money, having moved upwards of a million dollars worth of product over the fiscal year. </baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		
 		<spawnCategories>
 		  <li>SlugBackstory</li>
@@ -59,8 +65,12 @@
 		<defName>SlugBSQuote03</defName>
 		<title>Big fish bait</title>
 		<titleShort>Bait</titleShort>
-		<baseDescription>Some interplanetarian NGO had organ traffic presumptions. NAME infiltrated the holographic production as a comedian. She almost got slaughtered in the process but managed to prove the big fish guilt by gathering overwhelming evidence.</baseDescription>
+		<baseDescription>Some interplanetarian NGO had organ traffic presumptions. [PAWN_nameDef] infiltrated the holographic production as a comedian. She almost got slaughtered in the process but managed to prove the big fish guilt by gathering overwhelming evidence.</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		
 		<spawnCategories>
 		  <li>SlugBackstory</li>
 		</spawnCategories>
@@ -91,8 +101,12 @@ B - "wha."
 A - "She tied her self to the tree, yo!"
 B - "you joken me"
 A - "na"
-NAME - "you got a problem ?" </baseDescription>
+[PAWN_nameDef] - "you got a problem ?" </baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		
 		<maleCommonality>0</maleCommonality>
 		<femaleCommonality>100</femaleCommonality>
 		<spawnCategories>
@@ -100,24 +114,27 @@ NAME - "you got a problem ?" </baseDescription>
 		</spawnCategories>
 		
 		<skillGains>
-			<li><defName>Growing</defName><amount>3</amount></li>
+			<li><defName>Plants</defName><amount>3</amount></li>
 			<li><defName>Social</defName><amount>-2</amount></li>
 		</skillGains>
-
+		<!--
 		<forcedTraits>
 			<li><defName>GreenThumb</defName></li>
 		</forcedTraits>
-
+		-->
 </AlienRace.BackstoryDef>
 <!---->	
 <AlienRace.BackstoryDef>
 		<defName>SlugBSQuote05</defName>
 		<title>Slug enhancer</title>
 		<titleShort>enhancer</titleShort>
-		<baseDescription>Seeing how backwards Slug Home Nebula was, NAME decided to tour Zoltan's homeworlds in order to find ways to modernize his country.
-NAME took the guise of an average merchant to avoid being discovered and came back to Slugland with many ways to improve the empire. He set up new schools, created the mighty port of St. Astrodroolport, and ordered all slug men to collect their morning dews or pay a tax.
+		<baseDescription>Seeing how backwards Slug Home Nebula was, [PAWN_nameDef] decided to tour Zoltan's homeworlds in order to find ways to modernize his country.
+[PAWN_nameDef] took the guise of an average merchant to avoid being discovered and came back to Slugland with many ways to improve the empire. He set up new schools, created the mighty port of St. Astrodroolport, and ordered all slug men to collect their morning dews or pay a tax.
 		</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
 		
 		<spawnCategories><li>SlugBackstory</li></spawnCategories>
 		<skillGains>
@@ -137,10 +154,14 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote06</defName>
 		<title>Slave one day</title>
 		<titleShort>slave</titleShort>
-		<baseDescription>NAME is a polymath: poet, musician, singer, cosmetologist, fashion designer, strategist, astronomer, botanist and former slave. Most people have never heard of NAME, yet at least one of his innovations remain to this day: he introduced the idea of meals on a regular basis in the slug society. Since Slugs used to carry their nutrients on their mucous membrane all day long, it slightly improved the Slug Home Nebula hygiene.
+		<baseDescription>[PAWN_nameDef] is a polymath: poet, musician, singer, cosmetologist, fashion designer, strategist, astronomer, botanist and former slave. Most people have never heard of [PAWN_nameDef], yet at least one of his innovations remain to this day: he introduced the idea of meals on a regular basis in the slug society. Since Slugs used to carry their nutrients on their mucous membrane all day long, it slightly improved the Slug Home Nebula hygiene.
 		</baseDescription>
 
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		
 		<spawnCategories>
 		  <li>SlugBackstory</li>
 		</spawnCategories>
@@ -149,7 +170,7 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 			<li><defName>Artistic</defName><amount>2</amount></li>
 			<li><defName>Intellectual</defName><amount>1</amount></li>
 			<li><defName>Crafting</defName><amount>2</amount></li>
-			<li><defName>Growing</defName><amount>2</amount></li>
+			<li><defName>Plants</defName><amount>2</amount></li>
 			<li><defName>Medicine</defName><amount>3</amount></li>
 
 			<li><defName>Animals</defName><amount>-1</amount></li>
@@ -169,9 +190,13 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote07</defName>
 		<title>Xx hermaphrodite</title>
 		<titleShort>Xx</titleShort>
-		<baseDescription>NAME sexually identifies as an hermaphrodite and will argue with anyone who disagrees that she is right and he is wrong. Phallocrats are her target... For now.
+		<baseDescription>[PAWN_nameDef] sexually identifies as an hermaphrodite and will argue with anyone who disagrees that she is right and he is wrong. Phallocrats are her target... For now.
 		</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		
 		<maleCommonality>0</maleCommonality>
 		<femaleCommonality>100</femaleCommonality>
 		
@@ -182,7 +207,7 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 			<li><defName>Melee</defName><amount>3</amount></li>
 			<li><defName>Shooting</defName><amount>1</amount></li>
 			<li><defName>Animals</defName><amount>1</amount></li>
-			<li><defName>Growing</defName><amount>1</amount></li>
+			<li><defName>Plants</defName><amount>1</amount></li>
 		</skillGains>
 		
 		<forcedTraits>
@@ -202,9 +227,13 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote08</defName>
 		<title>Xy hermaphrodite</title>
 		<titleShort>Xy</titleShort>
-		<baseDescription>NAME sexually identifies as an hermaphrodite and will argue with anyone who disagrees that he is right and she is wrong. Wild amazons are his targets... For now.
+		<baseDescription>[PAWN_nameDef] sexually identifies as an hermaphrodite and will argue with anyone who disagrees that he is right and she is wrong. Wild amazons are his targets... For now.
 		</baseDescription>
 		<slot>Adulthood</slot>
+		
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		
 		<maleCommonality>100</maleCommonality>
 		<femaleCommonality>0</femaleCommonality>
 		<spawnCategories>
@@ -214,7 +243,7 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 			<li><defName>Melee</defName><amount>3</amount></li>
 			<li><defName>Shooting</defName><amount>1</amount></li>
 			<li><defName>Animals</defName><amount>2</amount></li>
-			<li><defName>Growing</defName><amount>1</amount></li>
+			<li><defName>Plants</defName><amount>1</amount></li>
 		</skillGains>
 		
 		<forcedTraits>
@@ -234,9 +263,13 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote09</defName>
 		<title>Drool sculptor</title>
 		<titleShort>sculptor</titleShort>
-		<baseDescription>NAME has always felt his excretions were great. Due to this, NAME begun to capture figures and craft opulent wares. Because even with his abundant morning dews, he was not able to gather enough drool to build his dream statues, NAME became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has always felt his excretions were great. Due to this, [PAWN_nameDef] begun to capture figures and craft opulent wares. Because even with his abundant morning dews, he was not able to gather enough drool to build his dream statues, [PAWN_nameDef] became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
 
 	<slot>Adulthood</slot>
+	
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	
 	<spawnCategories>
 		  <li>SlugBackstory</li>
 	</spawnCategories>
@@ -254,9 +287,13 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote10</defName>
 		<title>Gofast veteran</title>
 		<titleShort>Ex gofast</titleShort>
-		<baseDescription>NAME has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adaptes, overcomes.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adaptes, overcomes.</baseDescription>
 
 	<slot>Adulthood</slot>
+	
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+		
 	<spawnCategories>
 		  <li>SlugBackstory</li>
 	</spawnCategories>
@@ -281,9 +318,13 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
 		<defName>SlugBSQuote11</defName>
 		<title>Mantispulated</title>
 		<titleShort>Nerd</titleShort>
-		<baseDescription>NAME pretends he was forced to harvest an engie by a mantis tryharder. The guy needed a screen to VR because he a had a raid with its clan on the ansible. What the fudge dude!:kappa: NAME managed to escape thanks to his strafing and bunny hops skills. Btw do you even rocket jump bro ?</baseDescription>
+		<baseDescription>[PAWN_nameDef] pretends he was forced to harvest an engie by a mantis tryharder. The guy needed a screen to VR because he a had a raid with its clan on the ansible. What the fudge dude!:kappa: [PAWN_nameDef] managed to escape thanks to his strafing and bunny hops skills. Btw do you even rocket jump bro ?</baseDescription>
 
 	<slot>Adulthood</slot>
+	
+	<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	
 	<spawnCategories>
 		  <li>SlugBackstory</li>
 	</spawnCategories>
@@ -294,7 +335,7 @@ NAME took the guise of an average merchant to avoid being discovered and came ba
     </skillGains>
 	
 	<forcedTraits>
-		<li><defName>Prosthophile</defName><chance>30</chance></li>
+		<li><defName>Transhumanist</defName><chance>30</chance></li>
 		<li><defName>Nerves</defName><degree>-1</degree></li>
 		<li><defName>ShootingAccuracy</defName><degree>-1</degree><chance>30</chance></li>
 		<li><defName>Beauty</defName><degree>-1</degree><chance>30</chance></li>

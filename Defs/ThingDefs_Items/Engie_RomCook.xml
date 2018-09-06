@@ -56,8 +56,8 @@
 		<costList>
 			<LTF_Kraptyl>50</LTF_Kraptyl>
 			<LTF_EngieCook2Rom>2</LTF_EngieCook2Rom>
-			<Megaspider_Meat>25</Megaspider_Meat>
-			<Human_Meat>1</Human_Meat>
+			<Meat_Megaspider>25</Meat_Megaspider>
+			<Meat_Human>1</Meat_Human>
 		</costList>
 	</ThingDef>
 </Defs>

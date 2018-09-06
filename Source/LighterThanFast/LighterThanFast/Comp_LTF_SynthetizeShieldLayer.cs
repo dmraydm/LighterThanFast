@@ -48,9 +48,10 @@ namespace LighterThanFast
         private float CalculateEnergySynthesisCapacity (Pawn layerSynthetizer)
         {
             float intelligenceValue = layerSynthetizer.GetStatValue(StatDefOf.ResearchSpeed, true);
-            float rangedValue = layerSynthetizer.GetStatValue(StatDefOf.ShootingAccuracy, true);
+            float rangedValue = layerSynthetizer.GetStatValue(StatDefOf.ShootingAccuracyPawn, true);
             float craftValue = layerSynthetizer.GetStatValue(StatDef.Named("SmithingSpeed"), true);
-//            float meleeValue = layerSynthetizer.GetStatValue(StatDefOf.MeleeDodgeChance, true);
+            //float craftValue = layerSynthetizer.GetStatValue(StatDefOf., true);
+            //            float meleeValue = layerSynthetizer.GetStatValue(StatDefOf.MeleeDodgeChance, true);
             //float yeldValue = layerSynthetizer.GetStatValue(StatDefOf., true);
 
             return (intelligenceValue + Rand.Range(rangedValue*.75f , rangedValue*1.25f)) * craftValue * layerMulti;

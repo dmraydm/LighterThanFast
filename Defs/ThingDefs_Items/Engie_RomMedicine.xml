@@ -16,7 +16,7 @@
 		
 		<costList>
 			<!-- <LTF_EngieRawRom>1</LTF_EngieRawRom> -->
-			<HerbalMedicine>5</HerbalMedicine>
+			<MedicineHerbal>5</MedicineHerbal>
 		</costList>
 		
 	</ThingDef>
@@ -37,7 +37,7 @@
 		<costList>
 			<Gold>2</Gold>
 			<LTF_EngieMedicineRom>1</LTF_EngieMedicineRom>
-			<Medicine>5</Medicine>
+			<MedicineIndustrial>5</MedicineIndustrial>
 			<Penoxycyline>1</Penoxycyline>
 		</costList>
 	</ThingDef>
@@ -58,7 +58,7 @@
 			<LTF_Kraptyl>50</LTF_Kraptyl>
 			<LTF_EngieMedicine2Rom>2</LTF_EngieMedicine2Rom>
 			<Luciferium>1</Luciferium>
-			<GlitterworldMedicine>1</GlitterworldMedicine>
+			<MedicineUltratech>1</MedicineUltratech>
 			<Hyperweave>1</Hyperweave>
 		</costList>
 	</ThingDef>

@@ -17,12 +17,20 @@
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Slug</basicMemberKind>
 		<pawnsPlural>Slugs</pawnsPlural>
-		
-		<baseNameMaker>NamerBaseSlugVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionSlugVillage</baseNameMakerPlayer>
+		<!--
+		<settlementNameMaker>NamerBaseSlugVillage</settlementNameMaker>
+		<settlementNameMakerPlayer>NamerFactionSlugVillage</settlementNameMakerPlayer>
 		<factionNameMakerPlayer>NamerFactionSlugVillage</factionNameMakerPlayer>
-		<backstoryCategory>SlugBackstory</backstoryCategory>
-
+		-->
+		
+		<settlementNameMaker>NamerBaseSlugVillage</settlementNameMaker>
+		<factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerFactionSlugVillage</playerInitialSettlementNameMaker>
+		
+		<backstoryCategories>
+			<li>SlugBackstory</li>
+		</backstoryCategories>
+		
 		<homeIconPath>Slug/npcZoom</homeIconPath>
 		<expandingIconTexture>Slug/City</expandingIconTexture>
 <!-- techLevel : Industrial Medieval Neolithic -->		

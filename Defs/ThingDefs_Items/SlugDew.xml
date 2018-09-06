@@ -26,10 +26,14 @@
 		<!--<ArmorHeatMultiplier>1.5</ArmorHeatMultiplier>-->
 		<SharpDamageMultiplier>0.2</SharpDamageMultiplier>
 		<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+		<Nutrition>0.02</Nutrition>
     </statBases>
 	
 	<tickerType>Rare</tickerType>
 	<deepCommonality>0.01</deepCommonality>
+	<deepCountPerPortion>6</deepCountPerPortion>
+	<deepLumpSizeRange>2</deepLumpSizeRange>
+	
 	<scatterableOnMapGen>false</scatterableOnMapGen>
     <stuffProps>
 		<stuffAdjective>secreted</stuffAdjective>
@@ -41,7 +45,7 @@
 		<!-- <color>(230, 204, 255)</color> -->
 		<color>(.9, .8, 1, .7)</color>
 		<constructEffect>ConstructWood</constructEffect>
-		<soundImpactStuff>BulletImpactWood</soundImpactStuff>
+		<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
 		<statOffsets>
 			<Beauty>-1</Beauty>
 		</statOffsets>
@@ -55,7 +59,7 @@
 			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
 			<ArmorRating_Sharp>.2</ArmorRating_Sharp>
 			<ArmorRating_Heat>1.5</ArmorRating_Heat>
-			<ArmorRating_Electric>4</ArmorRating_Electric>
+			<!-- <ArmorRating_Electric>4</ArmorRating_Electric> -->
 			<MeleeWeapon_CooldownMultiplier>.95</MeleeWeapon_CooldownMultiplier>
 		</statFactors>
 		<smeltable>false</smeltable>
@@ -68,7 +72,7 @@
 		<preferability>DesperateOnly</preferability>
 		<foodType>AnimalProduct, Fluid</foodType>
 		 <!--<foodType>Processed</foodType>-->
-		<nutrition>0.02</nutrition>
+		<!-- B19 <nutrition>0.02</nutrition> -->
 		
 		<ingestEffect>EatMeat</ingestEffect>
 		<ingestSound>Ingest_Beer</ingestSound>
@@ -90,8 +94,8 @@
 	</ingestible>
 	
     <comps>
-		<li Class="CompProperties_FoodPoisoningChance">
-			<humanlikeOnly>false</humanlikeOnly>
+		<li Class="CompProperties_FoodPoisonable">
+			<!-- B19 <humanlikeOnly>false</humanlikeOnly> -->
 		</li>
 		<li Class="CompProperties_Rottable">
 			<daysToRotStart>5</daysToRotStart>
@@ -116,7 +120,7 @@
 </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>FilthSlugDew</defName>
+    <defName>Filth_SlugDew</defName>
     <label>dew leftovers</label>
     <statBases>
       <Beauty>-20</Beauty>

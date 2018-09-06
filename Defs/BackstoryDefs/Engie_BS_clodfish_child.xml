@@ -3,7 +3,7 @@
 		<defName>EngieChildClodfish01</defName>
 		<title>Learner</title>
 		<titleShort>Learner</titleShort>
-		<baseDescription>NAME never left the womb which is the Nanobotic Mass of the Engi homeworld. Until adulthood NAME was unaware of the concept of self but when HE finally formed HIS mind was filled with the knowledge of his people. However, NAME struggled to control his body and understand that other beings were individuals. </baseDescription>
+		<baseDescription>[PAWN_nameDef] never left the womb which is the Nanobotic Mass of the Engi homeworld. Until adulthood [PAWN_nameDef] was unaware of the concept of self but when [PAWN_pronoun] finally formed [PAWN_possessive] mind was filled with the knowledge of his people. However, [PAWN_nameDef] struggled to control his body and understand that other beings were individuals. </baseDescription>
 		<slot>Childhood</slot>
 
 		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
@@ -12,7 +12,7 @@
 		
 		<li><defName>Intellectual</defName><amount>5</amount></li>
 		<li><defName>Crafting</defName><amount>-2</amount></li>
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
 		<li><defName>Construction</defName><amount>-2</amount></li>
 		
 		</skillGains>
@@ -23,7 +23,7 @@
 		<defName>EngieChildClodfish02</defName>
 		<title>Diplomat</title>
 		<titleShort>Diplomat</titleShort>
-		<baseDescription>Ever adventurous NAME emerged from the Nanobotic Mass early but quickly found himself without any knowledge of the world HE just entered. Fortunately a couple of human diplomats took NAME as their son where they taught him their profession. NAME grew up as a symbol of human-Engi cooperation. </baseDescription>
+		<baseDescription>Ever adventurous [PAWN_nameDef] emerged from the Nanobotic Mass early but quickly found himself without any knowledge of the world [PAWN_pronoun] just entered. Fortunately a couple of human diplomats took [PAWN_nameDef] as their son where they taught him their profession. [PAWN_nameDef] grew up as a symbol of human-Engi cooperation. </baseDescription>
 		<slot>Childhood</slot>
 		<!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
 		<spawnCategories>
@@ -46,7 +46,7 @@
     <defName>EngieChildClodfish03</defName>
     <title>Mantis child slave</title>
     <titleShort>Slave</titleShort>
-    <baseDescription>NAME was ripped from the Nanobotic Mass by a mantis slave trader. Since NAME hadn’t formed naturally HE was malformed and couldn’t work his function as a mechanic as well the Mantis liked. NAME did learn however, the Mantis ways of fighting and used this to sabotage a Mantis clash with the Federation. He enlisted for the Federation cadets immediately after.</baseDescription>
+    <baseDescription>[PAWN_nameDef] was ripped from the Nanobotic Mass by a mantis slave trader. Since [PAWN_nameDef] hadn’t formed naturally [PAWN_pronoun] was malformed and couldn’t work his function as a mechanic as well the Mantis liked. [PAWN_nameDef] did learn however, the Mantis ways of fighting and used this to sabotage a Mantis clash with the Federation. He enlisted for the Federation cadets immediately after.</baseDescription>
     <slot>Childhood</slot>
 	
     <spawnCategories>
@@ -69,7 +69,7 @@
 		<defName>EngieChildClodfish04</defName>
 		<title>Engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>As soon as NAME formed HE knew HIS calling as an engineer. HE entered the Mechanicus soon after and did not leave for ten years. During HIS time their HE built many wonders which found him at odds with the Mechanicus ultimanius. The role of a mechanica is to fix not build. HE was expelled after erecting an enormous intricate human phallus.</baseDescription>
+		<baseDescription>As soon as [PAWN_nameDef] formed [PAWN_pronoun] knew [PAWN_pronoun] calling as an engineer. [PAWN_pronoun] entered the Mechanicus soon after and did not leave for ten years. During [PAWN_possessive] time [PAWN_pronoun] built many wonders which found him at odds with the Mechanicus ultimanius. The role of a mechanica is to fix not build. [PAWN_pronoun] was expelled after erecting an enormous intricate human phallus.</baseDescription>
 		<slot>Childhood</slot>
 		
 		<spawnCategories>
@@ -90,7 +90,7 @@
 		<defName>EngieChildClodfish05</defName>
 		<title>Feeler</title>
 		<titleShort>Feeler</titleShort>
-		<baseDescription>NAME made a horrible discovery after HE formed, HE could feel. NAME kept this crime hidden as best HE could until HE joined an Engi effort to colonise a new planet. After witnessing his/her species use bioweapons to suppress the local wildlife, NAME broke down. Discovered, NAME ran into the forest leaving only a trail of tears. </baseDescription>
+		<baseDescription>[PAWN_nameDef] made a horrible discovery after [PAWN_pronoun] formed, [PAWN_pronoun] could feel. [PAWN_nameDef] kept this crime hidden as best [PAWN_pronoun] could until [PAWN_pronoun] joined an Engi effort to colonise a new planet. After witnessing his/her species use bioweapons to suppress the local wildlife, [PAWN_nameDef] broke down. Discovered, [PAWN_nameDef] ran into the forest leaving only a trail of tears. </baseDescription>
 		<slot>Childhood</slot>
 
 		<spawnCategories>

@@ -127,7 +127,7 @@
 		
 		<comps>
 		<li Class="LighterThanFast.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>Megaspider_Meat</thingToSpawn>
+			<thingToSpawn>Meat_Megaspider</thingToSpawn>
 			<spawnCount>5</spawnCount>
 			<minDaysB4Next>1.5</minDaysB4Next>
 			<maxDaysB4Next>2</maxDaysB4Next>

@@ -6,7 +6,10 @@
   <PawnKindDef Name="RockmanBase" Abstract="True">
     <defaultFactionType>RockmanFaction</defaultFactionType>
     <race>Alien_Rockman</race>
-	<backstoryCategory>RockmanBackstory</backstoryCategory>
+	<backstoryCategories>
+		<li>RockmanBackstory</li>
+	</backstoryCategories>
+	<!-- B19 <backstoryCategory>RockmanBackstory</backstoryCategory> -->
     <baseRecruitDifficulty>.85</baseRecruitDifficulty>
 	<chemicalAddictionChance>0.08</chemicalAddictionChance>
 	<invNutrition>4</invNutrition>
@@ -195,7 +198,7 @@
 				</countRange>
 			</li>
 			<li>
-				<thingDef>Medicine</thingDef>
+				<thingDef>MedicineIndustrial</thingDef>
 				<countRange>
 				<min>1</min>
 				<max>1</max>
@@ -220,7 +223,7 @@
 			<max>3000</max>
 		</apparelMoney>
 		
-		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
 		<weaponTags>
 			<li>NonNeolithicOnlyMelee</li>
 			<li>NeolithicMeleeAdvanced</li>
@@ -256,7 +259,7 @@
 			<min>800</min>
 			<max>1400</max>
 		</apparelMoney>
-		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
 		<weaponMoney>
 			<min>600</min>
 			<max>1000</max>
@@ -314,7 +317,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -367,7 +370,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>2</max>
@@ -420,7 +423,7 @@
 				</countRange>
 			</li>
 			<li>
-				<thingDef>Medicine</thingDef>
+				<thingDef>MedicineIndustrial</thingDef>
 				<countRange>
 					<min>1</min>
 					<max>2</max>

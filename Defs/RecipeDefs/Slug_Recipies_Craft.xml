@@ -3,8 +3,7 @@
   <RecipeDef>
     <defName>MakeSlugSilk</defName>
     <label>make slug silk</label>
-    <description>Extract microfibers from slug dew.
-	</description>
+    <description>Extract microfibers from slug dew.</description>
     <jobString>Making slug silk</jobString>
 	
     <workAmount>500</workAmount>

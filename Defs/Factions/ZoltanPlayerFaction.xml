@@ -27,11 +27,20 @@
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Zoltan</basicMemberKind>
 		<pawnsPlural>Zoltans</pawnsPlural>
-		
-		<baseNameMaker>NamerBaseZoltanVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionZoltanVillage</baseNameMakerPlayer>
+		<!--
+		<settlementNameMaker>NamerBaseZoltanVillage</settlementNameMaker>
+		<settlementNameMakerPlayer>NamerFactionZoltanVillage</settlementNameMakerPlayer>
 		<factionNameMakerPlayer>NamerFactionZoltanVillage</factionNameMakerPlayer>
-		<backstoryCategory>ZoltanBackstory</backstoryCategory>
+		-->
+		
+		<settlementNameMaker>NamerBaseZoltanVillage</settlementNameMaker>
+		<factionNameMaker>NamerFactionZoltanVillage</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerFactionZoltanVillage</playerInitialSettlementNameMaker>
+		
+		<!--<backstoryCategory>ZoltanBackstory</backstoryCategory>-->
+		<backstoryCategories>
+			<li>ZoltanBackstory</li>
+		</backstoryCategories>
 
 		<homeIconPath>Zoltan/npcZoom</homeIconPath>
 		<expandingIconTexture>Zoltan/City</expandingIconTexture>

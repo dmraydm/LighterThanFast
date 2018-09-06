@@ -17,14 +17,18 @@
 		<MarketValue>2.37</MarketValue>
 		<Mass>0.6</Mass>
 		<Flammability>1.5</Flammability>
+		<MaxHitPoints>50</MaxHitPoints>
 		<!-- <DeteriorationRate>5</DeteriorationRate> -->
     </statBases>
 
-    <useHitPoints>false</useHitPoints>
-    <slagDef>LTF_ChunkSlagKraptyl</slagDef>
-	<!--<deepCommonality>5</deepCommonality>-->
+    <!-- <useHitPoints>false</useHitPoints> -->
 
+    <slagDef>LTF_ChunkSlagKraptyl</slagDef>
+	
 	<deepCommonality>0.01</deepCommonality>
+	<deepCountPerPortion>3</deepCountPerPortion>
+	<deepLumpSizeRange>2</deepLumpSizeRange>
+	
 	<scatterableOnMapGen>false</scatterableOnMapGen>
 	
 	<stuffProps>
@@ -38,7 +42,7 @@
 		<!-- <color>(138,43,226)</color> -->
 		<color>(138,113,226)</color>
 		
-		<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
+		<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
 		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 	  <statOffsets>
@@ -47,7 +51,7 @@
 		<statFactors>
 			<Beauty>.5</Beauty>
 			<ArmorRating_Blunt>.8</ArmorRating_Blunt>
-			<ArmorRating_Electric>.8</ArmorRating_Electric>
+			<!-- <ArmorRating_Electric>.8</ArmorRating_Electric> -->
 			<ArmorRating_Heat>.8</ArmorRating_Heat>
 			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
 			

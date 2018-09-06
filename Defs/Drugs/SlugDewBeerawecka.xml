@@ -76,8 +76,7 @@
         <partsToAffect>
 			<li>Stomach</li>
 			<li>Liver</li>
-			<li>LeftKidney</li>
-			<li>RightKidney</li>
+			<li>Kidney</li>
         </partsToAffect>
       </li>
 	  <li>
@@ -115,8 +114,7 @@
 			<minSeverity>0.50</minSeverity>
 			<baseMtbDays>120</baseMtbDays>
 			<partsToAffect>
-				<li>LeftKidney</li>
-				<li>RightKidney</li>
+				<li>Kidney</li>
 			</partsToAffect>
 		</li>
 	</hediffGivers>
@@ -169,11 +167,11 @@
 			
         <mentalStateGivers>
 			<li>
-				<mentalState>BingingDrugExtreme</mentalState>
+				<mentalState>Binging_DrugExtreme</mentalState>
 				<mtbDays>40</mtbDays>
 			</li>
 			<li>
-				<mentalState>WanderPsychotic</mentalState>
+				<mentalState>Wander_Psychotic</mentalState>
 				<mtbDays>10</mtbDays>
 			</li>
         </mentalStateGivers>

@@ -6,7 +6,10 @@
 	<PawnKindDef Name="MantisBase" Abstract="True">
 		<defaultFactionType>MantisFaction</defaultFactionType>
 		<race>Alien_Mantis</race>
-		<backstoryCategory>MantisBackstory</backstoryCategory>
+		<backstoryCategories>
+			<li>MantisBackstory</li>
+		</backstoryCategories>
+		<!-- <backstoryCategory>MantisBackstory</backstoryCategory> -->
 		<chemicalAddictionChance>0.05</chemicalAddictionChance>
 		<baseRecruitDifficulty>.75</baseRecruitDifficulty>
 		<!--<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>-->
@@ -113,11 +116,12 @@
       <max>4000</max>
     </apparelMoney>
     <weaponMoney>
-      <min>1400</min>
+      <min>500</min>
       <max>3000</max>
     </weaponMoney>
     <weaponTags>
-	  <li>NeolithicRanged</li>
+		<li>NeolithicRanged</li>
+		<li>SimpleGun</li>
     </weaponTags>
     <techHediffsMoney>
       <min>200</min>
@@ -191,14 +195,14 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
           </countRange>
         </li>
 		<li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -222,15 +226,15 @@
 			<max>3000</max>
 		</apparelMoney>
 		
-		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
 		<weaponTags>
 			<li>NonNeolithicOnlyMelee</li>
 			<li>NeolithicMeleeAdvanced</li>
 		</weaponTags>
 		
 		<weaponMoney>
-			<min>100</min>
-			<max>2000</max>
+			<min>1000</min>
+			<max>4000</max>
 		</weaponMoney>
 		<combatEnhancingDrugsCount>
 			<min>0</min>
@@ -254,7 +258,7 @@
 			<min>400</min>
 			<max>1200</max>
 		</apparelMoney>
-		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
 		<weaponMoney>
 			<min>600</min>
 			<max>1000</max>
@@ -318,7 +322,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -371,7 +375,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>2</max>
@@ -429,7 +433,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>2</max>

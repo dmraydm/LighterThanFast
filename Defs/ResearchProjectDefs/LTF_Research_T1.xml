@@ -76,7 +76,7 @@ A worn shieldmet will stock shield layers if a shield bench fills it.
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>Smithing</li>
-			<li>Greatbows</li>
+			<li>Greatbow</li>
 			<li>MicroelectronicsBasics</li>
 			<li>LTF_Research_ZoltanShieldBench</li>
 		</prerequisites>

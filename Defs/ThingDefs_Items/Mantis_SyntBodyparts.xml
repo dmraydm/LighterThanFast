@@ -44,12 +44,13 @@
 		</inspectorTabs>
 		
 		<equippedAngleOffset>-15</equippedAngleOffset>
-		<isBodyPartOrImplant>true</isBodyPartOrImplant>
+		<!-- B19 <isBodyPartOrImplant>true</isBodyPartOrImplant> -->
 		<comps>
 			<li><compClass>CompQuality</compClass></li>
 			
 			<li Class="CompProperties_Art">
-				<nameMaker>ArtName_WeaponMelee</nameMaker>
+				<!--<nameMaker>ArtName_WeaponMelee</nameMaker>-->
+				<nameMaker>NamerArtWeaponMelee</nameMaker>
 				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
 				<minQualityForArtistic>Excellent</minQualityForArtistic>
 			</li>
@@ -103,7 +104,7 @@ There must be a better solution.</description>
 			<MaxHitPoints>100</MaxHitPoints>
 			<WorkToMake>25000</WorkToMake>
 			<Mass>1.5</Mass>
-			<Weapon_Bulk>.95</Weapon_Bulk>
+			<!-- <Weapon_Bulk>.95</Weapon_Bulk> -->
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>2</DeteriorationRate>
 			<Beauty>-6</Beauty>
@@ -145,7 +146,7 @@ Craftable at :
 			<MaxHitPoints>100</MaxHitPoints>
 			<WorkToMake>35000</WorkToMake>
 			<Mass>1.2</Mass>
-			<Weapon_Bulk>1.05</Weapon_Bulk>
+			<!-- <Weapon_Bulk>1.05</Weapon_Bulk> -->
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>2</DeteriorationRate>
 			<Beauty>-6</Beauty>

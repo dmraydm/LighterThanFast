@@ -56,15 +56,18 @@ namespace LighterThanFast
         {
             return (VirtualQuality(comp, -1));
         }
+        
         public static string VirtualQuality(CompQuality comp, int relativeChange = 0)
         {
             string answer = "no quality comp";
             if (comp != null)
-                answer = comp.Quality.AddLevels(relativeChange).GetLabelShort();
+                //answer = comp.Quality.AddLevels(relativeChange).GetLabelShort();
+                // ERROR THIS IS FALSE
+                answer = comp.Quality.GetLabelShort();
 
             return (answer);
         }
-
+        
         public static string PawnResumeString(Pawn pawn)
         {
             return (pawn?.LabelShort.CapitalizeFirst() +

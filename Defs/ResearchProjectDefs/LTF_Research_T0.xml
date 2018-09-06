@@ -57,9 +57,9 @@ It also allows to melt chunks.
 		<tab>LTF</tab>
 		<prerequisites>
 			<li>Machining</li>
-			<li>Refining</li>
+			<li>BiofuelRefining</li>
 		</prerequisites>
-		<tags><li>LTF_rockStart</li></tags>
+		<!--<tags><li>LTF_rockStart</li></tags>-->
 		<researchViewX>0</researchViewX>
 		<researchViewY>3.1</researchViewY>
 	</ResearchProjectDef>

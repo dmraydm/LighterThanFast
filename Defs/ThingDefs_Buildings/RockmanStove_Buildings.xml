@@ -37,9 +37,9 @@
 		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
 		<Cleanliness>-1</Cleanliness>
     </statBases>
-	<minifiedDef>MinifiedFurniture</minifiedDef>
+	<minifiedDef>MinifiedThing</minifiedDef>
 
-	<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>.3</resourcesFractionWhenDeconstructed>
 	
@@ -71,7 +71,7 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
 
 	<recipes>
-		<li>BurnApparelCampfire</li>
+		<li>BurnApparel</li>
 		<li>BurnDrugs</li>
 		<li>ExtractMetalFromSlag</li>
     </recipes>

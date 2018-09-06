@@ -4,9 +4,12 @@
     <defName>EngieAdultClodfish01</defName>
     <title>Mad scientist</title>
     <titleShort>Mad scientist</titleShort>
-	<baseDescription>Wishing for a perfectly deterministic universe NAME spent HIS days crafting predictive algorithms. After another failed attempt due to the irrational feelings of races like the humans, rockmen and mantis, NAME came to a cold horrible realisation. The only way the universe will be balanced would be without those races. NAME started his mechanoid program with outstanding results. </baseDescription>
+	<baseDescription>Wishing for a perfectly deterministic universe [PAWN_nameDef] spent [PAWN_possessive] days crafting predictive algorithms. After another failed attempt due to the irrational feelings of races like the humans, rockmen and mantis, [PAWN_nameDef] came to a cold horrible realisation. The only way the universe will be balanced would be without those races. [PAWN_nameDef] started his mechanoid program with outstanding results. </baseDescription>
     <slot>Adulthood</slot>
-<!--    <bodyTypeGlobal>Male</bodyTypeGlobal>-->
+      <!--<bodyTypeGlobal>Thin</bodyTypeGlobal>-->
+	  <bodyTypeMale>Thin</bodyTypeMale>
+	  <bodyTypeFemale>Female</bodyTypeFemale>
+	  
       <spawnCategories>
       <li>EngieBackstory</li>
     </spawnCategories>
@@ -23,9 +26,12 @@
     <defName>EngieAdultClodfish02</defName>
     <title>Mantis slave</title>
     <titleShort>Mantis slave</titleShort>
-	<baseDescription>During a transit between worlds NAME ship was boarded by a Mantis war party and Name was enslaved to be their mechanic. After numerous beatings and torture all NAME will to fight was broken. HE became skilled at fixing mantis ships and begging for HIS life. </baseDescription>
+	<baseDescription>During a transit between worlds [PAWN_nameDef] ship was boarded by a Mantis war party and [PAWN_pronoun] was enslaved to be their mechanic. After numerous beatings and torture all [PAWN_nameDef] will to fight was broken. [PAWN_pronoun] became skilled at fixing mantis ships and begging for [PAWN_possessive] life. </baseDescription>
     <slot>Adulthood</slot>
-    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
 	
 	<spawnCategories>
 		<li>EngieBackstory</li>
@@ -44,9 +50,12 @@
     <defName>EngieAdultClodfish03</defName>
     <title>Engi representative</title>
     <titleShort>Engi representative</titleShort>
-	<baseDescription>NAME is a natural born leader known for HIS ability to make any horrible circumstance into a win/win situation. HE quickly rose to the diplomatic rank of an Engi representative in the federation. Working tirelessly NAME made Engi home sectors free of Mantis slavers with the help of federation fleets, at the expense of contracting them more Engi engineers. </baseDescription>
+	<baseDescription>[PAWN_nameDef] is a natural born leader known for [PAWN_possessive] ability to make any horrible circumstance into a win/win situation. [PAWN_pronoun] quickly rose to the diplomatic rank of an Engi representative in the federation. Working tirelessly [PAWN_nameDef] made Engi home sectors free of Mantis slavers with the help of federation fleets, at the expense of contracting them more Engi engineers. </baseDescription>
     <slot>Adulthood</slot>
-    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+	
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
 	
 	<spawnCategories>
 		<li>EngieBackstory</li>
@@ -58,7 +67,7 @@
 
 		<li><defName>Crafting</defName><amount>-2</amount></li>
 		<li><defName>Construction</defName><amount>-2</amount></li>
-		<li><defName>Growing</defName><amount>-2</amount></li>
+		<li><defName>Plants</defName><amount>-2</amount></li>
     </skillGains>
 	
 	<forcedTraits><li><defName>Masochist</defName><chance>100</chance></li></forcedTraits>
@@ -69,15 +78,19 @@
     <defName>EngieAdultClodfish04</defName>
     <title>Naturalist</title>
     <titleShort>Naturalist</titleShort>
-	<baseDescription>NAME renounced HIS species’ obsession with technology and touched down on a empty planet to live off the land in isolation. HE had to do everything for himself including building shelters, growing food and crafting simple clothes and tools. In his spare time NAME befriended the local wildlife. </baseDescription>
+	<baseDescription>[PAWN_nameDef] renounced [PAWN_possessive] species’ obsession with technology and touched down on a empty planet to live off the land in isolation. [PAWN_pronoun] had to do everything for himself including building shelters, growing food and crafting simple clothes and tools. In his spare time [PAWN_nameDef] befriended the local wildlife. </baseDescription>
     <slot>Adulthood</slot>
-    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+    
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+	
 	<spawnCategories>
 		<li>EngieBackstory</li>
 	</spawnCategories>
 	
 	<skillGains>
-		<li><defName>Growing</defName><amount>3</amount></li>
+		<li><defName>Plants</defName><amount>3</amount></li>
 		<li><defName>Animals</defName><amount>2</amount></li>
 		<li><defName>Construction</defName><amount>1</amount></li>
 		<li><defName>Intellectual</defName><amount>-3</amount></li>
@@ -89,9 +102,13 @@
     <defName>EngieAdultClodfish05</defName>
     <title>Ship builder</title>
     <titleShort>Ship builder</titleShort>
-	<baseDescription>Needing work NAME applied to the Varcalia ship yards to help build federation stealth cruisers. Starting as a mere plasma welder NAME worked HIS way up with pure elbow grease until HE found herself as a team leader of a plasma welding team. Sometimes when HE watches those ships fly into a sea of stars HE wonders if HE could be more than what HE is.</baseDescription>
+	<baseDescription>Needing work [PAWN_nameDef] applied to the Varcalia ship yards to help build federation stealth cruisers. Starting as a mere plasma welder [PAWN_nameDef] worked [PAWN_possessive] way up with pure elbow grease until [PAWN_pronoun] found herself as a team leader of a plasma welding team. Sometimes when [PAWN_pronoun] watches those ships fly into a sea of stars [PAWN_pronoun] wonders if [PAWN_pronoun] could be more than what [PAWN_pronoun] is.</baseDescription>
     <slot>Adulthood</slot>
-    <!--<bodyTypeGlobal>Male</bodyTypeGlobal>-->
+    
+	<bodyTypeGlobal>Male</bodyTypeGlobal>
+	<bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+	
 	<spawnCategories>
 		<li>EngieBackstory</li>
 	</spawnCategories>
@@ -99,7 +116,7 @@
 	<skillGains>
 		<li><defName>Crafting</defName><amount>2</amount></li>
 		<li><defName>Construction</defName><amount>3</amount></li>
-		<li><defName>Growing</defName><amount>-3</amount></li>
+		<li><defName>Plants</defName><amount>-3</amount></li>
 	</skillGains>  
 	
     </AlienRace.BackstoryDef>

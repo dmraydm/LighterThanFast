@@ -120,7 +120,7 @@ namespace LighterThanFast
                 {
                     if (this.ticksLeft > 0)
                     {
-                        result = ticksLeft.ToStringTicksToPeriod(true, false, true) + " before "+ Initiator.LabelShort +" releases to " + originFaction.Name + "."; ;
+                        result = ticksLeft.ToStringTicksToPeriod() + " before "+ Initiator.LabelShort +" releases to " + originFaction.Name + "."; ;
                         //result += Victim.LabelShort + 
                     }
                 }
@@ -362,7 +362,8 @@ namespace LighterThanFast
             if (Victim.Faction == null)
             {
                 Tools.Warn("null faction Init");
-                almostoriginFaction = FactionUtility.DefaultFactionFrom(FactionDefOf.Tribe);
+                almostoriginFaction = FactionUtility.DefaultFactionFrom(FactionDefOf.Ancients);
+                //almostoriginFaction = FactionUtility.DefaultFactionFrom(FactionDefOf.Tribe);
             }
             else
             {

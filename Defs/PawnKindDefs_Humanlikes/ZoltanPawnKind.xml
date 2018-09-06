@@ -6,7 +6,10 @@
 	<PawnKindDef Name="ZoltanBase" Abstract="True">
 		<defaultFactionType>ZoltanFaction</defaultFactionType>
 		<race>Alien_Zoltan</race>
-		<backstoryCategory>ZoltanBackstory</backstoryCategory>
+		<backstoryCategories>
+			<li>ZoltanBackstory</li>
+		</backstoryCategories>
+		<!-- B19 <backstoryCategory>ZoltanBackstory</backstoryCategory> -->
 		<chemicalAddictionChance>0.05</chemicalAddictionChance>
 		<baseRecruitDifficulty>.5</baseRecruitDifficulty>
 
@@ -138,11 +141,12 @@
 		</apparelMoney>
 
 		<weaponMoney>
-			<min>1400</min>
-			<max>3000</max>
+			<min>3000</min>
+			<max>10000</max>
 		</weaponMoney>
 		<weaponTags>
 			<li>AdvancedGun</li>
+			<li>Gun</li>
 		</weaponTags>
 
 		<techHediffsMoney>
@@ -209,7 +213,7 @@
 						</countRange>
 					</li>
 					<li>
-						<thingDef>Medicine</thingDef>
+						<thingDef>MedicineIndustrial</thingDef>
 						<countRange>
 							<min>1</min>
 							<max>1</max>
@@ -232,7 +236,7 @@
 			<max>3500</max>
 		</apparelMoney>
 		
-		<apparelAllowHeadwearChance>0.8</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.8</apparelAllowHeadwearChance> -->
 		<weaponTags>
 			<li>NonNeolithicOnlyMelee</li>
 			<li>NeolithicMeleeAdvanced</li>
@@ -269,7 +273,7 @@
 			<max>4500</max>
 		</apparelMoney>
 
-		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<!-- <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance> -->
 		<weaponMoney>
 			<min>600</min>
 			<max>1000</max>
@@ -328,7 +332,7 @@
 		  </countRange>
 		</li>
 		<li>
-		  <thingDef>Medicine</thingDef>
+		  <thingDef>MedicineIndustrial</thingDef>
 		  <countRange>
 			<min>1</min>
 			<max>1</max>
@@ -357,7 +361,8 @@
 		</weaponMoney>
 
 		<weaponTags>
-		<li>AdvancedGun</li>
+			<li>AdvancedGun</li>
+			<li>Gun</li>
 		</weaponTags>
 
 		<techHediffsMoney>
@@ -379,7 +384,7 @@
 		  </countRange>
 		</li>
 		<li>
-		  <thingDef>Medicine</thingDef>
+		  <thingDef>MedicineIndustrial</thingDef>
 		  <countRange>
 			<min>1</min>
 			<max>2</max>
@@ -432,7 +437,7 @@
 				</countRange>
 			</li>
 			<li>
-				<thingDef>Medicine</thingDef>
+				<thingDef>MedicineIndustrial</thingDef>
 				<countRange>
 					<min>1</min>
 					<max>2</max>

@@ -13,9 +13,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 - 85% Health 
 - Explodes upon death
 - Glows in the dark
-- Lays eggs that pop power pods
-	
-	</description>
+- Lays eggs that pop power pods</description>
         
     <statBases>
 		<PsychicSensitivity>1.0</PsychicSensitivity>
@@ -43,7 +41,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<ArmorRating_Blunt>.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>.15</ArmorRating_Sharp>
 		
-		<RecruitPrisonerChance>1.15</RecruitPrisonerChance>
+		<NegotiationAbility>1.15</NegotiationAbility>
 		<!-- <DiplomacyPower>1.1</DiplomacyPower> -->
     </statBases>
 	
@@ -134,7 +132,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
                 </li>    
 		</factionRelations>
 	
-		<pawnsSpecificBackstories>true</pawnsSpecificBackstories>
+		<!-- <pawnsSpecificBackstories>true</pawnsSpecificBackstories> -->
 		<alienPartGenerator>
 			<customDrawSize>(.9,.9)</customDrawSize>
 			<alienbodytypes>
@@ -212,7 +210,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<immuneToXenophobia>true</immuneToXenophobia>
 		
 	</generalSettings>    
-
+	<!--
 	<pawnKindSettings>
     <alienslavekinds>
         <li><kindDefs><li>ZoltanSlave</li></kindDefs><chance>10.0</chance></li>
@@ -224,7 +222,6 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
         <li>
 			<pawnKindEntries><li><kindDefs><li>ZoltanColonist</li></kindDefs><chance>10.0</chance></li></pawnKindEntries>
 			<factionDefs>
-				<!-- <li>PlayerColony</li> -->
 				<li>PlayerTribe</li>
 				<li>ZoltanPlayerColony</li>
 			</factionDefs>
@@ -261,7 +258,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
     </alienwandererkinds>
 
 	</pawnKindSettings>
-
+	-->
 	
 	<graphicPaths>
 		<li>
@@ -295,16 +292,16 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <makesFootprints>true</makesFootprints>
       <lifeExpectancy>100</lifeExpectancy>
 	  
-      <leatherColor>(128,250,128)</leatherColor>
+      <!-- <leatherColor>(128,250,128)</leatherColor> -->
       <bloodDef>LTF_FilthKraptyl</bloodDef>
 	  <useMeatFrom>Human</useMeatFrom>
 	  
-	  
+	  <!--
       <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
 	  <leatherInsulation>0.2</leatherInsulation>
       <leatherLabel>Zoltan leather</leatherLabel>
       <leatherMarketValueFactor>1</leatherMarketValueFactor>
-	  
+	  -->
       <nameCategory>HumanStandard</nameCategory>
       <body>Zoltan</body>
 		  <!--<body>Human</body>-->
@@ -370,7 +367,7 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<!--base-->
 		
       <li>InstallPowerClaw</li>
-      <li>InstallScytherBlade</li>
+      <!--<li>InstallScytherBlade</li>-->
       <li>InstallBionicEye</li>
       <li>InstallBionicArm</li>
       <li>InstallBionicLeg</li>
@@ -391,15 +388,6 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <li>Anesthetize</li>
 	  
     </recipes>
-	
-    		<modExtensions>
-			<li Class="PawnGlow.PawnGlowProperties">
-				<bodyPath>Zoltan/Effects/BodyGlow/Naked</bodyPath>
-				<headPath>Zoltan/Effects/HeadGlow/Glow</headPath>
-				<bodyOffsetY>0.002</bodyOffsetY>
-				<!-- <headOffsetY>0.003</headOffsetY> -->
-				<drawHead>true</drawHead>
-			</li>
-		</modExtensions>
+
 </AlienRace.ThingDef_AlienRace>
 </Defs>

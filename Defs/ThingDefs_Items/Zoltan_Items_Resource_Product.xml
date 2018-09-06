@@ -7,7 +7,7 @@
     <description>wtf zoltan</description>
     <graphicData>
 		<drawSize>.7</drawSize>
-		<texPath>Things/Item/Resource/AnimalProductRaw/InsectJelly</texPath>
+		<texPath>Things/Item/Resource/InsectJelly</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<!--<color>(20,50,200,0.8)</color>-->
 		<color>RGBA(0.2,0.5,0.8,0.7)</color>

@@ -23,11 +23,20 @@
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Mantis</basicMemberKind>
 		<pawnsPlural>Mantiss</pawnsPlural>
-		
-		<baseNameMaker>NamerBaseMantisVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionMantisVillage</baseNameMakerPlayer>
+		<!--
+		<settlementNameMaker>NamerBaseMantisVillage</settlementNameMaker>
+		<settlementNameMakerPlayer>NamerFactionMantisVillage</settlementNameMakerPlayer>
 		<factionNameMakerPlayer>NamerFactionMantisVillage</factionNameMakerPlayer>
-		<backstoryCategory>MantisBackstory</backstoryCategory>
+		-->		
+		<settlementNameMaker>NamerBaseMantisVillage</settlementNameMaker>
+		<factionNameMaker>NamerFactionMantisVillage</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerFactionMantisVillage</playerInitialSettlementNameMaker>
+		
+
+		<!-- <backstoryCategory>MantisBackstory</backstoryCategory> -->
+		<backstoryCategories>
+			<li>MantisBackstory</li>
+		</backstoryCategories>
 
 		<homeIconPath>Mantis/npcZoom</homeIconPath>
 		<expandingIconTexture>Mantis/City</expandingIconTexture>

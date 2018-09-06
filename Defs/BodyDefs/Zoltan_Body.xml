@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- <BodyDef>
+  <BodyDef>
     <defName>Zoltan</defName>
     <label>zoltan</label>
     <corePart>
@@ -13,104 +13,16 @@
       </groups>
       <parts>
         <li>
+          <def>Ribcage</def>
+          <coverage>0.036</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
           <def>Sternum</def>
-          <coverage>0.005</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-          <def>Rib</def>
-          <coverage>0.003</coverage>
+          <coverage>0.015</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -118,7 +30,7 @@
         </li>
         <li>
           <def>Pelvis</def>
-          <coverage>0.01</coverage>
+          <coverage>0.025</coverage>
           <height>Bottom</height>
           <depth>Inside</depth>
           <groups>
@@ -127,7 +39,7 @@
         </li>
         <li>
           <def>Spine</def>
-          <coverage>0.02</coverage>
+          <coverage>0.025</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -135,7 +47,7 @@
         </li>
         <li>
           <def>Stomach</def>
-          <coverage>0.02</coverage>
+          <coverage>0.025</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -143,39 +55,43 @@
         </li>
         <li>
           <def>Heart</def>
-          <coverage>0.02</coverage>
+          <coverage>0.020</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
           </groups>
         </li>
         <li>
-          <def>LeftLung</def>
-          <coverage>0.02</coverage>
+          <def>Lung</def>
+          <customLabel>left lung</customLabel>
+          <coverage>0.025</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
           </groups>
         </li>
         <li>
-          <def>RightLung</def>
-          <coverage>0.02</coverage>
+          <def>Lung</def>
+          <customLabel>right lung</customLabel>
+          <coverage>0.025</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
           </groups>
         </li>
         <li>
-          <def>LeftKidney</def>
-          <coverage>0.015</coverage>
+          <def>Kidney</def>
+          <customLabel>left kidney</customLabel>
+          <coverage>0.017</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
           </groups>
         </li>
         <li>
-          <def>RightKidney</def>
-          <coverage>0.015</coverage>
+          <def>Kidney</def>
+          <customLabel>right kidney</customLabel>
+          <coverage>0.017</coverage>
           <depth>Inside</depth>
           <groups>
             <li>Torso</li>
@@ -191,7 +107,7 @@
         </li>
         <li>
           <def>Neck</def>
-          <coverage>0.08</coverage>
+          <coverage>0.075</coverage>
           <height>Top</height>
           <groups>
             <li>Neck</li>
@@ -199,7 +115,7 @@
           <parts>
             <li>
               <def>Head</def>
-              <coverage>0.72</coverage>
+              <coverage>0.80</coverage>
               <groups>
                 <li>UpperHead</li>
                 <li>FullHead</li>
@@ -226,7 +142,8 @@
                   </parts>
                 </li>
                 <li>
-                  <def>LeftEye</def>
+                  <def>Eye</def>
+                  <customLabel>left eye</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>FullHead</li>
@@ -234,7 +151,8 @@
                   </groups>
                 </li>
                 <li>
-                  <def>RightEye</def>
+                  <def>Eye</def>
+                  <customLabel>right eye</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>FullHead</li>
@@ -242,7 +160,8 @@
                   </groups>
                 </li>
                 <li>
-                  <def>LeftEar</def>
+                  <def>Ear</def>
+                  <customLabel>left ear</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>UpperHead</li>
@@ -250,7 +169,8 @@
                   </groups>
                 </li>
                 <li>
-                  <def>RightEar</def>
+                  <def>Ear</def>
+                  <customLabel>right ear</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>UpperHead</li>
@@ -277,14 +197,16 @@
           </parts>
         </li>
         <li>
-          <def>LeftShoulder</def>
+          <def>Shoulder</def>
+          <customLabel>left shoulder</customLabel>
           <coverage>0.12</coverage>
           <groups>
             <li>Shoulders</li>
           </groups>
           <parts>
             <li>
-              <def>LeftClavicle</def>
+              <def>Clavicle</def>
+              <customLabel>left clavicle</customLabel>
               <coverage>0.09</coverage>
               <height>Top</height>
               <depth>Inside</depth>
@@ -293,14 +215,16 @@
               </groups>
             </li>
             <li>
-              <def>LeftArm</def>
+              <def>Arm</def>
+              <customLabel>left arm</customLabel>
               <coverage>0.77</coverage>
               <groups>
                 <li>Arms</li>
               </groups>
               <parts>
                 <li>
-                  <def>LeftHumerus</def>
+                  <def>Humerus</def>
+                  <customLabel>left humerus</customLabel>
                   <coverage>0.1</coverage>
                   <depth>Inside</depth>
                   <groups>
@@ -308,7 +232,8 @@
                   </groups>
                 </li>
                 <li>
-                  <def>LeftRadius</def>
+                  <def>Radius</def>
+                  <customLabel>left radius</customLabel>
                   <coverage>0.1</coverage>
                   <depth>Inside</depth>
                   <groups>
@@ -316,15 +241,17 @@
                   </groups>
                 </li>
                 <li>
-                  <def>LeftHand</def>
-                  <coverage>0.18</coverage>
+                  <def>Hand</def>
+                  <customLabel>left hand</customLabel>
+                  <coverage>0.14</coverage>
                   <height>Bottom</height>
                   <groups>
                     <li>Hands</li>
                   </groups>
                   <parts>
                     <li>
-                      <def>LeftHandPinky</def>
+                      <def>Finger</def>
+                      <customLabel>left pinky</customLabel>
                       <coverage>0.06</coverage>
                       <groups>
                         <li>Hands</li>
@@ -332,7 +259,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>LeftHandRingFinger</def>
+                      <def>Finger</def>
+                      <customLabel>left ring finger</customLabel>
                       <coverage>0.07</coverage>
                       <groups>
                         <li>Hands</li>
@@ -340,7 +268,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>LeftHandMiddleFinger</def>
+                      <def>Finger</def>
+                      <customLabel>left middle finger</customLabel>
                       <coverage>0.08</coverage>
                       <groups>
                         <li>Hands</li>
@@ -348,7 +277,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>LeftHandIndexFinger</def>
+                      <def>Finger</def>
+                      <customLabel>left index finger</customLabel>
                       <coverage>0.07</coverage>
                       <groups>
                         <li>Hands</li>
@@ -356,7 +286,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>LeftHandThumb</def>
+                      <def>Finger</def>
+                      <customLabel>left thumb</customLabel>
                       <coverage>0.08</coverage>
                       <groups>
                         <li>Hands</li>
@@ -370,14 +301,16 @@
           </parts>
         </li>
         <li>
-          <def>RightShoulder</def>
+          <def>Shoulder</def>
+          <customLabel>right shoulder</customLabel>
           <coverage>0.12</coverage>
           <groups>
             <li>Shoulders</li>
           </groups>
           <parts>
             <li>
-              <def>RightClavicle</def>
+              <def>Clavicle</def>
+              <customLabel>right clavicle</customLabel>
               <coverage>0.09</coverage>
               <height>Top</height>
               <depth>Inside</depth>
@@ -386,14 +319,16 @@
               </groups>
             </li>
             <li>
-              <def>RightArm</def>
+              <def>Arm</def>
+              <customLabel>right arm</customLabel>
               <coverage>0.77</coverage>
               <groups>
                 <li>Arms</li>
               </groups>
               <parts>
                 <li>
-                  <def>RightHumerus</def>
+                  <def>Humerus</def>
+                  <customLabel>right humerus</customLabel>
                   <coverage>0.1</coverage>
                   <depth>Inside</depth>
                   <groups>
@@ -401,7 +336,8 @@
                   </groups>
                 </li>
                 <li>
-                  <def>RightRadius</def>
+                  <def>Radius</def>
+                  <customLabel>right radius</customLabel>
                   <coverage>0.1</coverage>
                   <depth>Inside</depth>
                   <groups>
@@ -409,15 +345,17 @@
                   </groups>
                 </li>
                 <li>
-                  <def>RightHand</def>
-                  <coverage>0.18</coverage>
+                  <def>Hand</def>
+                  <customLabel>right hand</customLabel>
+                  <coverage>0.14</coverage>
                   <height>Bottom</height>
                   <groups>
                     <li>Hands</li>
                   </groups>
                   <parts>
                     <li>
-                      <def>RightHandPinky</def>
+                      <def>Finger</def>
+                      <customLabel>right pinky</customLabel>
                       <coverage>0.06</coverage>
                       <groups>
                         <li>Hands</li>
@@ -425,7 +363,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>RightHandRingFinger</def>
+                      <def>Finger</def>
+                      <customLabel>right ring finger</customLabel>
                       <coverage>0.07</coverage>
                       <groups>
                         <li>Hands</li>
@@ -433,7 +372,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>RightHandMiddleFinger</def>
+                      <def>Finger</def>
+                      <customLabel>right middle finger</customLabel>
                       <coverage>0.08</coverage>
                       <groups>
                         <li>Hands</li>
@@ -441,7 +381,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>RightHandIndexFinger</def>
+                      <def>Finger</def>
+                      <customLabel>right index finger</customLabel>
                       <coverage>0.07</coverage>
                       <groups>
                         <li>Hands</li>
@@ -449,7 +390,8 @@
                       </groups>
                     </li>
                     <li>
-                      <def>RightHandThumb</def>
+                      <def>Finger</def>
+                      <customLabel>right thumb</customLabel>
                       <coverage>0.08</coverage>
                       <groups>
                         <li>Hands</li>
@@ -469,21 +411,10 @@
           <groups>
             <li>Waist</li>
           </groups>
-<!--
-		   <parts>
-            <li>
-              <def>LTF_Ovipositor</def>
-              <coverage>0.3</coverage>
-              <depth>Inside</depth>
-              <groups>
-                <li>Waist</li>
-              </groups>
-            </li>
-			</parts>
--->
         </li>
         <li>
-          <def>LeftLeg</def>
+          <def>Leg</def>
+          <customLabel>left leg</customLabel>
           <coverage>0.14</coverage>
           <height>Bottom</height>
           <groups>
@@ -491,7 +422,8 @@
           </groups>
           <parts>
             <li>
-              <def>LeftFemur</def>
+              <def>Femur</def>
+              <customLabel>left femur</customLabel>
               <coverage>0.1</coverage>
               <depth>Inside</depth>
               <groups>
@@ -499,7 +431,8 @@
               </groups>
             </li>
             <li>
-              <def>LeftTibia</def>
+              <def>Tibia</def>
+              <customLabel>left tibia</customLabel>
               <coverage>0.1</coverage>
               <depth>Inside</depth>
               <groups>
@@ -507,43 +440,49 @@
               </groups>
             </li>
             <li>
-              <def>LeftFoot</def>
-              <coverage>0.15</coverage>
+              <def>Foot</def>
+              <customLabel>left foot</customLabel>
+              <coverage>0.1</coverage>
               <groups>
                 <li>Feet</li>
               </groups>
               <parts>
                 <li>
-                  <def>LeftFootLittleToe</def>
+                  <def>Toe</def>
+                  <customLabel>left little toe</customLabel>
                   <coverage>0.06</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>LeftFootFourthToe</def>
+                  <def>Toe</def>
+                  <customLabel>left fourth toe</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>LeftFootMiddleToe</def>
+                  <def>Toe</def>
+                  <customLabel>left middle toe</customLabel>
                   <coverage>0.08</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>LeftFootSecondToe</def>
+                  <def>Toe</def>
+                  <customLabel>left second toe</customLabel>
                   <coverage>0.09</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>LeftFootBigToe</def>
-                  <coverage>0.10</coverage>
+                  <def>Toe</def>
+                  <customLabel>left big toe</customLabel>
+                  <coverage>0.09</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
@@ -553,7 +492,8 @@
           </parts>
         </li>
         <li>
-          <def>RightLeg</def>
+          <def>Leg</def>
+          <customLabel>right leg</customLabel>
           <coverage>0.14</coverage>
           <height>Bottom</height>
           <groups>
@@ -561,7 +501,8 @@
           </groups>
           <parts>
             <li>
-              <def>RightFemur</def>
+              <def>Femur</def>
+              <customLabel>right femur</customLabel>
               <coverage>0.1</coverage>
               <depth>Inside</depth>
               <groups>
@@ -569,7 +510,8 @@
               </groups>
             </li>
             <li>
-              <def>RightTibia</def>
+              <def>Tibia</def>
+              <customLabel>right tibia</customLabel>
               <coverage>0.1</coverage>
               <depth>Inside</depth>
               <groups>
@@ -577,43 +519,49 @@
               </groups>
             </li>
             <li>
-              <def>RightFoot</def>
-              <coverage>0.15</coverage>
+              <def>Foot</def>
+              <customLabel>right foot</customLabel>
+              <coverage>0.1</coverage>
               <groups>
                 <li>Feet</li>
               </groups>
               <parts>
                 <li>
-                  <def>RightFootLittleToe</def>
+                  <def>Toe</def>
+                  <customLabel>right little toe</customLabel>
                   <coverage>0.06</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>RightFootFourthToe</def>
+                  <def>Toe</def>
+                  <customLabel>right fourth toe</customLabel>
                   <coverage>0.07</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>RightFootMiddleToe</def>
+                  <def>Toe</def>
+                  <customLabel>right middle toe</customLabel>
                   <coverage>0.08</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>RightFootSecondToe</def>
+                  <def>Toe</def>
+                  <customLabel>right second toe</customLabel>
                   <coverage>0.09</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
                 </li>
                 <li>
-                  <def>RightFootBigToe</def>
-                  <coverage>0.10</coverage>
+                  <def>Toe</def>
+                  <customLabel>right big toe</customLabel>
+                  <coverage>0.09</coverage>
                   <groups>
                     <li>Feet</li>
                   </groups>
@@ -626,4 +574,19 @@
     </corePart>
   </BodyDef>
 
+<!--
+		   <parts>
+            <li>
+              <def>LTF_Ovipositor</def>
+              <coverage>0.3</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>Waist</li>
+              </groups>
+            </li>
+			</parts>
+-->  
 </Defs>
+
+
+        

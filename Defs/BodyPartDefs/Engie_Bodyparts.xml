@@ -4,10 +4,10 @@
 <BodyPartDef Name="BodyPart_LTF_Socket" Abstract="True">
 
     <hitPoints>10</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <!-- <oldInjuryBaseChance>0</oldInjuryBaseChance> -->
 
-    <dontSuggestAmputation>true</dontSuggestAmputation>
-    <isSolid>true</isSolid>
+    <!-- <dontSuggestAmputation>true</dontSuggestAmputation> -->
+    <!-- <isSolid>true</isSolid> -->
     <hitChanceFactors>
       <li>
         <key>Blunt</key>
@@ -40,10 +40,10 @@
     <!--<defName>BodyPart_LTF_socketFiller</defName>-->
     <!--<label>foo</label>-->
     <hitPoints>5</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <!-- <oldInjuryBaseChance>0</oldInjuryBaseChance> -->
 
-    <dontSuggestAmputation>true</dontSuggestAmputation>
-    <isSolid>true</isSolid>
+    <!-- B19 <dontSuggestAmputation>true</dontSuggestAmputation> -->
+    <!-- <isSolid>true</isSolid> -->
     <hitChanceFactors>
       <li>
         <key>Blunt</key>
@@ -54,43 +54,43 @@
 
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_00CoreFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock00core</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_01CoreFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock01core</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_10CoreFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock10core</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_11CoreFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock11core</label>
 </BodyPartDef>
 
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_romFiller00</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock00rom</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_01RomFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock01rom</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_10RomFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>sock10rom</label>
 </BodyPartDef>
 <BodyPartDef ParentName="BodyPart_LTF_socketFiller">
 	<defName>BodyPart_LTF_11RomFiller</defName>
-	<dontSuggestAmputation>false</dontSuggestAmputation>
+	<!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
 	<label>socket11rom</label>
 </BodyPartDef>
 <!-- core -->
@@ -98,15 +98,15 @@
     <defName>BodyPart_LTF_00Core</defName>
     <label>sock00core</label>
     <hitPoints>10</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <!-- <oldInjuryBaseChance>0</oldInjuryBaseChance> -->
 
     <tags>
       <li>ConsciousnessSource</li>
     </tags>
 	
-    <dontSuggestAmputation>false</dontSuggestAmputation>
+    <!-- <dontSuggestAmputation>false</dontSuggestAmputation> -->
     <skinCovered>true</skinCovered>
-    <isSolid>true</isSolid>
+    <!-- <isSolid>true</isSolid> -->
     <hitChanceFactors>
 		<li>
 			<key>Blunt</key>
@@ -121,12 +121,12 @@
     <defName>BodyPart_LTF_rawRom</defName>
     <label>sock00rom</label>
     <hitPoints>10</hitPoints>
-    <oldInjuryBaseChance>.1</oldInjuryBaseChance>
+    <!-- B19 <oldInjuryBaseChance>.1</oldInjuryBaseChance> -->
 
     <skinCovered>true</skinCovered>
-    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <!-- <useDestroyedOutLabel>true</useDestroyedOutLabel> -->
     <beautyRelated>false</beautyRelated>
-	<amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance>
+	<!-- <amputateIfGeneratedInjuredChance>0.2</amputateIfGeneratedInjuredChance> -->
 	
     <tags>
       <li>ConsciousnessSource</li>
@@ -147,11 +147,11 @@
     <defName>BodyPart_LTF_Hmi</defName>
     <label>Human machine interface</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>.1</oldInjuryBaseChance>
+    <!-- B19 <oldInjuryBaseChance>.1</oldInjuryBaseChance> -->
 	
     <skinCovered>false</skinCovered>
-    <useDestroyedOutLabel>true</useDestroyedOutLabel>
-    <amputateIfGeneratedInjuredChance>0.1</amputateIfGeneratedInjuredChance>
+    <!-- B19 <useDestroyedOutLabel>true</useDestroyedOutLabel> -->
+    <!-- B19 <amputateIfGeneratedInjuredChance>0.1</amputateIfGeneratedInjuredChance> -->
 	<beautyRelated>true</beautyRelated>
 	
     <tags>

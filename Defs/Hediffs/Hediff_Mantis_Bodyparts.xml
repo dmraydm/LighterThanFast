@@ -36,8 +36,8 @@
 		</comps>
 		
 		<addedPartProps>
-			<isBionic>true</isBionic>
-			<isSolid>true</isSolid>
+			<!-- B19 <isBionic>true</isBionic> -->
+			<!-- <isSolid>true</isSolid> -->
 			<partEfficiency>.95</partEfficiency>
 		</addedPartProps>
 	</HediffDef>
@@ -75,8 +75,8 @@
 		</comps>
 		
 		<addedPartProps>
-			<isBionic>true</isBionic>
-			<isSolid>true</isSolid>
+			<!-- B19 <isBionic>true</isBionic> -->
+			<!-- <isSolid>true</isSolid> -->
 			<partEfficiency>1.05</partEfficiency>
 		</addedPartProps>
 	</HediffDef>

@@ -16,7 +16,7 @@
 		<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 		<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
 		<ArmorRating_Heat>-0.5</ArmorRating_Heat>
-		<ArmorRating_Electric>3</ArmorRating_Electric>
+		<!--<ArmorRating_Electric>3</ArmorRating_Electric>-->
 		
     </statBases>
 	
@@ -119,7 +119,6 @@
         <power>1</power>
         <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>CephalicRegion</linkedBodyPartsGroup>
-        <commonality>0.2</commonality>
       </li>
 	  
     </tools>
@@ -129,6 +128,7 @@
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>LTF_Proj_Ink</defaultProjectile>
+			<forcedMissRadius>1.0</forcedMissRadius>
 			<warmupTime>1</warmupTime>
 			<range>25</range>
 			<soundCast>ThrowGrenade</soundCast>
@@ -148,7 +148,7 @@
 
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			
-			<preExplosionSpawnThingDef>FilthSlugDew</preExplosionSpawnThingDef>
+			<preExplosionSpawnThingDef>Filth_SlugDew</preExplosionSpawnThingDef>
 			<preExplosionSpawnChance>.6</preExplosionSpawnChance>
 			
 			<postExplosionSpawnChance>.7</postExplosionSpawnChance>
@@ -196,8 +196,8 @@
 		<baseHealthScale>1</baseHealthScale>
       
 		<foodType>VegetarianRoughAnimal</foodType>
-	  
-		<trainableIntelligence>Advanced</trainableIntelligence>
+		<trainability>Advanced</trainability>
+		<!-- B19 <trainableIntelligence>Advanced</trainableIntelligence> -->
 		<wildness>.7</wildness>
 		<manhunterOnDamageChance>1</manhunterOnDamageChance>
 		<manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
@@ -214,14 +214,17 @@
 		<!-- 1/365 = 0.00273972602
 		15/365 = 0.04109589041-->
 		<lifeExpectancy>.05</lifeExpectancy>
-	  
-		<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+		
+		<leatherDef>Leather_Krapken</leatherDef>
+		
+		<!-- B19 <leatherCommonalityFactor>0.01</leatherCommonalityFactor> -->
+		<!--
 		<leatherStatFactors>
 			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
 			<ArmorRating_Heat>-0.5</ArmorRating_Heat>
-			<ArmorRating_Electric>3</ArmorRating_Electric>
 		</leatherStatFactors>
+		-->
   
 		<lifeStageAges>
 			<li>
@@ -262,7 +265,7 @@
     <label>krapken</label>
     <race>LTF_Krapken</race>
     <combatPower>42</combatPower>
-    <wildSpawn_EcoSystemWeight>0.01</wildSpawn_EcoSystemWeight>
+    <!-- <wildSpawn_EcoSystemWeight>0.01</wildSpawn_EcoSystemWeight> -->
     <labelMale>krapken</labelMale>
     <labelFemale>krapkinet</labelFemale>
     <lifeStages>

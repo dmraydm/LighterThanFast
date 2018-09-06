@@ -28,11 +28,20 @@
 		<isPlayer>true</isPlayer>
 		<basicMemberKind>Engie</basicMemberKind>
 		<pawnsPlural>Engies</pawnsPlural>
+
+		<settlementNameMaker>NamerBaseEngieVillage</settlementNameMaker>
+		<factionNameMaker>NamerFactionEngieVillage</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerFactionEngieVillage</playerInitialSettlementNameMaker>
 		
-		<baseNameMaker>NamerBaseEngieVillage</baseNameMaker>
-		<baseNameMakerPlayer>NamerFactionEngieVillage</baseNameMakerPlayer>
+		<!--
+		<settlementNameMaker>NamerBaseEngieVillage</settlementNameMaker>
+		<settlementNameMakerPlayer>NamerFactionEngieVillage</settlementNameMakerPlayer>
 		<factionNameMakerPlayer>NamerFactionEngieVillage</factionNameMakerPlayer>
-		<backstoryCategory>EngieBackstory</backstoryCategory>
+		-->
+		<!--<backstoryCategory>EngieBackstory</backstoryCategory>-->
+		<backstoryCategories>
+			<li>EngieBackstory</li>
+		</backstoryCategories>
 
 		<homeIconPath>Engie/npcZoom</homeIconPath>
 		<expandingIconTexture>Engie/City</expandingIconTexture>

@@ -12,14 +12,15 @@
     <parts>
       <li Class="StatPart_Quality">
         <factorAwful>2.5</factorAwful>
-        <factorShoddy>3</factorShoddy>
+        <!-- B19<factorShoddy>3</factorShoddy> -->
         <factorPoor>3.5</factorPoor>
         <factorNormal>4</factorNormal>
         <factorGood>4.5</factorGood>
-        <factorSuperior>5</factorSuperior>
+        <!-- B19<factorSuperior>5</factorSuperior> -->
         <factorExcellent>5.5</factorExcellent>
         <factorMasterwork>6</factorMasterwork>
         <factorLegendary>7</factorLegendary>
+		<applyToNegativeValues>true</applyToNegativeValues>
       </li>
       <li Class="StatPart_Health">
         <curve>
@@ -54,11 +55,11 @@
     <parts>
       <li Class="StatPart_Quality">
         <factorAwful>.0001</factorAwful>
-        <factorShoddy>.00011</factorShoddy>
+        <!-- <factorShoddy>.00011</factorShoddy> -->
         <factorPoor>.00012</factorPoor>
         <factorNormal>.00013</factorNormal>
         <factorGood>.00014</factorGood>
-        <factorSuperior>.00015</factorSuperior>
+        <!-- <factorSuperior>.00015</factorSuperior> -->
         <factorExcellent>.00016</factorExcellent>
         <factorMasterwork>.00017</factorMasterwork>
         <factorLegendary>.00018</factorLegendary>

@@ -16,9 +16,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 - 120% sharp damage / 105% Melee evasion
 - 75% Construction / 75% Drug production
 - 85% Mining / 90% Smelting Smithing Tailoring
-- Claws
-	
-	</description>
+- Claws</description>
         
     <statBases>
 		<PsychicSensitivity>1.0</PsychicSensitivity>
@@ -46,7 +44,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<MiningYield>.85</MiningYield>
 		<ConstructionSpeed>.75</ConstructionSpeed>
 		<ConstructSuccessChance>.75</ConstructSuccessChance>
-		<DrugProductionSpeed>.75</DrugProductionSpeed>		
+		<DrugCookingSpeed>.75</DrugCookingSpeed>		
 		<SmeltingSpeed>.9</SmeltingSpeed>
 		<SmithingSpeed>.9</SmithingSpeed>
 		<TailoringSpeed>.9</TailoringSpeed>
@@ -55,7 +53,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 		<!-- fight -->
-		<ShootingAccuracy>1.25</ShootingAccuracy>
+		<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
 		<MeleeHitChance>1.3</MeleeHitChance>
 		<MeleeDodgeChance>1.05</MeleeDodgeChance>
 		
@@ -171,7 +169,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		</factionRelations>
 	
 		<!-- <pawnsSpecificBackstories>true</pawnsSpecificBackstories> -->
-		<pawnsSpecificBackstories>false</pawnsSpecificBackstories>
+		<!-- <pawnsSpecificBackstories>false</pawnsSpecificBackstories> -->
 		<alienPartGenerator>
 			<!-- -->
 			<alienbodytypes>
@@ -192,7 +190,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<useSkinColor>false</useSkinColor>
 					<offsets>
 						<!-- seen right ~ -0.4325 --> 
-						<front>
+						<south>
 							<bodyTypes>
 								<!-- +0.1075 --> <!-- 2150/2 -->
 								<Male>(-.33,	.15)</Male>
@@ -202,9 +200,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-0.29,	.15)</Hulk>
 								<Fat>(-0.29,	.15)</Fat>
 							</bodyTypes>
-						</front>
+						</south>
 						<!-- seen left ~ M -0.024 F -->
-						<back>
+						<north>
 							<bodyTypes>
 								<Male>(	-.12,	.52)</Male>
 								<Female>(-.035,	.52)</Female>
@@ -212,9 +210,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(	-.2,	.52)</Hulk>
 								<Fat>(	-.2,	.52)</Fat>
 							</bodyTypes>
-						</back>
+						</north>
 						<!-- Left side -->
-						<side>
+						<east>
 							<bodyTypes>
 								<!--<Male>(-0.65,.1)</Male>-->
 								<Male>(-.65,	.15)</Male>
@@ -223,7 +221,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-.65,	.15)</Hulk>
 								<Fat>(-.65,	.15)</Fat>
 							</bodyTypes>
-						</side>
+						</east>
 					</offsets>
 					<!--
 					<backstoryGraphics>
@@ -243,7 +241,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					<useSkinColor>false</useSkinColor>
 					<offsets>
 						<!-- seen left -->
-						<front>
+						<south>
 							<bodyTypes>
 								<!-- -11.75 -->
 								<Male>(-.53,	.15)</Male>
@@ -253,10 +251,10 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-.57,	.15)</Hulk>
 								<Fat>(-.57,	.15)</Fat>
 							</bodyTypes>
-						</front>
+						</south>
 						<!-- seen right -->
 						
-						<back>
+						<north>
 							<bodyTypes>
 								<Male>(	.09,	.52)</Male>
 								<Female>(0.005,	.52)</Female>
@@ -265,8 +263,8 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(	.17,	.52)</Hulk>
 								<Fat>(	.17,	.52)</Fat>
 							</bodyTypes>
-						</back>
-						<side>
+						</north>
+						<east>
 							<bodyTypes>
 								<!--<Male>(-0.65,.1)</Male>-->
 								<Male>(-.65,	.15)</Male>
@@ -275,7 +273,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-.65,	.15)</Hulk>
 								<Fat>(-.65,	.15)</Fat>
 							</bodyTypes>
-						</side>
+						</east>
 					</offsets>
 					<!--
 					<backstoryGraphics>
@@ -297,7 +295,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 					
 					<offsets>
 						<!-- front -->
-						<front>
+						<south>
 							<bodyTypes>
 								<Male>(-.42,	.5)</Male>
 								<Female>(-.42,	.5)</Female>
@@ -305,9 +303,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-.42,	.5)</Hulk>
 								<Fat>(-.42,	.5)</Fat>
 							</bodyTypes>
-						</front>
+						</south>
 						<!-- side -->
-						<side>
+						<east>
 							<bodyTypes>
 								<Male>(-.42,	.5)</Male>
 								<Female>(-.48,	.5)</Female>
@@ -315,9 +313,9 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(-.42,	.5)</Hulk>
 								<Fat>(-.42,	.5)</Fat>
 							</bodyTypes>
-						</side>
+						</east>
 						<!-- back -->
-						<back>
+						<north>
 							<bodyTypes>
 								<Male>(0,	.85)</Male>
 								<Female>(0, .87)</Female>
@@ -325,7 +323,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 								<Hulk>(0,	.85)</Hulk>
 								<Fat>(0,	.85)</Fat>
 							</bodyTypes>
-						</back>
+						</north>
 					</offsets>
 						<backstoryGraphics>
 							<MantisChildBS07>Mantis/Stache/empty</MantisChildBS07>
@@ -398,7 +396,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 			<skull>Humanoid/Skull</skull>-->
 		</li>
 	</graphicPaths>
-
+	<!--
 	<pawnKindSettings>
 		<alienslavekinds>
 			<li><kindDefs><li>MantisSlave</li></kindDefs><chance>10.0</chance></li>
@@ -413,7 +411,6 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 				<factionDefs>
 					<li>MantisPlayerColony</li>
 					<li>PlayerTribe</li>
-					<!-- <li>MantisPlayerColony</li> -->
 				</factionDefs>
 			</li>
 		</startingColonists>
@@ -446,7 +443,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		</alienwandererkinds>
 		
 	</pawnKindSettings>
-	
+	-->
 	
 	<hairSettings>
 		<hasHair>true</hasHair>
@@ -476,16 +473,18 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 	
 	<lifeExpectancy>75</lifeExpectancy>
 
-	<bloodDef>FilthBloodInsect</bloodDef>
+	<bloodDef>Filth_BloodInsect</bloodDef>
 	<useMeatFrom>Megaspider</useMeatFrom>
-	  
+	  <leatherDef>Leather_Human</leatherDef>
 	  <!-- leather should not be -->
 	<!-- <useLeatherFrom>GrizzlyBear</useLeatherFrom> -->
+	<!-- B19
 	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>
 	<leatherColor>(32,240,32)</leatherColor>
 	<leatherInsulation>0.70</leatherInsulation>
 	<leatherLabel>Mantis leather</leatherLabel>
 	<leatherMarketValueFactor>2</leatherMarketValueFactor>
+	-->
 	
 	<nameCategory>HumanStandard</nameCategory>
 	
@@ -561,7 +560,7 @@ While Mantis excel at combat, especially personal combat, they are the least ade
 		<li>LTF_InstallRightPlasteelClaws</li>	
 <!-- -->
 		<li>InstallPowerClaw</li>
-		<li>InstallScytherBlade</li>
+		<!--<li>InstallScytherBlade</li>-->
 		<li>InstallBionicEye</li>
 		<li>InstallBionicArm</li>
 		<li>InstallBionicLeg</li>

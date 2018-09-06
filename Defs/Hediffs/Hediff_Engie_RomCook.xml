@@ -12,8 +12,8 @@
 				<CookSpeed>.064</CookSpeed>
 				<FoodPoisonChance>-0.064</FoodPoisonChance>
 				
-				<RecruitPrisonerChance>-0.064</RecruitPrisonerChance>
-				<ShootingAccuracy>-0.064</ShootingAccuracy>
+				<NegotiationAbility>-0.064</NegotiationAbility>
+				<ShootingAccuracyPawn>-0.064</ShootingAccuracyPawn>
 			</statOffsets>
 		</li></stages>
 		
@@ -32,10 +32,10 @@
 				<FoodPoisonChance>.128</FoodPoisonChance>
 				<ButcheryFleshSpeed>.064</ButcheryFleshSpeed>
 				<ButcheryFleshEfficiency>.064</ButcheryFleshEfficiency>
-				<BrewingSpeed>0.064</BrewingSpeed>
+				<DrugCookingSpeed>0.064</DrugCookingSpeed>
 				
-				<RecruitPrisonerChance>-0.128</RecruitPrisonerChance>
-				<ShootingAccuracy>-0.064</ShootingAccuracy>
+				<NegotiationAbility>-0.128</NegotiationAbility>
+				<ShootingAccuracyPawn>-0.064</ShootingAccuracyPawn>
 			</statOffsets>
 		</li></stages>
 		
@@ -61,10 +61,10 @@
 				<FoodPoisonChance>-.256</FoodPoisonChance>
 				<ButcheryFleshSpeed>.128</ButcheryFleshSpeed>
 				<ButcheryFleshEfficiency>.128</ButcheryFleshEfficiency>
-				<BrewingSpeed>0.128</BrewingSpeed>
+				<DrugCookingSpeed>0.128</DrugCookingSpeed>
 				
-				<RecruitPrisonerChance>-0.256</RecruitPrisonerChance>
-				<ShootingAccuracy>-0.128</ShootingAccuracy>
+				<NegotiationAbility>-0.256</NegotiationAbility>
+				<ShootingAccuracyPawn>-0.128</ShootingAccuracyPawn>
 			</statOffsets>
 			<mentalStateGivers>
 				<li>

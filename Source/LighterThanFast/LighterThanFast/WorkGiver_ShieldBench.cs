@@ -37,7 +37,7 @@ namespace LighterThanFast
             return pawn.Map.listerBuildings.AllBuildingsColonistOfDef(ThingDefOf.DeepDrill).Cast<Thing>();
         }
 
-        public override bool ShouldSkip(Pawn pawn)
+        public override bool ShouldSkip(Pawn pawn, bool forced = true)
         {
             List<Building> allBuildingsColonist = pawn.Map.listerBuildings.allBuildingsColonist;
             for (int i = 0; i < allBuildingsColonist.Count; i++)

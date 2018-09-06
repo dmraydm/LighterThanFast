@@ -61,7 +61,7 @@ namespace LighterThanFast
         {
             Tools.Warn(">>> DoEffect <<<",false);
             base.DoEffect(usedBy);
-            SoundDefOf.LessonActivated.PlayOneShotOnCamera(usedBy.MapHeld);
+            SoundDefOf.Lesson_Activated.PlayOneShotOnCamera(usedBy.MapHeld);
             //usedBy.records.Increment(RecordDefOf.ArtifactsActivated);
         }
     }
@@ -72,7 +72,7 @@ namespace LighterThanFast
     {
         private CompPowerTrader powerComp;
         private float benchRadius = 35.7f;
-        private float goodwillImpact = -30f;
+        private int goodwillImpact = -30;
 
         private Pawn masterMind = null;
         private Pawn mindTarget = null;
@@ -373,13 +373,15 @@ namespace LighterThanFast
             }
             if (masterMind != null)
             {
-                mName = masterMind.NameStringShort;
+                mName = mindTarget.Name.ToStringShort;
+                //mName = masterMind.NameStringShort;
                 mRace = masterMind.def.label;
             }
 
             if (mindTarget != null)
             {
-                tName = mindTarget.NameStringShort;
+                tName = mindTarget.Name.ToStringShort;
+                //tName = mindTarget.NameStringShort;
                 tRace = mindTarget.def.label;
             }
         }
@@ -537,7 +539,8 @@ namespace LighterThanFast
             if (newmasterMind != null)
             {
                 masterMind = newmasterMind;
-                mName = masterMind.NameStringShort;
+                mName = mindTarget.Name.ToStringShort;
+                //mName = masterMind.NameStringShort;
                 mRace = masterMind.def.label;
                 //ThingUtility.
                 masterMindN++;
@@ -560,7 +563,8 @@ namespace LighterThanFast
             {
                 ResetProgress();
                 mindTarget = newTarget;
-                tName = mindTarget.NameStringShort;
+                tName = mindTarget.Name.ToStringShort;
+                    //NameStringShort;
                 tRace = mindTarget.def.label;
                 if (!AnimalVictim)
                     backupFaction = mindTarget.Faction;
@@ -601,8 +605,9 @@ namespace LighterThanFast
             animalVector = 0f;
             float brainGatherFactor = 0f;
 
-
-            if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.None)
+            //mindTarget.RaceProps.tr
+            //if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.None)
+            if (mindTarget.RaceProps.trainability == TrainabilityDefOf.None)
             {
                 if (masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level <= 2)
                     brainGatherFactor = 1.5f;
@@ -610,21 +615,24 @@ namespace LighterThanFast
                     brainGatherFactor = 1.4f;
             }
 
-            if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Simple)
+            //if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Simple)
+            if (mindTarget.RaceProps.trainability == TrainabilityDefOf.Simple)
             {
                 if ((masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level > 4) &&
                 (masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level <= 8))
                     brainGatherFactor = 1.35f;
             }
 
-            if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Intermediate)
-            {
+            //if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Intermediate)
+                if (mindTarget.RaceProps.trainability == TrainabilityDefOf.Intermediate)
+                {
                 if ((masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level > 8) &&
                 (masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level <= 11))
                     brainGatherFactor = 1.3f;
             }
 
-            if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Advanced)
+            if (mindTarget.RaceProps.trainability == TrainabilityDefOf.Advanced)
+                //if (mindTarget.RaceProps.TrainableIntelligence == TrainableIntelligenceDefOf.Advanced)
             {
                 if ((masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level > 11) &&
                 (masterMind.skills.GetSkill(SkillDefOf.Intellectual).Level <= 17))
@@ -835,8 +843,9 @@ namespace LighterThanFast
 
                 //Tools.Warn("retrieving hediif def");
                 hediff2use = HediffDef.Named("Hediff_LTF_FactionChange");
-
-                mindTarget.RaceProps.body.GetPartsWithTag("ConsciousnessSource").TryRandomElement(out bodyPart);
+                //mindTarget.RaceProps.body.GetPartsWithDef
+                //mindTarget.RaceProps.body.GetPartsWithTag("ConsciousnessSource").TryRandomElement(out bodyPart);
+                mindTarget.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).TryRandomElement(out bodyPart);
                 if (bodyPart == null)
                 {
                     Tools.Warn("null body part", processDebug);
@@ -885,7 +894,7 @@ namespace LighterThanFast
         public void TargetResetCmd()
         {
             TargetReset();
-            SoundDefOf.LessonDeactivated.PlayOneShotOnCamera(null);
+            SoundDefOf.Lesson_Deactivated.PlayOneShotOnCamera(null);
         }
         private void TryDisorientAndReset()
         {
@@ -1155,8 +1164,9 @@ namespace LighterThanFast
         {
             if (mindTarget.Faction != null)
             {
-                mindTarget.Faction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-                mindTarget.Faction.SetHostileTo(masterMind.Faction, true);
+                //AffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                mindTarget.Faction.TryAffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                //mindTarget.Faction.SetHostileTo(masterMind.Faction, true);
                 Messages.Message(mindTarget.Faction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
             }
         }
@@ -1169,8 +1179,8 @@ namespace LighterThanFast
             }
             if (masterMind.Faction != backupFaction)
             {
-                backupFaction.AffectGoodwillWith(masterMind.Faction, goodwillImpact);
-                backupFaction.SetHostileTo(masterMind.Faction, true);
+                backupFaction.TryAffectGoodwillWith(masterMind.Faction, goodwillImpact);
+                //backupFaction.SetHostileTo(masterMind.Faction, true);
                 Messages.Message(backupFaction.Name + " </3 " + Faction.OfPlayer.Name + "(" + goodwillImpact + ")", MessageTypeDefOf.NegativeEvent);
 
             }
@@ -1422,7 +1432,7 @@ namespace LighterThanFast
         {
             if ( mindTarget != null && mindTarget.Map != null)
             {
-                GenDraw.DrawLineBetween(this.parent.TrueCenter(), mindTarget.TrueCenter());
+                GenDraw.DrawLineBetween(this.parent.TrueCenter(), mindTarget.TrueCenter(), SimpleColor.Magenta);
             }
         }
     }

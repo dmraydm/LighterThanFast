@@ -1,6 +1,7 @@
 C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\NewHatcher\NewHatcher\obj\Debug\LighterThanFast.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\NewHatcher\NewHatcher\obj\Debug\LighterThanFast.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Assemblies\LighterThanFast.dll
-C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\LighterThanFast\LighterThanFast\obj\Debug\LighterThanFast.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\LighterThanFast\LighterThanFast\obj\Debug\LighterThanFast.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\LighterThanFast\LighterThanFast\obj\Debug\LighterThanFast.dll
+C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\LighterThanFast\LighterThanFast\obj\Debug\LighterThanFast.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods\lighterThanFast_0.27\Source\LighterThanFast\LighterThanFast\obj\Debug\LighterThanFast.csproj.CopyComplete

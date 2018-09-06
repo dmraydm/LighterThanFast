@@ -199,7 +199,8 @@ public class Comp_LTF_Spawner : ThingComp
 						
 			if (num > 0)
 			{
-                result = num.ToStringTicksToPeriod(true, false, true) + " before ";
+                result = num.ToStringTicksToPeriod() + " before ";
+                //result = num.ToStringTicksToPeriod(true, false, true) + " before ";
                 if (this.Props.animalThing)
                 {
                     result += this.Props.animalName;

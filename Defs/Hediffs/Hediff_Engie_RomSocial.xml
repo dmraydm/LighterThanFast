@@ -12,7 +12,7 @@
 		<stages><li>
 			<statOffsets>
 				<SocialImpact>0.064</SocialImpact>
-				<RecruitPrisonerChance>0.064</RecruitPrisonerChance>
+				<NegotiationAbility>0.064</NegotiationAbility>
 								
 				<FoodPoisonChance>0.064</FoodPoisonChance>
 				<MeleeHitChance>-0.064</MeleeHitChance>
@@ -31,9 +31,9 @@
 		<stages><li>
 			<statOffsets>
 				<SocialImpact>.128</SocialImpact>
-				<RecruitPrisonerChance>.128</RecruitPrisonerChance>
+				<NegotiationAbility>.128</NegotiationAbility>
 				<TradePriceImprovement>.064</TradePriceImprovement>
-				<DiplomacyPower>.064</DiplomacyPower>
+				<!-- <DiplomacyPower>.064</DiplomacyPower> -->
 				
 				<FoodPoisonChance>.128</FoodPoisonChance>
 				<MeleeHitChance>-0.128</MeleeHitChance>

@@ -21,7 +21,7 @@
 <!-- hasTooltip -->
 		<costList>
 			<Steel>43</Steel>
-			<Component>1</Component>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<LTF_EngieRawRom>2</LTF_EngieRawRom>
 			<LTF_Kraptyl>57</LTF_Kraptyl>
 		</costList>
@@ -45,7 +45,7 @@
 			<Flammability>1.1</Flammability>
 			<Cleanliness>-2</Cleanliness>
 		</statBases>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<minifiedDef>MinifiedThing</minifiedDef>
 		<size>(3,1)</size>
 		
 		<designationCategory>Production</designationCategory>
@@ -63,7 +63,8 @@
 		<comps>
 			<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
-			<startElectricalFires>true</startElectricalFires>
+			<!-- B19 <startElectricalFires>true</startElectricalFires> -->
+			<shortCircuitInRain>true</shortCircuitInRain>
 			<basePowerConsumption>350</basePowerConsumption>
 			</li>
 			
