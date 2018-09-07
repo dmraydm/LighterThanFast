@@ -51,22 +51,66 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<MeleeHitChance>.75</MeleeHitChance>
     </statBases>
 	
-	<verbs>
-		<li>
-			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.55</defaultCooldownTime>
-			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		</li>
-		<li>
-			<verbClass>Verb_MeleeAttack</verbClass>
-			<defaultCooldownTime>1.55</defaultCooldownTime>
-			<meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		</li>
-	</verbs>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <!-- <power>8.2</power> -->
+		<power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <!-- <power>8.2</power> -->
+		<power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+	
 	<alienRace>
 
 	<generalSettings>
@@ -225,7 +269,7 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<forcedRaceTraitEntries>
 			<li><defName>Beauty</defName><degree>2</degree><chance>0</chance></li>
 			<li>
-				<defName>Immunity</defName>
+				<defName>Immunity</defName><degree>1</degree>
 			</li>
 
 			<li><defName>Industriousness</defName><degree>1</degree><chance>30</chance></li>
