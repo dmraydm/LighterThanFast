@@ -47,6 +47,7 @@ Falling on my head like a memory.</description>
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>1.1</Flammability>
 			<Cleanliness>-2</Cleanliness>
+			<Mass>70</Mass>
 		</statBases>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		
@@ -60,6 +61,10 @@ Falling on my head like a memory.</description>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		
 		<tickerType>Normal</tickerType>
+		
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Forbiddable"/>

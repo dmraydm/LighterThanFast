@@ -48,7 +48,7 @@
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<size>(3,1)</size>
 		
-		<designationCategory>Production</designationCategory>
+		<!-- <designationCategory>Production</designationCategory> -->
 		<passability>PassThroughOnly</passability>
 		<pathCost>80</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -60,6 +60,13 @@
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
+		
+		<!--
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		-->
+		
 		<comps>
 			<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>

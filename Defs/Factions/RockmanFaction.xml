@@ -76,6 +76,14 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>	
     <pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<RockmanColonist>20</RockmanColonist>
+					<RockmanGuard>10</RockmanGuard>
+					<RockmanShadowscale>5</RockmanShadowscale>
+				</options>
+		</li>
       <li>
         <kindDef>Combat</kindDef>
         <options>

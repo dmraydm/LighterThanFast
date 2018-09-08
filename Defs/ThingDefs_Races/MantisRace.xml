@@ -94,6 +94,27 @@ While Mantis excel at combat, especially personal combat, they are the least ade
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
+
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHandClawsGroup</linkedBodyPartsGroup>
+
+      </li>
+		<li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHandClawsGroup</linkedBodyPartsGroup>
+      </li>
+	  
       <li>
         <label>teeth</label>
         <capacities>

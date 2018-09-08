@@ -4,7 +4,7 @@
 <ScenarioDef>
 	<defName>MantissTribeScenario</defName>
     <label>Do you even slaughter bro ?</label>
-    <description>>Maybe it's a shortcut.</description>
+    <description>Maybe it's a shortcut to wealth.</description>
 	<scenario>
 	<summary>Headless raider dissaproves of this</summary>
 	<playerFaction>
@@ -125,7 +125,9 @@
 	<!-- Game start dialog -->
 	<li Class="ScenPart_GameStartDialog">
 	<def>GameStartDialog</def>
-	<text>I hate you.</text>
+	<text>A colony of Mantis is far more than an aggregation of individuals.
+	
+It is a composite being that functions as an integrated whole. Indeed, one can accurately think of a killer colony as a single living entity performing all of the basic physiological processes that support life: ingesting and digesting food, maintaining nutritional balance, circulating resources, exchanging respiratory gases, regulating water content, controlling body temperature, sensing the environment, deciding how to behave, and achieving locomotion.</text>
 	<closeSound>GameStartSting</closeSound>
 	</li>
 

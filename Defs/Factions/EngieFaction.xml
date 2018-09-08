@@ -84,6 +84,13 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>	
 		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<EngieColonist>20</EngieColonist>
+					<EngieGuard>10</EngieGuard>
+				</options>
+			</li>
 			<li><kindDef>Combat</kindDef>
 				<options>
 					<EngieColonist>50</EngieColonist>

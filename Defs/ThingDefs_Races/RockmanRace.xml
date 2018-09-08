@@ -297,6 +297,8 @@ While the Rockmen are generally not an adventurous race, and can only be consist
 	<!-- granite -->
 	<bloodDef>Filth_RubbleRock</bloodDef>
 	<useMeatFrom>Human</useMeatFrom>
+	
+	<leatherDef>Leather_Rockman</leatherDef>
 	<!--
 	<leatherColor>(105,95,97)</leatherColor>
 	<leatherCommonalityFactor>0.01</leatherCommonalityFactor>

@@ -86,6 +86,14 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>	
     <pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SlugColonist>20</SlugColonist>
+					<SlugAddicted>10</SlugAddicted>
+					<SlugGuard>5</SlugGuard>
+				</options>
+		</li>
       <li>
         <kindDef>Combat</kindDef>
         <options>

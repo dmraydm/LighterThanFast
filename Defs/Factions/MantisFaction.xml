@@ -87,6 +87,14 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>	
     <pawnGroupMakers>
+		<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<MantisColonist>20</MantisColonist>
+					<MantisGuard>10</MantisGuard>
+					<MantisFighter>5</MantisFighter>
+				</options>
+		</li>
       <li>
         <kindDef>Combat</kindDef>
         <options>

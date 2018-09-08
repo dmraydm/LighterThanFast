@@ -84,6 +84,14 @@
 		</maxPawnCostPerTotalPointsCurve>	
 		
 		<pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+				<ZoltanColonist>20</ZoltanColonist>
+				<ZoltanGuard>15</ZoltanGuard>
+				<ZoltanHistGuard>5</ZoltanHistGuard>
+				</options>
+			</li>
 			<li><kindDef>Combat</kindDef>
 				<options>
 					<ZoltanColonist>50</ZoltanColonist>

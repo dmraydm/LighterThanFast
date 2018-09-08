@@ -79,6 +79,10 @@
 		<li>ITab_Bills</li>
     </inspectorTabs>
 
+	<thingCategories>
+		<li>BuildingsTemperature</li>
+	</thingCategories>
+	
     <comps>
 		<li Class="CompProperties_Flickable"/>
 

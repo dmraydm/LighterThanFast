@@ -19,9 +19,9 @@
     
     <statBases>
 		<MaxHitPoints>20</MaxHitPoints>
-		<Mass>4</Mass>
 		<WorkToBuild>170</WorkToBuild>
 		<Flammability>1.5</Flammability>
+		<Mass>5</Mass>
     </statBases>
 
 	<size>(1,1)</size>
