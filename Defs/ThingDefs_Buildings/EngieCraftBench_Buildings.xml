@@ -36,6 +36,14 @@
 			<Steel>17</Steel>
 		</killedLeavings>
 		
+		<designationCategory>Production</designationCategory>
+		<!--
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		-->
+		
+		
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.7</fillPercent>
 		<useHitPoints>True</useHitPoints>
@@ -47,8 +55,7 @@
 		</statBases>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<size>(3,1)</size>
-		
-		<!-- <designationCategory>Production</designationCategory> -->
+
 		<passability>PassThroughOnly</passability>
 		<pathCost>80</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -60,12 +67,6 @@
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
-		
-		<!--
-		<thingCategories>
-			<li>BuildingsProduction</li>
-		</thingCategories>
-		-->
 		
 		<comps>
 			<li Class="CompProperties_Power">
