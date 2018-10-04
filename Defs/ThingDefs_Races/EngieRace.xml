@@ -28,14 +28,14 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 		<LeatherAmount>0</LeatherAmount>
 		<MeatAmount>20</MeatAmount>
 		
-		<CarryingCapacity>75</CarryingCapacity>
-		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<!-- <CarryingCapacity>75</CarryingCapacity> -->
+		<!-- <MentalBreakThreshold>0.01</MentalBreakThreshold> -->
 		<ResearchSpeed>1.0</ResearchSpeed>
 		
 		<SocialImpact>.9</SocialImpact>
-		<PlantWorkSpeed>1.0</PlantWorkSpeed>
-		<PlantHarvestYield>1.0</PlantHarvestYield>
-		<MiningSpeed>1.0</MiningSpeed>
+		<!-- <PlantWorkSpeed>1.0</PlantWorkSpeed> -->
+		<!-- <PlantHarvestYield>1.0</PlantHarvestYield> -->
+		<!-- <MiningSpeed>1.0</MiningSpeed> -->
 		
 		<ConstructionSpeed>1.25</ConstructionSpeed>
 		<ConstructSuccessChance>1.25</ConstructSuccessChance>
@@ -534,26 +534,35 @@ The Engi also wield powerful knowledge of machinery, and are generally natural m
 	<!-- Krom -->	
 		<li>LTF_InstallCookKrom</li><li>LTF_InstallMedicineKrom</li><li>LTF_InstallResearchKrom</li>
 	<!-- -->
-		<li>InstallPowerClaw</li>
-		<!--<li>InstallScytherBlade</li>-->
-		<!--<li>InstallBionicEye</li>-->
-		<li>InstallBionicArm</li>
-		<li>InstallBionicLeg</li>
-		<li>InstallSimpleProstheticArm</li>
-		<li>InstallSimpleProstheticLeg</li>
-		<li>InstallPegLeg</li>
-		<li>InstallDenture</li>
-		<li>InstallJoywire</li>
-		<li>InstallPainstopper</li>
-		<li>InstallNaturalHeart</li>
-		<li>InstallNaturalLung</li>
-		<li>InstallNaturalKidney</li>
-		<li>InstallNaturalLiver</li>
-		<li>ExciseCarcinoma</li>
-		<li>AdministerMechSerumHealer</li>
-		<li>RemoveBodyPart</li>
-		<li>Euthanize</li>
-		<li>Anesthetize</li>
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
     </recipes>
     
 </AlienRace.ThingDef_AlienRace>

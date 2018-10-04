@@ -77,7 +77,7 @@
 		<MaxHitPoints>15</MaxHitPoints>
 		<Mass>0.16</Mass>
 		<Flammability>1.0</Flammability>
-		<MarketValue>0.03</MarketValue>
+		<MarketValue>5</MarketValue>
 		<Nutrition>0.05</Nutrition>
     </statBases>
 	
@@ -197,7 +197,7 @@
 		<MaxHitPoints>10</MaxHitPoints>
 		<Mass>30</Mass>
 		<Flammability>1.5</Flammability>
-		<MarketValue>0.01</MarketValue>
+		<MarketValue>6</MarketValue>
 		<Nutrition>0.1</Nutrition>
     </statBases>
 	
@@ -292,7 +292,7 @@
 		<MaxHitPoints>20</MaxHitPoints>
 		<Mass>0.3</Mass>
 		<Flammability>1.5</Flammability>
-		<MarketValue>0.01</MarketValue>
+		<MarketValue>8</MarketValue>
 		<DeteriorationRate>4</DeteriorationRate>
 		<Nutrition>0.3</Nutrition>
     </statBases>

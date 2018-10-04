@@ -16,8 +16,8 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 - Lays eggs that pop power pods</description>
         
     <statBases>
-		<PsychicSensitivity>1.0</PsychicSensitivity>
-		<ToxicSensitivity>1.0</ToxicSensitivity>
+		<!-- <PsychicSensitivity>1.0</PsychicSensitivity> -->
+		<!-- <ToxicSensitivity>1.0</ToxicSensitivity> -->
 		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
 
@@ -28,21 +28,20 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
 		<LeatherAmount>0</LeatherAmount>		
 		<Flammability>1.0</Flammability>
 		
-		<CarryingCapacity>75</CarryingCapacity>
-		<MentalBreakThreshold>0.01</MentalBreakThreshold>
+		<!-- <CarryingCapacity>75</CarryingCapacity> -->
+		<!-- <MentalBreakThreshold>0.01</MentalBreakThreshold> -->
 		<ResearchSpeed>1.05</ResearchSpeed>
 		
-		<MiningSpeed>1.0</MiningSpeed>
-		<SocialImpact>1.0</SocialImpact>
-		<PlantWorkSpeed>1.0</PlantWorkSpeed>
-		<PlantHarvestYield>1.0</PlantHarvestYield>
-		<ConstructionSpeed>1.0</ConstructionSpeed>
+		<!-- <MiningSpeed>1.0</MiningSpeed> -->
+		<!-- <SocialImpact>1.0</SocialImpact> -->
+		<!-- <PlantWorkSpeed>1.0</PlantWorkSpeed> -->
+		<!-- <PlantHarvestYield>1.0</PlantHarvestYield> -->
+		<!-- <ConstructionSpeed>1.0</ConstructionSpeed> -->
 		
-		<ArmorRating_Blunt>.1</ArmorRating_Blunt>
-		<ArmorRating_Sharp>.15</ArmorRating_Sharp>
+		<!-- <ArmorRating_Blunt>.1</ArmorRating_Blunt> -->
+		<!-- <ArmorRating_Sharp>.15</ArmorRating_Sharp> -->
 		
 		<NegotiationAbility>1.15</NegotiationAbility>
-		<!-- <DiplomacyPower>1.1</DiplomacyPower> -->
     </statBases>
 	
 	<comps>
@@ -405,17 +404,23 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       </hediffGiverSets>
 	</race>
     <recipes>
-		<!-- <li>InstallOvipositor</li> -->
-		<!--base-->
-		
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
       <li>InstallPowerClaw</li>
-      <!--<li>InstallScytherBlade</li>-->
       <li>InstallBionicEye</li>
       <li>InstallBionicArm</li>
       <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
       <li>InstallSimpleProstheticArm</li>
       <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
       <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
       <li>InstallDenture</li>
       <li>InstallJoywire</li>
       <li>InstallPainstopper</li>
@@ -424,11 +429,10 @@ Being ingenious experts of technology, the Zoltan race pioneered a unique ship-b
       <li>InstallNaturalKidney</li>
       <li>InstallNaturalLiver</li>
       <li>ExciseCarcinoma</li>
-	  <li>AdministerMechSerumHealer</li>
+      <li>AdministerMechSerumHealer</li>
       <li>RemoveBodyPart</li>
       <li>Euthanize</li>
       <li>Anesthetize</li>
-	  
     </recipes>
 
 </AlienRace.ThingDef_AlienRace>

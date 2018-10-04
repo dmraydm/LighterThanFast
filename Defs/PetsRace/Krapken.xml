@@ -278,7 +278,8 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<drawSize>0.6</drawSize>
-				<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+				<!-- <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath> -->
+				<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 			</dessicatedBodyGraphicData>
 		</li>
 		
@@ -291,7 +292,8 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<drawSize>0.7</drawSize>
-				<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+				<!-- <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath> -->
+				<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 			</dessicatedBodyGraphicData>
 		</li>
 	<li>
@@ -312,7 +314,8 @@
 		</femaleGraphicData>
 
 		<dessicatedBodyGraphicData>
-			<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+			<!-- <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath> -->
+			<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 			<drawSize>1</drawSize>
 		</dessicatedBodyGraphicData>
 	</li>

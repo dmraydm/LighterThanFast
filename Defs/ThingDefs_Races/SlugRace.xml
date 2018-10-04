@@ -30,15 +30,16 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<MoveSpeed>4.61</MoveSpeed>
 
 		<CarryingCapacity>75</CarryingCapacity>
-		<MentalBreakThreshold>0.01</MentalBreakThreshold>
-		<ResearchSpeed>1.0</ResearchSpeed>
-		<MiningSpeed>1.0</MiningSpeed>
+		<!-- <MentalBreakThreshold>0.01</MentalBreakThreshold> -->
+		<!-- <ResearchSpeed>1.0</ResearchSpeed> -->
+		<!-- <MiningSpeed>1.0</MiningSpeed> -->
 		<SocialImpact>1.1</SocialImpact>
-		<PlantWorkSpeed>1.0</PlantWorkSpeed>
-		<PlantHarvestYield>1.0</PlantHarvestYield>
-		<ConstructionSpeed>1.0</ConstructionSpeed>
-		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-		<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		<!-- <PlantWorkSpeed>1.0</PlantWorkSpeed> -->
+		<!-- <PlantHarvestYield>1.0</PlantHarvestYield> -->
+		<!-- <ConstructionSpeed>1.0</ConstructionSpeed> -->
+		
+		<!-- <ArmorRating_Blunt>0.1</ArmorRating_Blunt> -->
+		<!-- <ArmorRating_Sharp>0.15</ArmorRating_Sharp> -->
     </statBases>
 
 	<tools>
@@ -399,14 +400,23 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
       </hediffGiverSets>
 </race>
     <recipes>
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
       <li>InstallPowerClaw</li>
-      <!-- <li>InstallScytherBlade</li> -->
       <li>InstallBionicEye</li>
       <li>InstallBionicArm</li>
       <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
       <li>InstallSimpleProstheticArm</li>
       <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
       <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
       <li>InstallDenture</li>
       <li>InstallJoywire</li>
       <li>InstallPainstopper</li>
@@ -415,7 +425,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
       <li>InstallNaturalKidney</li>
       <li>InstallNaturalLiver</li>
       <li>ExciseCarcinoma</li>
-	  <li>AdministerMechSerumHealer</li>
+      <li>AdministerMechSerumHealer</li>
       <li>RemoveBodyPart</li>
       <li>Euthanize</li>
       <li>Anesthetize</li>
