@@ -26,7 +26,7 @@
     <defName>SlugChildClodfish02</defName>
     <title>Telekinetic</title>
     <titleShort>Telekinetic</titleShort>
-    <baseDescription>Most psychic skills are learned over time but for [PAWN_nameDef] it came from one event. [PAWN_pronoun] was following [PAWN_pronoun] crush, someone [PAWN_pronoun] always thought just got [PAWN_objective]. They were walking through [PAWN_pronoun] parents construction site and [PAWN_pronoun] was building up the courage to ask [PAWN_pronoun] crush out but then disaster struck. A large stone fell from the scaffolding and rocketed its way down to the ground, right onto of [PAWN_pronoun] crush. In a fit of panic [PAWN_nameDef] yelled out stop, and the stone obeyed. 
+    <baseDescription>Most psychic skills are learned over time but for [PAWN_nameDef] it came from one event. [PAWN_pronoun] was following [PAWN_possessive] crush, someone [PAWN_pronoun] always thought just got [PAWN_possessive]. They were walking through [PAWN_possessive] parents construction site and [PAWN_pronoun] was building up the courage to ask [PAWN_possessive] crush out but then disaster struck. A large stone fell from the scaffolding and rocketed its way down to the ground, right onto of [PAWN_possessive] crush. In a fit of panic [PAWN_nameDef] yelled out stop, and the stone obeyed. 
  </baseDescription>
     <slot>Childhood</slot>
 
@@ -50,7 +50,7 @@
     <defName>SlugChildClodfish03</defName>
     <title>Perceiver</title>
     <titleShort>Perceiver</titleShort>
-    <baseDescription>[PAWN_nameDef] never knew [PAWN_pronoun] parents, [PAWN_pronoun] was left abandoned in the pits of scum and villainy known as the Cave Streets. Quickly taken in by a gang [PAWN_nameDef] learned hard and fast how to recognise a friend from a foe, the blues of a cop, the greens of our rivals and the reds of your friends. The threat of random violence at anytime led to advances in [PAWN_nameDef]'s senses. This manifested when a sniper from over 200 metres away shot at [PAWN_nameDef] and [PAWN_nameDef] ducked, just in time. It was after this [PAWN_pronoun] gang issued [PAWN_objective] a gun and [PAWN_pronoun] never missed a shot. 
+    <baseDescription>[PAWN_nameDef] never knew [PAWN_possessive] parents, [PAWN_pronoun] was left abandoned in the pits of scum and villainy known as the Cave Streets. Quickly taken in by a gang, [PAWN_nameDef] learned hard and fast how to recognise a friend from a foe, the blues of a cop, the greens of our rivals and the reds of your friends. The threat of random violence at anytime led to advances in [PAWN_nameDef]'s senses. This manifested when a sniper from over 200 metres away shot at [PAWN_nameDef] and [PAWN_pronoun] ducked, just in time. It was after this [PAWN_possessive] gang issued [PAWN_objective] a gun and [PAWN_pronoun] never missed a shot. 
  </baseDescription>
  
  <slot>Childhood</slot>
@@ -75,7 +75,7 @@
     <defName>SlugChildClodfish04</defName>
     <title>Soothsayer</title>
     <titleShort>Soothsayer</titleShort>
-    <baseDescription>[PAWN_nameDef]'s life was filled with misfortune. One trip through the Cave Streets saw [PAWN_pronoun] parents dead and [PAWN_objective] moving into a orphanage. Except this was no ordinary orphanage, it was an underground cassino and [PAWN_pronoun] was their newest waiter. [PAWN_nameDef] just took this in [PAWN_pronoun] stride, he was comfortable here, he could witness other people's misfortune and feel like [PAWN_pronoun] was not the only one. [PAWN_pronoun] got really used to that feeling, misfortune, so much so [PAWN_pronoun] could see it coming. [PAWN_pronoun] started giving people tips on what to bet on and the casino lost so much money they decided to kicked [PAWN_objective] out. [PAWN_pronoun] was alright though, the world's a whole lot better when you know what not to do. </baseDescription> 
+    <baseDescription>[PAWN_nameDef]'s life was filled with misfortune. One trip through the Cave Streets saw [PAWN_possessive] parents dead and [PAWN_objective] moving into a orphanage. Except this was no ordinary orphanage, it was an underground cassino and [PAWN_pronoun] was their newest waiter. [PAWN_nameDef] just took this in [PAWN_possessive] stride. [PAWN_pronoun] was comfortable here, [PAWN_pronoun] could witness other people's misfortune and feel like [PAWN_pronoun] was not the only one. [PAWN_pronoun] got really used to that feeling, misfortune. So much that [PAWN_pronoun] could see it coming. [PAWN_pronoun] started giving people tips on what to bet on and the casino lost so much money they decided to kicked [PAWN_objective] out. [PAWN_pronoun] was alright though, the world's a whole lot better when you know what not to do. </baseDescription> 
 
     <slot>Childhood</slot>
 
@@ -108,7 +108,7 @@
     <defName>SlugChildClodfish05</defName>
     <title>Revitaliser</title>
     <titleShort>Revitaliser</titleShort>
-    <baseDescription>[PAWN_nameDef] spent a lot of time watching things die, it fascinated [PAWN_objective]. But one day [PAWN_pronoun] realised that will be [PAWN_pronoun] fate someday too. Fear of eternal non-existence gripped [PAWN_objective] and never let go. [PAWN_pronoun] set about reading every doctoring text [PAWN_pronoun] could find. After attempt after attempt to saves lives, mostly those of small animals, [PAWN_pronoun] cried out “please, please come back to me.” and it did. [PAWN_pronoun] spent the rest of [PAWN_pronoun] childhood caring for people, healing small cuts for fellow children at the playground. Everyone thought [PAWN_nameDef] was the nicest guy but [PAWN_pronoun] really didn’t care about them, they were just practice.</baseDescription> 
+    <baseDescription>[PAWN_nameDef] spent a lot of time watching things die, it fascinated [PAWN_objective]. But one day [PAWN_pronoun] realised what would be [PAWN_possessive] fate someday too. Fear of eternal non-existence gripped [PAWN_objective] and never let go. [PAWN_pronoun] set about reading every doctoring text [PAWN_pronoun] could find. After attempt after attempt to saves lives, mostly those of small animals, [PAWN_pronoun] cried out “please, please come back to me.” and it did. [PAWN_pronoun] spent the rest of [PAWN_possessive] childhood caring for people, healing small cuts for fellow children at the playground. Everyone thought [PAWN_nameDef] was the nicest guy but [PAWN_pronoun] really didn’t care about them, they were just practice.</baseDescription> 
 
     <slot>Childhood</slot>
 
