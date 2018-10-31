@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="LTF_InstallLaniusLung" ParentName="SurgeryFlesh" Abstract="True">
+		<recipeUsers>
+			<li>Human</li>
+			<li>Engie</li>
+			<li>Mantis</li>
+			<li>Rockman</li>
+			<li>Slug</li>
+			<li>Zoltan</li>
+		</recipeUsers>
+	</RecipeDef>
+</Defs>

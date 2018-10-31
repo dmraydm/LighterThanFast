@@ -39,11 +39,11 @@
 		<min>1000</min>
 		<max>3000</max>
     </techHediffsMoney>
-	
+
     <techHediffsTags>
-		<li>Simple</li>
+      <li>Poor</li>
     </techHediffsTags>
-	
+
     <techHediffsChance>0.01</techHediffsChance>
     <invNutrition>2.55</invNutrition>
     <inventoryOptions>
@@ -240,6 +240,7 @@
 		<apparelTags>
 			<li>Apparel_ShieldBelt</li>
 		</apparelTags>
+		
 		<apparelMoney>
 			<min>1500</min>
 			<max>3000</max>

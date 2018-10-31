@@ -19,13 +19,19 @@
 		</backstoryCategories>
 		<!-- B19 <backstoryCategory>EngieBackstory</backstoryCategory> -->
 		<!-- <apparelAllowHeadwearChance>.01</apparelAllowHeadwearChance> -->
+		
 		<apparelTags>
-			<li>Tribal</li>
+			<li>Neolithic</li>
 		</apparelTags>
+		<gearHealthRange>
+			<min>0.2</min>
+			<max>1.1</max>
+		</gearHealthRange>
 		<apparelMoney>
 			<min>200</min>
 			<max>300</max>
 		</apparelMoney>
+		
 		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
 	</PawnKindDef>
 

@@ -33,12 +33,6 @@
 		<factionNameMaker>NamerFactionEngieVillage</factionNameMaker>
 		<playerInitialSettlementNameMaker>NamerFactionEngieVillage</playerInitialSettlementNameMaker>
 		
-		<!--
-		<settlementNameMaker>NamerBaseEngieVillage</settlementNameMaker>
-		<settlementNameMakerPlayer>NamerFactionEngieVillage</settlementNameMakerPlayer>
-		<factionNameMakerPlayer>NamerFactionEngieVillage</factionNameMakerPlayer>
-		-->
-		<!--<backstoryCategory>EngieBackstory</backstoryCategory>-->
 		<backstoryCategories>
 			<li>EngieBackstory</li>
 		</backstoryCategories>
@@ -62,9 +56,11 @@
 		<apparelStuffFilter>
 			<thingDefs>
 				<li>Cloth</li>
+				<!--
 				<li>Hyperweave</li>
 				<li>Synthread</li>
 				<li>DevilstrandCloth</li>
+				-->
 			</thingDefs>
 		</apparelStuffFilter>
 	</FactionDef>
