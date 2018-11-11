@@ -214,7 +214,7 @@
     <defName>EngieChildBS12</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_possessive] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after [PAWN_possessive] parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_objective] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted.</baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
@@ -245,69 +245,7 @@
     <defName>EngieChildBS13</defName>
     <title>Orphan</title>
     <titleShort>orphan</titleShort>
-    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
-    <slot>Childhood</slot>
-    
-	<spawnCategories>
-		<li>EngieBackstory</li>
-	</spawnCategories>
-    <skillGains>
-		<li><defName>Construction</defName><amount>2</amount></li>
-		<li><defName>Crafting</defName><amount>2</amount></li>
-		<li><defName>Artistic</defName><amount>1</amount></li>
-		<li><defName>Intellectual</defName><amount>1</amount></li>
-		
-		<li><defName>Plants</defName><amount>-2</amount></li>
-		<li><defName>Animals</defName><amount>-2</amount></li>
-		<li><defName>Mining</defName><amount>-1</amount></li>
-    </skillGains>
-
-	<workDisables>
-		<li>Social</li>
-	</workDisables>
-	
-	<relationSettings>
-		<relationChanceModifierParent>0</relationChanceModifierParent>
-	</relationSettings>
-			
-</AlienRace.BackstoryDef>
-
-<AlienRace.BackstoryDef>
-    <defName>EngieChildBS14</defName>
-    <title>Orphan</title>
-    <titleShort>orphan</titleShort>
-    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
-    <slot>Childhood</slot>
-    
-	<spawnCategories>
-		<li>EngieBackstory</li>
-	</spawnCategories>
-    <skillGains>
-		<li><defName>Construction</defName><amount>2</amount></li>
-		<li><defName>Crafting</defName><amount>2</amount></li>
-		<li><defName>Artistic</defName><amount>1</amount></li>
-		<li><defName>Intellectual</defName><amount>1</amount></li>
-		
-		<li><defName>Plants</defName><amount>-2</amount></li>
-		<li><defName>Animals</defName><amount>-2</amount></li>
-		<li><defName>Mining</defName><amount>-1</amount></li>
-    </skillGains>
-
-	<workDisables>
-		<li>Social</li>
-	</workDisables>
-	
-	<relationSettings>
-		<relationChanceModifierParent>0</relationChanceModifierParent>
-	</relationSettings>
-			
-</AlienRace.BackstoryDef>
-
-<AlienRace.BackstoryDef>
-    <defName>EngieChildBS15</defName>
-    <title>Orphan</title>
-    <titleShort>orphan</titleShort>
-    <baseDescription>[PAWN_nameDef] was left as an orphan. [PAWN_pronoun] ended up without a parent after its parent died; [PAWN_nameDef] was shortly adopted by init. [PAWN_nameDef] will never send [PAWN_pronoun] SIGCHLD signal when [PAWN_pronoun] exits, is interrupted, or resumes after being interrupted. </baseDescription>
+    <baseDescription></baseDescription>
     <slot>Childhood</slot>
     
 	<spawnCategories>
