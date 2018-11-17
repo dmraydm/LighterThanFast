@@ -325,7 +325,7 @@
 			<lifespanTicks>15000</lifespanTicks>
 		</li>
 		-->
-		<li Class="CompProperties_Breakdownable"/>
+		<!-- <li Class="CompProperties_Breakdownable"/> -->
     </comps>
 	
 	<thingCategories>
